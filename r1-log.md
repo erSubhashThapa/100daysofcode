@@ -7,9 +7,12 @@ I decided to do some preliminary days before the New Year starts. This way I can
 
 Today I coded a very simple program. I used HTML, CSS, and Javascript. I wanted to stay away from jQuery, which I'm learning, because I want to make sure I have some experience with just Javascript so I'll be able to tell the two apart better in the future.
 
-My program simple counts the number of times you click a button. My goal was to code this from scratch. No copy and pasting snipets of code. I started with a blank page and did the whole HTML page by hand. I deleted it and started from a blank page a few times in a row until I could do it without any typos and errors.
+My program counts the number of times you click a button. My goal was to code this from scratch- no copy and pasting snipets of code. I started with a blank page and did the whole HTML/code by hand. I deleted it and started from a blank page a few times in a row until I could do it without any typos and errors.
 
 Ok now I need to figure out how to push it to github and link it here. Power currently at 63%.
+
+OK here it is! Not sure If I should have done it as a gist or repository. I still don't know how this all works,
+**Link to work:** [Simple Button Click Counter](https://github.com/dangerousdashie/Simple-Button-Click-Counter)
 
 ## Log
 
