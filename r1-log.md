@@ -11,7 +11,8 @@ My program counts the number of times you click a button. My goal was to code th
 
 Ok now I need to figure out how to push it to github and link it here. Power currently at 63%.
 
-OK here it is! Not sure If I should have done it as a gist or repository. I still don't know how this all works,
+OK here it is! Not sure If I should have done it as a gist or repository. I still don't know how this all works.
+
 **Link to work:** [Simple Button Click Counter](https://github.com/dangerousdashie/Simple-Button-Click-Counter)
 
 ## Log
