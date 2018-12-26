@@ -15,6 +15,8 @@ OK here it is! Not sure If I should have done it as a gist or repository. I stil
 
 **Link to work:** [Simple Button Click Counter](https://github.com/dangerousdashie/Simple-Button-Click-Counter)
 
+Computer power now at 59%.
+
 ## Log
 
 ### R1D1 
