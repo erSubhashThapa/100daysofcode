@@ -17,6 +17,10 @@ OK here it is! Not sure If I should have done it as a gist or repository. I stil
 
 Computer power now at 59%.
 
+### PR1D2 - 12/27/18
+
+I coded for an 1:19hr but not all at once. I practiced coding from scratch and from memory an html document with externally linked css and javascript. Then I tried to make a program that gave you points everytime you clicked a button. If it was during a randomized special bonus time you'd get extra points. This is a miniversion of a feature I want in a brain training app I'm making. I was having trouble getting the program to toggle the bonus time on and off at random times. Still working on this. It's too much of a mess to post on github. Should I post things that are a huge mess?
+
 ## Log
 
 ### R1D1 
