@@ -27,6 +27,8 @@ I continued the project from yesterday. I was able to get a function called at r
 ### PR1D3 - 12/29/18
 I found out why the variable only works from inside the function. Since the script is run in the head of the HTML doc, the variable is created before the DOM. The DOM element doesn't exist yet, so it saves as null. I'm trying to figure out how to save it globally. I tried window.onload but it's not working. I also reviewed how to push to github from the command line and find files in unix. I pushed this project to github from the command line. 
 
+**Update:** I did some more coding and I figured out the issue. I was calling the function that I set equal to onload, instead of just setting it equal to onload. Now my little program is working.  
+
 **Link to work:** [Random Bonus Points](https://github.com/dangerousdashie/Random_Bonus_Points)
 
 ## Log
