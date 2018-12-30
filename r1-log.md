@@ -31,9 +31,4 @@ I found out why the variable only works from inside the function. Since the scri
 
 **Link to work:** [Random Bonus Points](https://github.com/dangerousdashie/Random_Bonus_Points)
 
-## Log
 
-### R1D1 
-Started a Weather App. Worked on the draft layout of the app, struggled with OpenWeather API http://www.example.com
-
-### R1D2
