@@ -64,3 +64,12 @@ Played with CSS grid. Wondering how to keep the grid items proportional even if 
 
 **Link To Work:** [grid_layout_practice](https://github.com/dangerousdashie/grid_layout_practice/tree/3dfe4f76488bf7f9eb0b7ea6bed602a9440e517b)
 
+### R1D5 1/5/19
+Worked on the [Number of trailing zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript) kata on code wars. I didn't finish it. I spent most of the time trying to understand factorials. Kind of annoying. I don't like when these katas make you learn something unrelated to programming. But I also couldn't stop once I started.
+
+**Thoughts/Feelings:** Annoyed about having to learn about factorials. But I think I will finish it tomorrow.
+
+
+
+
+
