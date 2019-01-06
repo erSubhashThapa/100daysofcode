@@ -69,6 +69,12 @@ Worked on the [Number of trailing zeros of N!](https://www.codewars.com/kata/52f
 
 **Thoughts/Feelings:** Annoyed about having to learn about factorials. But I think I will finish it tomorrow.
 
+### R1D6 1/6/19
+Learned how to use Chrome DevTools to debug my javascript code. It seems more efficient than doing console.log() for everything. I tried to debug my code for the [Number of trailing zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript) codewars kata. I'm having trouble because for some reason one variable is giving me a weird result when I += a number to it. It becomes undefined. 
+
+I've also been doing lynda tutorials and other tutorials but I havn't been talking about them on here because we're not supposed to count tutorials for this challenge. But maybe I will start talking about what I'm learning on the tutorials just to track what I'm learning.
+
+**Thoughts/Feelings:** Glad I finally started debugging in DevTools. I knew console.log() could not be the best way to debug. I would like to learn more about debugging.
 
 
 
