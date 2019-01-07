@@ -76,6 +76,12 @@ I've also been doing lynda tutorials and other tutorials but I havn't been talki
 
 **Thoughts/Feelings:** Glad I finally started debugging in DevTools. I knew console.log() could not be the best way to debug. I would like to learn more about debugging.
 
+### R1D7 1/7/19
+I tried using Jasmine.js to run a simple unit test. [This](https://evanhahn.com/how-do-i-jasmine/) tutorial was helpful in getting started. Outside of my hour of coding I did an hour of a jQuery tutorial on lynda.com.
+
+**Thoughts/Feelings:** Felt like I did more reading than coding but I'm glad I got one unit test written.
+
+**Link To Work:** [Trying Out Jasmine](https://github.com/dangerousdashie/unit_testing/tree/master/jasmine-standalone-3.3.0)
 
 
 
