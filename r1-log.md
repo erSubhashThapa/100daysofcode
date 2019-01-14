@@ -108,4 +108,6 @@ I am trying to grab the parameter value from the uri so I can append the poduct 
 
 **Thoughts/Feelings:** Annoyed that I spent a whole hour hardly accomplishing anything. But I think every experience I have is good in some way.
 
+### R1D13 - 1/12/19
+I figured out my bug from yesterday. I was trying to decide a uri but i had never encoded it. I  dont totally ubderstand  why you have to do it that way. 
 
