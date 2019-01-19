@@ -137,3 +137,6 @@ I worked on css grid and responsive layout today. I found a great site that has 
 
 ### R1D18 - 1/18/19
 I am following this [tutorial](https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08) to create a twitter bot but I have to wait to get my projecf approved. They don't talk about that in the tutorial because I think it's a new twitter policy. I also worked on recreating layout9 on gridbyexample.com. For my tutorial I did javascript debugging on lynda.
+
+### R1D19 - 1/19/18
+https://dev.to/niorad/keeping-the-footer-at-the-bottom-with-css-grid-15mf
