@@ -148,3 +148,10 @@ My twitter app still wasn't approved. For my tutorial I did debugging javascript
 **Thoughts and Feelings:** I'm feeling a lot more comfortable with grid. I'd like to start focusing on getting my javascript experience again and move away from just css layouts since I'm more comfortaable with those. I need to think about some project ideas that will apply to what I'm learning while I'm waiting to get my twitter app approved. 
 
 **Link To Work:** [Grid Layout Example](https://github.com/dangerousdashie/grid-layout-header-footer-example)
+
+### R1D20 - 1/20/19
+Coding: I started to make a quiz with JavaScript, JSON, CSS, HTML, and jQuery. I organized my code by commented sections like "//-----click event for answer" to be more organized with my code. I used what I learned about the DevTools Debugger to solve issues.
+
+Tutorial: I continued my tutorial on JavaScript prototypes on lynda.com. I used the dubugger to figure out problems in my code when I was following along.
+
+**Link To Work:** [First Commit (unfinished) for Quiz](https://github.com/dangerousdashie/first-quiz-project/commit/59c60f4d67f991118d99184796ee9b005b458196)
