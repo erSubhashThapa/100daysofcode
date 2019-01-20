@@ -150,7 +150,7 @@ My twitter app still wasn't approved. For my tutorial I did debugging javascript
 **Link To Work:** [Grid Layout Example](https://github.com/dangerousdashie/grid-layout-header-footer-example)
 
 ### R1D20 - 1/20/19
-Coding: I started to make a quiz with JavaScript, JSON, CSS, HTML, and jQuery. I organized my code by commented sections like "//-----click event for answer" to be more organized with my code. I used what I learned about the DevTools Debugger to solve issues.
+Coding: I started to make a quiz with JavaScript, JSON, CSS, HTML, and jQuery. I organized my code by commented sections like `//-----click event for answer` to be more organized with my code. I used what I learned about the DevTools Debugger to solve issues.
 
 Tutorial: I continued my tutorial on JavaScript prototypes on lynda.com. I used the dubugger to figure out problems in my code when I was following along.
 
