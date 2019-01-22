@@ -159,7 +159,7 @@ Tutorial: I continued my tutorial on JavaScript prototypes on lynda.com. I used 
 ### R1D21 - 1/22/18
 I completed day 21 yesterday but I am logging it today. I worked on the quiz. I had trouble getting the function that displays the results to work. 
 
-**Thoughts and Feelings:** My difficulty with the function that displays the quiz results gave me issues mostly because I was distracted because my MIL. She kept trying to talk to me. Specifically, she was trying to find out what jewelry I wanted to inheret from her. If I have to be distracted, that's not a bad way. But before that, I felt really confident in what I was doing. 
+**Thoughts and Feelings:** I probably could have figured out the results function. But I was distracted because my MIL. She kept trying to talk to me. Specifically, she was trying to find out what jewelry I wanted to inheret from her. If I have to be distracted, that's not a bad way. But before that, I felt really confident in what I was doing. 
 
 I need to make sure to reduce distractions. But I was afraid of being rude. But I just have to ask to not be disturbed nicely. Maybe, "Can you bring this back up to me in like 30 minutes. I'm trying to give my full attention to both you and my coding and I'm doing a bad job at both."
 
