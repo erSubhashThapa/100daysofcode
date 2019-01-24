@@ -177,7 +177,7 @@ I have an issue with git with this project. I added a readme file and changed th
 **Link To Work:** [Quiz Template, read me not finished](https://github.com/dangerousdashie/jQuery-quiz-template);
 
 ### R1D23 - 1/24/18, completed 1/23/18
-I worked mostly on debugging. I'm having an issue with debugging that I documented [here](https://stackoverflow.com/questions/54333252/pause-on-execution-pausing-on-vm-file). No one has helped me on stack overflow with my issue so I'm wondering where to look next. I also spent a little bit of time on CSS. I studies Javascript prototypes yesterday.
+I worked mostly on debugging. I'm having an issue with debugging that I documented [here](https://stackoverflow.com/questions/54333252/pause-on-execution-pausing-on-vm-file). No one has helped me on stack overflow with my issue so I'm wondering where to look next. I also spent a little bit of time on CSS. I studied Javascript prototypes yesterday.
 
 I know that I am going to run into a lot of frustrating problems that seem like dead ends; no one answering me on stackoverflow, trying to get approved for API's and being ignored. These moments are gifts because I know that finding unique solutions to these setbacks will set me apart from others. This is where most people give up but I will keep going. Failure comes right before success.
 
