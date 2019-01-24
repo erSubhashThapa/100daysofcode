@@ -182,6 +182,7 @@ I worked mostly on debugging. I'm having an issue with debugging that I document
 I know that I am going to run into a lot of frustrating problems that seem like dead ends; no one answering me on stackoverflow, trying to get approved for API's and being ignored. These moments are gifts because I know that finding unique solutions to these setbacks will set me apart from others. This is where most people give up but I will keep going. Failure comes right before success.
 
 ### R1D24 - 1/24
-I fixed my git issue that I had on day 22. I organized my Readme file for my quiz project. I explored github. I want to beable to use it better and understand it more. I'd like to be more connected with the online programming community. I finished my JavaScript prototypes tutorial on lynda and practices using the class keywork on code pen. 
+I fixed my git issue that I had on day 22. I organized my Readme file for my quiz project. I explored github. I want to beable to use it better and understand it more. I'd like to be more connected with the online programming community. I finished my JavaScript prototypes tutorial on lynda and practices using the class keywork on [code pen](https://codepen.io/Dashiee/pen/KJdZGa?editors=0011). 
+
 
 
