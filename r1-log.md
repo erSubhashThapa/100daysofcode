@@ -186,5 +186,5 @@ I fixed my git issue that I had on day 22. I organized my Readme file for my qui
 
 I started working on a JavaScript clock.
 
-**Link To Work:** [Quiz Template latest commit:](https://github.com/dangerousdashie/jQuery-quiz-template/tree/7f974bf75d16f92de02048bad89e25e57f89a604)
+**Link To Work:** [Quiz Template latest commit](https://github.com/dangerousdashie/jQuery-quiz-template/tree/7f974bf75d16f92de02048bad89e25e57f89a604)
 
