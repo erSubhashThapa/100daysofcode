@@ -188,3 +188,9 @@ I started working on a JavaScript clock.
 
 **Link To Work:** [Quiz Template latest commit](https://github.com/dangerousdashie/jQuery-quiz-template/tree/7f974bf75d16f92de02048bad89e25e57f89a604)
 
+### R1D25 - 1/25/19
+I started a tutorial on javascript scope. I think I know most of it so far. I don't know what block scope is and that's next. 
+
+I got further along in my javascript clock project. Right now it displays the right time on a canvas circle with two lines for the minute and hour hands. However it doesn't update with the time, you have to refresh it. So next I need to figure our how to update it. I should also add a second hand. My code is probably too redundant. 
+
+**Link To Work:** [clock](https://github.com/dangerousdashie/javascript-clock/tree/135fa05ff5aa68a306bc7baa0b92d1acd4dfb688)
