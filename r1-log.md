@@ -207,6 +207,6 @@ I worked more on the clock and now it sets the background of the clock to a colo
 **Link To Work:**[clock latest commit, UV API](https://github.com/dangerousdashie/javascript-clock/tree/de5c6c32ce617f927b90a83d61054fc670e221a0)
 
 ### R1D27 - 1/27/19
-I continued my tutorial on closures. I started working with meetups API but I'm kind of lost. I want to search for groups or events that mentions "lucid dream", both words entirely together, but I can't figure out how to do that. When I add the text parameter, text=lucid+dream, it shows me results that use the work lucid by itself or dream by itself.
+I continued my tutorial on closures. I started working with meetups API but I'm kind of lost. I want to search for groups or events that mention "lucid dream"- exactly, but I can't figure out how to do that. When I add the text parameter, text=lucid+dream, it shows me results that use the word lucid by itself or dream by itself.
 
 **Thoughts and Feelings:** It's raining and gross and I'm feeling weird. How can I find out how to use this API?
