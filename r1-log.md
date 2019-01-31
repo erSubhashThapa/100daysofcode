@@ -233,3 +233,9 @@ I found a set of [tutorials/projects](https://javascript30.com/) in vanilla java
 **Thoughts and Feelings:** I feel so much more optimistic today. I'm reading The Happiness Advantage and it shows how important it is to be happy and optimistic. It's essential to reducing burnout and improving productivity. The last few days I felt a burnt out. I was met with challenges that I didn't solve and felt bad about my skill set. But I feel optimistic again that I'm on the right path and will keep learning and growing. Partly because I took on a challenge today that I succeeded in, but also because I worked on my mindset a bit. Next time I feel overwhelmed in my studies I can take a step back and try to work on a challenge that is closer to my skillset or study the basics. I will eventually get back to the harder stuff. A challenge that I can't solve is just an indication that I need to learn more. It's a gift.
 
 **Link To Work:** [Drum kit](https://github.com/dangerousdashie/JavaScript30/blob/master/01%20-%20JavaScript%20Drum%20Kit/index-dashie.html)
+
+### R1D31 - 1/31/19
+I watched Wes Bos's solution to the Drum Kit challenge. It was really different than mine. Things I learned:
+1. There is a key code associated with every key event. ex. the event key code for **a** is **65**.
+2. There is an event listener called transitionend that runs when a css transition has ended.
+3. Calling `.play()` on an audio element that is currently playing won't do anything. You can set the audio element's `currentTime` property to 0 and then call `.play()` to play it from the beginning.
