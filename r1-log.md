@@ -236,7 +236,7 @@ I found a set of [tutorials/projects](https://javascript30.com/) in vanilla java
 
 ### R1D31 - 1/31/19
 I watched Wes Bos's solution to the Drum Kit challenge. It was really different than mine. Things I learned:
-1. There is a key code associated with every key event. ex. the event key code for **a** is **65**.
+1. There is a `keycode` associated with every key event. ex. the event `keycode` for **a** is **65**.
 2. There is an event listener called transitionend that runs when a css transition has ended.
 3. Calling `.play()` on an audio element that is currently playing won't do anything. You can set the audio element's `currentTime` property to 0 and then call `.play()` to play it from the beginning.
 
