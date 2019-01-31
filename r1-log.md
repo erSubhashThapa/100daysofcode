@@ -239,3 +239,11 @@ I watched Wes Bos's solution to the Drum Kit challenge. It was really different 
 1. There is a key code associated with every key event. ex. the event key code for **a** is **65**.
 2. There is an event listener called transitionend that runs when a css transition has ended.
 3. Calling `.play()` on an audio element that is currently playing won't do anything. You can set the audio element's `currentTime` property to 0 and then call `.play()` to play it from the beginning.
+
+I started the clock project from JavaScript30. It's getting easier to see how to organize my code. It's becoming more natural to me to see where my code is headed and how I'll need to organize it. I think all these JavaScript lynda courses might be helping with that.
+
+I studied JavaScript functions on Lynda.com. I also started reading a textbook called [Structure and Interpretation of Computer Programs](https://web.mit.edu/alexmv/6.037/sicp.pdf). It was on this [list](https://teachyourselfcs.com/) of concepts to master to understand computer science. Every book on that site is available for free. I got them all on pdf now. I want to try to find an e-book version of them all because that will make note taking easier.
+
+**Thoughts and Feelings:** I took a break after 1 hour and 45 minutes of tutorial (1h) and coding (45m). I sat in the sun and then came inside and had a cucimber with almond butter and peach seltzer. When I came back to coding I felt so much more refreshed and worked even longer. My mind was so clear. I think I should implement more breaks and snacks. I don't know if it was the snack itself that boosted my energy or just the fact that snacks make me happy. Maybe anything that makes me relaxed and happy would be good during a break. 
+
+**Link To Work:** [Started Clock](https://github.com/dangerousdashie/JavaScript30/blob/48f36c908811f361201f9aa36d16d84360357914/02%20-%20JS%20and%20CSS%20Clock/index-dashie.html)
