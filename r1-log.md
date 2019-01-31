@@ -238,7 +238,7 @@ I found a set of [tutorials/projects](https://javascript30.com/) in vanilla java
 I watched Wes Bos's solution to the Drum Kit challenge. It was really different than mine. Things I learned:
 1. There is a `keycode` associated with every key event. ex. the event `.keycode` property for **a** is **65**.
 2. There is an event listener called transitionend that runs when a css transition has ended.
-3. Calling `.play()` on an audio element that is currently playing won't do anything. You can set the audio element's `currentTime` property to 0 and then call `.play()` to play it from the beginning.
+3. Calling `.play()` on an audio element that is currently playing won't do anything. To override this, you can set the audio element's `currentTime` property to 0 and then call `.play()` to play it from the beginning.
 
 I started the clock project from JavaScript30. It's getting easier to see how to organize my code. It's becoming more natural to me to see where my code is headed and how I'll need to organize it. I think all these JavaScript lynda courses might be helping with that.
 
