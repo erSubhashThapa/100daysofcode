@@ -261,3 +261,14 @@ I plan to read more of [*Structure and Interpretation of Computer Programs*](htt
 **Thoughts and Feelings:** Took a break for a snack after 1hr and 20 ish minutes or my tutorial and coding and I felt good. I also took a pee break 34 minutes into my tutorial. But I really have to pee now and I'm holding it so I can finished posting before my computer dies.
 
 **Link To Work:** [Continued Clock](https://github.com/dangerousdashie/JavaScript30/blob/c192da7e4ca4874b7ee226c453d34bef11828e25/02%20-%20JS%20and%20CSS%20Clock/index-dashie.html)
+
+### R1D33 - 2/2/19
+It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function, is because it isn't. It's a property! Duh! I was tryung to use it like a function. 
+
+What I was doing:
+`elems[0].innerHTML("hello world");`
+
+But it should have been:
+`elems[0].innerHTML = "hello world";`
+
+I have gotten so used to jQuery which has an `html()` function. So I was trying to use the `.innerHTML` property like a function.
