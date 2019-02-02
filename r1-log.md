@@ -289,7 +289,7 @@ All three times that I `console.log()` the div, it has the border applied. Wheth
 
 ![ScreenShot](log_imgs/R1D33/num.png)
 
-And oddly enough, the script with the div will log a different result if I keep everything the same but I step through the whole script in the debugger slowly. In that case it still doesn't give the expected result, because it shows no border proporty in the last log.
+And oddly enough, the script with the div will log a different result if I keep everything the same but I step through the whole script in the debugger slowly. In that case it still doesn't give the expected result, because it shows no border property in the last log.
 
 ![ScreenShot](log_imgs/R1D33/step.png)
 
