@@ -263,7 +263,7 @@ I plan to read more of [*Structure and Interpretation of Computer Programs*](htt
 **Link To Work:** [Continued Clock](https://github.com/dangerousdashie/JavaScript30/blob/c192da7e4ca4874b7ee226c453d34bef11828e25/02%20-%20JS%20and%20CSS%20Clock/index-dashie.html)
 
 ### R1D33 - 2/2/19
-It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function, is because it isn't. It's a property! Duh! I was tryung to use it like a function. 
+It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function is because it isn't. It's a property! Duh! I was trying to use it like a function. 
 
   What I was doing:
 
@@ -279,17 +279,17 @@ I also learned that if you declare a variable and then use += on it before intia
 
 ---
 
-I worked on the clock project from [JavaScript30](https://javascript30.com) and ran into some weird behavior. I isolated what's confusing me into the problem into a separate file [here](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_node_behavior.html). 
+I worked on the clock project from [JavaScript30](https://javascript30.com) and ran into some weird behavior. I isolated what's confusing me into a separate file [here](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_node_behavior.html). 
 
 It's a script that, when `addBorder()` is called, adds a border to the div. But when I `console.log()` the div *before* `addBorder()` is called, you can see that for some reason, the style that is added in `addBorder()` is already applied.
 
 ![ScreenShot](log_imgs/R1D33/node.png)
 
-All three times that I `console.log()` the div, it has the border applied. Whether the log was applied before the `addBorder()`, after it's called but before the border property is set, or after the property is set. This is not what I expect. I would it expect it to look like [this](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_num_behavior.html) script runs, which is pretty much the same script except the element in question is no longer a div, but a number and the number is being multiplied by 10. In the log you can see the number remains 3 until after it is multiplied by 10 inside the `multiplyBy10()` function.
+All three times that I `console.log()` the div, it has the border applied. Whether the log was called before `addBorder()`, after `addBorder()` was called but before the border property is set, or after the property is set. This is not what I expect. I would it expect it to look like [this](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_num_behavior.html) script runs, which is pretty much the same script except the element in question is no longer a div, but a number and the number is being multiplied by 10. In the log you can see the number remains 3 until after it is multiplied by 10 inside the `multiplyBy10()` function.
 
 ![ScreenShot](log_imgs/R1D33/num.png)
 
-And oddly enough, the script with the div will log a different result if I keep everything the same but I step through the whole script in the debugger slowly.
+And oddly enough, the script with the div will log a different result if I keep everything the same but I step through the whole script in the debugger slowly. In that case it still doesn't give the expected result, because it shows no border proporty in the last log.
 
 ![ScreenShot](log_imgs/R1D33/step.png)
 
