@@ -277,7 +277,16 @@ I have gotten so used to jQuery which has an `html()` function. So I was trying 
 
 I also learned that if you declare a variable and then use += on it before intializing the variable, "undefined" is added included in the beginning. You have to set the variable to an emtpy string first. More on that [here](https://stackoverflow.com/questions/29198651/first-element-in-object-is-undefined-using-operator).
 
-I worked on the clock project from [JavaScript30](https://javascript30.com) and ran into some weird behavior. I isolated what's confusing me into the problem into a seperate file [here](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_node_behavior.html). 
+
+I worked on the clock project from [JavaScript30](https://javascript30.com) and ran into some weird behavior. I isolated what's confusing me into the problem into a separate file [here](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_node_behavior.html). 
+
+It's a script that, when `addBorder()` is called, adds a border to the div. But when I `console.log()` the div *before* `addBorder()` is called, you can see that for some reason, the style that is added in `addBorder()` is already applied.
+
+![ScreenShot](log_imgs/R1D33/node.png)
+
+All three times that I `console.log()` the div, it has the border applied. Whether the log was applied before the `addBorder()`, after it's called but before the border property is set, or after the property is set. This is not what I expect. I would it expect it to look like [this](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_num_behavior.html) script runs, which is pretty much the same script except the element in question is no longer a div, but a number and the number is being multiplied by 10. In the log you can see the number remains 3 until after it is multiplied by 10 inside the `multiplyBy10()` function.
+
+![ScreenShot](log_imgs/R1D33/node.png)
 
 **Thoughts and Feelings:** Since I spent so much time confusing a property with a function, it's probably really ingrained in my brain now to check that mistake in the future. This is a pattern I noticed. I'm able to pick up on bugs so much quicker than I used to. Every bug that tooks me 45 minutes to find trains my brain to look for that bug quickly later on. So then next time I spend an hour on a tiny bug, I'll be grateful. My mind will have **"downloaded"** the ability to quickly scan for that bug in the future. An hour one day saves me many hours in the future. It's truly a gift you can't buy. Treasure those bugs!
 
