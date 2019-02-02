@@ -276,7 +276,9 @@ It took me a while to figure out the bug in my lynda tutorial challenge for Java
 I have gotten so used to jQuery which has an `html()` function. So I was trying to use the `.innerHTML` property like a function.
 
 I also learned that if you declare a variable and then use += on it before intializing the variable, "undefined" is added included in the beginning. You have to set the variable to an emtpy string first. More on that [here](https://stackoverflow.com/questions/29198651/first-element-in-object-is-undefined-using-operator).
-<hr>
+
+---
+
 I worked on the clock project from [JavaScript30](https://javascript30.com) and ran into some weird behavior. I isolated what's confusing me into the problem into a separate file [here](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_node_behavior.html). 
 
 It's a script that, when `addBorder()` is called, adds a border to the div. But when I `console.log()` the div *before* `addBorder()` is called, you can see that for some reason, the style that is added in `addBorder()` is already applied.
