@@ -275,7 +275,7 @@ It took me a while to figure out the bug in my lynda tutorial challenge for Java
 
 I have gotten so used to jQuery which has an `html()` function. So I was trying to use the `.innerHTML` property like a function.
 
-I also learned that if you declare a variable and then use += on it before intializing the variable, "undefined" is added included in the beginning. You have to set the variable to an emtpy string first. More on that [here](https://stackoverflow.com/questions/29198651/first-element-in-object-is-undefined-using-operator).
+I also learned that if you declare a variable and then use += on it before intializing the variable, "undefined" is included in the beginning. You have to set the variable to an emtpy string first. More on that [here](https://stackoverflow.com/questions/29198651/first-element-in-object-is-undefined-using-operator).
 
 ---
 
