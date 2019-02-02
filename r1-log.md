@@ -265,10 +265,12 @@ I plan to read more of [*Structure and Interpretation of Computer Programs*](htt
 ### R1D33 - 2/2/19
 It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function, is because it isn't. It's a property! Duh! I was tryung to use it like a function. 
 
-What I was doing:
-`elems[0].innerHTML("hello world");`
+  What I was doing:
 
-But it should have been:
-`elems[0].innerHTML = "hello world";`
+  `elems[0].innerHTML("hello world");`
+
+  But it should have been:
+
+  `elems[0].innerHTML = "hello world";`
 
 I have gotten so used to jQuery which has an `html()` function. So I was trying to use the `.innerHTML` property like a function.
