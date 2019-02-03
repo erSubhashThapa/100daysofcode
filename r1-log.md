@@ -1,6 +1,17 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ### R1D34 - 2/3/19
-https://stackoverflow.com/questions/54506846/chrome-devtools-htmldivelement-style-property-set-before-function-called?noredirect=1#comment95817550_54506846
+I continued the Javascript Functions tutoril on lynda.com.
+
+I posted my issue from yesterday on stackoverflow [here](https://stackoverflow.com/questions/54506846/chrome-devtools-htmldivelement-style-property-set-before-function-called?noredirect=1#comment95817550_54506846).
+
+Apperently this is happening because 
+>"Devtools console contains a **pointer** to the actual element in all three messages which is why it displays identically."
+
+Now, what this means exactly? I'm not sure. I can guess roughly what that means. The same person suggested,
+
+>"You might want to log out just the property itself." 
+
+Logging `div.style.border` worked as expected. I'd like to understand what a **pointer** is.
 
 ### R1D33 - 2/2/19
 It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function is because it isn't. It's a property! Duh! I was trying to use it like a function. 
