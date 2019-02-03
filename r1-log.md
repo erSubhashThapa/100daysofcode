@@ -15,7 +15,7 @@ Logging `div.style.border` worked as expected. I'd like to understand what a **p
 
 **Thoughts and Feelings:** I meditated for 15 minutes inbetween my tutorial and my coding. I used my Muse headband. I think that was really helpful. I was able to code for a while *(though I spent my coding time mostly posting on stackoverflow, debbuggin, and trying to understand what was going on with my issue.)* I reorganized this github log so that the last day is at the top. Much better!
 
-Whenever I get answers on stackoverflow I feel like the answers were written in a snarky tone. Maybe it's all in my head. But if they really are being snarky, then I should recognize this: the newbies who push through the snark and ask questions anyways are the one's who succeed. So that's what I'm going to do. Be grateful for every answer even if the person is being snarky. Ignore the snark. Take the answer.
+Whenever I get answers on stackoverflow I feel like the answers were written in a snarky tone. Maybe it's all in my head. But if they really are being snarky, then I should recognize this: the newbies who push through the snark and ask questions anyways are the ones who succeed. So that's what I'm going to do. Be grateful for every answer even if the person is being snarky. Ignore the snark. Take the answer.
 
 ### R1D33 - 2/2/19
 It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function is because it isn't. It's a property! Duh! I was trying to use it like a function. 
