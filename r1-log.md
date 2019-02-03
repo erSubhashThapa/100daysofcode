@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ### R1D34 - 2/3/19
-I continued the Javascript Functions tutoril on lynda.com.
+I continued the Javascript Functions tutorial on lynda.com.
 
 I posted my issue from yesterday on stackoverflow [here](https://stackoverflow.com/questions/54506846/chrome-devtools-htmldivelement-style-property-set-before-function-called?noredirect=1#comment95817550_54506846).
 
@@ -12,6 +12,10 @@ Now, what this means exactly? I'm not sure. I can guess roughly what that means.
 >"You might want to log out just the property itself." 
 
 Logging `div.style.border` worked as expected. I'd like to understand what a **pointer** is.
+
+**Thoughts And Feeling:s** I meditated for 15 minutes inbetween my tutorial and my coding. I used my Muse headband. I think that was really helpful. I was able to code for a while *(though I spent my coding time mostly posting on stackoverflow, debbuggin, and trying to understand what was going on with my issue.)* I reorganized this github log so that the last day is at the top. Much better!
+
+Whenever I get answers on stackoverflow I feel like the answers were written in a snarky tone. Maybe it's all in my head. But if they really are being snarky, then I should recognize this: the newbies who push through the snark and ask questions anyways are the one's who succeed. So that's what I'm going to do. Be grateful for every answer even if the person is being snarky. Ignore the snark. Take the answer.
 
 ### R1D33 - 2/2/19
 It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function is because it isn't. It's a property! Duh! I was trying to use it like a function. 
