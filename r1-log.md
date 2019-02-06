@@ -1,4 +1,13 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+### R1D37 2/6/19
+Continued lynda.com javascript patterns tutorial. 
+
+Started [JavaScript30](https://javascript30.com) array cardio day.
+
+**Thoughts and Feelings:** Shlomo was talking on speaker phone and I was paying attention to that while coding. So I was probably distracted. But it was an easier assignment today. I probably could have finished it if I wasn't listening to Shlo. But it's ok, I wanted to take it easier today because I have a tense forhead muscle and back muscles. It might be from dehydration. So today I drank a lot. After my tutorial I did Muse meditdation before coding.
+
+**Link to Work:** [Array Cardio Day 1, unfinished](https://github.com/dangerousdashie/JavaScript30/blob/2def97f1c845944c08e9705839bbf35c24639df4/03%20-%20CSS%20Variables/index-dashie.html)
+
 ### R1D36 2/5/19
 I finished the lynda tutorial for JavaScript Functions. I started JavaScript Patterns.
 
