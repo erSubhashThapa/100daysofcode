@@ -1,4 +1,11 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+### R1D38 2/7/19
+Continued lynda.com javascript patterns tutorial.
+Finished [JavaScript30](https://javascript30.com) array cardio day 1.
+
+**Thoughts and Feelings:** I want to practice array methods more. I think reduce() is interesting. I'm kind of tired today. I didn't go on social media all day which is nice but I still ended the day late probably because I spoke to other campers, woke up and read for an hour, and did laundry. Tomorrow I need to finish early so I have time to work on the RV heat sink before our friend's yoga photoshoot at 4 that we volunteered to help with.
+
+**Link to Work:** [Array Cardio Day 1](https://github.com/dangerousdashie/JavaScript30/blob/fcebbdf8cf2244a8de0bba72dfc404f19bfd11c8/04%20-%20Array%20Cardio%20Day%201/index-dashie.html)
 ### R1D37 2/6/19
 Continued lynda.com javascript patterns tutorial. 
 
