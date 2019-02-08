@@ -1,4 +1,10 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+Continued lynda.com javascript patterns tutorial. 
+
+Finished [JavaScript30](https://javascript30.com) Flex Panel Gallery. I got stuck because I forgot you can use `this` and was only using the the event.target in the handle. Which wasn't good because that sometimes gave me an element nested in `this`.
+
+
+**Link to Work:** [Flex Panel Gallery](https://github.com/dangerousdashie/JavaScript30/blob/d556e026cf3349baf171323da85f5a7ad8aa5e51/05%20-%20Flex%20Panel%20Gallery/index-dashie.html)
 ### R1D38 2/7/19
 Continued lynda.com javascript patterns tutorial.
 Finished [JavaScript30](https://javascript30.com) array cardio day 1.
