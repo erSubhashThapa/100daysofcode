@@ -1,4 +1,5 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+### R1D39 2/8/19
 Continued lynda.com javascript patterns tutorial. 
 
 Finished [JavaScript30](https://javascript30.com) Flex Panel Gallery. I got stuck because I forgot you can use `this` and was only using the the `event.target` in the event handler. Which wasn't good because that sometimes gave me an element nested in `this`.
