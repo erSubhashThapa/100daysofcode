@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-### R1D39 2/9/18
+### R1D40 2/9/18
 Finished JavaScript Patterns tutorial on lynda. Started JavaScript Events tutorial on Lynda.
 
 Finished [JavaScript30](https://javascript30.com) Type Ahead challenge. I still have to finish watching how Wes did it.
