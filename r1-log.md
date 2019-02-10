@@ -1,5 +1,51 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 41
+### R1D41 2/10/18
+Continued the JavaScript Events tutorial on Lynda. I learned some tricks for selecting in Visual Studio Code:
+
+- **Cursor on Multiple Lines:** Put the cursor somewhere, then `opt`+`cmd`+`down or up arrow` 
+
+- **Once Your Cursor is on Multiple Lines, Select to the End:** `shift`+`right arrow` 
+
+- **Move a Line of Code up/down:** `opt`+`down or up arrow`
+
+- **Copy a Line of Code up/down:** `opt`+`shift`+`down or up arrow`
+
+- **Start an Anchor Tag:** `a` then `tab`
+
+You can even use these short cuts to copy from multiply lines and then paste into multiple lines.
+
+
+Watched Wes's solution and redid [JavaScript30](https://javascript30.com) Type Ahead challenge. I was struggling for a while because I had written a return statement like this:
+        
+        return 
+        `<li>
+        <span class="name">${cityName}, ${stateName}</span>
+        <span class="population">${numberWithCommas(place.population)}</span>
+        </li>`;
+        
+But since javascript sometimes puts in semicolons by itself, that actually works like this: 
+        
+        return; 
+        `<li>
+        <span class="name">${cityName}, ${stateName}</span>
+        <span class="population">${numberWithCommas(place.population)}</span>
+        </li>`;
+        
+So you need to start the string literal on the return line:
+
+        return ` 
+        <li>
+        <span class="name">${cityName}, ${stateName}</span>
+        <span class="population">${numberWithCommas(place.population)}</span>
+        </li>`;
+        
+I also played around with my formatting on this log on this entry. I really like how (James Priest)[https://github.com/james-priest/100-days-of-code-log-r4] does his. He also has it on [his own website](https://james-priest.github.io/100-days-of-code-log-r4/), with some styles applied. I'm not sure how he has his log connected to this site. I just looked and he talks about how he did it on [day 11 and 10](https://james-priest.github.io/100-days-of-code-log/#11-windows-10-ubuntu-1604-jekyll--github-pages) of his first round.
+
+**Thoughts and Feelings:** I felt like coding for longer, but I ran out of power. I could charge up but I think I will save power. Maybe I will do more later.
+
+**Link to Work:** [Followed Wes, Type Ahead](https://github.com/dangerousdashie/JavaScript30/blob/3075334ff435ed9de90e5947e6e59205bfe37e8d/06%20-%20Type%20Ahead/index-follow-along.html)
 ### R1D40 2/9/18
 Finished JavaScript Patterns tutorial on lynda. Started JavaScript Events tutorial on Lynda.
 
