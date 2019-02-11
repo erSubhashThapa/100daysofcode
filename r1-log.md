@@ -1,5 +1,13 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 42
+### R1D42 2/11/18
+I continued the JavaScript Events tutorial on Lynda.com.
 
+I started and completed the Array Cardio Day 2 challenge from [JavaScript30](https://javascript30.com). I started a project that tracks my exercise and coding streaks called Dashie Tracker. 
+![ScreenShot](log_imgs/dashie_tracker2_11)
+**Thoughts and Feelings:** I really felt like I could have coded for longer. I have a few projects I want to try. But it's cloud so our power is limited today.
+
+**Link to Work:** [Array Cardio Day 2](https://github.com/dangerousdashie/JavaScript30/blob/d715047a0af3774b87090a1d3fbbb1fce307ef4b/07%20-%20Array%20Cardio%20Day%202/index-dashie.html), [Dashie Tracker](https://github.com/dangerousdashie/dashie-tracker/tree/06d956b98ab870d6f536900a482fc438d19e2ff0)
 ## Day 41
 ### R1D41 2/10/18
 Continued the JavaScript Events tutorial on Lynda. I learned some tricks for selecting in Visual Studio Code:
@@ -41,7 +49,7 @@ So you need to start the string literal on the return line:
         <span class="population">${numberWithCommas(place.population)}</span>
         </li>`;
         
-I also played around with my formatting on this log on this entry. I really like how (James Priest)[https://github.com/james-priest/100-days-of-code-log-r4] does his. He also has it on [his own website](https://james-priest.github.io/100-days-of-code-log-r4/), with some styles applied. I'm not sure how he has his log connected to this site. I just looked and he talks about how he did it on [day 11 and 10](https://james-priest.github.io/100-days-of-code-log/#11-windows-10-ubuntu-1604-jekyll--github-pages) of his first round.
+I also played around with my formatting on this log on this entry. I really like how [James Priest](https://github.com/james-priest/100-days-of-code-log-r4) does his. He also has it on [his own website](https://james-priest.github.io/100-days-of-code-log-r4/), with some styles applied. I'm not sure how he has his log connected to this site. I just looked and he talks about how he did it on [day 11 and 10](https://james-priest.github.io/100-days-of-code-log/#11-windows-10-ubuntu-1604-jekyll--github-pages) of his first round.
 
 **Thoughts and Feelings:** I felt like coding for longer, but I ran out of power. I could charge up but I think I will save power. Maybe I will do more later.
 
