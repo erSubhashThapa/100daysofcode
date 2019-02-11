@@ -6,7 +6,7 @@ I continued the JavaScript Events tutorial on Lynda.com.
 I started and completed the Array Cardio Day 2 challenge from [JavaScript30](https://javascript30.com). I started a project that tracks my exercise and coding streaks called Dashie Tracker. 
 ![ScreenShot](log_imgs/dashie_tracker2_11.png)
 
-**Thoughts and Feelings:** I really felt like I could have coded for longer. I have a few projects I want to try. But it's cloud so our power is limited today.
+**Thoughts and Feelings:** I really felt like I could have coded for longer. I have a few projects I want to try. But it's cloudy so our power is limited today, since we run on solar.
 
 **Link to Work:** [Array Cardio Day 2](https://github.com/dangerousdashie/JavaScript30/blob/d715047a0af3774b87090a1d3fbbb1fce307ef4b/07%20-%20Array%20Cardio%20Day%202/index-dashie.html), [Dashie Tracker](https://github.com/dangerousdashie/dashie-tracker/tree/06d956b98ab870d6f536900a482fc438d19e2ff0)
 ## Day 41
