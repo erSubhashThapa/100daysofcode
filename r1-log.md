@@ -1,9 +1,11 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ## Day 42
 ### R1D42 2/11/18
-I continued the JavaScript Events tutorial on Lynda.com.
+1. I continued the JavaScript Events tutorial on Lynda.com.
 
-I started and completed the Array Cardio Day 2 challenge from [JavaScript30](https://javascript30.com). I started a project that tracks my exercise and coding streaks called Dashie Tracker. 
+2. I started and completed the **Array Cardio Day 2** challenge from [JavaScript30](https://javascript30.com). 
+
+3. I started a project that tracks my exercise and coding streaks called **Dashie Tracker**. 
 ![ScreenShot](log_imgs/dashie_tracker2_11.png)
 
 **Thoughts and Feelings:** I really felt like I could have coded for longer. I have a few projects I want to try. But it's cloudy so our power is limited today, since we run on solar.
