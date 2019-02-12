@@ -1,10 +1,10 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ## Day 43
 ### R1D43 2/12/18
-1. Continued the JavaScript Events tutorial on Lynda.com. I'm finding all the things you can do with events interesting and fun.
+1. Continued the JavaScript Events tutorial on Lynda.com. I'm finding all the things you can do with events interesting and fun. I found this [cheat sheet](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) for awesome Visual Studio Code short cuts for mac. 
 
 2. Completed the **HTML5 Canvas API** challenge from [JavaScript30](https://javascript30.com). This project was cool. It makes me want to play with the Canvas API more.
-!(Screenshot)[canvas2_12_19.gif]
+![ScreenShot](log_imgs/canvas2_12_19.png)
 
 3. Started Wes Bos's [CSS Grid](https://cssgrid.io/) toturials.
 
