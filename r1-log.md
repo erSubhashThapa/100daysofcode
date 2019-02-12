@@ -1,4 +1,17 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 43
+### R1D43 2/12/18
+1. Continued the JavaScript Events tutorial on Lynda.com. I'm finding all the things you can do with events interesting and fun.
+
+2. Completed the **HTML5 Canvas API** challenge from [JavaScript30](https://javascript30.com). This project was cool. It makes me want to play with the Canvas API more.
+!(Screenshot)[canvas2_12_19.gif]
+
+3. Started Wes Bos's [CSS Grid](https://cssgrid.io/) toturials.
+
+**Thoughts and Feelings:** Great day. I'm excited to get more practice with grid.
+
+**Link to Work:** [HTML5 Canvas API](https://github.com/dangerousdashie/JavaScript30/blob/5bb2ce7583922cca91e9d949f1fc2577f3f473e6/08%20-%20Fun%20with%20HTML5%20Canvas/index-START.html)
+
 ## Day 42
 ### R1D42 2/11/18
 1. I continued the JavaScript Events tutorial on Lynda.com.
