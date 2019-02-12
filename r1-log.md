@@ -4,6 +4,7 @@
 1. Continued the JavaScript Events tutorial on Lynda.com. I'm finding all the things you can do with events interesting and fun. I found this [cheat sheet](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) for awesome Visual Studio Code short cuts for mac. 
 
 2. Completed the **HTML5 Canvas API** challenge from [JavaScript30](https://javascript30.com). This project was cool. It makes me want to play with the Canvas API more.
+
 ![ScreenShot](log_imgs/canvas2_12_19.gif)
 
 3. Started Wes Bos's [CSS Grid](https://cssgrid.io/) toturials.
