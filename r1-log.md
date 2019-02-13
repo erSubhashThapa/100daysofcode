@@ -1,4 +1,11 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 44
+### R144 2/13/18
+1. Continued Javascript Events tutorial on lynda.
+
+2. The [JavaScript30](https://javascript30.com) video today was short and it wasn't a challenge so much as a tutorial. So I had time to do some of the CSS Grid](https://cssgrid.io/) tutorials. But those also weren't challenges. So I started the [100dayscss](https://100dayscss.com/) challenge for today. It was so interactive, I couldn't figure out how to do it purely in css. So I looked at how someothers solved it. Most people used javascript. Not cool guys! But Ifound someone who did it with just css, I only looked at it a little bit but it looked like they styled an input checkbox that changed when you toggle it. It was really hacky. Ofcourse, I could have misunderstood what they did. I'm not sure what the answer is. 
+![ScreenShot](log_imgs/css2_13_19.gif)
+
 ## Day 43
 ### R1D43 2/12/18
 1. Continued the JavaScript Events tutorial on Lynda.com. I'm finding all the things you can do with events interesting and fun. I found this [cheat sheet](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) for awesome Visual Studio Code short cuts for mac. 
@@ -7,7 +14,7 @@
 
 ![ScreenShot](log_imgs/canvas2_12_19.gif)
 
-3. Started Wes Bos's [CSS Grid](https://cssgrid.io/) toturials.
+3. Started Wes Bos's [CSS Grid](https://cssgrid.io/) tutorials.
 
 **Thoughts and Feelings:** Great day. I'm excited to get more practice with grid.
 
