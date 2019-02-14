@@ -1,4 +1,16 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 45
+### R1D44 2/14/18
+
+ - **Study:** Continued Javascript Events tutorial. Almost done! I got to the last video and was trying to finish but I realized my back was sore and I had to take a break. So I decided to be done with my tutorial for the day. This tutorial has been really fun because events are so action-based and interactive. I spent a while trying to figure out how to traverse through the highlighted words when I generate a snippet in emmet. But I couldn't find out anything. For example, if I start typying here, it will automatically start writing over the first selection `device width`. But what if I want to skip over to the last highlighted word, `Document` so I can adda title. Is there a way to skip to here on the keyboard?
+ 
+ ![ScreenShot](log_imgs/emmet.png)
+ 
+ 
+ 
+ - **Coding:** I started and completed the [JavaScript30](https://javascript30.com) 'Hold Shift' challenge. I still have to watch how Wes solved it. 
+
+**Link to Work:** [Hold Shift](https://github.com/dangerousdashie/JavaScript30/blob/725e933614749eecc91a062a1a98bdfa1dff8659/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-dashie.html)
 ## Day 44
 ### R1D44 2/13/18
 1. Continued Javascript Events tutorial on lynda.
