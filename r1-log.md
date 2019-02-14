@@ -4,7 +4,9 @@
 
  - **Study:** Continued Javascript Events tutorial. Almost done! I got to the last video and was trying to finish but I realized my back was sore and I had to take a break. So I decided to be done with my tutorial for the day. This tutorial has been really fun because events are so action-based and interactive. 
 
-   I spent a while trying to figure out how to traverse through the highlighted words when I generate a snippet in emmet. But I couldn't find out anything. For example, if I start typying here, it will automatically start writing over the first selection `device width`. But what if I want to skip over to the last highlighted word, `Document` so I can adda title. Is there a way to skip to here on the keyboard?  
+   I spent a while trying to figure out how to traverse through the highlighted words when I generate a snippet in emmet. But I couldn't find out anything.  
+   
+   For example, if I start typying here, it will automatically start writing over the first selection, `device width`. But what if I want to skip over to the last highlighted word, `Document` so I can add a title? Is there a way to skip to here on the keyboard?  
  
    ![ScreenShot](log_imgs/emmet.png)
  
