@@ -1,5 +1,22 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 47
+### R1D47 2/17/18
+
+ - **Study:**
+  
+   Finished JavaScript Classes tutorial. Started Vanilla JavaScript Propagation and Binding tutorial.
+   
+   Started JavaScript classes tutorial.
+   
+ - **Coding:**
+    
+    I started the 'Custom HTML5 Video Player' challenge from [JavaScript30](https://javascript30.com). I left off where Wes said to try to add a full screen button on your own. I did pretty well on this project.
+    
+**Link to Work:** I started implementing mandatory 20:20:20 breaks. That means every 20 minutes I look at something 20 feet away for 20 seconds. It's supposed to prevent eye strain. I also do somme stretching to help with my back. I think it's helping.
+
+**Link to Work:** [Custom HTML5 Video Player, nearly finished](https://github.com/dangerousdashie/JavaScript30/tree/1c6d42912a99418d24c9f3c17b573f49b7c9b746/11%20-%20Custom%20Video%20Player)
+
 ## Day 46
 ### R1D46 2/16/18
  - **Study:**
