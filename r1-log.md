@@ -1,24 +1,37 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 48
+### R1D48 2/17/18
 
+ - **Study:**
+  
+   Continued Vanilla JavaScript Propagation and Binding tutorial.
+
+   
+ - **Coding:**
+    
+    Finished the extra challenge in 'Custom HTML5 Video Player' from [JavaScript30](https://javascript30.com).
+    
+    Started 'Key Sequence Detection' from [JavaScript30](https://javascript30.com). I got stuck on using the splice array. I'm trying to understand it better.
+    
+
+**Link to Work:** [Custom HTML5 Video Player](https://github.com/dangerousdashie/JavaScript30/blob/c117c40e22789e047edc605b5dea6543e02c1ce9/11%20-%20Custom%20Video%20Player/script-dashie.js), [Key Sequence Detection unfinished](https://github.com/dangerousdashie/JavaScript30/blob/c117c40e22789e047edc605b5dea6543e02c1ce9/12%20-%20Key%20Sequence%20Detection/index-START.html)
 ## Day 47
-### R1D47 2/17/18
+### R1D47 2/16/18
 
  - **Study:**
   
    Finished JavaScript Classes tutorial. Started Vanilla JavaScript Propagation and Binding tutorial.
    
-   Started JavaScript classes tutorial.
-   
  - **Coding:**
     
     I started the 'Custom HTML5 Video Player' challenge from [JavaScript30](https://javascript30.com). I left off where Wes said to try to add a full screen button on your own. I did pretty well on this project.
     
-**Link to Work:** I started implementing mandatory 20:20:20 breaks. That means every 20 minutes I look at something 20 feet away for 20 seconds. It's supposed to prevent eye strain. I also do somme stretching to help with my back. I think it's helping.
+**Thoughts and Feelings:** I started implementing mandatory 20:20:20 breaks. That means every 20 minutes I look at something 20 feet away for 20 seconds. It's supposed to prevent eye strain. I also do somme stretching to help with my back. I think it's helping.
 
 **Link to Work:** [Custom HTML5 Video Player, nearly finished](https://github.com/dangerousdashie/JavaScript30/tree/1c6d42912a99418d24c9f3c17b573f49b7c9b746/11%20-%20Custom%20Video%20Player)
 
 ## Day 46
-### R1D46 2/16/18
+### R1D46 2/15/18
  - **Study:**
   
    Finished JavaScript Events tutorial! I really enjoyed this tutorial. I want to recreate the last project, which was a drag and drop game for a building a snowman. I want to make the same game but for dressing up someone I know. 
