@@ -10,7 +10,7 @@ I decided code for 2 hours, today, and forgo my code study hour. I took a break 
    ![screenshot](log_imgs/pomodoro_sketch.jpg)
    
    Then I transfered my sketch to psuedo code.
-   ![screenshot](log_imgs/Pomodoro_pseudo_code.png)
+   ![screenshot](log_imgs/Pomodoro_psuedo_code.png)
   
    I learned that you cannot use arrow functions as constructors:
    
