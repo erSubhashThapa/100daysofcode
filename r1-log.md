@@ -1,16 +1,33 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ## Day 50
 ### R1D50 2/19/19
+Up until this point, I've spent 1 hour a day studying and 1 hour a day hands-on coding. I decided code for 2 hours, today, and forgo my study hour. I took a break from [JavaScript30](https://javascript30.com) and decided to make a pomodoro timer app. 
+
+
 - **Pomodoro:**
+   I started by writing down on paper what I would need for my pomodoro timer app.
+   
+   ![screenshot](log_imgs/emmet.png)
   
    I learned that you cannot use arrow functions as constructors:
+   
+   **Works** as a Constructor, *regular function*:
+    ```javascript
     var Pomodoro = function(el){
         this.el = document.getElementById(el);
     };
+    ```
+
+    
+   **Doesn't Work** as a Constructor, *arrow function*:
+
+     ```javascript
     var Pomodoro = (el)=>{
         this.el = document.getElementById(el);
     };
+    ```
 
+**Link to Work:** [Pomodoro working file](https://github.com/dangerousdashie/pomodoro/tree/d4b732e462cc6429ce2f52295ee3a67c44fa5f5f)
 
 ## Day 49
 ### R1D49 2/18/19
