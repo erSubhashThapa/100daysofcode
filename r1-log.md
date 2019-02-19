@@ -1,6 +1,19 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 50
+### R1D50 2/19/19
+- **Pomodoro:**
+  
+   I learned that you cannot use arrow functions as constructors:
+    var Pomodoro = function(el){
+        this.el = document.getElementById(el);
+    };
+    var Pomodoro = (el)=>{
+        this.el = document.getElementById(el);
+    };
+
+
 ## Day 49
-### R1D49 2/18/18
+### R1D49 2/18/19
 - **Study:**
   
    Finished Vanilla JavaScript Propagation and Binding tutorial. 
@@ -18,7 +31,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 **Link to Work:** [Key Sequence Detection](https://github.com/dangerousdashie/JavaScript30/blob/ae9bff27afcf15004dc76de554a49dc0cff7b933/12%20-%20Key%20Sequence%20Detection/index-START.html), [Slide in on Scroll](https://github.com/dangerousdashie/JavaScript30/blob/ae9bff27afcf15004dc76de554a49dc0cff7b933/13%20-%20Slide%20in%20on%20Scroll/index-dashie.html)
 
 ## Day 48
-### R1D48 2/17/18
+### R1D48 2/17/19
 
  - **Study:**
   
@@ -35,7 +48,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 
 **Link to Work:** [Custom HTML5 Video Player](https://github.com/dangerousdashie/JavaScript30/blob/c117c40e22789e047edc605b5dea6543e02c1ce9/11%20-%20Custom%20Video%20Player/script-dashie.js), [Key Sequence Detection unfinished](https://github.com/dangerousdashie/JavaScript30/blob/c117c40e22789e047edc605b5dea6543e02c1ce9/12%20-%20Key%20Sequence%20Detection/index-START.html)
 ## Day 47
-### R1D47 2/16/18
+### R1D47 2/16/19
 
  - **Study:**
   
@@ -50,7 +63,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 **Link to Work:** [Custom HTML5 Video Player, nearly finished](https://github.com/dangerousdashie/JavaScript30/tree/1c6d42912a99418d24c9f3c17b573f49b7c9b746/11%20-%20Custom%20Video%20Player)
 
 ## Day 46
-### R1D46 2/15/18
+### R1D46 2/15/19
  - **Study:**
   
    Finished JavaScript Events tutorial! I really enjoyed this tutorial. I want to recreate the last project, which was a drag and drop game for a building a snowman. I want to make the same game but for dressing up someone I know. 
@@ -66,7 +79,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 **Link to Work:** [Hold Shift Follow Along](https://github.com/dangerousdashie/JavaScript30/blob/064d917d79b0af7455a48cf066584fc11f7e0326/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-follow-along.html), [Custom HTML5 Video Player Unfinished](https://github.com/dangerousdashie/JavaScript30/blob/064d917d79b0af7455a48cf066584fc11f7e0326/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-follow-along.html)
 
 ## Day 45
-### R1D45 2/14/18
+### R1D45 2/14/19
 
  - **Study:** Continued Javascript Events tutorial. Almost done! I got to the last video and was trying to finish but I realized my back was sore and I had to take a break. So I decided to be done with my tutorial for the day. This tutorial has been really fun because events are so action-based and interactive. 
 
@@ -82,7 +95,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 
 **Link to Work:** [Hold Shift](https://github.com/dangerousdashie/JavaScript30/blob/725e933614749eecc91a062a1a98bdfa1dff8659/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-dashie.html)
 ## Day 44
-### R1D44 2/13/18
+### R1D44 2/13/19
 1. Continued Javascript Events tutorial on lynda.
 
 2. The [JavaScript30](https://javascript30.com) video today was short and it wasn't a challenge so much as a tutorial. So I had time to do some of the [CSS Grid](https://cssgrid.io/) tutorials. But those also weren't challenges. So I started the [100dayscss](https://100dayscss.com/) challenge for today. It was so interactive, I couldn't figure out how to do it purely in css. So I looked at how some others solved it. Most people used javascript. Not cool guys! But I found someone who did it with just css, I only looked at it a little bit but it looked like they styled an input checkbox that changed when you toggle it. It was really hacky. Of course, I could have misunderstood what they did. I'm not sure what the answer is. 
@@ -92,7 +105,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 **Thoughts and Feelings:** Today I offered to help anyone on twitter with coding. No one took me up on it but it felt good to offer. I'm trying to implement more 'giving' behaviors because I'm reading the book *Give or Take*. It says that when we try to help the community's progress as a whole, we all thrive.
 
 ## Day 43
-### R1D43 2/12/18
+### R1D43 2/12/19
 1. Continued the JavaScript Events tutorial on Lynda.com. I'm finding all the things you can do with events interesting and fun. I found this [cheat sheet](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf) for awesome Visual Studio Code short cuts for mac. 
 
 2. Completed the **HTML5 Canvas API** challenge from [JavaScript30](https://javascript30.com). This project was cool. It makes me want to play with the Canvas API more.
@@ -106,7 +119,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 **Link to Work:** [HTML5 Canvas API](https://github.com/dangerousdashie/JavaScript30/blob/5bb2ce7583922cca91e9d949f1fc2577f3f473e6/08%20-%20Fun%20with%20HTML5%20Canvas/index-START.html)
 
 ## Day 42
-### R1D42 2/11/18
+### R1D42 2/11/19
 1. I continued the JavaScript Events tutorial on Lynda.com.
 
 2. I started and completed the **Array Cardio Day 2** challenge from [JavaScript30](https://javascript30.com). 
@@ -118,7 +131,7 @@ The Vanilla JavaScript Propagation and Binding tutorial wasn't taught very well.
 
 **Link to Work:** [Array Cardio Day 2](https://github.com/dangerousdashie/JavaScript30/blob/d715047a0af3774b87090a1d3fbbb1fce307ef4b/07%20-%20Array%20Cardio%20Day%202/index-dashie.html), [Dashie Tracker](https://github.com/dangerousdashie/dashie-tracker/tree/06d956b98ab870d6f536900a482fc438d19e2ff0)
 ## Day 41
-### R1D41 2/10/18
+### R1D41 2/10/19
 Continued the JavaScript Events tutorial on Lynda. I learned some tricks for selecting in Visual Studio Code:
 
 - **Cursor on Multiple Lines:** Put the cursor somewhere, then `opt`+`cmd`+`down or up arrow` 
