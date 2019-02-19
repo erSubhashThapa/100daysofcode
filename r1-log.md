@@ -7,10 +7,10 @@ I decided code for 2 hours, today, and forgo my code study hour. I took a break 
 - **Pomodoro:**
    I started by writing down on paper what I would need for my pomodoro timer app. I thought about the UI and I listed out different things I'd need.
    
-   ![screenshot](log_imgs/pomodoro_sketch.png)
+   ![screenshot](log_imgs/pomodoro_sketch.jpg)
    
    Then I transfered my sketch to psuedo code.
-   ![screenshot](log_imgs/pomodoro_pseudo_code.png)
+   ![screenshot](log_imgs/Pomodoro_pseudo_code.png)
   
    I learned that you cannot use arrow functions as constructors:
    
