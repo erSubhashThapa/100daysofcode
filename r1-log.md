@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ## Day 50
 ### R1D50 2/19/19
-Up until this point, I've spent 1 hour a day studying and 1 hour a day hands-on coding. I decided code for 2 hours, today, and forgo my study hour. I took a break from [JavaScript30](https://javascript30.com) and decided to make a pomodoro timer app. 
+I decided code for 2 hours, today, and forgo my code study hour. I took a break from [JavaScript30](https://javascript30.com) and decided to make a pomodoro timer app. 
 
 
 - **Pomodoro:**
