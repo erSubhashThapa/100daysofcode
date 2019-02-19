@@ -33,9 +33,9 @@ I decided code for 2 hours, today, and forgo my code study hour. I took a break 
     
    I still have a lot to do.
    
-**Thoughts and Feelings:** I got up at 6:55am today so I could get everything done before it got too hot. Yesterday, I was coding and sweating and I couldn't concentrate. Now, it's 11:47 and I've already finished exercising, two hours of coding, and I'm almost done with my log. I could have finished earlier if I had enough battery power, but I had to charge a few times. By getting up early, I avoided coding during the hottest hours of the day.
+**Thoughts and Feelings:** I got up at 6:55am today so I could get everything done before it got too hot. Yesterday, I was coding and sweating and I couldn't concentrate. Now, it's 11:47am and I've already finished exercising, two hours of coding, and I'm almost done with this log. I could have finished earlier if I had enough battery power, but I had to charge my battery a few times. By getting up early, I avoided coding during the hottest hours of the day.
 
-I enjoyed working on my own app in place of my hour of studying and my hours of hands-on coding with [JavaScript30](https://javascript30.com). I think it was helpful.
+I enjoyed working on my own app in place of my hour of studying and my hours of hands-on coding with [JavaScript30](https://javascript30.com). I think it was helpful to do a project from scratch again. I'll continue this for a few days, and maybe throw in some studying and Javascript30.
 
 **Link to Work:** [Pomodoro working file](https://github.com/dangerousdashie/pomodoro/tree/d4b732e462cc6429ce2f52295ee3a67c44fa5f5f)
 
