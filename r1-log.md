@@ -2,9 +2,9 @@
 ## Day 51
 ### R1D51 2/20/19
 - **Pomodoro:**
-   I worked on the buttons that add and remove input fields, so the user can customize their pomodoro intervals. I used bind() to bind this and now understand it bind() better. I ended up not needing it and removed it.
+   I worked on the buttons that add and remove input fields, so the user can customize their pomodoro intervals. I used bind() to bind this and now understand bind() better. But I ended up not needing it and removed it.
    
-   I found out that in the debugger, even though inner functions should have access to sibling functions, you can't access a sibling function in the degugger unless it's somewhere in the inner function. It doesn't have to be called, you can even just write the identifier of the function;
+   I found out that even though functions should have access to sibling functions, you can't access a sibling function in the debugger unless it's somewhere in the inner function. The sibling function doesn't have to be called inside the function, you can just write the identifier of the function:
    ```javascript
    function brother(){
       console.log("I'm a sibling to sister()");
@@ -16,11 +16,11 @@
       debugger; //you CAN call brother() in the debugger
    }
    ```
-   I refactored some of my code. I made a makeElem() function that takes an element type (div, button, input, etc...), a class name, and optional inner html text and creates that element since, in this project, most of my elements are dynamic, meaning they're created by the JavaScript code. I added more elements like "add" and "remove" buttons, worked on the css and grid layout, and worked on event listeners for the add and  remove buttons.
+   I refactored some of my code. I made a makeElem() function that takes an element type (div, button, input, etc...), a class name, and optional inner html text and creates that element. In this project, most of my elements are dynamic, meaning they're created by the JavaScript code, so makeElem() will be useful. I added more elements like "add" and "remove" buttons, worked on the css and grid layout, and worked on event listeners for the 'add' and 'remove' buttons.
    
    ![screenshot](log_imgs/pomodoro_2_20.png)
    
-   I ended today trying to add a document fragment but I didn't know the right syntax so that's where I will start tomorrow.
+   I ended today trying to add a document fragment but I didn't know the right syntax, so that's where I will start tomorrow.
    
 **Link to Work:** [Pomodoro working](https://github.com/dangerousdashie/pomodoro/tree/24069bad270b202418a47f77e97c026fdf154f56)
 
