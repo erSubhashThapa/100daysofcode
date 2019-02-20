@@ -21,6 +21,8 @@
    ![screenshot](log_imgs/pomodoro_2_20.png)
    
    I ended today trying to add a document fragment but I didn't know the right syntax so that's where I will start tomorrow.
+   
+**Link to Work:** [Pomodoro working](https://github.com/dangerousdashie/pomodoro/tree/24069bad270b202418a47f77e97c026fdf154f56)
 
 **Thoughts and Feelings:** I took mandatory stretch breaks every 15 minutes which was really helpful. If I was sitting in a way that could cause kinks in my body, I had to change positions after each break. My screen strains my eyes outside even in the shade when the sun gets bright enough, so I have to move inside at around 10am. It would be great to get glasses that can fix this problem. 
 
