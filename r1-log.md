@@ -1,4 +1,31 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 51
+### R1D51 2/20/19
+- **Pomodoro:**
+   I worked on the buttons that add and remove input fields, so the user can customize their pomodoro intervals. I used bind() to bind this and now understand it bind() better. I ended up not needing it and removed it.
+   
+   I found out that in the debugger, even though inner functions should have access to sibling functions, you can't access a sibling function in the degugger unless it's somewhere in the inner function. It doesn't have to be called, you can even just write the identifier of the function;
+   ```javascript
+   function brother(){
+      console.log("I'm a sibling to sister()");
+      debugger; //you CANNOT call sister() in the debugger, it will be undefined
+   }
+   function sister(){
+      brother; //brother is referenced
+      console.log("I can see my sibling, brother()");
+      debugger; //you CAN call brother() in the debugger
+   }
+   ```
+   I refactored some of my code. I made a makeElem() function that takes an element type (div, button, input, etc...), a class name, and optional inner html text and creates that element since, in this project, most of my elements are dynamic, meaning they're created by the JavaScript code. I added more elements like "add" and "remove" buttons, worked on the css and grid layout, and worked on event listeners for the add and  remove buttons.
+   
+   ![screenshot](long_imgs/pomodoro_2_20.png)
+   
+   I ended today trying to add a document fragment but I didn't know the right syntax so that's where I will start tomorrow.
+
+**Thoughts and Feelings:** I took mandatory stretch breaks every 15 minutes which was really helpful. If I was sitting in a way that could cause kinks in my body, I had to change positions after each break. My screen strains my eyes outside even in the shade when the sun gets bright enough, so I have to move inside at around 10am. It would be great to get glasses that can fix this problem. 
+
+I like working on a project from scratch. I'm implementing a lot of the concepts I learned in my tutorials. Putting these concepts to use helps me grasp them better.
+
 ## Day 50
 ### R1D50 2/19/19
 I decided code for 2 hours, today, and forgo my code study hour. I took a break from [JavaScript30](https://javascript30.com) and decided to make a pomodoro timer app. 
