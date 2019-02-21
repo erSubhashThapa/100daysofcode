@@ -14,7 +14,7 @@
      
   ![screenshot](log_imgs/debuggerscope_unidentified_2_21.png)
    
-  In my example I'm within a function, but to be clear, I got the same results when I pause outside of a function. Is this because the debugger creates its own block scopes at each line in the console?
+  In my example I'm within a function, but to be clear, I got the same results when I pause outside of a function. Is this because the debugger creates its own block scopes at each line in the console? But why would it work if not pause?
   
 **Thoughts and Feelings:** Moving around every fifteen minutes is helping my back. I coded inside the rv for the full 2 hours to avoud eye strain.
 
