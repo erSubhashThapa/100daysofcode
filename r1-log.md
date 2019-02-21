@@ -1,6 +1,10 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 52
+### R1D52 2/20/21
+   Debugger, declaring block scope in debugger acts unexpectedly. If not paused in debugger, you can declare let and const variables and access them in the dubugger. But when paused in the debugger inside a script or in script tags you get and Uncaught Reference Error, the debugger things the variable is undefined. Is this because the debugger creates it's own block scopes at each line in the console?
+
 ## Day 51
-### R1D51 2/20/19
+### R1D51 2/20/20
 - **Pomodoro:**
    I worked on the buttons that add and remove input fields, so the user can customize their pomodoro intervals. I used bind() to bind this and now understand bind() better. But I ended up not needing it and removed it.
    
@@ -29,7 +33,7 @@
 I like working on a project from scratch. I'm implementing a lot of the concepts I learned in my tutorials. Putting these concepts to use helps me grasp them better.
 
 ## Day 50
-### R1D50 2/19/19
+### R1D50 2/19/20
 I decided code for 2 hours, today, and forgo my code study hour. I took a break from [JavaScript30](https://javascript30.com) and decided to make a pomodoro timer app. 
 
 
