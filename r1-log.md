@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ## Day 52
 ### R1D52 2/20/21
-   Debugger, declaring block scope in debugger acts unexpectedly. If not paused in debugger, you can declare let and const variables and access them in the dubugger. But when paused in the debugger inside a script or in script tags you get and Uncaught Reference Error, the debugger things the variable is undefined. Is this because the debugger creates it's own block scopes at each line in the console?
+   Debugger, declaring block scope in console acts unexpectedly. If not paused in debugger, you can declare let and const variables and access them in the console. But when paused in the debugger inside a script or in script tags you get an Uncaught Reference Error, the debugger thinks the variable is undefined. In my example I'm within a function, but I got the same results when I pause outside of a function. Is this because the debugger creates its own block scopes at each line in the console?
 
 ## Day 51
 ### R1D51 2/20/20
