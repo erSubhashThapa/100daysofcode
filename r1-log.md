@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 ## Day 54
-### R1 2/23/19
+### 2/23/19
 
 - **Pomodoro:**
    
