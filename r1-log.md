@@ -4,7 +4,10 @@
 
 - **Pomodoro:**
    I tried added an `.invisible` css class to some divs. It didn't work for one div that had an id assigned to it. Id overides class. I finally realized the way to override it was to put #<idname>.<classname> (ex, #inputs.invisible) in the css. I found this out by playing around in Devtools in elements tab > styles tab.
-   I reviewed git pull
+   I reviewed git pull https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+   -- suggested doing a git pull before making a new branch so I reviewed what git pull does here https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull 
+   https://www.freecodecamp.org/forum/t/push-a-new-local-branch-to-a-remote-git-repository-and-track-it-too/13222
+   -- didn't include making a new remote
    
    working on a project from scratch is helping me learn about periferal technologies- git, github, css. takes long but thats because you're getting used to all the daily technologies you will use as a developer, not just the technology you set out to study, in this case javascript. It can seem dissapointing when your first few project take a while, but you are integrating all sorts of technologies into your brain. therefore, all these "distractions" - having to figure out git, having to figure out a css issue, having to figure out the nuances of browsers, understnding your debugger, understanding your editor- these are all amazing learning opportunities. These are just as important if not more important the the project itself. When your project is done you will have these technologies living in your brain to take with you to the next project. Be grateful for every bug, error, distraction. these are the challenges that make a difference.
 
