@@ -1,6 +1,13 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 54
+### R1 2/23/19
+
+- **Pomodoro:**
+   I tried added an `.invisible` css class to some divs. It didn't work for one div that had an id assigned to it. Id overides class. I finally realized the way to override it was to put #<idname>.<classname> (ex, #inputs.invisible) in the css. I found this out by playing around in Devtools in elements tab > styles tab.
+   I reviewed git pull
+
 ## Day 53
-### R1D53 2/20/22
+### R1D53 2/22/19
 - **Pomodoro:**
    I worked on the css grid layout and the submit function. 
    
@@ -15,7 +22,7 @@
    
    **Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/4c44dc156e325f57415c28f48460f45413fec796)
 ## Day 52
-### R1D52 2/20/21
+### R1D52 2/21/19
 - **Pomodoro:**
    I refactored some code so that my function `createInput()` can be reused more often. I worked on the add button functions. I created the remove button function. I started the submit function. I left off trying to figure out how to ignore empty input fields when saving the input values.
 
@@ -36,7 +43,7 @@
 **Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/24069bad270b202418a47f77e97c026fdf154f56)
 
 ## Day 51
-### R1D51 2/20/20
+### R1D51 2/20/19
 - **Pomodoro:**
    I worked on the buttons that add and remove input fields, so the user can customize their pomodoro intervals. I used bind() to bind this and now understand bind() better. But I ended up not needing it and removed it.
    
