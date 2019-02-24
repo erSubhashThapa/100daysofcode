@@ -1,5 +1,13 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
-merge a new branch https://www.youtube.com/watch?v=lsLjxSkGSDE. delete the old branch https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323.
+## Day 55
+### 2/24/19
+
+- **Pomodoro:**
+   
+   I merged my branch into master following [this video](https://www.youtube.com/watch?v=lsLjxSkGSDE). Don't forget to push to the remote! I deleted the old branch following [this](https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323).
+   
+   The pomodoro is pretty far along. I have the timer working. I still need pause/play/skip/back controls, an edit button, and to edit the css and design. I need to convert the numbers that represent seconds and minutes into a more readable format. 
+
 ![screenshot](log_imgs/pomo2_24.gif)
 
 **Link to Work:**
