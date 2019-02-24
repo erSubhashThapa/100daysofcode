@@ -10,7 +10,7 @@
 
 ![screenshot](log_imgs/pomo2_24.gif)
 
-**Link to Work:**
+**Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/6c2a35569b8f611649a9e77c9d0523976e03d6ad)
 ## Day 54
 ### 2/23/19
 
