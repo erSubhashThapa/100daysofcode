@@ -8,7 +8,7 @@
    
    The pomodoro is pretty far along. I have the timer working. I still need pause/play/skip/back controls, an edit button, and to edit the css and design. I need to convert the numbers that represent seconds and minutes into a more readable format. 
 
-![screenshot](log_imgs/pomo2_24.gif)
+   ![screenshot](log_imgs/pomo2_24.gif)
 
 **Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/6c2a35569b8f611649a9e77c9d0523976e03d6ad)
 ## Day 54
