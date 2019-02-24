@@ -1,4 +1,8 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+merge a new branch https://www.youtube.com/watch?v=lsLjxSkGSDE. delete the old branch https://koukia.ca/delete-a-local-and-a-remote-git-branch-61df0b10d323.
+![screenshot](log_imgs/pomo2_24.gif)
+
+**Link to Work:**
 ## Day 54
 ### 2/23/19
 
