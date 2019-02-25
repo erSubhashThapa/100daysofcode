@@ -5,7 +5,7 @@
 
 - **Pomodoro:**
    
-   I added sound to the timer. I finshed all my the controls (play, back, next) except mute/unmute. I still have to add an edit function. I also need to add nice design.
+   I added sound to the timer. I finshed all my the controls (play, back, next) except mute/unmute. I still have to add an edit button to edit the pomodoro intervals. I also need to add nice design.
    
    ![screenshot](log_imgs/pomo2_25.gif)
    
