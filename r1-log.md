@@ -1,4 +1,16 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+
+## Day 55
+### 2/24/19
+
+- **Pomodoro:**
+   
+   I added sound the timer. I finshed all my the controls except mute/unmute. I still have to add an edit function. I also need to add nice design.
+   
+   ![screenshot](log_imgs/pomo2_25.gif)
+   
+**Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/2b278b504f8074004bdc53cc1641705c71ae7310)
+
 ## Day 55
 ### 2/24/19
 
