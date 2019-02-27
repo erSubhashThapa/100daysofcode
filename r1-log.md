@@ -1,9 +1,9 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-   From [bitmovin.com](https://bitmovin.com/play-not-play-new-autoplay-policies-safari-11-chrome-64/) on Chrome's autoplay policy:
-   > ...unmuted autoplay requires any of the following conditions to be fulfilled:
+   From [bitmovin.com](https://bitmovin.com/play-not-play-new-autoplay-policies-safari-11-chrome-64/) on Chrome's autoplay policy, bold added for emphasis:
+   > ...unmuted **autoplay requires any of the following conditions** to be fulfilled:
 
-   > - A user interaction with the website is required
+   > - **A user interaction with the website is required**
    >   - clicking anywhere on the document, navigation, …
    >   - scrolling is excluded as a valid user interaction in this context
    > - MEI (Media Engagement Index) threshold has to be crossed (Desktop only)
