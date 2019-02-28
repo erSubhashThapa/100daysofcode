@@ -2,6 +2,18 @@
 ## Day 59
 ### 2/28/19
 
+- **Pomodoro:**
+   
+   I finished the function that converts the time from seconds to m:ss. I merged my branch mack to master and deleted the branch. I worked on the layout of the timer. I reviewed some of (flexboxfroggy)[https://flexboxfroggy.com/] but I decided to change the flexbox I was working with to grid. I'm still trying to get the hang of each. I added some styles. I used [this dribbble page for inspo.](https://dribbble.com/shots/2750480-Daily-UI-014-Countdown-Timer)
+   
+   ![dribble inspo image](https://cdn.dribbble.com/users/455244/screenshots/2750480/daily-ui-_014.png)
+   
+    _Work by [Serj Krush](https://dribbble.com/SerjKrush)._
+    
+    I left off with a bug where the gradient background color has a white line on the right side of the timer div. I don't know why. It looks light pink in the gif.
+   
+   ![screenshot](log_imgs/pomo2_28.gif)
+
 
 **Link to Work:** [Pomodoro, working(aka not finished, I just realized calling it 'working' might be confusing](https://github.com/dangerousdashie/pomodoro/tree/449255677c3e5a1985007de89383c4aeb3621312)
 
