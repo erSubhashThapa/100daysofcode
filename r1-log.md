@@ -10,6 +10,7 @@
    
    I added some styles. I used [this dribbble page for inspo.](https://dribbble.com/shots/2750480-Daily-UI-014-Countdown-Timer)
    
+   _dribbble inspo_
    ![dribble inspo image](https://cdn.dribbble.com/users/455244/screenshots/2750480/daily-ui-_014.png)
    
     _Work by [Serj Krush](https://dribbble.com/SerjKrush)._
