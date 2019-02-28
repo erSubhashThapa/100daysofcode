@@ -19,7 +19,7 @@
    ![screenshot](log_imgs/pomo2_28.gif)
 
 
-**Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/449255677c3e5a1985007de89383c4aeb3621312)(aka not finished, I just realized calling it **'working'** might be confusing)
+**Link to Work:** [Pomodoro, working](https://github.com/dangerousdashie/pomodoro/tree/449255677c3e5a1985007de89383c4aeb3621312) (aka **not finished**, I just realized calling it **'working'** might be confusing)
 
 ## Day 58
 ### 2/27/19
