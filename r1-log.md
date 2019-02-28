@@ -1,4 +1,9 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+## Day 59
+### 2/28/19
+
+
+**Link to Work:** [Pomodoro, working(aka not finished, I just realized calling it 'working' might be confusing](https://github.com/dangerousdashie/pomodoro/tree/449255677c3e5a1985007de89383c4aeb3621312)
 
 ## Day 58
 ### 2/27/19
