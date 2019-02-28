@@ -6,7 +6,7 @@
    
    I finished the function that converts the time from seconds to m:ss. I merged my branch into to master and deleted the branch. 
    
-   I worked on the layout of the timer. I reviewed some of (flexboxfroggy)[https://flexboxfroggy.com/] but I decided to change the flexbox I was working with to grid. I'm still trying to get the hang of each. 
+   I worked on the layout of the timer. I reviewed some of [flexboxfroggy](https://flexboxfroggy.com/) but I decided to change the flexbox I was working with to grid. I'm still trying to get the hang of each. 
    
    I added some styles. I used [this dribbble page for inspo.](https://dribbble.com/shots/2750480-Daily-UI-014-Countdown-Timer)
    
