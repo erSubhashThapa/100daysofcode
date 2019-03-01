@@ -15,7 +15,7 @@
    
 - **#100daysofCode Twitter Participants:**
    
-   I started playing around with a script that finds how many #100daysofcode participants for a certain day on a certain date there are.
+   I started playing around with a script that finds how many #100daysofcode participants for a certain day (day 1/100. 2/100 etc) on a certain date there are.
    
 
 ## Day 59
