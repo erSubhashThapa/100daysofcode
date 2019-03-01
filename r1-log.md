@@ -1,4 +1,23 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
+
+## Day 60
+### 3/1/19
+
+- **Pomodoro:**
+   
+   I posted my white line problem [here on stackover flow](https://stackoverflow.com/questions/54949659/white-line-appears-at-end-of-gradient-filled-div-at-specific-browser-widths).
+   
+   ![screenshot](log_imgs/pomo3-1.gif)
+   
+- **Helping out:**   
+   
+   I helped another #100daysofcode participant on her [coding homework.](https://twitter.com/ItsladyKadie/status/1101475054460854272) I've been wanting to help someone and I finally did!
+   
+- **#100daysofCode Twitter Participants:**
+   
+   I started playing around with a script that finds how many #100daysofcode participants for a certain day on a certain date there are.
+   
+
 ## Day 59
 ### 2/28/19
 
