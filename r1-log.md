@@ -7,7 +7,7 @@
    
    I posted my white line problem [here on stackover flow](https://stackoverflow.com/questions/54949659/white-line-appears-at-end-of-gradient-filled-div-at-specific-browser-widths).
    
-   ![screenshot](log_imgs/pomo3-1.gif)
+   ![screenshot](log_imgs/pomo3_1.gif)
    
 - **Helping out:**   
    
