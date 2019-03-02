@@ -1,5 +1,10 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 61
+### 3/2/19
+- **Pomodoro:**
+   Yesterday I coded more after I posted and I did more with my **#100daysofCode Twitter Participants:** project. Today I continued with that and didn't work on the **Pomodoro**. I did get an answer to my Pomodoro questions on [stackover flow](https://stackoverflow.com/questions/54949659/white-line-appears-at-end-of-gradient-filled-div-at-specific-browser-widths). The line was due to a rounding issue. basically it's doing a percentage of width that must have a decimal and sometimes rounding it up, sometimes down. The trick to fixing it is to set the background size slightly bigger than the div, `background-size: 100% 101%;`
+
 ## Day 60
 ### 3/1/19
 
