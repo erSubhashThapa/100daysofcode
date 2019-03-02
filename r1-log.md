@@ -5,11 +5,17 @@
 
    Yesterday I coded more after I posted to my log. I did more with my **#100daysofCode Twitter Participants** project. Today I continued with that and took a break from my **Pomodoro** App. I did get an answer to my Pomodoro questions on [stackover flow](https://stackoverflow.com/questions/54949659/white-line-appears-at-end-of-gradient-filled-div-at-specific-browser-widths). The line was due to a rounding issue. basically it's doing a percentage of width that has a decimal and sometimes rounding it up, sometimes down, not sure exactly. The trick to fixing it is to set the background size slightly bigger than the div, `background-size: 100% 101%;`
    
+- **#100daysofCode Twitter Participants:**
+   
+   I got this project pretty far. It's usuable but the design isn't great. I need to redo the layout so I have more space for instructions. I haven't put it on git hub yet, but I will after the instrucitons are done. 
+   
+   You can see how someone might use it in the video below. in this example, I used it to find out how many people started #100days of code the same day as me: I enter a date (march 1st) and the day of #100DaysOfCode (60th) because I was on my 60th day yesterday. The program outputs 3 string queries to search on twitter: one for the day entered, one for the supposed start day for these people, and the end day for them. 
+   
+   I copied the _'start day'_ string query to see how many people started the same day as me. I searched the string query on twitter. I selected the 'latest' tab. Scrolled all the way down so all the tweets loaded. Then I used the console to find the number of people who started with me, using code I saved on the project UI for easy copying.
+   
    ![screenshot](log_imgs/twitter3_02.gif)
    
- - **#100daysofCode Twitter Participants:**
-   
-   I got this project pretty far. It's usuable but the design isn't great. I need to redo the layout so I have more space for instructions. I haven't put it on git hub yet, but I probably will after all the instrucitons are done.
+
 
 ## Day 60
 ### 3/1/19
