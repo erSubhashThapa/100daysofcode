@@ -1,5 +1,21 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 62
+### 3/3/19
+
+- **Pomodoro:**
+   
+   I continued to work on my Pomodoro app. I worked on the design, layout, css, etc. Again, I used [this dribbble page for inspo.](https://dribbble.com/shots/2750480-Daily-UI-014-Countdown-Timer) 
+   
+   I refactored some code for the `makeSecondsReadable()` function so it was more reusable. I reused it for the interval displays.
+   
+   I added specific css for when the timer is on a break interval. The timer turns to a green/blue gradient.
+   
+   I still need to add more form validation, and get to code to work with minutes submited in m:ss (1:30) format instead of just decimals (1.5).
+   
+   ![screenshot](log_imgs/pomo3_03.gif)
+   
+
 ## Day 61
 ### 3/2/19
 
