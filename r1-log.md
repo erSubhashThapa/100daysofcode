@@ -15,6 +15,8 @@
    
    ![screenshot](log_imgs/pomo3_03.gif)
    
+**Link to Work:** [Pomodoro, last commit](https://github.com/dangerousdashie/pomodoro/tree/169083e0c7bb825091ea66811ba2af49770053d8)
+   
 
 ## Day 61
 ### 3/2/19
