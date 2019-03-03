@@ -11,7 +11,7 @@
    
    I added specific css for when the timer is on a break interval. The timer turns to a green/blue gradient.
    
-   I still need to add more form validation, and get to code to work with minutes submited in m:ss (1:30) format instead of just decimals (1.5).
+   I still need to add more form validation, get the code to work with minutes submited in m:ss (1:30) format instead of just decimals (1.5), and pick better alarm sounds.
    
    ![screenshot](log_imgs/pomo3_03.gif)
    
