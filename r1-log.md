@@ -4,7 +4,7 @@
 ### 3/4/19
 
  - **JavaScript30: Slide In On Scroll**
-    
+    I forgot I finished this challeneg so I did it all over again. I spent a way longer time on it, trying to make sure I understood how all the heights of everything work together. It helped to step away from the monitor and sketch out how it all worked
     I learned a short cut for changing a value quickly in DevTools. Click into a numerical css property value (ex: `transform: translateX(`**26.4%**`) scale(0.95);`) in the DevTools style tab. Then use the up and down arrow buttons or the mouse wheel to increase or decrease by 1. For other increments hold down the following keys:
     
    - `cmd` +/- 100
