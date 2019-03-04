@@ -23,7 +23,7 @@
 
    I have to remember that this is a universal feeling. Probably all the people I look up to feel like this sometimes. I have to remember that these feelings are just in my mind. To help, I can consider alternative interpretations of what happend: My cousin doesn't know anything about my ambitions and doesn't want to offend me by asking me what I plan to do. A lot of times men are the bread winners and women aren't so maybe she didn't want to insult me and imply that I had to work like she does. Maybe she knows I study code and so she didn't ask. Worse case scenario, if she does think I'm lazy, she still thinks I'm a great person and she will find out soon enough that I'm a hard worker when it's obvious. And then it will be a fun surprise. it's kind of fun to surprise people about who you really are.
    
-   These thoughts and feelings distracted me. When I work in an office I might encounter similar feelings so this is something I really want to work on so I can saty focused.
+   These thoughts and feelings distracted me. When I work in an office I might encounter similar feelings so this is something I really want to work on so I can stay focused.
 
 ## Day 62
 ### 3/3/19
