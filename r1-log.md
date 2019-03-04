@@ -17,7 +17,7 @@
    
    I finished the challenge. Then I watched Wes do it and copied him. I ran into a bug; for some reason when I get the heigh of the image it says it's 0. but When I'm not in the forEach loop the image is the right height. More investigating tommorrow.
    
-**Thoughs and Feelings:** 
+ - **Thoughs and Feelings:** 
 
    I am at my cousin's house. I felt self-concious working here. The other day my cousin asked my spouse "Aren't you in tech?" and what he was doing to make money. When he said "no" and "nothing", she was surprised and wondered how we would make a living. But she didn't ask *me*. *I'm the one who's in tech* and I'm going to be making the money. I felt self-concious, like why didn't she ask me? Do I give off a vibe that I'm lazy and good for nothing? I got in my head. When I was working today I really wanted her to notice I was working on coding but she never asked me. I felt lame for caring about this. I know it's not important so this is something I need to work on. I really wanted my hard work to be recognized and not to be seen as lacking ambition. But I shouldn't care what others think. My focus should be on my own goals.
 
