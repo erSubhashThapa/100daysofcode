@@ -300,7 +300,7 @@ I enjoyed working on my own app in place of my hour of studying and my hour of h
 
 - **Coding:**
  
-   Finished Key Sequence etection and Slide in on Scroll from [JavaScript30](https://javascript30.com).
+   Finished Key Sequence detection and Slide in on Scroll from [JavaScript30](https://javascript30.com).
  
  **Thoughts and Feelings:** Today was difficult. It's so hot. I am sweating. I was coding outside but realized the lighting outside is too bright for my screen which caused eye strain. So I did the rest of my coding inside. But it's even hotter inside the RV. It's 89 outside, so probably 95 inside. Idk. Be grateful for AC when you have it. We can run AC if we run the generator. Maybe next time it's this hot we'll just do that. 
  
