@@ -5,7 +5,7 @@
 
  - **JavaScript30: Slide In On Scroll**
     
-    I learned a short cut for changing a value quickly in DevTools. Click into a numerical css property value (ex: `transform: translateX(`**26.4%**`) scale(0.95);`) in the DevTools style tab. Then use the arrow buttons or the mouse wheel to increase or decrease by 1. For other increments use the following values:
+    I learned a short cut for changing a value quickly in DevTools. Click into a numerical css property value (ex: `transform: translateX(`**26.4%**`) scale(0.95);`) in the DevTools style tab. Then use the arrow buttons or the mouse wheel to increase or decrease by 1. For other increments hold down the following keys:
     
    - `cmd` +/- 100
    - `shift` +/- 10
