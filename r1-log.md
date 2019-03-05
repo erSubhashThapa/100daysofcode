@@ -45,6 +45,10 @@
   How can you copy more than one level? Find a clone deep function online. Some libraries have them. Wes said you should be cautious about using it because there's often a better way to deal with the situaion that cloning deep but I'm not sure why. He also gave this poor mans version of close deep but said he's not sure of it's affect on performance:
   
     const dev2 = JSON.parse(JSON.stringify(wes));
+    
+ - **CSS3 in 30 Days: *Style Fancy Buttons***
+
+   I started CSS3 in 30 Days which was recommended to me on twitter. I didn't finish it but the first video was styling buttons. I don't know if I like this tutorial. 
 
 
 ## Day 63
