@@ -49,6 +49,8 @@
   - **CSS3 in 30 Days: *Style Fancy Buttons***
 
     I started CSS3 in 30 Days which was recommended to me on twitter. I didn't finish it but the first video was styling buttons. I don't know if I like this tutorial. 
+    
+    ![screenshot](log_imgs/van_3-05.gif)
 
 
 ## Day 63
