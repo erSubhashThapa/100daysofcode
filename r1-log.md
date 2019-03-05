@@ -27,7 +27,7 @@
  
        const cap2 = Object.assign({}, person, { number: 99, age: 12 });
        
-   The copy is only one level deep. An object nexted inside an object *will be referenced* when you use object assign. ex:
+   The copy is only one level deep. An object nested inside an object *will be referenced* when you use object assign, even though the main object is *coppied*. ex:
    
        const wes = {
           name: 'Wes',
