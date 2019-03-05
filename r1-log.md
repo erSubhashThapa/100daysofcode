@@ -11,6 +11,7 @@
     
     How can you create a copy of an array? These ways:
     
+       const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
        const team2 = players.slice();
        const team3 = [].concat(players);
        const team4 = [...players];
