@@ -27,7 +27,7 @@
  
        const cap2 = Object.assign({}, person, { number: 99, age: 12 });
        
-   The copy is only one level deep. An object nested inside an object *will be referenced* when you use object assign, even though the main object is *coppied*. ex:
+   The copy is only one level deep. An object nested inside an object *will be referenced* when you use object assign, even though the main object is *copied*. ex:
    
        const wes = {
           name: 'Wes',
@@ -40,7 +40,7 @@
         
        const dev = Object.assign({}, wes)
        
-  `dev` is a copy of `wes`, but within this copy we made a *refernce* of the nested `social` object.
+  `dev` is a copy of `wes`, but within this copy we made a *reference* to the nested `social` object.
   
   How can you copy more than one level? Find a clone deep function online. Some libraries have them. Wes said you should be cautious about using it because there's often a better way to deal with the situaion that cloning deep but I'm not sure why. He also gave this poor mans version of close deep but said he's not sure of it's affect on performance:
   
