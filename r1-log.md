@@ -1,5 +1,50 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 64
+### 3/5/19
+
+ - **JavaScript30: *Object and Arrays - References VS Copy***
+ 
+    I learned that when you **assign a variable** to an **object** identifier or an **array** identifier, the new variable is a *reference* to that object or array. So they are two different identifiers for the *same exact thing*. If you change an array item using one of the identifiers you are really changing the array that the other identifier referenced too.
+    
+    On the otherhand, when you **assign a variable** to a **boolean, number, or string** identifier, the new variable is a *copy* of the other one. If you change the new variable it won't affect the other variable.
+    
+    How can you create a copy of an array? These ways:
+    
+       const team2 = players.slice();
+       const team3 = [].concat(players);
+       const team4 = [...players];
+       const team5 = Array.from(players);
+   
+   How can you create a copy of an object?
+   
+       const person = {
+          name: 'Wes Bos',
+          age: 80
+       };
+ 
+       const cap2 = Object.assign({}, person, { number: 99, age: 12 });
+       
+   The copy is only one level deep. An object nexted inside an object *will be referenced* when you use object assign. ex:
+   
+       const wes = {
+          name: 'Wes',
+          age: 100,
+          social: {
+            twitter: '@wesbos',
+            facebook: 'wesbos.developer'
+          }
+        };
+        
+       const dev = Object.assign({}, wes)
+       
+  `dev` is a copy of `wes`, but within this copy we made a *refernce* of the nested `social` object.
+  
+  How can you copy more than one level? Find a clone deep function online. Some libraries have them. Wes said you should be cautious about using it because there's often a better way to deal with the situaion that cloning deep but I'm not sure why. He also gave this poor mans version of close deep but said he's not sure of it's affect on performance:
+  
+    const dev2 = JSON.parse(JSON.stringify(wes));
+
+
 ## Day 63
 ### 3/4/19
 
