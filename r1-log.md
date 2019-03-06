@@ -8,6 +8,30 @@
    ### Event Listeners: Submit Vs. Click
     - Use *submit* on a **form**. If you just add a click event to the form button it won't work when someone presses enter.
     - With submit the default is for the page to refresh, so you may want to use preventDefault in your event listener callback function.
+    
+    ### ES6 Property Value Shorthand
+    
+    Let's say we have a variable we want to use in making an object:
+    
+       const text = "some text here";        
+        
+    **Initializing the variable:**
+    
+    Old way
+            
+        const item = {
+            text: text,
+            someOtherProperty: "someValue"
+        }
+    New Way
+       
+       const item = {
+            text,
+            someOtherProperty: "someValue"
+        } 
+
+   You can leave out the property value if the key matches the variable name.
+
 
 ## Day 64
 ### 3/5/19
