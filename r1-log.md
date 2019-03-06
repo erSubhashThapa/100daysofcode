@@ -4,10 +4,12 @@
 ### 3/6/19
 
  - **JavaScript30: *LocalStorage And Event Delegation***
+   
+   This video had so much going on. I enjoyed it and went slowly. It was a 30 minute video but I took 2 hours to go through it. I learned a lot. This was the first time I used localStorage. I can't wait to use it in my own projects. Here were some other interesting things I learned:
  
    ### Event Listeners: Submit Vs. Click
     - Use *submit* on a **form**. If you just add a click event to the form button it won't work when someone presses enter.
-    - With submit the default is for the page to refresh, so you may want to use preventDefault in your event listener callback function.
+    - With submit the default is for the page to refresh, so you may want to use `preventDefault()` in your event listener callback function.
     
     ### ES6 Property Value Shorthand
     
@@ -31,7 +33,15 @@
         } 
 
    You can leave out the property value if the key matches the variable name.
+   
+ - **Thoughs and Feelings:** 
+   
+   I am slightly sleep deprived. I had one night of 5 hours of sleep and a few of 6-7. I really like to get 7.5-9. For some reason I've been waking up really early. Then I'm too excited for the day and can't go back to sleep. I'm hoping that when I start #100DaysOfMeditation I can fix this.
+   
+   I could feel the toll the deprivation is taking on me. I was a little anxious to finish my coding. Sleep deprivation decreases my motivation. But I still did a pretty good job of staying focused and excited about coding, inspite of the lowered motivation. I'm also on family vacation so that might have played a roll in my motivation. I know my family wants to see me and yet I'm in my hotel room coding.
+   
 
+**Link to Work:** [LocalStorage And Event Delegation](https://github.com/dangerousdashie/JavaScript30/blob/33d51f5b67e4e77dac5b622c2c61d347e4acea5f/15%20-%20LocalStorage/index-dashie.html)
 
 ## Day 64
 ### 3/5/19
