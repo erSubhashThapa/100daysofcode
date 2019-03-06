@@ -7,6 +7,7 @@
  
    ### Event Listeners: Submit Vs. Click
     - Use *submit* on a **form**. If you just add a click event to the form button it won't work when someone presses enter.
+    - With submit the default is for the page to refresh, so you may want to use preventDefault in your event listener callback function.
 
 ## Day 64
 ### 3/5/19
