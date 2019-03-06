@@ -1,5 +1,13 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 65
+### 3/6/19
+
+ - **JavaScript30: *LocalStorage And Event Delegation***
+ 
+   ### Event Listeners: Submit Vs. Click
+    - Use *submit* on a **form**. If you just add a click event to the form button it won't work when someone presses enter.
+
 ## Day 64
 ### 3/5/19
 
