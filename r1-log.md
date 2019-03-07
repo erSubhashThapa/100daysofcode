@@ -5,7 +5,9 @@
 
 - **JavaScript30: *LocalStorage And Event Delegation***
 
-   I reviewed what I learned in this video, practicing the concepts again in a simply HTML document. I finished the additional challenges for this project to create buttons that clear, uncheck, and check, all the options.
+   - I reviewed what I learned in this video, practicing the concepts again in a simply HTML document. 
+   
+   - I finished the additional challenges for this project to create buttons that clear, uncheck, and check, all the options.
 
 - **JavaScript30: *CSS Text Shadow Mouse Move Effect***
    
