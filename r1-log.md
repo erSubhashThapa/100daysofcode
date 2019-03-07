@@ -1,5 +1,16 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 66
+### 3/7/19
+
+ - **JavaScript30: *CSS Text Shadow Mouse Move Effect***
+    
+    ### ES6 Destructuring
+     const width = hero.offsetWidth;
+     const height = hero.offsetHeight;
+
+     const { offsetWidth: width, offsetHeight: height } = hero;
+
 ## Day 65
 ### 3/6/19
 
