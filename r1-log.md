@@ -20,6 +20,8 @@
       New way
 
        const { offsetWidth: width, offsetHeight: height } = hero;
+       
+       
 
 ## Day 65
 ### 3/6/19
