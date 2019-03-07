@@ -4,7 +4,8 @@
 ### 3/7/19
 
  - **JavaScript30: *CSS Text Shadow Mouse Move Effect***
- 
+   
+    I learned about the `offsetX` and `offsetY` property on mousemove events, which shows where the mouse was when the event was triggered. I learned about ES6 destructuring:
  
     
     ### ES6 Destructuring
@@ -23,6 +24,13 @@
 
        const { offsetWidth: width, offsetHeight: height } = hero;
        
+     Fun project.
+     
+     ![screenshot](log_imgs/van_3-05.gif)
+     
+ - **Thoughs and Feelings:** 
+   
+  I was pretty distracted today. I slept late on purpose to make up for my sleep deprivation. I feel great. But that pushed my coding back. So I had to code around my family since I'm currently on a family vacation. I was also distracted by the boom of followers I got today
        
 
 ## Day 65
