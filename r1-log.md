@@ -6,6 +6,11 @@
  - **JavaScript30: *CSS Text Shadow Mouse Move Effect***
     
     ### ES6 Destructuring
+    What is ES^ Destructuring?
+    
+    >It allows us to extract properties from an object or items from an array, multiple at a time.
+    
+     -- from Wes Bos's [*A Dead Simple intro to Destructuring JavaScript Objects*](https://wesbos.com/destructuring-objects/)
      
       Old way
       
