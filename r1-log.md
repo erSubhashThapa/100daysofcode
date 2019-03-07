@@ -7,8 +7,12 @@
     
     ### ES6 Destructuring
      
+      Old way
+      
        const width = hero.offsetWidth;
        const height = hero.offsetHeight;
+
+      New way
 
        const { offsetWidth: width, offsetHeight: height } = hero;
 
