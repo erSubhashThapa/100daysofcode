@@ -3,7 +3,11 @@
 ## Day 66
 ### 3/7/19
 
- - **JavaScript30: *CSS Text Shadow Mouse Move Effect***
+- **JavaScript30: *LocalStorage And Event Delegation***
+
+   I reviewed what I learned in this video, practicing the concepts again in a simply HTML document. I finished the additional challenges for this project to create buttons that clear, uncheck, and check, all the options.
+
+- **JavaScript30: *CSS Text Shadow Mouse Move Effect***
    
     I learned about the `offsetX` and `offsetY` property on mousemove events, which shows where the mouse was when the event was triggered. I learned about ES6 destructuring:
  
@@ -26,12 +30,21 @@
        
      Fun project.
      
-     ![screenshot](log_imgs/van_3-05.gif)
+     ![screenshot](log_imgs/javascript30_3-07.gif)
      
  - **Thoughs and Feelings:** 
    
-  I was pretty distracted today. I slept late on purpose to make up for my sleep deprivation. I feel great. But that pushed my coding back. So I had to code around my family since I'm currently on a family vacation. I was also distracted by the boom of followers I got today
+  I was pretty distracted today. I slept late on purpose to make up for my sleep deprivation. I feel great. But that pushed my coding back. So I had to code around my family since I'm currently on a family vacation. I'd prefer to get my coding done early before I see them.
+  
+  I was also distracted by the boom of followers I got today. @js_tut tweeted this:
        
+   ![screenshot](log_imgs/follow_3-07.png)
+   
+  So a bunch of people followed me and it was exciting and distracting! 
+  
+  I think I need to go relax and clear my mind!
+  
+**Link to Work:** [Review of localStorage concepts](https://github.com/dangerousdashie/JavaScript30/blob/c9123dfc403e26f9e443e9675bd0778d6bb39465/15%20-%20LocalStorage/index-review.html), [LocalStorage additional challenges](https://github.com/dangerousdashie/JavaScript30/blob/c0540917c095f4a5f676dd18ad1de7dd375ad7ec/15%20-%20LocalStorage/index-dashie.html), [Mouse Move Effect](https://github.com/dangerousdashie/JavaScript30/blob/6897ca4557c38bc9397d10ba2d2672056082f362/16%20-%20Mouse%20Move%20Shadow/index-dashie.html)
 
 ## Day 65
 ### 3/6/19
