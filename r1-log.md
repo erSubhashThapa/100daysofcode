@@ -21,14 +21,14 @@
     
      -- from Wes Bos's [*A Dead Simple intro to Destructuring JavaScript Objects*](https://wesbos.com/destructuring-objects/)
      
-      Old way
+     Old way
       
-       const width = hero.offsetWidth;
-       const height = hero.offsetHeight;
+      const width = hero.offsetWidth;
+      const height = hero.offsetHeight;
 
-      New way
+     New way
 
-       const { offsetWidth: width, offsetHeight: height } = hero;
+      const { offsetWidth: width, offsetHeight: height } = hero;
        
      Fun project.
      
