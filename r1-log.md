@@ -4,6 +4,8 @@
 ### 3/7/19
 
  - **JavaScript30: *CSS Text Shadow Mouse Move Effect***
+ 
+ 
     
     ### ES6 Destructuring
     What is ES6 Destructuring?
