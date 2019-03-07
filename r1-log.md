@@ -36,7 +36,7 @@
      
  - **Thoughs and Feelings:** 
    
-  I was pretty distracted today. I slept late on purpose to make up for my sleep deprivation. I feel great. But that pushed my coding back. So I had to code around my family since I'm currently on a family vacation. I'd prefer to get my coding done early before I see them.
+  I was pretty distracted today. I slept late on purpose to make up for my sleep deprivation. I feel great. But that pushed my coding back. So I had to code around my family since I'm currently on a family vacation. I'd prefer to get my coding done early before I see them while I'm on this vacation.
   
   I was also distracted by the boom of followers I got today. @js_tut tweeted this:
        
