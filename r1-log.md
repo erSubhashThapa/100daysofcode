@@ -28,7 +28,7 @@
      
    This sorts the array in alphabetical order by the last letter in the band name.
    
-  - **Thoughs and Feelings:** Having a hard time on family vacation. My family's getting mad at me for coding at times. I'm distracted. I need to relax, it was upsetting me that they got mad at me for coding instead of setting the table. I said I would do it in a few minutes after I finished coding and they got made. It hurt my feelings a lot. I don't know! 
+ - **Thoughs and Feelings:** Having a hard time on family vacation. My family's getting mad at me for coding at times. I'm distracted. I need to relax, it was upsetting me that they got mad at me for coding instead of setting the table. I said I would do it in a few minutes after I finished coding and they got made. It hurt my feelings a lot. I don't know! 
    
       
 
