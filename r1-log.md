@@ -20,7 +20,17 @@
   
   Oh the little things! I finally got the syntax down:
   
+      const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+      var bands2 = bands.sort((a,b)=>{
+           return a.charAt(a.length-1) < b.charAt(b.length-1) ? -1: 1;
+      });
      
+   This sorts the array in alphabetical order by the last letter in the band name.
+   
+  - **Thoughs and Feelings:** Having a hard time on family vacation. My family's getting mad at me for coding at times. I'm distracted. I need to relax, it was upsetting me that they got mad at me for coding instead of setting the table. I said I would do it in a few minutes after I finished coding and they got made. It hurt my feelings a lot. I don't know! 
+   
+      
 
 ## Day 66
 ### 3/7/19
