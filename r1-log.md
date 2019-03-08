@@ -6,6 +6,21 @@
 - **Helping People**
 
    Today I spent the day opening my inbox up to help people. My tweet was retweeted bu @js_tut and so I got a lot of messages. I thought I would get more questions related to fixing bugs so I thought I would do more coding but people asked more for general advice. I got a surprising amount of questions from people over seas which can be hard because there was sometimes a langauge barrier. Very few women asked me questions, 2 out of 13. Ladies, come on! I don't know if it's because there's just less female coders (it doesn't seem like it online though) or if women ask for help less. I think americans in general are afraid to ask for help which is why I got more questions from foreingers. I'd like to come up with a better way to help people.
+   
+- **JavaScript30: *Sort Without Articles***
+  
+  I decided to do a bit more coding since I didn't really code when I was helping people. I started the *Sort Without Articles* challenge from JavaScript30. I got stuck on using the array sort() function for a really long time. I was coding around family on vacation so I was pretty destracted. At first I thought it had to return true or false, but the sort function has to take a function that returns 0, a positive value, or negative value. Once I figured that out I thought that you could have a return statement in a ternery statement. But a ternery statement requires expressions, **not statements**. Then I thought arrow function had implied returns but apparently I needed the return statement because I had the expression in a block: 
+  
+  >Arrow functions can have either a "concise body" or the usual "block body".
+  >
+  >In a concise body, only an expression is specified, which becomes the implicit return value. In a block body, you must use an explicit return statement.
+  
+  -- from [*Arrow functions*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+  
+  Oh the little things! I finally got the syntax down:
+  
+     
 
 ## Day 66
 ### 3/7/19
