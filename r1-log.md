@@ -1,5 +1,12 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 67
+### 3/8/19
+
+- **Helping People**
+
+   Today I spent the day opening my inbox up to help people. My tweet was retweeted bu @js_tut and so I got a lot of messages. I thought I would get more questions related to fixing bugs so I thought I would do more coding but people asked more for general advice. I got a surprising amount of questions from people over seas which can be hard because there was sometimes a langauge barrier. Very few women asked me questions, 2 out of 13. Ladies, come on! I don't know if it's because there's just less female coders (it doesn't seem like it online though) or if women ask for help less. I think americans in general are afraid to ask for help which is why I got more questions from foreingers. I'd like to come up with a better way to help people.
+
 ## Day 66
 ### 3/7/19
 
