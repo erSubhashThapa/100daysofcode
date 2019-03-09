@@ -9,7 +9,7 @@
    
    I also got stuck for a while because I meant to use `indexOf()`, but because I was thinking of indexes I did `indexOf[]` instead of `()`. I'm surprised I got no syntax errors from this. 
    
-   I learned a little bit about [in place](https://en.wikipedia.org/wiki/In-place_algorithm) algorithms when I was reading about [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). I was wondering where the sort function keeps the order of the array at every step? I guess it stores it in place which I'm trying to understand. Is it accessible in the debugger? If I want to see mid-sort-function what's been sorted and in what order so far, can I? I'm still trying to figure out what order the compare function in `sort()` takes each item. I console logged an example to see but I'm still not sure.
+   I learned a little bit about [in place](https://en.wikipedia.org/wiki/In-place_algorithm) algorithms when I was reading about [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). I was wondering where the sort function keeps the order of the array at every step? I guess it stores it **in place** which I'm trying to understand. Is it accessible in the debugger? If I want to see mid-sort-function what's been sorted and in what order so far, can I? I'm still trying to figure out what order the compare function in `sort()` takes each item. I console logged an example to see but I'm still not sure.
    
    ![screenshot](log_imgs/array_3-09.png)
    
