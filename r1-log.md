@@ -30,7 +30,7 @@
     
     ![screenshot](log_imgs/cowork_3-09.jpg)
     
-Grateful to be feeling good. I had a great coding session. Yesterday night, I had so much fun playing pictionary with my family. My sister is flying coming in today! As long as I can respect my coding time and my family time, I know I'll have a good time.
+Grateful to be feeling good. I had a great coding session. Yesterday night, I had so much fun playing pictionary with my family. My sister is flying in today! As long as I can respect my coding time and my family time, I know I'll have a good time.
    
 ## Day 67
 ### 3/8/19
