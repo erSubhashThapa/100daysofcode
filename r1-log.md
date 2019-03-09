@@ -22,7 +22,9 @@
    
  - **Thoughts and Feelings:** 
     
-    I journaled last night to help me figure out how I could have better handled the situation that happened yesterday. I feel much better and figured out what I can do in the future. This morning I meditated and that helped too. I didn't do mindfulness which I normally do. Instead, I tried a meditation from the book I'm reading, which claims mindfulness isn't the same as meditation. In my case, meditation was a better choice because it helps rejuvinate you and get rid of passed stress. It prepares you to handle stress in the future. Mindfulness is mostly just for the present moment.
+    I journaled last night to help me figure out how I could have better handled the situation that happened yesterday. I feel much better and figured out what I can do in the future. 
+    
+    This morning I meditated and that helped too. I didn't do mindfulness which I normally do. Instead, I tried a meditation from the book I'm reading, which claims mindfulness isn't the same as meditation. In my case, meditation was a better choice because it helps rejuvinate you and get rid of passed stress. It prepares you to handle stress in the future. Mindfulness is mostly just for the present moment.
     
     Coding was much easier today. My extended family wasn't around. I coworked with my cousin by the pool under a "computer burqa" to help reduce my eye strain.
     
