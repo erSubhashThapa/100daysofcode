@@ -24,7 +24,7 @@
     
     Coding was much easier today. My extended family wasn't around. I coworked with my cousin by the pool under a "computer burqa" to help reduce my eye strain.
     
-    ![screenshot](log_imgs/cowork_3-09.HEIC)
+    ![screenshot](log_imgs/cowork_3-09.jpg)
    
 ## Day 67
 ### 3/8/19
