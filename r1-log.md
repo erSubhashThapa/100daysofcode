@@ -3,6 +3,26 @@
 ## Day 68
 ### 3/9/19
 
+- **JavaScript30: *Tally String Times with Reduce***
+
+   ### Another Example of ES6 destructuring:
+      let time = "3:45";
+      const [mins, secs] = time.split(':');
+
+      >mins //input
+      <"3"  //ouput
+      >secs
+      <"45"  
+   
+   
+   ### Passing a function into `map()`:
+      let stringNums = ["60", "23", "90"]
+      stringNums.map(parsefloat)
+      <[60, 23, 90]
+
+## Day 68
+### 3/9/19
+
 - **JavaScript30: *Sort Without Articles***
    
    This took me a while because I'm still getting used to the array functions like `map()`, `sort()`, and `filter()`. 
