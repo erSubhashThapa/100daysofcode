@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 68
-### 3/9/19
+## Day 69
+### 3/10/19
 
 - **JavaScript30: *Tally String Times with Reduce***
 
