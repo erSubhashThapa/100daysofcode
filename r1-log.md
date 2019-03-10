@@ -37,7 +37,18 @@
    ### `reduce()`:
    
    Ofcourse, we learned more about the array function `reduce()` in this video. Here's the [documentation for reduce.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+  
+- **#100daysofCode Twitter Participants:**
 
+  I started to change the string to search that the program outputs into a link that you can just click and it will search the string for you.
+
+ - **Thoughts and Feelings:** 
+ 
+   I need to find a way to get spell check on this makedown thing on github. I keep spelling things wrong. 
+   
+   I coded on less sleep because I was trying to wake up early to get coding done so I could hangout with my sister. So I set my alarm to sleep 7 hours which I thought would be the minimum I could have without feeling tired. But I forgot it was daylight savings. I was so tired when I woke up. I actually only set my alarm to sleep 6 hours. I didn't realized it until later. I had real coffee today and it's giving me a tiny bit of acid reflux. 
+  
+   
 ## Day 68
 ### 3/9/19
 
