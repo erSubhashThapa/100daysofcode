@@ -33,6 +33,10 @@
       let stringNums = ["60", "23", "90"]
       stringNums.map(parsefloat)
       <[60, 23, 90]
+      
+   ### `reduce()`:
+   
+   Ofcourse, we learned more about the array function `reduce()` in this video. Here's the [documentation for reduce.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ## Day 68
 ### 3/9/19
