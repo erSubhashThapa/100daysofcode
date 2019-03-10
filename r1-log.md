@@ -13,11 +13,11 @@
    
    - #### Spread Operator:
    
-      const timeNodes = [...document.querySelectorAll('[data-time]')];
+         const timeNodes = [...document.querySelectorAll('[data-time]')];
       
    - #### `Array.from()`:
       
-      const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
+         const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
 
    ### Another Example of ES6 destructuring:
       let time = "3:45";
