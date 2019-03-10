@@ -5,6 +5,20 @@
 
 - **JavaScript30: *Tally String Times with Reduce***
 
+   For this project, no offense Wes, but I liked my solution better than Wes's! But here are somethings I liked from his solution that were either new techniques or refreshers:
+   
+   ### Making an Array from a NodeList
+   
+   We can't use array functions on NodeLists, except for `forEach()`. Wes said using `forEach()` to turn a nodelist into an array is messy so there two ways are better:
+   
+   - #### Spread Operator:
+   
+      const timeNodes = [...document.querySelectorAll('[data-time]')];
+      
+   - #### `Array.from()`:
+      
+      const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
+
    ### Another Example of ES6 destructuring:
       let time = "3:45";
       const [mins, secs] = time.split(':');
