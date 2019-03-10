@@ -9,7 +9,7 @@
    
    ### Making an Array from a NodeList
    
-   We can't use array functions on NodeLists, except for `forEach()`. Wes said using `forEach()` to turn a nodelist into an array is messy so there two ways are better:
+   We can't use array functions on NodeLists, except for `forEach()`. Wes said using `forEach()` to turn a nodelist into an array is messy so these two ways are better:
    
    - #### Spread Operator:
    
