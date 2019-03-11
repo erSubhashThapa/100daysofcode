@@ -17,7 +17,7 @@
   
  - **Thoughts and Feelings:** I coded while in the passengers seat off the Rialta today. It was hot. I learned a lot today, but I'm so hot I'm just trying to finish this post so I can get outside the Rialta and cool off. So, not doing an indepth post today.
   
-  ![screenshot](log_imgs/driving3_11.gif)
+   ![screenshot](log_imgs/driving3_11.gif)
   
 
 **Link To Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/5c72bb19324ecb0d5ca42ba2efefdade244ac5a5/index.html)
