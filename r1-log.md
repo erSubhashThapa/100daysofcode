@@ -5,13 +5,17 @@
 
 - **100Daysofcode Tweet Search**
 
-  Before, I had this project output strings like: "(Day1 OR “day 1” OR r1d1 OR “r1 d1”) (#100daysofcode) since:2019-01-01 until:2019-1-8" and you were supposed to copy and paste them into the twitter search bar.
+  Before, I had this project output strings like: "(Day1 OR “day 1” OR r1d1 OR “r1 d1”) (#100daysofcode) since:2019-01-01 until:2019-1-8" and you were supposed to copy and paste them into the twitter search bar:
   
   ![screenshot](log_imgs/twitter3_02.gif)
   
   I replaced those output strings with links so now there's no copying required for the searching. 
   
   I added a custom day range option. This way I can seach everyone who posted "day 1" starting January 1st and ending January 10th for example, if I put 9 in for the custom day range.
+  
+ - **Thoughts and Feelings:** I coded while in the passengers seat off the Rialta today. It was hot. I learned a lot today, but I'm so hot I'm just trying to finish this post so I can get outside the Rialta and cool off. So, not doing an indepth post today.
+  
+  
   
 
 **Link To Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/5c72bb19324ecb0d5ca42ba2efefdade244ac5a5/index.html)
