@@ -5,7 +5,7 @@
 
 - **100Daysofcode Tweet Search**
 
-  Before, I had this project output strings like: "(Day1 OR “day 1” OR r1d1 OR “r1 d1”) (#100daysofcode) since:2019-01-01 until:2019-1-8" and you were supposed to copy and paste them into the twitter search bar:
+  Before, I had this project output strings like: ***"(Day1 OR “day 1” OR r1d1 OR “r1 d1”) (#100daysofcode) since:2019-01-01 until:2019-1-8"*** and you were supposed to copy and paste them into the twitter search bar:
   
   ![screenshot](log_imgs/twitter3_02.gif)
   
