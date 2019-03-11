@@ -15,7 +15,7 @@
   
   ![screenshot](log_imgs/twiiter3_11.gif)
   
- - **Thoughts and Feelings:** I coded while in the passengers seat off the Rialta today. It was hot. I learned a lot today, but I'm so hot I'm just trying to finish this post so I can get outside the Rialta and cool off. So, not doing an indepth post today.
+ - **Thoughts and Feelings:** I coded while in the passengers seat of the Rialta today. It was hot. I learned a lot today, but I'm so hot I'm just trying to finish this post so I can get outside the Rialta and cool off. So, not doing an indepth post today.
   
    ![screenshot](log_imgs/driving3_11.gif)
   
