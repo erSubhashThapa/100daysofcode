@@ -21,12 +21,33 @@
     
     - I started to make a form that returns what to paste so that you can find the common posters between two searches. This way you can find all the people that started on one day and are still posting today for example.
     
-    I'm forgetting what some of the things I did were. So maybe next time I'll make a list or do some more commits to track my changes.
+    I'm forgetting some of the things I did. Next time I'll make a list of everything I do or I'll commit to git more to track my changes.
     
-    Things to do: design, localStorage, finish the form to find common particpants between two searches. 
+   ![screenshot](log_imgs/twitter_b4_3-12.png) ![screenshot](log_imgs/twitter_after_3-12.png)
     
+    **Things to do:** design, localStorage, finish the form to find common particpants between two searches. 
     
+- ## **Thoughts and Feelings:** 
+    I decided to let myself sleep in to see if I needed any sleep. ***I was able to sleep 10hrs and 45min.*** So I must have been in a bit of sleep debt. I felt so much **better, happier, and motivated today.**
     
+    Catching up on my sleep *gave me back my power.* 
+    
+    The past few days I felt depressed and hopeless. Just a few days before I was so incredibly happy. My sleep deprivation zapped my energy that I normally have to deal with difficult situations. It took away my motivation to do the happiness practices I normally do to maintain my emotional health. Instead my brain took the path of least resistance, defaulting to ruminations on the negative. I felt hopeless even though intellectually I knew on some level my situation couldn't be hopeless. Thankfully, some part of me knew this feeling would pass.
+    
+    Today, after 10h:45m of sleep, the sleep itself instantly changed my outlook upon waking. But it also gave me the energy to do my happiness practices again, which further helped my emotional state. 
+    
+    ***This was the practice I did:*** Everytime I thought something negative, I had to subtract a point on a notepad and write next to it the subject I was thinking about. Then, I had to think of three nice things about that subject. I got to negative 5 which also meant I had to think 15 nice things about those negative subjects. 
+    
+    After the first hour or so of the day, the negative thoughts were exterminated. I'm excited to code and I'm incredibly happy again and my ruminations are gone.
+    
+    ***What I learned or relearned:*** 
+    - Sleep is incredibly important for me. I think I need to figure out how to not get into sleep debt. I thought it would be nice for my family if I stayed up late to hang out with them. But it made me sad and probably not my best self for them. So it really wasn't worth it.
+    
+    - I may enter into a funk, but it's just temporary. 
+    
+    - My happiness practices are so important.
+
+**Link to Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/846110c162ed5b3ac83134df45ca50292630911d/index.html)
 
 ## Day 70
 ### 3/11/19
