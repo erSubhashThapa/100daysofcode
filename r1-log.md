@@ -9,17 +9,17 @@
     
     I changed a lot of little things:
     
-    I removed the div that held the code that you need to copy and paste, since now it is automatically copied.
+    - I removed the div that held the code that you need to copy and paste, since now it is automatically copied.
     
-    I added a list of instructions. 
+    - I added a list of instructions. 
     
-    I refactored some of the code.
+    - I refactored some of the code.
     
-    I made specific dynamic strings for each search button.
+    - I made specific dynamic strings for each search button.
     
-    I changed the HTML syntax so I could use the `'submit'` event lister instead of `'click'`.
+    - I changed the HTML syntax so I could use the `'submit'` event lister instead of `'click'`.
     
-    I started to make a form that returns what to paste so that you can find the common posters between two searches. This way you can find all the people that started on one day and are still posting today for example.
+    - I started to make a form that returns what to paste so that you can find the common posters between two searches. This way you can find all the people that started on one day and are still posting today for example.
     
     I'm forgetting what some of the things I did were. So maybe next time I'll make a list or do some more commits to track my changes.
     
