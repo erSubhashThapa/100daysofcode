@@ -23,7 +23,11 @@
     
     I'm forgetting some of the things I did. Next time I'll make a list of everything I do or I'll commit to git more to track my changes.
     
-   ![screenshot](log_imgs/twitter_b4_3-12.png) ![screenshot](log_imgs/twitter_after_3-12.png)
+   ## Before:
+   ![screenshot](log_imgs/twitter_b4_3-12.png) 
+   
+   ## After:
+   ![screenshot](log_imgs/twitter_after_3-12.png)
     
     **Things to do:** design, localStorage, finish the form to find common particpants between two searches. 
     
