@@ -5,9 +5,11 @@
 
 - **100Daysofcode Tweet Search**
 
-    I made it so when you click the link that opens all the tweets you want to search for, it automatically copies the code you need to the clip board. I used [this code snippet on hackernoon](https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f).
+    I made it so when you click the search buttons, the program automatically copies the code you need to the clipboard. I used [this code snippet on hackernoon](https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f).
     
-    I changed a lot of little things. I removed the div that held the code that you need to copy and paste, since now it is automatically copied.
+    I changed a lot of little things:
+    
+    I removed the div that held the code that you need to copy and paste, since now it is automatically copied.
     
     I added a list of instructions. 
     
