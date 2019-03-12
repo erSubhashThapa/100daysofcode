@@ -45,7 +45,7 @@
     After the first hour or so of the day, the negative thoughts were exterminated. I'm excited to code and I'm incredibly happy again and my ruminations are gone.
     
     ***What I learned or relearned:*** 
-    - Sleep is incredibly important for me. I think I need to figure out how to not get into sleep debt. I thought it would be nice for my family if I stayed up late to hang out with them. But it made me sad and probably not my best self for them. So it really wasn't worth it.
+    - Sleep is incredibly important for me. I think I need to figure out how to avoid sleep debt, especially for more than a day. I thought it would be nice for my family if I stayed up late to hang out with them. But it made me depressed and probably not my best self for them. So it really wasn't worth it.
     
     - I may enter into a funk, but it's just temporary. 
     
