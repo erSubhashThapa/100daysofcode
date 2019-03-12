@@ -1,5 +1,31 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 71
+### 3/12/19
+
+- **100Daysofcode Tweet Search**
+
+    I made it so when you click the link that opens all the tweets you want to search for, it automatically copies the code you need to the clip board. I used [this code snippet on hackernoon](https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f).
+    
+    I changed a lot of little things. I removed the div that held the code that you need to copy and paste, since now it is automatically copied.
+    
+    I added a list of instructions. 
+    
+    I refactored some of the code.
+    
+    I made specific dynamic strings for each search button.
+    
+    I changed the HTML syntax so I could use the `'submit'` event lister instead of `'click'`.
+    
+    I started to make a form that returns what to paste so that you can find the common posters between two searches. This way you can find all the people that started on one day and are still posting today for example.
+    
+    I'm forgetting what some of the things I did were. So maybe next time I'll make a list or do some more commits to track my changes.
+    
+    Things to do: design, localStorage, finish the form to find common particpants between two searches. 
+    
+    
+    
+
 ## Day 70
 ### 3/11/19
 
