@@ -22,7 +22,7 @@
    ## Git: revert
    So I had to revert to the commit to undo what I commited so I followed [this page about `git revert`](https://code.likeagirl.io/how-to-undo-the-last-commit-393e7db2840b). First it told me to `git stash` but I didn't know what that was so I [read about it here](https://www.git-tower.com/learn/git/faq/save-changes-with-git-stash). Then, [following this page again](https://code.likeagirl.io/how-to-undo-the-last-commit-393e7db2840b) I did `git revert`.  I ended up stuck in this thing on the terminal:
  
-  ![screenshot](log_imgs/git_3/13.png)
+  ![screenshot](log_imgs/git_3-13.png)
  
   I got out of it by following [these instructions from githowto.com](https://githowto.com/commiting_changes):
  
@@ -32,11 +32,62 @@
   
   [](https://stackoverflow.com/questions/17665489/using-this-inside-an-event-handler)
   
-  ## Event handlers
+  ## Event Handlers and `this`
+  I was inside an event handler and `this` was returning as the global object. I knew that `this` is supposed to the same as the current target of the event object, which can be found in the `currentTarget` property of the event object. `currentTarget` is the element that the event listener is set on.
+  
+  ```javascript
+  document.querySelector("#myDiv").addEventListener('click', handler);
+  ```
+      
+  For example, in the above, the element with id `#myDiv` will be the current target. `this` will also be `#myDiv.`
+  
+  ```javascript
+  function handler(e){
+  e.currentTarget //returns #myDiv
+  this            //returns #myDiv
+  }
+  ```
+  ***So why was `this` the global object, aka the browser window, in my handler instead of the current target?***
+  
+  To figure out the problem, I isolated the issue into a seperate file. This file had one `#testDiv` div to set the event listener on. The event listener called the handler on `click`. I copied my function but replaced the body with `console.log(this)`. I still got the global object.
+  
+  ```javascript
+  const this = (e)=>{
+  console.log(this); //logs the global object
+  }
+      
+  document.querySelector("#testDiv").addEventListener('click', handlerFunctionExpressionArrow);
+  ```
+  
+  Becasue I isolated my issue, I could see the issue a little more clearly. I remembered that arrow functions handle `this` differently than regular functions. So I changed my test code:
+  
+  ```javascript
+  const arrowFunction = (e)=>{
+      console.log(this);        //global object
+  }
+  const regularFunction = function(e){
+      console.log(this);        //current target, aka #testDiv
+  }
+
+  document.querySelector("#testDiv").addEventListener('click', arrowFunction);
+  document.querySelector("#testDiv").addEventListener('click', regularFunction);
+  ```
+ 
+  So the issues was, I needed to use regular function if I want `this` to be the current target.
+  
+  More info on `this` and arrow functions:
   
   > Value of this inside an arrow function is determined by where the arrow function is defined, not where it is used.
   [from StackoverFlow](https://stackoverflow.com/questions/36915875/javascript-arrow-functions-this-in-event-handler)
  
+  ##What Next:
+  
+  My code needs to be more reusable. I'm wondering ***how to better plan code when I start*** so I don't have to do a crazy amount of refactoring in the middle of my projects. I need to think ahead. I think the more experience I get the better I will be able to figure out how to plan my code. But maybe I can research how others approach this.
+  
+  I started to make a new version of this twitter search app that is more simplified. It will just give the user a list of people that started 100daysofcode on the same day as them and are still doing 100daysofcode. I started writing out the psuedo code. I want to do this simpler app because I think it will help me really plan what's going to happen at every step of the UX.
+
+- ## **Thoughts and Feelings:** 
+    Good day. I did a lot of note taking and documenting on my log because I ran into a bunch of little issues and I wanted to remember what I learned.
 
 ## Day 71
 ### 3/12/19
