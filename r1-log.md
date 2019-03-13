@@ -49,7 +49,9 @@
   ```
   ***So why was `this` the global object, aka the browser window, in my handler instead of the current target?***
   
-  To figure out the problem, I isolated the issue into a seperate file. This file had one `#testDiv` div to set the event listener on. The event listener called the handler on `click`. I copied my function but replaced the body with `console.log(this)`. I still got the global object.
+  To figure out the problem, I isolated the issue into a seperate file. 
+  
+  This file had a div with id `#testDiv` to set the event listener on. The event listener called the handler on `click`. I copied my function but replaced the body with `console.log(this)`. I still got the global object.
   
   ```javascript
   const this = (e)=>{
@@ -59,7 +61,7 @@
   document.querySelector("#testDiv").addEventListener('click', handlerFunctionExpressionArrow);
   ```
   
-  Becasue I isolated my issue, I could see the issue a little more clearly. I remembered that arrow functions handle `this` differently than regular functions. So I changed my test code:
+  Because I isolated my issue, I could see the issue a little more clearly. I remembered that arrow functions handle `this` differently than regular functions. So I changed my test code:
   
   ```javascript
   const arrowFunction = (e)=>{
