@@ -1,5 +1,37 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 72
+### 3/13/19
+
+- **100Daysofcode Tweet Search**
+    ## Function Declarations vs Expressions
+   I started by changing my function declarations to function expressions so all of my functions would be the same format. But this lead to some errors. This is because [function declarations are hoisted](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/) but function expressions aren't always hoisted.
+   
+  >**Do Function Expressions get Hoisted too?**
+  
+  >That depends on the expression. Let’s look at the first expression in Question 2:
+   
+  > var bar = function() {
+  >  return 3;
+  >};
+   
+  >The left hand side (var bar) is a Variable Declaration. Variable Declarations get hoisted but their Assignment      Expressions don’t. So when bar is hoisted the interpreter initially sets var bar = undefined. The function definition itself is not hoisted. 
+  
+   *from [javascriptwebblog, Function Declarations vs. Function Expressions](https://javascriptweblog.wordpress.com/2010/07/06/function-declarations-vs-function-expressions/)
+   
+   ## Git: revert
+   So I had to revert to the commit to undo what I commited so I followed [this page about `git revert`](https://code.likeagirl.io/how-to-undo-the-last-commit-393e7db2840b). First it told me to `git stash` but I didn't know what that was so I [read about it here](https://www.git-tower.com/learn/git/faq/save-changes-with-git-stash). Then, [following this page again](https://code.likeagirl.io/how-to-undo-the-last-commit-393e7db2840b) I did `git revert`  I ended up stuck in this thing on the terminal:
+ 
+  ![screenshot](log_imgs/git_3/13.png)
+ 
+  I got out of it by following [these instructions from githowto.com](https://githowto.com/commiting_changes):
+ 
+  >On the first line, enter the comment: “Added h1 tag”. Save the file and exit the editor (to do it in default editor, press ESC and then type :wq and hit Enter).
+  
+  I still found it kind of wonky to enter the commit comment.
+ 
+ 
+
 ## Day 71
 ### 3/12/19
 
