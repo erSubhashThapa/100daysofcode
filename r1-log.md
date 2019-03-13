@@ -28,7 +28,7 @@
  
   >On the first line, enter the comment: “Added h1 tag”. Save the file and exit the editor (to do it in default editor, press ESC and then type :wq and hit Enter).
   
-  I still found it kind of wonky to enter the commit comment.
+  Objviously, put your own comment in, not “Added h1 tag”. I still found it kind of wonky to enter the commit comment.
   
   [](https://stackoverflow.com/questions/17665489/using-this-inside-an-event-handler)
   
