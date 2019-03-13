@@ -80,7 +80,9 @@
   > Value of this inside an arrow function is determined by where the arrow function is defined, not where it is used.
   [from StackoverFlow](https://stackoverflow.com/questions/36915875/javascript-arrow-functions-this-in-event-handler)
  
-  ##What Next:
+  ## What Next:
+  
+  The program now takes the array of #100daysofcode particpants from the first seach, and if you press submit you can then press a search button and it will automatically copy the code you need to compare the two sets of participants. I don't have the instructions up for this second part so it looks kind of confusing but it works.
   
   My code needs to be more reusable. I'm wondering ***how to better plan code when I start*** so I don't have to do a crazy amount of refactoring in the middle of my projects. I need to think ahead. I think the more experience I get the better I will be able to figure out how to plan my code. But maybe I can research how others approach this.
   
@@ -88,6 +90,8 @@
 
 - ## **Thoughts and Feelings:** 
     Good day. I did a lot of note taking and documenting on my log because I ran into a bunch of little issues and I wanted to remember what I learned.
+    
+**Link to Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/tree/c3cfdf95ba95a76bdcf2c1b4307f7c6e777e654d)
 
 ## Day 71
 ### 3/12/19
