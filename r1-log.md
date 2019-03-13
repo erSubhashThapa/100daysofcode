@@ -29,7 +29,13 @@
   >On the first line, enter the comment: “Added h1 tag”. Save the file and exit the editor (to do it in default editor, press ESC and then type :wq and hit Enter).
   
   I still found it kind of wonky to enter the commit comment.
- 
+  
+  [](https://stackoverflow.com/questions/17665489/using-this-inside-an-event-handler)
+  
+  ## Event handlers
+  
+  > Value of this inside an arrow function is determined by where the arrow function is defined, not where it is used.
+  [from StackoverFlow](https://stackoverflow.com/questions/36915875/javascript-arrow-functions-this-in-event-handler)
  
 
 ## Day 71
