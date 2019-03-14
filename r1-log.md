@@ -30,7 +30,7 @@
     
     ![screenshot](log_imgs/sketch2_3-14.PNG)
     
-    I didn't wuite finishe the planning yet.
+    I didn't finish the planning yet.
      
     ## Revisiting classes
     
