@@ -76,7 +76,9 @@
     ```
 ## Thoughts and Feelings:
   
-  I've had ***8 dreams this year about coding.*** That's 8 dreams in only 3.5 months. Last year I had **one** dream about coding the entire year! This increase is great because you consolidate memories when you dream. That means you solidify the thoughts or ideas that you dream about, moving them from short term to long term memory. I hope to have more.
+  I've had ***8 dreams this year about coding.*** That's 8 dreams in only 3.5 months. Last year I had **one** dream about coding the entire year! This increase is great because you consolidate memories when you dream. That means you solidify the thoughts or ideas that you dream about, moving them from short term to long term memory. 
+  
+  These dreams weren't lucid but they were still useful. They make my brain better at coding. I hope to have more. I can also think about coding in my lucid dreams.
   
   ![screenshot](log_imgs/codedreams_3-14.jpg)
     
