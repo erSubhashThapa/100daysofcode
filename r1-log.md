@@ -13,32 +13,34 @@
     
   ## Redoing my code
   
-     I realized my code for this project was a mess. I didn't start with a good plan. Yesterday, I started to make a new version of the app that is more simplified. I continued with that today. First a drew out flow of wha the UX might look like. Obviously, these sketches are messy and I don't expect anyone be able to read these, but maybe it can give an idea of what I'm doing.
+     I realized my code for this project was a mess. I didn't start with a good plan. Yesterday, I started to make a new version of the app that is more simplified. I continued with that today. 
+     
+     First I drew out flow of what the UX might look like. Obviously, these sketches are messy and I don't expect anyone be able to read these, but maybe it can give an idea of what I'm doing.
      
     ![screenshot](log_imgs/sketch1_3-14.PNG) 
     
     
-    Writing this out helped me see where I might reuse the same functions. It helped me get an idea of how to organize my code.
+    Writing this out helped me see where I might reuse the same functions. It helped me get an idea of how to organize my code into classes or modules or functions.
     
     Next I started to sketch out my classes and functions in tables like this:
     
     ![screenshot](https://i.stack.imgur.com/xaJMm.jpg)
     
-    I don't know what you  call this kind of sketching. I got this image from this [stackoverflow thread](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling) about coupling and cohesion. The thread is useful in explaining how to best organize your code: ***avoid* coupling**, ***use* cohesion**.
+    I don't know what you call this kind of sketching. I got the above image from this [stackoverflow thread](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling) about coupling and cohesion. The thread is useful in explaining how to best organize your code: basically ***avoid* coupling**, and ***use* cohesion**.
     
-    Here, I started to sketch out my objects. I refered back to my UX sketch to get an idea of how to organize this. Again, I don't expect anyone will be able to decipher my messy handwriting. 
+    Here, I started to sketch out my objects. I referred back to my UX sketch to get an idea of how to organize my code. Again, I don't expect anyone will be able to decipher my messy handwriting. 
     
     ![screenshot](log_imgs/sketch2_3-14.PNG)
     
     I didn't finish the planning yet.
      
-    ## Revisiting classes
+    ## Revisiting Classes
     
     I wanted to use classes in this rewrite of my app. I used classes before in tutorial projects, but now on my own much. I decided to review classes and make sure I could write one. 
     
     Here's the [Mozilla documentation on javascript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
     
-    I wrote out a class and tested it out in the console until it worked.
+    I wrote out a class and tested it out in the console and edited it until it worked.
     
     ```javascript
     class OneHundredCodeDays {
@@ -64,25 +66,27 @@
     I can construct an instance of this class for example that creates a set of 100 days starting on my start day:
     
     ```javascript
-    const myStart = new Date(2019,00,01);
+    const myStart = new Date(2019,00,01); //jan 1, 2019
     const mySetOf100 = new OneHundredCodeDays(myStart);
     ```
     
-    Then I can get what day out of 100 it is for me today:
+    Then, for example, I can get what day out of 100 it is for me today:
     
     ```javascript
     const today = new Date();
     meSetOf100.numberOf(today); //returns 73
     ```
+    
 ## Thoughts and Feelings:
   
-  I've had ***8 dreams this year about coding.*** That's 8 dreams in only 3.5 months. Last year I had **one** dream about coding the entire year! This increase is great because you consolidate memories when you dream. That means you solidify the thoughts or ideas that you dream about, moving them from short term to long term memory. 
+  I've had ***8 dreams this year about coding.*** That's 8 dreams in only 3.5 months. Last year, I had **one** dream about coding the entire year! This increase is great because you consolidate memories when you dream. That means you solidify the thoughts or ideas that you dream about, moving them from short term memory to long term memory. 
   
   These dreams weren't lucid but they were still useful. They make my brain better at coding. I hope to have more. I can also think about coding in my lucid dreams.
   
   ![screenshot](log_imgs/codedreams_3-14.jpg)
     
 **Link to Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/ba6cb3ee290c368c1c38806a35b4bf2d2712379d/class_test.html)
+
 ## Day 72
 ### 3/13/19
 
