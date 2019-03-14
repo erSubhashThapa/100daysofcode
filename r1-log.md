@@ -15,7 +15,7 @@
   
      I realized my code for this project was a mess. I didn't start with a good plan. Yesterday, I started to make a new version of the app that is more simplified. I continued with that today. First a drew out flow of wha the UI might look like:
      
-    ![screenshot](log_imgs/sketch1_3-13.jpg) ![screenshot](log_imgs/sketch2_3-13.jpg)
+    ![screenshot](log_imgs/sketch1_3-13.PNG) ![screenshot](log_imgs/sketch2_3-13.PNG)
      
     ![screenshot](https://i.stack.imgur.com/xaJMm.jpg);
 
