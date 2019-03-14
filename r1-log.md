@@ -3,7 +3,7 @@
 ## Day 73
 ### 3/14/19
 
-- **100Daysofcode Tweet Search**
+- **100Daysofcode Tweet Search Project**
 
   I finally took a minute to find the answer to the question:
   
@@ -22,7 +22,7 @@
     
     Next I started to sketch out my classes and functions in tables like this:
     
-    ![screenshot](https://i.stack.imgur.com/xaJMm.jpg);
+    ![screenshot](https://i.stack.imgur.com/xaJMm.jpg)
     
     I don't know what you  call this kind of sketching. I got this image from this [stackoverflow thread](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling) about coupling and cohesion. The thread is useful in explaining how to best organize your code: ***avoid* coupling**, ***use* cohesion**.
     
