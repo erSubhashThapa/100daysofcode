@@ -1,5 +1,17 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 73
+### 3/14/19
+
+- **100Daysofcode Tweet Search**
+
+   `cmd` +`U` or `ctrl` +`U` to clear current line in dev tools and terminal.
+    
+    ![screenshot](https://i.stack.imgur.com/xaJMm.jpg);
+
+     https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling
+     
+     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 ## Day 72
 ### 3/13/19
 
