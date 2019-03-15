@@ -31,7 +31,7 @@
    
    - Should it use dot notation?
    
-   - Should it really be a method in the OneHundredDaysCode class?
+   - Should it be a method in the OneHundredDaysCode class?
    
       - I thought probably not, since we might want to use it without a set of OneHundredDaysCode
       
