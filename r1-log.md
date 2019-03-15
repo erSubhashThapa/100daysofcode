@@ -9,7 +9,7 @@
   
   ## Arrow functions and the `arguments` object
   
-  I found out arrow functions don't have the arguments built in parameter:
+  I found out arrow functions don't have the `arguments` built in parameter:
   
   >Arrow functions don't have this since the arguments array-like object was a workaround to begin with, which ES6 has solved with a rest parameter:
   >
