@@ -49,7 +49,7 @@
   
 ## Revisiting `.reduce()`
 
-   I ended with trying turn an array of participants into the search string for an array of particpants:
+   I ended with trying turn an array of participants into the search string that can be used on twitter:
    
   -  **Inputs --> Outputs**
   
@@ -109,7 +109,7 @@
      
     ## Revisiting Classes
     
-    I wanted to use classes in this rewrite of my app. I used classes before in tutorial projects, but now on my own much. I decided to review classes and make sure I could write one. 
+    I wanted to use classes in this rewrite of my app. I used classes before in tutorial projects, but not on my own much. I decided to review classes and make sure I could write one. 
     
     Here's the [Mozilla documentation on javascript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
     
@@ -147,7 +147,7 @@
     
     ```javascript
     const today = new Date();
-    meSetOf100.numberOf(today); //returns 73
+    mySetOf100.numberOf(today); //returns 73
     ```
     
 ## Thoughts and Feelings:
