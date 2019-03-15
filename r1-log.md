@@ -33,19 +33,33 @@
    
    - Should it really be a method in the OneHundredDaysCode class?
    
-      - I thought probably not since we might want to use it without a set of OneHundredDaysCode
+      - I thought probably not, since we might want to use it without a set of OneHundredDaysCode
       
    - At one point I even wondered if it should be a class
    
   For now, I settled on it being a function that takes an object, this way not all the parameters need to be passed. I can create a string with different parameters, sometimes date, sometime particpants, etc.
   
-  I'm thinking through the structure very slowly because the structure of the code is what I'm focusing on right now. How exactly should code be organized so it is reusable and clean?
+  I'm ***thinking through the structure very slowly*** because the structure of the code is what I'm focusing on right now. ***How exactly should code be organized so it is reusable and clean?***
   
-  It helped to jot down what my inputs might be and what the output would be. This helped me think about the calculations that would have to go between the inputs and outputs. It also helped me understand how to take the inputs. 
+  It helped to jot down what my inputs might be and what the output would be. This helped me think about the calculations that would have to go between the inputs and outputs. It also helped me understand how to take the inputs.
+  
+  ![screetshot](log_imgs/notes_3-15.PNG)
   
   For example, I realized it didn't make sense to pass an instance of OneHundredDaysCode to `tweetSearch()`. I should instead just except a few simple parameters - date, number of day, etc..- and I can use the instance of OneHundredDaysCode in question to get those parameters by accessing the properties such as `.startDay` or the functions like `.dateOf(number)`.
   
-  ![screetshot](log_imgs/notes_3-15.PNG)
+## Revisiting `.reduce()`
+
+   I ended with trying turn an array of participants into the search string for an array of particpants:
+   
+  -  **Inputs --> Outputs**
+  
+     **input:** ["DashBarkHuss","Dominus_Kelvin","mahakothuri"]
+     
+     **output:** "from: DashBarkHuss OR from: Dominus_Kelvin OR from: mahakothuri"
+     
+   I was going to use `forEach()` but then I thought reduce might be good. But  was having trouble figuring it out with `reduce()`. I'm not sure if `reduce()` isn't the best for this, if if it's just that I can't figure it out.
+   
+   I accidently lost my work for this anyways.
   
   ## Need to do: 
   
@@ -55,7 +69,7 @@
   
   I think thinking very slowly and delibertly through the planning process will prove fruitful. I hope that I will develop a natural sense of what classes, functions, modules etc..., I will need.
     
-**Link to Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/ba6cb3ee290c368c1c38806a35b4bf2d2712379d/class_test.html)
+**Link to Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/27362d861530653b2c67c2063a084b681393e50b/class_test.html)
    
    
 
