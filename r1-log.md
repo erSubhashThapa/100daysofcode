@@ -41,7 +41,7 @@
   
   I'm ***thinking through the structure very slowly*** because the structure of the code is what I'm focusing on right now. ***How exactly should code be organized so it is reusable and clean?***
   
-  It helped to jot down what my inputs might be and what the output would be. This helped me think about the calculations that would have to go between the inputs and outputs. It also helped me understand how to take the inputs.
+  It helped to jot down what my inputs might be and what the output would be for `tweetSearch()`. This helped me think about the calculations that would have to go between the inputs and outputs. It also helped me understand how to take the inputs.
   
   ![screetshot](log_imgs/notes_3-15.PNG)
   
