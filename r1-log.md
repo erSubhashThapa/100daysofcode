@@ -1,5 +1,64 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 74
+### 3/15/19
+
+- ## **100Daysofcode Tweet Search Project**
+
+  I had an issue with my `numberOf(Date)` function. The days were calculating wrong so I fixed that.
+  
+  ## Arrow functions and the `arguments` object
+  
+  I found out arrow functions don't have the arguments built in parameter:
+  
+  >Arrow functions don't have this since the arguments array-like object was a workaround to begin with, which ES6 has solved with a rest parameter:
+  >
+  >`var bar = (...arguments) => console.log(arguments);`
+  
+  from [*stackoverflow*](https://stackoverflow.com/questions/41731854/why-do-arrow-functions-not-have-the-arguments-array)
+  
+  What is a rest parameter?
+  
+  >The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
+  
+  from [*the Mozilla Documentation*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
+  
+  ## Organizing my `tweetSearch()` function
+  
+  I spent a lot of time thinking through the `tweetSearch()` function. 
+  
+   - How should it be organized?
+   
+   - Should it use dot notation?
+   
+   - Should it really be a method in the OneHundredDaysCode class?
+   
+      - I thought probably not since we might want to use it without a set of OneHundredDaysCode
+      
+   - At one point I even wondered if it should be a class
+   
+  For now, I settled on it being a function that takes an object, this way not all the parameters need to be passed. I can create a string with different parameters, sometimes date, sometime particpants, etc.
+  
+  I'm thinking through the structure very slowly because the structure of the code is what I'm focusing on right now. How exactly should code be organized so it is reusable and clean?
+  
+  It helped to jot down what my inputs might be and what the output would be. This helped me think about the calculations that would have to go between the inputs and outputs. It also helped me understand how to take the inputs. 
+  
+  For example, I realized it didn't make sense to pass an instance of OneHundredDaysCode to `tweetSearch()`. I should instead just except a few simple parameters - date, number of day, etc..- and I can use the instance of OneHundredDaysCode in question to get those parameters by accessing the properties such as `.startDay` or the functions like `.dateOf(number)`.
+  
+  ![screetshot](log_imgs/notes_3-15.PNG)
+  
+  ## Need to do: 
+  
+   I need to remember get rid of promoted tweets that come up in searches. And of course do everything else. 
+   
+## Thoughts and Feelings:
+  
+  I think thinking very slowly and delibertly through the planning process will prove fruitful. I hope that I will develop a natural sense of what classes, functions, modules etc..., I will need.
+    
+**Link to Work:** [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/ba6cb3ee290c368c1c38806a35b4bf2d2712379d/class_test.html)
+   
+   
+
 ## Day 73
 ### 3/14/19
 
