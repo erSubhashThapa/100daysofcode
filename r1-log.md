@@ -17,7 +17,7 @@
    }))
    ```
    
-   If participants here is **["DashBarkHuss","Dominus_Kelvin","mahakothuri"]**, then the output is: **"from: DashBarkHuss OR from: Dominus_Kelvin OR from: mahakothuri"**.
+   If participants here is **["DashBarkHuss","Dominus_Kelvin","mahakothuri"]**, then the output is: **"from: DashBarkHuss OR from:Dominus_Kelvin OR from: mahakothuri"**.
    
    ## ES6 Destructuring, doesn't work with functions?
       
