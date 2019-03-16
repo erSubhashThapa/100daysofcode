@@ -14,6 +14,23 @@
         return x;
    }))
    ```
+   
+   ## ES6 Destructuring
+      
+   I tried to use ES6 destructuring on a Date object but **this doesn't work:**
+   
+   ```javascript
+   //regular way
+   const year = date.getFullYear;
+   const month = date.getMonth;
+   const day = date.getDate;
+   
+   //ES6 destructuring
+   const {getFullYear(): year, getMonth(): month, getDate(): day} = date; //doesn't work
+   ```
+   I guess you can't use it this way because these are functions- `getDate()`, `getMonth()`, `getFullYear()`. Maybe you can only use properties. I'm not sure yet.
+   
+   
 ## Day 74
 ### 3/15/19
 
