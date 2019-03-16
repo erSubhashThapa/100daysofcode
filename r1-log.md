@@ -53,7 +53,9 @@
   ```javascript
   let search = searchString({since : mySetOf100.startDate, until: mySetOf100.dateOf(10), participants: mySetOf100.participants, num: 3}) //creates an object
   ```
-  To create a url you call the method `.url` and pass different properies which contain different search strings and organizes and encodes them into a uri.
+  That create search object. It contains different strings, that are formatted to search twitter.
+  
+  To create a url you call the method `.url` and pass the properies, which contain different search strings, and organizes and encodes them into a uri.
   ```javascript
   search.url({search.since, search,until, search.num})
   ```
