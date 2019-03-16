@@ -48,13 +48,13 @@
    
    from [*unionmetrics.com*](https://unionmetrics.com/resources/how-to-use-advanced-twitter-search-queries/)
    
-  The way you use `searchString()` would be like this:
+  ***The way you use `searchString()` would be like this:***
   
   ```javascript
   let search = searchString({since : mySetOf100.startDate, until: mySetOf100.dateOf(10), participants: mySetOf100.participants, num: 3}) //creates an object
-  
-  //to create a url you call the method .url and pass different properies which contain different search strings.
-  
+  ```
+  To create a url you call the method `.url` and pass different properies which contain different search strings and organizes and encodes them into a uri.
+  ```javascript
   search.url({search.since, search,until, search.num})
   ```
    Now that I'm talking through this I'm not sure if this is the best way to organize `searchString()` because what if, for example, I want to change the day number? I could just update `search.num` I guess. But I'm wondering if it would be better for the number string to be a function. Oh man, I'm not sure. I think this is fine for now. When I start using it maybe I'll get a clearer picture.
