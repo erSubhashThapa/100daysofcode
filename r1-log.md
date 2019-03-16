@@ -83,9 +83,9 @@
    
   ## Do to:
   
-  Now I have to get the date from the input from the user. I could use some drop down calender. Not sure. Maybe I should start simple with a string and a function that turns the string into a date and sends the date to make a OnHundredDaysCode set. 
+  Now I have to get the date from the user. I could use some drop down calender. Not sure. Maybe I should start simple with a string and a function that turns the string into a date and sends the date to make a OnHundredDaysCode set. 
   
-  I also want to change searchString to a class.
+  I also want to change `searchString()` to a class.
   
   **Thoughts and Feelings:** Good day, can't complain. Coding is fun when I'm working on my own projects. The time flies so quickly. Can't wait untill I'm able to work more than 2 hours a day on coding. I'm limited by my power supply right now. But I also limit myself to two hours because this is a method for building a solid habit. If you limit yourself, you'll want to do more. You'll think about the habit because you're not allowed to do it which makes you want to do it more. Then when I'm finally allowed to work more than two hours, I'll be so happy. I think about code alot now. I code in my head outside the two hours, no rules against that! I code in my dreams too.
   
