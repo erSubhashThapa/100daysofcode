@@ -23,13 +23,56 @@
    //regular way
    const year = date.getFullYear();
    const month = date.getMonth();
-   const day = date.getDate();
+   const day = date.getDay();
    
    //ES6 destructuring
-   const {getFullYear(): year, getMonth(): month, getDate(): day} = date; //doesn't work
+   const {getFullYear(): year, getMonth(): month, getDay(): day} = date; //doesn't work
    ```
    I guess you can't use it this way because these are functions- `getDate()`, `getMonth()`, `getFullYear()`. Maybe you can only use properties. I'm not sure yet.
    
+   ## Finished `tweetSearch()`
+   
+   I finished `tweetSearch()` but I changed the name to `searchString()`. 
+   
+   `searchString` takes an object and outputs an object. Since it outputs an object I think I might want to change it to a class since it's sort of it's own type of data. 
+   
+   `searchString()` takes an object with properties for `since`, `until`, `range`, `participants`, and `num`. Some of these properties are optional. You can't do `range` and `until` in the same call because range and until are both used to calculate the the last day to search but in different ways, so they conflict.
+   
+   I thought I could search tweets from fellow participants but it seems like there's a limit on how many accounts you can search from. Since the number of people who joined #100daysofcode when I did was 120, that's too much for twitter to search. It looks like it has to be 24 or less. Something like that. But it looks like it also depends on what else you're searching.
+   
+   >Twitter handles fairly simple queries really well, but tends to break with longer and more complex queries.
+   
+   from [*unionmetrics.com*](https://unionmetrics.com/resources/how-to-use-advanced-twitter-search-queries/)
+   
+  ## Applying for a twitter API key
+  
+  I got some advice on applying for an API key from two people who got it. 
+  
+  [Vipul Bhardwaj](https://twitter.com/vipulbhj) said:
+  
+   >I mean I told them,
+   >what I am gone use this for (Personal Project)
+   >How will I use the data( In detail) 
+   >
+   >and other answered questions. In a few days got my API key
+   ...
+   >Be as detailed as you can be. And you are good to go
+   
+   [Anders Magnus Andersen](https://twitter.com/izznogooood) said:
+   
+   >I did it a month ago and remember this, it's the link they ask for which they say can be empty. But it can't, use https://twitter.com 
+   
+   So I'm going to try and reapply. I want an api for this project and for a lucid dream twitter bot.
+   
+  ## Do to:
+  
+  Now I have to get the date from the input from the user. I could use some drop down calender. Not sure. Maybe I should start simple with a string and a function that turns the string into a date and sends the date to make a OnHundredDaysCode set. 
+  
+  I also want to change searchString to a class.
+  
+  **Thoughts and Feelings:** Good day, can't complain. Coding is fun when I'm working on my own projects. The time flies so quickly. Can't wait untill I'm able to work more than 2 hours a day on coding. I'm limited by my power supply right now. But I also limit myself to two hours because this is a method for building a solid habit. If you limit yourself, you'll want to do more. You'll think about the habit because you're not allowed to do it which makes you want to do it more. Then when I'm finally allowed to work more than two hours, I'll be so happy. I think about code alot now. I code in my head outside the two hours, no rules against that! I code in my dreams too.
+  
+**Link to Work**: [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/blob/1701c23a151cb22e1fc6883a51ec4daa08ccca55/class_test.html)
    
 ## Day 74
 ### 3/15/19
