@@ -7,6 +7,8 @@
 
    ## `reduce()`
    
+   I got reduce to work!
+     
    ```javascript
    participants.reduce(((a,c,i)=>{
         let x; 
@@ -15,7 +17,9 @@
    }))
    ```
    
-   ## ES6 Destructuring
+   If participants here is **["DashBarkHuss","Dominus_Kelvin","mahakothuri"]**, then the output is: **"from: DashBarkHuss OR from: Dominus_Kelvin OR from: mahakothuri"**.
+   
+   ## ES6 Destructuring, doesn't work with functions?
       
    I tried to use ES6 destructuring on a Date object but **this doesn't work:**
    
@@ -28,13 +32,13 @@
    //ES6 destructuring
    const {getFullYear(): year, getMonth(): month, getDay(): day} = date; //doesn't work
    ```
-   I guess you can't use it this way because these are functions- `getDate()`, `getMonth()`, `getFullYear()`. Maybe you can only use properties. I'm not sure yet.
+   I guess you can't use it this way because these are functions- `getDate()`, `getMonth()`, `getFullYear()`. Maybe you can only use properties. I'm not sure yet. I didn't look furthur into it.
    
    ## Finished `tweetSearch()`
    
    I finished `tweetSearch()` but I changed the name to `searchString()`. 
    
-   `searchString` takes an object and outputs an object. Since it outputs an object I think I might want to change it to a class since it's sort of it's own type of data. 
+   `searchString()` takes an object and outputs an object. Since it outputs an object I think I might want to change it to a class since it's sort of it's own type of data. 
    
    `searchString()` takes an object with properties for `since`, `until`, `range`, `participants`, and `num`. Some of these properties are optional. You can't do `range` and `until` in the same call because range and until are both used to calculate the the last day to search but in different ways, so they conflict.
    
@@ -43,6 +47,17 @@
    >Twitter handles fairly simple queries really well, but tends to break with longer and more complex queries.
    
    from [*unionmetrics.com*](https://unionmetrics.com/resources/how-to-use-advanced-twitter-search-queries/)
+   
+  The way you use `searchString()` would be like this:
+  
+  ```javascript
+  let search = searchString({since : mySetOf100.startDate, until: mySetOf100.dateOf(10), participants: mySetOf100.participants, num: 3}) //creates an object
+  
+  //to create a url you call the method .url and pass different properies which contain different search strings.
+  
+  search.url({search.since, search,until, search.num})
+  ```
+   Now that I'm talking through this I'm not sure if this is the best way to organize `searchString()` because what if, for example, I want to change the day number? I could just update `search.num` I guess. But I'm wondering if it would be better for the number string to be a function. Oh man, I'm not sure. I think this is fine for now. When I start using it maybe I'll get a clearer picture.
    
   ## Applying for a twitter API key
   
