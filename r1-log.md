@@ -1,5 +1,19 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 75
+### 3/16/19
+
+- ## **100Daysofcode Tweet Search Project**
+
+   ## `reduce()`
+   
+   ```javascript
+   participants.reduce(((a,c,i)=>{
+        let x; 
+        i==1? x =`from:${a} OR from:${c}` : x = `${a} OR from:${c}`;
+        return x;
+   }))
+   ```
 ## Day 74
 ### 3/15/19
 
