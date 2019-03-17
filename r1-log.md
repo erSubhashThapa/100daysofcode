@@ -11,7 +11,7 @@
    
    ## When do you use a class and when do you use a function?
    
-   read later: https://www.codecademy.com/en/forum_questions/5149f1c5b216ffa8f200019e
+   I'm trying to understand when to use a function and when a class. I think if I'm returning an object with a bunch of methods and properties, that should be a class. I read a little bit of [this thread on the subject](   https://www.codecademy.com/en/forum_questions/5149f1c5b216ffa8f200019e), but I should read more later.
    
    ## Getters
    
@@ -54,11 +54,13 @@
    
    ## Error handling in classes?
    
-   How to I throw an error if the wrong parameters are passed to the constructor?
+   I'm wondering if there's a proper way to I throw an error if the wrong parameters are passed to the constructor. I havn't done a lot with error handling. In my class I just do simple if statements (*see below*) but I don't think this is the proper way.
    
    ## Is my Search class constructor too busy?
    
    I changed my `searchString()` function to a class called `Search`.
+   
+   I spent a lot of time thinking about this class and classes in general.
    
    It doesn't look clean and neat like all the other classes I've seen. 
    
@@ -137,6 +139,19 @@
           return urlStart + url;
       }
    ```
+   ## Model View Controller
+   
+   I started to set up this project with a model view controller design patter.
+   
+   ## To Do
+   
+   - I think I need to go back to the drawing board, aka my note pad and think through the MVC pattern adn how it will apply to my app. 
+   
+   - I might want to reach out for help and advice on the organization of my `Search` class.
+   
+   **Thoughts and Feelings:** There were two flies annoying the bejezus out of me. They need to leave or die!
+   
+**Link to Work**: [100Daysofcode Tweet search](https://github.com/dangerousdashie/100daysodcode_post_search/tree/e2af718471d2e3f3de160ecc1bfb55eed74d0b41/MVC%20app)
 
 ## Day 75
 ### 3/16/19
