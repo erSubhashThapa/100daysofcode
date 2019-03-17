@@ -64,7 +64,7 @@
    
    Usually class constructors just set `this.someproperty = property;`. But since I need to do a lot to the inputs, my constructor has all these functions and conditional statements that make it hard to read. 
    
-   Should some of these actually be set in a getter? Is that all that getters are for, to clean the code up?
+   Should some of these actually be in a getter? Is that all that getters are for, to clean the code up?
    
    
    ```javascript
