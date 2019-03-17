@@ -145,11 +145,11 @@
    ```
    ## Model View Controller
    
-   I started to set up this project with a model view controller design patter.
+   I started to set up this project with a **model view controller** design pattern.
    
    ## To Do
    
-   - I think I need to go back to the drawing board, aka my note pad and think through the MVC pattern adn how it will apply to my app. 
+   - I think I need to go back to the drawing board, aka my note pad and think through the MVC pattern and how it will apply to my app. 
    
    - I might want to reach out for help and advice on the organization of my `Search` class.
    
