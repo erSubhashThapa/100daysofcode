@@ -56,7 +56,7 @@
    
    How to I throw an error if the wrong parameters are passed to the constructor?
    
-   ## Is my class too messy? Is this wrong?
+   ## Is my Search class constructor too busy?
    
    I changed my `searchString()` function to a class called `Search`.
    
