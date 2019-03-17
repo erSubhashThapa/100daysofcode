@@ -11,27 +11,50 @@
    
    ## When do you use a class and when do you use a function?
    
+   read later: https://www.codecademy.com/en/forum_questions/5149f1c5b216ffa8f200019e
+   
    ## Getters
    
    >The get syntax binds an object property to a function that will be called when that property is looked up.
-   > ```javascript
-     var obj = {
-  log: ['a', 'b', 'c'],
-  get latest() {
-    if (this.log.length == 0) {
-      return undefined;
-    }
-    return this.log[this.log.length - 1];
-  }
-}
-
-console.log(obj.latest);
-```
-   >
-   >
-   >
    
+   ```javascript
+   var obj = {
+      log: ['a', 'b', 'c'],
+      get latest() {
+          if (this.log.length == 0) {
+            return undefined;
+          }
+       return this.log[this.log.length - 1];
+      }
+   }
+   console.log(obj.latest);
+   ```
    from [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+   
+   So even though you can get the property like a property- `obj.latest`- it's really going to call the function `.latest()` and get what the function returns as the property.
+   
+   ## Setters
+   > The set syntax binds an object property to a function to be called when there is an attempt to set that property.
+   
+   ```javascript
+   var language = {
+      set current(name) {
+          this.log.push(name);
+      },
+      log: []
+   }
+
+   language.current = 'EN';
+   language.current = 'FA';
+
+   console.log(language.log);
+   // expected output: Array ["EN", "FA"]
+   ```
+   from [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
+   
+   ## Error handling in classes?
+   
+   How to I throw an error if the wrong parameters are passed to the constructor?
 
 ## Day 75
 ### 3/16/19
