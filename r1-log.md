@@ -55,6 +55,88 @@
    ## Error handling in classes?
    
    How to I throw an error if the wrong parameters are passed to the constructor?
+   
+   ## Is my class too messy? Is this wrong?
+   
+   I changed my `searchString()` function to a class called `Search`.
+   
+   It doesn't look clean and neat like all the other classes I've seen. 
+   
+   Usually class constructors just set `this.someproperty = property;`. But since I need to do a lot to the inputs, my constructor has all these functions and conditional statements that make it hard to read. 
+   
+   Should some of these actually be set in a getter? Is that all that getters are for, to clean the code up?
+   
+   
+   ```javascript
+     class Search {
+
+      constructor (obj){
+          //temporarily save the passed properties into these variables for easier read and make empty if no params
+          let since = obj.since || "";
+          let until = obj.until || "";
+          let range = obj.range || "";
+          let num = obj.num || "";
+          let participants = obj.participants || "";
+
+          //errors, how do we do this?
+          if (range!="" && until != ""){ return console.error("error, you can't have a 'range' and an 'until' value. You must have one or the other")};
+          if (since==""){ return console.error("error, you must have a since value")};
+
+
+          //should this function be in the search class constructor or on it's own?
+          const formatDate = (date)=>{ 
+              const year = date.getFullYear();
+              const month = date.getMonth() + 1;
+              const day = date.getDay();
+              return `${year}-${month}-${day}`;
+          };
+
+          //this gets the until date
+          const untilDate = ()=>{
+          //until using until or range value
+              if(until != ""){
+                  return until;
+
+              } else if (range == "" && until == ""){
+                  let day = new Date();
+                  day.setDate(since.getDate()+1)
+                  return day;
+
+              } else if (range != ""){
+                  let day = new Date();
+                  day.setDate(since.getDate()+range);
+                  return day;
+              } 
+          };
+
+          //since
+          this.since = `since:${formatDate(since)}`;
+          //sets the until property
+          this.until = `until: ${formatDate(untilDate())}`;
+
+          //participants
+          if (participants !== ""){
+              this.participants = participants.reduce(((a,c,i)=>{
+                  let x; 
+                  i==1? x =`from:${a}, OR from:${c}` : x = `${a}, OR from:${c}`;
+                  return x;
+              }))
+          };
+
+          //query with day number
+          if (num!=""){
+              this.number = `(Day${num} OR “day ${num}” OR r1d${num} OR “r1 d${num}”)`;
+          }
+      }            
+
+      //could we do the below with dot chaining:
+      url(...args){
+          const string = args.join(' ') + ` #100DaysOfCode`;
+          const urlStart = "https://twitter.com/search?f=tweets&vertical=default&q="
+          const url = encodeURI(string).replace(/[(]/g, '%28').replace(/[)]/g, '%29').replace(/[#]/g, '%23').replace(/[:]/g, '%3A')
+          return urlStart + url;
+      }
+   ```
 
 ## Day 75
 ### 3/16/19
