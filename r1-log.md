@@ -1,5 +1,38 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 76
+### 3/17/19
+
+- ## **100Daysofcode Tweet Search Project**
+
+   ## Do I know how to use a favicon?
+   
+   I thought I did but it's not loading. I need to revisit this.
+   
+   ## When do you use a class and when do you use a function?
+   
+   ## Getters
+   
+   >The get syntax binds an object property to a function that will be called when that property is looked up.
+   > ```javascript
+     var obj = {
+  log: ['a', 'b', 'c'],
+  get latest() {
+    if (this.log.length == 0) {
+      return undefined;
+    }
+    return this.log[this.log.length - 1];
+  }
+}
+
+console.log(obj.latest);
+```
+   >
+   >
+   >
+   
+   from [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+
 ## Day 75
 ### 3/16/19
 
