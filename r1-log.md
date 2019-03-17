@@ -13,7 +13,11 @@
    
    I'm trying to understand when to use a function and when a class. I think if I'm returning an object with a bunch of methods and properties, that should be a class. I read a little bit of [this thread on the subject](   https://www.codecademy.com/en/forum_questions/5149f1c5b216ffa8f200019e), but I should read more later.
    
-   ## Getters
+   ## Classes: Getters and Setters
+   
+   I learned about getters and setters today.
+   
+   ### Getters
    
    >The get syntax binds an object property to a function that will be called when that property is looked up.
    
@@ -33,7 +37,7 @@
    
    So even though you can get the property like a property- `obj.latest`- it's really going to call the function `.latest()` and get what the function returns as the property.
    
-   ## Setters
+   ### Setters
    > The set syntax binds an object property to a function to be called when there is an attempt to set that property.
    
    ```javascript
