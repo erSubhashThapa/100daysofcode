@@ -1,5 +1,78 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 77
+### 3/18/19
+- ## **100Daysofcode Tweet Search Project**
+
+   I was so organized today. My code is so easy to see and understand and it's very dry and I think it performs well too. Here are the things I learned and did:
+   
+   ## CSS Responsive square
+   I found a way to make a responsive square in css that keeps its perspective. I didn't use this today but I had been wondering about it. The trick is to use padding because:
+
+   >...padding is calculated as a percentage of its parent element’s width, not height. This rule applies, even for 'padding-top' and 'padding-bottom', despite being vertical measurements.
+
+   from [*spin.atomicobject.com*](https://spin.atomicobject.com/2015/07/14/css-responsive-square/)
+   
+   ## Responsive Pages required CSS
+   
+   I wanted to put this here, I always loose it. This code helps your page better work with responsive design. It changes the box-sizing on all elements. I forget what the max width for img does but it's explained somewhere in the Responsive Layout tutorial on lynda.
+   ```css
+   html {
+        box-sizing: border-box;
+    }
+    img {
+        max-width: 100%;
+    }
+    *,*:before,*:after {
+        box-sizing: inherit;
+    }
+   ```
+   ## Confused about: CSS inheritance & Document Fragments
+   
+   I'm confused about which things are automatically inherited in css. I guess you can find it out by seeing what the default value for each property is. I thought that `font-size` would be inherited but it didn't inherit when I tried to inherit it from `html, body` where I set it.
+
+   I'm confused when exactly you'd use a document fragment. Is it when you need to add a bunch of elements? I think so because otherwise if you're looping through adding a bunch of elements I think it slows down performance.
+   
+   [Mozilla Docs for documents fragments.](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment)
+   
+   ## App Progress
+   
+   I continued my app's MVC structure. I drew out what my views would be like and made notes for my model, controller, and views javascript files.
+   
+   ![screenshot](log_imgs/notes_3-18.jpg)
+   
+   This really helped me think through what was going to happen.
+   
+   ## MVC
+   
+   In my views file I have a function that makes elements, `elWithClass(el, ...className)`. You pass the class names and element types. I successfully used rest parameters for this function. Learning about rest parameter the other day turned out very helpful:
+   
+   ```javascript
+   const elWithClass = (el, ...className)=>{
+       const elem = document.createElement(el);
+       elem.classList.add(...className);
+       return elem;
+   }
+   ```
+   
+   Then there are other function in views for each element we need like a `start()` function that makes a start button.
+   
+   My controller.js file controlls which views get pulled up and when.
+   
+   I'm wondering if this is similar to how react.js works. I'm making all these reusable components. I think that's what react.js does.
+   
+   Of course, in models we have the classes we made before: OneHundredCodeDays, and Search. I don't know why I said we, I guess if you're reading this, you're a part of my journey.
+   
+   I ended with successfully getting a template up for the first view. Look how simple and beautiful!
+   
+   ![screenshot](log_imgs/view_3-18.gif)
+   
+   **Thoughts and Feelings:**
+   
+   Today was great. My mind was clear. My code was clean. Glorious.
+   
+**Link to Work:** []()
+   
 ## Day 76
 ### 3/17/19
 
