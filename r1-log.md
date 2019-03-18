@@ -15,7 +15,7 @@
    
    ## Responsive Pages required CSS
    
-   I wanted to put this here, I always loose it. This code helps your page better work with responsive design. It changes the box-sizing on all elements. I forget what the max width for img does but it's explained somewhere in the Responsive Layout tutorial on lynda.
+   I wanted to put this here, I always lose it. This code helps your page better work with responsive design. It changes the box-sizing on all elements. I forget what the max width for img does but it's explained somewhere in the Responsive Layout tutorial on lynda.
    ```css
    html {
         box-sizing: border-box;
