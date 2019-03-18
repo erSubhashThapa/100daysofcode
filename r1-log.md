@@ -55,9 +55,13 @@
    }
    ```
    
-   Then there are other function in views for each element we need like a `start()` function that makes a start button.
+   Then there are other function in views for each element we need like a `start()` function that makes a start button. These functions call `elWithClass()`. The `input()` function bellow calls `elWithClass()`. It passes `input` as the element type, `input` as the class name, and then takes any other classes passed into it.
    
-   My controller.js file controlls which views get pulled up and when.
+   ```javascript
+   const input = (...classNames)=>(elWithClass("input", "input", ...classNames));
+   ```
+   
+   My controller.js file controls which views get pulled up and when.
    
    I'm wondering if this is similar to how react.js works. I'm making all these reusable components. I think that's what react.js does.
    
@@ -69,7 +73,7 @@
    
    **Thoughts and Feelings:**
    
-   Today was great. My mind was clear. My code was clean. Glorious.
+   Today was great. My mind was clear. My code was clean. Glorious. Maybe because I started meditating? Or maybe just because I'm thinking more about how to have clean, readable code.
    
 **Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/ce713d795e02452b152076581dca86bad0e609be/MVC%20app)
    
