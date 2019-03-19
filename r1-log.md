@@ -1,5 +1,40 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 78
+### 3/19/19
+- ## **100Daysofcode Tweet Search Project**
+   
+   Today I added functionality to the elements for the first and some of the second view. 
+   
+   My log won't be the best today, see **thoughts and feelings**.
+   
+   ## `replaceChild()
+   
+   I used `replaceChild()` to change some of the elements from one view to another. I don't know if this is the best way. But I got some practice with this function I never used before.
+   
+   ## Search Class Needs to be Revisted
+   
+   Now that I'm using the `Search` class, I see that the constructor should be set up differently. Because we might only want to set one day to search. And then later add an until date. So we'd want to set the until date later. I'm not totally sure. I need to think this through.
+   
+   ## Things To Do;
+   
+    - Make the code that gets autocopied to the clip board include `copyToClipBoard()` and copy the returned array so the user can easily paste it back into the program.
+   
+   **Thoughts and Feelings:**
+   
+     I'm a bit frazzeled because it's a travel day and I was distracted by the podcast playing in the background even over my white noise generator. To be honest it sounded so interesting that at points I tried to listen and code at the same time. 
+     
+     I turned my white noise off so I could listen. Not a great idea!
+     
+     I'm able to code if I leave my white noise on and focus. I've done it many times before. But I didn't turn my white noise up high enough so I coudl still make out some words and it sounded so interesting.
+     
+     So obviously I wan't super focused.
+     
+     I should note, compared to how much I used to struggle with coding while driving, I'm a million times better even on days I'm distracted. #100daysofcode helped me build a habit code no matter what. I've gotten much better at coding and blocking out distractions no matter where I am. 
+      
+     ![screenshot](log_imgs/travel_3-19.gif)
+   
+
 ## Day 77
 ### 3/18/19
 - ## **100Daysofcode Tweet Search Project**
