@@ -20,7 +20,7 @@
    
     - Make the code that gets autocopied to the clip board include `copyToClipBoard()` and copy the returned array so the user can easily paste it back into the program.
    
-  **Thoughts and Feelings:**
+- ## **Thoughts and Feelings:**
    
    I'm a bit frazzeled because it's a travel day and I was distracted by the podcast playing in the background even over my white noise generator. To be honest it sounded so interesting that at points I tried to listen and code at the same time. 
      
