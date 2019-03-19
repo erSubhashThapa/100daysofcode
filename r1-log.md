@@ -20,19 +20,19 @@
    
     - Make the code that gets autocopied to the clip board include `copyToClipBoard()` and copy the returned array so the user can easily paste it back into the program.
    
-   **Thoughts and Feelings:**
+  **Thoughts and Feelings:**
    
-     I'm a bit frazzeled because it's a travel day and I was distracted by the podcast playing in the background even over my white noise generator. To be honest it sounded so interesting that at points I tried to listen and code at the same time. 
+   I'm a bit frazzeled because it's a travel day and I was distracted by the podcast playing in the background even over my white noise generator. To be honest it sounded so interesting that at points I tried to listen and code at the same time. 
      
-     I turned my white noise off so I could listen. Not a great idea!
+   I turned my white noise off so I could listen. Not a great idea!
      
-     I'm able to code if I leave my white noise on and focus. I've done it many times before. But I didn't turn my white noise up high enough so I coudl still make out some words and it sounded so interesting.
+   I'm able to code if I leave my white noise on and focus. I've done it many times before. But I didn't turn my white noise up high enough so I coudl still make out some words and it sounded so interesting.
      
-     So obviously I wan't super focused.
+   So obviously I wan't super focused.
      
-     I should note, compared to how much I used to struggle with coding while driving, I'm a million times better even on days I'm distracted. #100daysofcode helped me build a habit code no matter what. I've gotten much better at coding and blocking out distractions no matter where I am. 
+   I should note, compared to how much I used to struggle with coding while driving, I'm a million times better even on days I'm distracted. #100daysofcode helped me build a habit code no matter what. I've gotten much better at coding and blocking out distractions no matter where I am. 
       
-     ![screenshot](log_imgs/travel_3-19.gif)
+  ![screenshot](log_imgs/travel_3-19.gif)
    
 **Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/5b3076ce1dfb55505c90be752e7fedc7d0bc00c7/MVC%20app)
 
