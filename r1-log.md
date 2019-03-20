@@ -63,7 +63,9 @@
        mainEl.removeChild(x);
    });
    ```
-   The above leaves child nodes. I think it's because to find element x, for each us simply iterating through the indeces of  mainEl.childNodes. So first it takes `mainEl.childNodes[0]`, then `mainEl.childNodes[1]`, then index 2, etc:
+   The above **leaves** child nodes. I expected all child nodes to be cleared, but they aren't.
+   
+   I think it's because inorder to find element x, `forEach()` is simply iterating through the indices of `mainEl.childNodes`. So first it takes `mainEl.childNodes[0]`, then `mainEl.childNodes[1]`, then index 2, etc:
    
    Value of x:
    
@@ -77,10 +79,10 @@
    
    `mainEl.childNodes[4]` ... etc....
    
-   But since we are removing nodes, we are messing with the indeces.
+   But since we are *removing nodes*, we are *messing with the indices.*
    
    
-   At first these indeces map to these elements:
+   At first these indices map to these elements:
    
    ```html
    <div id="main">
@@ -100,17 +102,21 @@
    mainEl.childNodes[3]  <div id="four"></div> 
    ```
    
-   But once we remove te first child node, `mainEl.childNodes[0]`  <div id="one"></div>, we are left with a new NodeList. Now the element with id `#two` is in index 0.
+   But once we remove the first child node, `mainEl.childNodes[0] //<div id="one"></div>`, we are left with a new NodeList.
+   
+   Now the element with id `#two` is in index 0.
    
    ```javascript
-   mainEl.childNodes[0]  <div id="two"></div>`   
+   mainEl.childNodes[0]  <div id="two"></div>   //[0] used to be #one
    
    mainEl.childNodes[1]  <div id="three"></div> 
    
    mainEl.childNodes[2]  <div id="four"></div> 
    ```
    
-   But `forEach()` already dealt with index 0, so it moves on to index 1 which has now changed from the element with id `#two` to `#three`. `forEach()` skips element `#two`. This pattern continues and we end up skipping a lot of elements.
+   But `forEach()` already dealt with index 0, so it moves on to *index 1* which has now changed from the element with id `#two` to `#three`. `forEach()` skips element `#two`. 
+   
+   This pattern continues and we end up skipping a lot of elements.
   
    ### This way works:
    
@@ -124,12 +130,12 @@
    I ran into an infinite loop while working with a while loop. I always do this! A nice way to stop an infinite loop when you're developing and debugging is like this:
    
    ```javascript
-   let l = 0;
+   let loop = 0;
    
    while(somethingIsTrue){
-      l++
+      loop++
       //...some code here...
-      if(l>100){ 
+      if(loop>100){ 
          console.log("Over 100 loops, exiting function");
          return;
       }
@@ -138,9 +144,9 @@
    
    ## `Document.execCommand('copy')` Not working in My Test
    
-   I have this `copyToClipboard()` snippet which I got from [hackernoon.com](https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f). This snippet is from [30 Seconds of Code](https://github.com/30-seconds/30-seconds-of-code).
+   I have this `copyToClipboard()` snippet which I got from [hackernoon.com](https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f). This snippet is originally from [30 Seconds of Code](https://github.com/30-seconds/30-seconds-of-code).
    
-   This function wouldn't work while I was testing. That's because when I do unit tests, I am probably doing them wrong. I just call all the functions:
+   The `copyToClipboard()` function wouldn't work while I was testing. That's because when I do unit tests, I am probably doing them wrong. I just call all the functions:
    
    ```javascript
    //------------------ test
@@ -149,19 +155,22 @@
    nextHandler();
    ```
    
-   Normally, `nextHandler()` is triggered by an event- a click on the next button. But `Document.execCommand('copy')`, which is  called inside `copyToClipboard()`, can only be executed as the result of a user action. 
+   Normally, `nextHandler()` is triggered by an event- a click on the next button. But here in my test we just call it. 
    
-   Since my test calls `nextHandler()` without replicating a user click on the next button, this function doesn't work when testing. 
+   `copyToClipboard()` is inside of `nextHandler()`.  `Document.execCommand('copy')`, which is  called inside `copyToClipboard()`, can only be executed as the result of a user action.
    
-   I wonder if it's possible to write a test that mimics a user action? I know that my tests are not really legit unit test. But it still seems unsafe for any unit test that's to replicate a user action. Because then you could use unit tests in your actual code and do all sorts of unsafe things that browsers normally don't allow.
+   Since my test calls `nextHandler()` without replicating a user click on the next button, this function doesn't work when testing. There was no user action.
+   
+   I wonder if it's possible to write a test that mimics a user action? I know that my tests are not really legit unit test. But it seems unsafe for any unit test to replicate a user action. Because then you could use unit tests in your actual code to do all sorts of unsafe things that browsers normally don't allow.
    
    ## Done & To Do
    ### Done
-   My code now auto copies the returned array of participants to the clip board. So the user never has to select and copy.
+   My code now auto-copies the returned array of participants to the clipboard. So the user never has to select and copy.
    
-   I cleaned up my code to make it more dry. I have a function, `clearLayout(...except)` that clears all children of the main div, except for nodes specified in the paramerters.
+   I cleaned up my code to make it more dry. I have a function, `clearLayout(...except)` that clears all children of the main div, except for nodes specified in the parameters.
    
-   I created a new layout functions, `linkLayout(url)`, that creates a layout with a search link with any url passed.
+   I created a new layout function, `linkLayout(url)`, which creates a layout with a link made from any url passed in to the function. We'll use this everytime we create a new twitter search link.
+   
    ### To Do
    - View for inputing array of screennames
      - make sure screennames are not repeated
@@ -174,9 +183,7 @@
    
 **Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/1a1a7fe65b645ab88a5a83f818438f49ce815f6a/MVC%20app)
    
-   
-   
-   
+ 
 ## Day 78
 ### 3/19/19
 - ## **100Daysofcode Tweet Search Project**
