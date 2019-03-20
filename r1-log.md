@@ -3,6 +3,140 @@
 ## Day 78
 ### 3/19/19
 - ## **100Daysofcode Tweet Search Project**
+
+   Are rest parameters optional?
+   
+   ## Statements in Arrow Functions
+   
+   I tried to use a statement in an arrow function using parenthesis:
+   
+   ```javascript
+   mainEl.childNodes.forEach((x)=>(if (!except.includes(x)) mainEl.removeChild(x)); //syntax error
+   ```
+   
+   This gave me a syntax error because an if statement is a **statement** not an **expression**. Statements must be put in braces {} in arrow functions.
+   
+   >If an expression is the body of an arrow function, you don’t need braces:
+
+   ```javascript
+   asyncFunc.then(x => console.log(x));
+   ```
+   >However, statements have to be put in braces:
+   
+    ```javascript
+   asyncFunc.catch(x => { throw x });
+   ```
+   from [exploringjs.com](http://exploringjs.com/es6/ch_arrow-functions.html)
+   
+   ### What's the difference between statements and expressions?
+   
+   >Expressions produce (are evaluated to) values. Examples:
+     ```javascript
+   3 + 4
+   foo(7)
+   'abc'.length
+   ```
+   >Statements do things. Examples:
+   
+    ```javascript
+   while (true) { ··· }
+   return 123;
+   ```
+   >Most expressions can be used as statements, simply by mentioning them in statement positions:
+   
+   ```javascript
+   function bar() {
+    3 + 4;
+    foo(7);
+    'abc'.length;
+   }
+   ```
+   from [exploringjs.com](http://exploringjs.com/es6/ch_arrow-functions.html)
+   
+   ## Removing Elements With `forEach()` Doesn't Work Well
+   
+   ```javascript
+   mainEl.childNodes.forEach((x)=>{
+       mainEl.removeChild(x);
+   });
+   ```
+   The above leaves child nodes. I think it's because to find element x, for each us simply iterating through the indeces of  mainEl.childNodes. So first it takes `mainEl.childNodes[0]`, then `mainEl.childNodes[1]`, then index 2, etc:
+   
+   Value of x:
+   
+   `mainEl.childNodes[0]`
+      
+   `mainEl.childNodes[1]`
+   
+   `mainEl.childNodes[2]`
+   
+   `mainEl.childNodes[3]`
+   
+   `mainEl.childNodes[4]` ... etc....
+   
+   But since we are removing nodes, we are messing with the indeces.
+   
+   
+   At first these indeces map to these elements:
+   
+   ```html
+   <div id="main">
+      <div id="one"></div> 
+      <div id="two"></div> 
+      <div id="three"></div> 
+      <div id="four"></div> 
+   <div>
+   ```
+   ```javascript
+   mainEl.childNodes[0]  <div id="one"></div>
+      
+   mainEl.childNodes[1]  <div id="two"></div>   
+   
+   mainEl.childNodes[2]  <div id="three"></div> 
+   
+   mainEl.childNodes[3]  <div id="four"></div> 
+   ```
+   
+   But once we remove te first child node, `mainEl.childNodes[0]`  <div id="one"></div>, we are left with a new NodeList. Now the element with id `#two` is in index 0.
+   
+   ```javascript
+   mainEl.childNodes[0]  <div id="two"></div>`   
+   
+   mainEl.childNodes[1]  <div id="three"></div> 
+   
+   mainEl.childNodes[2]  <div id="four"></div> 
+   ```
+   
+   But `forEach()` already dealt with index 0, so it moves on to index 1 which has now changed from the element with id `#two` to `#three`. `forEach()` skips element `#two`. This pattern continues and we end up skipping a lot of elements.
+  
+   ### This way works:
+   
+   ```javascript
+   while (mainEl.hasChildNodes()){
+       mainEl.childNodes[0].remove();
+   }
+   ```
+   ## While Loop, Infinite Loop
+   
+   I ran into an infinite loop while working with a while loop. I always do this! A nice way to stop an infinite loop when you're developing and debugging is like this:
+   
+   ```javascript
+   let l = 0;
+   
+   while(somethingIsTrue){
+      l++
+      //...some code here...
+      if(l>100){ 
+         console.log("Over 100 loops, exiting function");
+         return;
+      }
+   }
+   ```
+   
+   
+## Day 78
+### 3/19/19
+- ## **100Daysofcode Tweet Search Project**
    
    Today I added functionality to the elements for the first and some of the second view. 
    
