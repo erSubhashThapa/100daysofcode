@@ -7,7 +7,7 @@
    ## Rest Parameters
    If you use rest parameters, is it *optional* to pass any arguments into the function? It seems like it from my code. 
    
-   Now I'm wondering if regular parameters are sometimes optional too, like if they're not actually necessary in the function? I'll have to play around with this.
+   Now I'm wondering if regular parameters are sometimes optional too. Like is it optional to pass them if they're not actually 100% necessary in the function? I'll have to play around with this.
    
    ## Syntax Requirments for Statements in Arrow Functions
    
