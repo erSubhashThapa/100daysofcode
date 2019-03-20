@@ -179,7 +179,7 @@
      - copy new code for comparing the screen names
    -design
 
-   **Thoughts and Feelings:**
+- **Thoughts and Feelings:**
    
    Much more focused today! No podcasts distracting me.
    
