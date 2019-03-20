@@ -9,7 +9,7 @@
    
    Now I'm wondering if regular parameters are sometimes optional too, like if they're not actually necessary in the function? I'll have to play around with this.
    
-   ## Statements in Arrow Functions
+   ## Syntax Requirments for Statements in Arrow Functions
    
    I tried to use a statement in an arrow function using parenthesis:
    
