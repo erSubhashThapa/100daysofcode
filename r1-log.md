@@ -3,8 +3,9 @@
 ## Day 78
 ### 3/19/19
 - ## **100Daysofcode Tweet Search Project**
-
-   Are rest parameters optional?
+   
+   ## Rest Parameters
+   Are rest parameters optional? It seems like it from my code.
    
    ## Statements in Arrow Functions
    
@@ -169,7 +170,7 @@
    
    Much more focused today! No podcasts distracting me.
    
-**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/ce713d795e02452b152076581dca86bad0e609be/MVC%20app)
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/1a1a7fe65b645ab88a5a83f818438f49ce815f6a/MVC%20app)
    
    
    
