@@ -15,7 +15,9 @@
    mainEl.childNodes.forEach((x)=>(if (!except.includes(x)) mainEl.removeChild(x)); //syntax error
    ```
    
-   This gave me a syntax error because an if statement is a **statement** not an **expression**. Statements must be put in braces {} in arrow functions.
+   This gave me a syntax error because an if statement is a **statement** not an **expression**. 
+   
+   ***Statements must be put in braces {} in arrow functions.***
    
    >If an expression is the body of an arrow function, you don’t need braces:
 
