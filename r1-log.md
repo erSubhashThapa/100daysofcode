@@ -9,7 +9,7 @@
    
    Now I'm wondering if regular parameters are sometimes optional too. Like is it optional to pass them if they're not actually 100% necessary in the function? I'll have to play around with this.
    
-   ## Syntax Requirments for Statements in Arrow Functions
+   ## Syntax Requirements for Statements in Arrow Functions
    
    I tried to use a statement in an arrow function using parenthesis:
    
