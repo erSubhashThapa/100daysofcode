@@ -133,6 +133,46 @@
    }
    ```
    
+   ## `Document.execCommand('copy')` Not working in My Test
+   
+   I have this `copyToClipboard()` snippet which I got from [hackernoon.com](https://hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f). This snippet is from [30 Seconds of Code](https://github.com/30-seconds/30-seconds-of-code).
+   
+   This function wouldn't work while I was testing. That's because when I do unit tests, I am probably doing them wrong. I just call all the functions:
+   
+   ```javascript
+   //------------------ test
+   startHandler();
+   document.querySelector(".input").value = "2019-01-01";
+   nextHandler();
+   ```
+   
+   Normally, `nextHandler()` is triggered by an event- a click on the next button. But `Document.execCommand('copy')`, which is  called inside `copyToClipboard()`, can only be executed as the result of a user action. 
+   
+   Since my test calls `nextHandler()` without replicating a user click on the next button, this function doesn't work when testing. 
+   
+   I wonder if it's possible to write a test that mimics a user action? I know that my tests are not really legit unit test. But it still seems unsafe for any unit test that's to replicate a user action. Because then you could use unit tests in your actual code and do all sorts of unsafe things that browsers normally don't allow.
+   
+   ## Done & To Do
+   ### Done
+   My code now auto copies the returned array of participants to the clip board. So the user never has to select and copy.
+   
+   I cleaned up my code to make it more dry. I have a function, `clearLayout(...except)` that clears all children of the main div, except for nodes specified in the paramerters.
+   
+   I created a new layout functions, `linkLayout(url)`, that creates a layout with a search link with any url passed.
+   ### To Do
+   - View for inputing array of screennames
+     - make sure screennames are not repeated
+     - copy new code for comparing the screen names
+   -design
+
+   **Thoughts and Feelings:**
+   
+   Much more focused today! No podcasts distracting me.
+   
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/ce713d795e02452b152076581dca86bad0e609be/MVC%20app)
+   
+   
+   
    
 ## Day 78
 ### 3/19/19
