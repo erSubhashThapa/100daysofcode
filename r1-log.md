@@ -5,7 +5,9 @@
 - ## **100Daysofcode Tweet Search Project**
    
    ## Rest Parameters
-   If you use rest parameters, is it *optional* to pass any arguments into the function? It seems like it from my code.
+   If you use rest parameters, is it *optional* to pass any arguments into the function? It seems like it from my code. 
+   
+   Now I'm wondering if regular parameters are sometimes optional too, like if they're not actually necessary in the function? I'll have to play around with this.
    
    ## Statements in Arrow Functions
    
