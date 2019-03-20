@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 78
-### 3/19/19
+## Day 79
+### 3/20/19
 - ## **100Daysofcode Tweet Search Project**
    
    ## Rest Parameters
