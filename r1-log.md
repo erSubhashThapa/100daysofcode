@@ -4,19 +4,41 @@
 ### 3/21/19---editing
 - ## **100Daysofcode Tweet Search Project**
 
-   I made a JSON file that holds all the text for the instructions. I thought that would be a good way to organize the text.
+   ## JSON
+
+   I made a JSON file that holds all the text for the instructions. 
    
-   next? remove promo tweets, new code, remove repeated screen names
+   I thought that would be a good way to organize the text. I thought if a JSON file local, you could get it without setting up a server, but I think you still have to. Unless the file is formatted as a javascript file. But that's not the right way to do it. It should be a JSON file and it should be through a server.
    
-   use :not() to filter out promoted tweets
+   More info in this [stackoverflow thread](https://stackoverflow.com/questions/19706046/how-to-read-an-external-local-json-file-in-javascript).
    
-   removed duplicates in screenname arrays with filter:
+   I didn't get the data yet. I need to review how to do that. I've done it before and it shouldn't be hard.
+   
+   ## `:not()`
+   
+   I used `:not()` to filter out the promoted tweets when getting a list of screennames that tweeted about #100daysofcode. You'll get random promoted tweets like from Ritz Crackers or whatever. So you can filter them because they have a class called .promoted-tweet:
+   
+   ```javascript
+   document.querySelectorAll(".tweet.js-stream-tweet:not(.promoted-tweet)")
+   ```
+   
+   >The :not() CSS pseudo-class represents elements that do not match a list of selectors. Since it prevents specific items from being selected, it is known as the negation pseudo-class.
+   
+   from [*Mozilla Documentation*](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)
+   
+   ## Removing Duplicates in an Array with filter()
+   
+   Just incase someone posted twice on the same day, I have to remove the duplicate screennames. I made a helper function to do this.   
    
    ```javascript
    const uniqueInArray = (arr)=>(arr.filter((x,i)=> arr.indexOf(x)>=i));
    ```
    
-   I created an array that holds the functions names that control each view in the controller:
+   At first I couldn't figure out the best way write this function but I go the idea to use `indexOf` from [gomakethings.com](https://gomakethings.com/removing-duplicates-from-an-array-with-vanilla-javascript/#using-the-array-filter-method). 
+   
+   ## Organizing Views
+   
+   I created an array that holds the function names that control each view:
    
    ```javascript
    let view = [view0, view1, view2, view3, view4];
@@ -24,7 +46,26 @@
    
    Now, I can just go back and forth through the array to call the next and last view. What I had before was messier. It involved changing which function was next at every view. This is easier to change and read. 
    
-   I finally understand the difference between step over and step into function in the debugger.
+   ## DevTools Step Over Vs. Step Into
+   
+   I finally understand the difference between *step over* and *step into* function in the debugger. Sometimes they do the same thing which is why it confused me at first.
+   
+   I learned that if a line has a function call in it, *step over* will skip to the next line in the current function. *Step into* will take you to the function that was just called.
+   
+   ## Do To
+   
+   - Add the day number string to the first url
+   - last views
+   - design
+   
+   
+- ## Thoughts and Feelings:
+
+   Organizing my code paid off. Since I had so many reasable and well organized functions and classes, I was able to code the next views so fast. 
+   
+   Instead of creating all sorts of components and layouts for the new views, I just called the layout functions that I made. I passed the relavent arguments. It was so fast and easy.
+   
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/28c82f643acff0f79b55ef377c5029e07e0c082e/MVC%20app)
 
 ## Day 79
 ### 3/20/19
