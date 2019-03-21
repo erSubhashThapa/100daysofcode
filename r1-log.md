@@ -1,5 +1,15 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 80
+### 3/21/19---editing
+- ## **100Daysofcode Tweet Search Project**
+
+   I made a JSON file that holds all the text for the instructions. I thought that would be a good way to organize the text.
+   
+   next? remove promo tweets, new code, remove repeated screen names
+   
+   use :not() to filter out promoted tweets
+
 ## Day 79
 ### 3/20/19
 - ## **100Daysofcode Tweet Search Project**
