@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 80---currently editing day 80
-### 3/21/19---editing
+## Day 80
+### 3/21/19
 - ## **100Daysofcode Tweet Search Project**
 
    ## JSON
@@ -50,7 +50,11 @@
    
    I finally understand the difference between *step over function* and *step into function* in the debugger. Sometimes they do the same thing which is why it confused me at first.
    
-   I learned that if a line has a function call in it, *step over* will skip to the next line in the current function. *Step into* will take you to the function that was just called.
+   I learned that if a line has a function call in it:
+   
+   - *Step over* will skip to the next line in the *current function*. 
+   
+   - *Step into* will take you to the function that was *just called*.
    
    ## Do To
    
