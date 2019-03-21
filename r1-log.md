@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 80
+## Day 80---currently editing day 80
 ### 3/21/19---editing
 - ## **100Daysofcode Tweet Search Project**
 
@@ -9,6 +9,22 @@
    next? remove promo tweets, new code, remove repeated screen names
    
    use :not() to filter out promoted tweets
+   
+   removed duplicates in screenname arrays with filter:
+   
+   ```javascript
+   const uniqueInArray = (arr)=>(arr.filter((x,i)=> arr.indexOf(x)>=i));
+   ```
+   
+   I created an array that holds the functions names that control each view in the controller:
+   
+   ```javascript
+   let view = [view0, view1, view2, view3, view4];
+   ```
+   
+   Now, I can just go back and forth through the array to call the next and last view. What I had before was messier. It involved changing which function was next at every view. This is easier to change and read. 
+   
+   I finally understand the difference between step over and step into function in the debugger.
 
 ## Day 79
 ### 3/20/19
