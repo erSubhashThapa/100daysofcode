@@ -43,7 +43,7 @@
    - Done
      - Added JSON.parse and .stringify when copying the array of screennames to the clipboard. I thought this was cleaner. than what I had before
     
-   -To Do
+   - To Do
      - AJAX to get JSON
      - design
    
