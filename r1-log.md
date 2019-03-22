@@ -38,15 +38,20 @@
    num: range(oneHundred.numberOf(weekAgo), oneHundred.numberOf(yesterday)
    ```
    
-   ## Done and To Do
+   ## Other Things Done and To Do
    
    - Done
-     - Added JSON.parse and .stringify when copying the array of screennames to the clipboard. I thought this was cleaner. than what I had before
+     - Added JSON.parse and .stringify when copying the array of screennames to the clipboard. I thought this was cleaner than what I had before.
     
    - To Do
      - AJAX to get JSON
      - design
+    
+- ## Thoughts and Feelings:
+
+   I got to cut this short because I'm running low on power. Hope there's not a lot of typos. Coded in the dricing rialta today. I think I'm liking meditating.
    
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/6a6709cadc3f9c09001aef718281a37422ef850c/MVC%20app)
    
 
 ## Day 80
@@ -84,13 +89,6 @@
    ```
    
    At first I couldn't figure out the best way write this function. I knew I could use `.filter()`. I got the idea to use `indexOf` from [gomakethings.com](https://gomakethings.com/removing-duplicates-from-an-array-with-vanilla-javascript/#using-the-array-filter-method). 
-   
-   
-- ## Thoughts and Feelings:
-
-   I got to cut this short because I'm running low on power. Hope there's not a lot of typos. Coded in the dricing rialta today. I think I'm liking meditating.
-   
-**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/6a6709cadc3f9c09001aef718281a37422ef850c/MVC%20app)
    
    ## Organizing Views
    
