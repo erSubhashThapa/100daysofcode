@@ -49,7 +49,7 @@
     
 - ## Thoughts and Feelings:
 
-   I got to cut this short because I'm running low on power. Hope there's not a lot of typos. Coded in the dricing rialta today. I think I'm liking meditating.
+   I got to cut this short because I'm running low on power. Hope there's not a lot of typos. Coded in the driving rialta today. I think I'm liking meditating.
    
 **Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/6a6709cadc3f9c09001aef718281a37422ef850c/MVC%20app)
    
