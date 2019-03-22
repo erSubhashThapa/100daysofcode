@@ -29,6 +29,7 @@
    This function uses the `Object.keys()` method.
    
    >The Object.keys() method returns an array of a given object's own property names, in the same order as we get with a normal loop.
+   
    from [*Mozilla Documentation*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
    
      I needed to create a range helper function so I could pass an array with a range of numbers to the updated `Search` class. With my range helper function I can pass this code into the `Search` method:
