@@ -8,7 +8,7 @@
    
    I updated `Search` so that it can create a string for multiple day numbers. This way I can see who posted for *both* **Day 1** and **Day 2** in the same query, for example, instead of only searching for **Day 1** or any other day by itself.
    
-   This is useful because some people haven't done **#100DaysOfCode** consecutively. Even though it's day 81 of the year, participants who started on the new year can skip 1 day every 2 weeks according to **#100DaysOfCode**. 
+   This is useful because some people haven't done **#100DaysOfCode** consecutively. Participants can skip 1 day every 2 weeks according to **#100DaysOfCode**. So participants who started when I did, might not be up to day 81 today.
    
    That works out perfectly because that means you can be up to **7 days behind** on **#100DaysOfCode**. Twitter limits my string search after I add an **8th day string query**. So 7 works out.
    
