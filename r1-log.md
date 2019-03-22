@@ -1,5 +1,52 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 81
+### 3/22/19
+- ## **100Daysofcode Tweet Search Project**
+   
+   ## Updating `Search` Class
+   
+   I updated `Search` so that it can create a string for multiple day numbers. This way I can see who posted for *both* **Day 1** and **Day 2** in the same query, for example, instead of only searching for **Day 1** or any other day by itself.
+   
+   This is useful because some people haven't done #100DaysOfCode consecutively. Even though it's day 81 of the year, participants can skip 1 day every 2 weeks according to #100DaysOfCode. That works out perfectly because that means you can be up to 7 days behind on #100DaysOfCode. Twitter limits my string search after I add an 8th day string query. So 7 works out.
+   
+   
+
+   ## Range Helper Function
+   
+   There isn't a range function in javascript. Maybe there is or will be in a new syntax. 
+   
+   I made a range helper function.
+ 
+   
+    ```javascript
+   const range = (start, end)=>[...Array(end-start+1).keys()].map(x=>x+start);
+   ```
+   
+   If we call `range(3,6)` we would get `[3,4,5,6]`.
+   
+   This function uses the `Object.keys()` method.
+   
+   >The Object.keys() method returns an array of a given object's own property names, in the same order as we get with a normal loop.
+   from [*Mozilla Documentation*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+   
+     I needed to create a range helper function so I could pass an array with a range of numbers to the updated `Search` class. With my range helper function I can pass this code into the `Search` method:
+   
+   ```javascript
+   num: range(oneHundred.numberOf(weekAgo), oneHundred.numberOf(yesterday)
+   ```
+   
+   ## Done and To Do
+   
+   - Done
+     - Added JSON.parse and .stringify when copying the array of screennames to the clipboard. I thought this was cleaner. than what I had before
+    
+   -To Do
+     - AJAX to get JSON
+     - design
+   
+   
+
 ## Day 80
 ### 3/21/19
 - ## **100Daysofcode Tweet Search Project**
@@ -35,6 +82,13 @@
    ```
    
    At first I couldn't figure out the best way write this function. I knew I could use `.filter()`. I got the idea to use `indexOf` from [gomakethings.com](https://gomakethings.com/removing-duplicates-from-an-array-with-vanilla-javascript/#using-the-array-filter-method). 
+   
+   
+- ## Thoughts and Feelings:
+
+   I got to cut this short because I'm running low on power. Hope there's not a lot of typos. Coded in the dricing rialta today. I think I'm liking meditating.
+   
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/6a6709cadc3f9c09001aef718281a37422ef850c/MVC%20app)
    
    ## Organizing Views
    
