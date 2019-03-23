@@ -1,23 +1,109 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 82 ---editing
+## Day 82 ---currently editing
 ### 3/23/19
 - ## **100Daysofcode Tweet Search Project**
 
-   OneHundredDaysCode class `.numberOf(date)` function is giving me the wrong day. It's giving me a day under what it should be.
+   ## Daylight Savings Affecting `OneHundredCodeDays.numberOf()`
+   
+   The `OneHundredDaysCode` class `.numberOf(date)` function is giving me the wrong day. It's giving me a day less than what it should be.
+   
+   I tried settings the time of the date passed into the function to the same time as the startDate so that the days would subtract to whole days.
    
    ```javascript
        date.setHours(oneHundred.startDate.getHours(), oneHundred.startDate.getMinutes(), oneHundred.startDate.getSeconds(), oneHundred.startDate.getMilliseconds());
    ```
+   
+   But it still wasn't working. I noticed that some dates worked correctly with the `.numberOf()` method but some didn't. I manually tested `.numberOf()` with a bunch of dates. I found that `.numberOf()` gives the correct day until day light savings happens on March 10th.
+   
+   ![screenshot](daylightsavings_3-23.png)
+   
+   
    ```javascript
    Math.floor((date-this.startDate)/86400000) + 1;
    ```
    
-   still not working end date is 99
-   
    Has to do with daylight savings. Since we are flooring the results and it's an hour less, it's going to lose a day. So I changed `.floor()` to `.round()`. Since we're matching up the time of the date argument to the time of the start time, `(date-this.startDate)/86400000` will only leave us a remainder of time that is an hour more or an hour less. So rounding will work to get us to the correct date.
    
    https://www.w3schools.com/js/js_dates.asp
+   
+   ## AJAX with JSON file
+   
+   I forgot that I'm already running a live server through the live server extension for Visual Studio Code. So I didn't need to to anything extra to set one up.
+   
+   I used this tutorial from [gomakethings.com](https://gomakethings.com/ajax-and-apis-with-vanilla-javascript/) to get my data.
+   
+   ```javascript
+   let xhr = new XMLHttpRequest();
+
+   xhr.onload = function(){
+    if(xhr.status >= 200 && xhr.status < 300){
+        console.log("success", xhr);
+   }else{
+        console.log('The request failed!');
+   }
+    console.log('this always runs');
+   }
+   xhr.open('GET', 'instructions.json');
+   xhr.send();
+   ```
+   
+   Then I tried to get the data by adding this on the next line after `xhr.send()`. You have to use JSON.parse(), because the response is just going to return as a string. We want it to be a JSON object so we can use dot notation and bracket notation to easilty traverse throught the data:
+   
+   ```javascript
+   const instructionText = JSON.parse(xhr.response);//doesn't work!
+   ```
+   
+   This doesn't work because even though it's after `xhr.send()`, `xhr.send()` is asynchronous. So `.send()` doesn't actually finish running before the next line. So we havent actually gotten back our XHR response yet.
+   
+   In order to get the data, we have to innitialize `instructionText` within the success clause body. I'm not sure if 'success clause body' is the correct way to say it, but this is what I mean:
+   
+   ```javascript
+   let instructionText; //declaration
+   
+   let xhr = new XMLHttpRequest();
+
+   xhr.onload = function(){
+    if(xhr.status >= 200 && xhr.status < 300){
+        console.log("success", xhr);
+        instructionText = JSON.parse(xhr.response); //initialization
+   }else{
+        console.log('The request failed!');
+   }
+    console.log('this always runs');
+   }
+   xhr.open('GET', 'instructions.json');
+   xhr.send();
+   ```
+   
+   ## Using The Data From The AJAX Request
+   
+   Now if we use `instructionText` within our app, we'll still have a problem.
+   
+   ```javascript
+   const view1 = ()=>{
+      inputLayout(instructionsText.view1[0], "small"); //won't work, instructionsText is undefined
+   }
+   ```
+   
+   Trying to retrieve the `instructionText` in our view1 function doesn't work, again because this code doesn't gaurentee that our XHR request returned a response yet.
+   
+   So what should I do to get the response text where it needs to be?
+   
+   In this tutorial on [code-mave.com](https://code-maven.com/ajax-request-for-json-data), they create a function that takes a url for the JSON and callback function. The callback function they pass into their ajax_get() function, takes the data and puts it where it needs to be. 
+   
+   I'm wondering how I  could implement this for my app. The problem is, since my app is a single page application I can't do this all at once. I need different data in different views and the elements where the data goes aren't all up at the same time.
+   
+   This is where I left off today.
+   
+   
+- ## Thoughts and Feelings:
+
+   I got to cut this short because I'm running low on power. Hope there's not a lot of typos. Coded in the driving rialta today. I think I'm liking meditating.
+   
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/3b8ef1e61eba8b49d32c508c665fe1434cc29f48/MVC%20app)
+
+   
 
 ## Day 81
 ### 3/22/19
