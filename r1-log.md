@@ -58,7 +58,7 @@
    xhr.send();
    ```
    
-   Then I tried to get the data by adding this code on the next line after `xhr.send()`. You have to use JSON.parse(), because the response is just going to return a string. We want it to be a JSON object so we can use dot notation and bracket notation to easilty traverse throught the data:
+   Then I tried to get the data by adding the code below on the next line after `xhr.send()`. You have to use JSON.parse(), because the response is just going to return a string. We want it to be a JSON object so we can use dot notation and bracket notation to easilty traverse throught the data:
    
    ```javascript
    const instructionText = JSON.parse(xhr.response);//doesn't work!
