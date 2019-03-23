@@ -100,7 +100,7 @@
    
    So what should I do to get the response text where it needs to be?
    
-   In this tutorial on [code-mave.com](https://code-maven.com/ajax-request-for-json-data), they create a function that takes a url for the JSON and callback function. The callback function they pass into their ajax_get() function, takes the data and puts it where it needs to be. 
+   In this tutorial on [code-maven.com](https://code-maven.com/ajax-request-for-json-data), they create a function that takes a url for the JSON and callback function. The callback function they pass into their ajax_get() function, takes the data and puts it where it needs to be. 
    
    I'm wondering how I could implement this for my app. The problem is, since my app is a single page application, I can't place the data all at once. I need different data in different views. The elements where the data goes aren't all up at the same time.
    
