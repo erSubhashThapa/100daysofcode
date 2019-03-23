@@ -96,7 +96,7 @@
    }
    ```
    
-   Trying to retrieve the `instructionText` in our view1 function doesn't work, again because we're accessing `instructionsTest` in a function that can be reached before XHR request returned a response.
+   Trying to retrieve the `instructionText` in our `view1()` function doesn't work, again because we're accessing `instructionsTest` in a function that can be reached before XHR request returned a response.
    
    So what should I do to get the response text where it needs to be?
    
