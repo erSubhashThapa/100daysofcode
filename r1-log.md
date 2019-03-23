@@ -14,6 +14,10 @@
    ```
    
    still not working end date is 99
+   
+   Has to do with daylight savings. Since we are flooring the results and it's an hour less, it's going to lose a day. So I changed `.floor()` to `.round()`. Since we're matching up the time of the date argument to the time of the start time, `(date-this.startDate)/86400000` will only leave us a remainder of time that is an hour more or an hour less. So rounding will work to get us to the correct date.
+   
+   https://www.w3schools.com/js/js_dates.asp
 
 ## Day 81
 ### 3/22/19
