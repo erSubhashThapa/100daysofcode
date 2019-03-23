@@ -28,7 +28,7 @@
    
    So the problem has to do with daylight savings. 
    
-   Since we are flooring the results but one day is an hour less because of daylight savings, it throws the calculation off. We floor down a day when we should round up. 
+   Since we floor the results but daylight savings day is an hour less. The 23 hour day throws our entire calculation off by one hour. When we floor down this calculation, we floor down **23 full hours**, when we should round up **one hour**.
    
    So I changed `.floor()` to `.round()`. Depending on whether we're going in or out of daylight savings, the code `(date-this.startDate)/86400000` will only leave us a remainder of time that is an *hour more* or an *hour less*. No more, no less. So rounding will work to get us to the correct date, instead of flooring.
    
