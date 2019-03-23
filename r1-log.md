@@ -1,5 +1,20 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 82
+### 3/23/19
+- ## **100Daysofcode Tweet Search Project**
+
+   OneHundredDaysCode class `.numberOf(date)` function is giving me the wrong day. It's giving me a day under what it should be.
+   
+   ```javascript
+       date.setHours(oneHundred.startDate.getHours(), oneHundred.startDate.getMinutes(), oneHundred.startDate.getSeconds(), oneHundred.startDate.getMilliseconds());
+   ```
+   ```javascript
+   Math.floor((date-this.startDate)/86400000) + 1;
+   ```
+   
+   still not working end date is 99
+
 ## Day 81
 ### 3/22/19
 - ## **100Daysofcode Tweet Search Project**
