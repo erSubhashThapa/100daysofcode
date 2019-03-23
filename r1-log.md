@@ -24,7 +24,7 @@
    
    I noticed that some dates worked correctly with the `.numberOf()` method but some didn't. I manually tested `.numberOf()` with a bunch of dates. I found that `.numberOf()` gives the correct day, until daylight savings happens on March 10th.
    
-   ![screenshot](daylightsavings_3-23.png)
+   ![screenshot](log_imgs/daylightsavings_3-23.png)
    
    So the problem has to do with daylight savings. 
    
