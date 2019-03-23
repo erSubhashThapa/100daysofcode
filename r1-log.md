@@ -4,7 +4,7 @@
 ### 3/23/19
 - ## **100Daysofcode Tweet Search Project**
 
-   ## Daylight Savings Affecting `OneHundredCodeDays.numberOf()`
+   ## Daylight Savings Problems
    
    The `OneHundredDaysCode` class method, `.numberOf(date)`, is giving me the wrong day. It's giving me a day less than what it should be.
    
