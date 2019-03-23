@@ -96,13 +96,13 @@
    }
    ```
    
-   Trying to retrieve the `instructionText` in our `view1()` function doesn't work, again because we're accessing `instructionsTest` in a function that can be reached before XHR request returned a response.
+   Trying to retrieve the `instructionText` in our `view1()` function doesn't work, again because we're accessing `instructionsTest` in a function that can be reached before the XHR request returned a response.
    
    So what should I do to get the response text where it needs to be?
    
    In this tutorial on [code-maven.com](https://code-maven.com/ajax-request-for-json-data), they create a function that takes a url for the JSON and callback function. The callback function they pass into their ajax_get() function, takes the data and puts it where it needs to be. 
    
-   I'm wondering how I could implement this for my app. The problem is, since my app is a single page application, I can't place the data all at once. I need different data in different views. The elements where the data goes aren't all up at the same time.
+   I'm wondering how I could implement this for my app. The problem is, since my app is a single page application, I can't place the data all at once. The code on [code-maven.com](https://code-maven.com/ajax-request-for-json-data) places all the data on the page as soon at the XHR request succeeds. But I need to place different data within the response at different times depending on what view the user is on.
    
    This is where I left off today.
    
