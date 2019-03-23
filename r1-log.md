@@ -6,7 +6,7 @@
 
    ## Daylight Savings Problems
    
-   The `OneHundredDaysCode` class method, `.numberOf(date)`, is giving me the wrong day. It's giving me a day less than what it should be.
+   The `OneHundredCodeDays` class method, `.numberOf(date)`, is giving me the wrong day. It's giving me a day less than what it should be.
    
    ```javascript
     numberOf(date){ 
