@@ -1,5 +1,89 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 83--- editing
+### 3/24/19
+- ## **100Daysofcode Tweet Search Project**
+
+   ## Daylight Savings
+   
+   ## AJAX
+   
+   I'm going to spend a lot of time today on AJAX. 
+   
+   I found this page, [Beginners Guide To Fetching Data With (AJAX, Fetch API & Async/Await)](https://dev.to/bjhaid_93/beginners-guide-to-fetching-data-with-ajax-fetch-api--asyncawait-3m1l), which shows addtional ways to get data.
+   
+   The author lists three ways:
+   - AJAX
+   - Fetch API
+   - Async/Await
+   
+   I believe the author's terminology is  a little confusing here, because I think all of these are considered AJAX. 
+   
+   > We now use “Ajax” as a generic term for any client-side process which fetches data from a server and updates the DOM dynamically without a full-page refresh. Ajax is a core technique for most web applications and Single-Page Apps (SPAs).
+   
+   from [*sitepoint.com*](https://www.sitepoint.com/xmlhttprequest-vs-the-fetch-api-whats-best-for-ajax-in-2019/)
+   
+   But I think he means making making an `XMLHttpRequest` object when he says's AJAX. Making an `XMLHttpRequest` object was the original way to use AJAX.
+   
+   ## Fetch VS XMLHttpRequest
+   
+   For some reason I'm able to get the response text in another part of my code if I use fetch, but not if I make an XHR object.
+   
+   ### XHR Object
+   
+   #### Undefined `instructionsText`
+   
+   ```javascript
+   
+   //-------------------------------data is NOT DEFINED in this function
+   const view1 = ()=>{
+      inputLayout("small");
+      const instrEl = document.querySelector(".instructions");
+      instrEl.innerHTML = instructionsText.view1[0]; //instructionsText is undefined 
+   }
+   
+   //-----------------------AJAX with XHR object
+   
+   let instructionsText  = null;
+   
+   let xhr = new XMLHttpRequest;
+   //Call the open function, GET-type of request, url, true-asynchronous
+   xhr.open('GET', 'https://api.github.com/users', true)
+   //call the onload 
+   xhr.onload = function(){
+      //check if the status is 200(means everything is okay)
+      if (this.status === 200){
+         //return server response as an object with JSON.parse
+         console.log(JSON.parse(this.responseText));
+      }
+   }
+   //call send
+   xhr.send();
+   ```
+   
+   ### Fetch
+   #### Defined `instructionsText`
+
+   ```javascript
+   //-------------------------------data IS DEFINED in this function 
+   const view1 = ()=>{
+      inputLayout("small");
+      const instrEl = document.querySelector(".instructions");
+      instrEl.innerHTML = instructionsText.view1[0]; //instructionsText is defined 
+   }
+   
+   //------------------------AJAX with Fetch
+   
+   let instructionsText  = null;
+   
+   fetch('instructions.json')
+      .then(resp => resp.json())
+      .then(obj => instructionsText = obj)
+   ```
+   
+   
+   
+
 ## Day 82
 ### 3/23/19
 - ## **100Daysofcode Tweet Search Project**
