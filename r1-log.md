@@ -108,7 +108,7 @@
 
    Today I used a computer burqa/chuppah/sukkah to protect my eyes from eye strain. This helped a lot. But I need a better solution because the fabric falls into view. Perhaps if I can get something to tent it up.
    
-   ![screenshot](burqa_3-24.gif)
+   ![screenshot](log_imgs/burqa_3-24.gif)
    
 **Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/3dbaaec3ddd25639b86d6561c9335507d2f87fdd/MVC%20app)
    
