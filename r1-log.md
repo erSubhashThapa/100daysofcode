@@ -6,6 +6,11 @@
 
    ## Daylight Savings
    
+   I haven't look at these yet, but in response to my trouble with daylight savings yesterday [Brandon Kirkland on twitter](https://twitter.com/BrandoKirkland) suggested these resources:
+   
+   - [Youtube: The Problem with Time & Timezones - Computerphile ](https://www.youtube.com/watch?v=-5wpm-gesOY&feature=youtu.be)
+   - [Stackoverflow: Daylight saving time and time zone best practices ](https://t.co/7hXTOHlDkn)
+   
    ## AJAX
    
    I'm going to spend a lot of time today on AJAX. 
@@ -87,7 +92,25 @@
    
    This page looks like it might be helpful in understanding what's going on: [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee). I didn't read the whole thing yet.
    
-   I'm still not sure but I'm going to move on. Maybe when I start playing around with it more I'll understand more.
+   I'm still not sure why `fetch` works the way I want it to but `new XMLHttpRequest` doesn't. I'm going to move on. Maybe when I start playing around with Ajax more I'll understand more.
+   
+   ### Update
+   
+   Fetch also doesn't work if I load `view1` right away by manually calling the `startHandler()` that brings up the view. Normally, the `startHandler` is triggered by a click event when the user clicks "next". Perhaps that gives the code enough time to get the data. 
+   
+  ## To Do
+  
+  - change next click event to a submit button and a submit event so pressing enter works
+  - finish view 6
+  - layout
+
+- ## Thoughts and Feelings:
+
+   Today I used a computer burqa/chuppah/sukkah to protect my eyes from eye strain. This helped a lot. But I need a better solution because the fabric falls into view. Perhaps if I can get something to tent it up.
+   
+   ![screenshot](burqa_3-24.gif)
+   
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysodcode_post_search/tree/3dbaaec3ddd25639b86d6561c9335507d2f87fdd/MVC%20app)
    
 
 ## Day 82
