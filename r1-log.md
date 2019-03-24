@@ -17,13 +17,13 @@
    - Fetch API
    - Async/Await
    
-   I believe the author's terminology is  a little confusing here, because I think all of these are considered AJAX. 
+   I believe the author's terminology is  a little confusing here, because I think all of these are considered Ajax. But I think AJAX refers to the original Ajax. AJAX vs. Ajax. 
    
    > We now use “Ajax” as a generic term for any client-side process which fetches data from a server and updates the DOM dynamically without a full-page refresh. Ajax is a core technique for most web applications and Single-Page Apps (SPAs).
    
    from [*sitepoint.com*](https://www.sitepoint.com/xmlhttprequest-vs-the-fetch-api-whats-best-for-ajax-in-2019/)
    
-   But I think he means making making an `XMLHttpRequest` object when he says's AJAX. Making an `XMLHttpRequest` object was the original way to use AJAX.
+   The author means making `XMLHttpRequest` object when he says's AJAX. Making an `XMLHttpRequest` object was the original way to use Ajax.
    
    ## Fetch VS XMLHttpRequest
    
@@ -81,7 +81,13 @@
       .then(obj => instructionsText = obj)
    ```
    
+   ### Why is this happening?
    
+   I'm wondering if the reason we get different results is because `fetch` and `new XMLHttpRequest` return different objects. `fetch` returns a Promise. `new XMLHttpRequest` ofcourse gives us an `XMLHttpRequest`. I don't understand the difference yet.
+   
+   This page looks like it might be helpful in understanding what's going on: [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee). I didn't read the whole thing yet.
+   
+   I'm still not sure but I'm going to move on. Maybe when I start playing around with it more I'll understand more.
    
 
 ## Day 82
