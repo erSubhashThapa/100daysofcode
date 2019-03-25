@@ -20,7 +20,7 @@
    
    I worked on creating a link that auto tweets for the user to congratulate their fellow participants for continuing with the challenge. 
    
-   **This [stackoverflow thread](https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter) gives two ways to do this:**
+   **This [stackoverflow thread](https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter) gives two ways to create an auto-tweet link:**
    
    - `http://twitter.com/share?text=`**text goes here**&url=**http://url goes here**&hashtags=**hashtag1,hashtag2,hashtag3**
    
