@@ -6,8 +6,24 @@
 
    ## Preview Github HTML Files
    
-   This has been a helpful tool for me. You can go  https://stackoverflow.com/questions/8446218/how-to-see-an-html-page-on-github-as-a-normal-rendered-html-page-to-see-preview
-   http://htmlpreview.github.io/
+   This has been a helpful tool for me. You can go to [htmlpreview.github.io](http://htmlpreview.github.io/) and paste any github html link there inorder to actually see what the html looks like. I find that for some files it doesn't work and I'm not sure why.
+   
+   You can also prepend to the URL **http://htmlpreview.github.io/?**
+   
+   *Example:*
+   
+   http://htmlpreview.github.io?https://github.com/dangerousdashie/Simple-Button-Click-Counter/blob/master/index.html
+   
+   ## link to congradulate
+   
+   https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter
+   
+   http://twitter.com/share?text=text goes here&url=http://url goes here&hashtags=hashtag1,hashtag2,hashtag3
+   Example: [http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf](http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf)
+   
+   Intent [Web Intents](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
+   [Tweet Button](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
+   
 
 ## Day 83
 ### 3/24/19
