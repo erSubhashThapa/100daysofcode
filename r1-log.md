@@ -8,7 +8,7 @@
 
    ## Preview Github HTML Files
    
-   This has been a helpful tool for me. You can go to [htmlpreview.github.io](http://htmlpreview.github.io/) and paste any github html link there inorder to actually see what the html looks like. I find that for some files it doesn't work and I'm not sure why.
+   This has been a helpful tool for me. You can go to [htmlpreview.github.io](http://htmlpreview.github.io/) and paste any github html link there inorder to actually see how the html renders. I find that for some files it doesn't work and I'm not sure why.
    
    You can also prepend to the URL **http://htmlpreview.github.io/?**
    
