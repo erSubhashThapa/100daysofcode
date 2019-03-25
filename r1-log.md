@@ -22,7 +22,7 @@
    
    **This [stackoverflow thread](https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter) gives two ways to create an auto-tweet link:**
    
-   - `http://twitter.com/share?text=`**text goes here**&url=**http://url goes here**&hashtags=**hashtag1,hashtag2,hashtag3**
+   - `http://twitter.com/share?text=`**text goes here**`&url=`**http://url goes here**`&hashtags=`**hashtag1,hashtag2,hashtag3**
    
      - Example: [`http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf`](https://twitter.com/intent/tweet?url=https%3A%2F%2Fstackoverflow.com%2Fusers%2F2943186%2Fyoussef-subehi&hashtags=stackoverflow%2Cexample%2Cyoussefusf&text=Im%20Sharing%20on%20Twitter&original_referer=https%3A%2F%2Ftwitter.com%2Fshare%3Ftext%3DIm%2520Sharing%2520on%2520Twitter%26url%3Dhttps%3A%2F%2Fstackoverflow.com%2Fusers%2F2943186%2Fyoussef-subehi%26hashtags%3Dstackoverflow%2Cexample%2Cyoussefusf)
    
