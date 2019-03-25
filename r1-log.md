@@ -4,6 +4,8 @@
 ### 3/25/19
 - ## **100Daysofcode Tweet Search Project**
 
+   Today I spent a lot of the day helping others on twitter DM, so my coding time was limited.
+
    ## Preview Github HTML Files
    
    This has been a helpful tool for me. You can go to [htmlpreview.github.io](http://htmlpreview.github.io/) and paste any github html link there inorder to actually see what the html looks like. I find that for some files it doesn't work and I'm not sure why.
@@ -14,20 +16,36 @@
    
    [`http://htmlpreview.github.io?`https://github.com/dangerousdashie/Simple-Button-Click-Counter/blob/master/index.html](http://htmlpreview.github.io?https://github.com/dangerousdashie/Simple-Button-Click-Counter/blob/master/index.html)
    
-   ## link to congratulate
+   ## Twitter Tweet Link
    
-   https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter
+   I worked on creating a link that auto tweets for the user to congratulate their fellow participants for continuing with the challenge. 
    
-   `http://twitter.com/share?text=`**text goes here**&url=**http://url goes here**&hashtags=**hashtag1,hashtag2,hashtag3**
+   **This [stackoverflow thread](https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter) gives two ways to do this:**
    
-   Example: [`http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf`](https://twitter.com/intent/tweet?url=https%3A%2F%2Fstackoverflow.com%2Fusers%2F2943186%2Fyoussef-subehi&hashtags=stackoverflow%2Cexample%2Cyoussefusf&text=Im%20Sharing%20on%20Twitter&original_referer=https%3A%2F%2Ftwitter.com%2Fshare%3Ftext%3DIm%2520Sharing%2520on%2520Twitter%26url%3Dhttps%3A%2F%2Fstackoverflow.com%2Fusers%2F2943186%2Fyoussef-subehi%26hashtags%3Dstackoverflow%2Cexample%2Cyoussefusf)
+   - `http://twitter.com/share?text=`**text goes here**&url=**http://url goes here**&hashtags=**hashtag1,hashtag2,hashtag3**
+   
+     - Example: [`http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf`](https://twitter.com/intent/tweet?url=https%3A%2F%2Fstackoverflow.com%2Fusers%2F2943186%2Fyoussef-subehi&hashtags=stackoverflow%2Cexample%2Cyoussefusf&text=Im%20Sharing%20on%20Twitter&original_referer=https%3A%2F%2Ftwitter.com%2Fshare%3Ftext%3DIm%2520Sharing%2520on%2520Twitter%26url%3Dhttps%3A%2F%2Fstackoverflow.com%2Fusers%2F2943186%2Fyoussef-subehi%26hashtags%3Dstackoverflow%2Cexample%2Cyoussefusf)
+   
+   - Intents
+   
+     - Intent [Web Intents](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
+   
+     - Tweet Button: [Tweet Button](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
+     
+- ## Thoughts and Feelings:
+   
+   Karma is abound.
+
+   I was distracted today because our tire on our RV (where we live full time) blew out. My sweet beautiful amazing spouse took care of calling AAA it so I could continue to code. Thanks to him not only did I get to code, but I also was able to help others. Because of him so many coders benefited.
+   
+   I opened my DM up to help people, today. I was able to help a lot and for those that I couldn't help I referred them to other places for help. Someone even offered to help me, I couldn't take them up on it because it was towards the end of my coding time. But I might send them my code tomorrow.
+    
+   We were very lucky because the AAA guy said the tire could have exploded while driving. He was very generous and patient. He could not jack up our RV high enough but a stranger who lived nearby brought him a bunch of wood to help jack the tire up. The AAA guy said most AAA peolpe would just say fuck it and tow us to a tire shop. This guy went above and beyond.
+   
+   What an amazing day!
    
    
-  
-   
-   Intent [Web Intents](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
-   
-   Tweet Button: [Tweet Button](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
+     
    
 
 ## Day 83
