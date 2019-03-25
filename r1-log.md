@@ -1,5 +1,14 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 84 --editing
+### 3/25/19
+- ## **100Daysofcode Tweet Search Project**
+
+   ## Preview Github HTML Files
+   
+   This has been a helpful tool for me. You can go  https://stackoverflow.com/questions/8446218/how-to-see-an-html-page-on-github-as-a-normal-rendered-html-page-to-see-preview
+   http://htmlpreview.github.io/
+
 ## Day 83
 ### 3/24/19
 - ## **100Daysofcode Tweet Search Project**
