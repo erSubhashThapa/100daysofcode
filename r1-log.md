@@ -14,15 +14,17 @@
    
    http://htmlpreview.github.io?https://github.com/dangerousdashie/Simple-Button-Click-Counter/blob/master/index.html
    
-   ## link to congradulate
+   ## link to congratulate
    
    https://stackoverflow.com/questions/6208363/sharing-a-url-with-a-query-string-on-twitter
    
    http://twitter.com/share?text=text goes here&url=http://url goes here&hashtags=hashtag1,hashtag2,hashtag3
+   
    Example: [http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf](http://twitter.com/share?text=Im Sharing on Twitter&url=https://stackoverflow.com/users/2943186/youssef-subehi&hashtags=stackoverflow,example,youssefusf)
    
    Intent [Web Intents](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
-   [Tweet Button](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
+   
+   Tweet Button: [Tweet Button](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview)
    
 
 ## Day 83
