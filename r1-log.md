@@ -21,7 +21,7 @@
    
 - ## Thoughts and Feelings:
    
-   I feel a little burnt from extending my volonteer hours.
+   I feel a little burnt from extending my volunteer hours.
    
    The reason I agreed to follow up was because it seemed like this coder was the only person that was asking me for help yesterday. But then a bunch of people asked me for help after them. I didn't expect that many people.
    
