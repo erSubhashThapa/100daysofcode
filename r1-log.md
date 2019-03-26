@@ -17,7 +17,7 @@
    
    ![screenshot](log_imgs/tweet_3-26.png)
    
-   However, ***this prefix worked***: `https://twitter.com/home?status=`
+   However, ***this prefix worked*** without a link: `https://twitter.com/home?status=`
    
 - ## Thoughts and Feelings:
    
