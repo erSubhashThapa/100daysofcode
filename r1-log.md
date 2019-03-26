@@ -1,5 +1,28 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 85---editing
+### 3/26/19
+- ## **100Daysofcode Tweet Search Project**
+
+   I followed up with someone who wanted help from yesterday. I didn't get enough of my own coding done because of this. I should keep my volunteer hours within certain times and not agree to more later. 
+   
+   The reason I agreed to follow up was because it seemed like this coder was the only person that was asking me for help yesterday. But then a bunch of people asked me for help after them. 
+   
+   I didn't expect that many people, and I thought I'd need to move my volunteer time over to the next day.
+   
+   Some days no one asks for help, other days too many people do. I think it has to do with who retweets my Open DM tweets.
+   
+   I need to respect my time so I don't burn out.
+
+   ## Twitter share link
+   
+   I found that this prefix: ***`http://twitter.com/share?text=`*** did not work well. I believe it's because you need to include a url or it acts up. It generated a tweet that inserted the url for the tweet back into the tweet and I couldn't figure out why. 
+   
+   `https://twitter.com/intent/tweet?text=test%20test%20%3A%20%40test&`**url=https%3A%2F%2Ftwitter.com%2Fshare%3Ftext%3Dtest%2520test%2520%3A%2520%40test&original_referer=https%3A%2F%2Ftwitter.com%2Fshare%3Ftext%3Dtest%2520test%2520%3A%2520%40test`***
+   
+   
+   However this prefix worked: ***`https://twitter.com/home?status=`***;
+
 ## Day 84
 ### 3/25/19
 - ## **100Daysofcode Tweet Search Project**
