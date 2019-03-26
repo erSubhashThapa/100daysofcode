@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 85---editing
+## Day 85
 ### 3/26/19
 - ## **100Daysofcode Tweet Search Project**
 
