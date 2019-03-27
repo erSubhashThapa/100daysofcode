@@ -6,7 +6,7 @@
 
    My app now works! It still needs to be designed better, and it needs some tweeks here and ther but it works for the most part.
    
-   ![screenshot](log_imgs/tweet_3-27.gif)
+   ![screenshot](log_imgs/tweet_3-27-19.gif)
    
    ## Form Validation
    
