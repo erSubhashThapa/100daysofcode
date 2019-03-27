@@ -6,6 +6,8 @@
 
    My app now works! It still needs to be designed better, and it needs some tweeks here and ther but it works for the most part.
    
+   ![screenshot](log_imgs/tweet_3-27.gif)
+   
    ## Form Validation
    
    The **next** button is not actually part of the form. I wonder if it should be so it could be more like submit and work with enter?
