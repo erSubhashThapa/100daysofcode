@@ -22,6 +22,43 @@
    
    I could create a `validateForm()` function for each view, or it could be one function that has a switch statement to deal with validations for each view. We only have to validate for 3 views: view1, view3, view5- all the views that have **input layouts**. My input layouts are created by calling `inputLayout()` so maybe we can somehow add the validation to this? I'm just brain storming here.
    
+   ####
+   I decided to use a switch statement in a `validateForm()` function that is colled in the `nexthandler`.
+   
+   ```javascript
+      const nextHandler=()=>{
+         //check if 
+         if (!validateForm()) return;
+         nextView();
+      }
+
+      const validateForm = ()=>{
+         let input = document.querySelector("input");
+         if (input==null) return true;
+         input = input.value;
+         let valid=true;
+         
+         switch (currentView) {
+           case 1:
+               if(input.match(/[12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])/) == null){
+               alert("The date you entered does not match the format YYYY-MM-DD.");
+               valid = false;
+               }
+               break;
+           case (3 || 5):
+               if(input==""){
+                   alert("Please plaste in the array that was auto-copied to your clipboard.");
+                   valid = false;
+               }
+               break;
+           default:
+           valid = "true";
+               break;
+         }    
+         return valid;
+      }
+      ```
+   
    ### Date Validation Regex
    
    I found a regex pattern for the date format yyyy-mm-dd [here](https://www.regextester.com/96683 ):
