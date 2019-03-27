@@ -1,5 +1,65 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 86
+### 3/27/19
+- ## **100Daysofcode Tweet Search Project**
+
+   My app now works! It still needs to be designed better, and it needs some tweeks here and ther but it works for the most part.
+   
+   ## Form Validation
+   
+   The **next** button is not actually part of the form. I wonder if it should be so it could be more like submit and work with enter?
+   
+   I'm trying to think of the best way to validate the form.
+  
+   [Here on w3schools](https://www.w3schools.com/js/js_validation.asp) they make a function called `validateForm()` using the `onsubmit` event handle attribute.
+   
+   ```html
+   <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+   ```
+   
+   I could create a `validateForm()` function for each view, or it could be one function that has a switch statement to deal with validations for each view. We only have to validate for 3 views: view1, view3, view5- all the views that have **input layouts**. My input layouts are created by calling `inputLayout()` so maybe we can somehow add the validation to this? I'm just brain storming here.
+   
+   ### Date Validation Regex
+   
+   I found a regex pattern for the date format yyyy-mm-dd [here](https://www.regextester.com/96683 ):
+   
+   `([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))`
+   
+   I used `.match`, [more info here](https://www.w3schools.com/jsref/jsref_match.asp), to see if the user's input matches the regular expression.
+   
+   ## 280 Tweet Limit
+   
+   I need to make sure the generated tweet is within the 280 character limit required by twitter.
+   
+   Since the amount of mentions will differ, sometimes the tweet may be too long. So I need to edit my `tweetURL()` to dynamically create a tweet where the tweet text will be shorter if the mentions are too long when combined with the tweet text. 
+     
+     I also have to consider the possibility that the mentions themselves will be over 280 characters. In that case I might make several tweet links to congratulate users in groups.
+     
+     This all complicates my code. I need to go to the drawing board tomorrow and figure out how to handle this. `tweetURL()` is going to become bug and clunky if I don't organize this.
+     
+   ## Renaming My Repository
+   
+   I had a typo in my repository so I renamed it following [this tutorial](https://help.github.com/en/articles/renaming-a-repository).
+     
+     
+   ## To do
+   
+   - form validation
+   - design
+   - understand promises
+   - test going back and forth
+     - back doesn't work correctly
+   - tweet length validation
+   - save user start date and starting participants to local storage, skip some views if those are saved
+   
+- ## Thoughts and Feelings:
+
+   Back hurts a bit. There's so many little things I need to work on.
+ 
+   
+**Link to Work:** [MVC twitter participant project](https://github.com/dangerousdashie/100daysofcode_post_search/tree/fb451f6c0daacd1e0280ac526300ec40a730cf23/MVC%20app)
+
 ## Day 85
 ### 3/26/19
 - ## **100Daysofcode Tweet Search Project**
