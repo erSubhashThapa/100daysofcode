@@ -75,7 +75,7 @@
      
      I also have to consider the possibility that the mentions themselves will be over 280 characters. In that case I might make several tweet links to congratulate users in groups.
      
-     This all complicates my code. I need to go to the drawing board tomorrow and figure out how to handle this. `tweetURL()` is going to become bug and clunky if I don't organize this.
+     This all complicates my code. I need to go to the drawing board tomorrow and figure out how to handle this. `tweetURL()` is going to become big and clunky if I don't organize this.
      
    ## Renaming My Repository
    
@@ -90,7 +90,7 @@
    - test going back and forth
      - back doesn't work correctly
    - tweet length validation
-   - save user start date and starting participants to local storage, skip some views if those are saved
+   - save user startDate and starting participants to local storage, skip some views if those are saved
    
 - ## Thoughts and Feelings:
 
