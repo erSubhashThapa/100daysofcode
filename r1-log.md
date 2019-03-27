@@ -22,8 +22,8 @@
    
    I could create a `validateForm()` function for each view, or it could be one function that has a switch statement to deal with validations for each view. We only have to validate for 3 views: view1, view3, view5- all the views that have **input layouts**. My input layouts are created by calling `inputLayout()` so maybe we can somehow add the validation to this? I'm just brain storming here.
    
-   #### Solution
-   I decided to use a switch statement in a `validateForm()` function that is colled in the `nexthandler`.
+   ### Solution
+   I decided to use a switch statement in a `validateForm()` function that is called in the `nextHandler()`.
    
    ```javascript
       const nextHandler=()=>{
@@ -56,8 +56,8 @@
                break;
          }    
          return valid;
-      }
-      ```
+   }
+   ```
    
    ### Date Validation Regex
    
