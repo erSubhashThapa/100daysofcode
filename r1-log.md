@@ -19,7 +19,7 @@
    
    from [*Javascript String Prototypes, w3schools*](https://www.w3schools.com/jsref/jsref_prototype_string.asp)
    
-   W3schools has another page about [object protoypes](https://www.w3schools.com/js/js_object_prototypes.asp) but I think it's basically the same thing.
+   W3schools has another page about [object prototypes](https://www.w3schools.com/js/js_object_prototypes.asp) but I think it's basically the same thing.
    
    It helps me to understand prototypes when I realize that:
    
