@@ -1,10 +1,15 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 86
-### 3/27/19
+## Day 87
+### 3/28/19
 - ## **100Daysofcode Tweet Search Project**
 
-  `peopleLeft = uniqueInArray(peopleLeft);`
+  ## Fixed Repeated Screen Names
+  
+  I forgot to apply my `uniqueInArray()` function to the `peopleLeft` array. That's why my generated tweet from yesterday was returning repeated screen names. So I added that in: 
+  ```javascript
+  peopleLeft = uniqueInArray(peopleLeft);
+  ```
   
   ## Prototype
   
@@ -37,8 +42,10 @@
    
    The instructor uses `setTimeout()` as the async function. But how would you get data from a json file useding `new Promise()`? What does the async function look like for that? I used fetch before, but fetch is a totally different was of making a promise than the syntax for `new Promise()`. How would you translate fetch into `new Promise()`?
    
+   I didn't read this yet, but this article about [promises on hackernoon](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1) looks good and I think I'll check it out later.
+   
    ## Async Functions
-   This made me wonder what axactly is an async function? `setTimeout()` and `setInterval()` are async functions. I learned that:
+   This made me wonder what axactly is an async function? I know`setTimeout()` and `setInterval()` are async functions. /note: Today, I learned that:
    
    >These methods are not a part of JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.JS.
    
@@ -50,15 +57,42 @@
    
    from [*Async Function Declaration*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
    
-   >In JavaScript every asynchronous function is actually an AsyncFunction object.
+   >The AsyncFunction constructor creates a new async function object. In JavaScript every asynchronous function is actually an AsyncFunction object.
    
    from [*AsyncFunction Object*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
    
+   First off, I don't think I know what the event loop is. So I need to look into that if I want to understand asynchronous functions.
    
-   https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1
+   ## JavaScript is Single Threaded
+   
+   *JavaScript is Single Threaded*: I've hear this before, but [this page](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) finally explained this idea well by comparing javascript to other langauges that are multi threaded: 
+   
+   >In programming languages like e.g Java or C# the “main program flow” happens on the main thread or process and “the occurrence of events independently of the main program flow” is the spawning of new threads or processes that runs code in parallel to the “main program flow”.
+   
+   >This is not the case with JavaScript. That is because a JavaScript program is single threaded and all code is executed in a sequence, not in parallel. In JavaScript this is handled by using what is called an “asynchronous non-blocking I/O model”. ***What that means is that while the execution of JavaScript is blocking, I/O operations are not.*** 
+   
+   [*more here*](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee#b97e)
+   
+   ## I/O Operations
+   
+   What is an I/O operations:
+   
+   >I/O operations can be fetching data over the internet with Ajax or over WebSocket connections, querying data from a database such as MongoDB or accessing the filesystem with the NodeJs “fs” module. All these kind of operations are done in parallel to the execution of your code and it is not JavaScript that does these operations; to put it simply, the underlying engine does it.
+   
+   [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee#b97e)
+   
+   So if I/O operations are separate from javascript where do they come from?:
+   
+   >All these kind of operations are done in parallel to the execution of your code and it is not JavaScript that does these operations; to put it simply, the underlying engine does it.
+   
+   [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee#b97e)
    
    
   ## To do
+  
+  I spent a lot of time learning instead of coding. I'm really glad I got to learn a bit more. I've been trying to figure out promises and prototypes for a while, but kept putting it off. I'm glad I started, I still have more to review.
+  
+  Because I spent a lot of time learning, I really didn't code much so I still have a lot to do.
    
    - design
    - understand promises
