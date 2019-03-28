@@ -55,7 +55,7 @@
    
    ## Async Functions
    
-   This made me wonder what axactly is an async function? I know`setTimeout()` and `setInterval()` are async functions. Note: Today, I learned that:
+   This made me wonder what exactly is an async function? I know`setTimeout()` and `setInterval()` are async functions. Note: Today, I learned that:
    
    >These methods are not a part of JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.JS.
    
