@@ -4,6 +4,74 @@
 ### 3/27/19
 - ## **100Daysofcode Tweet Search Project**
 
+  `peopleLeft = uniqueInArray(peopleLeft);`
+  
+  ## Prototype
+  
+  >The prototype property allows you to add new properties and methods to existing object types.
+   
+   from [*Javascript String Prototypes, w3schools*](https://www.w3schools.com/jsref/jsref_prototype_string.asp)
+   
+   W3schools has another page about [object protoypes](https://www.w3schools.com/js/js_object_prototypes.asp) but I think it's basically the same thing.
+   
+   >All JavaScript objects inherit properties and methods from a prototype.
+   
+   from [*Javascript Object Prototypes, w3schools*](https://www.w3schools.com/js/js_object_prototypes.asp)
+   
+   I thought the page [*Javascript Object Prototypes, w3schools*](https://www.w3schools.com/js/js_object_prototypes.asp) did a good job of explaining protoypes.
+   
+   I wanted to add a prototype to String, however I read: 
+   
+   >Only modify your own prototypes. Never modify the prototypes of standard JavaScript objects.
+   
+   from [*Javascript String Prototypes, w3schools*](https://www.w3schools.com/jsref/jsref_prototype_string.asp)
+   
+   More on why in [this stackoverflow thread](https://stackoverflow.com/questions/6223449/why-is-it-frowned-upon-to-modify-javascript-objects-prototypes). It has to do with namespaces.
+
+   I wanted to add a prototype to string, because I like the look of dot notation, which you can use with methods, better than passing in string to a function ex: `myString.changeString()` vs `changeString(mystring)`. But maybe if I make more classes in my code I can add a prototype to what I want.
+   
+   I'm wondering **why you would ever want to add a prototype to your own objects?** Since you can create those objects from the start and just add the method there, why not just do that? 
+   
+   ## Promises
+   I watched this [freecodecamp video on promises](https://www.youtube.com/watch?v=IGYxfTTpoFg). I really liked how the second part of that video shows the order that the different parts of the function are reached. This helps me see which part is asynchronous and which part goes in order.
+   
+   The instructor uses `setTimeout()` as the async function. But how would you get data from a json file useding `new Promise()`? What does the async function look like for that? I used fetch before, but fetch is a totally different was of making a promise than the syntax for `new Promise()`. How would you translate fetch into `new Promise()`?
+   
+   ## Async Functions
+   This made me wonder what axactly is an async function? `setTimeout()` and `setInterval()` are async functions. I learned that:
+   
+   >These methods are not a part of JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.JS.
+   
+   from [*Scheduling: setTimeout and setInterval, javascript.info*](https://javascript.info/settimeout-setinterval)
+   
+   I looked at the Mozilla Documentation on the [AsyncFunction object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction) and [async function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+  
+   >An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
+   
+   from [*Async Function Declaration*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+   
+   >In JavaScript every asynchronous function is actually an AsyncFunction object.
+   
+   from [*AsyncFunction Object*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
+   
+   
+   https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1
+   
+   
+  ## To do
+   
+   - design
+   - understand promises
+   - test going back and forth
+     - back doesn't work correctly
+   - tweet length validation
+   - save user startDate and starting participants to local storage, skip some views if those are saved
+   - add dayxx
+
+## Day 86
+### 3/27/19
+- ## **100Daysofcode Tweet Search Project**
+
    My app now works! It still needs to be designed better, and it needs some tweeks here and there but it works for the most part.
    
    ![screenshot](log_imgs/tweet_3-27-19.gif)
@@ -84,7 +152,6 @@
      
    ## To do
    
-   - form validation
    - design
    - understand promises
    - test going back and forth
