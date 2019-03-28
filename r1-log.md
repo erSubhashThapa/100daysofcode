@@ -85,13 +85,13 @@
    
    ## I/O Operations
    
-   What is an I/O operations:
+   **What is an I/O operation?**:
    
    >I/O operations can be fetching data over the internet with Ajax or over WebSocket connections, querying data from a database such as MongoDB or accessing the filesystem with the NodeJs “fs” module. All these kind of operations are done in parallel to the execution of your code and it is not JavaScript that does these operations; to put it simply, the underlying engine does it.
    
    [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee#b97e)
    
-   So if I/O operations are separate from javascript where do they come from?:
+   **So if I/O operations are separate from javascript where do they come from?**:
    
    >All these kind of operations are done in parallel to the execution of your code and it is not JavaScript that does these operations; to put it simply, the underlying engine does it.
    
@@ -102,15 +102,20 @@
   
   I spent a lot of time learning instead of coding. I'm really glad I got to learn a bit more. I've been trying to figure out promises and prototypes for a while, but kept putting it off. I'm glad I started, I still have more to review.
   
-  Because I spent a lot of time learning, I really didn't code much so I still have a lot to do.
+  Because I spent a lot of time learning, I really didn't code much so I still have a lot to do on my app.
    
    - design
-   - understand promises
+   - understand promises more
    - test going back and forth
      - back doesn't work correctly
    - tweet length validation
    - save user startDate and starting participants to local storage, skip some views if those are saved
-   - add dayxx
+   
+- ## Thoughts and Feelings:
+
+   I liked focusing on learning today, and taking a break from coding. I've *really* wanted to learn more about async and promises. So I was excited to look into it. I still have a lot to learn, I'll probably revisiti it tomorrow. I might read more in my free time.
+
+  My hands on coding fuels my desire to learn. The more I code the more I feel I need to understand a new concept. 
 
 ## Day 86
 ### 3/27/19
