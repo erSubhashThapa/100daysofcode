@@ -13,11 +13,15 @@
   
   ## Prototype
   
+  I wanted to use prototypes so I thought I'd review them. I checked out a page on [w3schools](https://www.w3schools.com/jsref/jsref_prototype_string.asp) which defined prototypes:
+  
   >The prototype property allows you to add new properties and methods to existing object types.
    
    from [*Javascript String Prototypes, w3schools*](https://www.w3schools.com/jsref/jsref_prototype_string.asp)
    
    W3schools has another page about [object protoypes](https://www.w3schools.com/js/js_object_prototypes.asp) but I think it's basically the same thing.
+   
+   It helps me to understand prototypes when I realize that:
    
    >All JavaScript objects inherit properties and methods from a prototype.
    
@@ -25,7 +29,9 @@
    
    I thought the page [*Javascript Object Prototypes, w3schools*](https://www.w3schools.com/js/js_object_prototypes.asp) did a good job of explaining protoypes.
    
-   I wanted to add a prototype to String, however I read: 
+   ## Prototypes on Native Objects- NO!
+   
+   I wanted to add a prototype to the String constructor, however I read: 
    
    >Only modify your own prototypes. Never modify the prototypes of standard JavaScript objects.
    
@@ -33,25 +39,29 @@
    
    More on why in [this stackoverflow thread](https://stackoverflow.com/questions/6223449/why-is-it-frowned-upon-to-modify-javascript-objects-prototypes). It has to do with namespaces.
 
-   I wanted to add a prototype to string, because I like the look of dot notation, which you can use with methods, better than passing in string to a function ex: `myString.changeString()` vs `changeString(mystring)`. But maybe if I make more classes in my code I can add a prototype to what I want.
+   I wanted to add a prototype to string, because I like the look of dot notation better than passing in string to a function ex: `myString.changeString()` vs `changeString(mystring)`. But maybe if I make more classes in my code I can add a prototype to what I want.
    
    I'm wondering **why you would ever want to add a prototype to your own objects?** Since you can create those objects from the start and just add the method there, why not just do that? 
    
    ## Promises
+   
+   I really need to undrestand promises because I'm using them in my app.
+   
    I watched this [freecodecamp video on promises](https://www.youtube.com/watch?v=IGYxfTTpoFg). I really liked how the second part of that video shows the order that the different parts of the function are reached. This helps me see which part is asynchronous and which part goes in order.
    
-   The instructor uses `setTimeout()` as the async function. But how would you get data from a json file useding `new Promise()`? What does the async function look like for that? I used fetch before, but fetch is a totally different was of making a promise than the syntax for `new Promise()`. How would you translate fetch into `new Promise()`?
+   The instructor uses `setTimeout()` as the async function. But how would you get data from a json file using `new Promise()`? What does the async function look like for that? I used fetch before, but fetch is a totally different way of making a promise than the syntax for `new Promise()`. **How would you translate fetch into `new Promise()`?**
    
-   I didn't read this yet, but this article about [promises on hackernoon](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1) looks good and I think I'll check it out later.
+   I didn't finish reading this yet, but this article about [promises on hackernoon](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1) looks good and I think I'll check it out later.
    
    ## Async Functions
-   This made me wonder what axactly is an async function? I know`setTimeout()` and `setInterval()` are async functions. /note: Today, I learned that:
+   
+   This made me wonder what axactly is an async function? I know`setTimeout()` and `setInterval()` are async functions. Note: Today, I learned that:
    
    >These methods are not a part of JavaScript specification. But most environments have the internal scheduler and provide these methods. In particular, they are supported in all browsers and Node.JS.
    
    from [*Scheduling: setTimeout and setInterval, javascript.info*](https://javascript.info/settimeout-setinterval)
    
-   I looked at the Mozilla Documentation on the [AsyncFunction object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction) and [async function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+   I looked at the Mozilla Documentation on the [AsyncFunction object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction) and [async function declarations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
   
    >An asynchronous function is a function which operates asynchronously via the event loop, using an implicit Promise to return its result.
    
@@ -61,7 +71,7 @@
    
    from [*AsyncFunction Object*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction)
    
-   First off, I don't think I know what the event loop is. So I need to look into that if I want to understand asynchronous functions.
+   I don't think I know what the event loop is. So I need to look into that if I want to understand asynchronous functions.
    
    ## JavaScript is Single Threaded
    
