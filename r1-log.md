@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 88 -editing
+## Day 88
 ### 3/29/19
 - ## **100Daysofcode Tweet Search Project**
 
@@ -80,7 +80,7 @@
 
    I learned really slowly today. A 27 minute video over 1 hour and 45 minutes. I made sure to soak it all up! Sometimes learning slow is helpful to me. Sometimes I like just a fast review. 
    
-   This video clarified up so much for me. I can see clearly now, the rain is gone.
+   This video clarified up so much for me. I understand a lot mor about the under workings of javascript now.
    
    Even though I started my code organized, it got a little crazy again. It's hard to manage when it's not organized. I wonder how I can learn to organize it better? What can I search? what resources can I find?
 
