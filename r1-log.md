@@ -86,7 +86,7 @@
    
    Studied while on the road from NOLA to Lafayette.
    
-   ![screenshot](long_imgs/travel_3-29.gif)
+   ![screenshot](log_imgs/travel_3-29.gif)
 
 
 ## Day 87
