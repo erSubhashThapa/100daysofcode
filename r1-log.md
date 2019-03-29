@@ -1,5 +1,90 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 88 -editing
+### 3/29/19
+- ## **100Daysofcode Tweet Search Project**
+
+  My peer on twitter, [Khawar Jatoi](https://twitter.com/khawar_jatoi), sent me some great links to learn more about promises. He sent me these three videos to watch ***in order***:
+  
+  1. [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+  2. [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en)
+  3. [async / await in JavaScript - What, Why and How - Fun Fun Function
+](https://www.youtube.com/watch?v=568g8hxJJp4)
+
+  Today, I watched the first video. It's only 27 minutes but it took me 1 hour and 45 minutes to go through it while taking notes and looking up words I didn't know. But wow! I understand how javascript works soo much better. 
+  
+  Below are my notes on the video and definitions I had to look up. I reccomend watching the video and not relying on my notes, as these notes do not explain everything about event loops, they are complementary definitions as well as idea I felt like I need to write down for my own understanding.
+  
+  ## Event Loops Video Notes
+  
+  ## Definitions
+  
+  **JavaScript runtimes:** "JavaScript runtimes (like V8) have a heap (memory allocation) and stack (execution contexts). But they don’t have setTimeout, the DOM, etc. Those are web APIs in the browser." 
+  
+  *-from [JavaScript's Call Stack, Callback Queue, and Event Loop](http://cek.io/blog/2015/12/03/event-loop/)*
+  
+  ![screenshot](http://cek.io/images/event-loop/javascript.png)
+
+  *-image from [JavaScript's Call Stack, Callback Queue, and Event Loop](http://cek.io/blog/2015/12/03/event-loop/)*
+  
+  **Runtime System:** "...also called run-time system, runtime environment or run-time environment, primarily implements portions of an execution model." *-[Runtime system - Wikipedia](https://en.wikipedia.org/wiki/Runtime_system)*
+  
+  **Stack:** "The JavaScript interpreter in a browser is implemented as a single thread... only 1 thing can ever happen at one time in the browser, with other actions or events being queued in what is called the Execution Stack. *[What is the Execution Context & Stack in JavaScript?](http://davidshariff.com/blog/what-is-the-execution-context-in-javascript/)*
+  
+  "A data structure which records...where in the program we are." *[-Philip Roberts, youtube](https://www.youtube.com/watch?v=8aGhZQkoFbQ)*
+  
+  **Stack Trace:** State of the stack at a certain point in time during the execution of the program.
+  
+  **Heap:** Basically where memory allocation happens.
+  
+  **V8 Runtime:** "...an open-source JavaScript engine developed by The Chromium Project for Google Chrome and Chromium web browsers." *-[Chrome V8 - Wikipedia](https://en.wikipedia.org/wiki/Chrome_V8)*
+    
+  **Blocking:** What happens when things are slow.  *[-Philip Roberts, youtube](https://www.youtube.com/watch?v=8aGhZQkoFbQ)*
+  
+  >There's almost no blocking functions in the browser... they're all make asynchronous.
+    
+   *[-Philip Roberts, youtube](https://www.youtube.com/watch?v=8aGhZQkoFbQ)*
+    
+  **Shim:**
+  >A shim is a piece of code used to correct the behavior of code that already exists, usually by adding new API that works around the problem.
+  
+  *[Shim, MDN web docs](https://developer.mozilla.org/en-US/docs/Glossary/Shim)*
+    
+  ## One Thing At A Time, Not Really?
+  
+  The Javascipt runtime can only do one thing at a time. **But we *can* do things concurrently** because the browser is *more* than just the runtime. The event loop, callback queue, and WebAPI's act like threads.
+
+  ## Event Loop
+  
+  If an asynchronous function is pushed on to the stack, the browser starts the asynch function. Once it's passed to the browser, javascript is done dealing with the asynch function so it's popped off the stack. Javascript continues dealing with the other code while the browser deals with the asynchronous function. Once the browser is done with the WebAPI it pushes the callback onto the task/callback queue. The event loop sees if the stack is empty. If yes, then the event loop takes the first callback in the callback que and passes it on to the stack.
+  
+  Because of this, `setTimeout()` is not a *guaranteed* time of executions, it's *minimum* time of execution.
+  
+  
+  ## Callbacks Definition Confusion
+  
+  I'd been confused about callbacks because poeple use the term differently.
+  
+  The two ways to use the term ***callback***:
+  
+   - Any function that another function calls
+   
+   - More explicitely, an asynchronous callback, as in one that's going to be pushed into the callback queue in the future
+  
+  ## Render Queue
+  
+  The browser wants to repaint the view 60 frames a second. If there's nothing in the stack, it can. But, just like the callback queue, the render queue has to wait until the stack is clear. The render queue takes precedence over the callback queue. This is one reason it's good to use asynchronous code when possible. This way the render queue has more chances to update the view. 
+  
+  
+- ## Thoughts and Feelings:
+
+   I learned really slowly today. A 27 minute video over 1 hour and 45 minutes. I made sure to soak it all up! Sometimes learning slow is helpful to me. Sometimes I like just a fast review. 
+   
+   This video clarified up so much for me. I can see clearly now, the rain is gone.
+   
+   Even though I started my code organized, it got a little crazy again. It's hard to manage when it's not organized. I wonder how I can learn to organize it better? What can I search? what resources can I find?
+
+
 ## Day 87
 ### 3/28/19
 - ## **100Daysofcode Tweet Search Project**
