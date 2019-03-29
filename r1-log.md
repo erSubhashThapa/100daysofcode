@@ -13,7 +13,7 @@
 
   Today, I watched the first video. It's only 27 minutes but it took me 1 hour and 45 minutes to go through it while taking notes and looking up words I didn't know. But wow! I understand how javascript works soo much better. 
   
-  Below are my notes on the video and definitions I had to look up. I reccomend watching the video and not relying on my notes, as these notes do not explain everything about event loops, they are complementary definitions as well as idea I felt like I need to write down for my own understanding.
+  Below are my notes on the video and definitions I had to look up. I reccomend watching the video and not relying on my notes, as these notes do not explain everything about event loops. The notes are complementary definitions as well as concepts I felt like I needed to write down for my own understanding.
   
   ## Event Loops Video Notes
   
