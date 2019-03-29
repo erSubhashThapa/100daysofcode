@@ -83,6 +83,10 @@
    This video clarified up so much for me. I understand a lot mor about the under workings of javascript now.
    
    Even though I started my code organized, it got a little crazy again. It's hard to manage when it's not organized. I wonder how I can learn to organize it better? What can I search? what resources can I find?
+   
+   Coded while on the road from NOLA to Lafayette.
+   
+   ![screenshot](long_imgs/travel_3-29.gif)
 
 
 ## Day 87
