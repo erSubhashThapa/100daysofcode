@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 89--editing
+## Day 89
 ### 3/30/19
 - ## **100Daysofcode Tweet Search Project**
   
@@ -94,6 +94,7 @@
     
   The documentation for the NBD can be found [here](https://ndb.nal.usda.gov/ndb/doc).
   
+  ## Food Reports
   There are different types of reports you can get, but I will mostly need the food reports for my project.
   
   > A Food Report is a list of nutrients and their values in various portions for a specific food.
@@ -128,6 +129,8 @@
   document.getElementById("test").innerHTML = data;
   }
   ```
+  
+  I still have a bunch to do.
   
 - ## Thoughts and Feelings:
 
