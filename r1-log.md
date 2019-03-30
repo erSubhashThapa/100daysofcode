@@ -10,10 +10,55 @@
   
   *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
   
+  >Promises serve that same puropse as callbacks do but promises are a bit more powerful because they are unlike callbacks, composable.
   
+  *[Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en)*
   
+  ## Callback Hell, Why Have Nested Callbacks?
   
-  "A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why." *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+  In the tutorial, the instructor uses this example to illustrate callback hell, which happens when you want more than one callback or something...
+  
+  ```javascript
+  import loadImageCallbacked
+  from '.load-image-callbacked'
+
+  let addImg = (src) => {
+    let imgElement = 
+      document.createElement('img')
+    imgElement.src = src
+    document.body.appendChild(imgElement)
+  }
+
+  loadImageCallbacked('images/cat1.jpg', (error,img1) => {     //------callback helll
+    addImg(img1.src)
+    loadImageCallbacked('images/cat2.jpg', (error,img2) => {
+      addImg(img2.src)
+      loadImageCallbacked('images/cat3.jpg', (error,img2) => {
+        addImg(img3.src) 
+      })
+    })
+  })
+  ```
+  
+  I don't understand why you would do the above code to get multiple images instead of doing separate asynchronous functions that aren't nested like this:
+  
+  ```javascript
+  loadImageCallbacked('images/cat1.jpg', (error,img1) => {
+    addImg(img1.src)
+  })
+
+  loadImageCallbacked('images/cat2.jpg', (error,img2) => {
+    addImg(img2.src)
+  })
+
+  loadImageCallbacked('images/cat3.jpg', (error,img2) => {
+    addImg(img3.src)
+  })
+  ```
+  
+  I think it might have something to do with the event loop and what order these are called in, but I haven't wrapped my head around it yet.
+  
+  >A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why. *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
    
 
 ## Day 88
