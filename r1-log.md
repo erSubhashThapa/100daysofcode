@@ -76,7 +76,7 @@
   
   ## Moving On For Now
   
-  I still have a bit to understand about promises, but I wanted to take a break form watching videos and do some coding. 
+  I still have a bit to understand about promises, but I wanted to take a break from watching videos and do some coding. 
   
   I decided to start a food app I'd been meaning to work on for while. It will compile the **nutritional label values** for different foods by grabbing the **nutrient values from the USDA database** using their API. 
   
