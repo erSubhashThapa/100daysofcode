@@ -61,6 +61,28 @@
   ##  quote
   
   >A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why. *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+  
+  ## USDA Food Composition Databases API
+  
+  to get the api key https://data.nal.usda.gov/dataset/composition-foods-raw-processed-prepared-usda-national-nutrient-database-standard-referen-15 
+  
+  
+  There are different types of reports you can get, but I will mostly need the food reports for my project.
+  
+  >A Food Report is a list of nutrients and their values in various portions for a specific food.
+  
+  *[What is a Food Report Version 2?](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md)*
+  
+  The documentation for food reports is [here](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md).
+  
+  With a food report I can look up a food by it's NBD number, let's say chinese cabbage which has a NBD number of 11119 which I happen to remember off the top of my head. Then you can grab the information for each nutrient: calories, iron, vitamin c, etc...
+  
+  
+  
+  
+  https://ndb.nal.usda.gov/ndb/doc
+  
+  https://api.data.gov/docs/rate-limits/
    
 
 ## Day 88
