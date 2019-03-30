@@ -88,7 +88,7 @@
 
   ## Nutrient Database API
   
-  I'll be using the Nutrient Database API so this is a good project to get to understand asynchronous functions and promises.
+  I'll be using the Nutrient Database API so this project will familiarize me with asynchronous functions and promises.
   
   I got my [NBD API key here](https://data.nal.usda.gov/dataset/composition-foods-raw-processed-prepared-usda-national-nutrient-database-standard-referen-15). Go down to the section called "Gaining Access".
     
