@@ -3,6 +3,16 @@
 ## Day 89--editing
 ### 3/30/19
 - ## **100Daysofcode Tweet Search Project**
+  
+  I continued watching the videos recommended to me by [Khawar Jatoi](https://twitter.com/khawar_jatoi) to learn more about promises. Today I watched the second video, [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en). This is the list of video Khawar send me to watch ***in order***:
+
+  
+  1. [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+  2. [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en)
+  3. [async / await in JavaScript - What, Why and How - Fun Fun Function
+](https://www.youtube.com/watch?v=568g8hxJJp4)
+
+  Below are my notes on the video and definitions I had to look up. I recommend watching the video and not relying on my notes, as these notes do not explain everything about promises. The notes are complementary definitions as well as concepts I felt like I needed to write down for my own understanding.
 
   **Composable:** "A composable function should have 1 input argument and 1 output value." *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
   
@@ -58,18 +68,33 @@
   
   I think it might have something to do with the event loop and what order these are called in, but I haven't wrapped my head around it yet.
   
-  ##  quote
+  ### So what's the answer?
   
-  >A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why. *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+  I asked Khawar for help. He explained that in the nested version, it's guarenteed that the images load in order. But in my non nested version you can't gaurentee the images will load in order.
+  
+  ## Moving On For Now
+  
+  I still have a bit to understand about promises, but I wanted to take a break form watching videos and do some coding. 
+  
+  I decided to start a food app I'd been meaning to work on for while. It will compile the **nutritional label values** for different foods by grabbing the **nutrient values from the USDA database** using their API. 
   
   ## USDA Food Composition Databases API
   
-  to get the api key https://data.nal.usda.gov/dataset/composition-foods-raw-processed-prepared-usda-national-nutrient-database-standard-referen-15 
+  For those who aren't familiar with food tracking, the nutrient values on the database *are not the same* as what you would see on the nutritional labels since the labels use a lot of percentages and the database uses value like 2mg, 300UI, etc. 
   
+  I track my food intake on myfitnesspal.com. I often use the USDA database to get my nutrient values, but I have to do a lot of annoying math to convert the database values to percentages to enter into myfitnesspal. This app will take care of that math and do it for you.
+
+  ## Nutrient Database API
+  
+  I'll be using the Nutrient Database API so this is a good project to get to understand asynchronous functions and promises.
+  
+  I got my [NBD API key here](https://data.nal.usda.gov/dataset/composition-foods-raw-processed-prepared-usda-national-nutrient-database-standard-referen-15). Go down to the section called "Gaining Access".
+    
+  The documentation for the NBD can be found [here](https://ndb.nal.usda.gov/ndb/doc).
   
   There are different types of reports you can get, but I will mostly need the food reports for my project.
   
-  >A Food Report is a list of nutrients and their values in various portions for a specific food.
+  > A Food Report is a list of nutrients and their values in various portions for a specific food.
   
   *[What is a Food Report Version 2?](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md)*
   
@@ -77,13 +102,40 @@
   
   With a food report I can look up a food by it's NBD number, let's say chinese cabbage which has a NBD number of 11119 which I happen to remember off the top of my head. Then you can grab the information for each nutrient: calories, iron, vitamin c, etc...
   
+  I played around with traversing the JSON that was returned from this XMLHttpRequest:
   
+  ```javascript
   
+  let test = document.querySelector("#test");
+  var url = "https://api.nal.usda.gov/ndb/V2/reports?ndbno=01009&ndbno=01009&ndbno=45202763&ndbno=35193&type=b&format=json&api_key=<your_API_Key_goes_here>";
   
-  https://ndb.nal.usda.gov/ndb/doc
+  var xmlhttp = new XMLHttpRequest();
+
+  xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+      var resp = JSON.parse(this.responseText);
+      console.log(resp)
+      myFunction(resp);
+   }
+  };
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+
+  function myFunction(data) {
+
+  document.getElementById("test").innerHTML = data;
+  }
+  ```
   
-  https://api.data.gov/docs/rate-limits/
-   
+- ## Thoughts and Feelings:
+
+  I liked this quote I came across:
+  
+  >A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why. 
+  
+  *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+  
+  It made me realize that I need to make sure I go out and find examples or ask questions that can illustrate why we do certain things in our code.
 
 ## Day 88
 ### 3/29/19
@@ -98,7 +150,7 @@
 
   Today, I watched the first video. It's only 27 minutes but it took me 1 hour and 45 minutes to go through it while taking notes and looking up words I didn't know. But wow! I understand how javascript works soo much better. 
   
-  Below are my notes on the video and definitions I had to look up. I reccomend watching the video and not relying on my notes, as these notes do not explain everything about event loops. The notes are complementary definitions as well as concepts I felt like I needed to write down for my own understanding.
+  Below are my notes on the video and definitions I had to look up. I recommend watching the video and not relying on my notes, as these notes do not explain everything about event loops. The notes are complementary definitions as well as concepts I felt like I needed to write down for my own understanding.
   
   ## Event Loops Video Notes
   
@@ -141,7 +193,7 @@
 
   ## Event Loop
   
-  If an asynchronous function is pushed on to the stack, the browser starts the asynch function. Once it's passed to the browser, javascript is done dealing with the asynch function so it's popped off the stack. Javascript continues dealing with the other code while the browser deals with the asynchronous function. Once the browser is done with the WebAPI it pushes the callback onto the task/callback queue. The event loop sees if the stack is empty. If yes, then the event loop takes the first callback in the callback que and passes it on to the stack.
+  If an asynchronous function is pushed on to the stack, the browser starts the async function. Once it's passed to the browser, javascript is done dealing with the async function so it's popped off the stack. Javascript continues dealing with the other code while the browser deals with the asynchronous function. Once the browser is done with the WebAPI it pushes the callback onto the task/callback queue. The event loop sees if the stack is empty. If yes, then the event loop takes the first callback in the callback que and passes it on to the stack.
   
   Because of this, `setTimeout()` is not a *guaranteed* time of executions, it's *minimum* time of execution.
   
