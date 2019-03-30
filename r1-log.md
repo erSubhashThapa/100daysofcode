@@ -16,7 +16,7 @@
   
   ## Callback Hell, Why Have Nested Callbacks?
   
-  In the tutorial, the instructor uses this example to illustrate callback hell, which happens when you want more than one image in this example.
+  In the tutorial, the instructor uses [this example to illustrate callback hell](https://youtu.be/2d7s3spWAzo?t=240), which happens when you want more than one image in this example.
   
   ```javascript
   import loadImageCallbacked
