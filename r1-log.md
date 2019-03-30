@@ -12,8 +12,10 @@
   3. [async / await in JavaScript - What, Why and How - Fun Fun Function
 ](https://www.youtube.com/watch?v=568g8hxJJp4)
 
-  Below are my notes on the video and definitions I had to look up. I recommend watching the video and not relying on my notes, as these notes do not explain everything about promises. The notes are complementary definitions as well as concepts I felt like I needed to write down for my own understanding.
+  Below are my notes on the *second video* and definitions I had to look up. I recommend watching the video and not relying on my notes, as these notes do not explain everything about promises. The notes are complementary definitions as well as concepts I felt like I needed to write down for my own understanding.
 
+  ## Promises Video Notes
+  
   **Composable:** "A composable function should have 1 input argument and 1 output value." *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
   
   >*Function composition is a mathematical concept that allows you to combine two or more functions into a new function.*
