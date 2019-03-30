@@ -80,7 +80,7 @@
   
   I decided to start a food app I'd been meaning to work on for while. It will compile the **nutritional label values** for different foods by grabbing the **nutrient values from the USDA database** using their API. 
   
-  ## USDA Food Composition Databases API
+- ## USDA Food Composition Database App
   
   For those who aren't familiar with food tracking, the nutrient values on the **USDA database** *are not the same* as what you would see on the **nutritional labels** since the labels use a lot of percentages and the database uses value like 2mg, 300UI, etc. 
   
