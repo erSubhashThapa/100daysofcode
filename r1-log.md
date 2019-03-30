@@ -72,7 +72,7 @@
   
   ### So what's the answer?
   
-  I asked Khawar for help. He explained that in the nested version, it's guaranteed that the images load in order. But in my non nested version you can't gaurentee the images will load in order.
+  I asked Khawar for help. He explained that in the nested version, it's guaranteed that the images load in order. But in my non-nested version you can't gaurentee the images will load in order.
   
   ## Moving On For Now
   
