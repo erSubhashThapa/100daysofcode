@@ -4,7 +4,7 @@
 ### 3/30/19
 - ## **100Daysofcode Tweet Search Project**
   
-  I continued watching the videos recommended to me by [Khawar Jatoi](https://twitter.com/khawar_jatoi) to learn more about promises. Today, I watched the second video, [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en). This is the list of video Khawar send me to watch ***in order***:
+  I continued watching the videos recommended to me by [Khawar Jatoi](https://twitter.com/khawar_jatoi) to learn more about promises. Today, I watched the second video, [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en). This is the list of videos Khawar send me to watch ***in order***:
 
   
   1. [What the heck is the event loop anyway? | Philip Roberts | JSConf EU](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
