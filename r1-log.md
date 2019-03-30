@@ -1,5 +1,21 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 89--editing
+### 3/30/19
+- ## **100Daysofcode Tweet Search Project**
+
+  **Composable:** "A composable function should have 1 input argument and 1 output value." *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+  
+  >*Function composition is a mathematical concept that allows you to combine two or more functions into a new function.*
+  
+  *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+  
+  
+  
+  
+  "A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why." *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
+   
+
 ## Day 88
 ### 3/29/19
 - ## **100Daysofcode Tweet Search Project**
