@@ -2,7 +2,7 @@
 
 ## Day 89
 ### 3/30/19
-- ## **100Daysofcode Tweet Search Project**
+- ## **Promises**
   
   I continued watching the videos recommended to me by [Khawar Jatoi](https://twitter.com/khawar_jatoi) to learn more about promises. Today, I watched the second video, [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en). This is the list of videos Khawar sent me to watch ***in order***:
 
