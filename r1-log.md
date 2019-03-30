@@ -22,7 +22,7 @@
   
   *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
   
-  >Promises serve that same puropse as callbacks do but promises are a bit more powerful because they are unlike callbacks, composable.
+  >Promises serve that same purpose as callbacks do but promises are a bit more powerful because they are, unlike callbacks, composable.
   
   *[Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo&vl=en)*
   
