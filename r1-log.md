@@ -82,7 +82,7 @@
   
   ## USDA Food Composition Databases API
   
-  For those who aren't familiar with food tracking, the nutrient values on the database *are not the same* as what you would see on the nutritional labels since the labels use a lot of percentages and the database uses value like 2mg, 300UI, etc. 
+  For those who aren't familiar with food tracking, the nutrient values on the **USDA database** *are not the same* as what you would see on the **nutritional labels** since the labels use a lot of percentages and the database uses value like 2mg, 300UI, etc. 
   
   I track my food intake on myfitnesspal.com. I often use the USDA database to get my nutrient values, but I have to do a lot of annoying math to convert the database values to percentages to enter into myfitnesspal. This app will take care of that math and do it for you.
 
