@@ -58,6 +58,8 @@
   
   I think it might have something to do with the event loop and what order these are called in, but I haven't wrapped my head around it yet.
   
+  ##  quote
+  
   >A teacher’s failure to properly provide good real world examples will result in a student’s failure to understand why. *[hackernoon](https://hackernoon.com/javascript-functional-composition-for-every-day-use-22421ef65a10)*
    
 
