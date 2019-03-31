@@ -78,7 +78,7 @@
   
   ## JSON Object Style Guide
   
-  I'm making a JSON object that contains all the nutrients for a gien food item. I always forget whether JSON properties should be snake_case or camelCase. [This stackoverflow thread](https://stackoverflow.com/questions/5543490/json-naming-convention) answered my question:
+  I'm making a JSON object that contains all the nutrients for a given food item. I always forget whether JSON properties should be snake_case or camelCase. [This stackoverflow thread](https://stackoverflow.com/questions/5543490/json-naming-convention) answered my question:
   
   >In this document Google JSON Style Guide (recommendations for building JSON APIs at Google),
   >
