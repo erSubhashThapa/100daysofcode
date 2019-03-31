@@ -43,7 +43,9 @@
   
   I'm a little confused, but I believe the correct values for the new labels are in the "Adults and Children >=4 years" column [on this table](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp). There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right-hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since it's on a goverment website and that seems more legit. I don't know why this was so hard to figure out.
 
-  - **Adults and Children >=4 years** [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp)
+ #### Values table:
+ 
+  - **Adults and Children >=4 Years Column** [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp)
 
 
   ## What Info Does MyFitnessPal Request?
