@@ -7,14 +7,21 @@
   I'm taking a break from the twitter app to play with the USDA NDB API to get better at working with api's and asynchrnousity.
 
 - ## USDA Food Composition Database App
+
   [Documentation for Food Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md).
   100 g equivalent value of the nutrient
-
-  https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp
+  
+  ## Nutrition Label Daily Values
+  
+  To get the percentage calculations for the labels, I need to know what are the total daily values for each nutrient on the nutrition labels. I'm dealing with US labels here, by the way.
+  
+  There are old label daily values, and new ones which will be enforced [by 2020](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables). I'm going to go with the new values.
+  
+  I'm a little confused on this, but I believe the correct way to do this is to follow the table [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) for the column "Adults and Children >=4 years". There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since that seems more legit.
 
   https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States
 
-  https://en.wikipedia.org/wiki/Reference_Daily_Intake
+
 
   > Recommended intakes of nutrients vary by age and gender and are known as Recommended Dietary Allowances (RDAs) and Adequate Intakes (AIs). However, one value for each nutrient, known as the Daily Value (DV), is selected for the labels of dietary supplements and foods. 
   [Dailt Values](https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx)
@@ -48,6 +55,7 @@
   - Vitamin D (%)
   - Sugar Alcohols (g)
 
+https://stackoverflow.com/questions/5543490/json-naming-convention
   >In this document Google JSON Style Guide (recommendations for building JSON APIs at Google),
   >
   >It recommends that:
