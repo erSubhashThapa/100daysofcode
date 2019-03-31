@@ -8,6 +8,14 @@
 
 - ## USDA Food Composition Database App
 
+  ## Manually Search For a Food Item
+  
+  I'm putting this here for my own reference. This is where you search food items on the USDA database website.
+  
+  - https://ndb.nal.usda.gov/ndb/search/list
+  
+  This is what I use to find a food item when I manually get all the nutrition data. This page might be helpful in this project just to find the corresponding NBD number for each food item, although you *can* do this with the api too. I will probably learn how to do it with the API later.
+
   ## Serving Size
   
   The user needs to know the serving size when they enter a new food on MyFitnessPal.
@@ -19,18 +27,26 @@
   
   ## Nutrition Label Daily Values
   
-  To get the percentage calculations for the labels, I need to know the total daily values for each nutrient on US nutrition labels.
+  ### Daily Values:
   
-  There are old label daily values, and new ones which will be enforced [by January 1st 2020 for large comapnies](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables). I'm going to go with the new values.
-  
-  I'm a little confused, but I believe the correct values for the new labels are in the "Adults and Children >=4 years" column [on this table](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp). There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since that seems more legit. I don't know why this was so hard to figure out.
-
   > Recommended intakes of nutrients vary by age and gender and are known as Recommended Dietary Allowances (RDAs) and Adequate Intakes (AIs). However, one value for each nutrient, known as the Daily Value (DV), is selected for the labels of dietary supplements and foods. 
-  [Dailt Values](https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx)
+  
+  *[Daily Values, nih.gov](https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx)*
+  
+  To calculate the percentages for the labels, I need to know the total **daily values** for each nutrient on US nutrition labels.
+  
+  - For example, theres 0.73mg of iron in broccoli. *We need to know how many mg of iron make 100% of the daily value on food labels.* The answer is *18mg* of iron is *100%*. 0.73mg is ***4%*** of 18mg. So 4% iron would be the percent value for the USDA label.
+  
+  ### Where Can We Find The Label DV's?
+  
+  There are old label daily values, and new ones which will be enforced [by January 1st, 2020 for large companies](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables). I'm going to go with the **new values.**
+  
+  I'm a little confused, but I believe the correct values for the new labels are in the "Adults and Children >=4 years" column [on this table](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp). There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right-hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since it's on a goverment website and that seems more legit. I don't know why this was so hard to figure out.
+
+  
 
   https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx "Adults and Children >=4 years"
 
-  https://ndb.nal.usda.gov/ndb/search/list
 
   ## What Info Does MyFitnessPal Request?
   
