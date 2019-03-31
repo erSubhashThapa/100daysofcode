@@ -4,12 +4,17 @@
 ### 3/31/19
 
 - ## 100Daysofcode Tweet Search Project
-  I'm taking a break from the twitter app to play with the USDA NDB API to get better at working with api's and asynchrnousity.
+  I'm taking a break from my twitter app project to play with the USDA NDB API to get better at working with api's and asynchrnousity.
 
 - ## USDA Food Composition Database App
 
-  [Documentation for Food Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md).
-  100 g equivalent value of the nutrient
+  ## Serving Size
+  
+  The user needs to know the serving size when they enter a new food on MyFitnessPal.
+  
+  <img src="log_imgs/mfp1_3-31.PNG"  width="200" />
+  
+  I found out on the [documentation for the NBD food reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md) that the nutrients listed are for an **100 gram serving** of the food item. I'll also need this info later if I'm going to give the user the option to get different serving sizes.
   
   ## Nutrition Label Daily Values
   
@@ -26,9 +31,12 @@
 
   https://ndb.nal.usda.gov/ndb/search/list
 
-  ![screenshot](log_imgs/mfp1_3-31.PNG)
-  ![screenshot](log_imgs/mfp2_3-31.PNG)
-  ![screenshot](log_imgs/mfp3_3-31.PNG)
+  ## What Info Does MyFitnessPal Request?
+  
+  Here you can see what info My f
+  
+  <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="200" />
+  
 
   - Calories
   - Total Carbs 
