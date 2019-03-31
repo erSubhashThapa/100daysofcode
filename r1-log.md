@@ -14,15 +14,16 @@
   
   <img src="log_imgs/mfp1_3-31.PNG"  width="200" />
   
+  ### 100 gram serving
   I found out on the [documentation for the NBD food reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md) that the nutrients listed are for an **100 gram serving** of the food item. I'll also need this info later if I'm going to give the user the option to get different serving sizes.
   
   ## Nutrition Label Daily Values
   
-  To get the percentage calculations for the labels, I need to know what are the total daily values for each nutrient on the nutrition labels. I'm dealing with US labels here, by the way.
+  To get the percentage calculations for the labels, I need to know the total daily values for each nutrient on US nutrition labels.
   
-  There are old label daily values, and new ones which will be enforced [by 2020](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables). I'm going to go with the new values.
+  There are old label daily values, and new ones which will be enforced [by January 1st 2020 for large comapnies](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables). I'm going to go with the new values.
   
-  I'm a little confused about this, but I believe the correct way to do this is to follow the table [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) for the column "Adults and Children >=4 years". There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since that seems more legit. I don't know why this was so hard to figure out.
+  I'm a little confused, but I believe the correct values for the new labels are in the "Adults and Children >=4 years" column [on this table](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp). There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since that seems more legit. I don't know why this was so hard to figure out.
 
   > Recommended intakes of nutrients vary by age and gender and are known as Recommended Dietary Allowances (RDAs) and Adequate Intakes (AIs). However, one value for each nutrient, known as the Daily Value (DV), is selected for the labels of dietary supplements and foods. 
   [Dailt Values](https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx)
@@ -33,19 +34,19 @@
 
   ## What Info Does MyFitnessPal Request?
   
-  Here you can see what info My f
+  Here you can see what info MyFitnessPal asks for, which is pretty much the same as you'd see on a **USDA food label**.
   
   <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="200" />
   
 
   - Calories
-  - Total Carbs 
-  - Protein
-  - Total Fat
-  - Sat Fat
-  - Polyunsat Fat
-  - Monounsat Fat
-  - Trans Fat
+  - Total Carbs (g)
+  - Protein (g)
+  - Total Fat (g)
+  - Sat Fat (g)
+  - Polyunsat Fat (g)
+  - Monounsat Fat (g)
+  - Trans Fat (g)
   - Cholesterol (mg)
   - Sodium (mg)
   - Potassium (mg)
