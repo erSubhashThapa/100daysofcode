@@ -10,11 +10,11 @@
 
   ## Manually Search For a Food Item
   
-  I'm putting this here for my own reference. This is where you search food items on the USDA database website.
+  This is where you search food items on the USDA database website.
   
   - https://ndb.nal.usda.gov/ndb/search/list
   
-  This is what I use to find a food item when I manually get all the nutrition data. This page might be helpful in this project just to find the corresponding NBD number for each food item, although you *can* do this with the api too. I will probably learn how to do it with the API later.
+  This page will help us for this project to find the corresponding NBD number for each food item, although you *can* do this with the api too. I will learn how to do it with the API later.
 
   ## Serving Size
   
