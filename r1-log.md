@@ -50,7 +50,7 @@
 
   ## What Info Does MyFitnessPal Request?
   
-  Here you can see what info MyFitnessPal asks for, which is pretty much corresponds to what you'd see on a **USDA food label**.
+  Here you can see what info MyFitnessPal asks for, which pretty much corresponds to what you'd see on a **USDA food label**.
   
   <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="200" />
   
