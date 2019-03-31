@@ -7,12 +7,47 @@
   I'm taking a break from the twitter app to play with the USDA NDB API to get better at working with api's and asynchrnousity.
 
 - ## USDA Food Composition Database App
-[Documentation for Food Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md).
-100 g equivalent value of the nutrient
+  [Documentation for Food Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md).
+  100 g equivalent value of the nutrient
 
-https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp
+  https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp
 
-https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States
+  https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States
+
+  https://en.wikipedia.org/wiki/Reference_Daily_Intake
+
+  > Recommended intakes of nutrients vary by age and gender and are known as Recommended Dietary Allowances (RDAs) and Adequate Intakes (AIs). However, one value for each nutrient, known as the Daily Value (DV), is selected for the labels of dietary supplements and foods. 
+  [Dailt Values](https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx)
+
+  https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx "Adults and Children >=4 years"
+
+  https://ndb.nal.usda.gov/ndb/search/list
+
+  ![screenshot](log_imgs/mfp1_3-31.PNG)
+  ![screenshot](log_imgs/mfp2_3-31.PNG)
+  ![screenshot](log_imgs/mfp3_3-31.PNG)
+
+  - Calories
+  - Total Carbs 
+  - Protein
+  - Total Fat
+  - Sat Fat
+  - Polyunsat Fat
+  - Monounsat Fat
+  - Trans Fat
+  - Cholesterol (mg)
+  - Sodium (mg)
+  - Potassium (mg)
+  - Fiber (g)
+  - Sugars (g)
+  - Vitamin A (%)
+  - Vitamin C (%)
+  - Calcium (%)
+  - Iron (%)
+  - Added Sugar (g)
+  - Vitamin D (%)
+  - Sugar Alcohols (g)
+
 
 
 ## Day 89
