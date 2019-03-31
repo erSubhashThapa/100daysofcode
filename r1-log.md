@@ -80,11 +80,13 @@
   
   ## Vitamin D Confusion
   
-  In the API for each food item, there are *two* objects containg the vitamin d information. One has the property value **name:"Vitamin D"**. The other is **name:"Vitamin D (D2 + D3)"**. I'm not sure which goes in food labels.
+  In the API for each food item, there are *two* objects containg the vitamin d information. One has the property value **"name":"Vitamin D"**. The other is **"name":"Vitamin D (D2 + D3)"**. I'm not sure which goes in food labels.
   
-  I think we use the **name:"Vitamin D"** object. 
+  ### Use "name":"Vitamin D"
   
-  But the only reason I think this is because on [this government page about vitamin d](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/), in the table **"Table 3: Selected Food Sources of Vitamin D"**, you can see it shows that a large egg has 41 UI of Vitamin D which is 10% of the DV. When we go to the [NBD for eggs](https://ndb.nal.usda.gov/ndb/foods/show/01123?fgcd=&manu=&format=&count=&max=25&offset=&sort=default&order=asc&qlookup=Egg%2C+1+large&ds=SR&qt=&qp=&qa=&qn=&q=&ing=) we see that a large egg has 41 UI of ***Vitamin D*** and 1.0 µg ***Vitamin D (D2 + D3)***. So it looks like the 41 UI of ***Vitamin D*** is the value being referenced not the 1.0 µg ***Vitamin D (D2 + D3)*** value.
+  I think we use the **name:"Vitamin D"** object instead of **"name":"Vitamin D (D2 + D3)"**. 
+  
+  But the only reason I think this is because on [this government page about vitamin d](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/), in the table **"Table 3: Selected Food Sources of Vitamin D"**, you can see it shows that a large egg has 41 UI of Vitamin D which is 10% of the DV. When we go to the [NBD for eggs](https://ndb.nal.usda.gov/ndb/foods/show/01123?fgcd=&manu=&format=&count=&max=25&offset=&sort=default&order=asc&qlookup=Egg%2C+1+large&ds=SR&qt=&qp=&qa=&qn=&q=&ing=) we see that a large egg has 41 UI of ***Vitamin D*** and 1.0 µg of ***Vitamin D (D2 + D3)*** . So it looks like the 41 UI of ***Vitamin D*** is the value being referenced ***not*** the 1.0 µg of ***Vitamin D (D2 + D3)*** value.
   
   ### UI vs mcg
   
