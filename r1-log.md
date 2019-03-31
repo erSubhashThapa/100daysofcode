@@ -126,6 +126,12 @@
 
   Here's the [guide they're referencing](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Name_Format#Property_Name_Format).
   
+  ## App So Far
+  
+  So far I'm able to grab all the values I need for a given NDB number:
+  
+  <img src="log_imgs/NBD_3-31.PNG"  width="200" />
+  
 - ## Thoughts and Feelings:
 
   I spent so long just figuring out all this nutrition label info. So I'm not going to post my work for today, just to save time. It's already almost time for dinner and I should probably still do a little more actually coding if I have time. I'm so glad I got all this info down because it's been really annoying to find in the past year of my food logging.
