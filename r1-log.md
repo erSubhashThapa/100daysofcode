@@ -17,11 +17,7 @@
   
   There are old label daily values, and new ones which will be enforced [by 2020](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables). I'm going to go with the new values.
   
-  I'm a little confused on this, but I believe the correct way to do this is to follow the table [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) for the column "Adults and Children >=4 years". There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since that seems more legit.
-
-  https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States
-
-
+  I'm a little confused about this, but I believe the correct way to do this is to follow the table [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) for the column "Adults and Children >=4 years". There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since that seems more legit. I don't know why this was so hard to figure out.
 
   > Recommended intakes of nutrients vary by age and gender and are known as Recommended Dietary Allowances (RDAs) and Adequate Intakes (AIs). However, one value for each nutrient, known as the Daily Value (DV), is selected for the labels of dietary supplements and foods. 
   [Dailt Values](https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx)
