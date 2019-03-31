@@ -8,13 +8,15 @@
 
 - ## USDA Food Composition Database App
 
+  I spent a lot of time researching how US nutrition labels work. So a lot of this info may be boring to you if you read my log to see my *coding* journey. However, I really wanted to get this information down because it's surprisingly difficult to find and it may help others who are interested in nutrition and/or coding.
+
   ## Manually Search For a Food Item
   
   This is where you search food items on the USDA database website.
   
   - https://ndb.nal.usda.gov/ndb/search/list
   
-  This page will help us for this project to find the corresponding NBD number for each food item, although you *can* do this with the api too. I will learn how to do it with the API later.
+  This page will help us for this project to find the corresponding NBD number for each food item, although, you *can* do this with the api. I will learn how to do it with the API later.
 
   ## Serving Size
   
@@ -23,7 +25,7 @@
   <img src="log_imgs/mfp1_3-31.PNG"  width="200" />
   
   ### 100 gram serving
-  I found out on the [documentation for the NBD food reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md) that the nutrients listed are for an **100 gram serving** of the food item. I'll also need this info later if I'm going to give the user the option to get different serving sizes.
+  I found out on the [documentation for the NBD food reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md) that the nutrients listed are for an **100 gram serving** of each food item. I'll also need this info later if I'm going to give the user the option to get different serving sizes.
   
   ## Nutrition Label Daily Values
   
@@ -75,6 +77,20 @@
   - Added Sugar (g)
   - Vitamin D (%)
   - Sugar Alcohols (g)
+  
+  ## Vitamin D Confusion
+  
+  In the API for each food item, there are *two* objects containg the vitamin d information. One has the property value **name:"Vitamin D"**. The other is **name:"Vitamin D (D2 + D3)"**. I'm not sure which goes in food labels.
+  
+  I think we use the **name:"Vitamin D"** object. 
+  
+  But the only reason I think this is because on [this government page about vitamin d](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/), in the table **"Table 3: Selected Food Sources of Vitamin D"**, you can see it shows that a large egg has 41 UI of Vitamin D which is 10% of the DV. When we go to the [NBD for eggs](https://ndb.nal.usda.gov/ndb/foods/show/01123?fgcd=&manu=&format=&count=&max=25&offset=&sort=default&order=asc&qlookup=Egg%2C+1+large&ds=SR&qt=&qp=&qa=&qn=&q=&ing=) we see that a large egg has 41 UI of ***Vitamin D*** and 1.0 µg ***Vitamin D (D2 + D3)***. So it looks like the 41 UI of ***Vitamin D*** is the value being referenced not the 1.0 µg ***Vitamin D (D2 + D3)*** value.
+  
+  ### UI vs mcg
+  
+  To complicate things futher, the new labeling will require vitamin D to be labeled in mcg, not UI. Because of this, our [reference table for DV's](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) listes 20mcg for vitamin D. But in the database, the values for Vitamin D are in UI. But the conversion is straight forward. 
+  
+  The conversion for Vitamin D IU is	1 IU = 0.025 mcg. This is not the same for all vitamins apparently.[See here.](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php)
   
   ## JSON Object Style Guide
   
