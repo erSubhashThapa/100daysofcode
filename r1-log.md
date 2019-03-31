@@ -35,7 +35,7 @@
   
   To calculate the percentages for the labels, I need to know the total **daily values** for each nutrient on US nutrition labels.
   
-  - For example, theres 0.73mg of iron in broccoli. *We need to know how many mg of iron make 100% of the daily value on food labels.* The answer is *18mg* of iron is *100%*. 0.73mg is ***4%*** of 18mg. So 4% iron would be the percent value for the USDA label.
+  - For example, there's 0.73mg of iron in broccoli. *We need to know how many mg of iron make 100% of the daily value on food labels.* The answer is *18mg* of iron is *100%*. 0.73mg is ***4%*** of 18mg. So 4% iron would be the percent value for the USDA label.
   
   ### Where Can We Find The Label DV's?
   
