@@ -1,5 +1,20 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 90---editing
+### 3/31/19
+
+- ## 100Daysofcode Tweet Search Project
+  I'm taking a break from the twitter app to play with the USDA NDB API to get better at working with api's and asynchrnousity.
+
+- ## USDA Food Composition Database App
+[Documentation for Food Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-FOOD-REPORTV2.md).
+100 g equivalent value of the nutrient
+
+https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp
+
+https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States
+
+
 ## Day 89
 ### 3/30/19
 - ## **Promises**
