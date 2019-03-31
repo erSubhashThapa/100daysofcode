@@ -48,6 +48,13 @@
   - Vitamin D (%)
   - Sugar Alcohols (g)
 
+  >In this document Google JSON Style Guide (recommendations for building JSON APIs at Google),
+  >
+  >It recommends that:
+  > 1. Property names must be camelCased, ASCII strings.
+  > 2.  The first character must be a letter, an underscore (_) or a dollar sign ($).
+
+https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Name_Format#Property_Name_Format
 
 
 ## Day 89
