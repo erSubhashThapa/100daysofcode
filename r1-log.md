@@ -43,18 +43,16 @@
   
   I'm a little confused, but I believe the correct values for the new labels are in the "Adults and Children >=4 years" column [on this table](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp). There's also a table [here on wikipedia](https://en.wikipedia.org/wiki/Reference_Daily_Intake#Food_labeling_reference_tables) but it has separate values for men and women, and I'm not sure which side to go with to match US food labels. There's yet another table [here on wikipedia](https://en.wikipedia.org/wiki/Nutrition_facts_label#United_States) which has different units and I can't tell if the right-hand column is meant to be the new label values or not. So I'm going to go with the [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) since it's on a goverment website and that seems more legit. I don't know why this was so hard to figure out.
 
-  
-
-  https://ods.od.nih.gov/HealthInformation/dailyvalues.aspx "Adults and Children >=4 years"
+  - **Adults and Children >=4 years** [NIH page](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp)
 
 
   ## What Info Does MyFitnessPal Request?
   
-  Here you can see what info MyFitnessPal asks for, which is pretty much the same as you'd see on a **USDA food label**.
+  Here you can see what info MyFitnessPal asks for, which is pretty much corresponds to what you'd see on a **USDA food label**.
   
   <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="200" />
   
-
+  ### Nutrients
   - Calories
   - Total Carbs (g)
   - Protein (g)
@@ -75,15 +73,18 @@
   - Added Sugar (g)
   - Vitamin D (%)
   - Sugar Alcohols (g)
-
-https://stackoverflow.com/questions/5543490/json-naming-convention
+  
+  ## JSON Object Style Guide
+  
+  I'm making a JSON object that contains all the nutrients for a gien food item. I always forget whether JSON properties should be snake_case or camelCase. [This stackoverflow thread](https://stackoverflow.com/questions/5543490/json-naming-convention) answered my question:
+  
   >In this document Google JSON Style Guide (recommendations for building JSON APIs at Google),
   >
   >It recommends that:
   > 1. Property names must be camelCased, ASCII strings.
   > 2.  The first character must be a letter, an underscore (_) or a dollar sign ($).
 
-https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Name_Format#Property_Name_Format
+  Here's the [guide they're referencing](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Name_Format#Property_Name_Format).
 
 
 ## Day 89
