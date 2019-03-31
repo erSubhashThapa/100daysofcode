@@ -84,7 +84,7 @@
   
   ### Use "name":"Vitamin D"
   
-  I think we use the **name:"Vitamin D"** object instead of **"name":"Vitamin D (D2 + D3)"**. 
+  I think we use the **"name":"Vitamin D"** object instead of **"name":"Vitamin D (D2 + D3)"**. 
   
   But the only reason I think this is because on [this government page about vitamin d](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/), in the table **"Table 3: Selected Food Sources of Vitamin D"**, you can see it shows that a large egg has 41 UI of Vitamin D which is 10% of the DV. When we go to the [NBD for eggs](https://ndb.nal.usda.gov/ndb/foods/show/01123?fgcd=&manu=&format=&count=&max=25&offset=&sort=default&order=asc&qlookup=Egg%2C+1+large&ds=SR&qt=&qp=&qa=&qn=&q=&ing=) we see that a large egg has 41 UI of ***Vitamin D*** and 1.0 µg of ***Vitamin D (D2 + D3)*** . So it looks like the 41 UI of ***Vitamin D*** is the value being referenced ***not*** the 1.0 µg of ***Vitamin D (D2 + D3)*** value.
   
@@ -92,7 +92,27 @@
   
   To complicate things futher, the new labeling will require vitamin D to be labeled in mcg, not UI. Because of this, our [reference table for DV's](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) listes 20mcg for vitamin D. But in the database, the values for Vitamin D are in UI. But the conversion is straight forward. 
   
-  The conversion for Vitamin D IU is	1 IU = 0.025 mcg. This is not the same for all vitamins apparently.[See here.](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php)
+  The conversion for Vitamin D IU is	1 IU = 0.025 mcg. This is not the same for all vitamins apparently. [See here.](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php)
+  
+  ## Vitamin A Confusion
+  
+  There are also two listings for vitamin A, the object with **"name":"Vitamin A, RAE"** and **"name":"Vitamin A, IU"** .
+  
+  I believe we go with the **"name":"Vitamin A, RAE"** object, because on our [reference table](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp) the unit listing for vitamin A is **"Micrograms RAE (mcg)"** . Additionally, in [this conversion guide for the nutrient units](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php) the new unit requirement for vitamin A is **"mcg RAE"**.  
+  
+  ### Vitamin A Unit Conversion
+  
+  **µg**: This funky symbol means microgram (mcg). That's the unit listing for **"name":"Vitamin A, RAE"**.
+  
+  The [conversion guide for the nutrient units](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php) for the new label requirements show these conversions for vitamin A:
+  
+  - 1 mcg RAE = 1 mcg retinol
+  - 1 mcg RAE = 2 mcg supplemental beta-carotene
+  - 1 mcg RAE = 12 mcg beta-carotene
+  - 1 mcg RAE = 24 mcg alpha-carotene
+  - 1 mcg RAE = 24 mcg beta-cryptoxanthin
+  
+  So I'm not totally sure what's going on here. I think it's ***1:1*** for the **"name":"Vitamin A, RAE"** listing because it's already giving us micrograms of RAE. I think these conversions are not necessary for us.
   
   ## JSON Object Style Guide
   
@@ -105,6 +125,10 @@
   > 2.  The first character must be a letter, an underscore (_) or a dollar sign ($).
 
   Here's the [guide they're referencing](https://google.github.io/styleguide/jsoncstyleguide.xml?showone=Property_Name_Format#Property_Name_Format).
+  
+- ## Thoughts and Feelings:
+
+  I spent so long just figuring out all this nutrition label info. So I'm not going to post my work for today, just to save time. It's already almost time for dinner and I should probably still do a little more actually coding if I have time. I'm so glad I got all this info down because it's been really annoying to find in the past year of my food logging.
 
 
 ## Day 89
