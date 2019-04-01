@@ -48,7 +48,7 @@
   - Iron
   - Vitamin D
   
-  We'll also need to do calculations for any nutrient that's NDB value unit is different from MyFitnessPal's units or the DV units. The only one that applies to is **Vitamin D** who which we'll need to convert from UI to mcg.
+  We'll also need to do calculations for any nutrient that's NDB value unit is different from MyFitnessPal's units or the DV units. The only one that applies to is **Vitamin D** which we'll need to convert from UI to mcg.
   
   - Vitamin D
     - The conversion for Vitamin D is [1 IU = 0.025 mcg.](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php)
@@ -90,7 +90,10 @@
   
   ![screenshot](log_imgs/NBD_4-1.gif)
   
-  I still need to add css to it.
+  I still need to: 
+  - add css
+  - double check this is all accurate, unit tests?
+  - make into pwa
   
 - ## Thoughts and Feelings:
 
