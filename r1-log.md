@@ -1,5 +1,93 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 91
+### 4/1/19
+
+- ## Why I'm Quiting Coding Forever
+
+  I'm not! April Fools.
+  
+  OK back to work
+
+- ## Github Name
+
+  I finally changed my github screenname from my old first grade AOL instant messenger account name to a more professional screenname. I didn't mind the cute screenname it's just that I've been using that screenname since I was 7 and I don't know what sort of crazy comments I've contributed to the internet since that time, let alone since last week. I'd rather not associate my professional identity with the crazy things I've posted on the internet in the last 21 years. And if you haven't posted crazy things on the internet in 21 years, then live a little and take some risks for your own sake! Just kidding.
+  
+- ## USDA Food Composition Database App
+  ## Calculations
+
+  Below I gathered together the information we need to figure out the calculations we'll need. The values for USDA DV's are from [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp)
+    
+  | Nutrient            | MyFitnessPal Unit | USDA DV for % | DV unit | NDB unit |   |
+  |---------------------|-------------------|---------------|---------|----------|---|
+  | Calories            | kcal              |               |         | kcal     |   |
+  | Total Carbs         | g                 |               |         | g        |   |
+  | Protein             | g                 |               |         | g        |   |
+  | Total Fat           | g                 |               |         | g        |   |
+  | Saturated Fat       | g                 |               |         | g        |   |
+  | Polyunsaturated Fat | g                 |               |         | g        |   |
+  | Monounsaturated Fat | g                 |               |         | g        |   |
+  | Trans Fat           | g                 |               |         | g        |   |
+  | Cholesterol         | mg                |               |         | mg       |   |
+  | Sodium              | mg                |               |         | mg       |   |
+  | Potassium           | mg                |               |         | mg       |   |
+  | Dietary Fiber       | g                 |               |         | g        |   |
+  | Sugars              | g                 |               |         | g        |   |
+  | Vitamin A           | %                 | 900           | RAE mcg | RAE mcg  |   |
+  | Vitamin C           | %                 | 90            | mg      | mg       |   |
+  | Calcium             | %                 | 1300          | mg      | mg       |   |
+  | Iron                | %                 | 18            | mg      | mg       |   |
+  | Added Sugars        | g                 |               |         | N/A      |   |
+  | Vitamin D           | %                 | 20            | mcg     | IU       |   |
+  | Sugar Alcohols      | g                 |               |         | N/A      |   |
+  
+  We'll need to do calculations for the nutrients that require percentages: 
+  - Vitamin A
+  - Vitamin C
+  - Calcium
+  - Iron
+  - Vitamin D
+  
+  We'll also need to do calculations for any nutrient that's NDB value unit is different from MyFitnessPal's units or the DV units. The only one that applies to is **Vitamin D** who which we'll need to convert from UI to mcg.
+  
+  - Vitamin D
+    - The conversion for Vitamin D is [1 IU = 0.025 mcg.](https://dietarysupplementdatabase.usda.nih.gov/Conversions.php)
+  
+  ### Calculate the Percentages
+  
+  | Nutrient    | Calculation             |
+  |-------------|-------------------------|
+  | Vitamin A % | NDB value / 900         |
+  | Vitamin C % | NDB value / 90          |
+  | Calcium %   | NBD value / 1300        |
+  | Iron %      | NBD value / 18          |
+  | Vitamin D % | (NDB value * .025) / 20 |
+  
+  ## Regex: camelCase to Label
+  
+  I want to take the property of a value, which is written in camelCase, and use the property to create a displayable version for the user. 
+  
+  - ex. sugarAlcohols --> Sugar Alcohols
+  
+  I found this [stackoverflow thread](https://stackoverflow.com/questions/15369566/putting-space-in-camel-case-string-using-regular-expression) on how to add the space.
+  
+  ```javascript
+  var rex = /([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g;
+
+  "CSVFilesAreCoolButTXT".replace( rex, '$1$4 $2$3$5' );
+  ```
+  
+  Then I found this [stackoverflow thread](https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript) on how to capitolize the first letter.
+  
+  ```javascript
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  ```  
+  ## Working
+  
+  I got my app working!
+  
 ## Day 90
 ### 3/31/19
 
