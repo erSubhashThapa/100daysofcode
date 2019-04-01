@@ -4,7 +4,7 @@
 ### 3/31/19
 
 - ## 100Daysofcode Tweet Search Project
-  I'm taking a break from my twitter app project to play with the USDA NDB API to get better at working with api's and asynchrnousity.
+  I'm taking a break from my twitter app project to play with the USDA NDB API to get better at working with api's and asynchronicity.
 
 - ## USDA Food Composition Database App
 
