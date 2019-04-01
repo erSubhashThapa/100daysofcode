@@ -88,6 +88,14 @@
   
   I got my app working!
   
+  ![screenshot](log_imgs/NBD_4-1.gif)
+  
+  I still need to add css to it.
+  
+- ## Thoughts and Feelings:
+
+  Spent extra time on this today, so I'm not going to post the work to save time. Plus I need to hide the key and I don't feel like figuring that right out.
+  
 ## Day 90
 ### 3/31/19
 
