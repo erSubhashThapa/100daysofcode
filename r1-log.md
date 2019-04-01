@@ -16,7 +16,7 @@
 - ## USDA Food Composition Database App
   ## Calculations
 
-  Below I gathered together the information we need to figure out the calculations we'll need. The values for USDA DV's are from [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp)
+  Below I gathered together the information we need to figure out the calculations for the nutrient label. The values for USDA DV's are from [here](https://www.dsld.nlm.nih.gov/dsld/dailyvalue.jsp)
     
   | Nutrient            | MyFitnessPal Unit | USDA DV for % | DV unit | NDB unit |   |
   |---------------------|-------------------|---------------|---------|----------|---|
