@@ -77,7 +77,7 @@
   "CSVFilesAreCoolButTXT".replace( rex, '$1$4 $2$3$5' );
   ```
   
-  Then I found this [stackoverflow thread](https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript) on how to capitolize the first letter.
+  Then I found this [stackoverflow thread](https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript) on how to capitalize the first letter.
   
   ```javascript
   function capitalizeFirstLetter(string) {
