@@ -1,5 +1,15 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 92
+### 4/2/19
+
+  I accidently deleted a bunch of entries on my log some how. So I went back to an old commit and copied them back in.
+  
+- ## USDA Food Composition Database App
+  ## DevTools Color Picker
+  
+  
+
 ## Day 91
 ### 4/1/19
 
@@ -2769,4 +2779,318 @@ I continued the Javascript Functions tutorial on lynda.com.
 
 I posted my issue from yesterday on stackoverflow [here](https://stackoverflow.com/questions/54506846/chrome-devtools-htmldivelement-style-property-set-before-function-called?noredirect=1#comment95817550_54506846).
 
-Apperently this is 
+Apperently this is happening because 
+>"Devtools console contains a **pointer** to the actual element in all three messages which is why it displays identically."
+
+Now, what this means exactly? I'm not sure. I can guess roughly what that means. The same person suggested,
+
+>"You might want to log out just the property itself." 
+
+Logging `div.style.border` worked as expected. I'd like to understand what a **pointer** is.
+
+**Thoughts and Feelings:** I meditated for 15 minutes inbetween my tutorial and my coding. I used my Muse headband. I think that was really helpful. I was able to code for a while *(though I spent my coding time mostly posting on stackoverflow, debbuggin, and trying to understand what was going on with my issue.)* I reorganized this github log so that the last day is at the top. Much better!
+
+Whenever I get answers on stackoverflow I feel like the answers were written in a snarky tone. Maybe it's all in my head. But if they really are being snarky, then I should recognize this: ***the newbies who push through the snark and ask questions anyways are the ones who succeed*** So that's what I'm going to do. *Be grateful for every answer even if the person is being snarky.* Ignore the snark. Take the answer.
+
+---
+
+### R1D33 - 2/2/19
+It took me a while to figure out the bug in my lynda tutorial challenge for Javascript functions. The reason it said innerHTML is not a function is because it isn't. It's a property! Duh! I was trying to use it like a function. 
+
+  What I was doing:
+
+  `elems[0].innerHTML("hello world");`
+
+  But it should have been:
+
+  `elems[0].innerHTML = "hello world";`
+
+I have gotten so used to jQuery which has an `html()` function. So I was trying to use the `.innerHTML` property like a function.
+
+I also learned that if you declare a variable and then use += on it before intializing the variable, "undefined" is included in the beginning. You have to set the variable to an emtpy string first. More on that [here](https://stackoverflow.com/questions/29198651/first-element-in-object-is-undefined-using-operator).
+
+---
+
+I worked on the clock project from [JavaScript30](https://javascript30.com) and ran into some weird behavior. I isolated what's confusing me into a separate file [here](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_node_behavior.html). 
+
+It's a script that, when `addBorder()` is called, adds a border to the div. But when I `console.log()` the div *before* `addBorder()` is called, you can see that for some reason, the style that is added in `addBorder()` is already applied.
+
+![ScreenShot](log_imgs/R1D33/node.png)
+
+All three times that I `console.log()` the div, it has the border applied. Whether the log was called before `addBorder()`, after `addBorder()` was called but before the border property is set, or after the property is set. This is not what I expect. I would it expect it to look like [this](https://github.com/dangerousdashie/JavaScript30/blob/21c938820efa70c13773f0b2676a61e93d971a19/02%20-%20JS%20and%20CSS%20Clock/test_num_behavior.html) script runs, which is pretty much the same script except the element in question is no longer a div, but a number and the number is being multiplied by 10. In the log you can see the number remains 3 until after it is multiplied by 10 inside the `multiplyBy10()` function.
+
+![ScreenShot](log_imgs/R1D33/num.png)
+
+And oddly enough, the script with the div will log a different result if I keep everything the same but I step through the whole script in the debugger slowly. In that case it still doesn't give the expected result, because it shows no border property in the last log.
+
+![ScreenShot](log_imgs/R1D33/step.png)
+
+What is going on? Is this a scope issue that only effects certain data types?
+
+**Thoughts and Feelings:** Since I spent so much time confusing a property with a function, it's probably really ingrained in my brain now to check that mistake in the future. This is a pattern I noticed. I'm able to pick up on bugs so much quicker than I used to. Every bug that tooks me 45 minutes to find trains my brain to look for that bug quickly later on. So then next time I spend an hour on a tiny bug, I'll be grateful. My mind will have **"downloaded"** the ability to quickly scan for that bug in the future. An hour one day saves me many hours in the future. It's truly a gift you can't buy. Treasure those bugs!
+
+This is what Shawn Achor means in *The Happiness Advantage* when he talks about *"falling up."* Adversity isn't just something you overcome, it's something that measurably makes you better than before. Feed your brain with challlenges, adversity, & failure! You need these to succeed.
+
+### R1D32 - 2/1/19
+I did more of the functions tutorial on lynda. I started the challenge for the 2nd chapter but got stuck because it's saying innerHTML is not a function for the element I'm targeting. 
+
+I continued the clock project from [JavaScript30](https://javascript30.com). It's almost done but the second hand goes backwards when it jumps from 59 to 0. 
+
+I plan to read more of [*Structure and Interpretation of Computer Programs*](https://github.com/sarabander/sicp) later today.
+
+**Thoughts and Feelings:** Took a break for a snack after 1hr and 20 ish minutes or my tutorial and coding and I felt good. I also took a pee break 34 minutes into my tutorial. But I really have to pee now and I'm holding it so I can finished posting before my computer dies.
+
+**Link To Work:** [Continued Clock](https://github.com/dangerousdashie/JavaScript30/blob/c192da7e4ca4874b7ee226c453d34bef11828e25/02%20-%20JS%20and%20CSS%20Clock/index-dashie.html)
+
+### R1D31 - 1/31/19
+I watched Wes Bos's solution to the Drum Kit challenge. It was really different than mine. Things I learned:
+1. There is a `keycode` associated with every key event. ex. the event `.keycode` property for **a** is **65**.
+2. There is an event listener called transitionend that runs when a css transition has ended.
+3. Calling `.play()` on an audio element that is currently playing won't do anything. To override this, you can set the audio element's `currentTime` property to 0 and then call `.play()` to play it from the beginning.
+
+I started the clock project from [JavaScript30](https://javascript30.com). It's getting easier to see how to organize my code. It's becoming more natural to me to see where my code is headed and how I'll need to organize it. I think all these JavaScript lynda courses might be helping with that.
+
+I studied JavaScript functions on Lynda.com. I also started reading a textbook called [*Structure and Interpretation of Computer Programs*](https://web.mit.edu/alexmv/6.037/sicp.pdf). The book was on [this list](https://teachyourselfcs.com/) on [teachyourselfcs.com](https://teachyourselfcs.com/) of concepts to master to understand computer science. Every book on that list is available for free. I got them all on pdf now. I want to try to find an e-book version of them all because that will make note taking easier. 
+
+**Update:** I found *Structure and Interpretation of Computer Programs* in an ebook format [here](https://github.com/sarabander/sicp). To find it, scroll down to the README.md section and click the link where it says
+**"In EPUB3 format."**
+
+**Thoughts and Feelings:** I took a break after 1 hour and 45 minutes of tutorial (1h) and coding (45m). I sat in the sun and then came inside and had a cucumber with almond butter and peach seltzer. When I came back to coding I felt so much more refreshed and worked even longer. My mind was so clear. I think I should implement more breaks and snacks. I don't know if it was the snack itself that boosted my energy or just the fact that snacks make me happy. Maybe anything that makes me relaxed and happy would be good during a break. 
+
+**Link To Work:** [Started Clock](https://github.com/dangerousdashie/JavaScript30/blob/48f36c908811f361201f9aa36d16d84360357914/02%20-%20JS%20and%20CSS%20Clock/index-dashie.html)
+
+### R1D30 - 1/30/19
+I finished my closures tutorial. At the end it said "if you want to learn more about vanilla javascript" and I was like "what are they talking about? I didn't learn anything about vanilla javascript, how could I learn MORE? And I have no clue what it is." I had seen Vanilla JS mentioned and figured it was just another framework. I finally looked into it. It just means coding javascript without any libraries. Great to know, because that is exactly what I want to learn so I really understand the basics of javascript. Now I can stop ignoring all the Vanilla JS tutorials on lynda.com. I organized my notes and reviewed git.
+
+I found a set of [tutorials/projects](https://javascript30.com/) in vanilla javascript by Wes Bos. I worked on the first project today and finished it. I didn't yet look at Wes's solution, but mine works.
+
+**Thoughts and Feelings:** I feel so much more optimistic today. I'm reading The Happiness Advantage and it shows how important it is to be happy and optimistic. It's essential to reducing burnout and improving productivity. The last few days I felt a burnt out. I was met with challenges that I didn't solve and felt bad about my skill set. But I feel optimistic again that I'm on the right path and will keep learning and growing. Partly because I took on a challenge today that I succeeded in, but also because I worked on my mindset a bit. Next time I feel overwhelmed in my studies I can take a step back and try to work on a challenge that is closer to my skillset or study the basics. I will eventually get back to the harder stuff. A challenge that I can't solve is just an indication that I need to learn more. It's a gift.
+
+**Link To Work:** [Drum kit](https://github.com/dangerousdashie/JavaScript30/blob/master/01%20-%20JavaScript%20Drum%20Kit/index-dashie.html)
+
+### R1D29 - 1/29/19
+I worked more on trying to figure out the API ordeal for meetup. I posted on stackoverflow and got some answers that I don't understand but will look into it late. I think I might take a break from this project. My friend Benjy said you can't use the meetup API without the OAuth and to do that you need a website with an SSL so I can't really use it. But the other answers suggested I might be able to use the API with just the key, so I'll see. I feel like I havn't dont a lot of coding, just investigating this issue. So maybe I'll try to do something easier for now so I can actually code.
+
+For my tutorial I did closures on lynda.com. I find this concept a little confusing still.
+
+**Thoughts and Feelings:** I coded in the public bathroom today to fill up on battery power so my legs are soo numb right now.
+
+### R1D28 - 1/28/19
+I did more of my closures tutorial. 
+
+I worked more on my meetup API project. Apparently 3rd party apps can't use API keys. They have to use OAuth. I've never done this and I'm not even sure what it means or whether I'm a 3rd party app but I must be because CORS is not allowing me to use my API key with my app. This is the info for [meetup OAuth registration.](https://secure.meetup.com/meetup_api/oauth_consumers/create/) I'll have to look more into this tomorrow. Right now, I must pee!
+
+**Thoughts and Feelings:** Yesterday, I was feeling like I hit a wall, a bit frustrated. I didn't know how to search for an exact phrase using meetups API. I felt really lost because I didn't know if it was possible and if it was possible I didn't know whether it was a meetup specific thing or if the answer was applicable to all api's. I didn't know where to turn. I havn't had much luck on stackoverflow. But then I realized I didn't need to do an exact search. Of course, I can just extract out the data I need in my code! Duh! I think there is no way to do it through meetups api. I need to not feel so frustrated. I need to remember that hitting a wall is just making a discovery. Sometimes you discover that things can't be done as you expected. Or you discover you don't know how to do something. This is the wall. But the answer is just around the corner on the other side of the wall.
+
+### R1D27 - 1/27/19
+I continued my tutorial on closures. I started working with meetups API but I'm kind of lost. I want to search for groups or events that mention "lucid dream"- exactly, but I can't figure out how to do that. When I add the text parameter, text=lucid+dream, it shows me results that use the word lucid by itself or dream by itself.
+
+**Thoughts and Feelings:** It's raining and gross and I'm feeling weird. How can I find out how to use this API?
+
+### R1D26 - 1/26/19
+I finished the javavascript scope tutorial and started a javascript closures tutorial on lynda.com.
+
+In my clock project, I have a working clock, though it's not designed cute and the code should be cleaned up. I used [this](https://www.w3schools.com/graphics/canvas_clock.asp) tutorial as reference when I ran into trouble. 
+
+Now I'm trying to make the clock face change colors depending on the UV levels outside using the [open weather API](https://openweathermap.org/appid). I'm stopping for right now because I need to charge my laptop. I might come back to it later today. I think I might also try doing the clock in svg instead of canvas. Canvas uses bitmap so the lines aren't as smooth as the vector would be with svg. Here's the [clock](https://github.com/dangerousdashie/javascript-clock/tree/5ab15956c847289712477081e51489dd8390b669) so far.
+
+I worked more on the clock and now it sets the background of the clock to a color value on a blue to grey scale depending on the UV value grabbed from the open weather API for Punta Gorda, Florida. That's where I am at the moment. Next I will try to get it to work for any location. 
+
+**Link To Work:**[clock latest commit, UV API](https://github.com/dangerousdashie/javascript-clock/tree/de5c6c32ce617f927b90a83d61054fc670e221a0)
+
+### R1D25 - 1/25/19
+I started a tutorial on javascript scope. I think I know most of it so far. I don't know what block scope is and that's next. 
+
+I got further along in my javascript clock project. Right now it displays the right time on a canvas circle with two lines for the minute and hour hands. However it doesn't update with the time, you have to refresh it. So next I need to figure our how to update it. I should also add a second hand. My code is probably too redundant. 
+
+**Link To Work:** [clock](https://github.com/dangerousdashie/javascript-clock/tree/135fa05ff5aa68a306bc7baa0b92d1acd4dfb688)
+
+### R1D24 - 1/24/19
+I fixed my git issue that I had on day 22. I organized my Readme file for my quiz project. I explored github. I want to beable to use it better and understand it more. I'd like to be more connected with the online programming community. I finished my JavaScript prototypes tutorial on lynda and practiced using the class keywork on [code pen](https://codepen.io/Dashiee/pen/KJdZGa?editors=0011). 
+
+I started working on a JavaScript clock.
+
+**Link To Work:** [Quiz Template latest commit](https://github.com/dangerousdashie/jQuery-quiz-template/tree/7f974bf75d16f92de02048bad89e25e57f89a604)
+
+### R1D23 - 1/23/18, completed 1/23/18
+I worked mostly on debugging. I'm having an issue with debugging that I documented [here](https://stackoverflow.com/questions/54333252/pause-on-execution-pausing-on-vm-file). No one has helped me on stack overflow with my issue so I'm wondering where to look next. I also spent a little bit of time on CSS. I studied Javascript prototypes yesterday.
+
+I know that I am going to run into a lot of frustrating problems that seem like dead ends; no one answering me on stackoverflow, trying to get approved for API's and being ignored. These moments are gifts because I know that finding unique solutions to these setbacks will set me apart from others. This is where most people give up but I will keep going. Failure comes right before success.
+
+### R1D22 - 1/22/18
+I finished my quiz but I didn't finish the read me file. It's a quiz template others can use to make a quiz. You just need to change the JSON data file to contain your quiz info. I want to clean it up a bit and add a nice readme. Maybe I can turn the project into a tutorial. 
+
+I have an issue with git with this project. I added a readme file and changed the local files before merging them. So now I can't push to github. I don't remember what to do to merge them properly. I need to look it up. 
+
+**Thoughts and Feelings:** It's my birthday and I'm 28.
+
+**Link To Work:** [Quiz Template, read me not finished](https://github.com/dangerousdashie/jQuery-quiz-template);
+
+### R1D21 - 1/21/18
+I completed day 21 yesterday but I am logging it today. I worked on the quiz. I had trouble getting the function that displays the results to work. 
+
+**Thoughts and Feelings:** I probably could have figured out the results function. But my MIL kept distracting me. She kept trying to talk to me. Specifically, she was trying to find out what jewelry I wanted to inheret from her. If I have to be distracted, that's not a bad way. But before that, I felt really confident in what I was doing. 
+
+I need to make sure to reduce distractions. But I was afraid of being rude. But I just have to ask to not be disturbed nicely. Maybe, "Can you bring this back up to me in like 30 minutes. I'm trying to give my full attention to both you and my coding and I'm doing a bad job at both."
+
+Besides that, I felt really confident in what I was doing. I didn't have to reference much code. I could do it mostly from memory. Having the logic organized in sections with comments helped me understand what I needed to do next. 
+
+**Link To Work:** [Second Commit (unfinished) for Quiz](https://github.com/dangerousdashie/first-quiz-project/commit/f2110b94c3e6ae1065bed2b8c89ee047595090ec)
+
+### R1D20 - 1/20/19
+Coding: I started to make a quiz with JavaScript, JSON, CSS, HTML, and jQuery. I organized my code by commented sections like `//-----click event for answer` to be more organized with my code. I used what I learned about the DevTools Debugger to solve issues.
+
+Tutorial: I continued my tutorial on JavaScript prototypes on lynda.com. I used the dubugger to figure out problems in my code when I was following along. I had a problem with the debugger that I posted about [here](https://stackoverflow.com/questions/54279206/pause-script-execution-in-chrome-devtools-not-working-as-expected?noredirect=1#comment95380257_54279206).
+
+**Link To Work:** [First Commit (unfinished) for Quiz](https://github.com/dangerousdashie/first-quiz-project/commit/59c60f4d67f991118d99184796ee9b005b458196)
+
+### R1D19 - 1/19/19
+I drew out a few layouts I wanted to make and then used css grid to make them. I was having trouble because my footer would align to the top of the grid row. This [tutorial](https://dev.to/niorad/keeping-the-footer-at-the-bottom-with-css-grid-15mf) solved my problem. I wanted to try to see if I could create a dynamic grid-template-row value so that the recommendation in the tutorial (grid-template-row: auto 1fr auto;) works for more than 3 rows. I can manually do this with media queries, but I thought what if I don't know how many rows there will be? It would be great if I can have the grid fit to the header and footer by always having the first and last rows set to auto. But always have every row inbetween be 1fr no matter how many rows. I don't think there's a way to do this without some plugins. I couldn't find a property in jQuery or the DOM that could do this. I think you can maybe do it with CSS variables but I don't know how. I just realized I can maybe do what I want with grid-auto-rows. No nevermind, I can't. 
+
+I realized using margin on my grid throws things off because the box sizing is by the border and margin is outside of the border. So You have to do padding instead. 
+
+My twitter app still wasn't approved. For my tutorial I did debugging javascript and started javascript prototypes on lynda. I also reaplied for a My Fitness Pal API key.
+
+**Thoughts and Feelings:** I'm feeling a lot more comfortable with grid. I'd like to start focusing on getting my javascript experience again and move away from just css layouts since I'm more comfortaable with those. I need to think about some project ideas that will apply to what I'm learning while I'm waiting to get my twitter app approved. 
+
+**Link To Work:** [Grid Layout Example](https://github.com/dangerousdashie/grid-layout-header-footer-example)
+
+### R1D18 - 1/18/19
+I am following this [tutorial](https://hackernoon.com/create-a-simple-twitter-bot-with-node-js-5b14eb006c08) to create a twitter bot but I have to wait to get my projecf approved. They don't talk about that in the tutorial because I think it's a new twitter policy. I also worked on recreating layout9 on gridbyexample.com. For my tutorial I did javascript debugging on lynda.
+
+### R1D17 - 1/17/19
+I worked on css grid and responsive layout today. I found a great site that has a bunch of sample layouts. I tried to copy one of them and made a repo documenting my process. For my hour of tutorial I did lynda's javascript debugging tutorial.
+
+**Thoughts/Feelings:** I had a lot of energy today during my coding and my tutorial. I was very motivated. Where as, the past few days, I'd just been going through the motions and not enjoying myself, today I was focused, attentive, and energized. I think these things helped: Getting pumped before my coding and tutorial by reading about coding and learning. I also read through some tutorials that sounded interesting to me which got me excited about coding them in the future. Instead of setting a timer to 60 minutes, I set a stopwatch and just let it run. So I wasn't thinking about the time as much. I normally wonder, when is the timer going to go off? I was instead focused on the task. I took some breaks to re-energize. For my coding, I gave myself an actual goal: finish a layout. Sometimes I make my goal too broad ex. practice layouts. A specific goal keeps me interested because I have something to attain. For my tutorial, I connected my overall goals with learning debugging. I thought about how learing to debug right now is going to make all my coding easier. This motivated me.
+
+**Link To Work:** [Layout Copycat project](https://github.com/dangerousdashie/grid_by_example_layout8_copycat)
+
+### R1D16 - 1/16/19
+I went through grid garden. Then I tried making a responsive 12 column grid with media queries. I realized I understand less than I thought.
+
+**Thoughts/Feelings:** I need to work on getting more pumped while coding like I do with exercise. I need to implement "goal setting to the now" breaks to reinvigorate my brain. I think I may need more of a concrete goal with coding. Today, I was just like, "let's practice responsive design." But maybe I need to plan more what I'm going to try to make to have a goal I can accomplish.
+
+**Link To Work:** [Responsive Grid Practice](https://github.com/dangerousdashie/responsive_design_practice/tree/072164083ab3b3ffcd29b06cbe434aac512edc3f)
+
+### R1D15 - 1/16/19
+I completed day 15 yesterday but didn't update my log.  I finished the responsive layout challenge from the responsive layout tutorial on lynda. i had to look at what the teacher did. I had way over complicated what I was supposed to do. I finished the Responsive Layout tutorial and the jQuery tutorial.
+
+**Link To Work:** [Lynda Flexbox Challenge](https://github.com/dangerousdashie/lynda_flexbox_challenge/tree/894e4398aaea4168ebbfe295b73028ea4d69e2bd)
+
+### R1D14 - 1/14/19
+I worked on flexbox. The tutorial on lynda I'm doing gave me a challnge so that's what I worked on. I am having an issue with the header in the media query. It's doing somethings I don't expect it to do. It must have something to do with the css that it's inheriting, from before the media query. I wonder the best way to debug it. Maybe there's a course on debugging css. I use the debugger but maybe I can do a better job.
+
+**Link To Work:** [Lynda Flexbox Challenge](https://github.com/dangerousdashie/lynda_flexbox_challenge/tree/f65a6daea1e88da7f5a38d86a1ec48ae98e33850)
+
+### R1D13 - 1/13/19
+I figured out my bug from yesterday. I was trying to decide a uri but i had never encoded it. I  dont totally ubderstand  why you have to do it that way. 
+
+### R1D12 - 1/12/19
+I am trying to grab the parameter value from the uri so I can append the poduct name from the uri to the page. It's not working and I'm not sure why but I think it may be a mistake it how I formed the uri to begin width. I'm going to compare what I did to what the teacher did. 
+
+**Thoughts/Feelings:** Annoyed that I spent a whole hour hardly accomplishing anything. But I think every experience I have is good in some way.
+
+### R1D11 - 1/11/19
+I'm reading this book called The One Thing. The book talked about "Goal Setting to the Now" which helps you take a long-term view of your goals and narrow it down to what you need to do right now to move towards that goal. So I used the technique to figure out how I need to spend my coding time. I decided that I need to really practice my javascript. So today I looked at some of the other solutions on the katas I've done. I looked at the methods that people used and read the documentation on them. I tried them out myself. Even just reading the documentation is helpful because I'm getting exposed to terminalogy. The more I read the documentation the more I'm able to understand new information I read in the documentation. I want to do some more coding later, I feel inspired to learn more.
+
+### R1D10 - 1/10/19
+I looked at some of the other katas. Then I practiced jQuery. I made a project that involved my friends faces. I want to make it more fun. I did more jquery tutorial outside of coding.
+
+**Link To Work:** [Friends Faces](https://github.com/dangerousdashie/friends_faces/tree/dc5ba4b7514dac337f300cb71ebcca6f05f93eda)
+
+### R1D9 - 1/9/19
+  I finished the [Number of trailing zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript) kata. I used the debugger and jasmine unit tests. My solution was so unnecessarily verbose. It had an entire step that was unnecessary but that was more due to the fact that I misunderstood the equation to finding the trailing 0's for factorials than my ability to write clean code. Which is why I'm not a fan of these kata's that make you learn non-programing ideas. Uchhh! Maybe it will come in handy in trivia one day? But even still my code was verbose because I refactored it after realizing I didn't need that step and it is still long. I'll look at the other solutions later. It was a 5 kyu kata so it was hard. 
+  I ran into an infinite loop today and debugged it. I'd like to learn more about debbugging. I think it's the one thing that by learning it everything else will be easier. That's the focusing question from The One Thing. 
+  Outside of coding, I did more of the jQuery tutorial on lynda. It helped to take a break between my tutorial and coding. I think I might do more coding later because it's only 12:33 and I finished my tutroial, my coding, and my workout so I'm done really early.
+
+### R1D8 - 1/8/19
+I worked on a jQuery challenge from my lynda tutorial. I solved half of it. I didn't solve the other half because we hadn't actually learned the solution. So I was thrown off. I could have figured it out with some googling but I assumed I just missed the answer from the tutorial. But it wasn't actually in the tutorial. But the answer was similar to what I thought I just didn't know the properties/function I needed to know. Then I set up jasmine again, this time on a single html page. Then I set it up with my solution for the codewars kata, [Number of trailing zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript). 
+
+**Thoughts/Feelings:** I didn't take a break between my tutorials this morning and my coding hour. I think I work better when I take a break. It's nice to be done early now, but my break makes my actual work better and makes me more present. I was also distracted listening to shlomo talk to his friends on the phone. So I either have to ask Shlomo to be quiet or put clasical music or something on my head phones. Lesson: it's more important to be focused than to try to check off that I did something.
+
+**Link To Work:** [Jasmine Single Page Addition](https://github.com/dangerousdashie/single_page_jasmine_simple)
+
+### R1D7 - 1/7/19
+I tried using Jasmine.js to run a simple unit test. [This](https://evanhahn.com/how-do-i-jasmine/) tutorial was helpful in getting started. Outside of my hour of coding I did an hour of a jQuery tutorial on lynda.com.
+
+**Thoughts/Feelings:** Felt like I did more reading than coding but I'm glad I got one unit test written.
+
+**Link To Work:** [Trying Out Jasmine](https://github.com/dangerousdashie/unit_testing/tree/master/jasmine-standalone-3.3.0)
+
+### R1D6 - 1/6/19
+Learned how to use Chrome DevTools to debug my javascript code. It seems more efficient than doing console.log() for everything. I tried to debug my code for the [Number of trailing zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript) codewars kata. I'm having trouble because for some reason one variable is giving me a weird result when I += a number to it. It becomes undefined. 
+
+I've also been doing lynda tutorials and other tutorials but I havn't been talking about them on here because we're not supposed to count tutorials for this challenge. But maybe I will start talking about what I'm learning on the tutorials just to track what I'm learning.
+
+**Thoughts/Feelings:** Glad I finally started debugging in DevTools. I knew console.log() could not be the best way to debug. I would like to learn more about debugging.
+
+### R1D5 - 1/5/19
+Worked on the [Number of trailing zeros of N!](https://www.codewars.com/kata/52f787eb172a8b4ae1000a34/train/javascript) kata on code wars. I didn't finish it. I spent most of the time trying to understand factorials. Kind of annoying. I don't like when these katas make you learn something unrelated to programming. But I also couldn't stop once I started.
+
+**Thoughts/Feelings:** Annoyed about having to learn about factorials. But I think I will finish it tomorrow.
+
+### R1D4 - 1/4/19
+Played with CSS grid. Wondering how to keep the grid items proportional even if the grid cells' proportions change. Is this possible? So in my example below; even though the grid cells can change to rectangular or square depending on the viewport, could I make the width and height for the grid item stay proporional. So in this case the grit items would always be cirlces and never become ovals even when the grid cell is a rectangle.
+
+**Thoughts/Feelings:** Confused.
+
+**Link To Work:** [grid_layout_practice](https://github.com/dangerousdashie/grid_layout_practice/tree/3dfe4f76488bf7f9eb0b7ea6bed602a9440e517b)
+
+### R1D3 - 1/3/19
+I made a program that uses the canvas api. When the user clicks a button it adds a random gradient to the canvas. I didn't like the blacks and grays. I realized I can use hsl color instead of rgb color to generate random colors with high saturation and medium to high lightness to avoid grays. I would love to try to make this so that the colors change depending on where the sun is in the sky. For example, bright colors in mid day, blues at twighlight, etc. Maybe there is an API for sun position?
+
+**Link To Work:** [Random Color Generator](https://github.com/dangerousdashie/RandomColorGradient/tree/d450bcc4c9288c7fbf85a5c067178a3fb04a4b04)
+
+### R1D2 - 1/2/19
+Today I reviewed the other answered to the [Count the Digits](https://www.codewars.com/kata/566fc12495810954b1000030) kata. I tried it the way the top answer did it. Then I worked with the canvas API. Gonna try to make a Javascript program that draws using the canvas API.
+
+### R1D1 - 1/1/19
+I did some coding from scratch and memory; taking html input values as javascript function parameters. Then I finished the [Count the Digits](https://www.codewars.com/kata/566fc12495810954b1000030) kata I looked at yesterday. I started working on a different solution to the same kata before I submitted but I couldn't figure it out. It looks like some of the top answers are what I was trying to do. 
+
+**Thoughts/Feelings:** Good day. Got some skeeter bites from coding outside. I feel a little overwhelmed when I see how good these other kata answers are. I'm going to review some of the top ones.
+
+**Link To Work:** [Dashie's Solution to Count the Digits](https://www.codewars.com/kata/566fc12495810954b1000030/solutions/javascript/me/best_practice)
+
+## Pre-Round-Log
+### PR1D6 - 12/31/18
+I coded in the passengers seat while driving to Fort Myers today. I re-coded [Random Bonus Points](https://github.com/dangerousdashie/Random_Bonus_Points/tree/eb7ebbbc6ace242072246ad62c8464a886ef47a3) from scratch and memory all over again. Then I added some responsive CSS. Then I went on code wars and started the [Count the Digits](https://www.codewars.com/kata/566fc12495810954b1000030) kata. I didn't get to coding the challenge but I made an HTML interface for the challenge. So really I worked on how to pass HTML input values as Javascript function parameters. I haven't put it on github yet. I might try to do some tutorials today too, but it's NYE so we'll see if I have time.
+
+**Thoughts/Feelings:** Feeling good. Getting more comfortable with the stuff I'd been using but didn't really understand.
+
+### PR1D5 - 12/30/18
+I coded for around 1:40 hr. I spent today trying to rewrite [Random Bonus Points](https://github.com/dangerousdashie/Random_Bonus_Points) from scratch & memory to review what I learned. I ran into a bug  that only happened when my code was in a certain order. I spent so long trying to figure out why. I totally overcomplicated it. The solution was that the code was missing a semicolon!! I thought it had to do with something complex, something with how self executing functions work. OMG I spent so long on this stupid issue! I only figured it out because I posted it on stackoverflow and someone showed me. But I learned my lesson. I always thought semicolons were optional in javascript. Sometimes my code works without them. I guess they aren't! I might continue my jQuery tutorial or responsive design tutorial later today if I have time.
+
+**Thoughts/Feelings:** Feels like I wasted so much time, but I know it's all part of the process. My back and eyes feel stressed. Need to take a break.
+
+### PR1D4 - 12/29/18
+I found out why the variable only works from inside the function. Since the script is run in the head of the HTML doc, the variable is created before the DOM. The DOM element doesn't exist yet, so it saves as null. I'm trying to figure out how to save it globally. I tried window.onload but it's not working. I also reviewed how to push to github from the command line and find files in unix. I pushed this project to github from the command line. 
+
+**Update:** I did some more coding and I figured out the issue. I was calling the function that I set equal to onload, instead of just setting it equal to onload. Now my little program is working.  
+
+**Link to work:** [Random Bonus Points](https://github.com/dangerousdashie/Random_Bonus_Points)
+
+### PR1D3 - 12/28/18
+I continued the project from yesterday. I was able to get a function called at random intervals. Now I'm dealing with an issue trying to reference a variable that stores a dom element. It only works from inside the function. But I thought outside the function, the variable is still in scope. What's going on? I coded for 65 minutes.
+
+
+### PR1D2 - 12/27/18
+
+I coded for an 1:19hr but not all at once. I practiced coding from scratch and from memory an html document with externally linked css and javascript. Then I tried to make a program that gave you points everytime you clicked a button. If it was during a randomized special bonus time you'd get extra points. This is a miniversion of a feature I want in a brain training app I'm making. I was having trouble getting the program to toggle the bonus time on and off at random times. Still working on this. It's too much of a mess to post on github. Should I post things that are a huge mess?
+
+### PR1D1 - 12/26/18
+I decided to do some preliminary days before the New Year starts. This way I can test power supply issues and other issues that come about from van lifing. Today, I coded for 63 minutes and 35 seconds. At the hour mark I was down to 68% power from 95%. I am looking into web dev environments I can use on my iPhone to save power.
+
+Today I coded a very simple program. I used HTML, CSS, and Javascript. I wanted to stay away from jQuery, which I'm learning, because I want to make sure I have some experience with just Javascript so I'll be able to tell the two apart better in the future.
+
+My program counts the number of times you click a button. My goal was to code this from scratch- no copy and pasting snipets of code. I started with a blank page and did the whole HTML/code by hand. I deleted it and started from a blank page a few times in a row until I could do it without any typos and errors.
+
+Ok now I need to figure out how to push it to github and link it here. Power currently at 63%.
+
+OK here it is! Not sure If I should have done it as a gist or repository. I still don't know how this all works.
+
+**Link to work:** [Simple Button Click Counter](https://github.com/dangerousdashie/Simple-Button-Click-Counter)
+
+Computer power now at 59%.
+
+## Starting #100DaysOfCode
+Dashie here, looking to start this challenge with the new year, **Jan 1, Tuesday, 2019.** Today is December 25th. I'm at a Starbucks in Tequesta, FL. I'm originally from Chicago, but I'm a nomad living in a Rialta, a van sized RV, with my spouse Shlomo. I decided to learn to code when our van broke down at a Barnes and Nobles in early 2017 and I bought a programming book. Now I'm looking to get more serious with my time so I'm commiting to this challenge. I already aim to spend 100 minutes a day doing coding tutorials, but I've decided to commit to an hour a day of hands on coding with this challenge. I'm not sure if my van's solar power set up will be able to handle the power required for these commitments, but I'm going to attempt the challenge anyways. I may still aim to just do 100 minutes a day, but use 60 minutes of that just for hands on coding and 40 minutes for tutorials. Ok, be back on Jan 1st!
