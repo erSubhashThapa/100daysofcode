@@ -12,13 +12,14 @@
   <img src="log_imgs/colorsquare_4-2.png"  width="250" />
 
   
-  The color picker windor should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors on your screen and click on the color you want to get the infor for the color. This also changess the color value for the property you clicked on.
+  The color picker windor should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors on your screen and click on the color you want to get the hex number. This also changes the color value for the property you originally clicked on when you clicked the color square.
   
   <img src="log_imgs/colorpicker_4-2.png"  width="250" />
   
   ## Design
   
   I want to model my design after the MyFitnessPal design so it's easy to look back and forth between my app and MyFitnessPal.
+  
   <img src="log_imgs/mfp2_3-31.PNG"  width="250" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" />
   
   
