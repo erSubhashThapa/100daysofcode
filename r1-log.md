@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
 ## Day 92
-### 4/2/19
+### 4/2/19 -- editing
 
   I accidently deleted a bunch of entries on my log some how. So I went back to an old commit and copied them back in.
   
@@ -171,7 +171,7 @@
   
   Here you can see what info MyFitnessPal asks for, which pretty much corresponds to what you'd see on a **USDA food label**.
   
-  <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="200" />
+  <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" />
   
   ### Nutrients
   - Calories
