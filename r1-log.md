@@ -8,6 +8,14 @@
 - ## USDA Food Composition Database App
   ## DevTools Color Picker
   
+  To use the color picker in dev tools, find a color square in the styles panel and click it.
+  
+  ![screenshot](log_imgs/colorsquare_4-2.png)
+  
+  The color picker windor should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors on your screen and click on the color you want to get the infor for the color. This also changess the color value for the property you clicked on.
+  
+  ![screenshot](log_imgs/colorpicker_4-2.png)
+  
   
 
 ## Day 91
