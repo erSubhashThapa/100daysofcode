@@ -12,7 +12,7 @@
   <img src="log_imgs/colorsquare_4-2.png"  width="250" />
 
   
-  The color picker windor should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors on your screen and click on the color you want to get the hex number. This also changes the color value for the property you originally clicked on when you clicked the color square.
+  The color picker windor should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors in your browser window and click on the color you want to get the hex number. This also changes the color value for the property you originally clicked on when you clicked the color square.
   
   <img src="log_imgs/colorpicker_4-2.png"  width="250" />
   
@@ -22,11 +22,13 @@
   
   <img src="log_imgs/mfp2_3-31.PNG"  width="250" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" /> <img src="log_imgs/mfp4_4-2.PNG"  width="250" />
   
-  ### These are the colors MyFitnessPal uses
+  ### MyFitnessPal Colors
+  
+  I used the color picker to find these colors with dev tools. I used these image files that are hosted here on githib.
   
   - Blue bar: #0071bb
   - Gray bar: #efeff4
-  - Thing gray border: #d1d5da
+  - Thin gray border: #d1d5da
   - "Create Food": #ffffff
   - Check: #7eb8de
   - "Nutrtion Facts": #333333
@@ -37,7 +39,7 @@
   - Previously entered text: #6a6a6a
   
   
-  
+  https://codepen.io/scissorsneedfoodtoo/pen/MxVpLK
 
 ## Day 91
 ### 4/1/19
