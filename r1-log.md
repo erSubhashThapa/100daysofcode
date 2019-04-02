@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
 ## Day 92
-### 4/2/19 -- editing
+### 4/2/19
 
   I accidently deleted a bunch of entries on my log some how. So I went back to an old commit and copied them back in.
   
