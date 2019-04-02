@@ -38,8 +38,21 @@
   - Typing text: ##0071bb
   - Previously entered text: #6a6a6a
   
+  ## Layout
+  
+  I used this codepen to get ideas for how to position the label.
   
   https://codepen.io/scissorsneedfoodtoo/pen/MxVpLK
+  
+  ## CSS So Far
+  
+  This is what I have so far
+  
+  <img src="log_imgs/css_4-2.PNG"  width="300" />
+  
+  ## Bye Bye
+  
+  I need to sign off, sorry about any mispellings- computer running out of power.
 
 ## Day 91
 ### 4/1/19
