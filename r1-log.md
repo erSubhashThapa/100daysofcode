@@ -16,6 +16,11 @@
   
   ![screenshot](log_imgs/colorpicker_4-2.png)
   
+  ## Design
+  
+  I want to model my design after the MyFitnessPal design so it's easy to look back and forth between my app and MyFitnessPal.
+  <img src="log_imgs/mfp2_3-31.PNG"  width="250" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" />
+  
   
 
 ## Day 91
@@ -171,7 +176,7 @@
   
   Here you can see what info MyFitnessPal asks for, which pretty much corresponds to what you'd see on a **USDA food label**.
   
-  <img src="log_imgs/mfp2_3-31.PNG"  width="200" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" />
+  <img src="log_imgs/mfp2_3-31.PNG"  width="250" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" />
   
   ### Nutrients
   - Calories
