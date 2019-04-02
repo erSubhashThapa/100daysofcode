@@ -20,7 +20,17 @@
   
   I want to model my design after the MyFitnessPal design so it's easy to look back and forth between my app and MyFitnessPal.
   
-  <img src="log_imgs/mfp2_3-31.PNG"  width="250" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" />
+  <img src="log_imgs/mfp2_3-31.PNG"  width="250" /> <img src="log_imgs/mfp3_3-31.PNG"  width="250" /><img src="log_imgs/mfp4_4-2.PNG"  width="250" />
+  
+  Blue bar: #0071bb
+  Gray bar: #efeff4
+  Thing gray border: #d1d5da
+  "Create Food": #ffffff
+  "Nutrtion Facts": #333333
+  Nutrient Text: #343434
+  "Optional": #c7c7cc
+  Background: #ffffff
+  
   
   
 
