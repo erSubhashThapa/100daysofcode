@@ -72,7 +72,7 @@
   
   I went to a coworking meetup at Orange Co-Working in Austin.
   
-  ![screenshot](log_imgs/orange_4-3)
+  ![screenshot](log_imgs/orange_4-3.png)
 
 ## Day 92
 ### 4/2/19
