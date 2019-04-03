@@ -44,17 +44,6 @@
   ```javascript
   var n = "1.245000"
   var noZeroes = parseFloat(n) // "1.245"
-  
-  ### Remove trainig zeros
-  
-  ```javascript
-  var n = 1.245000
-  var noZeroes = n.toString() // "1.245"
-  ```
-  It works the other way too.
-  ```javascript
-  var n = "1.245000"
-  var noZeroes = parseFloat(n) // "1.245"
   ```
   
   ## CSS Funk
