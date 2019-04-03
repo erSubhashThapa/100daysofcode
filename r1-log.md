@@ -34,6 +34,10 @@
   
   I thought I should remove trailinig zeros (0.**000** to 0) with a regex and `.replace()`. But I couldn't find any regex that worked and I don't know regex well enough to figure it out. So I google "javascript remove trailing 0" and found [this](https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number) stackoverflow thread. 
   
+  ## CSS Funk
+  
+  I'm not sure why the submit button isn't aligning
+  
   ### Remove trainig zeros
   
   ```javascript
@@ -45,6 +49,34 @@
   var n = "1.245000"
   var noZeroes = parseFloat(n) // "1.245"
   ```
+  
+  ## CSS Funk
+  
+  I'm not sure why the submit button isn't aligning with the input:
+  
+  ![screenshot](log_imgs/css_4-3.png)
+  
+  ## To Do
+  
+  I did a lot of css today, and some code to format the labelVal to be rounded and without trailing zeros.
+  
+  ### Still Left
+  
+  - How to hide API key? can I do it without a backend?
+  - Css fixes
+  - PWA
+  - word food search
+  - try with promises, async/await
+  
+  ![screenshot](log_imgs/ndb_4-3.gif)
+  
+- ## Thoughts and Feelings:
+
+  I didn't respect my stretch breaks. I need to do that! I'm feeling the effects.
+  
+  I went to a coworking meetup at Orange Co-Working in Austin.
+  
+  ![screenshot](log_imgs/orange_4-3.HEIC)
 
 ## Day 92
 ### 4/2/19
