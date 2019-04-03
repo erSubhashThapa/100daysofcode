@@ -8,18 +8,21 @@
   
   I use regex a lot but I don't actuall know regex very well.
   
-  This is my process for using regex:
+  ### This is my process for using regex:
   
-  1. Google the regex I want or something similar. Ex: "***regex zeros after decimal***"
-  2. Find an answer, usually on stackoverflow. Ex: [stackoverflow:Using RegEx how do I remove the trailing zeros from a decimal number](https://stackoverflow.com/questions/26299160/using-regex-how-do-i-remove-the-trailing-zeros-from-a-decimal-number)
-  3. Go to this Regex testing site https://regexr.com/.
+  1. **Google** the regex I want or something similar. 
+     - Ex: "***regex zeros after decimal***"
+  2. **Find an answer**, usually on stackoverflow. 
+     - Ex: [Using RegEx how do I remove the trailing zeros from a decimal number](https://stackoverflow.com/questions/26299160/using-regex-how-do-i-remove-the-trailing-zeros-from-a-decimal-number)
+  3. **Go** to this Regex testing site 
+     - https://regexr.com/
   4. Put the suggested Rexeg in the **Expression** field.
   
-  ![screenshot](rgx1_4-2.png)
+     - ![screenshot](rgx1_4-2.png)
   
   5. Put the text you want to test in the **Text** area.
   
-  ![screenshot](rgx2_4-2.png)
+     - ![screenshot](rgx2_4-2.png)
 
 
 ## Day 92
