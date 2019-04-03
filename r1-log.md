@@ -18,11 +18,11 @@
      - https://regexr.com/
   4. Put the suggested Rexeg in the **Expression** field.
   
-     - ![screenshot](rgx1_4-2.png)
+     - ![screenshot](log_imgs/rgx1_4-2.png)
   
   5. Put the text you want to test in the **Text** area.
   
-     - ![screenshot](rgx2_4-2.png)
+     - ![screenshot](log_imgs/rgx2_4-2.png)
 
 
 ## Day 92
