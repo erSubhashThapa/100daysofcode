@@ -32,7 +32,7 @@
 
   ## Remove Trailing Zeros
   
-  I thought I should remove trailinig zeros (0.**000** to 0) with a regex and `.replace()`. But I couldn't find any regex that worked and I don't know regex well enough to figure it out. So I google "javascript remove trailing 0" and found [this](https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number) stackoverflow thread. 
+  I thought I should remove trailing zeros (***ex:*** 0.**000** to 0) with a regex and `.replace()`. But I couldn't find any regex that worked and I don't know regex well enough to figure it out. So I google "javascript remove trailing 0" and found [this](https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number) stackoverflow thread. 
   
   ## CSS Funk
   
