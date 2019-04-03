@@ -28,7 +28,7 @@
   
   #### Warning: 
   
-  There was one time when it didn't recognize some pattern that worked on another site. Check multiple regex tester sites if you get stuck.
+  There was one time when regexr.com didn't recognize some pattern that worked on another site. Check multiple regex tester sites if you get stuck.
 
   ## Remove Trailing Zeros
   
