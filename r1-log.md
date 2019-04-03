@@ -16,7 +16,7 @@
      - Ex: [Using RegEx how do I remove the trailing zeros from a decimal number](https://stackoverflow.com/questions/26299160/using-regex-how-do-i-remove-the-trailing-zeros-from-a-decimal-number)
      
   3. **Go to [regexr.com](https://regexr.com/)** to test your regex and play around with it. 
-  4. Put the suggested Rexeg in the **Expression** field.
+  4. Put the suggested Rexeg in the **Expression** field, replacing \[A-Z]\w+.
   
      - ![screenshot](log_imgs/rgx1_4-2.png)
   
@@ -30,6 +30,21 @@
   
   There was one time when it didn't recognize some pattern that worked on another site. Check multiple regex tester sites if you get stuck.
 
+  ## Remove Trailing Zeros
+  
+  I thought I should remove trailinig zeros (0.**000** to 0) with a regex and `.replace()`. But I couldn't find any regex that worked and I don't know regex well enough to figure it out. So I google "javascript remove trailing 0" and found [this](https://stackoverflow.com/questions/3612744/remove-insignificant-trailing-zeros-from-a-number) stackoverflow thread. 
+  
+  ### Remove trainig zeros
+  
+  ```javascript
+  var n = 1.245000
+  var noZeroes = n.toString() // "1.245"
+  ```
+  It works the other way too.
+  ```javascript
+  var n = "1.245000"
+  var noZeroes = parseFloat(n) // "1.245"
+  ```
 
 ## Day 92
 ### 4/2/19
