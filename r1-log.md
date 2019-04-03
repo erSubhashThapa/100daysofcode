@@ -14,8 +14,7 @@
      - Ex: "***regex zeros after decimal***"
   2. **Find an answer**, usually on stackoverflow. 
      - Ex: [Using RegEx how do I remove the trailing zeros from a decimal number](https://stackoverflow.com/questions/26299160/using-regex-how-do-i-remove-the-trailing-zeros-from-a-decimal-number)
-  3. **Go** to this Regex testing site 
-     - https://regexr.com/
+  3. **Go to [regexr.com](https://regexr.com/)** to test your regex and play around with it. 
   4. Put the suggested Rexeg in the **Expression** field.
   
      - ![screenshot](log_imgs/rgx1_4-2.png)
@@ -23,6 +22,12 @@
   5. Put the text you want to test in the **Text** area.
   
      - ![screenshot](log_imgs/rgx2_4-2.png)
+     
+  6. Keep playing with the regex, googling additional help, etc until it highlights what you want.
+  
+  #### Warning: 
+  
+  There was one time when it didn't recognize some pattern that worked on another site. Check multiple regex tester sites if you get stuck.
 
 
 ## Day 92
