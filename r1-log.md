@@ -1,5 +1,27 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 93
+### 4/3/19
+
+- ## USDA Food Composition Database App
+  ## Using Regex When You Don't Know Regex
+  
+  I use regex a lot but I don't actuall know regex very well.
+  
+  This is my process for using regex:
+  
+  1. Google the regex I want or something similar. Ex: "***regex zeros after decimal***"
+  2. Find an answer, usually on stackoverflow. Ex: [stackoverflow:Using RegEx how do I remove the trailing zeros from a decimal number](https://stackoverflow.com/questions/26299160/using-regex-how-do-i-remove-the-trailing-zeros-from-a-decimal-number)
+  3. Go to this Regex testing site https://regexr.com/.
+  4. Put the suggested Rexeg in the **Expression** field.
+  
+  ![screenshot](rgx1_4-2.png)
+  
+  5. Put the text you want to test in the **Text** area.
+  
+  ![screenshot](rgx2_4-2.png)
+
+
 ## Day 92
 ### 4/2/19
 
@@ -12,7 +34,7 @@
   <img src="log_imgs/colorsquare_4-2.png"  width="250" />
 
   
-  The color picker windor should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors in your browser window and click on the color you want to get the hex number. This also changes the color value for the property you originally clicked on when you clicked the color square.
+  The color picker window should pop up. If the dropper is blue it means the color picker is activated. Hover over different colors in your browser window and click on the color you want to get the hex number. This also changes the color value for the property you originally clicked on when you clicked the color square.
   
   <img src="log_imgs/colorpicker_4-2.png"  width="250" />
   
