@@ -42,7 +42,7 @@
   
   [NDB API Lists Documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-LIST.md)
   
-  We need the param `lt=n` which means list type = nutrients. You can also get lists of other things like food groups. We'll also need to raise the max results, which defaults to 50. There are 196 nutrients in this list which you can see in the return response: `"total": 196`. But the max results sefaults to 50. So we add the param `max=196'
+  We need the param `lt=n` which means list type = nutrients. You can also get lists of other things like food groups. We'll also need to raise the max results, which defaults to 50. There are 196 nutrients in this list which you can see in the return response: `"total": 196`. But the max results defaults to 50. So we add the param `max=196'
   
   https://api.nal.usda.gov/ndb/list?format=json&max=196&lt=n&api_key=DEMO_KEY
   
