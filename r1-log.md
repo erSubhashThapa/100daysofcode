@@ -14,7 +14,7 @@
   
   I this was just the browsers style sheet adding padding to the top.
   
-  ![screenshot](log_imgs/css_4-4.png)
+  ![screenshot](log_imgs/css_4-4.PNG)
   
   So I added `padding:0;` to my style sheet to override the user agent stylesheet.
   
