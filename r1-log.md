@@ -1,6 +1,134 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 93
+## Day 94
+### 4/4/19
+
+- ## USDA Food Composition Database App
+  
+  ## CSS Issue
+  I had this Css issue. The Submit Button didn't align with the input.
+  
+  ![screenshot](log_imgs/css_4-3.png)
+  
+  ### Solution:
+  
+  I this was just the browsers style sheet adding padding to the top.
+  
+  ![screenshot](log_imgs/css_4-4.png)
+  
+  So I added `padding:0;` to my style sheet to override the user agent stylesheet.
+  
+  ## Hiding The API Key
+  
+  Fellow #100DaysOfCoder [Evan Burnell](https://twitter.com/ev_burrell) suggested using [dotend](https://t.co/DOuoLuePMZ)
+  
+  I found [this tutorial by Dev Coffee](https://www.youtube.com/watch?v=zDup0I2VGmk). It looked simple enough. I was intimidated at first by the backend/npm stuff. But It doesn't look too hard. I already have npm set up from when I ook a tutorial on it on lynda.com.
+  
+  I didn't follow the tutorial yet. 
+  
+  ## Switching Gears
+  
+  So I know I keep starting apps and not finishing them. But, I feel like instead of setting up dotenv, I really should stick to what I need to learn: async/await, promises. 
+  
+  I also am super curious about playing with this other app idea I've had for awhile that also has to do with the USDA NDB API. It would take a recipe and users daily macros, and fit the recipe to their macros. It seems hard to me. So I just want to play around wiht API in the console and see if I can get a clearer idea of what I need.
+  
+  ## NDB
+  
+  ## Lists
+  
+  I wanted to play around with getting foods by the highest value for a nutrient. We have to get the list of nutrient codes first, because we'll need the code for the nutrient we want to pass into the params. 
+  
+  [NDB API Lists Documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-LIST.md)
+  
+  We need the param `lt=n` which means list type = nutrients. You can also get lists of other things like food groups. We'll also need to raise the max results, which defaults to 50. There are 196 nutrients in this list which you can see in the return response: `"total": 196`. But the max results sefaults to 50. So we add the param `max=196'
+  
+  https://api.nal.usda.gov/ndb/list?format=json&max=196&lt=n&api_key=DEMO_KEY
+  
+  Now I can `cmd + f` to find the listing for the nutrients I want to play with. For example, protein is 203.
+  
+  ## Nutrient Reports
+
+  Let's say I want to retrieve a bunch of foods with the highest iron. I need a nutrient report.
+  
+  Here's the [Nutrient Report documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md).
+  
+  Iron's nutrient id is 205. If you do a nutrient search for any nutrient and the paramter sort=c, to sort by nutrient content, you get two problems:
+  
+   - bunch of results, too many. 
+   - No standard weight: The results aren't organized by value per 100g. Instead it sorts it by value for other weights. Which makes comparisons hard.
+   
+   To reduce the number of results I added food groups to the parameters. You can use lists to get a list of food groups:
+  
+  
+  **Food Groups List:** https://api.nal.usda.gov/ndb/list?format=json&lt=g&api_key=DEMO_KEY
+  
+  You can only use 10 groups in your search so I went with the one's most relavant to keto paleo, since that's what my app with deal with:
+  
+  ### Food Groups
+  Beef Products: 1300
+  Dairy and Egg Products: 0100
+  Fats and Oils: 0400
+  Finfish and Shellfish Products: 1500
+  Fruits and Fruit Juices: 0900
+  Lamb, Veal, and Game Products: 1700
+  Nut and Seed Products: 1200
+  Pork Products: 1000
+  Poultry Products: 0500
+  Vegetables and Vegetable Products: 1100
+  
+  
+  #### These also semmed MAYBE relevant but I didn't have enough room:
+  Sausages and Luncheon Meats: 0700
+  Spices and Herbs: 0200
+  American Indian/Alaska Native Foods: 3500
+  Legumes and Legume Products: 1600
+  
+  Here's the search for all these food groups for iron:
+  
+  https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300&fg=0100&fg=0400&fg=1500&fg=0900&fg=1700&fg=1200&fg=1000&fg=0500&fg=1100measureby=g
+
+  ### No Standard Weight Problem
+  
+   If you use USDA Food Composition Databases's [nutrient search](https://ndb.nal.usda.gov/ndb/nutrients/), you can specify to *measure by 100g*. I wondered if there's an equivilet param for the api. The param in the search is `measureby=g`. But when I add that to my api url:
+
+  https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300&measureby=g
+
+  vs. 
+
+  https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300
+
+  It makes no difference.
+  
+  What we can do is sort the list after we retrieve it by gm instead of value. From the [documenntation for the NDB API Nutrient Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md):
+  
+  **value:** Value of the nutrient for this food
+  
+  **gm:**	The 100 gram equivalent value for the nutrient 
+
+  ## Playing With a Sample Recipe
+  I realized I might not really need the nutriet reports for what I want to do. I decided to start playing around with a sample recipe.
+  
+  I got the NDB numbers for some ingredients for a basic salad.
+  
+  ### Ingredients and NDBno
+  
+  Beef, ground, 95% lean meat / 5% fat, raw: **23557**
+  Lettuce, cos or romaine, raw: **11251**
+  Oil, olive, salad or cooking: **04053**
+  Cauliflower, raw:  **11135**
+  
+  Tomorrow, I'll play with these. 
+  
+- ## Thoughts and Feelings:
+
+  I'm kind of excited to play with this tomorrow! I think since I'll be grabbing more than one food, this might require multiple asynchronous functions. This would help me understand promises, async, await, etc. But I'm excited because it's part of an app idea I really want to make.
+  
+  Today I co-worked at Emerald Tavern Games and Cafe in Austin.
+  
+  ![screenshot](log_imgs/cowork_4-34.jpg)
+  
+  
+
 ### 4/3/19
 
 - ## USDA Food Composition Database App
