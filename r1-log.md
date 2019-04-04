@@ -32,9 +32,9 @@
   
   So I know I keep starting apps and not finishing them. But, I feel like instead of setting up dotenv, I really should stick to what I need to learn: async/await, promises. 
   
-  I also am super curious about playing with this other app idea I've had for awhile that also has to do with the USDA NDB API. It would take a recipe and users daily macros, and fit the recipe to their macros. It seems hard to me. So I just want to play around wiht API in the console and see if I can get a clearer idea of what I need.
+  I also am super curious about playing with this other app idea I've had for awhile that also has to do with the USDA NDB API. It would take a recipe and users daily macros, and fit the recipe to their macros. It seems hard to me. So I just want to play around with the NDB API in the console and see if I can get a clearer idea of what I need.
   
-  ## NDB
+  ## Playing More with NDB API
   
   ## Lists
   
@@ -56,10 +56,10 @@
   
   Iron's nutrient id is 205. If you do a nutrient search for any nutrient and the paramter sort=c, to sort by nutrient content, you get two problems:
   
-   - bunch of results, too many. 
-   - No standard weight: The results aren't organized by value per 100g. Instead it sorts it by value for other weights. Which makes comparisons hard.
+  - bunch of results, too many. 
+  - No standard weight: The results aren't organized by value per 100g. Instead it sorts it by value for other weights. Which makes comparisons hard.
    
-   To reduce the number of results I added food groups to the parameters. You can use lists to get a list of food groups:
+  To reduce the number of results I added food groups to the parameters. You can use lists to get a list of food groups:
   
   
   **Food Groups List:** https://api.nal.usda.gov/ndb/list?format=json&lt=g&api_key=DEMO_KEY
