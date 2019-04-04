@@ -6,9 +6,9 @@
 - ## USDA Food Composition Database App
   
   ## CSS Issue
-  I had this Css issue. The Submit Button didn't align with the input.
+  I had this CSS issue. The Submit Button didn't align with the input.
   
-  ![screenshot](log_imgs/css_4-3.png)
+  <img src="log_imgs/css_4-3.png" width="250" />
   
   ### Solution:
   
