@@ -128,7 +128,7 @@
   
   Today I co-worked at Emerald Tavern Games and Cafe in Austin.
   
-  ![screenshot](log_imgs/cowork_4-4.jpg)
+  ![screenshot](log_imgs/co-work_4-4.jpg)
   
   
 
