@@ -64,38 +64,28 @@
   
   **Food Groups List:** https://api.nal.usda.gov/ndb/list?format=json&lt=g&api_key=DEMO_KEY
   
-  You can only use 10 groups in your search so I went with the one's most relavant to keto paleo, since that's what my app with deal with:
+  You can only use 10 groups in your search so I went with the one most relavant to keto paleo, since that's what my app with deal with:
   
-  ### Food Groups
-
-  Beef Products: 1300
-
-  Dairy and Egg Products: 0100
-
-  Fats and Oils: 0400
-
-  Finfish and Shellfish Products: 1500
-
-  Fruits and Fruit Juices: 0900
-
-  Lamb, Veal, and Game Products: 1700
-
-  Nut and Seed Products: 1200
-  
-  Pork Products: 1000
-  
-  Poultry Products: 0500
-  
-  Vegetables and Vegetable Products: 1100
+  ### Relevant Food Groups
+  - Beef Products: 1300
+  - Dairy and Egg Products: 0100
+  - Fats and Oils: 0400
+  - Finfish and Shellfish Products: 1500
+  - Fruits and Fruit Juices: 0900
+  - Lamb, Veal, and Game Products: 1700
+  - Nut and Seed Products: 1200
+  - Pork Products: 1000
+  - Poultry Products: 0500
+  - Vegetables and Vegetable Products: 1100
   
   
-  #### These also semmed MAYBE relevant but I didn't have enough room:
-  Sausages and Luncheon Meats: 0700
-  Spices and Herbs: 0200
-  American Indian/Alaska Native Foods: 3500
-  Legumes and Legume Products: 1600
+  #### These also seemed MAYBE relevant but I didn't have enough room:
+  - Sausages and Luncheon Meats: 0700
+  - Spices and Herbs: 0200
+  - American Indian/Alaska Native Foods: 3500
+  - Legumes and Legume Products: 1600
   
-  Here's the search for all these food groups for iron:
+  #### Here's the search for all these food groups for iron:
   
   https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300&fg=0100&fg=0400&fg=1500&fg=0900&fg=1700&fg=1200&fg=1000&fg=0500&fg=1100measureby=g
 
@@ -109,25 +99,26 @@
 
   https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300
 
-  It makes no difference.
+  **It makes no difference.**
   
-  What we can do is sort the list after we retrieve it by gm instead of value. From the [documenntation for the NDB API Nutrient Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md):
+  What we can do is sort the objects after we retrieve them by **gm** instead of **value**. `sort=c` sorts the list by value. From the [documenntation for the NDB API Nutrient Reports](https://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md). 
   
   **value:** Value of the nutrient for this food
   
   **gm:**	The 100 gram equivalent value for the nutrient 
+  
 
   ## Playing With a Sample Recipe
-  I realized I might not really need the nutriet reports for what I want to do. I decided to start playing around with a sample recipe.
+  I realized I might not really need the nutrient reports for what I want to do. I decided to start playing around with a sample recipe.
   
   I got the NDB numbers for some ingredients for a basic salad.
   
   ### Ingredients and NDBno
   
-  Beef, ground, 95% lean meat / 5% fat, raw: **23557**
-  Lettuce, cos or romaine, raw: **11251**
-  Oil, olive, salad or cooking: **04053**
-  Cauliflower, raw:  **11135**
+  - Beef, ground, 95% lean meat / 5% fat, raw: **23557**
+  - Lettuce, cos or romaine, raw: **11251**
+  - Oil, olive, salad or cooking: **04053**
+  - Cauliflower, raw:  **11135**
   
   Tomorrow, I'll play with these. 
   
