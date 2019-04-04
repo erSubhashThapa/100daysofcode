@@ -14,7 +14,7 @@
   
   I this was just the browsers style sheet adding padding to the top.
   
-  <img src="log_imgs/css_4-4.PNG
+  <img src="log_imgs/css_4-4.PNG" width="250" />
   
   ### Solution:
   
