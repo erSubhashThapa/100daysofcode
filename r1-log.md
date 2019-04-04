@@ -40,7 +40,7 @@
   
   I wanted to play around with getting foods by the highest value for a nutrient. We have to get the list of nutrient codes first, because we'll need the code for the nutrient we want to pass into the params. 
   
-  [NDB API Lists Documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-LIST.md)
+  Here's the [NDB API Lists documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-LIST.md)
   
   We need the param `lt=n` which means list type = nutrients. You can also get lists of other things like food groups. We'll also need to raise the max results, which defaults to 50. There are 196 nutrients in this list which you can see in the return response: `"total": 196`. But the max results defaults to 50. So we add the param `max=196'
   
