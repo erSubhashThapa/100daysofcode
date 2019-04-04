@@ -24,7 +24,7 @@
   
   Fellow #100DaysOfCoder [Evan Burnell](https://twitter.com/ev_burrell) suggested using [dotenv](https://t.co/DOuoLuePMZ).
   
-  I found [this tutorial by Dev Coffee](https://www.youtube.com/watch?v=zDup0I2VGmk). It looked simple enough. I was intimidated at first by the backend/npm stuff. But It doesn't look too hard. I already have npm set up from when I ook a tutorial on it on lynda.com.
+  I found [this tutorial by Dev Coffee](https://www.youtube.com/watch?v=zDup0I2VGmk). It looked simple enough. I was intimidated at first by the backend/npm stuff. But It doesn't look too hard. I already have npm set up from when I took a tutorial on it on lynda.com.
   
   I didn't follow the tutorial yet. 
   
