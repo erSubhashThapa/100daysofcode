@@ -54,7 +54,7 @@
   
   Here's the [Nutrient Report documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-NUTRIENT-REPORT.md).
   
-  Iron's nutrient id is 205. If you do a nutrient search for any nutrient and the paramter sort=c, to sort by nutrient content, you get two problems:
+  Iron's nutrient id is 205. If you do a nutrient search for any nutrient and the argument `sort=c`, to sort by nutrient content, you get two problems:
   
   - bunch of results, too many. 
   - No standard weight: The results aren't organized by value per 100g. Instead it sorts it by value for other weights. Which makes comparisons hard.
