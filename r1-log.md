@@ -95,7 +95,7 @@
 
   https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300&measureby=g
 
-  vs. 
+  ***VS.*** 
 
   https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=205&sort=c&fg=1300
 
