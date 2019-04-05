@@ -5,11 +5,11 @@
 
 - ## Recipe Calculator
 
-  I started a new project yesterday, which I logged about. It still uses the NDB API. This one takes a recipe and recalculates the ingredienst to fit your macros. I don't expect to finish this soon, It sounds hard. But I will use it first to get more comfortable with asynchronous functions. I also want to get an idea of how these calculations would work.
+  I started a new project, which I wrote about yesterday. It still uses the NDB API. This one takes a recipe and recalculates the ingredients to fit your macros. I don't expect to finish this soon, it sounds hard. But I will use it first to get more comfortable with asynchronous functions. I also want to get an idea of how these calculations for the ingredients would work.
   
   ## NDB Search API
   
-  I used the API to search for food products.
+  I used the Search API to search for food products.
   
   Here's the [NDB API Searches documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-SEARCH.md)
   
@@ -23,7 +23,7 @@
   - Data source. Must be either 'Branded Food Products' or 'Standard Reference'
     - ds=Standard%20Reference
   
-  ***It would be cool in the recipe app with can use these searches to add ingredients to a recipe.***
+  ***It would be cool in the recipe app to use these searches to add ingredients to a recipe.***
   
   For now I'm going to just save some NDB numbers for different ingredients. Yesterday, I already grabbed some so I'll use those.
   
@@ -35,11 +35,11 @@
   - Oil, olive, salad or cooking: **04053**
   - Cauliflower, raw:  **11135**
   
-  The numbers should be strings in the app, otherwise funny things can happen. Olive oil, when not a string, didn't work. I think it has to do with it starting with a 0. The request coming back failed and said `{error: "No data for ndbno 2091"}`. I don't know how it got `2091` from 04053. Saving 04053 as string fixed the issue: `const evoo = "04053";`
+  The numbers should be *strings* in the app, otherwise funny things can happen. Olive oil, when not a string, didn't work. I think it has to do with it starting with a 0. The request coming back failed and said `{error: "No data for ndbno 2091"}`. I don't know how it got `2091` from 04053. Saving 04053 as string fixed the issue: `const evoo = "04053";`
 
   ## Ordering Callbacks, Callback Hell
   
-  I can see now how a developer could land themselves in callback hell. Callback hell is when you have a callback within a callback within a callback etc. I didn't understand why you would do that instead of just doing a bunch of  requests or callbacks, unnested. But [Khawar Jatoi](https://twitter.com/khawar_jatoi) told me it's because sometimes you need to control the order of how things load. When you have multiple requests unnested, you don't know when each will complete. The over could be off as it was here:
+  I can see now how a developer could land themselves in callback hell. Callback hell is when you have a callback within a callback within a callback etc. I didn't understand why you would do that instead of just doing a bunch of requests or callbacks, unnested. But [Khawar Jatoi](https://twitter.com/khawar_jatoi) told me it's because sometimes you need to control the order of how things load. When you have multiple requests unnested, you don't know when each will complete. The order could be off as it was here:
   
   ```javascript
   const beef = "23557";
@@ -80,11 +80,32 @@
   makeRequest(cauli);
   ```
   
-  And example of one of the orders I got my objects back.
+  An example of one of the orders in which I got my objects back.
   
   ![screenshot](log_imgs/xhr_4-5.PNG)
   
+  ## XMLHttpRequest Callback Hell
+  
+  I want to put my code into XHR callback hell format. Obviously, this isn't something we are going to strive for. We're supposed to use other methods like Promises and async/await to *avoid* callback hell. However I'm trying to learn, so I want to get familiar with callback hell.
+  
   In my project order doesn't matter so much, but I want to see how to control it anyways.
+  
+  I had trouble getting my code into nested callbacks. It seemed like I did get it to work at one point but there were somethings that were off and I was confused.
+  
+  I found this example of having [multiple serial asynchronous requests](https://www.thibaudlopez.net/xhr/generator/1.3/?language=jscallbacks&type=multiple&asynchronous=true&showResponseHandlers=false&responseHandler=inner&communication=serial), I guess another way of saying nested callbacks or callback hell. I also found the term "chained XMLHttpRequests".
+  
+  I didn't get mine too work yet.
+
+- ## Thoughts and Feelings:
+
+  I thought what I was learning about today was challenging. I can't wait until I can understand all this. I feel a lot closer than before though. 
+  
+  I was kind of hungry when coding. Maybe if I have a snack break, I'd code better. I usually eat before and after coding. One thing I won't do it eat while coding. Mindless eating will make you gain weight and it keeps you from fully enjoying your food. That the worst way to get fat. What's the point in getting fat if you don't even get to enjoy your food? When I eat I like to fully experience and enjoy my food because I love foooood.
+  
+  Today I co-worked, again, at Emerald Tavern Games and Cafe in Austin.
+  
+  ![screenshot](log_imgs/cowork_4-5.jpg)
+  
 
 ## Day 94
 ### 4/4/19
