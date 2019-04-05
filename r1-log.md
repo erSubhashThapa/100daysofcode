@@ -1,5 +1,91 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 95
+### 4/5/19
+
+- ## Recipe Calculator
+
+  I started a new project yesterday, which I logged about. It still uses the NDB API. This one takes a recipe and recalculates the ingredienst to fit your macros. I don't expect to finish this soon, It sounds hard. But I will use it first to get more comfortable with asynchronous functions. I also want to get an idea of how these calculations would work.
+  
+  ## NDB Search API
+  
+  I used the API to search for food products.
+  
+  Here's the [NDB API Searches documentation](https://ndb.nal.usda.gov/ndb/doc/apilist/API-SEARCH.md)
+  
+  Here's a search for ground beef:
+  
+  `https://api.nal.usda.gov/ndb/search/?format=json&q=ground+beef&ds=Standard%20Reference&sort=n&max=25&offset=0&api_key=DEMO_KEY`
+  
+  ### Important Parameters:
+  - Search Terms
+    - q=ground+beef 
+  - Data source. Must be either 'Branded Food Products' or 'Standard Reference'
+    - ds=Standard%20Reference
+  
+  ***It would be cool in the recipe app with can use these searches to add ingredients to a recipe.***
+  
+  For now I'm going to just save some NDB numbers for different ingredients. Yesterday, I already grabbed some so I'll use those.
+  
+  
+   ### Ingredients and NDBno
+  
+  - Beef, ground, 95% lean meat / 5% fat, raw: **23557**
+  - Lettuce, cos or romaine, raw: **11251**
+  - Oil, olive, salad or cooking: **04053**
+  - Cauliflower, raw:  **11135**
+  
+  The numbers should be strings in the app, otherwise funny things can happen. Olive oil, when not a string, didn't work. I think it has to do with it starting with a 0. The request coming back failed and said `{error: "No data for ndbno 2091"}`. I don't know how it got `2091` from 04053. Saving 04053 as string fixed the issue: `const evoo = "04053";`
+
+  ## Ordering Callbacks, Callback Hell
+  
+  I can see now how a developer could land themselves in callback hell. Callback hell is when you have a callback within a callback within a callback etc. I didn't understand why you would do that instead of just doing a bunch of  requests or callbacks, unnested. But [Khawar Jatoi](https://twitter.com/khawar_jatoi) told me it's because sometimes you need to control the order of how things load. When you have multiple requests unnested, you don't know when each will complete. The over could be off as it was here:
+  
+  ```javascript
+  const beef = "23557";
+  const lettuce = "11251";
+  const evoo = "04053";
+  const cauli = "11135";
+
+  let data= {};
+
+  const key = your_key;
+
+  function makeRequest(ndbNumber){
+  const url = `https://api.nal.usda.gov/ndb/V2/reports?ndbno=${ndbNumber}&type=b&format=json&api_key=${key}`;
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function (){
+          if (this.status == 200 && this.readyState == 4){
+              const resp = JSON.parse(this.responseText);
+              callback(resp);
+          }
+      }
+
+      xhr.open("GET",url,true);
+      xhr.send();
+  }
+
+  function callback(resp){
+      const foodName = resp.foods[0].food.desc.name;
+      data[foodName] = resp;
+      console.log(foodName);
+  }    
+  
+  //_________________________The objects returned from the requests below return in different orders_______________
+  makeRequest(beef);
+  makeRequest(lettuce);
+  makeRequest(evoo);
+  makeRequest(cauli);
+  ```
+  
+  And example of one of the orders I got my objects back.
+  
+  ![screenshot](log_imgs/xhr_4-5.PNG)
+  
+  In my project order doesn't matter so much, but I want to see how to control it anyways.
+
 ## Day 94
 ### 4/4/19
 
