@@ -169,11 +169,13 @@
   }
   ```
   
-  So, as you can see, you now have a request function that can be reused. `request` creates a specified url from the food parameter.
+  So, as you can see, you now have a request function that can be reused. `request` creates a specified url from the `food` parameter.
+  
+  ### `request()` Is Not The Callback
   
   I didn't understand how I could pass the params `callback` and `food` into the callback. But then it clicked, I ***wasn't*** passing params to the callback. I thought ***`request`*** was the callback. We ***are*** passing parameters to `request`. But request ***IS NOT*** the callback. `request` is ***inside*** our callbacks. ***CLICK! DING DING DING!***
   
-  Our callbacks are the anonymous functions. 
+  Our callbacks are the anonymous functions.
   
   ![screenshot](log_imgs/callbacks_4-6.PNG)
   
@@ -208,6 +210,8 @@
   
 - ## Thoughts and Feelings:
   Today was awesome. I love when something clicks. I was so confused. I can see the code better now. It's like I developed my javascript eye a little bit more. 
+  
+  Just to clarify, I'm learning to do a callback hell so I can better understand why they aren't a good idea. I think this will really deepen my undertstanding when I learn how to do the modern requests: async/await and promises. I really like learning on my own because I like controlling what I learn and when. In school, you must stick to the curriculum. But I like going with what *I need* to learn. Of course, sometimes you don't know what you need. But that's where it's helpful to ask someone more experienced.
 
 ## Day 95
 ### 4/5/19
