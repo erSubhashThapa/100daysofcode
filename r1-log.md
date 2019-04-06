@@ -1,5 +1,94 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 96
+### 4/6/19
+
+- ## Recipe Calculator
+  
+  ## XHR Nested Callbacks
+  
+  Yesterday, I found this example of having [multiple serial asynchronous requests](https://www.thibaudlopez.net/xhr/generator/1.3/?language=jscallbacks&type=multiple&asynchronous=true&showResponseHandlers=false&responseHandler=inner&communication=serial). AKA callback hell. I don't know why, but the code uses the method `print()` where I think they meant to use `console.log()`. Probably because in other langauges `print` does the same thing as `console.log()` and maybe the person who made this was confused. But in JavaScript `print()` literally opens your print window so you can physically print something onto paper. 
+  
+  This worked but it's so long. How can we make it DRY?
+  
+  ```javascript
+  const beef = "23557";
+  const evoo = "04053";
+  const cauli = "11135";
+
+  let data= {};
+
+  const key = your_key_here;
+  const url = (ndb)=>(`https://api.nal.usda.gov/ndb/V2/reports?ndbno=${ndb}&type=b&format=json&api_key=${key}`);
+
+  function run() {  
+      request1(function () {  
+          request2(function () {  
+              request3(function () {  
+                  done();  
+              });  
+          });  
+      });  
+  }  
+  function request1(callback1) {  
+      // request 1  
+      console.log("request1");  
+      var xmlHttpRequest1 = new XMLHttpRequest();  
+      xmlHttpRequest1.open("GET", url(beef), true);  
+      xmlHttpRequest1.onreadystatechange = function () { 
+          if (this.readyState == 4 && this.status == 200) {  
+              // response 1  
+              debugger;
+              console.log("response1=" + JSON.parse(this.responseText).foods[0].food.desc.name);  
+              // continue execution in the callback  
+              if (callback1) {  
+                  callback1();  
+              }  
+          }  
+      };  
+      xmlHttpRequest1.send();  
+      console.log("line 52");
+  }  
+  function request2(callback2) {  
+      // request 2  
+      console.log("request2");  
+      var xmlHttpRequest2 = new XMLHttpRequest();  
+      xmlHttpRequest2.open("GET", url(evoo), true);  
+      xmlHttpRequest2.onreadystatechange = function () {  
+          if (this.readyState == 4 && this.status == 200) {  
+              // response 2  
+              console.log("response2=" + JSON.parse(this.responseText).foods[0].food.desc.name);  
+              // continue execution in the callback  
+              if (callback2) {  
+                  callback2();  
+              }  
+          }  
+      };  
+      xmlHttpRequest2.send();  
+  }  
+  function request3(callback3) {  
+      // request 3  
+      console.log("request3");  
+      var xmlHttpRequest3 = new XMLHttpRequest();  
+      xmlHttpRequest3.open("GET", url(cauli), true);  
+      xmlHttpRequest3.onreadystatechange = function () {  
+          if (this.readyState == 4 && this.status == 200) {  
+              // response 3  
+              console.log("response3=" + JSON.parse(this.responseText).foods[0].food.desc.name);  
+              // continue execution in the callback  
+              if (callback3) {  
+                  callback3();  
+              }  
+          }  
+      };  
+      xmlHttpRequest3.send();  
+  }  
+  function done() {  
+      // end  
+      console.log("done");  
+  }  
+  ```
+
 ## Day 95
 ### 4/5/19
 
