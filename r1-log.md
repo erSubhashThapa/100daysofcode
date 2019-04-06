@@ -99,7 +99,7 @@
   
   >By default you cannot pass arguments to a callback function
   
-  It said you need closures to pass arguments to a callback.
+  You need closures to pass arguments to a callback.
   
   ## Closures
   
