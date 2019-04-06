@@ -85,6 +85,8 @@
       // end  
       console.log("done");  
   }  
+  
+  run()
   ```
   
   ## Making This Code Dry
@@ -167,6 +169,8 @@
       // end  
       console.log("done");  
   }
+  
+  run()
   ```
   
   So, as you can see, you now have a request function that can be reused. `request` creates a specified url from the `food` parameter.
