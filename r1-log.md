@@ -191,7 +191,7 @@
   
   ### What we have now:
   ```javascript
-  function run() {  // What if we want to rund different requests??
+  function run() {  // What if we want to run different requests??
         request(function () {  
             request(function () {
                 request(function () {
