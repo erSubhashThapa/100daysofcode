@@ -91,7 +91,7 @@
   
   Ok I was very confused for a while and a bunch of things just clicked. I think. 
   
-  I thought it was going to be hard to make the above code DRY because you can't pass arguments to callbacks. I thought in order to make this code DRY we need to pass arguments to the callbacks. But you don't. I was just very confused about where the callbacks start and end in this code. So I'll get back to how to actually make this code dry. But since I put sometime into reviewing closures, I'll talk about that for a little even though this isn't necessary for our code.
+  I thought it was going to be hard to make the above code DRY because you can't pass arguments to callbacks. I thought in order to make this code DRY we need to pass arguments to the callbacks. But you don't. I was just very confused about where the callbacks start and end in this code. So I'll get back to how to actually make this code dry. But since I put some time into reviewing closures, I'll talk about that for a little even though this isn't necessary for our code.
   
   ## Passing Parameters to a Callback
   
