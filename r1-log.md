@@ -175,9 +175,39 @@
   
   Our callbacks are the anonymous functions. 
   
-  ![screenshot](callbacks_4-6.PNG)
+  ![screenshot](log_imgs/callbacks_4-6.PNG)
   
   Whoa. I was seeing this wrong. Now I see it correctly.
+  
+  ## Nested Calls For Lists of Foods
+  
+  We hardcoded in the foods we want nutrient reports for(beef, cauliflower, and EVOO). But how do we do this for a list of food NDBno's from somewhere else, for example from a list submitted by the user?
+  
+  ### What we have now:
+  ```javascript
+  function run() {  // What if we want to rund different requests??
+        request(function () {  
+            request(function () {
+                request(function () {
+                    done();
+                }, evoo)
+            }, cauli)
+        }, beef)    
+    } 
+  ```
+  
+  I think this is where promises come in extra handy. Not sure yet. But I'm going to try to do it without promises still.
+  
+  We'll need to create a function that takes an array of food numbers and outputs a custom version of what's currently in the body of our `run()` function. Maybe we can use `reduce()` for this.
+  
+  ## `reduceRight()`
+  
+  I'm gonna start with the innermost callback and build around it. I'll need to start with the last item in the array. We can use `reduceRight()` instead of `reduce()` to switch the order.
+  
+  This is where I left off. See you tomorrow!
+  
+- ## Thoughts and Feelings:
+  Today was awesome. I love when something clicks. I was so confused. I can see the code better now. It's like I developed my javascript eye a little bit more. 
 
 ## Day 95
 ### 4/5/19
