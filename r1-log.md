@@ -95,7 +95,7 @@
   
   ## Passing Parameters to a Callback
   
-  This site said: [Passing arguments to callback functions](https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/):
+  From [Passing arguments to callback functions](https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/):
   
   >By default you cannot pass arguments to a callback function
   
