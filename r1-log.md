@@ -16,8 +16,6 @@
   const evoo = "04053";
   const cauli = "11135";
 
-  let data= {};
-
   const key = your_key_here;
   const url = (ndb)=>(`https://api.nal.usda.gov/ndb/V2/reports?ndbno=${ndb}&type=b&format=json&api_key=${key}`);
 
@@ -88,6 +86,98 @@
       console.log("done");  
   }  
   ```
+  
+  ## Making This Code Dry
+  
+  Ok I was very confused for a while and a bunch of things just clicked. I think. 
+  
+  I thought it was going to be hard to make the above code DRY because you can't pass arguments to callbacks. I thought in order to make this code DRY we need to pass arguments to the callbacks. But you don't. I was just very confused about where the callbacks start and end in this code. So I'll get back to how to actually make this code dry. But since I put sometime into reviewing closures, I'll talk about that for a little even though this isn't necessary for our code.
+  
+  ## Passing Parameters to a Callback
+  
+  This site said: [Passing arguments to callback functions](https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/):
+  
+  >By default you cannot pass arguments to a callback function
+  
+  It said you need closures to pass arguments to a callback.
+  
+  ## Closures
+  
+  I took a lynda tutorial on closures a few months back. At the time, I didn't grasp the concept. I don't think I had enough context for when you would need them to understand them. I'm still trying to get the idea, but I think I'm getting closer.
+  
+  >What are closures?
+  >Closures are functions that refer to independent (free) variables. In other words, the function defined in the closure ‘remembers’ the environment in which it was created. Check MDN Documentation to learn more.
+  
+  *from [Passing arguments to callback functions](https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/)*
+  
+  ```javascript
+  function callback(a, b) {
+  return function() {
+    console.log('sum = ', (a+b));
+  }
+  }
+
+  var x = 1, y = 2;
+  document.getElementById('someelem').addEventListener('click', callback(x, y));
+  ```
+  
+  Here's my [codepen for this closure](https://codepen.io/Dashiee/pen/XQKQgo?editors=1111).
+  
+  I hope this helps me in the future. Right now I don't need this. Moving on.
+  
+  ## Making The Code DRY for Real
+  
+  OK. So I made the code DRY and got this code to work without closures and I was like wait what's going on? Why didn't I need the closure?
+  
+  ```javascript
+  const beef = "23557";
+  const evoo = "04053";
+  const cauli = "11135";
+
+  let data= {};
+
+  const key = your_key;
+  const url = (ndb)=>(`https://api.nal.usda.gov/ndb/V2/reports?ndbno=${ndb}&type=b&format=json&api_key=${key}`);
+
+  function run() {  
+      request(function () {  
+          request(function () {
+              request(function () {
+                  done();
+              }, evoo)
+          }, cauli)
+      }, beef)    
+  }  
+
+  function request(callback,food){ 
+      var xmlHttpRequest = new XMLHttpRequest();  
+      xmlHttpRequest.open("GET", url(food), true);  
+      xmlHttpRequest.onreadystatechange = function () { 
+          if (this.readyState == 4 && this.status == 200) {  
+              console.log(JSON.parse(this.responseText).foods[0].food.desc.name);  
+              if (callback) {  
+                  callback();  
+              }  
+          }  
+      };  
+      xmlHttpRequest.send();  
+  }  
+
+  function done() {  
+      // end  
+      console.log("done");  
+  }
+  ```
+  
+  So, as you can see, you now have a request function that can be reused. `request` creates a specified url from the food parameter.
+  
+  I didn't understand how I could pass the params `callback` and `food` into the callback. But then it clicked, I ***wasn't*** passing params to the callback. I thought ***`request`*** was the callback. We ***are*** passing parameters to `request`. But request ***IS NOT*** the callback. `request` is ***inside*** our callbacks. ***CLICK! DING DING DING!***
+  
+  Our callbacks are the anonymous functions. 
+  
+  ![screenshot](callbacks_4-6.PNG)
+  
+  Whoa. I was seeing this wrong. Now I see it correctly.
 
 ## Day 95
 ### 4/5/19
