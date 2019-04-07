@@ -17,7 +17,7 @@
 
       const body = foods.reduceRight((a,c,i)=>{
         const tab = "    ".repeat(i);
-        return `${tab}request(function () {`+`
+        return `${tab}request(function () {
   ${a}
   ${tab}},"${c}")`;
       }, lastCallback)
