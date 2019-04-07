@@ -1,11 +1,82 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 96
-### 4/6/19
+## Day 97
+### 4/7/19
 
   This is the second time I noticed a bunch of my log was missing. What's happening? I added it back.
   
 - ## Recipe Calculator
+
+  ## `reduceRight()`
+  
+  I got reduce right to create the body of the function that creates all the callbacks.
+  
+  ```javascript
+  function callbacks(foods){
+    const lastCallback=`${"   ".repeat(foods.length+1)}done()`;
+
+      const body = foods.reduceRight((a,c,i)=>{
+        const tab = "    ".repeat(i);
+        return `${tab}request(function () {`+`
+  ${a}
+  ${tab}},"${c}")`;
+      }, lastCallback)
+
+    return (new Function(body));
+  }
+  ```
+  The formatting is wonky because if I tabbed some of those lines `body` included the tab which messed up the formatting of the returned function.
+   
+  ## `new Function()`
+  
+  The function `callbacks(food)` takes an array of foods, and returns a function that contains all `request()` calls and callbacks. We are creating a function.
+  
+  I did this by creating `body`, a string that would become the body of the array. Then I found the `new Function()` constructor on this [stackoverflow thread](https://stackoverflow.com/questions/939326/execute-javascript-code-stored-as-a-string). Here's the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) for `new Function()`. 
+  
+  Passing the string `body` into `new Function()` creates a function with `body` as the the body.
+   
+  For example, if this is the array:
+   
+  ```javascript
+   
+  const beef = "23557";
+  const lettuce = "11251";
+  const evoo = "04053";
+  const cauli = "11135";
+   
+  let foods = [lettuce, evoo, cauli, beef]
+  ```
+  
+  We could call `callbacks(foods)` which would return this function:
+  
+  ```javascript
+  (function anonymous(
+  ) {
+  request(function () {
+      request(function () {
+          request(function () {
+              request(function () {
+                 done()
+              },"23557") //beef
+          },"11135") //cauli
+      },"04053") //evoo
+  },"11251") //lettuce
+  })
+  ```
+  
+  If we call this function we get our requests logged to the console:
+  
+  ```javascript
+  callbacks(foods)()
+  
+  >Lettuce, cos or romaine, raw
+  >Oil, olive, salad or cooking
+  >Cauliflower, raw
+  >Beef, ground, 95% lean meat / 5% fat, raw
+  >done 
+  ```
+  
+    
   
 
 ## Day 96
