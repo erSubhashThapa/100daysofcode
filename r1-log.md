@@ -124,7 +124,7 @@
 
   This is where I left off. Bye bye!
   
-  ![screenshot](img_logs/ndb_4-7.gif)
+  ![screenshot](log_imgs/ndb_4-7.gif)
   
 - ## Thoughts and Feelings:
   This is fun. I wish I could work more on it but I know I should take a break and give my back some stretches.
