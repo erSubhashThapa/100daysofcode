@@ -129,6 +129,8 @@
 - ## Thoughts and Feelings:
   This is fun. I wish I could work more on it but I know I should take a break and give my back some stretches.
   
+  My log has been really helpful. It's a great resource to go back to when I forget something. Today, I forgot how to use `reduce()` but it was saved in my log.
+  
   
 ## Day 96
 ### 4/6/19
