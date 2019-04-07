@@ -9,7 +9,7 @@
 
   ## `reduceRight()`
   
-  I got reduce right to create the body of the function that creates all the callbacks.
+  I got `reduceRight()` to create the body of the function that creates all the callbacks.
   
   ```javascript
   function callbacks(foods){
@@ -29,9 +29,9 @@
    
   ## `new Function()`
   
-  The function `callbacks(food)` takes an array of foods, and returns a function that contains all `request()` calls and callbacks. We are creating a function.
+  The function `callbacks(foods)` takes an array of food numbers, and returns a function that contains all `request()` calls with the nested callbacks. We are creating a function.
   
-  I did this by creating `body`, a string that would become the body of the array. Then I found the `new Function()` constructor on this [stackoverflow thread](https://stackoverflow.com/questions/939326/execute-javascript-code-stored-as-a-string). Here's the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) for `new Function()`. 
+  I did this by creating `body`, a string that would become the body of the function. Then I found the `new Function()` constructor on this [stackoverflow thread](https://stackoverflow.com/questions/939326/execute-javascript-code-stored-as-a-string). Here's the [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) for `new Function()`. 
   
   Passing the string `body` into `new Function()` creates a function with `body` as the the body.
    
@@ -44,10 +44,10 @@
   const evoo = "04053";
   const cauli = "11135";
    
-  let foods = [lettuce, evoo, cauli, beef]
+  let myFoods = [lettuce, evoo, cauli, beef]
   ```
   
-  We could call `callbacks(foods)` which would return this function:
+  We could call `callbacks(myFoods)` which would return this function:
   
   ```javascript
   (function anonymous(
@@ -64,10 +64,10 @@
   })
   ```
   
-  If we call this function we get our requests logged to the console:
+  If we call this function we get the food name from each request logged to the console:
   
   ```javascript
-  callbacks(foods)()
+  callbacks(myFoods)()
   
   >Lettuce, cos or romaine, raw
   >Oil, olive, salad or cooking
@@ -76,9 +76,60 @@
   >done 
   ```
   
-    
+  ## Implementing the Search API
   
+  I started to implement the search API so the user can search for food by name.
+  
+  I created a function, `searchURL()` that creates the URL we'll need. 
+  
+  ```javascript
+  const searchURL = (searchTerm)=>{
+        searchTerm = searchTerm.replace(" ","+");
+        return `https://api.nal.usda.gov/ndb/search?q=${searchTerm}&ds=Standard%20Reference&format=json&api_key=${key}&sort=n&max=25&offset=0`;
+  }
+  ```
+  
+  Next I create the `search()` function. It makes our `XMLHttpRequest` using the search url returned from `searchURL(food)`.
+  
+  ```javascript
+  const key = your_key;
 
+  function search(callback,food){ 
+  var xmlHttpRequest = new XMLHttpRequest();  
+  xmlHttpRequest.open("GET", searchURL(food), true);  
+  xmlHttpRequest.onreadystatechange = function () { 
+      if (this.readyState == 4 && this.status == 200) {  
+          console.log(JSON.parse(this.responseText).list.item.forEach((x)=>{console.log(x.name, " ", x.ndbno)}));  
+          if (callback) {  
+              callback();  
+          }  
+      }  
+  };  
+  xmlHttpRequest.send();  
+  }
+  ```
+  
+  If we run `search(done, "broccoli")` we get a long list of the names and NDB numbers of our results.
+  
+  ```javascript
+  search(done,"broccoli")
+
+  >Broccoli raab, raw   11096
+  >Broccoli raab, cooked   11097   
+  >Broccoli, raw   11090
+  >Broccoli, frozen, chopped, unprepared   11092
+  etc......
+  >done
+  ```
+
+  This is where I left off. Bye bye!
+  
+  ![screenshot](img_logs/ndb_47.gif)
+  
+- ## Thoughts and Feelings:
+  This is fun. I wish I could work more on it but I know I should take a break and give my back some stretches.
+  
+  
 ## Day 96
 ### 4/6/19
 
