@@ -79,9 +79,9 @@
   
   The app is now able to search and select recipe ingredients. Next, I need to get the nutrient info for the ingredients.
   
-  [!screenshot](log_imgs/ndb_4-8.gif)
+  ![screenshot](log_imgs/ndb_4-8.gif)
   
-- ## Thoughts and Feelings
+- ## Thoughts and Feelings:
 
   Lots of things to keep track of in this code. Felt a little distracted, hard to focus, but really only slightly. Felt motivated to code, just had trouble keeping track of everything I was doing in my code. Back hurting a little.
   
