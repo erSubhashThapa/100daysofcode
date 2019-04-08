@@ -1,5 +1,80 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 98
+### 4/8/19
+
+  ## `forEach()` Returns Undefined
+  >...unlike map() or reduce() it always returns the value undefined and is not chainable
+  
+  [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+  
+  https://www.w3schools.com/tags/att_input_type_radio.asp
+ 
+  ## Passing Event Objects to Closures?
+   
+  I want to try to use a closure but I also need to access the event object. I can't figure out how to do that.
+   
+  ```javascript
+  function callback(a, b) {
+   return function() {
+     console.log('sum = ', (a+b));
+   }
+  }
+
+  var x = 1, y = 2;
+  document.getElementById('someelem').addEventListener('click', callback(x, y));
+  ```
+  
+  Normally we'd put e here:
+  
+  ```javascript
+  function callback(e) {//________________________e
+   return function() {
+     console.log('sum = ', (a+b));
+   }
+  }
+  ```
+  
+  But we have params there already.
+  
+  I found the answer here on [dev.to](https://dev.to/rpalo/closures-and-callbacks--30a9):
+  
+  ```javascript
+  const openTab = tabName => {
+    return e => {
+      // Things in here have access to tabName *and* e
+    }
+  }
+  ```
+  
+  Or in our code above:
+  
+  ```javascript
+  function callback(a, b) {
+   return function(e) { //_____________________________e
+     console.log('sum = ', (a+b));
+   }
+  }
+
+  var x = 1, y = 2;
+  document.getElementById('someelem').addEventListener('click', callback(x, y));
+  ```
+  
+  ## Closure Using Old Values
+  
+  I ended with a bug where the closure is using old values from the last addEventListener callback. I think we need to remove the last event listener. I'm not sure.
+  
+  ## Done:
+  
+  The app is now able to search and select recipe ingredidients. Next, I need to get the nutrient info for the ingredients.
+  
+  [!screenshot](log_imgs/ndb_4-8.gif)
+  
+- ## Thoughst and Feelings
+
+  Lots of things to keep track of in this code. Felt a little distracted, hard to focus, but really only slightly. Felt motivated to code, just had trouble keeping track of everything I was doing in my code. Back hurting a little.
+  
+
 ## Day 97
 ### 4/7/19
 
