@@ -4,11 +4,20 @@
 ### 4/8/19
 
   ## `forEach()` Returns Undefined
+  
+  I was trying to return values from `forEach()` but you can't.
+  
   >...unlike map() or reduce() it always returns the value undefined and is not chainable
   
   [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
   
-  https://www.w3schools.com/tags/att_input_type_radio.asp
+  ## Form Radio Input
+  
+  I used radio input for me form. They provide a way for the user to select one option from a list.
+  
+  More here:https://www.w3schools.com/tags/att_input_type_radio.asp
+
+  [This stackoverflow thread](https://stackoverflow.com/questions/9618504/how-to-get-the-selected-radio-button-s-value) shows how to get the value for the slected item. Basically, you get which `input.checked == true` inside a loop. I used `forEach()`.
  
   ## Passing Event Objects to Closures?
    
@@ -35,7 +44,9 @@
   }
   ```
   
-  But we have params there already.
+  But we have params there already, `(a, b)`.
+  
+  ## Passing Event Objects to Closures!
   
   I found the answer here on [dev.to](https://dev.to/rpalo/closures-and-callbacks--30a9):
   
@@ -51,7 +62,7 @@
   
   ```javascript
   function callback(a, b) {
-   return function(e) { //_____________________________e
+   return function(e) { //_____________________________e goes here
      console.log('sum = ', (a+b));
    }
   }
@@ -62,11 +73,11 @@
   
   ## Closure Using Old Values
   
-  I ended with a bug where the closure is using old values from the last addEventListener callback. I think we need to remove the last event listener. I'm not sure.
+  I ended with a bug where the closure is using old values from the last addEventListener callback. I think we need to remove the last event listener. I'm not sure. It still works but its going through unnecessary non-working callbacks probably from the old event listeners.
   
   ## Done:
   
-  The app is now able to search and select recipe ingredidients. Next, I need to get the nutrient info for the ingredients.
+  The app is now able to search and select recipe ingredients. Next, I need to get the nutrient info for the ingredients.
   
   [!screenshot](log_imgs/ndb_4-8.gif)
   
