@@ -79,20 +79,25 @@
   ### This Works:
   I found out from [this stackoverflow thread](https://stackoverflow.com/questions/19774202/how-to-removeeventlistener-that-was-added-using-closure) that we need to make a reference to that first function.
   
+  1. Add a global variable.
   ```javascript
-  var listener; ________________________________listener variable
+  var listener; //________________________________listener variable
+  ```
+  2. Set the variable. Use the global variable to add the event listener.
+  ```javascript
   function searchResults(results){
         const searchForm = document.querySelector("form[name=search_results]")
 
         //.....code.....
     
         const callback= addFood(results);
-        listener = callback;
-        searchForm.addEventListener('submit', listener); ________________add
+        listener = callback; //___________________________set variable
+        searchForm.addEventListener('submit', listener); //________________add
         
   }
-  var hi = document.querySelector("form[name=search_results]");
-
+  ```
+  3. Remove the event listener.
+  ```javascript
   function addFood(foodObjects){
         return function food(e){
             
