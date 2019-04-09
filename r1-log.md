@@ -14,7 +14,7 @@
   
   Click the node you want to inspect. You should automatically be on the Elements tab now. In the Event Listeners panel, you'll see all the events on the node and it's ancestors if **Ancestors** is checked. You can find the handlers here.
   
-  <img src="log_imgs/handler_4-9.PNG"  width="250"/> 
+  <img src="log_imgs/handler_4-9.PNG"  width="300"/> 
   
   If you hold your mouse over the function you can see the whole function.
   
@@ -22,7 +22,7 @@
   
   You can also use [`getEventListeners(node)` in the cosole](https://developers.google.com/web/updates/2015/05/get-and-debug-event-listeners) to see the handler. Again, hover over the function after `listener:` to see the full callback.
   
-  <img src="log_imgs/handler2_4-9.PNG"  width="250"/> 
+  <img src="log_imgs/handler2_4-9.PNG"  width="350"/> 
 
   ### `monitorEvents()`
   
