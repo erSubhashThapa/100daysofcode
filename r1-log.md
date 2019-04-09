@@ -114,7 +114,7 @@
   
   I'm at a cafe waiting for my RV's tires to be aligned. Since I have extra time now, I think I'll put my new dev stickers on!
   
-  ![devstickers](log_imgs/stickers_4-9.jpg)
+   <img src="log_imgs/stickers_4-9.jpg"  width="400"/>
 ## Day 98
 ### 4/8/19
 
