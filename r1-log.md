@@ -14,7 +14,7 @@
   
   Click the node you want to inspect. You should automatically be on the Elements tab now. In the Event Listeners panel, you'll see all the events on the node and it's ancestors if **Ancestors** is checked. You can find the handlers here.
   
-  ![screenshot](log_imgs/handler_4-9.PNG)
+  <img src="log_imgs/handler_4-9.PNG"  width="100"/> 
   
   If you hold your mouse over the function you can see the whole function.
   
