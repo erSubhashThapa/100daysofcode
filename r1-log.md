@@ -110,11 +110,13 @@
   
 - ## Thoughts and Feelings:
 
-  I took a longer break today. I thin this was smart. I felt stuck so I took a break to eat and take a walk. Then my brain was refreshed.
+  I took a longer break today. I think this was smart. I felt stuck so I took a break. I ate a ketones Julian Bakery protein bar and a can of sardines, the two snacks I grabbed before I left my RV. I went for a short walk. Then my brain was refreshed.
   
-  I'm at a cafe waiting for my RV's tires to be aligned. Since I have extra time now, I think I'll put my new dev stickers on!
+  I'm at a cafe waiting for my RV's tires to be aligned. Since I have extra time now, I think I'll put my new [Wes Bos](https://wesbos.com/) dev stickers on! I accidentally got two packs in the mail. I'll be doing a giveaway for the other one to celebrate my 100 days tomorrow. Hopefully, I can also get my hands on a keto treat tomorrow to celebrate!
   
    <img src="log_imgs/stickers_4-9.jpg"  width="500"/>
+   
+   
 ## Day 98
 ### 4/8/19
 
