@@ -72,7 +72,35 @@
   
   ### This Doesn't Work:
   ```javascript
-  e.target.removeEventListener('submit', addFood(foodObjects))
+  e.target.removeEventListener('submit', addFood(foodObjects)) //foodObjects is the parameter where we pass results into, so this is the same as addFood(results)
+  ```
+  Probably because it's just creating another function that looks like our first one. It's not referencing the actual function.
+  
+  ### This Works:
+  I found out from [this stackoverflow thread](https://stackoverflow.com/questions/19774202/how-to-removeeventlistener-that-was-added-using-closure) that we need to make a reference to that first function.
+  
+  ```javascript
+  var listener; ________________________________listener variable
+  function searchResults(results){
+        const searchForm = document.querySelector("form[name=search_results]")
+
+        //.....code.....
+    
+        const callback= addFood(results);
+        listener = callback;
+        searchForm.addEventListener('submit', listener); ________________add
+        
+  }
+  var hi = document.querySelector("form[name=search_results]");
+
+  function addFood(foodObjects){
+        return function food(e){
+            
+            //.....code....
+            
+            e.target.removeEventListener('submit', listener); //_______________remove
+        }
+  }
   ```
 ## Day 98
 ### 4/8/19
