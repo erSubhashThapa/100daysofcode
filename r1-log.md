@@ -68,8 +68,12 @@
   e.target.removeEventListener('submit', func);
   ```
   
-  Great. But how do we do this for the event we actually want to remove?
-
+  Great. But how do we do this for the event we actually want to remove? This one is a closure. I can't figure it out. 
+  
+  ### This Doesn't Work:
+  ```javascript
+  e.target.removeEventListener('submit', addFood(foodObjects))
+  ```
 ## Day 98
 ### 4/8/19
 
