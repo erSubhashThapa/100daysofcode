@@ -53,7 +53,7 @@
   
   We need to remove the old event listener before we add the new one.
   
-  ## `removeEventListener()
+  ## `removeEventListener()`
   
   Just like `addEventListener()` adds event listeners, `removeEventListener()` removes them.
   
@@ -107,6 +107,14 @@
         }
   }
   ```
+  
+- ## Thoughts and Feelings:
+
+  I took a longer break today. I thin this was smart. I felt stuck so I took a break to eat and take a walk. Then my brain was refreshed.
+  
+  I'm at a cafe waiting for my RV's tires to be aligned. Since I have extra time now, I think I'll put my new dev stickers on!
+  
+  ![devstickers](stickers_4-9.jpg)
 ## Day 98
 ### 4/8/19
 
