@@ -8,15 +8,15 @@
   ## Debugging Event Listeners
   
   ### Event Listeners Panel
-  To see event listeners on a node, click the Inspect Elements button.
+  To see event listeners on a node, click the **Inspect Elements** button.
   
   ![inspect](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/imgs/inspect-icon.png)
   
-  Click the node you want to inspect. You should automatically be on the Elements tab now. In the Event Listeners panel, you'll see all the events on the node and it's ancestors if **Ancestors** is checked. You can find the handlers here.
+  Click the node you want to inspect. You should automatically be on the **Elements** tab now. In the **Event Listeners** panel, you'll see all the events on the node and it's ancestors if **Ancestors** is checked. You can find the handlers here.
   
   <img src="log_imgs/handler_4-9.PNG"  width="300"/> 
   
-  If you hold your mouse over the function you can see the whole function.
+  Hover over the function to see the whole function.
   
   ### `getEventListeners()`
   
@@ -30,7 +30,7 @@
   
   *from [Monitoring Events in the JavaScript Console, oomphinc.com](https://www.oomphinc.com/notes/2014/01/monitoring-events-javascript-console/)*
   
-  You can specify which node you want to montor, for example `monitorEvents( $(“#myElement”)[0] )`. You can specify what events as well, `monitorEvents( $(“#myElement”)[0], “click” )` or `monitorEvents( $(“#myElement”)[0], [“click”, “blur”, “focus”] )`. These examples are using jQuery, if you don't recognize the $ syntax.
+  You can specify which node you want to monitor, for example `monitorEvents( $(“#myElement”)[0] )`. You can specify what events as well, `monitorEvents( $(“#myElement”)[0], “click” )` or `monitorEvents( $(“#myElement”)[0], [“click”, “blur”, “focus”] )`. These examples are using jQuery, that's the $ syntax.
  
   >You can unsubscribe from this event monitoring by using the command unmonitorEvents() while using the same parameters as the initial call.
   
@@ -38,18 +38,22 @@
   
   ## Too Many Event Listeners
   
-  I have multiple of the same event listeners on my `search_form` div. That's because I'm adding the event listener inside the event listener callback, searchForm(). 
+  I have multiple of the same event listeners on my `search_form` div. That's because I'm adding the event listener to the search form inside searchResults(), which get's called everytime the user does a search.
   
-  This is causing issues. The handler is the same except for the parameters passed to it. The parameters passed each time are the results of the XHR.
+  This is causing issues. 
+  
+  A new event listener is added every time a search is made. The same handler is passed to `addEventListener()`, except for the parameters passed to it. The parameters passed each time are the results of the XHR, `results` (the food objects returned from each search).
   
   This is inside `searchForm()`:
   ```javascript
-  searchForm.addEventListener('submit', addFood(results);
+  searchForm.addEventListener('submit', addFood(results));
   ```
   
-  We can pass params because `addFood()` is a closure. It returns a function. So actually the function that add closure returns in our callback. Unlike regular callbacks, `addFood(result)` actually gets called in that event listener function when the event listener is added, not later when the event is triggered. What get's triggered later? The function that `addFood(result)` returns.
+  We can pass params because `addFood()` is a closure. It returns a function. So actually the function that add closure ***returns*** is our callback. Unlike regular callbacks, `addFood(result)` actually gets called in that event listener function when the event listener is added, not later when the event is triggered. What get's triggered later? The function that `addFood(result)` returns.
   
-  So every time `searchFood()` runs, we add another one of these event listeners with the new XHR response. But now, submit will trigger all of those callbacks and go through them all. Each one with the old XHR response. This creates issues. In our callback we try to find which object in the XHR response matches the selected radio input. The XHR response stored in the older callbacks(ex: a list of object results for a "beef" search) aren't going to match the selected input from the new search (ex: "Cauliflower, Raw" for a "cauliflower" search). 
+  So every time `searchResults()` runs, we add another one of these event listeners with the new XHR response. But now, submit will trigger all of those callbacks and go through them all. Each one with the old XHR response. This creates issues.
+  
+  In our callback we try to find which object in the XHR response matches the selected input. The XHR response stored in the older callbacks(ex: a list of object results for a "beef" search) aren't going to match the selected input from the new search (ex: "Cauliflower, Raw" for a "cauliflower" search). This causes `undefined` to get passed to our ingredients, since nothing matched.
   
   We need to remove the old event listener before we add the new one.
   
@@ -57,18 +61,21 @@
   
   Just like `addEventListener()` adds event listeners, `removeEventListener()` removes them.
   
-  If we have this `addEventListener()` call inside the callabck, `searchForm()`:
+  If we have an `addEventListener()` call inside the callback, `searchForm()`:
+  
   ```javascript
+  const searchForm = document.querySelector("form[name=search_results]")
+
   searchForm.addEventListener('submit', func); 
   ```
   
-  We can later remove it like this from inside the `addFood(result)`, the callback for the 'submit' event for the search form. We can reference the search form with `e.target` in this case.
+  We can later remove it like this from inside the `addFood(result)`, 'submit' event callback for the search form. We can reference the search form with `e.target` in this case.
   
   ```javascript
   e.target.removeEventListener('submit', func);
   ```
   
-  Great. But how do we do this for the event we actually want to remove? This one is a closure. I can't figure it out. 
+  Great. But how do we do this for the event we actually want to remove? Since it's a closure, it's more complicted. 
   
   ### This Doesn't Work:
   ```javascript
