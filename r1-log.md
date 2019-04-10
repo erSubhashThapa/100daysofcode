@@ -6,6 +6,10 @@
 - ## Recipe Calculator
   Today is day 100. That's amazing. I feel really proud of myself for completing this challenge. Wait, I didn't complete it yet. So I got to calm down. Let's get to work!
   
+  ## Should I Push This to github?
+  
+  I have been avoiding pushing this project to github because I need to set up dotenv, which I haven't done before. However, if you read my log and really want to see my work, let me know on twitter [@DashBarkHuss](https://twitter.com/DashBarkHuss) and I'll set it up. I didn't think it was a priority yet, but if it will help someone who is learning something from my log I'll push it. So let me know if you want me to push this. My original plan was to put off learning dotenv and just push this project when it's done.
+  
   ## Still Too Many Event Listeners
   
   Last time we ended with this event listener. 
@@ -33,7 +37,9 @@
   
   We need to remove the event listener in `searchResults()`. 
   
-  ## Removing the Last Added Event Listener
+  ## Removing The Last Added Event Listener
+  
+  We can conditionally remove the lastest added event listener since we saved it in our `listener` identifier. If `listener` is defined, the code below removed the event listener.
   
   ```javascript
   var listener;
@@ -52,6 +58,37 @@
 
   }
   ```
+  ## Comparing The Nutrient Values
+  
+  I could make a new value for each object that represents the `proteinPerCalories`, `carbsPerCalories`, etc. Or I could make functions that get these values and not save them. 
+  
+  I'm going to start with using`sort()` to sort the nutrients by most protein per calorie.
+  
+  ## `sort()`
+  
+  I need to use the array method `sort()` to find the nutrient with the most protein, most fat, and most carbs per calories. I've used `sort()` before but I remember it being tricky. 
+ 
+  Sort can take a compare function to specify how you wan to sort the array.
+  
+  `array.sort(compareFunction)`
+  
+  The compare function should return -1, 0, or 1.
+  
+  
+  >The function should return a negative, zero, or positive value, depending on the arguments, like:
+function(a, b){return a-b}
+  
+  *from [w3schools, JavaScript Array sort() Method](https://www.w3schools.com/jsref/jsref_sort.asp)*
+  
+  ## Done
+  
+  Now the user can remove ingredients that they added. Once they are satisfied they can save the ingredients. This then gets a request for each nutrient report for the ingredient. The results are saved into an array, `nutrientRecipeArray`.
+  
+- ## Thoughts and Feelings:
+
+  I'm super stoked! 100 Days completed!!!!!!!!!!!!!!!
+  
+  
 
 ## Day 99
 ### 4/9/19
