@@ -39,7 +39,7 @@
   
   ## Removing The Last Added Event Listener
   
-  We can conditionally remove the lastest added event listener since we saved it in our `listener` identifier. If `listener` is defined, the code below removed the event listener.
+  We can conditionally remove the lastest added event listener since we saved it in our `listener` identifier. If `listener` is defined, the code below removes the event listener.
   
   ```javascript
   var listener;
