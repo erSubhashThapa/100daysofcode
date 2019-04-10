@@ -68,7 +68,7 @@
   
   I need to use the array method `sort()` to find the nutrient with the most protein, most fat, and most carbs per calories. I've used `sort()` before but I remember it being tricky. 
  
-  Sort can take a compare function to specify how you wan to sort the array.
+  Sort can take a compare function to specify how you want to sort the array.
   
   `array.sort(compareFunction)`
   
