@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 100
+## Day 100 ---editing
 ### 4/10/19
 
 - ## Recipe Calculator
