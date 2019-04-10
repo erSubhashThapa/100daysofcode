@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
-## Day 100 ---editing
+## Day 100
 ### 4/10/19
 
 - ## Recipe Calculator
@@ -75,8 +75,8 @@
   The compare function should return -1, 0, or 1.
   
   
-  >The function should return a negative, zero, or positive value, depending on the arguments, like:
-function(a, b){return a-b}
+  >The function should return a negative, zero, or positive value, depending on the arguments, like:  
+  >   function(a, b){return a-b}
   
   *from [w3schools, JavaScript Array sort() Method](https://www.w3schools.com/jsref/jsref_sort.asp)*
   
@@ -87,6 +87,14 @@ function(a, b){return a-b}
 - ## Thoughts and Feelings:
 
   I'm super stoked! 100 Days completed!!!!!!!!!!!!!!!
+  
+  I learned so much.
+  
+  I learned a lot about learning. 
+  
+  I thought I would have learned many more topics by now. I actually leanred mostly just vanilla javascript, but there was more too learn than I expected. I feel really good about my programming capabilities compared to when I started. But I especially feel good that I know I can learn on my own if I remain consistent and patient.
+  
+  ![victory](log_imgs/victory_4-10-19)
   
   
 
