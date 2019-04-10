@@ -1,5 +1,58 @@
 # #100DaysOfCode Log - Round 1 - Dashiell Bark-Huss
 
+## Day 100
+### 4/10/19
+
+- ## Recipe Calculator
+  Today is day 100. That's amazing. I feel really proud of myself for completing this challenge. Wait, I didn't complete it yet. So I got to calm down. Let's get to work!
+  
+  ## Still Too Many Event Listeners
+  
+  Last time we ended with this event listener. 
+  
+  ```javascript
+  searchForm.addEventListener('submit', listener);
+  ```
+  
+  And we removed the listener with `removeEventListener()` within the `listener` function. Remember, `listener` is the identifier for the returned function in `addFood()`, so the below returned function is `listener`:
+  
+  ```javascript
+  function addFood(foodObjects){
+        return function food(e){
+            
+            //.....code....
+            
+            e.target.removeEventListener('submit', listener); //_______________removed the event listener
+        }
+  }
+  ```
+  
+  But we still have a problem. If the user does a search and then does another consecutive search, two of the listeners will be added without removing the first listener. The user needs to add a food item for `.removeEventListener()` to be reached. But they might not always want to add an item from a search.
+  
+  I had a feeling this was the wrong place to remove the event listener. I was right. I'm starting to see my gut is pointing me in the right direction, even when I'm not sure why.
+  
+  We need to remove the event listener in `searchResults()`. 
+  
+  ## Removing the Last Added Event Listener
+  
+  ```javascript
+  var listener;
+  function searchResults(results){
+    const searchForm = document.querySelector("form[name=search_results]")
+
+    let inputItems=[];
+    results.forEach(x=>inputItems.push(`<input type="radio" name="food" value="${x.ndbno}">${x.name}</input><br>`));
+    searchForm.innerHTML = inputItems.join("")+"<input type='submit' name='add' value='add'/>";
+    const inputs = searchForm.querySelectorAll("inputs");
+
+    const callback= addFood(results);
+    if (listener) searchForm.removeEventListener('submit', listener);//____________conditionally remove event listener
+    listener = callback;
+    searchForm.addEventListener('submit', listener); 
+
+  }
+  ```
+
 ## Day 99
 ### 4/9/19
 
