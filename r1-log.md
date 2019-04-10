@@ -62,7 +62,7 @@
   
   I could make a new value for each object that represents the `proteinPerCalories`, `carbsPerCalories`, etc. Or I could make functions that get these values and not save them. 
   
-  I'm going to start with using`sort()` to sort the nutrients by most protein per calorie.
+  I'm going to start with using `sort()` to sort the nutrients by most protein per calorie.
   
   ## `sort()`
   
