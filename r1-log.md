@@ -92,7 +92,13 @@
   
   I learned a lot about learning. 
   
-  I thought I would have learned many more topics by now. I actually leanred mostly just vanilla javascript, but there was more too learn than I expected. I feel really good about my programming capabilities compared to when I started. But I especially feel good that I know I can learn on my own if I remain consistent and patient.
+  I thought I would have learned many more topics by now. I actually learned a lot about one topic: vanilla javascript. There was more too learn than I expected. I feel really good about my programming capabilities compared to when I started. But I especially feel good that I know I can learn on my own if I remain consistent and patient. 
+  
+  I'm finally comfortable saying I'm a programmer!
+  
+  I feel like I'm officially a nerd. 
+  
+  Here's my victory dance.
   
   ![victory](log_imgs/victory_4-10.gif)
   
