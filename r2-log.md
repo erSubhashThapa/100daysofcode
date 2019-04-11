@@ -16,7 +16,7 @@
   nutrientRecipeArray[0].nutrients.find(x=>x.nutrient_id=="208")
   ```
   
-  This is where I look for array methods and wehere I found `find()`: [JavaScript Array Reference](https://www.w3schools.com/jsref/jsref_obj_array.asp)
+  This is where I look for array methods and where I found `find()`: [JavaScript Array Reference](https://www.w3schools.com/jsref/jsref_obj_array.asp)
 
   ## Added A bunch of Functions
   
