@@ -37,6 +37,37 @@
     - ex: `nutrientRation(nutrientRecipeArray[0], "protein", "calories")`
   - `sortDescending(array, nutrient, perNutrient)`
     - Sorts the food objects of an array by nutrient ratio. 
-    - ex: `sortDescending(nutrientRecipeArra, "netCarbs", "calories")`
+    - ex: `sortDescending(nutrientRecipeArray, "netCarbs", "calories")`
+    
+ ## Thinking through functions
+ 
+ I really thought through how to seperate the functions so that they could be reused by other function. I thinkI did a good job. A lot o fmy functions use other functions that I made. When makes it easier to change later and cleaner to see.
+ 
+ ## Do I need An Algorithm?
+ 
+ I feel like this next part is complex. But I feel like there might be an algorithm to solve it. I haven't really learned about algorithms.
+ 
+ I'm trying to get the amounts needed of a list of ingredients that would total to specified nutrients or close to specified nutrients.
+ 
+ I'm not sure what to search.
+ 
+ Example, If I have a collection of objects, each with different values of colors:
+ 
+ ```javascript
+ {
+    object1: { blue: 3, red: 20, yellow: 0 }
+    object2: { blue: 0, red: 2,  yellow: 12 }
+    object3: { blue: 20 red: 4,  yellow: 6 }
+    
+ }
+ 
+ // How much of each object to total as close as possible to: blue: 70 red: 40, yellow: 15?
+ ```
+ 
+ How much of each object to total as close as possible to specific amounts?  **ex: blue: 70 red: 40, yellow: 15**
+ 
+ 
+ 
+ 
     
  
