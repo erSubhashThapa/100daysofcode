@@ -39,7 +39,7 @@
     - Sorts the food objects of an array by nutrient ratio. 
     - ex: `sortDescending(nutrientRecipeArray, "netCarbs", "calories")`
     
- ## Thinking through functions
+ ## Thinking Through Functions
  
  I really thought through how to seperate the functions so that they could be reused by other function. I think I did a good job. A lot of my functions use other functions that I made. This makes it easier to change add other related functions later and cleaner to see.
  
@@ -67,6 +67,8 @@
  
  How much do we need of each object inorder to total as close as possible to specific amounts?  **ex totals: blue: 70 red: 40, yellow: 15**
  
+- ## Thoughts and Feelings:
+  Can't believe I'm on round two! I got a lot done because I saved most of my log until the end, instead of logging while coding.
  
  
  
