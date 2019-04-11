@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 
-## Day 1
+## Day 1, R2
 ### 4/11/19
 
 ## Starting Round 2
