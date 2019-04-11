@@ -41,7 +41,7 @@
     
  ## Thinking through functions
  
- I really thought through how to seperate the functions so that they could be reused by other function. I thinkI did a good job. A lot o fmy functions use other functions that I made. When makes it easier to change later and cleaner to see.
+ I really thought through how to seperate the functions so that they could be reused by other function. I think I did a good job. A lot of my functions use other functions that I made. This makes it easier to change add other related functions later and cleaner to see.
  
  ## Do I need An Algorithm?
  
@@ -49,9 +49,10 @@
  
  I'm trying to get the amounts needed of a list of ingredients that would total to specified nutrients or close to specified nutrients.
  
- I'm not sure what to search.
+ I'm not sure what to search to even begin.
  
- Example, If I have a collection of objects, each with different values of colors:
+ ### Using another example: 
+ If I have a collection of objects, each with different values of colors:
  
  ```javascript
  {
@@ -64,7 +65,7 @@
  // How much of each object to total as close as possible to: blue: 70 red: 40, yellow: 15?
  ```
  
- How much of each object to total as close as possible to specific amounts?  **ex: blue: 70 red: 40, yellow: 15**
+ How much do we need of each object inorder to total as close as possible to specific amounts?  **ex totals: blue: 70 red: 40, yellow: 15**
  
  
  
