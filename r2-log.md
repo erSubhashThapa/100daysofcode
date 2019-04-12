@@ -59,7 +59,7 @@
   
   You can see here how I could use my functions to tell me what all of our total nutrients would be if we used only one ingredient to reach an exact amount of our desired fat, or carbs, or protein:
   
-  ![screenshot](log_imgs/ndb_4-12.PNG)
+  <img src="log_imgs/ndb_4-12.PNG)" width="300"/>
   
   Q is the [quotient](http://www.amathsdictionaryforkids.com/qr/d/division.html) (How much we need of the ingredient)
   
