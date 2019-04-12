@@ -94,7 +94,7 @@
   
   ## Answer
   
-  I used the equals assignment operator `=` instead of the ewuals relational operator `==`.
+  I used the equals assignment operator `=` instead of the equals relational operator `==`.
 
 ## Day 1, R2
 ### 4/11/19
