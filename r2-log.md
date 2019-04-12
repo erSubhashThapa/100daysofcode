@@ -12,7 +12,7 @@
   I thought the answer would be complicated and I would need to find some complex algorithm. But my very helpful twitter peer [Khawar Jatoi](https://twitter.com/khawar_jatoi) said that an algorithm isn't necesary. He said, think about iterations and things you already know. I decided to give it a shot. Heads up, I didn't get the answer yet and I'm probably doing a bunch of things worng but this is my exploration into the problem. 
   
   ## Experimenting On Paper
-  I started byt trying to figure out the answer on paper using my brain. This was I would get an idea of what the code needs to do.
+  I started by trying to figure out the answer on paper using my brain. This way I would get an idea of what the code needs to do.
   
   Using my example from yesterday: 
   
