@@ -1,5 +1,100 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 2, R2
+### 4/12/19
+
+- ## Recipe Calculator
+
+  ## How To Find The Right Combination of Ingredients?
+  
+  I'm trying to figure out how to find how much of each ingredient I need given a certain amount of nutrient-totals the user wants to reach. 
+  
+  I thought the answer would be complicated and I would need to find some complex algorithm. But my very helpful twitter peer [Khawar Jatoi](https://twitter.com/khawar_jatoi) said that an algorithm isn't necesary. He said, think about iterations and things you already know. I decided to give it a shot. Heads up I didn't get the answer yet and I'm probably doidn a bunch of things worng but this is my exploration into the problem. 
+  
+  ## Experimenting On Paper
+  I started byt trying to figure out the answer on paper using my brain. This was I would get an idea of what the code needs to do.
+  
+  Using my example from yesterday: 
+  
+  ```javascript
+   {
+      object1: { blue: 3, red: 20, yellow: 0 }
+      object2: { blue: 0, red: 2,  yellow: 12 }
+      object3: { blue: 20 red: 4,  yellow: 6 }
+
+   }
+
+   // How much of each object to total as close as possible to: blue: 70 red: 40, yellow: 15?
+   ```
+ 
+ I went through each object: How much of object1 would total to blue:70? Blue for object 1 is 3 so 70/3 is 23.33. What would that do to the rest of our numbers? Mustiply them by 23.33. Well, red would be too high, yellow would sill be zero.
+ 
+ I thought through this for a while. It started to clarify some things to me. I decided to make a program to help me play around with this idea. 
+ 
+    
+ ## Experiementing In Code
+ 
+ I took this problem to code to play around with it faster.
+ 
+ ```javascript
+   var array=[
+
+      {fat:1, protein:2, carbs:4},
+      {fat:4, protein:2, carbs:1},
+      {fat:1, protein:4, carbs:2}
+
+    ]
+    
+    const a = array[0];
+    const b = array[1];
+    const c = array[2];
+    
+    //__________________some made up desied totals the user might want
+    var tFat = 15;
+    var tProtein = 10;
+    var tCarbs = 7;
+
+  ```
+  I made this array with objects representing foods with different amounts of nutrients. Then I made functions to help figure out what I was doing on paper, but faster in code. I'm not going to post the entire code because I left off with a bug and and some messiness. I will post it tomorrow. 
+  
+  You can see here how I could use my functions to tell me what all of our total nutrients would be if we used only one ingredient to reach an exact amount of our desired fat, or carbs, or protein:
+  
+  ![screenshot](log_imgs/ndb_4-12.PNG)
+  
+  Q is the [quotient](http://www.amathsdictionaryforkids.com/qr/d/division.html) (How much we need of the ingredient)
+  
+  F, P, C are fat protein and carbs.
+  
+  The parenthesis show how much under or over the macro totals would be from our desired totals.
+  
+  This helped me see, how if we were going to only use one ingredient (an over simplified answer to my problem), the best answer would probably be the one where the absolute values of the numbers in the parenthesis add up to the lowest amount.
+  
+  Still a lot to do.
+  
+  ## CSS In Console
+  
+  I used this article to try to get [CSS in my logs](https://hackernoon.com/styling-logs-in-browser-console-2ec0807dc91a). I didn't finish.
+
+  ## Can you Spot the problem?
+  
+  I spent a while on this issue. Whenever I called `overOrUnder`, I got `underfined`. I spent way too long on this problem.
+
+  Can you spot the issue?
+  ```javascript
+  const over = 'background-color: red';
+  const under = 'background-color: yellow';
+  const exact = 'background-color: green';
+  
+  const overOrUnder= (x)=>{
+    if(x=0)return exact;
+    if(x>0)return over;
+    if(x<0)return under;
+  }
+  ```
+  
+  ## Answer
+  
+  I used the equals assignment operator `=` instead of the ewuals relational operator `==`.
 
 ## Day 1, R2
 ### 4/11/19
