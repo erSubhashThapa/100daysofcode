@@ -32,11 +32,11 @@
  I thought through this for a while. It started to clarify some things to me. I decided to make a program to help me play around with this idea. 
  
     
- ## Experiementing In Code
+  ## Experiementing In Code
  
- I took this problem to code to play around with it faster.
+  I took this problem to code to play around with it faster.
  
- ```javascript
+  ```javascript
    var array=[
 
       {fat:1, protein:2, carbs:4},
