@@ -67,7 +67,7 @@
   
   The parenthesis show how much under or over the macro totals would be from our desired totals.
   
-  This helped me see, how if we were going to only use one ingredient (an over simplified answer to my problem), the best answer would probably be the one where the absolute values of the numbers in the parenthesis add up to the lowest amount.
+  This helped me see how, if we were going to only use one ingredient (an over simplified answer to my problem), the best answer would probably be the one where the absolute values of the numbers in the parenthesis add up to the lowest amount.
   
   Still a lot to do.
   
