@@ -27,14 +27,14 @@
    // How much of each object to total as close as possible to: blue: 70 red: 40, yellow: 15?
    ```
  
- I went through each object: How much of object1 would total to blue:70? Blue for object 1 is 3 so 70/3 is 23.33. What would that do to the rest of our numbers? Mustiply them by 23.33. Well, red would be too high, yellow would sill be zero.
+  I went through each object: How much of object1 would I need to total to blue:70? Blue for object 1 is 3 so 70/3 is 23.33. What would that do to the rest of our numbers: Multiply them by 23.33. Well, red would be too high, yellow would sill be zero.
  
- I thought through this for a while. It started to clarify some things to me. I decided to make a program to help me play around with this idea. 
+  I thought through this for a while. It started to clarify some things to me. I decided to make a program to help me play around with this idea. 
  
     
   ## Experiementing In Code
  
-  I took this problem to code to play around with it faster.
+  I took this problem to code, inorder to play around with it faster.
  
   ```javascript
    var array=[
