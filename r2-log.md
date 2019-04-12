@@ -77,7 +77,7 @@
 
   ## Can you Spot the problem?
   
-  I spent a while on this issue. Whenever I called `overOrUnder`, I got `underfined`. I spent way too long on this problem.
+  I spent a while on this issue. Whenever I called `overOrUnder`, I got `undefined`. I spent way too long on this problem.
 
   Can you spot the issue?
   ```javascript
