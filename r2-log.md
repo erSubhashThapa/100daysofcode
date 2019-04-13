@@ -3,20 +3,21 @@
 ## Day 3, R2
 ### 4/13/19
 
-  I went to a meetup today that had a lot of coders. This guy Joe was talking me up the wazoo so I didn't get a lot done. His favorite saying was "Too make a short story long". But he was cool and gave me some good advice. 
+I went to a meetup today that had a lot of coders. This guy Joe was talking me up the wazoo so I didn't get a lot done. His favorite saying was "Too make a short story long". But he was cool and gave me some good advice. 
   
-  Joe told me to reexamine how deeply I want to go into a subject as opposed to using a framework. I have been doing a lot of vanilla JavaScript. Maybe it's time to try react soon?
+Joe told me to reexamine how deeply I want to go into a subject as opposed to using a framework. I have been doing a lot of vanilla JavaScript. Maybe it's time to try react soon?
   
-  He also said to start working with a linter because it makes it easy for others to read your code. Uniformity.
+For more on this conundrum Joe recommended listening to this podcast:
+ - [Episode #205: Beginners and Experts Panel](https://talkpython.fm/episodes/show/205/beginners-and-experts-panel)
+ 
+His general advice for picking a tech podcast to listen too was to find some old dude who's been around the block but isn't yet bitter. I think that's good advice.
+
+He also said to start working with a linter because it makes it easy for others to read your code. Uniformity.
   
-  He recommended listening to this podcast:
-  [Episode #205: Beginners and Experts Panel](https://talkpython.fm/episodes/show/205/beginners-and-experts-panel)
-  
-  His general advice for listening to a tech podcast was to find some old dude who's been around the block but isn't yet bitter. I think that's good advice.
   
 - ## Recipe Calculator
 
-  I basically have still been thinking through this problem both on code and on paper. I think I'm closer. But I am so far from an answer. I'm gonna leave my log short today because I've just done a ton of brain storming and working through this problem. And because I was delayed from all the meetup shmoozing. See you tomorrow.
+  I basically am thinking through the problem from yesterday both on code and on paper. I think I'm closer. But I am so far from an answer. I'm gonna leave my log short today because I've just done a ton of brain storming and working through this problem. So not much concrete to post about. And because I was delayed from all the meetup shmoozing. See you tomorrow.
   
 
 ## Day 2, R2
