@@ -7,11 +7,13 @@
 
   I have been thinking about this math problem nonstop. I dreamed about it all night. 
   
-  Yesterday I called my friend [Shaily Hakimian](https://twitter.com/hakimian45) who is a math tutor. Also [Jerami](https://twitter.com/CodeAndLonely) has been helping too. Shaily said we should brainstorm on bitpaper.io a whiteboard site. 
+  ### Here's the progress I made yesterday:
+  
+  Yesterday I called my friend [Shaily Hakimian](https://twitter.com/hakimian45) who is a math tutor. Shaily said we should brainstorm on bitpaper.io a whiteboard site. [Jerami](https://twitter.com/CodeAndLonely) has been helping too and joined the whiteboard.
   
   <img src="log_imgs/bitpaper_4-14.PNG"  width="500"/>
   
-  Talking it out and trying to explain the problem to Shaily and Jerami helped me abstract my problem into an equation. 
+  Talking it out and trying to explain the problem to Shaily and Jerami helped me ***abstract my problem into an equation.***
 
   I then posted the problem on [Simbi](https://simbi.com/dashiell-bark-huss/math-help)
   
@@ -58,46 +60,88 @@
   >a= Amount of apple (1=100grams of apple) 
   >c= Amount of chicken 
   >b= Amount of butter
+    
+  ## System of Equations
+  
+  I sent my simbi post to my friend Sean. **That's when I got a break through!***
 
-[Matrices to solve a system of equations](https://www.youtube.com/watch?v=AUqeb9Z3y3k&fbclid=IwAR2SaAZPtdZZmbSFi8QWkIne989Z_-kPWa8H4tG0un9tDDkoG9Z18Wdb5NI)
+  Sean said he knew what this problem was: *a system of equations*.
+  
+  I finally had *something* to google. This helped me tremendously. 
+  
+  ## Solving System of Equations With Matrices
+  
+  Sean said watch this video to learn how to solve the problem: [Matrices to solve a system of equations](https://www.youtube.com/watch?v=AUqeb9Z3y3k&fbclid=IwAR2SaAZPtdZZmbSFi8QWkIne989Z_-kPWa8H4tG0un9tDDkoG9Z18Wdb5NI)
+  
+  So I solved it on paper and it worked. 
+  <img src="log_imgs/mathpaper_4-14.PNG"  width="500"/>
 
-https://simbi.com/dashiell-bark-huss/math-help
+  Getting closer!
+  
+  ## What About For More Variables(Ingredienst) and More Equations(Nutrients)?
+  
+  It took me a while, but I finally found a calculator that can solve systems of equations with more than 2 variables and 2 equations. [eMathHelp](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/)! 
+  
+  EMathHelp also shows the ***steps you need to take.*** Knowing the steps will be important because we'll need to **translate those steps to code.**
+  
+  I tested a bunch of sites with these 3 equations since I know the answer here should be **1** for every variable. **b=1, a=1, g=1**
+ 
+  - 25b+3a+0g=28 
+  - 0b+10a+0g=10 
+  - 15b+1a+100g=116 
+  
+  All amounts should equal 1. A lot of sites couldn't figure it out. I don't know why. But [eMathHelp](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/) worked.
 
-https://www.mathpapa.com/calc.html?q=x+y%3D7%2C%20x+2y%3D11 not working firr 3 variables
+  ## Testing With EMathHelp
+  
+  Let's say we want these foods:
+  
+  *100 gram measurements:*
+  - Apple : { protein: 3, carbs: 10, fat: 1 }
+  - Beef: { protein: 25, carbs: 0, fat: 15 } 
+  - Ghee: { protein: 1, carbs: 1g, fat: 100 }
+  *measurements partially made up*
+  
+  And we want these total nutrients:
+  
+  Protein: 20, Carbs: 7, Fat: 20
+  
+  ### That gives us these eqautions:
+  
+  - 3a+25b+1g=20 *(total protein)*
 
-https://www.symbolab.com/solver/system-of-equations-calculator/1x%2B3y%20%2B2z%3D10%2C%203x%2B3y%2B1z%3D15%2C%202x%2B4y%2B1z%3D13 not working for more than 2 variables
+  - 10a+b+2g=7 *(total carbs)*
 
-https://www.emathhelp.net/calculators/algebra-2/system-of-equations-solver/?s=25b%2B3a%2B0g%3D28%2C+0b%2B10a%2B0g%3D10%2C+15b%2B1a%2B100g%3D116&v= worked for 3 variables, DOesn't  shows steps!!
+  - 1a+15b+100g=20 *(total Fat)
 
-[Solves for 3 variables and shows steps](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/)
+  We need to solve for ***a, b, g***
 
-25b+3a+0g=28, 0b+10a+0g=10, 15b+1a+100g=116 all amounts should equal 1
+  [Here's the solution using emathhelp with steps](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/?s=3a%2B25b%2B1g%3D20%2C++10a%2Bb%2B2g%3D7%2C++1a%2B15b%2B100g%3D20&v=&method=j&steps=on)
+  
+  Answer: a=7151171≈**0.610589239965841**, b=8471171≈**0.72331340734415**,  g=1001171≈**0.085397096498719**
+  - 61g of apple
+  - 72g of beef 
+  - 8.5 grams of ghee
+  
 
+  ## What Could go wrong?
+  
+  Next I need to do this all in code. But I wonder:
+  
+  - What if there are no answers? 
+  - What if the answers are negative? 
+  - How do we find the next best answer? 
+  - What if the answer is too small? Probably round??
+  
+- ## Thoughts and Feelings:
 
-[Solution using emathhelp](https://www.emathhelp.net/calculators/algebra-2/system-of-equations-solver/?s=25b%2B3a%2B1g%3D20%2C+1b%2B10a%2B2g%3D7%2C+15b%2B1a%2B100g%3D20&v=)
-[Solution using emathhelp with steps](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/?s=3a%2B25b%2B1g%3D20%2C++10a%2Bb%2B2g%3D7%2C++1a%2B15b%2B100g%3D20&v=&method=j&steps=on)
-Per 100 grams:
-
-- Apple : { protein: 3, carbs: 10, fat: 1 }
-- Beef: { protein: 25, carbs: 0, fat: 15 } 
-- Ghee: { protein: 1, carbs: 1g, fat: 100 }
-
-3a+25b+1g=20
-
-10a+b+2g=7
-
-1a+15b+100g=20  
-
-Solve for ***a, b, g***
-
-Answer: a=7151171≈**0.610589239965841**, b=8471171≈**0.72331340734415**,  g=1001171≈**0.085397096498719**
-- 61g of apple
-- 72g of beef 
-- 8.5 grams of ghee
-
-
-
-What if there are no answers? What if the answers are negative? How do we find the next best answer? What if the answer is too small? Probably round??
+ I spend so much time on the math of this problem and hardly any coding. I guess that's part of coding when you get into making useful stuff, you'll need to learn other things. This would be a good time to have a math consultant. Is that a thing?
+ 
+ I went to a crowded coffe shop today. It forced me to sit with strangers. The strangers happened to be developers! What a cool coincidence! They were fun to talk to. Their names are Michael and Dan. 
+ 
+ Here's a cool [project Dan made](https://helveticascenario.dev/mandlebrot). Click-drag to zoom in, right click to zoom out.
+ 
+ They're working on a productivity app together. They talked to me about the pros and con of living in Austin vs the bay area. Basically you can get ahead in the bay area, but it's a bit a soul sucking and people are unaware of how the world works because they're stuck in tech world where smart toilets make sense. Like L.A. but for tech.
 
 
 
