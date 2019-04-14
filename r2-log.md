@@ -89,7 +89,8 @@
   Sean said watch this video to learn how to solve the problem: [Matrices to solve a system of equations](https://www.youtube.com/watch?v=AUqeb9Z3y3k&fbclid=IwAR2SaAZPtdZZmbSFi8QWkIne989Z_-kPWa8H4tG0un9tDDkoG9Z18Wdb5NI)
   
   So I solved it on paper and it worked. 
-  <img src="log_imgs/mathpaper_4-14.PNG"  width="500"/>
+  
+  <img src="log_imgs/mathpaper_4-14.PNG"  width="400"/>
 
   Getting closer!
   
