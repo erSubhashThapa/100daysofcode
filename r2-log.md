@@ -9,7 +9,7 @@
   
   Yesterday I called my friend [Shaily Hakimian](https://twitter.com/hakimian45) who is a math tutor. Also [Jerami](https://twitter.com/CodeAndLonely) has been helping too. Shaily said we should brainstorm on bitpaper.io a whiteboard site. 
   
-  <img src="log_imgs/bitpaper_4-14.PNG"  width="350"/>
+  <img src="log_imgs/bitpaper_4-14.PNG"  width="500"/>
   
   Talking it out and trying to explain the problem to Shaily and Jerami helped me abstract my problem into an equation. 
 
