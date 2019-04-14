@@ -115,9 +115,9 @@
   *Grams per 100 gram measurements:*
   - Apple : { protein: 3, carbs: 10, fat: 1 }
   - Beef: { protein: 25, carbs: 0, fat: 15 } 
-  - Ghee: { protein: 1, carbs: 1g, fat: 100 }
+  - Ghee: { protein: 1, carbs: 2g, fat: 100 }
   
-  *(measurements fudged)*
+  *(nutrient measurements fudged)*
   
   And we want these total nutrients:
   
@@ -141,24 +141,25 @@
   - 8.5 grams of ghee
   
 
-  ## What Could go wrong?
+  ## What Could Go Wrong?
   
   Next I need to do this all in code. But I wonder:
   
-  - What if there are no answers? 
+  - What if there are no exact answers? 
+    - How can we find the closest answer?
   - What if the answers are negative? 
-  - How do we find the next best answer? 
+    - How can we find the POSITIVE closest answer? You can't have a negative food, unless maybe you vomit it up, but that's a different app.
   - What if the answer is too small? Probably round??
   
 - ## Thoughts and Feelings:
 
- I spend so much time on the math of this problem and hardly any coding. I guess that's part of coding when you get into making useful stuff, you'll need to learn other things. This would be a good time to have a math consultant. Is that a thing?
+ I spent so much time on the math of this problem and hardly any coding. I guess that's part of coding when you get into making useful stuff, you'll need to learn other things. This would be a good time to have a math consultant. Is that a thing? I must be because what else do math people do?
  
- I went to a crowded coffe shop today. It forced me to sit with strangers. The strangers happened to be developers! What a cool coincidence! They were fun to talk to. Their names are Michael and Dan. 
+ I went to a crowded coffee shop today. It forced me to sit with strangers. The strangers happened to be developers! What a cool coincidence! They were fun to talk to. Their names are Michael and Dan. 
  
  Here's a cool [project Dan made](https://helveticascenario.dev/mandlebrot). Click-drag to zoom in, right click to zoom out.
  
- They're working on a productivity app together. They talked to me about the pros and con of living in Austin vs the bay area. Basically you can get ahead in the bay area, but it's a bit a soul sucking and people are unaware of how the world works because they're stuck in tech world where smart toilets make sense. Like L.A. but for tech.
+ They're working on a productivity app together. They talked to me about the pros and con of living in Austin vs. the bay area. Basically, you can get ahead in the bay area, but it's a bit a soul sucking and people are unaware of how the world works because they're stuck in tech world where smart-toilets are a good idea. Like L.A. but for tech.
 
 
 
