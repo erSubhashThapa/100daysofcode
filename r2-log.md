@@ -5,7 +5,7 @@
 
 - ## Recipe Calculator
 
-  I have 
+  I have been thinking about this math problem non stop. I called my friend [Shaily Hakimian](https://twitter.com/hakimian45) who is a math tutor. Also [Jerami](https://twitter.com/CodeAndLonely) has been helping too. Shaily shared this 
 
 
 [Matrices to solve a system of equations](https://www.youtube.com/watch?v=AUqeb9Z3y3k&fbclid=IwAR2SaAZPtdZZmbSFi8QWkIne989Z_-kPWa8H4tG0un9tDDkoG9Z18Wdb5NI)
