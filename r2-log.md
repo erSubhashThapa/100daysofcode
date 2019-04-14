@@ -20,9 +20,11 @@
   > Hey I’m looking for help with a math problem. I have no clue what kind of math this problem uses. I don’t want the answer alone, I want to know how it’s solved or any information on how it might be solved. Ultimately I’m trying to figure out the general algorithm to solve issues like these.
   >
   >Problem:
-  ?
+  >
   >10≈1x+7y 
+  >
   >6 ≈ 2x+1y 
+  >
   >15≈5x+2y
   >
   >How can we solve for x and y so that the values on the right equal as close as possible to the values on the left. These equations all live in the same world, x is the same in all of them and so is y.
