@@ -1,5 +1,16 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 4, R2 --edting
+### 4/14/19
+
+https://www.mathpapa.com/calc.html?q=x+y%3D7%2C%20x+2y%3D11
+
+https://simbi.com/dashiell-bark-huss/math-help
+
+https://www.symbolab.com/solver/system-of-equations-calculator/1x%2B3y%20%2B2z%3D10%2C%203x%2B3y%2B1z%3D15%2C%202x%2B4y%2B1z%3D13
+
+What if there are no answers? What if the answers are negative? How do we find the next best answer? What if the answer is too small? Probably round??
+
 ## Day 3, R2
 ### 4/13/19
 
