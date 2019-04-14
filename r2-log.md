@@ -5,8 +5,59 @@
 
 - ## Recipe Calculator
 
-  I have been thinking about this math problem non stop. I called my friend [Shaily Hakimian](https://twitter.com/hakimian45) who is a math tutor. Also [Jerami](https://twitter.com/CodeAndLonely) has been helping too. Shaily shared this 
+  I have been thinking about this math problem nonstop. I dreamed about it all night. 
+  
+  Yesterday I called my friend [Shaily Hakimian](https://twitter.com/hakimian45) who is a math tutor. Also [Jerami](https://twitter.com/CodeAndLonely) has been helping too. Shaily said we should brainstorm on bitpaper.io a whiteboard site. 
+  
+  <img src="log_imgs/bitpaper_4-14.PNG"  width="350"/>
+  
+  Talking it out and trying to explain the problem to Shaily and Jerami helped me abstract my problem into an equation. 
 
+  I then posted the problem on [Simbi](https://simbi.com/dashiell-bark-huss/math-help)
+  
+  > Hey I’m looking for help with a math problem. I have no clue what kind of math this problem uses. I don’t want the answer alone, I want to know how it’s solved or any information on how it might be solved. Ultimately I’m trying to figure out the general algorithm to solve issues like these.
+
+  >Problem:
+
+  >10≈1x+7y 
+  >6 ≈ 2x+1y 
+  >15≈5x+2y
+
+  >How can we solve for x and y so that the values on the right equal as close as possible to the values on the left. These equations all live in the same world, x is the same in all of them and so is y.
+
+  >Ex: 
+  >If X=3 and y =1 the difference between our left side and and right side is an absolute value of 3.
+
+  >10≈10_________+0 
+  >6 ≈ 7 __________+1 
+  >15≈17 _________+2 
+  >—————————— 
+  >Total difference: 3
+
+  >But are there values for x and y that would give a smaller total difference? How can we solve this algorithmically?
+
+  >I’d also like to be able to extend this problem to more variables. ex:
+
+  >10≈1x+7y +6z 
+  >6 ≈ 2x+1y +12z 
+  >15≈5x+2y +3z
+
+  >A concrete example:
+
+  >If I have apples, chicken, and butter and I want to eat 20g of fat, 22g of protein, and 10g of carbs, how much of each food should I eat to get as close as possible to my desired macronutrients?
+
+  >Per 100g 
+  >Apple: fat: 0g protein: 1g carbs: 16g 
+  >Chicken: fat: 4g protein: 20g carbs: 0g 
+  >Butter: fat: 100g protein: 0 carbs: 0g
+
+  >Fat 20 ≈ 0a + 4c + 100b 
+  >Protein 22 ≈ 1a + 20c + 0b 
+  >Carbs 10 ≈ 16a + 0c + 0b
+
+  >a= Amount of apple (1=100grams of apple) 
+  >c= Amount of chicken 
+  >b= Amount of butter
 
 [Matrices to solve a system of equations](https://www.youtube.com/watch?v=AUqeb9Z3y3k&fbclid=IwAR2SaAZPtdZZmbSFi8QWkIne989Z_-kPWa8H4tG0un9tDDkoG9Z18Wdb5NI)
 
