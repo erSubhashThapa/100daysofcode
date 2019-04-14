@@ -7,9 +7,35 @@ https://www.mathpapa.com/calc.html?q=x+y%3D7%2C%20x+2y%3D11
 
 https://simbi.com/dashiell-bark-huss/math-help
 
-https://www.symbolab.com/solver/system-of-equations-calculator/1x%2B3y%20%2B2z%3D10%2C%203x%2B3y%2B1z%3D15%2C%202x%2B4y%2B1z%3D13
+https://www.symbolab.com/solver/system-of-equations-calculator/1x%2B3y%20%2B2z%3D10%2C%203x%2B3y%2B1z%3D15%2C%202x%2B4y%2B1z%3D13 not working for more than 2 variables
+
+https://www.emathhelp.net/calculators/algebra-2/system-of-equations-solver/?s=25b%2B3a%2B0g%3D28%2C+0b%2B10a%2B0g%3D10%2C+15b%2B1a%2B100g%3D116&v= worked for 3 variables
+
+25b+3a+0g=28, 0b+10a+0g=10, 15b+1a+100g=116
+
+
+[Solution using emath help](https://www.emathhelp.net/calculators/algebra-2/system-of-equations-solver/?s=25b%2B3a%2B1g%3D20%2C+1b%2B10a%2B2g%3D7%2C+15b%2B1a%2B100g%3D20&v=)
+Per 100 grams:
+
+Apple : { protein: 3, carbs: 10, fat: 1 }
+Beef: { protein: 25, carbs: 0, fat: 15 } 
+Ghee: { protein: 1, carbs: 1g, fat: 100 }
+
+3a+25b+1g=20
+10a+b+2g=7
+1a+15b+100g=20  Solve for ***a, b, g***
+
+Answer: a=7151171≈**0.610589239965841**, b=8471171≈**0.72331340734415**,  g=1001171≈**0.085397096498719**
+
+61g of apple
+72g of beef 
+8.5 grams of ghee
+
+
 
 What if there are no answers? What if the answers are negative? How do we find the next best answer? What if the answer is too small? Probably round??
+
+
 
 ## Day 3, R2
 ### 4/13/19
