@@ -41,7 +41,9 @@
   >I’d also like to be able to extend this problem to more variables. ex:
 
   >10≈1x+7y +6z 
+ 
   >6 ≈ 2x+1y +12z 
+  
   >15≈5x+2y +3z
 
   >A concrete example:
