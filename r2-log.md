@@ -112,11 +112,12 @@
   
   Let's say we want these foods:
   
-  *100 gram measurements:*
+  *grams per 100 gram measurements:*
   - Apple : { protein: 3, carbs: 10, fat: 1 }
   - Beef: { protein: 25, carbs: 0, fat: 15 } 
   - Ghee: { protein: 1, carbs: 1g, fat: 100 }
-  *measurements partially made up*
+  
+  *measurements fudges*
   
   And we want these total nutrients:
   
