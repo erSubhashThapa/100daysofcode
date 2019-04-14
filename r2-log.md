@@ -78,7 +78,7 @@
     
   ## System of Equations
   
-  I sent my simbi post to my friend Sean. **That's when I got a break through!***
+  I sent my simbi post to my friend Sean. **That's when I got a break through!**
 
   Sean said he knew what this problem was: *a system of equations*.
   
