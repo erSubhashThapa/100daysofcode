@@ -94,7 +94,7 @@
 
   Getting closer!
   
-  ## What About For More Variables(Ingredienst) and More Equations(Nutrients)?
+  ## What About For More Variables(Ingredients) and More Equations(Nutrients)?
   
   It took me a while, but I finally found a calculator that can solve systems of equations with more than 2 variables and 2 equations. [eMathHelp](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/)! 
   
