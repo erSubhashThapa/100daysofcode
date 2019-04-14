@@ -5,7 +5,7 @@
 
 - ## Recipe Calculator
 
-  I have been thinking about this math problem nonstop. I dreamed about it all night. 
+  I have been thinking about this math problem nonstop. I seriously dreamt about it all night!
   
   ### Here's the progress I made yesterday:
   
