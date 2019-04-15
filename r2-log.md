@@ -59,19 +59,27 @@
   >
   > -  
   >10≈1x+7y +6z 
+  >
   >6 ≈ 2x+1y +12z 
+  >
   >15≈5x+2y +3z
   >
   > -  
   >40≈1x+7y +6z +8g + 10a +7f 
+  >
   >60 ≈ 2x+1y +12z +9g + 3a + 8f 
+  >
   >14≈5x+2y +3z +4g +7a +3f
   >
   > - 
   >10≈1x+7y +6z 
+  >
   >6 ≈ 2x+1y +12z 
+  >
   >15≈5x+2y +3z 
+  >
   >20≈1x+7y +6z 
+  >
   >68 ≈ 2x+1y +12z
   >
   >2. The variables can't equal negative values since you can't have a negative amount of food. If the only solution uses a negative value, how can I find an option with the closest possible positive amount?
