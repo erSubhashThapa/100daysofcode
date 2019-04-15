@@ -17,7 +17,7 @@
   
   Well, I hit a wall but I've learned a bit more. Time to update my posts and get some help.
   
-  ### Updated Quora & Simbi Post
+  ### Updated Simbi & Quora Post
   
   I rewrote my question on [simbi](https://simbi.com/dashiell-bark-huss/math-help).
    
