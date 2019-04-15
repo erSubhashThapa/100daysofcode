@@ -15,7 +15,7 @@
   
   ## Back To Asking For Help
   
-  Well, I hit a wall but I've learned a bit more. Need some help.
+  Well, I hit a wall but I've learned a bit more. Time to update my posts and get some help.
   
   ### Updated Quora & Simbi Post
   
