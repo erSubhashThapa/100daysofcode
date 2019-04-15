@@ -1,5 +1,114 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 5, R2
+### 4/15/19
+
+- ## Recipe Calculator
+  
+  ## EMathHelp Might Not Help
+  
+  I thought [eMathHelp](eMathHelp](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/)) was gonna help figure this out, but it only works when the number of variables is the same as the number of equations. 
+  
+  This makes me wonder if the way they solve it only works for those situations. Which then would not work for my case.
+  
+  The number of equations correspoonds to the number of nutrients I'm trcking(fat, carbs, protein, etc) and the number of variables corresponds to the number of ingredients(brocolli, beef, whatever you like). Obviously, we're not going to limit the number of ingredients just because we only want to track 3 nutrients.
+  
+  ## Back To Asking For Help
+  
+  I rewrote my question on [simbi](https://simbi.com/dashiell-bark-huss/math-help).
+   
+  I also posted it on [quora](https://www.quora.com/unanswered/How-can-I-find-the-closest-possible-positive-values-to-solve-a-system-of-equations-for-many-variables-and-equations)
+  
+  ### Updated Quora & Simbi Post
+  ### How can I find the closest possible positive values to solve a system of equations for many variables and equations?
+  
+  >Hey I'm looking for math help with systems of equations.
+  >
+  >First let me give a concrete example of my problem:
+  >
+  >A concrete example:
+  >
+  >If I have a given set of ingredients, let's say apples, chicken, and butter
+  >  
+  >Per 100g 
+  >Apple:______fat: 0g_____protein: 1g _____carbs: 16g 
+  >Chicken:___ fat: 4g_____protein: 20g____carbs: 0g 
+  >Butter: ____ fat: 100g __protein: 0_______carbs: 0g
+  >
+  >And I want to eat a given amount of nutrients, let's say 20g of fat, 22g of protein, and 10g of carbs .
+  >
+  >Fat 20 ≈ 0a + 4c + 100b 
+  >Protein 22 ≈ 1a + 20c + 0b 
+  >Carbs 10 ≈ 16a + 0c + 0b
+  >
+  >a= Amount of apple (1=100grams of apple) 
+  >c= Amount of chicken 
+  >b= Amount of butter
+  >
+  >How much of each food should I eat to get as close as possible to my desired nutrients?
+  >
+  >I need to be able to solve problems like these where the amount of ingredients (variables) can vary, and the amount of nutrients(equations) can vary. Though for now, it is less important that the amount of equations vary as long as I can solve for three equations (fat, carbs, protein).
+  >
+  >So here are my abstract questions:
+  >
+  >1. How do I solve systems of equations where there can be many equations and many variables. 
+  >Ex: We should be able to solve for any of these:
+  >
+  >1. 
+  >10≈1x+7y +6z 
+  >6 ≈ 2x+1y +12z 
+  >15≈5x+2y +3z
+  >
+  >2. 
+  >40≈1x+7y +6z +8g + 10a +7f 
+  >60 ≈ 2x+1y +12z +9g + 3a + 8f 
+  >14≈5x+2y +3z +4g +7a +3f
+  >
+  >3. 
+  >10≈1x+7y +6z 
+  >6 ≈ 2x+1y +12z 
+  >15≈5x+2y +3z 
+  >20≈1x+7y +6z 
+  >68 ≈ 2x+1y +12z
+  >
+  >2. The variables can't equal negative values since you can't have a negative amount of food. If the only solution uses a negative value, how can I find an option with the closest possible positive amount?
+  >
+  >This is what I mean by closest possible:
+  >
+  >For example's sake, pretend that the only true solution to this system of equations gives us at least one negative variable:
+  >
+  >10≈1x+7y 
+  >6 ≈ 2x+1y 
+  >15≈5x+2y
+  >
+  >If x=3 and y =1 , then the difference between our left side and and right side is an absolute value of 3.
+  >
+  >10≈10_________+0 
+  >6 ≈ 7 __________+1 
+  >15≈17 _________+2 
+  >—————————— 
+  >Total difference: 3
+  >
+  >But are there values for x and y that would give a smaller total difference? How do we find that value?
+  
+  
+  I also emailed my mother in law's friend who is a math professor who I already wasa put in contact with:
+  
+  ### Email
+  >Hey Joanne,
+  >
+  >Here's my updated question on Simbi with the new knowledge I've acquired: https://simbi.com/dashiell-bark-huss/math-help.
+  >
+  >To summarize: How can I find the closest possible positive values to solve a system of equations for many variables and equations?
+  >
+  >Context, I've had very little math experience in the last 10 years. I'm trying to write a program that uses this math. 
+  >
+  >Any thoughts are appreciated.
+  >
+  >-Dash 
+  
+  I was trying to be succinct but polite. Hopefully these emails and questions will help you by giving you an example of how you might ask a question which is why I'm includiong them in my coding blog.
+
 ## Day 4, R2
 ### 4/14/19
 
