@@ -9,19 +9,22 @@
   
   I thought [eMathHelp](eMathHelp](https://www.emathhelp.net/calculators/algebra-2/system-of-linear-equations-calculator/)) was gonna help figure this out, but it only works when the number of variables is the same as the number of equations. 
   
-  This makes me wonder if the way they solve it only works for those situations. Which then would not work for my case.
+  The number of equations corresponds to the number of nutrients I'm tracking(fat, carbs, protein, etc) and the number of variables corresponds to the number of ingredients(brocolli, beef, whatever you like). Obviously, we're not going to limit the number of ingredients just because we only want to track 3 nutrients.
   
-  The number of equations correspoonds to the number of nutrients I'm trcking(fat, carbs, protein, etc) and the number of variables corresponds to the number of ingredients(brocolli, beef, whatever you like). Obviously, we're not going to limit the number of ingredients just because we only want to track 3 nutrients.
+  The fact that the site can't calculate this makes me wonder if it's really complicated to solve what I'm trying to solve. Otherwise, they'd probably program it to work.
   
   ## Back To Asking For Help
+  
+  Well, I hit a wall but I've learned a bit more. Need some help.
+  
+  ### Updated Quora & Simbi Post
   
   I rewrote my question on [simbi](https://simbi.com/dashiell-bark-huss/math-help).
    
   I also posted it on [quora](https://www.quora.com/unanswered/How-can-I-find-the-closest-possible-positive-values-to-solve-a-system-of-equations-for-many-variables-and-equations)
   
-  ### Updated Quora & Simbi Post
-  ### How can I find the closest possible positive values to solve a system of equations for many variables and equations?
-  
+  >Summary: How can I find the closest possible positive values to solve a system of equations for many variables and equations?
+  >
   >Hey I'm looking for math help with systems of equations.
   >
   >First let me give a concrete example of my problem:
@@ -90,11 +93,10 @@
   >Total difference: 3
   >
   >But are there values for x and y that would give a smaller total difference? How do we find that value?
-  
-  
+    
+  ### Email
   I also emailed my mother in law's friend who is a math professor who I already wasa put in contact with:
   
-  ### Email
   >Hey Joanne,
   >
   >Here's my updated question on Simbi with the new knowledge I've acquired: https://simbi.com/dashiell-bark-huss/math-help.
