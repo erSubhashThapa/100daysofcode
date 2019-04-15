@@ -57,17 +57,17 @@
   >1. How do I solve systems of equations where there can be many equations and many variables. 
   >Ex: We should be able to solve for any of these:
   >
-  >1. 
+  > -  
   >10≈1x+7y +6z 
   >6 ≈ 2x+1y +12z 
   >15≈5x+2y +3z
   >
-  >2. 
+  > -  
   >40≈1x+7y +6z +8g + 10a +7f 
   >60 ≈ 2x+1y +12z +9g + 3a + 8f 
   >14≈5x+2y +3z +4g +7a +3f
   >
-  >3. 
+  > - 
   >10≈1x+7y +6z 
   >6 ≈ 2x+1y +12z 
   >15≈5x+2y +3z 
