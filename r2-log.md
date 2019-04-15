@@ -44,6 +44,10 @@
   ## Where Now?
   
   I'm already getting some answers back and this looks majorly complicated. Maybe I should have clarified that I haven't done any math in ten years. I'm considering partnering with a math person for this project.
+  
+  If it's hard, it's worth doing, right?
+  
+  I'm gonna take a break and work on css or something fun and cute. 
 
 ## Day 4, R2
 ### 4/14/19
