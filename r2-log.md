@@ -39,7 +39,11 @@
   >
   >-Dash 
   
-  I was trying to be succinct but polite. Hopefully these emails and questions will help you by giving you an example of how you might ask a question which is why I'm includiong them in my coding blog.
+  I was trying to be succinct but polite. Hopefully these emails and questions will help you by giving you an example of how you might ask a question which is why I'm including them in my coding blog.
+  
+  ## Where Now?
+  
+  I'm already getting some answers back and this looks majorly complicated. Maybe I should have clarified that I haven't done any math in ten years. I'm considering partnering with a math person for this project.
 
 ## Day 4, R2
 ### 4/14/19
