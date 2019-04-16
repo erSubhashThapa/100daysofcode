@@ -70,11 +70,11 @@
   
   ## Get Rid Of The Space Between Text Input and Submit
   
-  Here's some [tricks for getting rid of the space](https://css-tricks.com/fighting-the-space-between-inline-block-elements/) between inline block elements. I guess inputs have ann inline-block display by default, but I'm not sure how to check what they default to. For mine, I just got ride of the smace in my html even though I don't like the look in the html.
+  Here's some [tricks for getting rid of the space](https://css-tricks.com/fighting-the-space-between-inline-block-elements/) between inline block elements. I guess inputs have an inline-block display by default, but I'm not sure how to check what they default to. For mine, I just got rid of the space in my html even though I don't like the look in the html.
   
   ## Dev Tools CSS Tricks
   
-  Sometomes I forget how to write selectors. If you inspect an element you can see that selector here:
+  Sometimes I forget how to write css selectors. If you inspect an element you can see that selector here:
   
   <img src="log_imgs/selector_4-15.PNG"  width="300"/>
   
