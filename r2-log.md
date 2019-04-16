@@ -1,5 +1,24 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 6, R2
+### 4/16/19
+
+  ## Coding With No Internet
+  I'm going to Big Bend National Park for a few days. There's a big chance we won't get service out there. So I won't be logging or posting starting in two days or tomorrow. Not sure when our service will cut out. 
+  
+  To prepare for offline coding I'm downloading the documentation I normally use and w3schools.
+  
+  ## Offline Documentation
+  
+  ### JS, CSS, HTML, SVG
+  I'm downloading documentation for Javascript, HTML, CSS, and SVG through [Dash](https://kapeli.com/dash). You can download the documentation directly (here)[https://kapeli.com/mdn_offline] but Dash helps with searching through the documentation.
+  
+  ### W3Schools
+  I'm also [downloading W3Schools](http://www.mediafire.com/file/wyhv2wik6ttwfz8/www.w3schools.com.rar). This w3schools from 2016 so there's a probably a good amount out of date. This one [on micrsoft](https://www.microsoft.com/en-us/p/w3schools-offline-version/9nblggh5792k?activetab=pivot%3Aoverviewtab) might be more recent, but I can't access it because of a login issue but you might be able to. I tried a bunch of other links and they were all a bust.
+  
+  
+  
+
 ## Day 5, R2
 ### 4/15/19
 
