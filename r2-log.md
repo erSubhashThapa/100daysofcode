@@ -30,9 +30,12 @@
   I ended with this design in the browser using DevTools. I wonder if there's a way to easily see all the changes I made to the css in DevTools that I added to "element.style" for a bunch of different elemets. I wasn't able to find them and save these changes. But it will be easy to recreate.
    
   <img src="log_imgs/ui_4-16.PNG"  width="300"/>
-     
   
+  ## Saving CSS From DevTools
   
+  I didn't yet try this but this looks helpful:
+  
+  - [Save your CSS changes right in the Google Chrome inspector](https://rafaltomal.com/tips/save-css-chrome-inspector/)
 
 ## Day 5, R2
 ### 4/15/19
