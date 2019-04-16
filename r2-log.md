@@ -43,11 +43,31 @@
   
   ## Where Now?
   
-  I'm already getting some answers back and this looks majorly complicated. Maybe I should have clarified that I haven't done any math in ten years. I'm considering partnering with a math person for this project.
+  I'm already getting some answers back and this looks majorly complicated. Maybe I should have clarified that I haven't done any math in ten years. I'm considering partnering with a math person for this project. What do you do when you need help? 
+  
+  - When should you outsource?
+    - pay someone? 
+    - get free help?
+    - partner with someone?
+    
+  - When should you learn the subject? 
   
   If it's hard, it's worth doing, right?
   
   I'm gonna take a break and work on css or something fun and cute. 
+  
+  ## CSS
+  I played around with css for the last half hour of my two hour session. 
+  
+  ## Get Rid Of The Space Between Text Input and Submit
+  
+  Here's some [tricks for getting rid of the space](https://css-tricks.com/fighting-the-space-between-inline-block-elements/) between inline block elements. I guess inputs must be inline-block elements by default, but I'm not sure how to check what they default to.
+  
+  I played around on code pen, finding inspo.
+  
+  I changed my search button so it's cuter.
+  
+  <img src="log_imgs/search_4-15.PNG"  width="200"/><img src="log_imgs/searchcss_4-15.PNG"  width="200"/>
 
 ## Day 4, R2
 ### 4/14/19
