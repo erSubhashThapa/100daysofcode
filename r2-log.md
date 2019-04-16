@@ -25,7 +25,7 @@
   
  
   ### Email
-  I also emailed my mother in law's friend who is a math professor who I already wasa put in contact with:
+  I also emailed my mother in law's friend who is a math professor who I already was in contact with:
   
   >Hey Joanne,
   >
