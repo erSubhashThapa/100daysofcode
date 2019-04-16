@@ -27,7 +27,7 @@
    
   I'm working on the design for the recipe calculator.
   
-  I ended with this design in the browser using DevTools. I wonder if theres a way to easily see all the changes I made to the css in the browser that I added to "element.style" for a bunch of different elemets. I wasn't able to find them and save these changes
+  I ended with this design in the browser using DevTools. I wonder if there's a way to easily see all the changes I made to the css in DevTools that I added to "element.style" for a bunch of different elemets. I wasn't able to find them and save these changes. But it will be easy to recreate.
    
   <img src="log_imgs/ui_4-16.PNG"  width="300"/>
      
