@@ -57,17 +57,27 @@
   I'm gonna take a break and work on css or something fun and cute. 
   
   ## CSS
-  I played around with css for the last half hour of my two hour session. 
+  I played around with css for the last half hour of my two hour session. I looked at code pen for ideas.
+  
+  ## Search Bar
+  I changed my search and input so it's cuter.
+  
+  ### Before:
+  <img src="log_imgs/search_4-15.PNG"  width="200"/>
+  ### After
+  <img src="log_imgs/searchcss_4-15.PNG"  width="200"/>
   
   ## Get Rid Of The Space Between Text Input and Submit
   
-  Here's some [tricks for getting rid of the space](https://css-tricks.com/fighting-the-space-between-inline-block-elements/) between inline block elements. I guess inputs must be inline-block elements by default, but I'm not sure how to check what they default to.
+  Here's some [tricks for getting rid of the space](https://css-tricks.com/fighting-the-space-between-inline-block-elements/) between inline block elements. I guess inputs have ann inline-block display by default, but I'm not sure how to check what they default to. For mine, I just got ride of the smace in my html even though I don't like the look in the html.
   
-  I played around on code pen, finding inspo.
+  ## Dev Tools CSS Tricks
   
-  I changed my search button so it's cuter.
   
-  <img src="log_imgs/search_4-15.PNG"  width="200"/><img src="log_imgs/searchcss_4-15.PNG"  width="200"/>
+  <img src="log_imgs/selector_4-15.PNG"  width="300"/>
+  
+  
+  
 
 ## Day 4, R2
 ### 4/14/19
