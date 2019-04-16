@@ -73,10 +73,16 @@
   
   ## Dev Tools CSS Tricks
   
+  Sometomes I forget how to write selectors. If you inspect an element you can see that selector here:
   
   <img src="log_imgs/selector_4-15.PNG"  width="300"/>
   
+  And you can add css in the browser on that selector if you add the selector on devtools here on the styles panel:
   
+  <img src="log_imgs/addselector_4-15.PNG"  width="300"/>
+  
+  You can also add a class if you click the .cls button.
+ 
   
 
 ## Day 4, R2
