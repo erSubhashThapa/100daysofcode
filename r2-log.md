@@ -21,13 +21,13 @@
   <img src="log_imgs/search_4-16.PNG"  width="500"/>
   
   
- - ## Recipe Calculator
+- ## Recipe Calculator
  
-   Our internet is already going in and out as we're drving through Texas. I've already used my offline resources successfully. 
+  Our internet is already going in and out as we're drving through Texas. I've already used my offline resources successfully. 
    
-   I'm working on the design for the recipe calculator.
+  I'm working on the design for the recipe calculator.
   
-   I ended with this design in the browser. I wonder if theres a way to easily see all the changes I made to the css in the browser that I added to "element.style" for a bunch of different elemets.
+  I ended with this design in the browser using DevTools. I wonder if theres a way to easily see all the changes I made to the css in the browser that I added to "element.style" for a bunch of different elemets. I wasn't able to find them and save these changes
    
   <img src="log_imgs/ui_4-16.PNG"  width="300"/>
      
