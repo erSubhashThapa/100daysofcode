@@ -16,7 +16,7 @@
   ### W3Schools
   I'm also [downloading W3Schools](http://www.mediafire.com/file/wyhv2wik6ttwfz8/www.w3schools.com.rar). This w3schools is from 2016, so there's a probably a good amount out of date. This one [on micrsoft](https://www.microsoft.com/en-us/p/w3schools-offline-version/9nblggh5792k?activetab=pivot%3Aoverviewtab) might be more recent, but I can't access it because of a login issue but you might be able to. I tried a bunch of other links and they were all a bust.
   
-  If you need to search W3schools while offline, search while in the *www.w3schools.com* folder while search w3schools is selected andonly search for html documents.
+  If you need to search W3schools while offline, search while in the *www.w3schools.com* folder on your computer while "search www.w3schools.com" is selected and only search for html documents.
   
   <img src="log_imgs/search_4-16.PNG"  width="500"/>
   
