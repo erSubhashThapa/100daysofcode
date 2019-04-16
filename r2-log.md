@@ -23,7 +23,7 @@
   
  - ## Recipe Calculator
  
-   Internet is already going in and out so I alreadu haev used my offline resources successfully. I'm working on the desiign for the recipe calculator.
+   Internet is already going in and out so I've already used my offline resources successfully. I'm working on the design for the recipe calculator.
   
   
   
