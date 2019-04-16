@@ -64,7 +64,8 @@
   
   ### Before:
   <img src="log_imgs/search_4-15.PNG"  width="200"/>
-  ### After
+  
+  ### After:
   <img src="log_imgs/searchcss_4-15.PNG"  width="200"/>
   
   ## Get Rid Of The Space Between Text Input and Submit
