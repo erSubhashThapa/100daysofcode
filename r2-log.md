@@ -52,7 +52,7 @@
     
   - When should you learn the subject? 
   
-  If it's hard, it's worth doing, right?
+  If it's hard, it's worth doing, right? Whatever means it takes.
   
   I'm gonna take a break and work on css or something fun and cute. 
   
