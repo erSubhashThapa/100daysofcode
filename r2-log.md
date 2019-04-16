@@ -18,7 +18,7 @@
   
   If you need to search W3schools while offline, search while in the *www.w3schools.com* folder on your computer while "search www.w3schools.com" is selected and only search for html documents.
   
-  <img src="log_imgs/search_4-16.PNG"  width="500"/>
+  <img src="log_imgs/search_4-16.PNG"  width="600"/>
   
   
 - ## Recipe Calculator
