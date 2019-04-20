@@ -27,7 +27,7 @@
   
   I learned that the `body` in HTML doesn't start until the first element starts. So if the first element is pushed down it will push the body down from the top of the window too. 
   
-  Used `::before` and `:last of type`.
+  Used `::before` and `:last-of-type`.
   
   <img src="log_imgs/ui_4-19.PNG"  width="300"/>
 
