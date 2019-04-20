@@ -1,5 +1,75 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 10, R2
+### 4/20/19
+
+  I didn't have internet on this day until the end of the day so my log is sparse.
+  
+- ## Recipe Calculator
+  I worked on css. 
+  
+  Weird space only appears at difference levels of zoomed in.
+  
+  <img src="log_imgs/space_4-20.PNG"  width="300"/>
+  
+  Video of my custom radio inputs:
+  
+  <img src="log_imgs/ui_4-20.gif"  width="300"/>
+
+
+## Day 9, R2
+### 4/19/19
+
+  I didn't have internet on this day. I'm writing this on 4/20/19.
+  
+- ## Recipe Calculator
+  I worked on css. 
+  
+  I learned that the `body` in HTML doesn't start until the first element starts. So if the first element is pushed down it will push the body down from the top of the window too. 
+  
+  Used `::before` and `:last of type`.
+  
+  <img src="log_imgs/ui_4-19.PNG"  width="300"/>
+
+## Day 8, R2
+### 4/18/19
+
+  I didn't have internet on this day. I'm writing this on 4/20/19.
+  
+- ## Recipe Calculator
+  I worked on css. 
+  <img src="log_imgs/ui_4-18.PNG"  width="300"/>
+
+## Day 7, R2
+### 4/17/19
+  
+  I didn't have internet on this day. I'm writing this on 4/20/19.
+  
+ - ## Recipe Calculator
+   I worked on css. 
+   
+   I worked with css variables.
+   
+  ```javascript
+  :root { //declare variables
+    --accent-color: rgb(0, 196, 163);
+    --text-color:rgb(2, 90, 75);
+    --text-highlight: rgb(227, 255, 247);
+    --border-radius: 20px;
+    --shadow: 0px 010px 8px rgb(7, 161, 136);
+    --white-shadow: 0px 010px 8px rgba(115, 177, 161, 0.473);
+    --main-hue: rgb(5, 219, 184);
+    --second-hue: rgb(5, 219, 155);
+    --button-font-size: 1.1rem;
+  }
+  
+  form[name=search_results] input:hover{  //use variables
+      background: var(--text-highlight);
+  }
+
+  ```
+  <img src="log_imgs/ui_4-17.PNG"  width="300"/>
+
 ## Day 6, R2
 ### 4/16/19
 
