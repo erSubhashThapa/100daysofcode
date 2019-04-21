@@ -52,6 +52,38 @@
   </div>
   ```
   <img src="log_imgs/whitegap_4-21.PNG"  width="300"/>
+  
+  You can't see it when zoomed out.
+  
+  <img src="log_imgs/nogap_4-21.PNG"  width="300"/>
+  
+  However you can see it in the corners when the corners of the divs are rounded.
+  
+  <img src="log_imgs/roound_4-21.PNG"  width="300"/>
+  
+  ```html
+  <style>
+        #container{
+            border: 5px solid green;
+            border-radius: 20px;
+        }
+        #content{
+            background: green;
+            border-radius: 15px; //takes into account 5px border
+        }
+  </style>
+  </head>
+  <body>
+  <div id="container">
+    <div id="content">
+        some content
+    </div>
+  </div>
+  ```
+  
+  ### My solution: 
+  Instead of giving the content div a border radius, give the container div an `overflow` of `hidden` or `scroll`. 
+
 
 ## Day 10, R2
 ### 4/20/19
