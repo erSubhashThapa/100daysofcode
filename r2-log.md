@@ -1,5 +1,30 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 11, R2
+### 4/21/19
+
+- ## Recipe Calculator
+  ## Shadow Color
+  
+  Originally I had a dark green color that matched the hue of the main background color but was a darker green.
+  
+  ```css
+  --shadow: 0px 010px 8px rgb(7, 161, 136);
+  --main-hue: rgb(5, 219, 184);
+  ```
+  
+  This colored shadow caused issues. I couldn't use this shadow on other background colors. You don't naturally see dark green shadows on a white background, for example. Thar color of a shadow should change if the background is a gradient of two different colors.
+  
+  <img src="log_imgs/greenshadow_4-21.PNG"  width="300"/>
+  <img src="log_imgs/greyshadow_4-21.PNG"  width="300"/>
+  So I changed the shadow to black with a very low opacity.
+  
+  ```css
+  --shadow: 0px 010px 8px rgba(0, 0, 0, 0.26);
+  ```
+  
+  Now this shadow will work on any color.
+
 ## Day 10, R2
 ### 4/20/19
 
