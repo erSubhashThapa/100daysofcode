@@ -30,6 +30,28 @@
   ```
   
   Now this shadow will work on any color.
+  
+  ## White Gap
+  
+  If you zoom in very close, you can see a white gap between a container that has a border, and the content inside that has a background color.
+  
+  ```html
+  <style>
+      #container{
+          border: 5px solid green;
+          border-radius: 
+      }
+      #content{
+          background: green;
+      }
+  </style>
+  <div id="container">
+    <div id="content">
+        some content
+    </div>
+  </div>
+  ```
+  <img src="log_imgs/whitegap_4-21.PNG"  width="300"/>
 
 ## Day 10, R2
 ### 4/20/19
