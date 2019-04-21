@@ -84,6 +84,9 @@
   ### My solution: 
   Instead of giving the content div a border radius, give the container div an `overflow` of `hidden` or `scroll`. 
   
+  ## To Do
+  I left off with an issue where the content div is not contained in the container div even with the container is set to `overflow: scroll`. This only happens when the user hovers over the content div which changes the background color.
+  
 - ## Thoughts and Feelings:
   My log is taking up a lot of my time. I'm not sure if anyone reads it, and I'm not sure how much of it is for me. I think I will cut down on logging. I need to only post the things that will help me, like links that will be helpful later or explanations of concepts I have trouble with and need to remember. 
   
