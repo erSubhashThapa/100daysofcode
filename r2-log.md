@@ -83,6 +83,16 @@
   
   ### My solution: 
   Instead of giving the content div a border radius, give the container div an `overflow` of `hidden` or `scroll`. 
+  
+- ## Thoughts and Feelings:
+  My log is taking up a lot of my time. I'm not sure if anyone reads it, and I'm not sure how much of it is for me. I think I will cut down on logging. I need to only post the things that will help me, like links that will be helpful later or explanations of concepts I have trouble with and need to remember. 
+  
+  It might be hard to see when a concept should be logged or not. I probably need a lot less words and explanation than I post now, if I'm going to just log to help myself.
+  
+  I think it's especially important that I cut down on logging while traveling. My internet & power is limited. I want to learn as much as I can without worrying as much about my log. My log should be a tool to help me, not something that holds me back and takes up my time. Right now it can take longer than an hour just for my log.
+  
+  I took a break from logging while at Big Bend because there wasn't enough reception out there. I found I got a lot done.
+
 
 
 ## Day 10, R2
