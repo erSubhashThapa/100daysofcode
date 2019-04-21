@@ -59,7 +59,7 @@
   
   However you can see it in the corners when the corners of the divs are rounded.
   
-  <img src="log_imgs/roound_4-21.PNG"  width="300"/>
+  <img src="log_imgs/round_4-21.PNG"  width="300"/>
   
   ```html
   <style>
