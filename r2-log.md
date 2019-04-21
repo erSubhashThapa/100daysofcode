@@ -15,8 +15,12 @@
   
   This colored shadow caused issues. I couldn't use this shadow on other background colors. You don't naturally see dark green shadows on a white background, for example. Thar color of a shadow should change if the background is a gradient of two different colors.
   
+  Colored shadows are limited. This green shadow works well on the green side of the gradient, but not the blue.
   <img src="log_imgs/greenshadow_4-21.PNG"  width="300"/>
+  
+  Black shadows with low opacity work on all colors.
   <img src="log_imgs/greyshadow_4-21.PNG"  width="300"/>
+  
   So I changed the shadow to black with a very low opacity.
   
   ```css
