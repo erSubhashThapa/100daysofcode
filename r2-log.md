@@ -98,6 +98,14 @@
   </div>
   ```
   
+  I realized that when you scroll to the bottom the pink element is still covering part of the last item, so I added this css to push the last item up:
+  
+  ```css
+  #container>.rectangle:last-child{
+      margin-bottom: 40px;
+  }
+  ```
+  
   ## Form Attribute
   In HTML5, you can use the form attribute to have a form submit button element outside of the respective form element:
   https://stackoverflow.com/questions/6644128/html-input-field-outside-of-form
