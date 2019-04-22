@@ -1,5 +1,52 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 12, R2
+### 4/22/19
+
+- ## Recipe Calculator
+  ## Relative Position & Border Radius
+  
+  If you have a relative div inside an unpositioned div with rounded corners, you have to add positioning to the container div and z-index.
+  
+  ### Bad
+  <img src="log_imgs/cornersbad_4-22.PNG"  width="300"/>
+  ```css
+  #container{
+      border: 5px solid green;
+      border-radius: 20px;
+      height: 200px;
+      overflow: scroll;
+  }
+
+  .rectangle{
+      height: 60px;;
+      background: rgb(31, 255, 31);
+      border: 3px solid rgb(255, 255, 255);
+      position: relative;
+  }
+  ```
+  
+  ### Good
+  <img src="log_imgs/cornersgood_4-22.PNG"  width="300"/>
+  ```css
+  #container{
+      border: 5px solid green;
+      border-radius: 20px;
+      height: 200px;
+      overflow: scroll;
+      position: relative; //added
+      z-index: 0; //added
+  }
+
+  .rectangle{
+      height: 60px;;
+      background: rgb(31, 255, 31);
+      border: 3px solid rgb(255, 255, 255);
+      position: relative;
+  }
+  ```
+  
+
 ## Day 11, R2
 ### 4/21/19
 
