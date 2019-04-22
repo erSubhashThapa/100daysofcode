@@ -10,6 +10,7 @@
   
   ### Bad
   <img src="log_imgs/cornersbad_4-22.PNG"  width="300"/>
+  
   ```css
   #container{
       border: 5px solid green;
@@ -28,6 +29,7 @@
   
   ### Good
   <img src="log_imgs/cornersgood_4-22.PNG"  width="300"/>
+  
   ```css
   #container{
       border: 5px solid green;
