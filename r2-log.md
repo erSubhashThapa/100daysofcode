@@ -47,7 +47,56 @@
       position: relative;
   }
   ```
+  ## Absolute Positioned Element in Front of Scroll
   
+  This was hard to figure out. Finally got it.
+  
+  <img src="log_imgs/scroll_4-22.PNG"  width="300"/>
+  
+  ```css
+    #big_container{
+      border: 5px solid green;
+      border-radius: 20px;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      z-index: 0;
+
+  }
+  #container{
+      overflow: scroll;
+      position: relative;
+      height: 100%;
+  }
+
+  .rectangle{
+      height: 60px;;
+      background: rgb(31, 255, 31);
+      border: 3px solid rgb(255, 255, 255);
+      position: relative;
+  }
+  .red{
+      background: rgb(255, 31, 199);
+      border: none;
+      height: 40px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+  }
+  ```
+  
+  ```html
+  <div id="big_container">
+      <div id="container">
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+          <div class="rectangle"></div>
+      </div>
+      <div class="rectangle red"></div>
+  </div>
+  ```
 
 ## Day 11, R2
 ### 4/21/19
