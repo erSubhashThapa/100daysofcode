@@ -36,8 +36,8 @@
       border-radius: 20px;
       height: 200px;
       overflow: scroll;
-      position: relative; //added
-      z-index: 0; //added
+      position: relative; //________________added
+      z-index: 0; //________________________added
   }
 
   .rectangle{
@@ -97,7 +97,7 @@
       <div class="rectangle red"></div>
   </div>
   ```
-  
+  ### Push The Last Item Up
   I realized that when you scroll to the bottom the pink element is still covering part of the last item, so I added this css to push the last item up:
   
   ```css
