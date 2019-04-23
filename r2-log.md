@@ -3,6 +3,7 @@
 ## Day 13, R2
 ### 4/23/19
 
+- ## Recipe Calculator
   ## Wrapper Vs Container:
   
   
@@ -16,7 +17,7 @@
   
   I ended with this issue. I'm having trouble over riding the `user agent stylesheet`.
   
-  <img src="log_imgs/override_4-23.PNG"  width="700"/>
+  ![screenshot](log_imgs/override_4-23.PNG)
   
   ## Today's End Result
   
