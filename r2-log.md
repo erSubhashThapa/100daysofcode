@@ -1,5 +1,17 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 13, R2
+### 4/23/19
+
+  ## Wrapper Vs Container:
+  
+  
+  >In programming languages the word container is generally used for structures that can contain more than one element.
+  >
+  >A wrapper instead is something that wraps around a single object to provide more functionalities and interfaces to it.
+  
+  *[CSS Language Speak: Container vs Wrapper?](https://stackoverflow.com/questions/4059163/css-language-speak-container-vs-wrapper)*
+
 ## Day 12, R2
 ### 4/22/19
 
