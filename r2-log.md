@@ -11,6 +11,14 @@
   >A wrapper instead is something that wraps around a single object to provide more functionalities and interfaces to it.
   
   *[CSS Language Speak: Container vs Wrapper?](https://stackoverflow.com/questions/4059163/css-language-speak-container-vs-wrapper)*
+  
+  ## CSS on Food App
+  
+  I worked more on the CSS of my food app.
+  
+  I ended with this issue. I'm having trouble over riding the `user agent stylesheet`.
+  
+  <img src="log_imgs/override_4-23.PNG"  width="300"/>
 
 ## Day 12, R2
 ### 4/22/19
