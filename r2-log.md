@@ -109,6 +109,9 @@
   ## Form Attribute
   In HTML5, you can use the form attribute to have a form submit button element outside of the respective form element:
   https://stackoverflow.com/questions/6644128/html-input-field-outside-of-form
+  
+  ## Coded While Driving Through a Dust Storm! 
+  <img src="log_imgs/dust_4-22.PNG"  width="300"/>
 
 ## Day 11, R2
 ### 4/21/19
