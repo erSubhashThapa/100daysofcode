@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 13, R2
-### 4/23/19
+## Day 14, R2
+### 4/24/19
 
 - ## Recipe Calculator
   ## Overriding User Agent Stylesheet Issue
