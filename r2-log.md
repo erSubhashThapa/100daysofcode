@@ -31,7 +31,12 @@
   - Unclear Scroll:
     - <img src="log_imgs/scrollunclear_4-24.PNG"  width="300"/>
   
-  I found [this tutorial](https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css) which helped me add a scroll bar. However, now I want to change the size of the scrollbar and scrollbar thumb. I think it might have something to do with `webkit-scrollbar-thumb`.
+  I found [this tutorial](https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css) which helped me add a scroll bar. 
+  
+  ### Scrollbar Size
+  Now I want to change the size of the scrollbar and scrollbar thumb. I think it might have something to do with `webkit-scrollbar-thumb`.
+  
+  This might help: https://stackoverflow.com/questions/26493446/change-size-of-scrollbar-thumb-with-css.
   
 ## Day 13, R2
 ### 4/23/19
