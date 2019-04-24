@@ -26,7 +26,7 @@
   
   Depending on the browser window size, the user may not realize they can scroll:
   - Obvious:
-    <img src="log_imgs/scroll_4-24.PNG"  width="300"/>
+    <img src="log_imgs/scrollclear_4-24.PNG"  width="300"/>
   
   - Unclear:
     <img src="log_imgs/scrollunclear_4-24.PNG"  width="300"/>
