@@ -4,6 +4,39 @@
 ### 4/23/19
 
 - ## Recipe Calculator
+  ## Overriding User Agent Stylesheet Issue
+
+  <img src="log_imgs/override_4-24.PNG"  width="600"/>
+  
+  Both of these pages show a workaround, but I didn't find an explanation for why this happens:
+  - https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/
+  - https://mariusschulz.com/blog/how-to-remove-webkits-banana-yellow-autofill-background
+  
+  ### Workaround:
+  
+  <img src="log_imgs/overridegood_4-24.PNG"  width="600"/>
+  
+  Now it's working in my app!
+  
+  <img src="log_imgs/uiselected_4-24.PNG"  width="600"/>
+  
+  ## Scroll Bar
+  
+  I ended trying to add a scrollbar to the box that contains food search results. This way the user knows they can scroll.
+  
+  Depending on the browser window size, the user may not realize they can scroll:
+  - Obvious:
+    <img src="log_imgs/scroll_4-24.PNG"  width="300"/>
+  
+  - Unclear:
+    <img src="log_imgs/scrollunclear_4-24.PNG"  width="300"/>
+  
+  I found [this tutorial](https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css) which helped me add a scroll bar. However, now I want to change the size of the scrollbar and scrollbar thumb. I think it might have something to do with `webkit-scrollbar-thumb`.
+  
+## Day 13, R2
+### 4/23/19
+
+- ## Recipe Calculator
   ## Wrapper Vs Container:
   
   
