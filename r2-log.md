@@ -25,10 +25,10 @@
   I ended trying to add a scrollbar to the box that contains food search results. This way the user knows they can scroll.
   
   Depending on the browser window size, the user may not realize they can scroll:
-  - Obvious:
+  - Obvious Scroll:
      - <img src="log_imgs/scrollclear_4-24.PNG"  width="300"/>
   
-  - Unclear:
+  - Unclear Scroll:
     - <img src="log_imgs/scrollunclear_4-24.PNG"  width="300"/>
   
   I found [this tutorial](https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css) which helped me add a scroll bar. However, now I want to change the size of the scrollbar and scrollbar thumb. I think it might have something to do with `webkit-scrollbar-thumb`.
