@@ -3,6 +3,8 @@
 ## Day 15, R2
 ### 4/25/19
 - ## Recipe Calculator
+  
+  ## #100DaysOfMath
   In addition to the coding I've been doing, I added 30 minutes of math study to complement #100daysofcode. I realized that I need some math skills for this app. In particular I need to understand a math subject called *optimization*. 
   
   I also talked to a twitter peer, Ross Mason, who said he under estimated the amount of math he needs to learn for AI. Since I want to learn AI, I figured I'd start now brushing up on my math.
