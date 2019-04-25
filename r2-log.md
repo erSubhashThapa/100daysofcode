@@ -1,5 +1,26 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 15, R2
+### 4/25/19
+- ## Recipe Calculator
+  In addition to the coding I've been doing, I added 30 minutes of math study to complement #100daysofcode. I realized that I need some math skills for this app. In particular I need to understand a math subject called *optimization*. 
+  
+  I also talked to a twitter peer, Ross Mason, who said he under estimated the amount of math he needs to learn for AI. Since I want to learn AI, I figured I'd start now brushing up on my math.
+  
+  So I am doing mini, not-so-serious #100DaysOfMath. By not so serious I mean, I probably won't post about it and I might skip days. It depends on what seems to be a priority on that day. I don't want to take on too much extra study, and then fall behind on what's really important.
+  
+  ## Scrollbar Size
+  
+  I figured out how to change the scroll bar size, add bottom `margin` to the `-webkit-scrollbar-track`. I added a top one too because I thought it looked better.
+  
+  ```css
+  #search_results_wrapper::-webkit-scrollbar-track {
+      margin: 4% 0 var(--add-button-height);
+  }
+  ```
+  
+  <img src="log_imgs/scroll_4-25.gif"  width="300"/>
+
 ## Day 14, R2
 ### 4/24/19
 
