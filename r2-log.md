@@ -5,15 +5,15 @@
 - ## Recipe Calculator
   
   ## #100DaysOfMath
-  In addition to the coding I've been doing, I added 30 minutes of math study to complement #100daysofcode. I realized that I need some math skills for this app. In particular I need to understand a math subject called *optimization*. 
+  In addition to the coding, I added 30 minutes of math study to complement #100daysofcode. I need some math skills for this app. I need to understand a math subject called *optimization*. 
   
-  I also talked to a twitter peer, Ross Mason, who said he under estimated the amount of math he needs to learn for AI. Since I want to learn AI, I figured I'd start now brushing up on my math.
+  I talked to a twitter peer, Ross Mason, who said he under estimated the amount of math he needs for AI. Since I want to learn AI, I figured I'd start now brushing up on my math.
   
-  So I am doing mini, not-so-serious #100DaysOfMath. By not so serious I mean, I probably won't post about it and I might skip days. It depends on what seems to be a priority on that day. I don't want to take on too much extra study, and then fall behind on what's really important.
+  So I'm doing a mini, not-so-serious, #100DaysOfMath. By not-so-serious I mean I probably won't post about it and I might skip days. It depends on what seems to be a priority on that day. I don't want to take on too much extra study, and then fall behind on what's really important.
   
   ## Scrollbar Size
   
-  I figured out how to change the scroll bar size, add bottom `margin` to the `-webkit-scrollbar-track`. I added a top one too because I thought it looked better.
+  I figured out how to change the scroll bar size, add bottom `margin` to the `-webkit-scrollbar-track`. I added a top margin too because I thought it looked better. 
   
   ```css
   #search_results_wrapper::-webkit-scrollbar-track {
@@ -22,6 +22,10 @@
   ```
   
   <img src="log_imgs/scroll_4-25.gif"  width="300"/>
+  
+  ## Promises & Fetch
+  
+  I worked on changing my `XMLHttpRequest`s to `fetch()` calls so I can work with promises. I also want to have a pedictive type ahead feature in my search bar like Wes Bos does in [Javascript30](https://courses.wesbos.com/account/access/5c51dab432bb6d664e015352/view/194130156). The problem is I don't think I can do one request for all food names and then just filter throught them, like Wes does. The NDB limits the number of items in a single request. Maybe there is a work around.
 
 ## Day 14, R2
 ### 4/24/19
