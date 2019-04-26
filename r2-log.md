@@ -27,13 +27,13 @@
   
   > Note: by default, when executing the eslint command on a directory, only .js files will be linted. You will have to specify extra extensions with the --ext option. Example: eslint --ext .html,.js src will lint both .html and .js files in the src directory.
   
-  I'm not sure what the `src` file should be in `eslint --ext .html,.js src`. I tried going out of my currect directory and selecting it like this:
+  I'm not sure what the `src` file should be in `eslint --ext .html,.js src`. I tried a path that goes out of my currect directory and back in like this:
   
   `perfect_fit_meal Dashie$ eslint --ext .html,.js ../perfect_fit_meal`
   
   But that didn't work. Now sure what to put there.
   
-  I tried going out of the directory and adding it to the full path:
+  I tried going out of the directory and then using the full path:
   
   `Fri Apr 26 ~ Dashie$ eslint --ext .html,.js /Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal`
   
