@@ -3,15 +3,35 @@
 ## Day 16, R2
 ### 4/26/19
 - ## Recipe Calculator
-  [async / await in JavaScript - What, Why and How - Fun Fun Function](https://www.youtube.com/watch?v=568g8hxJJp4)
-  [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo)
+  ## Async/Await & Promises
   
-  In the async await video the instructor uses a ool inline eveluation took called [Quokka](https://quokkajs.com/). I wanted to use it too but after doqnloading it following the [Quokka documentation](https://quokkajs.com/docs/) and the [Manage Extensions in Visual Studio Code](https://code.visualstudio.com/docs/editor/extension-gallery) page, I realized that to do what the teacher is doing I need the pro version. So forget quokka.
+  I played around with fetch and promises.
+  
+  I reviewed this video on promises: [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo)
+  
+  Then I started to watch this video on async/await: [async / await in JavaScript - What, Why and How - Fun Fun Function](https://www.youtube.com/watch?v=568g8hxJJp4)
+  
+  ## VSC Extensions
+  In the async await video the instructor uses a cool inline eveluation tool called [Quokka](https://quokkajs.com/). I wanted to use it too but after doqnloading it following the [Quokka documentation](https://quokkajs.com/docs/) and the [Manage Extensions in Visual Studio Code](https://code.visualstudio.com/docs/editor/extension-gallery) page, I realized that to do what the teacher is doing I need the pro version. So forget quokka.
+  
+  ## ESLint
   
   I also added the ESLint extension and the Beautify extension.
   
-  To set up ESLint if followed this: [Eslint setup in Visual Studio Code](https://www.youtube.com/watch?v=o2H8kvuwMKE). THe process was a little different for me so the video might be a little out of date. I realized ESLint doesn't work on javascript sections on HTML files out of the box. It only works on .js files. However you cn configure it to work with .html files.
+  To set up ESLint I followed this: [Eslint setup in Visual Studio Code](https://www.youtube.com/watch?v=o2H8kvuwMKE). The process was a little different for me, so the video might be a little out of date. 
   
+  ## ESLint on HTML Files
+  I realized ESLint doesn't work on javascript sections on HTML files. It only works on .js files. However, you can add the [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) to get ESLint to work on html files.
+  
+  I'm having trouble getting this to work. I'm not sure what this means, in the [docs](https://github.com/BenoitZugmeyer/eslint-plugin-html)
+  
+  > Note: by default, when executing the eslint command on a directory, only .js files will be linted. You will have to specify extra extensions with the --ext option. Example: eslint --ext .html,.js src will lint both .html and .js files in the src directory.
+  
+  I'm not sure what the `src` file should be in `eslint --ext .html,.js src`. I tried going out of my currect directory and selecting it like this:
+  
+  `perfect_fit_meal Dashie$ eslint --ext .html,.js ../perfect_fit_meal`
+  
+  But that didn't work. Now sure what to put there.
 
 ## Day 15, R2
 ### 4/25/19
