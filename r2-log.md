@@ -40,7 +40,7 @@
   
   That didn't work. I tried it again after installing the extension glolablly and that still didn't work.
   
-## Cows Showed Up While I was Coding
+## Cows Showed Up While I Was Coding
   
 ![cows](log_imgs/cows_4-26.jpg)
 
