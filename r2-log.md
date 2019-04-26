@@ -41,7 +41,7 @@
   
   ## Cows Showed Up While I was Coding
   
-  <img src="log_imgs/cows_4-26.jpg"  width="600"/>
+  ![cows](log_imgs/cows_4-26.jpg)
 
 ## Day 15, R2
 ### 4/25/19
