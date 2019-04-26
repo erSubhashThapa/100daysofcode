@@ -23,6 +23,7 @@
   ## ESLint on HTML Files
   I realized ESLint doesn't work on javascript sections on HTML files. It only works on .js files. However, you can add the [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) to get ESLint to work on html files.
   
+  ## Not Working on HTML Files
   I'm having trouble getting this to work. I'm not sure what this means, in the [docs](https://github.com/BenoitZugmeyer/eslint-plugin-html)
   
   > Note: by default, when executing the eslint command on a directory, only .js files will be linted. You will have to specify extra extensions with the --ext option. Example: eslint --ext .html,.js src will lint both .html and .js files in the src directory.
@@ -39,9 +40,9 @@
   
   That didn't work. I tried it again after installing the extension glolablly and that still didn't work.
   
-  ## Cows Showed Up While I was Coding
+## Cows Showed Up While I was Coding
   
-  ![cows](log_imgs/cows_4-26.jpg)
+![cows](log_imgs/cows_4-26.jpg)
 
 ## Day 15, R2
 ### 4/25/19
