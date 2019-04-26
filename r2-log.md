@@ -38,6 +38,10 @@
   `Fri Apr 26 ~ Dashie$ eslint --ext .html,.js /Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal`
   
   That didn't work. I tried it again after installing the extension glolablly and that still didn't work.
+  
+  ## Cows Showed Up While I was Coding
+  
+  <img src="log_imgs/cows_4-26.jpg"  width="600"/>
 
 ## Day 15, R2
 ### 4/25/19
