@@ -1,5 +1,14 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 16, R2
+### 4/26/19
+- ## Recipe Calculator
+  https://www.youtube.com/watch?v=568g8hxJJp4
+  https://www.youtube.com/watch?v=2d7s3spWAzo
+  https://quokkajs.com/
+  https://quokkajs.com/docs/
+  
+
 ## Day 15, R2
 ### 4/25/19
 - ## Recipe Calculator
