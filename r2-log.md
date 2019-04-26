@@ -3,10 +3,14 @@
 ## Day 16, R2
 ### 4/26/19
 - ## Recipe Calculator
-  https://www.youtube.com/watch?v=568g8hxJJp4
-  https://www.youtube.com/watch?v=2d7s3spWAzo
-  https://quokkajs.com/
-  https://quokkajs.com/docs/
+  [async / await in JavaScript - What, Why and How - Fun Fun Function](https://www.youtube.com/watch?v=568g8hxJJp4)
+  [Promises - Part 8 of Functional Programming in JavaScript](https://www.youtube.com/watch?v=2d7s3spWAzo)
+  
+  In the async await video the instructor uses a ool inline eveluation took called [Quokka](https://quokkajs.com/). I wanted to use it too but after doqnloading it following the [Quokka documentation](https://quokkajs.com/docs/) and the [Manage Extensions in Visual Studio Code](https://code.visualstudio.com/docs/editor/extension-gallery) page, I realized that to do what the teacher is doing I need the pro version. So forget quokka.
+  
+  I also added the ESLint extension and the Beautify extension.
+  
+  To set up ESLint if followed this: [Eslint setup in Visual Studio Code](https://www.youtube.com/watch?v=o2H8kvuwMKE). THe process was a little different for me so the video might be a little out of date. I realized ESLint doesn't work on javascript sections on HTML files out of the box. It only works on .js files. However you cn configure it to work with .html files.
   
 
 ## Day 15, R2
