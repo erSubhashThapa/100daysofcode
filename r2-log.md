@@ -22,6 +22,7 @@ I decided to look into npm today because I didn't know what I was doing yesterda
   **`Cmd` + `Shift` + `.` (dot):** toggle hide/show hidden files
 
   **locally installed:** When a package is installed locally it's installed on your projects directory.
+  
   **globally installed:** When a package is installed globally it will be installed in your system available to all projects.
   
   ## Command Prompt Undo?
