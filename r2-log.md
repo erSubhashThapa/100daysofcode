@@ -27,7 +27,7 @@ I decided to look into npm today because I didn't know what I was doing yesterda
   
   I came accross this dilemma and posted it on [stackoverflow](https://stackoverflow.com/questions/55883264/is-it-possible-to-go-back-and-change-the-last-input-you-entered-into-a-command-p)
   
-  <img src="log_imgs/npm_4-27.gif"  width="600"/>
+  <img src="log_imgs/npm_4-27.PNG"  width="600"/>
 
   ## JavaScript Modules: ES6 Import and Export
   The instructor in the lynda tutorial used `import`. I've seen this before but I've never used it.
