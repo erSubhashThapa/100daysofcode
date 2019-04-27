@@ -10,9 +10,10 @@ I decided to look into npm today because I didn't know what I was doing yesterda
 
   Watched some of this short a lynda video on package management: [Package Management Basics](https://www.lynda.com/Linux-tutorials/Package-management-Basics/618702/772939-4.html)
   
-  Started watching the [Learning npm the Node Package Manager](https://www.lynda.com/Node-js-tutorials/Learning-npm-Node-Package-Manager-2018/761956-2.html) tutorial on lynda.
+  Started watching the [Learning npm the Node Package Manager](https://www.lynda.com/Node-js-tutorials/Learning-npm-Node-Package-Manager-2018/761956-2.html) course on lynda.
    
-  ### Learning npm the Node Package Manager Notes:
+  ## Lynda: Learning npm the Node Package Manager
+  ### Notes:
 
   **package.json:** map for building your project and setting your dependencies.
 
