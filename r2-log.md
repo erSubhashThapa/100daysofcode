@@ -1,5 +1,14 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+[A Beginner’s Guide to npm — the Node Package Manager](https://www.sitepoint.com/beginners-guide-node-package-manager/)
+
+[Package Management Basics](https://www.lynda.com/Linux-tutorials/Package-management-Basics/618702/772939-4.html)
+
+## NPM
+
+package.json: map for building your project and setting your dependencies.
+
 ## Day 16, R2
 ### 4/26/19
 - ## Recipe Calculator
