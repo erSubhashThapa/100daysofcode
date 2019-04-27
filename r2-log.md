@@ -1,13 +1,41 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 17, R2
+### 4/27/19
 
-[A Beginner’s Guide to npm — the Node Package Manager](https://www.sitepoint.com/beginners-guide-node-package-manager/)
+I decided to look into npm today because I didn't know what I was doing yesterday trying to get ESLint to work. I'll probably be using npm a lot more. Getting more comfortable with npm will help prepare me for learning node.
 
-[Package Management Basics](https://www.lynda.com/Linux-tutorials/Package-management-Basics/618702/772939-4.html)
+  ## NPM
+  Looked through some of this: [A Beginner’s Guide to npm — the Node Package Manager](https://www.sitepoint.com/beginners-guide-node-package-manager/)
 
-## NPM
+  Watched some of this short a lynda video on package management: [Package Management Basics](https://www.lynda.com/Linux-tutorials/Package-management-Basics/618702/772939-4.html)
+  
+  Started watching the [Learning npm the Node Package Manager](https://www.lynda.com/Node-js-tutorials/Learning-npm-Node-Package-Manager-2018/761956-2.html) tutorial on lynda.
+   
+  ### Learning npm the Node Package Manager Notes:
 
-package.json: map for building your project and setting your dependencies.
+  **package.json:** map for building your project and setting your dependencies.
+
+  **npm init:** base command to initialize a new package.json file.
+
+  **`Cmd` + `Shift` + `.` (dot):** toggle hide/show hidden files
+
+  **locally installed:** When a package is installed locally it's installed on your projects directory.
+  **globally installed:** When a package is installed globally it will be installed in your system available to all projects.
+  
+  ## Command Prompt Undo?
+  
+  I came accross this dilemma and posted it on [stackoverflow](https://stackoverflow.com/questions/55883264/is-it-possible-to-go-back-and-change-the-last-input-you-entered-into-a-command-p)
+  
+  <img src="log_imgs/npm_4-27.gif"  width="600"/>
+
+  ## JavaScript Modules: ES6 Import and Export
+  The instructor in the lynda tutorial used `import`. I've seen this before but I've never used it.
+  
+  Here's the [`import` docs page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import).
+  
+  Here's a video on import and export that I didn't yet finish: [JavaScript Modules: ES6 Import and Export](https://www.youtube.com/watch?v=_3oSWwapPKQ).
+
 
 ## Day 16, R2
 ### 4/26/19
