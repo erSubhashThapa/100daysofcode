@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 17, R2
-### 4/27/19
+## Day 18, R2
+### 4/28/19
 
 - ## NPM
   ## Lynda: Learning npm the Node Package Manager
