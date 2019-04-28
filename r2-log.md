@@ -21,7 +21,7 @@
   
   One of the answers says:
   >I have this in <projectfolder>/.vscode/settings.json
-
+  >
   >{
   >  "eslint.validate": [ "javascript", "html" ]
   >}
