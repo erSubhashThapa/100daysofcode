@@ -27,7 +27,7 @@
   >  "eslint.validate": [ "javascript", "html" ]
   >}
   
-  `.vscode` is in the directory for the workspace folder, *not* the project folder. That confused me! I found these settings in that path:
+  `.vscode` is in the directory for the workspace folder, *not* the project folder. That confused me! I found these settings in that file:
   
   ```javascript
   "eslint.validate": [
