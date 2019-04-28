@@ -7,9 +7,12 @@
   ## Lynda: Learning npm the Node Package Manager
   ### Notes:
   **--save-dev** is used to save the package for development purpose. 
+  
   **Where global packages are stored on Mac** /user/local/lin/node_modules or /user/local/lin/node
+  
   **-g or -glabal**: add to `npm install` command to install globally
-  https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+  
+  **How to resolve permissions errors**: [Resolving EACCES permissions errors when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
   
   ## ESLint on HTML!
   I decided to go back and try to get ESLint to work on HTML files. 
