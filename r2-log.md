@@ -51,9 +51,35 @@
   
   <img src="/log_imgs/format_4-28.PNG" width="500" />
   
-  ## Async/Await
+  ## AirBnb Style Guide
   
+  I setup my EsLint to use the [AirBnb style guide](https://github.com/airbnb/javascript).
+  
+  ### Format Tabs
+  AirBnb format uses 2 spaces for tabs so I changed my user settings so that tab is 2 spaces not 4. 
+  
+  [How to customize the tab-to-space conversion factor when using Visual Studio Code?](https://stackoverflow.com/questions/29972396/how-to-customize-the-tab-to-space-conversion-factor-when-using-visual-studio-cod)
+  
+  ### Functions
+  
+  I'm noticing that the airbnb style guide has some rules about naming functions. The style guide explains why [here](https://github.com/airbnb/javascript#functions) and [here it talks about arrow functions](https://github.com/airbnb/javascript#arrow-functions).
+  
+  ## Linting Is FUN!
+  Maybe not fun, but this is really helpful! I'm always wondering "How should I best organize my code?" and "How can I make my code more readable?" Linting is like having a teacher over your shoulder telling you what to do and not to do. And then I can look up why in the [AirBnb style guide](https://github.com/airbnb/javascript). This is great! I need to thank that guy from my the meetup in Austin!
 
+  ## ESLint Toggle?
+  If I want to temporarily toggle off the markings from ESlint, is there a way to do this quickly?
+  
+  I've seen a little ESLint button on the status bar of VSC in other peoples setups. But it's not showing up on mine. I wonder if you can toggle ESLint on and off with this.
+  
+  ### Status Bar
+  <img src="/log_imgs/mineVSC_4-28.PNG" width="500" />
+  
+  ### Others' Status Bar
+  <img src="/log_imgs/otherVSC_4-28.PNG" width="500" />
+  
+  Couldn't find anything about this in all my searches.
+  
 ## Day 17, R2
 ### 4/27/19
 
