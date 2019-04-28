@@ -69,17 +69,19 @@
   I'm noticing that the airbnb style guide has some rules about naming functions. The style guide explains why [here](https://github.com/airbnb/javascript#functions) and [here it talks about arrow functions](https://github.com/airbnb/javascript#arrow-functions).
   
   ## Linting Is FUN!
-  Maybe not fun, but this is really helpful! I'm always wondering "How should I best organize my code?" and "How can I make my code more readable?" Linting is like having a teacher over your shoulder telling you what to do and not to do. And then I can look up why in the [AirBnb style guide](https://github.com/airbnb/javascript). This is great! I need to thank that guy from my the meetup in Austin!
+  Maybe not fun, but this is really helpful! I'm always wondering "How should I best organize my code?" and "How can I make my code more readable?" Linting is like having a teacher over your shoulder telling you what to do and not to do. And then I can look up why in the [AirBnb style guide](https://github.com/airbnb/javascript). This is great! I need to thank that guy from the meetup in Austin!
 
   ## ESLint Toggle?
-  If I want to temporarily toggle off the markings from ESlint, is there a way to do this quickly?
+  If I want to temporarily toggle off the markings from ESlint; is there a way to do this **quickly**?
   
-  I've seen a little ESLint button on the status bar of VSC in other peoples setups. But it's not showing up on mine. I wonder if you can toggle ESLint on and off with this.
+  I've seen a little ESLint button on the status bar of VSC in other people's setups. But it's not showing up on mine. I wonder if you can toggle ESLint on and off with this.
   
-  ### Status Bar
+  ### My Status Bar
+  <hr>
   <img src="/log_imgs/mineVSC_4-28.PNG" width="500" />
   
-  ### Others' Status Bar
+  ### Others' Status Bars
+  <hr>
   <img src="/log_imgs/othersVSC_4-28.PNG" width="500" />
   
   Couldn't find anything about this in all my searches.
