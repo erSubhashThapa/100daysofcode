@@ -13,7 +13,8 @@
   **-g or -glabal**: add to `npm install` command to install globally
   
   **How to resolve permissions errors**: [Resolving EACCES permissions errors when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)
-  
+
+- ## ESLint
   ## ESLint on HTML!
   I decided to go back and try to get ESLint to work on HTML files. 
   
