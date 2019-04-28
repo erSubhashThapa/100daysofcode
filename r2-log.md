@@ -34,7 +34,7 @@
     "javascriptreact"
   ]
   ```
-  That file is read only so I added this to the **user settings** panel.
+  That file is **read-only** so I added this to the **user settings** panel.
   ```javascript
    "eslint.validate": [
         "javascript",
