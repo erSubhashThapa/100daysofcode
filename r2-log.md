@@ -10,6 +10,49 @@
   **Where global packages are stored on Mac** /user/local/lin/node_modules or /user/local/lin/node
   **-g or -glabal**: add to `npm install` command to install globally
   https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+  
+  ## ESLint on HTML!
+  I decided to go back and try to get ESLint to work on HTML files. 
+  
+  I found this [stackoverflow thread](https://stackoverflow.com/questions/54138689/how-can-i-get-eslint-to-lint-html-files-in-vscode) on ESlint and HTML files.
+  
+  One of the answers says:
+  >I have this in <projectfolder>/.vscode/settings.json
+
+  >{
+  >  "eslint.validate": [ "javascript", "html" ]
+  >}
+  
+  `.vscode` is in the directory for the workspace folder, *not* the project folder. That confused me! I found these settings in that path:
+  
+  ```javascript
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact"
+  ]
+  ```
+  That file is read only so I added this to the **user settings** panel.
+  ```javascript
+   "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html"
+      ]
+  ```
+  <img src="/log_imgs/settings_4-28.PNG" width="500" />
+  
+  ### Success! 
+  
+  <img src="/log_imgs/eslint_4-28.PNG" width="500" />
+  
+  Glorious red lines!
+  
+  ## Format in VSC
+  
+  <img src="/log_imgs/format_4-28.PNG" width="500" />
+  
+  ## Async/Await
+  
 
 ## Day 17, R2
 ### 4/27/19
