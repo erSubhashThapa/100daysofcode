@@ -3,6 +3,17 @@
 ## Day 17, R2
 ### 4/27/19
 
+- ## NPM
+  ## Lynda: Learning npm the Node Package Manager
+  ### Notes:
+  **--save-dev** is used to save the package for development purpose. 
+  **Where global packages are stored on Mac** /user/local/lin/node_modules or /user/local/lin/node
+  **-g or -glabal**: add to `npm install` command to install globally
+  https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+
+## Day 17, R2
+### 4/27/19
+
 I decided to look into npm today because I didn't know what I was doing yesterday trying to get ESLint to work. I'll probably be using npm a lot more. Getting more comfortable with npm will help prepare me for learning node.
 
 - ## NPM
