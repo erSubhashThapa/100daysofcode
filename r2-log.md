@@ -79,7 +79,7 @@
   <img src="/log_imgs/mineVSC_4-28.PNG" width="500" />
   
   ### Others' Status Bar
-  <img src="/log_imgs/otherVSC_4-28.PNG" width="500" />
+  <img src="/log_imgs/othersVSC_4-28.PNG" width="500" />
   
   Couldn't find anything about this in all my searches.
   
