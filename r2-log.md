@@ -7,6 +7,7 @@
   I helped someone to day on twitter. They sent there code and I showed them what each line was doing and where they had a typo:
   
   <img src="log_imgs/typo_4-29.PNG" width="500">
+  
   <img src="log_imgs/help_4-29.PNG" width="500">
   
 
