@@ -8,6 +8,7 @@
   
   <img src="log_imgs/typo_4-29.PNG" width="200">
   
+  
   <img src="log_imgs/help_4-29.PNG" width="600">
   
 
