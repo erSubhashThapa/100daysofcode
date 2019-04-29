@@ -28,7 +28,7 @@
   
 - ## What Happen To My Log
   
-  I looked at my old log and the mark up is not rendering:
+  I looked at my old log and the markdown is not rendering:
   
   https://github.com/DashBarkHuss/100-days-of-code/blob/master/r1-log.md
   
@@ -40,14 +40,16 @@
   
 - ## Async/Await & Promises
 
-  I ran into this [exact problem](https://stackoverflow.com/questions/54082327/why-does-logging-the-result-of-fetch-break-it-body-stream-is-locked) with `fetch()`. I get an error when I try to log the promise: `Uncaught (in promise) TypeError: Failed to execute 'json' on 'Response': body stream is locked`
+  I ran into this [exact problem](https://stackoverflow.com/questions/54082327/why-does-logging-the-result-of-fetch-break-it-body-stream-is-locked) with `fetch()`. I get this error when I try to `console.log` the promise: `Uncaught (in promise) TypeError: Failed to execute 'json' on 'Response': body stream is locked`
   
   The reason is because:
   
   >.json() (and .body(), .text()) may only be called once.
-  
-  
-  
+  >
+  >The HTTP request is modeled as a stream, and you can't really read from a stream twice.
+
+- ## Thoughts and Feelings:
+  Coding was hard today because I was hungry and freezing in the super cold cafe.
 
 ## Day 18, R2
 ### 4/28/19
