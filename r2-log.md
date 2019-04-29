@@ -10,7 +10,7 @@
   <hr>
   <img src="log_imgs/typo_4-29.PNG" width="300">
   
-  **Step Through**
+  **Step Through:**
   <hr>
   <img src="log_imgs/help_4-29.PNG" width="600">
   
