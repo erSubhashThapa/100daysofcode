@@ -4,14 +4,27 @@
 ### 4/29/19
 
 - ## Toggle Eslint
-  I couldn't find a built-in way to do this but I found this [Setting Toggle extension](https://marketplace.visualstudio.com/items?itemName=Ho-Wan.setting-toggle).
+  I couldn't find a built-in way to do this but I found this [Setting Toggle extension by Ho-Wan](https://marketplace.visualstudio.com/items?itemName=Ho-Wan.setting-toggle).
   
   I set my user settings to toggle the `eslint.enable` setting.
   
   <img src="log_imgs/settings_4-29.PNG" width="500">
   
   Then I can press this button to turn Eslint on and off.
+  
   <img src="log_imgs/toggle_4-29.PNG" width="500">
+  
+- ## What Happen To My Log
+  
+  I looked at my old log and the mark up is not rendering:
+  
+  https://github.com/DashBarkHuss/100-days-of-code/blob/master/r1-log.md
+  
+  <img src="log_imgs/log-29.PNG" width="500">
+  
+  It looks like I'm in edit mode but I'm not. What's up?
+  
+  Ok I don't know what Happened, it's working again.
   
 
 ## Day 18, R2
