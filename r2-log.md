@@ -36,7 +36,7 @@
   
   It looks like I'm in edit mode but I'm not. What's up?
   
-  Ok I don't know what Happened, it's working again.
+  Ok I don't know what happened, it's working again.
   
 - ## Async/Await & Promises
 
