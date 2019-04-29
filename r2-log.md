@@ -1,5 +1,19 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 19, R2
+### 4/29/19
+
+- ## Toggle Eslint
+  I couldn't find a built-in way to do this but I found this [Setting Toggle extension](https://marketplace.visualstudio.com/items?itemName=Ho-Wan.setting-toggle).
+  
+  I set my user settings to toggle the `eslint.enable` setting.
+  
+  <img src="log_imgs/settings_4-29.PNG" width="500">
+  
+  Then I can press this button to turn Eslint on and off.
+  <img src="log_imgs/toggle_4-29.PNG" width="500">
+  
+
 ## Day 18, R2
 ### 4/28/19
 
