@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 19, R2 --editing
+## Day 19, R2
 ### 4/29/19
 
 - ## Helping
