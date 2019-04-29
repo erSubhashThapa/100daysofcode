@@ -1,6 +1,6 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 19, R2
+## Day 19, R2 --editing
 ### 4/29/19
 
 - ## Toggle Eslint
