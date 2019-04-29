@@ -26,6 +26,16 @@
   
   Ok I don't know what Happened, it's working again.
   
+- ## Asyc/Await & Promises
+
+  I ran into this [exact problem](https://stackoverflow.com/questions/54082327/why-does-logging-the-result-of-fetch-break-it-body-stream-is-locked) with `fetch()`. I get an error when I try to log the promise: `Uncaught (in promise) TypeError: Failed to execute 'json' on 'Response': body stream is locked`
+  
+  The reason is because:
+  
+  >.json() (and .body(), .text()) may only be called once.
+  
+  
+  
 
 ## Day 18, R2
 ### 4/28/19
