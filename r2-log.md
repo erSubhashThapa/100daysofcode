@@ -9,6 +9,7 @@
 
   ## Mixins
   >As defined in Wikipedia, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes.
+  
   *[Mixins](https://javascript.info/mixins)*
   
   https://developer.mozilla.org/en-US/docs/Web/API/Body
