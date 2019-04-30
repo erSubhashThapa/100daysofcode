@@ -87,7 +87,9 @@
   To understand the difference between Promises and regular XHR I looked at this [page on how to combine XHR and promises](https://gomakethings.com/promise-based-xhr/). I followed along and made this Promise based XHR. Then I made a regular XHR. Tomorrow, I'll play around with them.
   
 - ## Thoughts and Feelings:
-  Sometimes writing my thought out in my log can help me understand what I'm thinking and why I'm confused. I need to remember that when I feel like I don't want to code because something is hard, that feeling will soon pass. And come again. And pass again.
+  Sometimes writing my thoughts out in my log can help me understand what I'm thinking and why I'm confused. 
+  
+  I need to remember that when I feel like I don't want to code because something is hard, that feeling will soon pass. And come again. And pass again.
   
 ## Day 19, R2
 ### 4/29/19
