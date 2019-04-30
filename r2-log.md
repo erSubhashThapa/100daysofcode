@@ -5,6 +5,8 @@
 
 - ## Fetch API
 
+  ### Warning, I was confused during this word vomit:
+
   I was examing the the Fetch API and I wanted to know what `.json()` does. I couldn't find it in the Promise directory (`console.dir(Promise)`). I found out [.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) is a [method on the Body mixin](https://developer.mozilla.org/en-US/docs/Web/API/Body) of the Fetch API.
 
   ## Mixins
@@ -49,7 +51,9 @@
   
   *[Body, Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/API/Body)*
   
-  **Oh duh**, it's on the ***Fetch API**, not a method on **Promise!** I was confusing Promise with the Fetch API.
+  ### Unconfused:
+  
+  **Oh duh**, it's on the ***Fetch API**, not a method on **Promise!*** I was confusing Promise with the Fetch API.
   
   [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API):
   
@@ -59,11 +63,18 @@
   
   [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
   
-  The [Body methods](https://developer.mozilla.org/en-US/docs/Web/API/Body#Methods) **are** in the response directory for example.
+  The [Body methods](https://developer.mozilla.org/en-US/docs/Web/API/Body#Methods) **are** in the Response directory for example. Same with Request.
   
   <img src="log_imgs/response_4-30.PNG" width="400">
   
   
+  I'm less confused but still kind of confused with how all of these relate.
+  
+  >The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a Promise that resolves to the Response to that request, whether it is successful or not...
+ > 
+ >Once a Response is retrieved, there are a number of methods available to define what the body content is and how it should be handled (see Body).
+  
+  A little more clear.
   
   
 
