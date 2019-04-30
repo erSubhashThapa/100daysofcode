@@ -71,11 +71,20 @@
   I'm less confused but still kind of confused with how all of these relate.
   
   >The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a Promise that resolves to the Response to that request, whether it is successful or not...
- > 
- >Once a Response is retrieved, there are a number of methods available to define what the body content is and how it should be handled (see Body).
+  > 
+  >Once a Response is retrieved, there are a number of methods available to define what the body content is and how it should be handled (see Body).
   
   A little more clear.
   
+  ## Promises
+  
+  >Essentially, a promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+  
+  *[Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)*
+  
+  Theres an example on that page of a Promise with attached callbacks vs passing callbacks into a function.
+  
+  To understand the difference between Promises and regular XHR I looked at this [page on how to combine XHR and promises](https://gomakethings.com/promise-based-xhr/).
   
 
 ## Day 19, R2
