@@ -1,5 +1,73 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 20, R2
+### 4/30/19
+
+- ## Fetch API
+
+  I was examing the the Fetch API and I wanted to know what `.json()` does. I couldn't find it in the Promise directory (`console.dir(Promise)`). I found out it's a [method on the Body mixin](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) of the Fetch API.
+
+  ## Mixins
+  >As defined in Wikipedia, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes.
+  *[Mixins](https://javascript.info/mixins)*
+  
+  https://developer.mozilla.org/en-US/docs/Web/API/Body
+  
+  ```javascript
+  // mixin
+  let sayHiMixin = {
+    sayHi() {
+      alert(`Hello ${this.name}`);
+    },
+    sayBye() {
+      alert(`Bye ${this.name}`);
+    }
+  };
+
+  // usage:
+  class User {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+
+  // copy the methods
+  Object.assign(User.prototype, sayHiMixin);
+
+  // now User can say hi
+  new User("Dude").sayHi(); // Hello Dude!
+  ```
+  
+  In the example above, we see the mixin methods in the `Users` prototype.
+  
+  <img src="log_imgs/user_4-30.PNG" width="300">
+  
+  But I don't see that in the Promise directory.
+  
+  >The Body mixin of the Fetch API represents the body of the response/request...
+  >
+  >Body is implemented by both Request and Response
+  
+  *[Body, Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/API/Body)*
+  
+  **Oh duh**, it's on the ***Fetch API**, not a method on **Promise!** I was confusing Promise with the Fetch API.
+  
+  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API):
+  
+  > Fetch provides a generic definition of Request and Response objects (and other things involved with network requests).
+  
+  [Request](https://developer.mozilla.org/en-US/docs/Web/API/Request)
+  
+  [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+  
+  The [Body methods](https://developer.mozilla.org/en-US/docs/Web/API/Body#Methods) **are** in the response directory for example.
+  
+  <img src="log_imgs/response_4-30.PNG" width="400">
+  
+  
+  
+  
+
 ## Day 19, R2
 ### 4/29/19
 
