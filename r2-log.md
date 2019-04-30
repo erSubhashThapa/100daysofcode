@@ -4,7 +4,7 @@
 ### 4/29/19
 
 - ## Helping
-  I helped someone to day on twitter. They sent there code and I showed them what each line was doing and where they had a typo:
+  I helped someone today on twitter. They sent their code and I showed them what each line was doing and where they had a typo:
   
   **Typo:**
   <hr>
