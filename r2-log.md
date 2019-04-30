@@ -5,15 +5,13 @@
 
 - ## Fetch API
 
-  I was examing the the Fetch API and I wanted to know what `.json()` does. I couldn't find it in the Promise directory (`console.dir(Promise)`). I found out it's a [method on the Body mixin](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) of the Fetch API.
+  I was examing the the Fetch API and I wanted to know what `.json()` does. I couldn't find it in the Promise directory (`console.dir(Promise)`). I found out [.json()](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) is a [method on the Body mixin](https://developer.mozilla.org/en-US/docs/Web/API/Body) of the Fetch API.
 
   ## Mixins
   >As defined in Wikipedia, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes.
   
   *[Mixins](https://javascript.info/mixins)*
-  
-  https://developer.mozilla.org/en-US/docs/Web/API/Body
-  
+    
   ```javascript
   // mixin
   let sayHiMixin = {
