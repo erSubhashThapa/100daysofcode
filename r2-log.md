@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 ## Day 21, R2
-### 4/30/19
+### 5/1/19
 
 - ## Promises
   
