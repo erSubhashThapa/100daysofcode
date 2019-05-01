@@ -1,5 +1,61 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 21, R2
+### 4/30/19
+
+- ## Promises
+  
+  I played with this function that returns a promise of an XMLHttpRequest.
+  
+  ```javasript
+  const makeRequestPromise = (url) => {
+    const request = new XMLHttpRequest();
+
+    return new Promise((resolve, reject) => {
+      request.onreadystatechange = () => {
+        if (request.readyState !== 4) return;
+        if (request.status >= 200 && request.status < 300) {
+          resolve(request);
+        } else {
+          reject(new Error({
+            status: request.status,
+            statusText: request.statusText,
+          }));
+        }
+      };
+      request.open('GET', url, true);
+
+      request.send();
+    });
+  };
+  ```
+  
+  It helped me see how promises work and `.then()`
+  
+  ![promises](log_imgs/promise_5-1.PNG)
+  
+  ## Return Value Asyncronous Callback
+  
+  ![promises](log_imgs/return_5-1.PNG)
+  
+  > you cannot return from an asynchronous call inside a synchronous method.
+  
+  *[How To Return Value from an Asyncronous Callback Function](https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function)*
+  
+  ## Promises vs AJAX & Callbacks
+  
+  Still trying to sort these out. Here's some resources I'm looking at.
+  
+  >You are confused about promises and Ajax calls. They are kind of like apples and knives. You can cut an apple with knife and the knife is a tool that can be applied to an apple, but the two are very different things.
+
+  >Promises are a tool for managing asynchronous operations. They keep track of when asynchronous operations complete and what their results are and let you coordinate that completion and those results (including error conditions) with other code or other asynchronous operations. They aren't actually asynchronous operations in themselves. An Ajax call is a specific asynchronous operation that can be used with with a traditional callback interface or wrapped in a promise interface.
+
+  *[What's the Difference Between Promise and Ajax](https://stackoverflow.com/questions/39751395/whats-the-difference-between-promise-and-ajax)*
+  
+  [Async, Callback & Promise](https://medium.com/front-end-weekly/ajax-async-callback-promise-e98f8074ebd7)
+  
+  
+
 ## Day 20, R2
 ### 4/30/19
 
