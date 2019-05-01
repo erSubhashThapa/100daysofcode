@@ -36,7 +36,7 @@
   
   ## Return Value Asyncronous Callback
   
-  ![promises](log_imgs/return_5-1.PNG)
+  ![return](log_imgs/return_5-1.PNG)
   
   > you cannot return from an asynchronous call inside a synchronous method.
   
