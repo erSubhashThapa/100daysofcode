@@ -24,7 +24,7 @@
   
   ## Redo Above With Promise:
   
-  ![array](log_imgs/promise_5-2.PNG)
+  ![promise](log_imgs/promise_5-2.PNG)
   
   ## Async Await
   I went back to [this video by Fun Fun Function about async/await](https://www.youtube.com/watch?v=568g8hxJJp4) to learn about async/await now that I've played with promises more.
