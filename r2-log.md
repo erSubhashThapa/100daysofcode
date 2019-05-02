@@ -1,5 +1,38 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 22, R2
+### 5/2/19
+
+- ## Async, Ajax, Promises
+  I read this article that I started yesterday:
+  
+  [Async, Callback & Promise](https://medium.com/front-end-weekly/ajax-async-callback-promise-e98f8074ebd7)
+  
+  It also talked about CORS abd JSONP which I'm still new to.
+  
+  ## Async Call Values
+  
+  Yesterday I learned:
+  
+  > you cannot return from an asynchronous call inside a synchronous method.
+  
+  *[How To Return Value from an Asyncronous Callback Function](https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function)*
+  
+  So today I redid my AJAX call. It pushes the data to an array.
+  
+  ![array](log_imgs/array_5-2.PNG)
+  
+  ## Redo Above With Promise:
+  
+  ![array](log_imgs/promise_5-2.PNG)
+  
+  ## Async Await
+  I went back to [this video by Fun Fun Function about async/await](https://www.youtube.com/watch?v=568g8hxJJp4) to learn about async/await now that I've played with promises more.
+  
+  I like this definition the instructor gives about async/await:
+  
+  ![async/await](log_imgs/async_await_5-2.PNG)
+
 ## Day 21, R2
 ### 5/1/19
 
