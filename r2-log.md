@@ -8,7 +8,7 @@
   
   [Async, Callback & Promise](https://medium.com/front-end-weekly/ajax-async-callback-promise-e98f8074ebd7)
   
-  It also talked about CORS abd JSONP which I'm still new to.
+  It also talked about CORS and JSONP which I'm still new to.
   
   ## Async Call Values
   
@@ -18,11 +18,13 @@
   
   *[How To Return Value from an Asyncronous Callback Function](https://stackoverflow.com/questions/6847697/how-to-return-value-from-an-asynchronous-callback-function)*
   
-  So today I redid my AJAX call. It pushes the data to an array.
+  So today I redid my AJAX call. It pushes the data to an array instead of tryin to return the data.
   
   ![array](log_imgs/array_5-2.PNG)
   
   ## Redo Above With Promise:
+  
+  I redid the above with a promise.
   
   ![promise](log_imgs/promise_5-2.PNG)
   
@@ -32,6 +34,8 @@
   I like this definition the instructor gives about async/await:
   
   ![async/await](log_imgs/async_await_5-2.PNG)
+  
+  I played with async/await a bit.
 
 ## Day 21, R2
 ### 5/1/19
