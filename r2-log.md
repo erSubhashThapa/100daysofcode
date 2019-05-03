@@ -29,7 +29,7 @@
 - ## Recipe Calculator
   ## Type Ahead
   
-  I went back to my type-ahead problem for my recipe calculator. This is the one chrome does automatically. But I want my custom type-ahead to pull from a list of saved ingredient.
+  I went back to my type-ahead problem for my recipe calculator. This is the one chrome does automatically. But I want my custom type-ahead to pull from a list of saved ingredients.
   
   <img src="log_imgs/type_ahead_5-3.PNG" width="500">
   
