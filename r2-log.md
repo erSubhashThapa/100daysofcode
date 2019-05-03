@@ -4,21 +4,23 @@
 ### 5/3/19
 
 - ## Async, Ajax, Promises
-   Was confused why `getData()` was returning a promise when 'name' is not a promise.
+   Was confused why `getData()` was returning a promise when 'name' is not a promise. I did the same lines of code that are in my `getData()` function, in the console to compare what `name` returns in the console with what `getData()` returns.
 
   ![async](log_imgs/async-5-3.PNG)
   
-  Although, you can only use `await` inside a function with the `async` keyword. So, I'm not sure how it's working in my console, but it is.
+  Oddly, you can only use `await` inside a function with the `async` keyword. So, I'm not sure how it's working in my console, but it is.
   
   ## Async Always Returns a Promise
+  
+  This is why `getData()` returns a promise:
 
   >The word “async” before a function means one simple thing: a function always returns a promise. Even If a function actually returns a non-promise value, prepending the function definition with the “async” keyword directs JavaScript to automatically wrap that value in a resolved promise.
   
   *[Async/await](https://javascript.info/async-await)*
   
-  ## Loading in Parellel vs in Sequence
+  ## Loading in Parallel vs in Sequence
   
-  In the [Fun Fun Function Async/Await video](https://youtu.be/568g8hxJJp4?t=991) the instructor says that in his async/await example the images are being loaded in sequence and in the promise example they are being loaded in series.
+  In the [Fun Fun Function Async/Await video](https://youtu.be/568g8hxJJp4?t=991) the instructor says that in his async/await example the images are being loaded in *sequence* and in the promise example they are being loaded in *parallel*.
   
   I read a little more about that here: [JavaScript Async/Await: Serial, Parallel and Complex Flow](https://techbrij.com/javascript-async-await-parallel-sequence)
   
@@ -27,11 +29,11 @@
 - ## Recipe Calculator
   ## Type Ahead
   
-  I went back to my type-ahead problem for my recipe calculator. This is the one chrome does automatically. But I want mine to pull from a list of saved ingredient.
+  I went back to my type-ahead problem for my recipe calculator. This is the one chrome does automatically. But I want my custom type-ahead to pull from a list of saved ingredient.
   
   <img src="log_imgs/type_ahead_5-3.PNG" width="500">
   
-  I ended up using async await for this. I realized too that async await can help with debugging because it's easier to debug with sequencial code. But I'm not sure if that really makes sense. I didn't finish. I should start commiting my work again, but not today.  
+  I ended up using async/await for this. I realized too that async await can help with debugging because it's easier to debug with sequencial code. But I'm not sure if that really makes sense. I didn't finish. I should start commiting my work again, but not today.  
 
 ## Day 22, R2
 ### 5/2/19
