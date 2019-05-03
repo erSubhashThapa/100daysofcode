@@ -34,7 +34,11 @@
   ### Chrome's Type-Ahead
   <img src="log_imgs/type_ahead_5-3.PNG" width="500">
   
-  I ended up using async/await for this. I realized too that async await can help with debugging because it's easier to debug with sequencial code. But I'm not sure if that really makes sense. I didn't finish. I should start commiting my work again, but not today.  
+  I ended up using async/await for this. 
+  
+  I also realized that async/await can help with debugging because it's easier to debug with sequencial code. But I'm not sure if that really makes sense. 
+  
+  I didn't finish. I should start commiting my work again, but not today.  
 
 ## Day 22, R2
 ### 5/2/19
