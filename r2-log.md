@@ -31,6 +31,7 @@
   
   I went back to my type-ahead problem for my recipe calculator. This is the one chrome does automatically. But I want my custom type-ahead to pull from a list of saved ingredients.
   
+  ### Chrome's Type-Ahead
   <img src="log_imgs/type_ahead_5-3.PNG" width="500">
   
   I ended up using async/await for this. I realized too that async await can help with debugging because it's easier to debug with sequencial code. But I'm not sure if that really makes sense. I didn't finish. I should start commiting my work again, but not today.  
