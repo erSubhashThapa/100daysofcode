@@ -12,7 +12,7 @@
   
   Press `esc` while on the **Sources Panel**
   
-  ![sources and console](log_imgs/console_sources_5-4.PNG)
+  ![sources and console](log_imgs/console_sources_5-4.gif)
   
   ## Custom Type Ahead
   
@@ -47,7 +47,7 @@
   foodInput.addEventListener('keyup', displaySavedFoods);
   ```
   
-  ![type-ahead](log_imgs/type_ahead_5-4.mov)
+  ![type-ahead](log_imgs/type_ahead_5-4.gif)
   
   I tried to use regex for this but had trouble. I think the program would improve the performance of the algorithm.
 
