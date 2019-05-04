@@ -1,5 +1,56 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 24, R2
+### 5/4/19
+
+- ## Recipe Calculator
+   May the 4th and day 24th be with you!
+   
+  ## Devtools Console + Sources
+  
+  To open the **console** and **sources** at the same time:
+  
+  Press `esc` while on the **Sources Panel**
+  
+  ![sources and console](log_imgs/console_sources_5-4.PNG)
+  
+  ## Custom Type Ahead
+  
+  I got my custom type-ahead to pick the correct saved foods. But right now it just logs the results to the console. 
+ 
+  ```javascript
+  const form = document.querySelector("form[name=food_search]");
+  foodInput = form.querySelector("#food_to_search"); //food search input
+  let lastFiltered=[];
+  
+  async function displaySavedFoods(){
+  const foods = await fetch("saved_food_data.json").then(x=>x.json()).then(x=>x.foods);
+  const searchTerm = foodInput.value;
+  const filtered = filter(foods, searchTerm);
+  const filteredChanged = filtered.length != lastFiltered.length;
+  if (filteredChanged){
+    console.log("%cFiltered:", "color:red;font-size:20px;");
+    filtered.forEach(x=>console.log(x.name));
+    lastFiltered = filtered;
+  }
+  }
+
+  function filter(foods, searchTerm){
+    let filtered = foods;
+    const terms = searchTerm.split(" ").map(x=>x.toLowerCase());
+    for(i=0; i<terms.length; i++){
+      filtered = filtered.filter(food=>food.name.toLowerCase().includes(terms[i]));
+    }
+    return filtered;
+  }
+  
+  foodInput.addEventListener('keyup', displaySavedFoods);
+  ```
+  
+  ![type-ahead](log_imgs/type_ahead_5-4.mov)
+  
+  I tried to use regex for this but had trouble. I think the program would improve the performance of the algorithm.
+
 ## Day 23, R2
 ### 5/3/19
 
