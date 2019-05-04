@@ -49,7 +49,7 @@
   
   ![type-ahead](log_imgs/type_ahead_5-4.gif)
   
-  I tried to use regex for this but had trouble. I think the program would improve the performance of the algorithm.
+  I tried to use regex for this but had trouble. I think regex would improve the performance of the algorithm.
 
 ## Day 23, R2
 ### 5/3/19
