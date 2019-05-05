@@ -1,5 +1,51 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+## Day 25, R2
+### 5/5/19
+
+- ## Recipe Calculator
+  Today we're moving the type ahead output from the console to the UI.
+  
+  ## Custom Type Ahead UX
+  
+  I wasn't sure about the UX for the type ahead featuer. SHould choosing a suggested entry *search* that entry? Or should it *select* that entry and add it to the recipe? I decided to copy what the [USDA database](https://ndb.nal.usda.gov/ndb/search/list) does.
+  
+  ![usda](usda_5-5.gif)
+  
+  If you select the suggestion it searches the suggestion. It doesn't choose that entry, which on the USDA database would mean taking you directly to that entry.
+  
+  
+  ## Conditionals Not Right
+  
+  I need to redo my conditional statements so that the suggestions div dosn't display anything when there's no input in the search field. This doesn't work quite right:
+  
+  ```javascript
+  async function displaySavedFoods(){
+  const foods = await fetch("saved_food_data.json").then(x=>x.json()).then(x=>x.foods);
+  const searchTerm = foodInput.value;
+
+  const filtered = filter(foods, searchTerm);
+  const filteredChanged = filtered.length != lastFiltered.length;
+  if (filteredChanged){
+       const div = document.querySelector("#suggestions");
+       div.innerHTML="";
+       div.style.width = `${foodInput.offsetWidth}px`;
+       if(searchTerm==""){
+         lastFiltered="";
+         return;
+       } else {
+         filtered.forEach(x=>div.innerHTML+=`<li>${x.name}</li>`);
+         lastFiltered = filtered;
+       }
+     }
+  }
+  ```
+  <img src="log_img/ui_5-5.gif" width="400">
+
+**Link To Work:** [Type Ahead Search, not finished](https://github.com/DashBarkHuss/type_ahead_search/tree/644753d33806dd4994883e68d4177c2182a9be67)
+
+
 ## Day 24, R2
 ### 5/4/19
 
