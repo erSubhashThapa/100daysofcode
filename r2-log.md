@@ -11,7 +11,7 @@
   
   I wasn't sure about the UX for the type ahead featuer. SHould choosing a suggested entry *search* that entry? Or should it *select* that entry and add it to the recipe? I decided to copy what the [USDA database](https://ndb.nal.usda.gov/ndb/search/list) does.
   
-  ![usda](usda_5-5.gif)
+  ![usda](log_imgs/usda_5-5.gif)
   
   If you select the suggestion it searches the suggestion. It doesn't choose that entry, which on the USDA database would mean taking you directly to that entry.
   
