@@ -9,16 +9,16 @@
   
   ## Custom Type Ahead UX
   
-  I wasn't sure about the UX for the type ahead featuer. SHould choosing a suggested entry *search* that entry? Or should it *select* that entry and add it to the recipe? I decided to copy what the [USDA database](https://ndb.nal.usda.gov/ndb/search/list) does.
+  I wasn't sure about the UX for the type ahead feature. Should choosing a suggested entry *search* that entry? Or should it *select* that entry and add it to the recipe? I decided to copy what the [USDA database](https://ndb.nal.usda.gov/ndb/search/list) does.
   
   ![usda](log_imgs/usda_5-5.gif)
   
-  If you select the suggestion it searches the suggestion. It doesn't choose that entry, which on the USDA database would mean taking you directly to that entry.
+  If you select the suggestion it searches the suggestion. It doesn't choose that entry, which on the USDA database would mean taking you directly to that entries nutrient page.
   
   
   ## Conditionals Not Right
   
-  I need to redo my conditional statements so that the suggestions div dosn't display anything when there's no input in the search field. This doesn't work quite right:
+  I need to redo my conditional statements so that the `#suggestions` div doesn't display anything when there's no input in the search field. This doesn't work quite right:
   
   ```javascript
   async function displaySavedFoods(){
@@ -42,6 +42,8 @@
   }
   ```
   <img src="log_imgs/ui_5-5.gif" width="400">
+  
+  As you can see, even though I have no input in the text field at the end of this gif, the `#suggestions` div still displays.
 
 **Link To Work:** [Type Ahead Search, not finished](https://github.com/DashBarkHuss/type_ahead_search/tree/644753d33806dd4994883e68d4177c2182a9be67)
 
