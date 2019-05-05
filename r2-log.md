@@ -41,7 +41,7 @@
      }
   }
   ```
-  <img src="log_img/ui_5-5.gif" width="400">
+  <img src="log_imgs/ui_5-5.gif" width="400">
 
 **Link To Work:** [Type Ahead Search, not finished](https://github.com/DashBarkHuss/type_ahead_search/tree/644753d33806dd4994883e68d4177c2182a9be67)
 
