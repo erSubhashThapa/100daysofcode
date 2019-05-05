@@ -5,7 +5,7 @@
 ### 5/5/19
 
 - ## Recipe Calculator
-  Today we're moving the type ahead output from the console to the UI.
+  Today we're moving the type ahead output from the console to the UI. This type ahead feature suggests foods to search form a list of saved foods in a json file.
   
   ## Custom Type Ahead UX
   
