@@ -1,5 +1,20 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 26, R2
+### 5/6/19
+
+  
+- ## Recipe Calculator
+  ## Custom Type Ahead Conditionals
+  I got my conditionals working. In "link to work."
+  
+  ## Functionality
+  I started working on the functionality of the 'type ahead' feature. The up and down arrows should traverse the options and enter should select it. Mouse should work too. I'm not posting it cause it's a mess still. 
+  
+  This is going to be a short post today because I'm in a hurry to get to my host's house.
+  
+**Link To Work:** [Type Ahead Search, not finished](https://github.com/DashBarkHuss/type_ahead_search/tree/a74f0cfdf79e954a85ba00ee050fe57f4606ffd4)
+
 
 ## Day 25, R2
 ### 5/5/19
