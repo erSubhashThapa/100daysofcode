@@ -19,7 +19,7 @@
   
   `changeFocus()` changes the focus to whatever suggestion you mouseover.
   
-  <img src="log_imgs/ui_5-7" width="400">
+  <img src="log_imgs/ui_5-7.gif" width="400">
   
   ## Focus
   
@@ -32,7 +32,7 @@
   I still have to add functionality for when you select a suggestion.
   
 
-**Link To Work:** [Type Ahead Search, not finished]
+**Link To Work:** [Type Ahead Search, not finished](https://github.com/DashBarkHuss/type_ahead_search/tree/5699e5a8a6580426cea92c5d07808d8bdd87a5b5)
   
 
 ## Day 26, R2
