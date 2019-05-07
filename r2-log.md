@@ -1,5 +1,40 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 27, R2
+### 5/7/19
+
+- ## Recipe Calculator
+  ## Custom Type Ahead
+  
+  Today I created two event listeners that change the focus to different suggestions in the type-ahead feature.
+  
+  ```javascript
+  form.addEventListener('keydown', traverseFocus);
+  ```
+  `traverseFocus()` traverses through the suggestions when you press the up or down arrow.
+  
+  ```javascript
+  form.addEventListener('mouseover', changeFocus);
+  ```
+  
+  `changeFocus()` changes the focus to whatever suggestion you mouseover.
+  
+  <img src="log_imgs/ui_5-7" width="400">
+  
+  ## Focus
+  
+  I used the [`focus()` method](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus) to set the focus.
+  
+  I used the [.activeElement property](https://developer.mozilla.org/en-US/docs/Web/API/DocumentOrShadowRoot/activeElement) to find the last element that had focus in order to traverse the suggestions.
+  
+  ## To Do
+  
+  I still have to add functionality for when you select a suggestion.
+  
+
+**Link To Work:** [Type Ahead Search, not finished]
+  
+
 ## Day 26, R2
 ### 5/6/19
 
