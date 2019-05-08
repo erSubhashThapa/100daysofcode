@@ -20,8 +20,14 @@
 
   I also had to change the callback for `form.addEventListener('keydown',...` from `traverseFocus` to `formHandler`. This is because `form.addEventListener('keydown',...` now has two possible callbacks: `traverseFocus` or `searchSuggestedFood` depending on what key the user pressed.
   
-  ## Added Documentation for Type-ahead Search
+  I also cleaned up irrelevent css and but my css in a separate file. 
   
+  Thanks to [Philippe Vaillancourt
+@snowfrogdev](https://twitter.com/snowfrogdev) and [Giuseppe 🇮🇹
+@montyDev_](https://twitter.com/montyDev_) for the ideas to clean up the CSS and move the event listener to a different element.
+  
+  ## Added Documentation for Type-ahead Search
+ 
   I'm calling this a finished project! 
   
   It's just one part of my larger project, but I the search feature it might help others with their projects so I put it out with documentation.
