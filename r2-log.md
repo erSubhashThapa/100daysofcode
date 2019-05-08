@@ -1,5 +1,26 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 28, R2
+### 5/8/19
+
+- ## Recipe Calculator
+  ## Custom Type Ahead
+  
+  I got the custom type-ahead to select the suggestion when it is either clicked or `enter` is pressed. 
+  
+  I changed around the event listeners:
+  
+  ```javascript
+  foodInput.addEventListener('keyup', displaySavedFoods);
+  form.addEventListener('keydown', formHandler);
+  suggestions.addEventListener('mouseover', changeFocus);
+  suggestions.addEventListener('click', searchSuggestedFood);
+  ```
+  Now, `changeFocus` is called on the `suggestions` list element, before it was called on `form`, which `suggestions` is a child of. I think it reads better.
+
+I also had to change the callback for `form.addEventListener('keydown',...` from `traverseFocus` to `formHandler`. This is because `form.addEventListener('keydown',...` now has two possible callbacks: `traverseFocus` or `searchSuggestedFood` depending on what key the user pressed.
+
+
 ## Day 27, R2
 ### 5/7/19
 
