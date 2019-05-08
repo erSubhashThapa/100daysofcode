@@ -39,7 +39,7 @@
 **Link To Work:** [Type-ahead Search](https://github.com/DashBarkHuss/type_ahead_search)
 
 - ## Thoughts & Feelings:
-  Lately I haven't had to take much breaks. For the most part, I've sped through my two hours of coding with no breaks. Maybe coding is getting more habitual, and my brain needs less breaks because coding is less effortful for me now. Maybe it's because I raised my calories and my brain has eccess fuel? I hope it's not that, because that means when I do a cut, my brain will need more breaks.
+  Lately I haven't had to take much breaks. For the most part, I've sped through my two hours of coding with no breaks. Maybe coding is getting more habitual, and my brain needs less breaks because coding is less effortful for me now. Maybe it's because I raised my calories and my brain has excess fuel? I hope it's not that, because that means when I do a cut, my brain will need more breaks.
 
 ## Day 27, R2
 ### 5/7/19
