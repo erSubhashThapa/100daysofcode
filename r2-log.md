@@ -1,5 +1,18 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 29, R2
+### 5/9/19
+
+- ## Recipe Calculator
+  ## To Do
+  - Set Up dotenv
+  - lint my code
+  - Look into Prettier vsc extension because [Jacob M-G Evans  ⚛ @JacobMGEvans](https://twitter.com/JacobMGEvans) said it goes well with ESLint (but what about Beautify?)
+  
+  [How to Setup VS Code + Prettier + ESLint](https://www.youtube.com/watch?v=YIvjKId9m2c)
+  
+  
+
 ## Day 28, R2
 ### 5/8/19
 
