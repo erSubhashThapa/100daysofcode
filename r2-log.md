@@ -12,6 +12,15 @@
   ## Prettier
 
   [How to Setup VS Code + Prettier + ESLint](https://www.youtube.com/watch?v=YIvjKId9m2c)
+  
+  ## Errors!
+  
+  Now my ESlint is underlining the wrong things. For example, it underlines `this.readyState` but when I hover over that, it tells me what's wrong with a different part of my code.  I deleted Everything I added and it works again. 
+  
+  It's probably not working because *Prettier* failed to load. So these extra *Prettier* configurations are maybe throwing off my ESlint configs since prettier isn't actually installing. I don't know but I want to get *Prettier* to work.
+  
+  Terminal:
+  
   ```
   Failed to load plugin prettier: Cannot find module 'eslint-plugin-prettier'
   Happened while validating /Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/index.html
@@ -20,14 +29,81 @@
   2. If ESLint is installed globally, then make sure 'eslint-plugin-prettier' is installed globally as well.
   3. If ESLint is installed locally, then 'eslint-plugin-prettier' isn't installed correctly
   ```
+  
+  ## Is My ESLint Installed Globally? 
+  
   [How to tell if npm package was installed globally or locally](https://stackoverflow.com/questions/26104276/how-to-tell-if-npm-package-was-installed-globally-or-locally):  
   - `npm list -g`
   - `npm list -g --depth=0`
   
   <img src="log_imgs/terminal_5-9.PNG" width="400"/>
   
-  So
+  Looks like it's installed globally. But, I it's also installed locally since I can see the *ESlint* files in my project directory. That's probably causing issues.
   
+  ## ESLint Button
+  
+  I figured out how to get that little "ESLint" button to show up in the corner:
+  
+  Put `"eslint.alwaysShowStatus": true` in your user settings in vsc.
+  
+  When I click on this button, a tab pops up that shows where my project is getting *ESLint* from:
+  
+  >[Info  - 14:55:45] ESLint server is running.
+  >[Info  - 14:55:45] ESLint library loaded from:
+  >/Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/node_modules/eslint/lib/api.js
+  
+  So it looks like it's getting it locally. But I'm not sure. Also I'm curious where it's getting the ESLint html plugin from, because I saw it both locally and globally. 
+  
+  I think there's problems with ESLint being local and global. 
+  
+  ### Do I need to install prettier both locally *and* globally?
+  
+  or
+  
+  ### Do I need to uninstall either my global or local package so that I only have one package?
+
+  ## `.eslintrc.json`
+  
+  I wanted to see if I could find a `.eslintrc.json` file in the global installation of EsLint. To find the global directory:
+  [Where does npm install packages](https://stackoverflow.com/questions/5926672/where-does-npm-install-packages):
+  - `npm list -g`
+  
+  <img src="log_imgs/path_5-9.PNG" width="400"/>
+  
+  To see this file from the GUI (Finder) I followed this: [how to browse /usr/local directory in finder?](https://discussions.apple.com/thread/5418731)
+  
+  I didn't see `.eslintrc.json` file in the global eslint directory. So I'm not sure how to add Prettier globally and then how do you configure it? Or do you install it throught he command line globally and then configure it locally? Do you just manually add the `.eslintrc.json` file?
+  
+  ## Should ESLint be Global or Local?
+  
+  > We generally recommend installing ESLint and dependencies locally. It makes for a more reliable experience and it's better for collaboration as well.
+
+  *[Kevin Partington platinumazure](https://github.com/eslint/eslint/issues/10533)*
+
+  >If you want to include ESLint as part of your project’s build system, we recommend installing it locally. 
+  >...
+  >If you want to make ESLint available to tools that run across all of your projects, we recommend installing ESLint globally.
+  
+  [Getting Started with ESLint](https://eslint.org/docs/user-guide/getting-started)
+  
+  ## Uninstalling NPM Packages:
+  
+  I wanted to see how to uninstall ESlint. I found this:
+  
+  [Uninstalling packages and dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies):
+  
+  - Unscoped packages: `npm uninstall <package_name>`
+  - Scoped packages: `npm uninstall <@scope/package_name>`
+  
+  What does "scoped" mean? Here's the documentation for [npm-scope Scoped packages](https://docs.npmjs.com/misc/scope), but this is over my head. Is my ESLint scoped? I think not:
+  
+  > The scope folder (@myorg) is simply the name of the scope preceded by an @ symbol, and can contain any number of scoped packages.
+  *[npm-scope Scoped packages](https://docs.npmjs.com/misc/scope)*
+  
+  ESlint isn't preceded by an **@** symbol *so I think it's **not** a scoped package.*
+  
+- ## Thoughts & Feelings:
+  These packages keep running me into trouble. I don't really understand how they work. I'm not sure how to get more practice with them or what resources to use to understand them. I was watching an npm tutorial but I feel like it skipped a lot of information. Maybe I need to finish that tutorial. But then how to I get hands on practice/experience with these packages?
 
 ## Day 28, R2
 ### 5/8/19
