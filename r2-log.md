@@ -59,7 +59,9 @@
   When I click on the ESLint status button button, a tab pops up that shows where my project is getting *ESLint* from:
   
   >[Info  - 14:55:45] ESLint server is running.
+  >
   >[Info  - 14:55:45] ESLint library loaded from:
+  >
   >/Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/node_modules/eslint/lib/api.js
   
   So it looks like it's getting it locally. But I'm not sure. Maybe the global installation is interfering?
