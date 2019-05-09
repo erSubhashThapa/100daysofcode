@@ -54,6 +54,8 @@
   
   Put `"eslint.alwaysShowStatus": true` in your user settings in vsc.
   
+  ![eslint_button](log_imgs/eslint_5-9.PNG)
+  
   When I click on the ESLint status button button, a tab pops up that shows where my project is getting *ESLint* from:
   
   >[Info  - 14:55:45] ESLint server is running.
