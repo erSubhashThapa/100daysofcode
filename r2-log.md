@@ -11,6 +11,7 @@
   
   ## Prettier
   I started to set up Prettier as a ESLint plugin following Wes Bos's tutorial.
+  
   [How to Setup VS Code + Prettier + ESLint](https://www.youtube.com/watch?v=YIvjKId9m2c)
   
   ## Errors!
