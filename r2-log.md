@@ -40,6 +40,8 @@
   - `npm list -g`
   - `npm list -g --depth=0`
   
+  ### My Global Packages:
+  
   <img src="log_imgs/terminal_5-9.PNG" width="400"/>
   
   Looks like **it's installed globally.** 
