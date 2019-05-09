@@ -9,8 +9,24 @@
   - lint my code
   - Look into Prettier vsc extension because [Jacob M-G Evans  ⚛ @JacobMGEvans](https://twitter.com/JacobMGEvans) said it goes well with ESLint (but what about Beautify?)
   
+  ## Prettier
+
   [How to Setup VS Code + Prettier + ESLint](https://www.youtube.com/watch?v=YIvjKId9m2c)
+  ```
+  Failed to load plugin prettier: Cannot find module 'eslint-plugin-prettier'
+  Happened while validating /Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/index.html
+  This can happen for a couple of reasons:
+  1. The plugin name is spelled incorrectly in an ESLint configuration file (e.g. .eslintrc).
+  2. If ESLint is installed globally, then make sure 'eslint-plugin-prettier' is installed globally as well.
+  3. If ESLint is installed locally, then 'eslint-plugin-prettier' isn't installed correctly
+  ```
+  [How to tell if npm package was installed globally or locally](https://stackoverflow.com/questions/26104276/how-to-tell-if-npm-package-was-installed-globally-or-locally):  
+  - `npm list -g`
+  - `npm list -g --depth=0`
   
+  <img src="log_imgs/terminal_5-9.PNG" width="400"/>
+  
+  So
   
 
 ## Day 28, R2
