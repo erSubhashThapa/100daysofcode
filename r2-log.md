@@ -102,6 +102,7 @@
 
   >If you want to include ESLint as part of your project’s build system, we recommend installing it locally. 
   >...
+  >
   >If you want to make ESLint available to tools that run across all of your projects, we recommend installing ESLint globally.
   
   [Getting Started with ESLint](https://eslint.org/docs/user-guide/getting-started)
