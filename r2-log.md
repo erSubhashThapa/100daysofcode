@@ -10,14 +10,13 @@
   - Look into Prettier vsc extension because [Jacob M-G Evans  ⚛ @JacobMGEvans](https://twitter.com/JacobMGEvans) said it goes well with ESLint (but what about Beautify?)
   
   ## Prettier
-
+  I started to set up Prettier as a ESLint plugin following Wes Bos's tutorial.
   [How to Setup VS Code + Prettier + ESLint](https://www.youtube.com/watch?v=YIvjKId9m2c)
   
   ## Errors!
+  Now my ESlint is underlining the wrong things. For example, it underlines `this.readyState` but when I hover over `this.readyState`, ESLint tells me what's wrong with a *different* part of my code.  I deleted everything I added and it works again. 
   
-  Now my ESlint is underlining the wrong things. For example, it underlines `this.readyState` but when I hover over that, it tells me what's wrong with a different part of my code.  I deleted Everything I added and it works again. 
-  
-  It's probably not working because *Prettier* failed to load. So these extra *Prettier* configurations are maybe throwing off my ESlint configs since prettier isn't actually installing. I don't know but I want to get *Prettier* to work.
+  It's probably not working because *Prettier* failed to load:
   
   Terminal:
   
@@ -30,7 +29,11 @@
   3. If ESLint is installed locally, then 'eslint-plugin-prettier' isn't installed correctly
   ```
   
-  ## Is My ESLint Installed Globally? 
+  So these extra *Prettier* configurations are maybe throwing off my ESlint configs since Prettier isn't actually installing. I don't know but I want to get *Prettier* to work.
+  
+  ## Is My ESLint Installed Globally?
+  
+  Since these errors had to do with whether ESLint was installed locally or global, I had to figure that out.
   
   [How to tell if npm package was installed globally or locally](https://stackoverflow.com/questions/26104276/how-to-tell-if-npm-package-was-installed-globally-or-locally):  
   - `npm list -g`
@@ -38,7 +41,9 @@
   
   <img src="log_imgs/terminal_5-9.PNG" width="400"/>
   
-  Looks like it's installed globally. But, I it's also installed locally since I can see the *ESlint* files in my project directory. That's probably causing issues.
+  Looks like **it's installed globally.** 
+  
+  But, it's **also installed locally** since I can see the *ESlint* files in my project directory. That's probably causing issues.
   
   ## ESLint Button
   
@@ -46,26 +51,34 @@
   
   Put `"eslint.alwaysShowStatus": true` in your user settings in vsc.
   
-  When I click on this button, a tab pops up that shows where my project is getting *ESLint* from:
+  When I click on the ESLint status button button, a tab pops up that shows where my project is getting *ESLint* from:
   
   >[Info  - 14:55:45] ESLint server is running.
   >[Info  - 14:55:45] ESLint library loaded from:
   >/Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/node_modules/eslint/lib/api.js
   
-  So it looks like it's getting it locally. But I'm not sure. Also I'm curious where it's getting the ESLint html plugin from, because I saw it both locally and globally. 
+  So it looks like it's getting it locally. But I'm not sure. Maybe the global installation is interfering?
+  
+  Also I'm curious where it's getting the ESLint html plugin from, because I saw it both locally and globally. 
   
   I think there's problems with ESLint being local and global. 
   
-  ### Do I need to install prettier both locally *and* globally?
+  ## What To Do?
+  
+  ### Do I need to install the ESLint prettier plugin both locally *and* globally?
   
   or
   
-  ### Do I need to uninstall either my global or local package so that I only have one package?
+  ### Do I need to uninstall either my global or local ESLint package so that I only have one package? And then get prettier to work for that?
+  
+  I'm nervous that if I delete either package, I'll break my `eslint_html_plugin` which took me a while to get to work.
 
   ## `.eslintrc.json`
   
   I wanted to see if I could find a `.eslintrc.json` file in the global installation of EsLint. To find the global directory:
+  
   [Where does npm install packages](https://stackoverflow.com/questions/5926672/where-does-npm-install-packages):
+  
   - `npm list -g`
   
   <img src="log_imgs/path_5-9.PNG" width="400"/>
