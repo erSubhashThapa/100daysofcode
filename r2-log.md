@@ -1,5 +1,35 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 30, R2
+### 5/10/19
+
+- ## Helping
+  Today I got to help someone who posted about a css issue on Twitter. I have yet to hear back if it was helpful. Hopefully it was.
+  
+  They were having trouble getting these inputs to vertically align:
+  
+  ![img](log_imgs/start_5-10.PNG)
+  
+  To start, I added a border to all the divs to see better what was going on:
+  
+  ```css
+  * {
+  border: 1px solid red;
+  }
+  ```
+  
+  ![img](log_imgs/start_5-10.PNG)
+  
+  ![img](log_imgs/divs_5-10.PNG)
+  
+  ![img](log_imgs/centered_5-10.PNG)
+  
+  ![img](log_imgs/labelclass_5-10.PNG)
+  
+  ![img](log_imgs/done_5-10.PNG)
+ 
+  
+  
 ## Day 29, R2
 ### 5/9/19
 
