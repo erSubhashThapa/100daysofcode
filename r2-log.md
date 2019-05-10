@@ -49,11 +49,11 @@
   
   ![img](log_imgs/terminal_5-10.PNG)
   
-  So now I know that my ESLint-plugin-html is coming from the local directory.
+  So now I know that my `esLint-plugin-html` is coming from the local directory.
   
   ## What about other project directories?
   
-  I wonder how ESLint will work in other project directories?
+  I wonder how ESLint will work in other project directories? Where will it load from?
   
   I opened the directory for a project called `playing_with_javascript`, a project that didn't have ESLint installed locally to see what would happen. One thing to note, is both these directories are in the same workspace. So I believe they share the same user settings.
   
