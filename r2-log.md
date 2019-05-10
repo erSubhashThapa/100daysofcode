@@ -57,29 +57,37 @@
   
   I opened the directory for a project called `playing_with_javascript`, a project that didn't have ESLint installed locally to see what would happen. One thing to note is both these directories, `playing_with_javascript` and `perfect_fit_meal`, are in the same workspace. So I believe they share the same user settings.
   
+  ## No Local ESLint? Load Globally
+  
   This directory, `playing_with_javascript`, loaded ESLint from my global modules.
   
-  It looks like your `.eslintrc.json` goes in to your project directory even if there's no local ESLint locally.
-  
   ![img](log_imgs/noconfig_5-10.PNG)
+  
+  As you can see from the underlined error, it looks like your `.eslintrc.json` should in to your project directory even if there's no local ESLint.
+  
+  ## Adding Configs
   
   I copied the `.eslintrc.json` file from my `perfect_fit_meal` directory and pasted it in to `playing_with_javascript`. Now we can see it's using the config file to get the airbnb style guide, but it can't find the airbnb module.
   
   ![img](log_imgs/noairbnb_5-10.PNG)
   
-  So I copied the `node_modules` directory from the `perfect_fit_meal` directory. I pasted it into the `playing_with_javascript` folder.
+  ## Adding `node_modules`
   
-  Now it loads the local ESLint from the locally nodemodules folder instead ofthe global one. And it's gettting the airbnb module from there. We can tell because that error went away.
+  To get the air bnb module into the project, I copied the `node_modules` directory from the `perfect_fit_meal` directory. I pasted it into the `playing_with_javascript` folder.
+  
+  Now `playing_with_javascript` loads the ESLint locally from the local `node_modules` folder instead of the global one. And it's gettting the airbnb module from there. We can tell that it's getting the airbnb module from there because that error went away after adding `node-modules`.
   
   ![img](log_imgs/local_5-10.PNG)
   
-  But our html file aren't getting linted.
+  But our html files aren't getting linted.
   
-  I messed with the `eslint-plugin-html` directory name again to see if that would cause issues. It did. So I know it's being accessed. 
+  ## Why Arent HTML Files Getting Linted?
+  
+  I messed with the `eslint-plugin-html` directory name again to see if that would cause issues. It did. So I know the html plugin is being accessed. 
   
   ![img](log_imgs/failed_5-10.PNG)
   
-  So I changed the file name back. The error went away. 
+  I changed the folder name back. The error went away. 
   
   But why isn't ESLint linting the html files in `playing_with_javascript`?
   
