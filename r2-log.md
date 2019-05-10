@@ -8,7 +8,7 @@
   
   They were having trouble getting these inputs to vertically align:
   
-  ![img](log_imgs/start_5-10.PNG)
+  ![img](log_imgs/help_5-10.PNG)
   
   To start, I added a border to all the divs to see better what was going on:
   
