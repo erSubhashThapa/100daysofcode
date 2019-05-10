@@ -18,13 +18,21 @@
   }
   ```
   
+  I got rid of these extra divs:
+  
   ![img](log_imgs/start_5-10.PNG)
   
   ![img](log_imgs/divs_5-10.PNG)
   
+  That gave me these centered but misaligned inputs:
+  
   ![img](log_imgs/centered_5-10.PNG)
   
+  I added a class to the labels so I could make their widths uniform to align everything:
+  
   ![img](log_imgs/labelclass_5-10.PNG)
+  
+  Added `text-align: right` to line up the colons.
   
   ![img](log_imgs/done_5-10.PNG)
  
