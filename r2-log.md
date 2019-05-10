@@ -10,7 +10,7 @@
   
   ![img](log_imgs/help_5-10.PNG)
   
-  To start, I added a border to all the divs to see better what was going on:
+  ### 1. To start, I added a border to all the divs to see better what was going on:
   
   ```css
   * {
@@ -18,7 +18,7 @@
   }
   ```
   
-  I got rid of these extra divs:
+  ### 3. I got rid of these extra divs:
   
   ![img](log_imgs/start_5-10.PNG)
   
@@ -28,11 +28,11 @@
   
   ![img](log_imgs/centered_5-10.PNG)
   
-  I added a class to the labels so I could make their widths uniform to align everything:
+  ### 4. I added a class to the labels so I could make their widths uniform to align everything:
   
   ![img](log_imgs/labelclass_5-10.PNG)
   
-  Added `text-align: right` to line up the colons.
+  ### 5. Added `text-align: right` to line up the colons.
   
   ![img](log_imgs/done_5-10.PNG)
   
