@@ -55,7 +55,7 @@
   
   I wonder how ESLint will work in other project directories? Where will it load from?
   
-  I opened the directory for a project called `playing_with_javascript`, a project that didn't have ESLint installed locally to see what would happen. One thing to note, is both these directories are in the same workspace. So I believe they share the same user settings.
+  I opened the directory for a project called `playing_with_javascript`, a project that didn't have ESLint installed locally to see what would happen. One thing to note is both these directories, `playing_with_javascript` and `perfect_fit_meal`, are in the same workspace. So I believe they share the same user settings.
   
   This directory, `playing_with_javascript`, loaded ESLint from my global modules.
   
