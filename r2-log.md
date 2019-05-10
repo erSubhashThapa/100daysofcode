@@ -81,7 +81,7 @@
   
   But our html files aren't getting linted.
   
-  ## Why Arent HTML Files Getting Linted?
+  ## Why Aren't HTML Files Getting Linted?
   
   I messed with the `eslint-plugin-html` directory name again to see if that would cause issues. It did. So I know the html plugin is being accessed. 
   
