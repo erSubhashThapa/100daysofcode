@@ -41,7 +41,7 @@
   
   ## ESLint-plugin-html
   
-  I have the plugin ESLint-plugin-html locally and globally. I wasn't sure which I was using with my `perfect_fit_meal` project. To find out, I messed with the file name of my local plugin.
+  I have the plugin `eslint-plugin-html` locally and globally. I wasn't sure which I was using with my `perfect_fit_meal` project. To find out, I messed with the file name of my local plugin.
   
   <img src="log_imgs/name_5-10.PNG" width="300">
   
