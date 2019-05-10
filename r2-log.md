@@ -69,7 +69,7 @@
   
   I copied the `.eslintrc.json` file from my `perfect_fit_meal` directory and pasted it in to `playing_with_javascript`. Now we can see it's using the config file to get the airbnb style guide, but it can't find the airbnb module.
   
-  ![img](log_imgs/noairbnb_5-10.PNG)
+  ![img](log_imgs/noairbrb_5-10.PNG)
   
   ## Adding `node_modules`
   
