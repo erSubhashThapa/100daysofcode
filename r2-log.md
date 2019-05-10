@@ -24,7 +24,7 @@
   
   ![img](log_imgs/divs_5-10.PNG)
   
-  That gave me these centered but misaligned inputs:
+  ### That gave me these centered but misaligned inputs:
   
   ![img](log_imgs/centered_5-10.PNG)
   
