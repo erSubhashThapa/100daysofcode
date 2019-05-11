@@ -87,8 +87,8 @@
   
   I think if I just pass in .js, it will set it to only use .js extensions again because I found this:
   
-  ># Use only .js2 extension
-  > eslint . --ext .js2
+  >Use only .js2 extension
+  >eslint . --ext .js2
   
   - *from [Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface#--ext)*
   
