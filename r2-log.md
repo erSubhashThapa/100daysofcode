@@ -6,13 +6,13 @@
 
 - ## Getting ESLint to Work on HTML AGAIN
 
-  I'm trying to figure out these packages I can't get ESLint to lint the HTML in my `playing_with_javascript` directory.
+  I'm trying to figure out these npm packages. I can't get ESLint to lint the HTML in my `playing_with_javascript` directory.
   
-  I tried adding configurations to the user settnigs instead of the `.eslintrc.json` file according to this tutorial: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344)
+  I tried adding configurations to the user settings instead of the `.eslintrc.json` file according to this tutorial: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344)
   
   I deleted all my files in `playing_with_javascript` related to node or eslint. I followed this video to install eslint: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344). I made sure my terminal was in my project directory.
   
-  I got this in my terminal: ***"We recommend using this local copy instead of your globally-installed copy."*** How do I control which one my project uses? NOt sure, but I can see that it's loading locally in the ESLint tab.
+  I got this notification in my terminal: ***"We recommend using this local copy instead of your globally-installed copy."*** How do I control which one my project uses? Not sure, but I can see that it's loading locally in the ESLint tab.
   
   ## ESLint HTML Plugin
   
@@ -33,11 +33,11 @@
   
   ## It Works Now But...
   
-  Ok I just realized it actually works. ESlint is linting HTMl files in `playing_with_javascript`. I hadn't realized it was working for a while. I'm not sure for how long. So I'm not sure what I did that was necessary and what was unneccessary.
+  Ok I just realized it actually works. ESlint is linting HTMl files in `playing_with_javascript`. But I hadn't realized it was working for a while. I'm not sure for how long. So I'm not sure what I did that was necessary and what was unneccessary.
   
   ## Undoing Adding ESLint
   
-  I'm gonna try to undo everything I did when trying to add ESLint and the html plugin. Them do it again so I can see when it actually started linting.
+  I'm going try to undo everything I did when trying to add ESLint and the html plugin. Then do it again so I can see when it actually starts linting the HTML.
   
   ## Uninstalling ESLint
   Following this: [Uninstalling packages and dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies). 
@@ -46,7 +46,7 @@
   
   So I also ran `npm uninstall --save eslint`. That didn't look like it did anything either because my `node_modules` folder, `.eslintrc.json` file, and package.json file were all still there. 
   
-  But when I restarted VSC it wasn't loading ESlint anymore. I looked it my package.json file and I could see eslint wasn't there, just some of the plugins that go with eslint were there:
+  But when I restarted VSC it wasn't loading ESlint anymore. I looked it my `package.json` file and I could see eslint wasn't there, just some of the plugins that go with eslint were there:
   
   ```javascript
   "devDependencies": {
@@ -56,7 +56,7 @@
   }
   ```
   
-  And I no longer saw the `eslint` folder in `node_modules`. So I guess the command did remove ESLint, it just didn't get rid of node. Maybe that seems like obvious behavior to most people, but I'm still trying to understand this all.
+  And I no longer saw the `eslint` folder in `node_modules`. So I guess the command **did** remove ESLint, it just didn't get rid of npm. Maybe that seems like obvious behavior to most people, but I'm still trying to understand this all.
   
   ## Uninstalling NPM
   
@@ -70,7 +70,7 @@
   
   ## `--ext`
   
-  The only thing I still have to undo is this command: `eslint --ext .html,.js playing_with_javascript`. But I'm not sure what it did? How to undo it? I could maybe set it back to just `.js`: `eslint --ext .js playing_with_javascript` But I'm not sure if that would undo the command to lint html extensions. I really don't know what this command is changing? Is there a configuration somewhere?
+  The only thing I still have to undo is this command: `eslint --ext .html,.js playing_with_javascript`. But I'm not sure what it did? How to undo it? I could maybe set it back to just `.js`, like this: `eslint --ext .js playing_with_javascript` But I'm not sure if that would undo the command to lint html extensions. I really don't know what this command is changing? Is there a configuration somewhere?
   
   >My questions are:
 
@@ -96,7 +96,7 @@
   
   ![screenshot](log_imgs/error_5-11.PNG)
   
-  This is confusing. If you can't define the extensions in the `.eslintrc` files, then why would it matter that there is no `.eslintrc` file? But maybe even though the extenson configurations aren't stored there, you for some reason still need that file.
+  This is confusing. If you can't define the extensions in the `.eslintrc` files, then why would it matter that there is no `.eslintrc` file? But maybe, even though the extenson configurations aren't stored there, you for some reason still need that file.
   
   ## Starting over
   
@@ -104,7 +104,7 @@
   
   ## It worked!
   
-  This is was I did!
+  This is what I did:
   
   I ran these commands on the project directory and followed the prompts for each:
     
@@ -133,8 +133,6 @@
   ## Summary
   
   So I did a lot of stuff I didn't need to do but I learned a lot in the process.
-  
-  
   
 ## Day 30, R2
 ### 5/10/19
