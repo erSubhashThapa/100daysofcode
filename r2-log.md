@@ -4,13 +4,19 @@
 ## Day 31, R2
 ### 5/11/19
 
-  Adding configurations to the user settnigs instead of the `.eslintrc.json` file: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344)
+- ## Getting ESLint to Work on HTML AGAIN
+
+  I'm trying to figure out these packages I can't get ESLint to lint the HTML in my `playing_with_javascript` directory.
   
-  Deletd all my files in `playing_with_javascript` related to node or eslint. Followed this video to install eslint: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344). I made sure my terminal was in my project directory.
+  I tried adding configurations to the user settnigs instead of the `.eslintrc.json` file according to this tutorial: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344)
   
-  "We recommend using this local copy instead of your globally-installed copy." HOw do I control which one my project uses?
+  I deleted all my files in `playing_with_javascript` related to node or eslint. I followed this video to install eslint: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344). I made sure my terminal was in my project directory.
   
-  In my project directory ran `npm install --save-dev eslint-plugin-html` [How can I get ESLint to lint HTML files in VSCode?](https://stackoverflow.com/questions/54138689/how-can-i-get-eslint-to-lint-html-files-in-vscode/54138880#54138880)
+  I got this in my terminal: ***"We recommend using this local copy instead of your globally-installed copy."*** How do I control which one my project uses? NOt sure, but I can see that it's loading locally in the ESLint tab.
+  
+  ## ESLint HTML Plugin
+  
+  In my project directory I ran `npm install --save-dev eslint-plugin-html`, following: [How can I get ESLint to lint HTML files in VSCode?](https://stackoverflow.com/questions/54138689/how-can-i-get-eslint-to-lint-html-files-in-vscode/54138880#54138880)
   
   I added this to the `.eslintrc.json` file:
   ```javascript
@@ -19,11 +25,28 @@
   ]
   ```
   
-  Ok I just realized it actually was working and I'm not sure for how long.
+  I also ran `eslint --ext .html,.js playing_with_javascript` while in the `100daysofcode` directory:
   
-  I'm gonna try it again an another directory.
+  > Note: by default, when executing the eslint command on a directory, only .js files will be linted. You will have to specify extra extensions with the --ext option. Example: eslint --ext .html,.js src will lint both .html and .js files in the src directory. See ESLint documentation.
   
-  [Uninstalling packages and dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies) In my project directory, I ran `npm uninstall eslint` and it didn't look like it did anything so I also ran `npm uninstall --save eslint`. That didn't look like it did anything either because my `node_modules` folder, `.eslintrc.json` file, and package.json file were all still there. But when I restarted VSC it wasn't loading ESlint anymore. I looked it my package.json file and I could see eslint wasn't there, just some of the plugins that go with eslint were there:
+  -*from [BenoitZugmeyer/eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html#usage)*
+  
+  ## It Works Now But...
+  
+  Ok I just realized it actually works. ESlint is linting HTMl files in `playing_with_javascript`. I hadn't realized it was working for a while. I'm not sure for how long. So I'm not sure what I did that was necessary and what was unneccessary.
+  
+  ## Undoing Adding ESLint
+  
+  I'm gonna try to undo everything I did when trying to add ESLint and the html plugin. Them do it again so I can see when it actually started linting.
+  
+  ## Uninstalling ESLint
+  Following this: [Uninstalling packages and dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies). 
+  
+  In my project directory, I ran `npm uninstall eslint` and it didn't look like it did anything. 
+  
+  So I also ran `npm uninstall --save eslint`. That didn't look like it did anything either because my `node_modules` folder, `.eslintrc.json` file, and package.json file were all still there. 
+  
+  But when I restarted VSC it wasn't loading ESlint anymore. I looked it my package.json file and I could see eslint wasn't there, just some of the plugins that go with eslint were there:
   
   ```javascript
   "devDependencies": {
@@ -33,16 +56,86 @@
   }
   ```
   
-  And I no longer saw the `eslint` folder in `node_modules`. So I guess it did remove it, it just didn't get rid of node. Maybe that seems like obvious behavior to most people, but I'm still trying to understand this all.
+  And I no longer saw the `eslint` folder in `node_modules`. So I guess the command did remove ESLint, it just didn't get rid of node. Maybe that seems like obvious behavior to most people, but I'm still trying to understand this all.
+  
+  ## Uninstalling NPM
   
   I couldm't find any information about removing npm locally through the terminal, except for this:
   
   > Local installs are completely contained within a project’s node_modules folder. Delete that folder, and everything is gone (unless a package’s install script is particularly ill-behaved).
   
-  -*from [npm-removal Cleaning the Slate](https://docs.npmjs.com/misc/removing-npm.html)
+  -*from [npm-removal Cleaning the Slate](https://docs.npmjs.com/misc/removing-npm.html)*
   
   It doesn't mention the `package.json` file or other files that were installed with npm. I'm just going to delete them.
+  
+  ## `--ext`
+  
+  The only thing I still have to undo is this command: `eslint --ext .html,.js playing_with_javascript`. But I'm not sure what it did? How to undo it? I could maybe set it back to just `.js`: `eslint --ext .js playing_with_javascript` But I'm not sure if that would undo the command to lint html extensions. I really don't know what this command is changing? Is there a configuration somewhere?
+  
+  >My questions are:
 
+  >I couldn't find the configuration option for doing this from .eslintrc.
+  >
+  >...
+  >
+  
+  One of the answers:
+  >You can’t define this in .eslintrc files because file traversal happens before the configuration is read
+  [Configuration option for '--ext' switch #3469](https://github.com/eslint/eslint/issues/3469)
+  
+  So it's not in the  `.eslintrc.json` file. 
+  
+  I think if I just pass in .js, it will set it to only use .js extensions again because I found this:
+  
+  ># Use only .js2 extension
+  > eslint . --ext .js2
+  
+  - *from [Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface#--ext)*
+  
+  I ran `eslint --ext .js playing_with_javascript`. I got an error:
+  
+  ![screenshot](log_imgs/error_5-11.PNG)
+  
+  This is confusing. If you can't define the extensions in the `.eslintrc` files, then why would it matter that there is no `.eslintrc` file? But maybe even though the extenson configurations aren't stored there, you for some reason still need that file.
+  
+  ## Starting over
+  
+  I think everything is reset to how it was to begin with in my `playing_with_javascript` directory. So I started again.
+  
+  ## It worked!
+  
+  This is was I did!
+  
+  I ran these commands on the project directory and followed the prompts for each:
+    
+  `npm init`
+  `eslint --init`
+  
+  I restarted VSC and ESLint now ***lints the HTML*** on the `playing_with_javascript` directory even though I did nothing else. Probably because I put this in the user settings for my workspace earlier:
+ 
+  ```javascript
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html"
+  ],
+  "eslint.options": {
+    "plugins": [
+      "html"
+    ]
+  },
+  ```
+  
+  Normally the plugins can be put in the `.eslintrc.json` file. But when it's in the user settings in `"eslint.options"` it applies to the workspace.
+  
+  I'm not sure if `eslint --ext .html,.js playing_with_javascript` did anything earlier. 
+  
+  ## Summary
+  
+  So I did a lot of stuff I didn't need to do but I learned a lot in the process.
+  
+  
+  
 ## Day 30, R2
 ### 5/10/19
 
