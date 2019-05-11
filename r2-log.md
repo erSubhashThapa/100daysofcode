@@ -1,5 +1,48 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+## Day 31, R2
+### 5/11/19
+
+  Adding configurations to the user settnigs instead of the `.eslintrc.json` file: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344)
+  
+  Deletd all my files in `playing_with_javascript` related to node or eslint. Followed this video to install eslint: [Eslint setup in Visual Studio Code](https://youtu.be/o2H8kvuwMKE?t=344). I made sure my terminal was in my project directory.
+  
+  "We recommend using this local copy instead of your globally-installed copy." HOw do I control which one my project uses?
+  
+  In my project directory ran `npm install --save-dev eslint-plugin-html` [How can I get ESLint to lint HTML files in VSCode?](https://stackoverflow.com/questions/54138689/how-can-i-get-eslint-to-lint-html-files-in-vscode/54138880#54138880)
+  
+  I added this to the `.eslintrc.json` file:
+  ```javascript
+  "plugins": [
+    "html"
+  ]
+  ```
+  
+  Ok I just realized it actually was working and I'm not sure for how long.
+  
+  I'm gonna try it again an another directory.
+  
+  [Uninstalling packages and dependencies](https://docs.npmjs.com/uninstalling-packages-and-dependencies) In my project directory, I ran `npm uninstall eslint` and it didn't look like it did anything so I also ran `npm uninstall --save eslint`. That didn't look like it did anything either because my `node_modules` folder, `.eslintrc.json` file, and package.json file were all still there. But when I restarted VSC it wasn't loading ESlint anymore. I looked it my package.json file and I could see eslint wasn't there, just some of the plugins that go with eslint were there:
+  
+  ```javascript
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.17.2"
+  }
+  ```
+  
+  And I no longer saw the `eslint` folder in `node_modules`. So I guess it did remove it, it just didn't get rid of node. Maybe that seems like obvious behavior to most people, but I'm still trying to understand this all.
+  
+  I couldm't find any information about removing npm locally through the terminal, except for this:
+  
+  > Local installs are completely contained within a project’s node_modules folder. Delete that folder, and everything is gone (unless a package’s install script is particularly ill-behaved).
+  
+  -*from [npm-removal Cleaning the Slate](https://docs.npmjs.com/misc/removing-npm.html)
+  
+  It doesn't mention the `package.json` file or other files that were installed with npm. I'm just going to delete them.
+
 ## Day 30, R2
 ### 5/10/19
 
