@@ -90,7 +90,7 @@
   >Use only .js2 extension
   >eslint . --ext .js2
   
-  - *from [Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface#--ext)*
+  -*from [Command Line Interface](https://eslint.org/docs/user-guide/command-line-interface#--ext)*
   
   I ran `eslint --ext .js playing_with_javascript`. I got an error:
   
