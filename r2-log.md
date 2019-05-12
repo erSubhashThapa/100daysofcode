@@ -7,7 +7,7 @@
   I got the plugin to work again a different way. I just copied and pasted the `node_modules` folder from the other projects into a new project and copied the `.eslintrc.json` file.
   
   ## User Settings vs `.eslintr.json`
-  But if I removed this from the user settings:
+  But if I remove this from the user settings:
   
   ```javascript
     "eslint.options": {
@@ -48,6 +48,8 @@
   
   But why doesn't Wes Bos tell you how to get the dependency?
   
+  ## Adding The Dependency Through the Terminal
+  
   I'm guessing I need to add it like how I got the eslint dependency, `npm install --save-dev eslint-plugin-html`
   
   So I ran:
@@ -56,10 +58,13 @@
   
   Now I see `"eslint-plugin-prettier": "^3.1.0"` in my `"dependencies"` in my `"package.json"` file.
   
-  But no `eslint-plugin-prettier` in my `node_modules` folder. Even though it says it added the plugin:
+  ## No Dependency In node_modules
+  
+  Even though I see `"eslint-plugin-prettier": "^3.1.0"` in `"package.json"`, I don't see it in my `node_modules` folder. Even though it says it added the plugin:
   
   ![screenshot](log_imgs/prettier_5-12.PNG)
   
+  ## Another Missing Dependency
   I restarted VSC and got this error: 
   
   ***[Error - 13:55:17] Cannot find module 'eslint-config-prettier' Referenced from: /Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/.eslintrc.json***
@@ -125,11 +130,13 @@
   
   ## Working (sort of)!
   
-  It's working on .js files. But not .html. Also It is registering prettier on those files:
+  It fixing on save on .js files on. But not .html. It is registering prettier on those files:
   
   ![screenshot](log_imgs/prettiernotif_5-12.PNG)
   
   But when I save it doesn't change the quotes.
+  
+  ## Prettier Doesn't Work on Script Tags
   
   Looks like it's not possible to fix on auto save in the HTML files:
   
