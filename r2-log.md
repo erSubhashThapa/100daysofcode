@@ -35,18 +35,24 @@
   
   The other two also don't have `eslint-plugin-html` listed in the `"dependanies"` property in the `package.json` file like `perfect_fit_meal` does. I think I got it there when I ran `npm install --save-dev eslint-plugin-html`.
   
-  ## Prettier
+- ## Prettier
   
   I think I understand a bit more about these plugins now. I'm going to try to install prettier again.
   
+  ## Wes Bos Prettier + ESLint Video
+  
   I followed this Wes Bos [How to Setup VS Code + Prettier + ESLint](https://www.youtube.com/watch?v=YIvjKId9m2c) video again. I still get ***"Failed to load plugin prettier: Cannot find module 'eslint-plugin-prettier'"***
   
-  Now that I understand a little more I can see that I do not have that module in my `node_modules` folder; globally or locally. It's also not in the `package.json` file's `"dependencies"`. But why doesn't Wes Bos tell you how to get the dependancy?
+  ## No Dependency
+  Now that I understand a little more I can see that I do not have that module in my `node_modules` folder; globally or locally. It's also not in the `package.json` file's `"dependencies"`. 
   
-  I'm guessing it's like how I got the eslint dependancy, `npm install --save-dev eslint-plugin-html`
+  But why doesn't Wes Bos tell you how to get the dependancy?
+  
+  I'm guessing I need to add it like how I got the eslint dependancy, `npm install --save-dev eslint-plugin-html`
+  
+  So I ran:
   
   `npm install --save-dev eslint-plugin-prettier`
-  eslint-config-prettier
   
   Now I see `"eslint-plugin-prettier": "^3.1.0"` in my `"dependancies"` in my `"package.json"` file.
   
@@ -64,9 +70,13 @@
   
   Now I see `eslint-plugin-prettier` but no `eslint-config-prettier` in the node_modules. But I do see both in the `"dependancies"` in the `package.json`.
   
+  ## Restart VSC to See the Dependancies
+  
   I restarted VSC and now I see the `eslint-config-prettier`! ***So maybe after you add a dependancy through the terminal you have to refresh VSC.***
   
-  I added this back to the `.eslintrc.json` file which wesbos said to add:
+  ## Prettier Configs
+  
+  I added this back to the `.eslintrc.json` file which Wes Bos said to add:
   
   ```javascript
     "prettier/prettier": [
@@ -82,7 +92,9 @@
   ***Error: ESLint configuration in /Users/dashiellbark-huss/Documents/100daysofcode/perfect_fit_meal/.eslintrc.json is invalid:***
 	***Unexpected top-level property "prettier/prettier".***
   
-  In these [docs for eslint-confid-prettier](https://github.com/prettier/eslint-config-prettier) they have the `"prettier/prettier"` property inside the `"rules"` property. I moved it there and that error went away.
+  In these [docs for eslint-confid-prettier](https://github.com/prettier/eslint-config-prettier) they have ***the `"prettier/prettier"` property inside the `"rules"` property. I moved it there and that error went away.***
+  
+  ## Still Missing Dependancies
   
   But I have new errors:
   
@@ -99,17 +111,23 @@
   
   Now let's see if it worked.
   
+  ## Working (sort of)!
+  
   It's working on .js files. But not .html. Also It is registering prettier on those files:
   
   ![screenshot](log_imgs/prettiernotif_5-12.PNG)
   
   But when I save it doesn't change the quotes.
   
-  Looks like it's not possible:
+  Looks like it's not possible to fix on auto save in the HTML files:
   
   >It's a planned feature but not supported just yet.
   
   ***-from [How to format code in script tags?](https://github.com/prettier/prettier/issues/2648)***
+  
+  ## Summary
+  
+  Looks like I got it working. My problem was that I never actually installed the dependancies. I don't know why that wasn't part of the Wes Bos tutorial. Now I understance a little more about how the dependancies work, where they are, and how to add them. I'm glad I took the time to figure this out because I understand these packages better. That will come in handy when I learn node which I'm going to do soon!
 
 ## Day 31, R2
 ### 5/11/19
