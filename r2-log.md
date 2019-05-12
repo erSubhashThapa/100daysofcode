@@ -1,5 +1,37 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 32, R2
+### 5/12/19
+
+- ## Testing eslint-plugin-html
+  I got the plugin to work again a different way. I just copied and pasted the `node_modules` folder from the other projects into a new project and copied the `.eslintrc.json` file.
+  
+  But if I removed this from the user settings:
+  
+  ```javascript
+    "eslint.options": {
+    "plugins": [
+      "html"
+    ]
+  },
+  ```
+  
+  Eslint stops linting HTML on the last two project folders: `testing_eslint_project` and `playing with javascript`. But it still works on `perfect_fit_meal`.
+  
+  Now I see why. The `.eslintrc.json` in `perfect_fit_meal` had: 
+  
+  ```javascript
+  "plugins": [
+    "html"
+  ]
+  ```
+  
+  But the other two didn't.
+  
+  ## Prettier
+  
+  I think I understand a bit more about these plugins now. I'm going to try to install prettier again.
+
 
 ## Day 31, R2
 ### 5/11/19
