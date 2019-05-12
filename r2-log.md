@@ -33,7 +33,7 @@
   
   I can also see that `perfect_fit_meal` has `eslint-plugin-html` in the `node_modules` folder. The other two projects don't. They must be getting the plugin globally. 
   
-  The other two also don't have `eslint-plugin-html` listed in the `"dependanies"` property in the `package.json` file like `perfect_fit_meal` does. I think I got it there when I ran `npm install --save-dev eslint-plugin-html`.
+  The other two also don't have `eslint-plugin-html` listed in the `"dependenies"` property in the `package.json` file like `perfect_fit_meal` does. I think I got it there when I ran `npm install --save-dev eslint-plugin-html`.
   
 - ## Prettier
   
@@ -46,15 +46,15 @@
   ## No Dependency
   Now that I understand a little more I can see that I do not have that module in my `node_modules` folder; globally or locally. It's also not in the `package.json` file's `"dependencies"`. 
   
-  But why doesn't Wes Bos tell you how to get the dependancy?
+  But why doesn't Wes Bos tell you how to get the dependency?
   
-  I'm guessing I need to add it like how I got the eslint dependancy, `npm install --save-dev eslint-plugin-html`
+  I'm guessing I need to add it like how I got the eslint dependency, `npm install --save-dev eslint-plugin-html`
   
   So I ran:
   
   `npm install --save-dev eslint-plugin-prettier`
   
-  Now I see `"eslint-plugin-prettier": "^3.1.0"` in my `"dependancies"` in my `"package.json"` file.
+  Now I see `"eslint-plugin-prettier": "^3.1.0"` in my `"dependencies"` in my `"package.json"` file.
   
   But no `eslint-plugin-prettier` in my `node_modules` folder. Even though it says it added the plugin:
   
@@ -68,11 +68,11 @@
   
   `npm install --save-dev eslint-config-prettier`
   
-  Now I see `eslint-plugin-prettier` but no `eslint-config-prettier` in the node_modules. But I do see both in the `"dependancies"` in the `package.json`.
+  Now I see `eslint-plugin-prettier` but no `eslint-config-prettier` in the node_modules. But I do see both in the `"dependencies"` in the `package.json`.
   
-  ## Restart VSC to See the Dependancies
+  ## Restart VSC to See the Dependencies
   
-  I restarted VSC and now I see the `eslint-config-prettier`! ***So maybe after you add a dependancy through the terminal you have to refresh VSC.***
+  I restarted VSC and now I see the `eslint-config-prettier`! ***So maybe after you add a dependency through the terminal you have to refresh VSC.***
   
   ## Prettier Configs
   
@@ -94,7 +94,7 @@
   
   In these [docs for eslint-confid-prettier](https://github.com/prettier/eslint-config-prettier) they have ***the `"prettier/prettier"` property inside the `"rules"` property. I moved it there and that error went away.***
   
-  ## Still Missing Dependancies
+  ## Still Missing Dependencies
   
   But I have new errors:
   
