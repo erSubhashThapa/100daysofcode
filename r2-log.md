@@ -27,7 +27,7 @@
   ]
   ```
   
-  But the other two didn't.
+  But the other two didn't have those settings in their `.eslintrc.json` file.
   
   ## Global Vs Local `eslint_plugin_html`
   
@@ -58,7 +58,7 @@
   
   But no `eslint-plugin-prettier` in my `node_modules` folder. Even though it says it added the plugin:
   
-  ![screenshot](prettier_5-12.PNG)
+  ![screenshot](log_imgs/prettier_5-12.PNG)
   
   I restarted VSC and got this error: 
   
