@@ -94,6 +94,18 @@
   
   In these [docs for eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) they have ***the `"prettier/prettier"` property inside the `"rules"` property. I moved it there and that error went away.***
   
+  ```javascript
+  "rules": {
+    "no-console": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ]
+  }
+  ```
+  
   ## Still Missing Dependencies
   
   But I have new errors:
