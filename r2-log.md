@@ -4,11 +4,16 @@
 ## Day 33, R2
 ### 5/13/19
 
-- ## NPM Nodes
+- ## NPM Notes
+  I continued this npm tutorial:
   [Learning npm the Node Package Manager Tutorial](https://www.lynda.com/Node-js-tutorials/Learning-npm-Node-Package-Manager-2018/761956-2.html)
   
+  ## Notes:
+  
   `npm outdated`: To see if any packages are outdated locally, `-g` to get global
+  
   `npm update <package>` or `npm install <package>` to update package.
+  
   `npm uninstall <package>`: uninstall a dependency
   
   ## "devDependencies" vs "dependencies"
@@ -86,6 +91,7 @@
   [npm npx docs](https://www.npmjs.com/package/npx)
   
 - ## Node JS Notes
+  Notes on node.js lynda.com tutorial:
   [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
   
   ## Single Threaded non-blocking event driven IO
