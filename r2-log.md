@@ -58,7 +58,7 @@
   >
   >package.json: records the minimum version you app needs. If you update the versions of a particular package, the change is not going to be reflected here.
   
-  -*from [What is the difference between package.json and package-lock.json]*(https://delegatecall.com/questions/what-is-the-difference-between-packagejson-and-packagelockjson-2bd0e4e1-a65f-4d78-b8d8-b51905a37adb)
+  -*from [What is the difference between package.json and package-lock.json](https://delegatecall.com/questions/what-is-the-difference-between-packagejson-and-packagelockjson-2bd0e4e1-a65f-4d78-b8d8-b51905a37adb)*
   
   ## npm Cache
   
