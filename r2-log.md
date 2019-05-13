@@ -19,7 +19,7 @@
   ## "devDependencies" vs "dependencies"
   >The difference between these two, is that devDependencies are modules which are only required during development, while dependencies are modules which are also required at runtime.
   
-  -*from [NPMmmm #1: Dev Dependencies, Dependencies](https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c)
+  -*from [NPMmmm #1: Dev Dependencies, Dependencies](https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c)*
 
   
   ## Semantic Versioning
