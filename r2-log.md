@@ -29,7 +29,7 @@
   
   ### ^1.x.x
   
-  The **^ caret** symbol means:
+  The ^ caret symbol means:
   
   Update all releases that have a major release of 1.
   
@@ -41,7 +41,7 @@
   
   ### ~1.7.x
   
-  The **~ tilde** symbol means:
+  The ~ tilde symbol means:
   
   Update all releases that have a major release of 1 and a minor release of 7.
   
