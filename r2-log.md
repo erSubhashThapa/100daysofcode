@@ -116,7 +116,10 @@
   
   -*from [introduction to node: Understanding node](https://gist.github.com/maxogden/4011336#understanding-node)*
   
-
+- ## Helping
+  
+  I started to look at some code that [Swishyfishie @Swishyfishie2](https://twitter.com/Swishyfishie2) was stuck on but I didn't get enough time to really check it out. Will look at it tomorrow!
+  
 ## Day 32, R2
 ### 5/12/19
 
