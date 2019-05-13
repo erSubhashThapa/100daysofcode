@@ -1,5 +1,111 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+## Day 33, R2
+### 5/13/19
+
+- ## NPM Nodes
+  [Learning npm the Node Package Manager Tutorial](https://www.lynda.com/Node-js-tutorials/Learning-npm-Node-Package-Manager-2018/761956-2.html)
+  
+  `npm outdated`: To see if any packages are outdated locally, `-g` to get global
+  `npm update <package>` or `npm install <package>` to update package.
+  `npm uninstall <package>`: uninstall a dependency
+  
+  ## "devDependencies" vs "dependencies"
+  >The difference between these two, is that devDependencies are modules which are only required during development, while dependencies are modules which are also required at runtime.
+  
+  -*from [NPMmmm #1: Dev Dependencies, Dependencies](https://medium.com/@dylanavery720/npmmmm-1-dev-dependencies-dependencies-8931c2583b0c)
+
+  
+  ## Semantic Versioning
+  ![version](version_5-13.PNG)
+  
+  ### Controlling Version:
+  
+  ### ^1.x.x
+  
+  Update all releases that have a major release of 1.
+  
+  ```javascript
+   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+  }
+  ````
+  
+  ### ~1.7.x
+  
+  Update all releases that have a major release of 1 and a minor release of 7.
+  
+  ```javascript
+   "devDependencies": {
+    "babel-preset-env": "~1.7.0",
+  }
+  ````
+  
+  ## `package-lock.json` vs `package.json`
+  Confused about the difference between these two.
+  
+  It seems like `package-lock.json` controls things more, specifies things more. But then whats the point of having both?
+  
+  [Everything You Wanted To Know About package-lock.json But Were Too Afraid To Ask](https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8)
+  
+  >package-lock.json: records the exact version of each installed package which allows you to re-install them. Future installs will be able to build an identical dependency tree.
+  >
+  >package.json: records the minimum version you app needs. If you update the versions of a particular package, the change is not going to be reflected here.
+  
+  -*from [What is the difference between package.json and package-lock.json](https://delegatecall.com/questions/what-is-the-difference-between-packagejson-and-packagelockjson-2bd0e4e1-a65f-4d78-b8d8-b51905a37adb)
+  
+  ## npm Cache
+  
+  npm keeps a cache of your install modules so thhat it doesn't have to get them everytime. Clearing your cache should always be a step in your trouble shooting when working with modules and not understanding what's happening.
+  
+  `npm-cache-verify`: Verifies you cache. (What does that mean?)
+  `npm-cache-clean --force`: clean the cache
+  
+  ## npm audit
+  
+  Hard to understand this video without having context for it.
+  
+  `npm audit` is a command that will check the dependencies of your project and make sure they are safe to use.
+  
+  [Run an npm audit Lynda Video](https://www.lynda.com/Node-js-tutorials/Run-npm-audit/761956/800277-4.html?autoplay=true)
+  
+  ## Scripting in package.json
+  Scripting in a package.json file gives us a way to do a simple command, to repeat, or execute complex commands.
+  
+  [npm-scripts docs](https://docs.npmjs.com/misc/scripts)
+  
+  ![scripting](log_imgs/npmscript_5-13.PNG)
+  
+  **Run:**`npm <preset script name>` or `npm run <your own script name>`
+  
+  ## npm npx
+  
+  npx lets you temporarily install a package just to run one of the commands from that package. This way you avoid package pulution.
+  
+  [npm npx docs](https://www.npmjs.com/package/npx)
+  
+- ## Node JS Notes
+  [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  ## Single Threaded non-blocking event driven IO
+  
+  Node is single threaded. This confuses me because what if an application has millions of users? How can they all be on the same thread without slowing things down?
+  
+  I don't know what I/O means for and I had trouble finding out. 
+  
+  >Node.js is an open source project designed to let you write JavaScript programs that talk to networks, file systems or other I/O (Input/Output) sources
+  >...
+  >What is an "I/O based program"? Here are some common I/O sources:
+  >
+  >Databases (e.g. MySQL, PostgreSQL, MongoDB, Redis, CouchDB)
+  >APIs (e.g. Twitter, Facebook, Apple Push Notifications)
+  >HTTP/WebSocket connections (from users of a web app)
+  >Files (image resizer, video editor, internet radio)
+  
+  -*from [introduction to node: Understanding node](https://gist.github.com/maxogden/4011336#understanding-node)*
+  
+
 ## Day 32, R2
 ### 5/12/19
 
