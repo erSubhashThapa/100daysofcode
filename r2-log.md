@@ -50,7 +50,7 @@
   ## `package-lock.json` vs `package.json`
   Confused about the difference between these two.
   
-  It seems like `package-lock.json` controls things more, specifies things more. But then whats the point of having both?
+  It seems like `package-lock.json` controls things more, specifies things more. But then what's the point of having both?
   
   [Everything You Wanted To Know About package-lock.json But Were Too Afraid To Ask](https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8)
   
