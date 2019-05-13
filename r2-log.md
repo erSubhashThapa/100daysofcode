@@ -62,7 +62,7 @@
   
   ## npm Cache
   
-  npm keeps a cache of your install modules so thhat it doesn't have to get them everytime. Clearing your cache should always be a step in your trouble shooting when working with modules and not understanding what's happening.
+  npm keeps a cache of your install modules so that it doesn't have to get them everytime. Clearing your cache should always be a step in your troubleshooting when working with modules and not understanding what's happening.
   
   `npm-cache-verify`: Verifies you cache. (What does that mean?)
   `npm-cache-clean --force`: clean the cache
@@ -95,9 +95,10 @@
   [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
   
   ## Single Threaded non-blocking event driven IO
-  
+  ### Single threaded
   Node is single threaded. This confuses me because what if an application has millions of users? How can they all be on the same thread without slowing things down?
   
+  ### I/O
   I don't know what I/O means for and I had trouble finding out. 
   
   >Node.js is an open source project designed to let you write JavaScript programs that talk to networks, file systems or other I/O (Input/Output) sources
