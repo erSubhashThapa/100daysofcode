@@ -6,16 +6,20 @@
 
 
 - ## Helping
-  I looked at [Swishyfishie's @Swishyfishie2](https://twitter.com/Swishyfishie2) code. He has a counter here. You can add 1 or two and then submit to save to `sessionStarage`. It was added more numbers than expected when after your submit. I made a `log(func)` function to call from every function Swishy made to see where the problem was. The `log(func)` function console logs the function name and the `count` variable's value:
+  I looked at [Swishyfishie's @Swishyfishie2](https://twitter.com/Swishyfishie2) code. He has a counter here. You can add 1 or two and then submit to save to `sessionStarage`. 
   
   <img src="log_imgs/swishy_5-14.PNG" width=300>
+  
+  It was adding more numbers than expected after you press submit. 
+  
+  I made a `log(func)` function to call from each function that Swishy made to see where the problem was. The `log(func)` function console logs the function name and the `count` variable's value:
 
   ```javascript
   function log(func) {
     console.log(`func:${func}, count:${count}`);
   };
   ```
-  Then you call the `log(func)` function from each function, passing in a name for your function such as "+1" or "save".
+  You call `log(func)` from each function, passing in a name for your function such as "+1" or "save".
 
   What I saw was that when the submit button was pressed, `count` increased by one. Sure enough Swishy was adding 1 to `count`, probably left over from copy and pasting from his first function.
  
@@ -26,7 +30,7 @@
   }
   ```
   
-  Seems to work after deleting `coount += 1` from that line. 
+  Seems to work after deleting `count += 1` from that line. 
  
 - ## Node JS Notes
   Continued notes on node.js lynda.com tutorial:
@@ -54,16 +58,16 @@
   
   ## `require()`
   
-  Used to load external modules. Modules are other javascript files containing code. We can either load modules that have shipped with our installation of Node.js, modules we install with npm, or other modules that we create. `require()` is available o us on the global object.
+  `require()` is used to load external modules. Modules are other javascript files containing code. We can either load modules that have shipped with our installation of Node.js, modules we install with npm, or other modules that we create. `require()` is available to us on the global object.
   
   # `process` object
-  Contains information about the current process as well as tools to allow us to interact with the process.
+  The `process` object contains information about the current process as well as tools to allow us to interact with the process.
   
   ![process](log_imgs/process_5-14.PNG)
   
-  ## Practice What I learned
+  ## Practice What I Learned
   
-  I made my own version of the little questions program that the instructor made. It helps to get practice with what I'm learning.
+  I made my own version of a little questions program that the instructor made. I did different questions.
   
   ```javascript
   const questions = [
@@ -103,7 +107,7 @@
   ![questions](log_imgs/questions_5-14.gif)
   
 - ## Thoughts and Feelings:
-  If I don't do some sort of hands on coding (not coding following along), I get super board by tutorials. So I need to always try to do something at least slightly creative along with the tutorial. Today, that meant recreating the questions file with my own questions.
+  If I don't do some sort of hands on coding (not just coding along with the tutorial), I get super bored by tutorials. So I need to always try to do something at least slightly creative along with the tutorial. Today, that meant recreating the questions program with my own questions.
 
  
 ## Day 33, R2
