@@ -1,6 +1,111 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 
+## Day 34, R2
+### 5/14/19
+
+
+- ## Helping
+  I looked at [Swishyfishie's @Swishyfishie2](https://twitter.com/Swishyfishie2) code. He has a counter here. You can add 1 or two and then submit to save to `sessionStarage`. It was added more numbers than expected when after your submit. I made a `log(func)` function to call from every function Swishy made to see where the problem was. The `log(func)` function console logs the function name and the `count` variable's value:
+  
+  <img src="log_imgs/swishy_5-14.PNG" width=300>
+
+  ```javascript
+  function log(func) {
+    console.log(`func:${func}, count:${count}`);
+  };
+  ```
+  Then you call the `log(func)` function from each function, passing in a name for your function such as "+1" or "save".
+
+  What I saw was that when the submit button was pressed, `count` increased by one. Sure enough Swishy was adding 1 to `count`, probably left over from copy and pasting from his first function.
+ 
+  ```javascript
+  btnSave.onclick = function () {
+      saved.innerHTML = localStorage.getItem('county', count += 1); //oops adding 1 here
+      log("save");
+  }
+  ```
+  
+  Seems to work after deleting `coount += 1` from that line. 
+ 
+- ## Node JS Notes
+  Continued notes on node.js lynda.com tutorial:
+  [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  [How, in general, does Node.js handle 10,000 concurrent requests?](https://stackoverflow.com/questions/34855352/how-in-general-does-node-js-handle-10-000-concurrent-requests)
+  
+  ## Global Object
+  
+  [Mozilla Docs: Global Object](https://developer.mozilla.org/en-US/docs/Glossary/Global_object)
+  
+  >The global object's interface depends on the execution context in which the script is running. For example:
+  >
+  >- In a web browser, any code which the script doesn't specifically start up as a background task has a Window as its global object. This is the vast majority of JavaScript code on the Web.
+  >
+  >- Code running in a Worker has a WorkerGlobalScope object as its global object.
+  >
+  >- Scripts running under Node.js have an object called global as their global object.
+
+  [Node.js v12.2.0 Documentation: Global Objects](https://nodejs.org/api/globals.html)
+  
+  ## Modules
+  
+  Every node.js file we create is refered to as a module.
+  
+  ## `require()`
+  
+  Used to load external modules. Modules are other javascript files containing code. We can either load modules that have shipped with our installation of Node.js, modules we install with npm, or other modules that we create. `require()` is available o us on the global object.
+  
+  # `process` object
+  Contains information about the current process as well as tools to allow us to interact with the process.
+  
+  ![process](log_imgs/process_5-14.PNG)
+  
+  ## Practice What I learned
+  
+  I made my own version of the little questions program that the instructor made. It helps to get practice with what I'm learning.
+  
+  ```javascript
+  const questions = [
+    "Who do you love?",
+    "Who are you?",
+    "Are you horny? Answer y or n"
+  ];
+
+  const ask = (i = 0 ) => {
+    process.stdout.write(`\n${questions[i]} \n\n`);
+  }
+
+  ask()
+
+  const answers = [];
+
+  process.stdin.on("data", (data)=>{
+    answers.push(data.toString().trim());
+
+    if (answers.length < questions.length) {
+      ask(answers.length);
+    } else {
+      process.exit();
+    }
+  });
+
+  process.on("exit", ()=>{
+    const [lover, name, horny] = answers;
+
+    const doThisTo = horny === "y" ? "make love to": "kiss";
+    console.log(`
+    ${name.charAt(0).toUpperCase() + name.slice(1)}, you should ${doThisTo} ${lover.charAt(0).toUpperCase() + lover.slice(1)}!
+    `);
+  });
+  ```
+  
+  ![questions](log_imgs/questions_5-14.gif)
+  
+- ## Thoughts and Feelings:
+  If I don't do some sort of hands on coding (not coding following along), I get super board by tutorials. So I need to always try to do something at least slightly creative along with the tutorial. Today, that meant recreating the questions file with my own questions.
+
+ 
 ## Day 33, R2
 ### 5/13/19
 
