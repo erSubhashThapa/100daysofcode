@@ -15,9 +15,9 @@
   
   ## `setTimeout` and `setInterval`
   
-  I started to recreate the instructer's project but I wanted to make it more interesting. This let to my playing with `setTimeout` and `setInterval`. 
+  I started to recreate the instructer's project but I wanted to make it more interesting. This led to my playing with `setTimeout` and `setInterval`. 
   
-  I'me having trouble getting a loop to delay using `setTimeout` or `setInterval`.
+  I'm having trouble getting a loop to delay using `setTimeout` or `setInterval`.
   
   I redid my code so I can do it in the browser and use the debugger.
   
