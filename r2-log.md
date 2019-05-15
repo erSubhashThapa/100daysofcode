@@ -42,6 +42,65 @@
   ```
   
   There was debate about whether the recursion was a problem in the comments.
+  
+  ## Practice: Node.js New Years
+  
+  I remade what the the time that the teacher made, with my own pizazz: I made a NYE countdown timer.
+  
+  ![countdown](log_imgs/count_5-15.gif)
+  
+  ### Code:
+  
+  ```javascript
+  const waitTime = 6000;
+  const intervalTime = 1000;
+  let seconds = waitTime /1000;
+
+  function countDown(){
+    process.stdout.clearLine();
+    process.stdout.cursorTo(0);
+    process.stdout.write(`${seconds -1}!!!!`);
+    seconds -= 1;
+
+  }
+
+  function sing() {
+    clearInterval(interval);
+    process.stdout.clearLine();
+
+    var i = 0;                     
+    let numOfWords;
+    const song = 
+    `Happy New Year!!!!!!
+    Should old acquaintance be forgot, 
+    and never brought to mind?
+    Should old acquaintance be forgot,
+    and old lang syne?`;
+
+    const lines = song.split("\n");
+
+    function myLoop () {  
+
+      const callback = function () {    
+        console.log(`${lines[i]}
+      `);          
+        i++;                     
+        if (i < lines.length) {            
+           myLoop();             
+        }                        
+     };
+        const numOfWords = (lines[i].match(/ /g) || []).length + 1;
+        setTimeout(callback, 170 * numOfWords) 
+     }
+
+    myLoop(); 
+  }
+
+  const interval = setInterval(countDown, intervalTime);
+
+  setTimeout(sing, waitTime)
+
+  ```
 
 
 ## Day 34, R2
