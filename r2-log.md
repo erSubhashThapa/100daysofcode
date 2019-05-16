@@ -8,6 +8,143 @@
   Continued notes on node.js lynda.com tutorial:
   [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
   
+  ## Core Modules
+  
+  Core modules are modules that come with node.js so you don't need to install them. But you do need to import them to use them. To do this you use `require()`
+  
+  ## Destructure Module Functions
+  If you only want one function from a module you can use destructuring:
+  
+  ### Regular:
+  ```javascript
+  const path = require("path");
+  const util = require("util");
+
+  util.log(path.basename(__filename));
+  ```
+  
+  ### Destructured:
+  ```javascript
+  const path = require("path");
+  const { log } = require("util"); //destructured
+
+  log(path.basename(__filename));
+  ```
+  
+  ## Dot Slash Folder (./folder)
+  `./` means:
+  > ./ is the the folder that the working file is in
+  
+  -*from [What does “./” (dot slash) refer to in terms of an HTML file path location?](https://stackoverflow.com/questions/7591240/what-does-dot-slash-refer-to-in-terms-of-an-html-file-path-location)*
+  
+  So it's no different from `../`
+  
+  ## Custom Modules
+  
+  When you make your own module, you must include the path in order to require it:
+  ```javascript
+  const name = require("./myModule");
+  ```
+  You don't need the path if the module ships with node or is installed via npm.
+  
+  In the module file, you need to `export` a value:
+  ```javascript
+  module.exports = "alex";
+  ```
+  
+  ## More Complex Custom Module Example:
+  
+  ### Count Module
+  ```javascript
+  let count = 0;
+  const inc = () => ++count;
+  const dec = () => --count;
+
+  const getCount = () => count;
+
+  module.exports = {
+    inc,
+    dec, 
+    getCount
+  }
+  ```
+  
+  ## Importing the Count Module
+  
+  ```javascript
+  const { inc, dec, getCount } = require("./myModule");
+  inc();
+  inc();
+  inc();
+  dec()
+
+  console.log(getCount()); //2
+  ```
+  
+  
+  ## Property Value Shorthand
+  
+  I've seen this before but it confused me today:
+  
+  [Shorthand](log_imgs/shorthand_5-16.PNG)
+  
+  An object with properties that aren't in the `key: value` format. This is called the [property value shorthand]( https://javascript.info/object#property-value-shorthand).
+  
+  ## Method Shorthand
+  There's also a [method shorthand](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Method_definitions):
+  
+  >In ECMAScript 2015, a shorthand notation is available, so that the keyword "function" is no longer necessary.
+  >
+  >```javascript
+  >// Shorthand method names (ES2015)
+  >var o = {
+  >  property(parameters) {},
+  >  *generator() {}
+  >};
+  >```
+  
+  ## Event Emitter
+  A node.js module that gives us a mechanism for emitting custom events and wiring up listeners and handlers for those events:
+  
+  ### Construct a new instance of the event emitter that that we can use to raise custom events:
+  ```javascript
+  const events = require("events");
+
+  const emitter = new events.EventEmitter();
+  ```
+  
+  Use the `emit()` function to raise custom events:
+  ```javascript
+  process.stdin.on("data", data => {
+    const input = data.toString().trim();
+    if (input === "exit") {
+      emitter.emit("customEvent", "Goodbye!", "process"); //customEvent raised when we hit this point
+      process.exit();
+    }
+    emitter.emit("customEvent", input, "terminal"); //customEvent raised when we hit this point
+  });
+  ```
+  Wiring up listeners and handlers with the Events Emitter's `.on()` function:
+  ```javascript
+  emitter.on("customEvent", (message, user) => { //handle custom event
+    console.log(`${user}: ${message}`);
+  });
+  ```
+  This says, when a custom event occurs handle it with this callback function.
+  
+  Event Emitter is asyncronous. The events are raised when they happen.
+  
+- ## Thoughts and Feelings:
+  Learning these new concepts is more draining than building something. I needed to take more breaks. Tomorrow, I'm going to do some more hands on coding with what I learned from today.
+  
+
+## Day 35, R2
+### 5/15/19
+
+- ## Node JS Notes
+  Continued notes on node.js lynda.com tutorial:
+  [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
   ## Debugging?
   So far we have only run these node files in the terminal. But how do I debug them?
   
