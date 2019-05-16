@@ -86,7 +86,7 @@
   
   I've seen this before but it confused me today:
   
-  [Shorthand](log_imgs/shorthand_5-16.PNG)
+  ![Shorthand](log_imgs/shorthand_5-16.PNG)
   
   An object with properties that aren't in the `key: value` format. This is called the [property value shorthand]( https://javascript.info/object#property-value-shorthand).
   
