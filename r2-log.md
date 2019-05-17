@@ -1,8 +1,8 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 
-## Day 36, R2
-### 5/16/19
+## Day 37, R2
+### 5/17/19
 
 - ## Node JS Notes / Practice
   I'm reviewing what I learned so far in the lynda.com tutorial:
