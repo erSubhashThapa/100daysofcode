@@ -23,11 +23,12 @@
   ```
   >..within this array we want to beable to add any number of questions, and have those questions asked to the user through the terminal.
   
-    ```javascript
+  ### Example questions:
+   ```javascript
   const questions = [
     "What is your name?",
-    "What is your favorite snack?.
-    "Do you like cilantro?
+    "What is your favorite snack?",
+    "Do you like cilantro?"
   ] 
   ```
   
@@ -36,7 +37,7 @@
   ```javascript
   collectAnswers()
   ```
-  >And, without knowing how the `collectAnswers` function will work, what I do know is I want to send it in an array of questions,
+  >And, without knowing how the `collectAnswers` function will work, what I do know is I want to send it an array of questions,
   
   ```javascript
   collectAnswers(questions)
@@ -58,7 +59,7 @@
   })
   ```
   
-  >**So this is what I want to do, and at this point I might not necessarily be sure how to do it, but I know that I need a function called `collectAnswers`, so I'm going ot go ahead and create that function.** And the first argument that the collectAnswers function is going to take, is an array of questions, so I'll go ahead and call them questions. And, the second argument is a callback function, to be invoked when we're finished, so I'm going to call this done, meaning I want to invoke this function, once the user has answered all of the questions.
+  >**So this is what I want to do, and at this point I might not necessarily be sure how to do it, but I know that I need a function called `collectAnswers`, so I'm going ot go ahead and create that function.** And the first argument that the `collectAnswers` function is going to take, is an array of questions, so I'll go ahead and call them questions. And, the second argument is a callback function, to be invoked when we're finished, so I'm going to call this done, meaning I want to invoke this function, once the user has answered all of the questions.
   
     ```javascript
   const collectAnswers = (questions, done) = {
