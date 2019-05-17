@@ -4,6 +4,125 @@
 ## Day 36, R2
 ### 5/16/19
 
+- ## Node JS Notes / Practice
+  I'm reviewing what I learned so far in the lynda.com tutorial:
+  [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  I'm going to redo some of the projects he does in the tutorial.
+  
+  ## Alex Bank's Process Tips
+  
+  I liked how Alex walked through his process:
+  
+  >...we want to have a variable that can hold our questions:
+  
+  ```javascript
+  const questions = [
+  
+  ] 
+  ```
+  >..within this array we want to beable to add any number of questions, and have those questions asked to the user through the terminal.
+  
+    ```javascript
+  const questions = [
+    "What is your name?",
+    "What is your favorite snack?.
+    "Do you like cilantro?
+  ] 
+  ```
+  
+  >**So sometimes when I have a coding challenge, I try to think about what I do and represent it as a function call.** So, for instance I know that we need to collect the answers from the user in the terminal. I'm not necessarily sure how to do that, but I can imagine that there would be a function called `collectAnswers`. 
+  
+  ```javascript
+  collectAnswers()
+  ```
+  >And, without knowing how the `collectAnswers` function will work, what I do know is I want to send it in an array of questions,
+  
+  ```javascript
+  collectAnswers(questions)
+  ```
+  
+  >...and I want the `collectAnswers` function to ask every question in the array, in the order that they're presented, of the user. And, when I get a list of answers back, I can handle that with a callback function. So I know that the second argument of my collectAnswers function should probably be a callback function,
+  
+    ```javascript
+  collectAnswers(questions, callback)
+  ```
+  
+  >...and that callback function should pass a list of answers back. So, I send a list of questions in as an array, and I expect a list of answers back. 
+  
+  ```javascript
+  collectAnswers(questions, answers => {
+  
+    //do something with the answers, exit the process
+  
+  })
+  ```
+  
+  >**So this is what I want to do, and at this point I might not necessarily be sure how to do it, but I know that I need a function called `collectAnswers`, so I'm going ot go ahead and create that function.** And the first argument that the collectAnswers function is going to take, is an array of questions, so I'll go ahead and call them questions. And, the second argument is a callback function, to be invoked when we're finished, so I'm going to call this done, meaning I want to invoke this function, once the user has answered all of the questions.
+  
+    ```javascript
+  const collectAnswers = (questions, done) = {
+  
+  }
+  ```
+  
+  ## Making An Ask Questions Module
+  
+  ### Module:
+  
+  ```javascript
+  const readline= require("readline");
+
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  const collectAnswers = (questions, done = f=>f) => {
+    let answers=[];
+
+    const questionAnswered = (answer)=>{
+      answers.push(answer);
+      if (answers.length == questions.length){
+        done(answers);
+      } else if (answers.length < questions.length){
+        rl.question(questions[answers.length], questionAnswered);
+      }
+
+    }
+
+    rl.question(questions[0], questionAnswered);
+
+  };
+
+  module.exports = {
+    collectAnswers
+  }
+  ```
+  
+  ## Requiring The Module
+  
+  ```javascript
+  const ask = require("./askQuestions");
+
+  const questions = [
+    "How are you?",
+    "Do you like mac or pc?",
+    "Do you like organic bacon?"
+  ]
+
+  ask.collectAnswers(questions, answers=>{
+    console.log("thank you! Answers:", ...answers);
+    process.exit()
+  });
+
+  ```
+  ![module](log_imgs/askQuestions_5-17.PNG)
+
+
+## Day 36, R2
+### 5/16/19
+
 - ## Node JS Notes
   Continued notes on node.js lynda.com tutorial:
   [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
