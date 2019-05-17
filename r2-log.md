@@ -117,7 +117,7 @@
   });
 
   ```
-  ![module](log_imgs/askQuestions_5-17.PNG)
+  ![module](log_imgs/askQuestions_5-17.gif)
 
 
 ## Day 36, R2
