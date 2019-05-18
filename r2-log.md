@@ -41,7 +41,7 @@
   }
   ```
   
-  ![screenshot](log_img/solution_5-18.PNG)
+  ![screenshot](log_imgs/solution_5-18.PNG)
   
 - ## Node
   Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
@@ -67,7 +67,7 @@
   1. run `node --inspect-brk <yourfile>.js`
   2. Go to chrome://inspect
   3. Click 'inspect' by your app
-  ![screenshot](inspect_5-18.PNG)
+  ![screenshot](log_imgs/inspect_5-18.PNG)
   
   ## Using DevTools on Node
   
