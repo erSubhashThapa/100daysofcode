@@ -1,6 +1,84 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 
+## Day 38, R2
+### 5/18/19
+
+- ## Helping
+  Someone asked:
+  >I have some children divs (`position: absolute`) nested inside a parent div. The parent div has a gradient background.
+  >Question: is it possible to make the children divs inherit the same gradient background from the parent?
+  
+  I found that this worked:
+  ```css
+  #parent>* {
+    background-image: inherit;
+  }
+  ```
+  
+  I thought maybe the OP left out some information because this was simple, and I was right. They Also want to the gradient to be uniform between the parent and the child.
+  
+  ![screenshot](log_imgs/css_5-18.PNG)
+  
+  I looked around for some ideas but nothing I can up with panned out so I posted it on twitter.
+  
+  ### But then I did figure it out!
+  
+  If you add a `background-size` to the parent you can then have the children inherit that size along with `background-attachment: fixed;` which the OP showed me.
+  
+  ```css
+  #parent {
+    background-image: linear-gradient(blue, yellow);
+    height: 400px;
+    width: 200px;
+    background-size: 600px 600px; //size
+  }
+
+  #parent>* {
+    background-attachment: fixed;
+    background-image: inherit;
+    background-size: inherit;
+  }
+  ```
+  
+  ![screenshot](log_img/solution_5-18.PNG)
+  
+- ## Node
+  Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  ## Debugging Node
+  I love using devTools for debugging. But since node runs on the server and not on the browser, what do people do to debug it? How to I get that same functionality I get from DevTools for node?
+  
+  I found this article: [Debug Node.js in browser with real Chrome Developer Tools](https://hackernoon.com/debug-node-js-with-chrome-devtools-aca7cf83af6b). But it didn't work. I ran the command:
+  
+  >Sat May 18 start Dashie$ node --inspect --debug-brk ask.js
+  
+  The terminal responded:
+  >Debugger listening on ws://127.0.0.1:9229/4046c63c-1c1c-4580-9e23-1506a47c8feb
+  >For help, see: https://nodejs.org/en/docs/inspector
+  
+  But when I put the link in the browser, it didn't work: 
+  >The webpage at ws://127.0.0.1:9229/4046c63c-1c1c-4580-9e23-1506a47c8feb might be temporarily down or it may have moved permanently to a new web address
+  
+  I went to the link that the terminal provided https://nodejs.org/en/docs/inspector. It said to go here chrome://inspect. When I went there, I saw my `ask.js` app. So it worked! I got a warning:
+  > DeprecationWarning: `node --inspect --debug-brk` is deprecated. Please use `node --inspect-brk` instead.
+  
+  ### Steps:
+  1. run `node --inspect-brk <yourfile>.js`
+  2. Go to chrome://inspect
+  3. Click 'inspect' by your app
+  ![screenshot](inspect_5-18.PNG)
+  
+  ## Using DevTools on Node
+  
+  When it came to actualy using the dev tools it was really confusing. As soon as I got a bug my sources disapeared. So thi is still confusing me.
+  
+  ## Practicing EventsEmitter
+  
+  I used events emiiter successful on my node module after a while of running into an error. The reason? I forgot to return the emitter instance in my function! 
+  
+  Using the events emmiter helped me understand what might be going on in the background when you use regular events.
+
 ## Day 37, R2
 ### 5/17/19
 
