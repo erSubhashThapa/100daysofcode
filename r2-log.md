@@ -16,11 +16,11 @@
   }
   ```
   
-  I thought maybe the OP left out some information because this was simple, and I was right. They Also want to the gradient to be uniform between the parent and the child.
+  I thought maybe the OP left out some information because this was simple, and I was right. They also want the gradient to be uniform between the parent and the child.
   
   ![screenshot](log_imgs/css_5-18.PNG)
   
-  I looked around for some ideas but nothing I can up with panned out so I posted it on twitter.
+  I looked around for some ideas but nothing I came up with panned out so I posted it on twitter.
   
   ### But then I did figure it out!
   
@@ -47,7 +47,7 @@
   Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
   
   ## Debugging Node
-  I love using devTools for debugging. But since node runs on the server and not on the browser, what do people do to debug it? How to I get that same functionality I get from DevTools for node?
+  I love using DevTools for debugging. But since node runs on the server and not on the browser, what do people do to debug it? How to I get that same functionality I get from DevTools for node?
   
   I found this article: [Debug Node.js in browser with real Chrome Developer Tools](https://hackernoon.com/debug-node-js-with-chrome-devtools-aca7cf83af6b). But it didn't work. I ran the command:
   
@@ -60,9 +60,13 @@
   But when I put the link in the browser, it didn't work: 
   >The webpage at ws://127.0.0.1:9229/4046c63c-1c1c-4580-9e23-1506a47c8feb might be temporarily down or it may have moved permanently to a new web address
   
-  I went to the link that the terminal provided https://nodejs.org/en/docs/inspector. It said to go here chrome://inspect. When I went there, I saw my `ask.js` app. So it worked! I got a warning:
+  I went to the link that the terminal provided https://nodejs.org/en/docs/inspector. It said to go here chrome://inspect. When I went there, I saw my `ask.js` app. So it worked! 
+  
+  I got a warning:
+  
   > DeprecationWarning: `node --inspect --debug-brk` is deprecated. Please use `node --inspect-brk` instead.
   
+  ## How to Debugging Node, Sort Of
   ### Steps:
   1. run `node --inspect-brk <yourfile>.js`
   2. Go to chrome://inspect
@@ -71,13 +75,13 @@
   
   ## Using DevTools on Node
   
-  When it came to actualy using the dev tools it was really confusing. As soon as I got a bug my sources disapeared. So thi is still confusing me.
+  When it came to actualy using the DevTools it was really confusing. As soon as I got a bug my sources disappeared. So this is still confusing me.
   
   ## Practicing EventsEmitter
   
-  I used events emiiter successful on my node module after a while of running into an error. The reason? I forgot to return the emitter instance in my function! 
+  I used EventsEmitter successfully on my node module after a while of running into an error. The reason? I forgot to return the emitter instance in my function! 
   
-  Using the events emmiter helped me understand what might be going on in the background when you use regular events.
+  Using the EventsEmmiter helped me understand what might be going on in the background when you use regular events.
 
 ## Day 37, R2
 ### 5/17/19
