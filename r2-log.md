@@ -22,7 +22,7 @@
   
   I looked around for some ideas but nothing I came up with panned out so I posted it on twitter.
   
-  ### But then I did figure it out!
+  ### But then I did figure it out! Sort Of
   
   If you add a `background-size` to the parent you can then have the children inherit that size along with `background-attachment: fixed;` which the OP showed me.
   
@@ -42,6 +42,11 @@
   ```
   
   ![screenshot](log_imgs/solution_5-18.PNG)
+  
+  But the OP got back to me and apparently this solution is limited:
+  
+  >Very clever! But because `background-attachment: fixed` is relative to the viewport and not to the parent, children will only align with the gradient at the top position. Scroll down and the colour starts changing.
+But I think we're getting somewhere with your trick! Thank you!
   
 - ## Node
   Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
