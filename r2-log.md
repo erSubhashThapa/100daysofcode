@@ -18,7 +18,7 @@
   
   I thought maybe the OP left out some information because this was simple, and I was right. They also want the gradient to be uniform between the parent and the child.
   
-  ![screenshot](log_imgs/css_5-18.PNG)
+  <img src="log_imgs/css_5-18.PNG" width="400"/>
   
   I looked around for some ideas but nothing I came up with panned out so I posted it on twitter.
   
@@ -41,7 +41,7 @@
   }
   ```
   
-  ![screenshot](log_imgs/solution_5-18.PNG)
+  <img src="log_imgs/solution_5-18.PNG" width="400"/>
   
   But the OP got back to me and apparently this solution is limited:
   
@@ -82,11 +82,11 @@ But I think we're getting somewhere with your trick! Thank you!
   
   When it came to actualy using the DevTools it was really confusing. As soon as I got a bug my sources disappeared. So this is still confusing me.
   
-  ## Practicing EventsEmitter
+  ## Practicing EventEmitter
   
-  I used EventsEmitter successfully on my node module after a while of running into an error. The reason? I forgot to return the emitter instance in my function! 
+  I used EventEmitter successfully on my node module after a while of running into an error. The reason? I forgot to return the emitter instance in my function! 
   
-  Using the EventsEmmiter helped me understand what might be going on in the background when you use regular events.
+  Using the EventEmmiter helped me understand what might be going on in the background when you use regular events.
 
 ## Day 37, R2
 ### 5/17/19
