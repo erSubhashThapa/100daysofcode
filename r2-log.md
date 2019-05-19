@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 38, R2
-### 5/18/19
+## Day 39, R2
+### 5/19/19
 
 - ## Helping
  Last time I was helping someone on twitter with [this problem](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#day-38-r2). We ended with this:
