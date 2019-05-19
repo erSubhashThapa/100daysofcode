@@ -41,14 +41,15 @@
   
   This stuff is starting to feel very backendy to me which is fun and exciting!
   
-  ### fs.readdir
-  ### fs.readfile
-  ### fs.writefile
-  ### fs.mkdir
-  ### fs.appendfile
-  ### fs.rename
-  ### fs.unlink
-  ### fs.rmdir
+  ### We learned about the Node module `fs` and these functions:
+  - fs.readdir
+  - fs.readfile
+  - fs.writefile
+  - fs.mkdir
+  - fs.appendfile
+  - fs.rename
+  - fs.unlink
+  - fs.rmdir
   
   These functions all deal with deleting, creating, or changing files and directories.
   
