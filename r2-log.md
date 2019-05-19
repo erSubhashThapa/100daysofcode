@@ -1,5 +1,34 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 38, R2
+### 5/18/19
+
+- ## Helping
+ Last time I was helping someone on twitter with [this problem](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#day-38-r2). We ended with this:
+ 
+ <img src="log_imgs/scroll_5-19.PNG" width="400"/>
+ 
+ The divs look like they have uniform graidnet but if you scroll the gradient stays fixed to the viewport.
+ 
+ [JavaScript Teacher @js_tut](https://twitter.com/js_tut) recommended this:
+ 
+ >Make one parent. Create an SVG with a hole and just the white corners. Apply it to 3 gradientless children ;)
+ 
+ This could work however it becomes more difficult when the page is responsive or if there are other elements on the page that might interfere. If the divs are changing size, then we have to change the SVG too. I'm not sure how to do that. You could probably so it with javascript. 
+ 
+ I'm pretty sure there's other ways to do this in javascript too.
+ 
+ Since I haven't heard back from the OP, I'm gonna leave this problem and go back to node.
+ 
+ - ## Node
+  Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  ## Debbuging Node in VSC
+  Yesterday [Philippe Vaillancourt @snowfrogdev](https://twitter.com/snowfrogdev) told me that there's a way to debug built into VSC. I tried his suggestion pressing F5, but when I did that (fn+F5 on mac). It didn't work. It said it was running but when I went to the url, it didn't work.
+  
+  I figured it out:
+  ![screenrecording](log_imgs/debug_5-19.PNG)
+
 
 ## Day 38, R2
 ### 5/18/19
@@ -71,7 +100,7 @@ But I think we're getting somewhere with your trick! Thank you!
   
   > DeprecationWarning: `node --inspect --debug-brk` is deprecated. Please use `node --inspect-brk` instead.
   
-  ## How to Debugging Node, Sort Of
+  ## How to Debug Node, Sort Of
   ### Steps:
   1. run `node --inspect-brk <yourfile>.js`
   2. Go to chrome://inspect
