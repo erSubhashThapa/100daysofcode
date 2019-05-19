@@ -4,21 +4,21 @@
 ### 5/19/19
 
 - ## Helping
- Last time I was helping someone on twitter with [this problem](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#day-38-r2). We ended with this:
+  Last time I was helping someone on twitter with [this problem](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#day-38-r2). We ended with this:
  
- <img src="log_imgs/scroll_5-19.gif" width="400"/>
+  <img src="log_imgs/scroll_5-19.gif" width="400"/>
  
- The divs look like they have uniform gradient but if you scroll the gradient stays fixed to the viewport.
+  The divs look like they have uniform gradient but if you scroll the gradient stays fixed to the viewport.
  
- [JavaScript Teacher @js_tut](https://twitter.com/js_tut) recommended this:
+  [JavaScript Teacher @js_tut](https://twitter.com/js_tut) recommended this:
  
- >Make one parent. Create an SVG with a hole and just the white corners. Apply it to 3 gradientless children ;)
+  >Make one parent. Create an SVG with a hole and just the white corners. Apply it to 3 gradientless children ;)
  
- This could work however it becomes more difficult when the page is responsive or if there are other elements on the page that might interfere. If the divs are changing perspectives, then we have to change the SVG too. I'm not sure how to do that without warping the perspective of the smooth corner radius of the SVG. You could probably do it with javascript. 
+  This could work however it becomes more difficult when the page is responsive or if there are other elements on the page that might interfere. If the divs are changing perspectives, then we have to change the SVG too. I'm not sure how to do that without warping the perspective of the smooth corner radius of the SVG. You could probably do it with javascript. 
  
- I'm pretty sure there's other ways to do this in javascript too. Like maybe you can change where the background starts with a specific pixel measurement and use javascript to start all the backgrounds in the appropriate spot so that they all line up.
+  I'm pretty sure there's other ways to do this in javascript too. Like maybe you can change where the background starts with a specific pixel measurement and use javascript to start all the backgrounds in the appropriate spot so that they all line up.
  
- Since I haven't heard back from the OP, I'm gonna leave this problem and go back to node.
+  Since I haven't heard back from the OP, I'm gonna leave this problem and go back to node.
  
 - ## Node
   Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
