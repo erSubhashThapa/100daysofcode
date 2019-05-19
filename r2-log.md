@@ -14,13 +14,13 @@
  
  >Make one parent. Create an SVG with a hole and just the white corners. Apply it to 3 gradientless children ;)
  
- This could work however it becomes more difficult when the page is responsive or if there are other elements on the page that might interfere. If the divs are changing size, then we have to change the SVG too. I'm not sure how to do that. You could probably so it with javascript. 
+ This could work however it becomes more difficult when the page is responsive or if there are other elements on the page that might interfere. If the divs are changing perspectives, then we have to change the SVG too. I'm not sure how to do that without warping the perspective of the smooth corner radius of the SVG. You could probably do it with javascript. 
  
  I'm pretty sure there's other ways to do this in javascript too. Like maybe you can change where the background starts with a specific pixel measurement and use javascript to start all the backgrounds in the appropriate spot so that they all line up.
  
  Since I haven't heard back from the OP, I'm gonna leave this problem and go back to node.
  
- - ## Node
+- ## Node
   Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
   
   ## Debbuging Node in VSC
@@ -33,9 +33,9 @@
   2. Select Environment: **"Node.js"**
   3. Click the debugging view or `shift` + `cmd` + `D`
   4. Click the Debug Console Button
-  <img src="log_imgs/debugbutton_5-19.PNG" width = "300" />
+   - <img src="log_imgs/debugbutton_5-19.PNG" width = "300" />
   
-  [Here's a video](https://www.youtube.com/watch?v=2oFKNL7vYV8) tutorial of someone using the debbugger.
+  [Here's a video](https://www.youtube.com/watch?v=2oFKNL7vYV8) tutorial of someone using the debugger.
   
   ## Ideas From Today's Lynda Videos
   
