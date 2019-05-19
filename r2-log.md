@@ -6,9 +6,9 @@
 - ## Helping
  Last time I was helping someone on twitter with [this problem](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#day-38-r2). We ended with this:
  
- <img src="log_imgs/scroll_5-19.PNG" width="400"/>
+ <img src="log_imgs/scroll_5-19.gif" width="400"/>
  
- The divs look like they have uniform graidnet but if you scroll the gradient stays fixed to the viewport.
+ The divs look like they have uniform gradient but if you scroll the gradient stays fixed to the viewport.
  
  [JavaScript Teacher @js_tut](https://twitter.com/js_tut) recommended this:
  
@@ -16,7 +16,7 @@
  
  This could work however it becomes more difficult when the page is responsive or if there are other elements on the page that might interfere. If the divs are changing size, then we have to change the SVG too. I'm not sure how to do that. You could probably so it with javascript. 
  
- I'm pretty sure there's other ways to do this in javascript too.
+ I'm pretty sure there's other ways to do this in javascript too. Like maybe you can change where the background starts with a specific pixel measurement and use javascript to start all the backgrounds in the appropriate spot so that they all line up.
  
  Since I haven't heard back from the OP, I'm gonna leave this problem and go back to node.
  
@@ -24,11 +24,42 @@
   Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
   
   ## Debbuging Node in VSC
-  Yesterday [Philippe Vaillancourt @snowfrogdev](https://twitter.com/snowfrogdev) told me that there's a way to debug built into VSC. I tried his suggestion pressing F5, but when I did that (fn+F5 on mac). It didn't work. It said it was running but when I went to the url, it didn't work.
-  
-  I figured it out:
-  ![screenrecording](log_imgs/debug_5-19.PNG)
+  Yesterday [Philippe Vaillancourt @snowfrogdev](https://twitter.com/snowfrogdev) told me that there's a way to debug built into VSC. Press `fn` + `F5`. Then just debug directly in VSC. 
 
+  ![screenrecording](log_imgs/debug_5-19.PNG)
+  
+  You can do what I did in the video or:
+  1. `fn` + `F5`
+  2. Select Environment: **"Node.js"**
+  3. Click the debugging view or `shift` + `cmd` + `D`
+  4. Click the Debug Console Button
+  <img src="log_imgs/debug_5-19.PNG" width = "300" />
+  
+  [Here's a video](https://www.youtube.com/watch?v=2oFKNL7vYV8) tutorial of someone using the debbugger.
+  
+  ## Ideas From Today's Lynda Videos
+  
+  This stuff is starting to feel very backendy to me which is fun and exciting!
+  
+  ### fs.readdir
+  ### fs.readfile
+  ### fs.writefile
+  ### fs.mkdir
+  ### fs.appendfile
+  ### fs.rename
+  ### fs.unlink
+  ### fs.rmdir
+  
+  These functions all deal with deleting, creating, or changing files and directories.
+  
+  I zoomed through this section of the tutorial, simply watching without coding along. Tomorrow, I'll take what I learned from these concepts and make a small project, reviewing any video I need to review. I think this might be a more effective way of learning for me.
+  
+- ## Thoughts and Feelings:
+  I have been learning a lot about how I learn. That's a great side effect of 100DaysOfCode. I like to learn slowly. I feel if I learn a new concept slowly in the beginning, I'm able to learn faster later when I get to the more difficult parts of the subject. Actually, you could say I like to change up the pace depending on my goal.
+  
+  I'm learning Node.js pretty slowly and deliberately. It's more enjoyable this way and will stick better. I even went off my tutorial to learn how to set up debugging in node. I think debugging is so important. It makes understanding the code a billion times easier. So I took the time to learn how to set debugging up, which slows down my progress in my tutorial but speeds up my progress in the long run.
+
+  I'm going to start posting my log on linked in. I want to start building up my linked in. I don't really know how to use linked in well. Maybe I can take a tutorial.
 
 ## Day 38, R2
 ### 5/18/19
