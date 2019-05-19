@@ -26,14 +26,14 @@
   ## Debbuging Node in VSC
   Yesterday [Philippe Vaillancourt @snowfrogdev](https://twitter.com/snowfrogdev) told me that there's a way to debug built into VSC. Press `fn` + `F5`. Then just debug directly in VSC. 
 
-  ![screenrecording](log_imgs/debug_5-19.PNG)
+  ![screenrecording](log_imgs/debug_5-19.gif)
   
   You can do what I did in the video or:
   1. `fn` + `F5`
   2. Select Environment: **"Node.js"**
   3. Click the debugging view or `shift` + `cmd` + `D`
   4. Click the Debug Console Button
-  <img src="log_imgs/debug_5-19.PNG" width = "300" />
+  <img src="log_imgs/debugbutton_5-19.PNG" width = "300" />
   
   [Here's a video](https://www.youtube.com/watch?v=2oFKNL7vYV8) tutorial of someone using the debbugger.
   
