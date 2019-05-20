@@ -1,5 +1,52 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 40, R2
+### 5/20/19
+
+- ## Node
+  Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  ## File System Functions We Learned:
+  - fs.readdir
+  - fs.readfile
+  - fs.writefile
+  - fs.mkdir
+  - fs.appendfile
+  - fs.rename
+  - fs.unlink
+  - fs.rmdir
+  
+  I want to make a small project using these functions.
+  
+  I used this page for help with Node.js fs(file system) functions:
+  [Node.js Documentation fs](https://nodejs.org/api/fs.html)
+  
+  ## Project
+  
+  I made a file that creates letters to all my friends based on a `friends.json` file. Here's the function that creates the letter:
+  
+  ```javascript
+  const makeNoteFile= (friend) => {
+    const noteTo = (friend) => {
+      return ( 
+      `Dear ${friend.name},
+        I hope this finds you well. I was thinking about how special you are. 
+      You are my one and only true ${friend.relation}. A gem at a young ${friend.age}.
+
+      I am thinking of you,
+      Dashie`
+      )
+    }
+
+    fs.writeFile(`${friend.name}.txt`, noteTo(friend),  err => {
+      if (err) throw err;
+      console.log('file created');
+    });
+  };
+  ```
+  
+  I also made a bunch of little files that deal with the other functions. I'm having trouble pushing the project to github. My internet is slow today as I travel. So I'm going to leave this log short today.
+
 ## Day 39, R2
 ### 5/19/19
 
