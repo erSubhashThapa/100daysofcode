@@ -61,9 +61,16 @@
   });
   ```
 
-  This program reads what ever is in the file `words.text` and then write the text back into the file. 
+  This program reads whatever is in the file `words.text` and then write that text *back* into the file. 
   
-  So if "hi" is in the file, after runing this program "hihihihihi" is in the file. I'm not sure why is doesn't more than once though.
+  So if `"hi"` is in the file, after running this program, `"hihihihihi"` is the new text in the file. I'm not sure why it writes `"hi"` 4 more times instead of once.
+  
+- Thoughts & Feelings:
+  I coded through driving into Utah. We saw some really red mountainss.
+  
+  It was more red in real life:
+  
+  ![utah](utah-5-21.gif)
   
 ## Day 40, R2
 ### 5/20/19
