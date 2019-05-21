@@ -65,10 +65,10 @@
   
   So if `"hi"` is in the file, after running this program, `"hihihihihi"` is the new text in the file. I'm not sure why it writes `"hi"` 4 more times instead of once.
   
-- Thoughts & Feelings:
+- ## Thoughts & Feelings:
   I coded through driving into Utah. We saw some really red mountainss.
   
-  It was more red in real life:
+  They were ***more red*** in real life:
   
   ![utah](log_imgs/utah-5-21.gif)
   
