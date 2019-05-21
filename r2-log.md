@@ -70,7 +70,7 @@
   
   It was more red in real life:
   
-  ![utah](utah-5-21.gif)
+  ![utah](log_imgs/utah-5-21.gif)
   
 ## Day 40, R2
 ### 5/20/19
