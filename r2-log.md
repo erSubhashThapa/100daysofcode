@@ -48,7 +48,7 @@
   
   If you use `fs.createWriteStream()` it writes over the file you write to everytime you run it. I wanted to append to the file. On this stackoverflow page it showed how to append: [How to create appending writeStream in Node.js](https://stackoverflow.com/questions/3928926/how-to-create-appending-writestream-in-node-js)
   
-  You just add the options parameter, which is the second parameter and an object, and put in `'flags':'a'`.
+  You just add the options parameter, which is the second parameter and is an object, and put in `'flags':'a'`.
   
   ```javascript
   const fs = require('fs');
