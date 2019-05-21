@@ -1,5 +1,70 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 41, R2
+### 5/21/19
+
+- ## Github
+  I forgot to `git add .` which is why I was having trouble yesterday. I havn't used git in a while so I guess I was a bit rusty. I also needed to enter my username and password which I dudn't used to have to do. Maybe it's because I'm using a different terminal application or because I changed my username.
+
+- ## Node
+  Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html)
+  
+  I finished practicing the functions I learned in the last chapter concerning file system functions.
+  
+  You can see those practoce files here: [File system Node.js Practice]()
+  
+  ## Stream Interface
+  >The stream interface provides us with the technique to read and write data. We can use it to read and write to data files, to communicate with the internet, to communicate with other processed.
+  
+  -[Alex Banks](https://www.lynda.com/Node-js-tutorials/Readable-file-streams/5016729/2811746-4.html?autoplay=true)
+  
+  >A stream is an abstract interface for working with streaming data in Node.js. The stream module provides a base API that makes it easy to build objects that implement the stream interface.
+  >
+  >There are many stream objects provided by Node.js. For instance, a request to an HTTP server and process.stdout are both stream instances.
+  >
+  >Streams can be readable, writable, or both. All streams are instances of EventEmitter.
+  >
+  >The stream module can be accessed using:
+  >
+  >`const stream = require('stream');`
+  >
+  >While it is important to understand how streams work, the stream module itself is most useful for developers that are creating new types of stream instances. Developers who are primarily consuming stream objects will rarely need to use the stream module directly.
+  
+  -from [Stream Node.js Documentation](https://nodejs.org/api/stream.html#stream_types_of_streams)
+  
+  This idea is new to me. I think I'll understand it more when I play with it
+  
+  Here's some stream functions from the tutorial:
+  - `fs.createReadStream()`
+  - `fs.createWriteStream()`
+  - `fs.createWriteStream().write()`
+  - `fs.createReadStream().pipe()`
+  - `fs.createReadStream().on()`
+  - `fs.createReadStream().once()`
+  
+  
+  
+  ## Appending To a File With fs.createWriteStream()
+  
+  If you use `fs.createWriteStream()` it writes over the file you write to everytime you run it. I wanted to append to the file. On this stackoverflow page it showed how to append: [How to create appending writeStream in Node.js](https://stackoverflow.com/questions/3928926/how-to-create-appending-writestream-in-node-js)
+  
+  You just add the options parameter, which is the second parameter and an object, and put in `'flags':'a'`.
+  
+  ```javascript
+  const fs = require('fs');
+
+  const writeStream = fs.createWriteStream(`./assets/words.txt`, {'flags':'a'} , `UTF-8`);
+  const readStream = fs.createReadStream(`./assets/words.txt`, `UTF-8`);
+
+  readStream.on("data", data => {
+    writeStream.write(data);
+  });
+  ```
+
+  This program reads what ever is in the file `words.text` and then write the text back into the file. 
+  
+  So if "hi" is in the file, after runing this program "hihihihihi" is in the file. I'm not sure why is doesn't more than once though.
+  
 ## Day 40, R2
 ### 5/20/19
 
