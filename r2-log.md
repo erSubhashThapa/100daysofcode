@@ -10,9 +10,12 @@
   >Node.js comes with a child process module, which allows you to execute external processes in your environment. In other words, your Node.js app can run and communicate with other applications in your environment.
   [Child processes Node.js Documentation](https://nodejs.org/api/child_process.html)
   
+  *-[Alex Banks](https://www.lynda.com/Node-js-tutorials/Readable-file-streams/5016729/2811746-4.html?autoplay=true)*
+
+  
   ## `child_process.exec()`
   
-  With the `exec()` function you can run terminal commands. `exec.()` handles ***synchronous*** processes.
+  With the `exec()` function you can run terminal commands in node.js. `exec.()` handles ***synchronous*** processes.
   
   Here, we open Facebook:
   
@@ -23,7 +26,7 @@
   ```
   ![open](log_imgs/open_5-22.gif)
   
-  You can also deal with data that a terminal command returns:
+  You can handle the data that a terminal command returns:
   
   ```javascript
   const cp = require("child_process");
@@ -38,7 +41,7 @@
   ```
   ![ls](log_imgs/ls_5-22.gif)
   
-  Here we console log the list command's results. The third argument `stderr` is the error that the child process gives, aka the terminal in this program\*, while `err` is the error that Node.js gives.
+  Here we console log the list command's results to the console. The third argument `stderr` is the error that the child process gives, aka the terminal in this program\*, while `err` is the error that Node.js gives.
   
   \*I'm not sure if it can be other processes or just the terminal.
   
@@ -71,18 +74,18 @@
   
   ## Answers In The Terminal?
   
-  With the last program, if I stake out:
+  With the last program, if I take out:
   
   ```javascript
   questionApp.stdin.write("dash \n");
   questionApp.stdin.write("a van \n");
   questionApp.stdin.write("eating \n");
   ```
-  It doesn't let me input answers through the terminal. I'm not sure why. I guess its only putting output from the questions app to the terminal and not listening for input.
+  It doesn't let me input answers through the terminal. I'm not sure why. I guess it's only putting output from the questions app to the terminal and not listening for input.
   
 - ## Node.js Server Set Up
   
-  I started reading from ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut).
+  I started reading ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut).
   
   ## Notes:
   ## 3 Thinks to Understand About Node Server:
@@ -92,7 +95,6 @@
   
   ## Mac?
   It was interesting to read through so far but, it looks like a lot of the instructions are only for Windows. So I'm not sure if this will be helpful to me. Maybe in the next update the Mac instructions will be added.
-
 
 ## Day 41, R2
 ### 5/21/19
