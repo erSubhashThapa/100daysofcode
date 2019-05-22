@@ -26,6 +26,7 @@
   ```
   ![open](log_imgs/open_5-22.gif)
   
+  ## Handle Data
   You can handle the data that a terminal command returns:
   
   ```javascript
