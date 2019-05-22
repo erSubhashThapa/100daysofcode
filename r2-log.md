@@ -70,7 +70,7 @@
 
   ```
   
-  <img src="log_imgs/spawn_5-22.gif" width="400"/>
+  ![spawn](log_imgs/spawn_5-22.gif)
   
   ## Answers In The Terminal?
   
