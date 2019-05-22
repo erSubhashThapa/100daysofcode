@@ -1,5 +1,99 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 42, R2
+### 5/22/19
+
+- ## Node
+  Continuing my practice and notes for [Node.js Essential Training 2019 Lynda Tutorial](https://www.lynda.com/Node-js-tutorials/Node-js-Essential-Training-Part-I-2019-REVISION/5016729-2.html). I finished this tutorial yesterday but I still have to practice some of the concepts.
+  
+  ## Child Processes
+  >Node.js comes with a child process module, which allows you to execute external processes in your environment. In other words, your Node.js app can run and communicate with other applications in your environment.
+  [Child processes Node.js Documentation](https://nodejs.org/api/child_process.html)
+  
+  ## `child_process.exec()`
+  
+  With the `exec()` function you can run terminal commands. `exec.()` handles ***synchronous*** processes.
+  
+  Here, we open Facebook:
+  
+  ```javascript
+  const cp = require("child_process");
+
+  cp.exec("open http://facebook.com");
+  ```
+  ![open](log_imgs/open_5-22.gif)
+  
+  You can also deal with data that a terminal command returns:
+  
+  ```javascript
+  const cp = require("child_process");
+
+  cp.exec("ls", (err, data, stderr) => {
+    if(err){ 
+      console.log(stderr);
+      throw err;
+    }
+    console.log(data);
+  });
+  ```
+  ![ls](log_imgs/ls_5-22.gif)
+  
+  Here we console log the list command's results. The third argument `stderr` is the error that the child process gives, aka the terminal in this program\*, while `err` is the error that Node.js gives.
+  
+  \*I'm not sure if it can be other processes or just the terminal.
+  
+  ## `child_process.spawn()`
+  You can also run commands in the terminal using spawn. `.spawn()` handles ***asyncronous*** processes.
+  
+  `.spawn()` returns a ChildProcess Object, as does `.exec()`.
+  
+  ```javascript
+  const cp = require('child_process');
+
+  const questionApp = cp.spawn('node', ['questions.js']);
+
+  questionApp.stdin.write("dash \n");
+  questionApp.stdin.write("a van \n");
+  questionApp.stdin.write("eating \n");
+
+  questionApp.stdout.on('data', data => {
+    console.log(`from the question app: ${data}`);
+  });
+
+  questionApp.on('close', () => {
+    console.log('questionApp process exited');
+  });
+
+
+  ```
+  
+  <img src="log_imgs/spawn_5-22.gif" width="400"/>
+  
+  ## Answers In The Terminal?
+  
+  With the last program, if I stake out:
+  
+  ```javascript
+  questionApp.stdin.write("dash \n");
+  questionApp.stdin.write("a van \n");
+  questionApp.stdin.write("eating \n");
+  ```
+  It doesn't let me input answers through the terminal. I'm not sure why. I guess its only putting output from the questions app to the terminal and not listening for input.
+  
+- ## Node.js Server Set Up
+  
+  I started reading from ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut).
+  
+  ## Notes:
+  ## 3 Thinks to Understand About Node Server:
+  - The difference between Global and Local installations
+  - Configuring `package.json`manifest file
+  - Understanding the `node_modules` directory
+  
+  ## Mac?
+  It was interesting to read through so far but, it looks like a lot of the instructions are only for Windows. So I'm not sure if this will be helpful to me. Maybe in the next update the Mac instructions will be added.
+
+
 ## Day 41, R2
 ### 5/21/19
 
