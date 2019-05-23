@@ -102,9 +102,9 @@
   
   Most times people don't know what **you** don't understand. Asking stupid questions helps them understand what information you're missing and explain it to you better. 
   
-  *Be **specific** and **abundant** in your stupid questions.* 
+  ### *Be **specific** and **abundant** in your stupid questions.* Really get down to what is confusing you.
   
-  Asking others, ask yourself, and ask the iternet/google.
+  Ask others, ask yourself, and ask the internet/google.
   
   It's good to ask questions when you think you might even know the answer are unsure. ***With your questions, always act stupider than you are.**
   
