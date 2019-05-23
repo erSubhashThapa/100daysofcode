@@ -4,7 +4,7 @@
 ### 5/23/19
 
 - ## Node
-  I finished the tutorial I was learning on node. Today I'd like to set up a server on node. I was following ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut] but the latest update doesn't have all the mac instructions. So I'm going to look at other resources too.
+  I finished the tutorial I was learning on node. Today, I'd like to set up a server on node. I was following ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut] but the latest update doesn't have all the mac instructions. So I'm going to look at other resources too.
   
   ## Unix
   There's a lot of unix commands involved in node. It's been a while since I looked at unix in depth so I may have to refresh my memory.
@@ -21,10 +21,10 @@
   
   Skimmed this: [An Introduction to Environment Variables and How to Use Them](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa)
   
-  In the tutorial for setting up a node server it says that after we install node, we won't be able to run node from anywhere because we still need to add the path to our environment variables. However, mine is working from anywhere and I don't see the environment variables for the node path when I run `env` in the command line. What's happening?
+  In Greg's tutorial for setting up a node server, it says that after we install node, we won't be able to run node from anywhere because we still need to add the path to our environment variables. However, mine is working from anywhere and I don't see the environment variables for the node path when I run `env` in the command line. What's happening?
   
   ## Path Variable
-  In [this tutorial](https://rickchristianson.wordpress.com/2013/11/15/how-to-setup-a-node-js-server-on-mac-os-x-in-less-than-10-minutes/) It says to add these two variables through the command line:
+  In [this tutorial on setting up a node server for mac](https://rickchristianson.wordpress.com/2013/11/15/how-to-setup-a-node-js-server-on-mac-os-x-in-less-than-10-minutes/) it says to add these two variables through the command line:
   
   ```bash
   $ export NODE_PATH="/usr/local/lib/node"
@@ -38,7 +38,7 @@
   
   `PATH` seems like such a broad variable name. Why would we use it for something specific like just for npm? Why not name it `NPM_PATH`? 
   
-  Am I supposed to write over my last `PATH` variable? What will that affect? The next time I follow a tutorial, will they tell me to write over `PATH` again for some other `PATH`? Won't that sscrew things up?
+  Am I supposed to write over my last `PATH` variable? What will that affect? The next time I follow a tutorial, will they tell me to write over `PATH` again for some other `PATH`? Won't that screw things up?
   
   ## PATH Is A List Of Paths
   
@@ -47,7 +47,7 @@
   
   ## Current Session?
   
-  I this stackoverflow, thread that mentions adding PATH to the current session vs perminantly:
+  I this stackoverflow, thread that mentions adding `PATH` to the current session vs perminantly:
   
   >"...that would be for the current session, if you want to change permanently add it to any .bashrc, bash.bashrc, /etc/profile - whatever fits your system and user needs." 
   *-from [Removing a directory from PATH](https://unix.stackexchange.com/questions/108873/removing-a-directory-from-path)*
@@ -64,18 +64,41 @@
   $ export PATH="/usr/local/share/npm/bin:$PATH"
   ```
   
-  At the end of the variable value, we add the `$PATH` variable itself. We're adding the npm path to our paths.
+  At the end of the variable value, we add the `$PATH` variable itself. So we're appending the npm path to our $PATH.
   
   ### Current Session
   
   >The methods we've used so far only sets the environment variable for your current shell session; when you logout or close the terminal window, your changes will be forgotten.
+  *-from [How to add directory to system path in Linux](https://www.computerhope.com/issues/ch001647.htm)*
+  
+  ## Unix: A Multiuser Environment
+  
+  Earlier I wondered why I would need to give permissions for files on my own computer:
+  
+  > Unix is fundamentally a multi-user environment.
+  
+  -[Kevin Skogland](https://www.lynda.com/Mac-OS-tutorials/Logging-using-command-prompt/78546/83613-4.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3abash+profile+unix%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
+  
+  >Other Unix systems don't automatically log you in. You'd put in your username and your password for it to know who you are. But your Mac already knows who you are. Now if you are using your Mac as a single-user environment, that may come as a bit of surprise to you because you may not even think about the fact that you are logged in as you. But if you go to Apple menu and down to System Preferences and into Accounts, you can see that we can manage different user accounts...OS 9 which was a single-user system. But once we moved OS X with this Unix underneath, Unix is fundamentally a multi-user environment.
+  
+  -[Kevin Skogland](https://www.lynda.com/Mac-OS-tutorials/Logging-using-command-prompt/78546/83613-4.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3abash+profile+unix%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
+  
+  ## Summary
+  Today I had a lot of questions about unix. Some I found answers to, but some I still need to understand:
+  
+  - What is the bash profile, the place where variables are stored for all sessions? What else is it used for? How can I see it?
+  - Why didn't I have to add the path environment variables for my node to work?
   
   
   
-- Thoughts and Feelings:
-  I'm going to embrace my "stupid questions". Some questions feel stupid because they can clue others to the fact that you really don't understand a subject. That's good. Most times people don't know what **you** don't understand. Asking stupid questions helps them understand what information you're missing and explain it to you better. Be specific and abundant in your stupid questions. 
-  Asking others, ask yourself, and ask the iternet.
-
+- ## Thoughts and Feelings:
+  I'm going to embrace my **"stupid questions"**. Some questions feel stupid because they can clue others to the fact that you really don't understand a subject. That's good. 
+  
+  Most times people don't know what **you** don't understand. Asking stupid questions helps them understand what information you're missing and explain it to you better. Be specific and abundant in your stupid questions. 
+  
+  Asking others, ask yourself, and ask the iternet/google.
+  
+  Another benefit to writing out your confusion is that once you understand something, when you go back and read what you were confused about, you feel like you learned a lot. You feel like, *"Who is this confused dumbo from the past?"* Not me! Not anymore!
 
 ## Day 42, R2
 ### 5/22/19
