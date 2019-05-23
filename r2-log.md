@@ -4,12 +4,14 @@
 ### 5/23/19
 
 - ## Node
-  I finished the tutorial I was learning on node. Today, I'd like to set up a server on node. I was following ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut] but the latest update doesn't have all the mac instructions. So I'm going to look at other resources too.
+  I finished the tutorial I was learning on node. Today, I'd like to set up a server on node. I was following ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut) but the latest update doesn't have all the mac instructions. So I'm going to look at other resources too.
   
   ## Unix
   There's a lot of unix commands involved in node. It's been a while since I looked at unix in depth so I may have to refresh my memory.
   
-  ## `chown`  
+  ## `chown` 
+  In [this tutorial on setting up a node server for mac](https://rickchristianson.wordpress.com/2013/11/15/how-to-setup-a-node-js-server-on-mac-os-x-in-less-than-10-minutes/) it uses the `chown` command:
+  
   >The chown command is most commonly used by Unix/Linux system administrators who need to fix a permissions problem with a file or directory, or many files and many directories.
   
   *-from [The Linux `chown` command](https://alvinalexander.com/linux-unix/linux-chown-command-chgrp-files-directories)*
@@ -43,11 +45,12 @@
   ## PATH Is A List Of Paths
   
   >The $PATH variable is specified as a list of directory names separated by colon (:) characters. 
+  
   *-from [Mac OS X: Set / Change $PATH Variable](https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/)*
   
   ## Current Session?
   
-  I this stackoverflow, thread that mentions adding `PATH` to the current session vs perminantly:
+  I this stackoverflow thread, it mentions adding `PATH` to the *current session* vs *permanently*:
   
   >"...that would be for the current session, if you want to change permanently add it to any .bashrc, bash.bashrc, /etc/profile - whatever fits your system and user needs." 
   *-from [Removing a directory from PATH](https://unix.stackexchange.com/questions/108873/removing-a-directory-from-path)*
@@ -55,7 +58,7 @@
   I found out this means the current shell session. That clarfies things.
   
   ## Understanding PATH
-  This article, [How to add directory to system path in Linux](https://www.computerhope.com/issues/ch001647.htm), answered a lot of my questions.
+  This article, [How to add directory to system path in Linux](https://www.computerhope.com/issues/ch001647.htm), answered a lot of my questions:
   
   ### Appending to PATH
   In the tutorial where it said to set the `PATH`, we're not overwriting `PATH`
@@ -64,11 +67,12 @@
   $ export PATH="/usr/local/share/npm/bin:$PATH"
   ```
   
-  At the end of the variable value, we add the `$PATH` variable itself. So we're appending the npm path to our $PATH.
+  At the end of the variable value, we add the `$PATH` variable itself. So we're **appending** the npm path ***to our $PATH***.
   
   ### Current Session
   
   >The methods we've used so far only sets the environment variable for your current shell session; when you logout or close the terminal window, your changes will be forgotten.
+  
   *-from [How to add directory to system path in Linux](https://www.computerhope.com/issues/ch001647.htm)*
   
   ## Unix: A Multiuser Environment
@@ -84,21 +88,27 @@
   -[Kevin Skogland](https://www.lynda.com/Mac-OS-tutorials/Logging-using-command-prompt/78546/83613-4.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3abash+profile+unix%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
   
   ## Summary
-  Today I had a lot of questions about unix. Some I found answers to, but some I still need to understand:
+  Today I had a lot of questions about Unix. Some I found answers to, but some I still need to understand:
   
   - What is the bash profile, the place where variables are stored for all sessions? What else is it used for? How can I see it?
   - Why didn't I have to add the path environment variables for my node to work?
   
+  I think I'll focus on unix tomorrow too. Since this is a core part of using node, I think it will really help me. It's been a while since I've really looked into Unix. 
   
+  I'm familiar with a lot of the commands but not so familiar with the structure: Like what does unix do with `$PATH`, the bash profile, and where are usernames and passowrds stored?
   
 - ## Thoughts and Feelings:
   I'm going to embrace my **"stupid questions"**. Some questions feel stupid because they can clue others to the fact that you really don't understand a subject. That's good. 
   
-  Most times people don't know what **you** don't understand. Asking stupid questions helps them understand what information you're missing and explain it to you better. Be specific and abundant in your stupid questions. 
+  Most times people don't know what **you** don't understand. Asking stupid questions helps them understand what information you're missing and explain it to you better. 
+  
+  *Be **specific** and **abundant** in your stupid questions.* 
   
   Asking others, ask yourself, and ask the iternet/google.
   
-  Another benefit to writing out your confusion is that once you understand something, when you go back and read what you were confused about, you feel like you learned a lot. You feel like, *"Who is this confused dumbo from the past?"* Not me! Not anymore!
+  It's good to ask questions when you think you might even know the answer are unsure. ***With your questions, always act stupider than you are.**
+  
+  Another benefit to **writing out and defining your confusion** is that once you understand something, when you go back and read what you were confused by, you feel like you learned a lot. You feel like, *"Who is this confused dumbo from the past?"* Not me! Not anymore!
 
 ## Day 42, R2
 ### 5/22/19
