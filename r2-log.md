@@ -1,5 +1,82 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 43, R2
+### 5/23/19
+
+- ## Node
+  I finished the tutorial I was learning on node. Today I'd like to set up a server on node. I was following ***Node.js Server Set Up*** by Greg Sidelnikov aka [JavaScript Teacher @js_tut] but the latest update doesn't have all the mac instructions. So I'm going to look at other resources too.
+  
+  ## Unix
+  There's a lot of unix commands involved in node. It's been a while since I looked at unix in depth so I may have to refresh my memory.
+  
+  ## `chown`  
+  >The chown command is most commonly used by Unix/Linux system administrators who need to fix a permissions problem with a file or directory, or many files and many directories.
+  
+  *-from [The Linux `chown` command](https://alvinalexander.com/linux-unix/linux-chown-command-chgrp-files-directories)*
+  
+  ### Stupid Questions:
+  Why would I need to change permissions on my computer for any file? Why don't I just have permission to do everything? Why would I disallow myself to ever have permission? What is my username and how do I see who owns what? Is it possible for a file to not be owned by any username?
+  
+  ## Environment Variables
+  
+  Skimmed this: [An Introduction to Environment Variables and How to Use Them](https://medium.com/chingu/an-introduction-to-environment-variables-and-how-to-use-them-f602f66d15fa)
+  
+  In the tutorial for setting up a node server it says that after we install node, we won't be able to run node from anywhere because we still need to add the path to our environment variables. However, mine is working from anywhere and I don't see the environment variables for the node path when I run `env` in the command line. What's happening?
+  
+  ## Path Variable
+  In [this tutorial](https://rickchristianson.wordpress.com/2013/11/15/how-to-setup-a-node-js-server-on-mac-os-x-in-less-than-10-minutes/) It says to add these two variables through the command line:
+  
+  ```bash
+  $ export NODE_PATH="/usr/local/lib/node"
+  $ export PATH="/usr/local/share/npm/bin:$PATH"
+  ```
+  
+  However, I already have a `PATH` variable that's different: 
+  ```bash
+  PATH=/Users/dashiellbark-huss/.rbenv/shims:/usr/local/bin:/usr/local/sbin/:/usr/local/mysql/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  ```
+  
+  `PATH` seems like such a broad variable name. Why would we use it for something specific like just for npm? Why not name it `NPM_PATH`? 
+  
+  Am I supposed to write over my last `PATH` variable? What will that affect? The next time I follow a tutorial, will they tell me to write over `PATH` again for some other `PATH`? Won't that sscrew things up?
+  
+  ## PATH Is A List Of Paths
+  
+  >The $PATH variable is specified as a list of directory names separated by colon (:) characters. 
+  *-from [Mac OS X: Set / Change $PATH Variable](https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/)*
+  
+  ## Current Session?
+  
+  I this stackoverflow, thread that mentions adding PATH to the current session vs perminantly:
+  
+  >"...that would be for the current session, if you want to change permanently add it to any .bashrc, bash.bashrc, /etc/profile - whatever fits your system and user needs." 
+  *-from [Removing a directory from PATH](https://unix.stackexchange.com/questions/108873/removing-a-directory-from-path)*
+  
+  I found out this means the current shell session. That clarfies things.
+  
+  ## Understanding PATH
+  This article, [How to add directory to system path in Linux](https://www.computerhope.com/issues/ch001647.htm), answered a lot of my questions.
+  
+  ### Appending to PATH
+  In the tutorial where it said to set the `PATH`, we're not overwriting `PATH`
+  
+   ```bash
+  $ export PATH="/usr/local/share/npm/bin:$PATH"
+  ```
+  
+  At the end of the variable value, we add the `$PATH` variable itself. We're adding the npm path to our paths.
+  
+  ### Current Session
+  
+  >The methods we've used so far only sets the environment variable for your current shell session; when you logout or close the terminal window, your changes will be forgotten.
+  
+  
+  
+- Thoughts and Feelings:
+  I'm going to embrace my "stupid questions". Some questions feel stupid because they can clue others to the fact that you really don't understand a subject. That's good. Most times people don't know what **you** don't understand. Asking stupid questions helps them understand what information you're missing and explain it to you better. Be specific and abundant in your stupid questions. 
+  Asking others, ask yourself, and ask the iternet.
+
+
 ## Day 42, R2
 ### 5/22/19
 
