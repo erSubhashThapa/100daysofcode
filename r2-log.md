@@ -3,19 +3,19 @@
 ## Day 44, R2
 ### 5/24/19
 
-- React
+- ## React
  I didn't have interenet on this day so I watched a tutorial that I previously downlo.aded on React. You can find it [here] (https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html)
  
-  - What is react?
+  ## What is react?
   React is a javascript library that’s used for building user interfaces. React aims to make developing large scale single page applications easier.
 
-  - Functional Javascript:
+  ## Functional Javascript:
 A paradigm that emphasizes function, composition, over object orientation.
 
-  - Install React Developer Tools
+  ## Install React Developer Tools
   I  already have these installed but this will help you.
 
-  - Using React Offline
+  ## Using React Offline
   Since I don’t have internet right now, I can’t link to the react library like the instructor does. How can I use react without the internet: is it a js library file: react.js? is it a node module: require(react)? I skipped to the last project file to see if the instructor uses react without the internet. There I found this: 
 
   ```javasript
@@ -25,7 +25,7 @@ A paradigm that emphasizes function, composition, over object orientation.
 
   What is import? Is it like require? Is it part of javascript or node? Or maybe it’s part of the Web Api?
   
-  - Using A Relative Path Offline
+  ## Using A Relative Path Offline
   I actually found a `react.development.js` file on my computer that was downloaded along with the exercise files for this tutorial and a few other tutorials I’ve done. Great! 
   
   This file is in a node_modules folder so I’m inferring that react is a module you can require. However, I tried requiring ’react’ and ‘reactjs’ and neither worked.  The module could not be found.
@@ -44,7 +44,7 @@ A paradigm that emphasizes function, composition, over object orientation.
 
   I got internet for a bit and got more recently versions of the react files. It works now!
 
-  - JSX
+  ## JSX
   JSX, Javascript as XML, is a language extension that allows you to write tags directly in the javascript. For JSX to work you need to link to the babel library in the head and change the script `type` attribute value:
 
   ```javascript
@@ -64,7 +64,7 @@ A paradigm that emphasizes function, composition, over object orientation.
   <img src=“log_imgs/jsx_5-24.PNG” width = “400” />
 
 
-  - You can use variables in JSX:
+  ## You can use variables in JSX:
   ```javascript
   const name = "Dash";
 
@@ -76,7 +76,7 @@ A paradigm that emphasizes function, composition, over object orientation.
   <img src=“log_imgs/jsxvar_5-24.PNG” width = “400” />
 
 
-  - Components
+  ## Components
   The way that a react application represents a UI element is with a component. A component let’s you put together a user interface with independent reusable pieces. 
 
   Here we create and add a `Dash` component:
@@ -102,7 +102,7 @@ A paradigm that emphasizes function, composition, over object orientation.
 
   <img src=“log_imgs/component_5-24.PNG” width = “400” />
 
-  - Props
+  ## Props
   Props is an object in react that contains properties about the component. With props we can display dynamic data within a component.
 
   ```javascript
