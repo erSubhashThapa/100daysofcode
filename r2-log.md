@@ -1,5 +1,133 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 44, R2
+### 5/24/19
+
+- React
+ I didn't have interenet on this day so I watched a tutorial that I previously downlo.aded on React. You can find it [here] (https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html)
+ 
+  - What is react?
+  React is a javascript library that’s used for building user interfaces. React aims to make developing large scale single page applications easier.
+
+  - Functional Javascript:
+A paradigm that emphasizes function, composition, over object orientation.
+
+  - Install React Developer Tools
+  I  already have these installed but this will help you.
+
+  - Using React Offline
+  Since I don’t have internet right now, I can’t link to the react library like the instructor does. How can I use react without the internet: is it a js library file: react.js? is it a node module: require(react)? I skipped to the last project file to see if the instructor uses react without the internet. There I found this: 
+
+  ```javasript
+  import React from 'react'
+  import ReactDOM from 'react-dom'
+  ```
+
+  What is import? Is it like require? Is it part of javascript or node? Or maybe it’s part of the Web Api?
+  
+  - Using A Relative Path Offline
+  I actually found a `react.development.js` file on my computer that was downloaded along with the exercise files for this tutorial and a few other tutorials I’ve done. Great! 
+  
+  This file is in a node_modules folder so I’m inferring that react is a module you can require. However, I tried requiring ’react’ and ‘reactjs’ and neither worked.  The module could not be found.
+
+  Maybe react is not a core module, and I was requiring it without a path which you can only do with core modules. 
+ 
+  I found the two files that correspond to the links the teacher used, added them to my directory, and added links for them:
+
+  <script src="react.development.js"></script>
+  <script src="react-dom.development.js"></script>
+
+  I don’t know the difference between the two files.
+
+  I got an error in the `react.development.js` and `react-do.development.js` files:
+  `process is not defined`
+
+  I got internet for a bit and got more recently versions of the react files. It works now!
+
+  - JSX
+  JSX, Javascript as XML, is a language extension that allows you to write tags directly in the javascript. For JSX to work you need to link to the babel library in the head and change the script `type` attribute value:
+
+  ```javascript
+  <script type="text/babel">
+    ReactDOM.render(
+      React.createElement("div", {
+        "style": {
+          "color": "hotpink"
+        }
+      }, <h1>hoo</h1>), //jsx
+      document.getElementById("root")
+
+    );
+  </script>
+  ```
+
+  <img src=“log_imgs/jsx_5-24.PNG” width = “400” />
+
+
+  - You can use variables in JSX:
+  ```javascript
+  const name = "Dash";
+
+  ReactDOM.render(
+    <h1 className="greet"> Hi {name} </h1>, //class is a reserved word, use className
+    document.getElementById("root")
+  );
+  ```
+  <img src=“log_imgs/jsxvar_5-24.PNG” width = “400” />
+
+
+  - Components
+  The way that a react application represents a UI element is with a component. A component let’s you put together a user interface with independent reusable pieces. 
+
+  Here we create and add a `Dash` component:
+  ```javascript
+  const Dash = () => { // create a function component
+    return(
+    <div>
+    <h2>Dash</h2>
+    <ul>
+      <li>28</li>
+      <li>Smart</li>
+      <li>Pretty</li>
+    </ul>
+    </div>
+  )
+  };
+
+  ReactDOM.render(
+    <Dash />, // use the component
+    document.getElementById("root")
+  );
+  ```
+
+  <img src=“log_imgs/component_5-24.PNG” width = “400” />
+
+  - Props
+  Props is an object in react that contains properties about the component. With props we can display dynamic data within a component.
+
+  ```javascript
+  const Dash = (props) => {
+    console.log(props)
+    return(
+    <div>
+    <h2>Dash</h2>
+    <ul>
+      <li>28</li>
+      <li>Cute</li>
+      <li>My {props.relation}</li>
+    </ul>
+    </div>
+  )
+  };
+
+  ReactDOM.render(
+    <Dash relation = "favorite newbie developer"/>,
+    document.getElementById("root")
+  );
+  ```
+  <img src=“log_imgs/props_5-24.PNG” width = “400” />
+
+
 ## Day 43, R2
 ### 5/23/19
 
