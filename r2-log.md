@@ -67,9 +67,10 @@
     );
   </script>
   ```
-
-  <img src=“log_imgs/jsx_5-24.PNG” width = “400” />
+  
   <img src="log_imgs/jsx_5-24.PNG" width = "400" />
+  <img src=“log_imgs/jsx_5-24.PNG” width = “400” />
+  
   
 
 
