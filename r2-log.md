@@ -1,5 +1,40 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+## Day 45, R2
+### 5/25/19
+
+- ## React
+  Continuing [React tutorial on lynda.com](https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html) with Eve Porcello [@eveporcello](https://twitter.com/eveporcello).
+  
+  ## Composing Components
+  
+  What does omposing components mean? I'm not sure.
+  
+  ```javascript
+  const Person = ({name, age})=>{
+    return (
+      <h1> {name}, you are {age}</h1>
+    );
+  };
+
+  const Friends = () => {
+    return (
+      <div>
+      <Person name = "Shlomo" age = "33"/>
+      <Person name = "Mom" age = "old"/>
+      </div>
+    );
+  };
+
+  ReactDOM.render(
+    <Friends />, 
+    document.getElementById("root")
+  );
+  ```
+  
+  <img src = "log_imgs/friend_5-25.PNG" />
+
 ## Day 44, R2
 ### 5/24/19
 
