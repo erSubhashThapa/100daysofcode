@@ -9,7 +9,7 @@
   
   ## Composing Components
   
-  What does omposing components mean? I'm not sure.
+  Composing components means putting components together to make a larger interface.
   
   ```javascript
   const Person = ({name, age})=>{
@@ -34,7 +34,87 @@
   ```
   
   <img src = "log_imgs/friend_5-25.PNG" />
+  
+  ## Class Components
+  
+  You can also create a component using a class. Here's the Friends component from above as a class.
+  
+  ```javascript
+  class Friends extends React.Component  {
+    render () {
+      return (
+        <div>
+        <Person name = "Shlomo" age = "33"/>
+        <Person name = "Mom" age = "old"/>
+        </div>
+      );
+    }
+  };
+  ```
+  
+  You always need the `render()` method inside the component class.
+  
+  ## State
+  When a components state changes the render function will be called again to rerender the state change.
+  
+  ```javascript
+  class App extends React.Component  {
+    state = {loggedIn: true}
+    render () {
+      return (
+        <div>
+        <div>The User Is {
+        this.state.loggedIn 
+        ? "logged in"
+        : "not logged in"}.
+        </div>
+        </div>
+      );
+    }
+  };
 
+  ReactDOM.render(
+    <App />, 
+    document.getElementById("root")
+  );
+  ```
+  <img src = "log_imgs/state_5-25.PNG" />
+  
+  There is more to this that we will find out later.
+  
+  > So this is a simple reflection of the state value as UI but we're going to use the state with events in order to change the state of our entire application.
+  
+  -[Eve Porcello](https://www.lynda.com/React-js-tutorials/Understanding-React-state/800214/2201438-4.html)
+  
+  ## Binding Event Functions to UI Elements
+  Here we have our class from above with the state value defined, but we also add functions, `logIn` and `logOut`. Theses functions change the state. We attach them to "Log in" and "Log Out" UI buttons.
+  
+  ```javascript
+  class App extends React.Component  {
+    state = {
+      loggedIn: false
+    };
+    logIn = () => this.setState({loggedIn: true});
+    logOut = () => this.setState({loggedIn: false});
+    render () {
+      return (
+        <div>
+          <button onClick = {this.logIn}>Log In</button>
+          <button onClick = {this.logOut}>Log Out</button>
+          <div>The User Is {
+            this.state.loggedIn 
+            ? "logged in"
+            : "not logged in"}.
+          </div>
+        </div>
+      );
+    }
+  };
+  ```
+  This is called binding an event function to a UI element.
+  
+  ## Conditionally Render Components
+  
 ## Day 44, R2
 ### 5/24/19
 
