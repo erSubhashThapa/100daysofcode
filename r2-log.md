@@ -106,8 +106,8 @@
     document.getElementById("root")
   );
   ```
+  <img src="log_imgs/props_5-24.PNG" width = "400" />
 
-  <img src="log_imgs/component_5-24.PNG" width = "400" />
 
   ## Props
   Props is an object in react that contains properties about the component. With props we can display dynamic data within a component.
@@ -132,7 +132,9 @@
     document.getElementById("root")
   );
   ```
-  <img src="log_imgs/props_5-24.PNG" width = "400" />
+  
+  <img src="log_imgs/component_5-24.PNG" width = "400" />
+
 
 
 ## Day 43, R2
