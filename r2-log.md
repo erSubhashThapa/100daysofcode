@@ -10,7 +10,7 @@
   React is a javascript library that’s used for building user interfaces. React aims to make developing large scale single page applications easier.
 
   ## Functional Javascript:
- A paradigm that emphasizes function, composition, over object orientation.
+  A paradigm that emphasizes function, composition, over object orientation.
 
   ## Install React Developer Tools
   I  already have these installed but this will help you.
