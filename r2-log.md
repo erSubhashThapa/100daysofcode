@@ -112,8 +112,7 @@
   };
   ```
   This is called binding an event function to a UI element.
-  
-  ## Conditionally Render Components
+  ![screenrecording](log_imgs/state_5-25.PNG)
   
 ## Day 44, R2
 ### 5/24/19
