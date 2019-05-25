@@ -4,13 +4,13 @@
 ### 5/24/19
 
 - ## React
- I didn't have interenet on this day so I watched a tutorial that I previously downlo.aded on React. You can find it [here] (https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html)
- 
+  I didn't have interenet on this day so I watched a tutorial that I previously downlo.aded on React. You can find it [here] (https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html)
+  
   ## What is react?
   React is a javascript library that’s used for building user interfaces. React aims to make developing large scale single page applications easier.
 
   ## Functional Javascript:
-A paradigm that emphasizes function, composition, over object orientation.
+ A paradigm that emphasizes function, composition, over object orientation.
 
   ## Install React Developer Tools
   I  already have these installed but this will help you.
