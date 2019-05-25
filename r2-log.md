@@ -4,7 +4,9 @@
 ### 5/24/19
 
 - ## React
-  I didn't have interenet on this day so I watched a tutorial that I previously downlo.aded on React. You can find it [here] (https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html)
+  I didn't have interenet on this day so I watched a tutorial that I previously downlo.aded on React. You can find it [here on lynda.com](https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html)
+  
+  A lot of the text here in this log is straight from the tutorial so, I credit a lot of the difinitions here to Eve Porcello [@eveporcello](https://twitter.com/eveporcello)
   
   ## What is react?
   React is a javascript library that’s used for building user interfaces. React aims to make developing large scale single page applications easier.
@@ -23,26 +25,31 @@
   import ReactDOM from 'react-dom'
   ```
 
-  What is import? Is it like require? Is it part of javascript or node? Or maybe it’s part of the Web Api?
+  What is `import`? Is it like `require`? Is it part of javascript or node? Or maybe it’s part of the Web Api?
   
   ## Using A Relative Path Offline
-  I actually found a `react.development.js` file on my computer that was downloaded along with the exercise files for this tutorial and a few other tutorials I’ve done. Great! 
+  I found a `react.development.js` file on my computer that was downloaded with the exercise files for this tutorial. Great! 
   
-  This file is in a node_modules folder so I’m inferring that react is a module you can require. However, I tried requiring ’react’ and ‘reactjs’ and neither worked.  The module could not be found.
+  ## Node Module?
+  This file is in a node_modules folder so I’m inferring that react is a module you can require. However, I tried requiring ’react’ and ‘reactjs’ and neither worked: `The module could not be found.`
 
-  Maybe react is not a core module, and I was requiring it without a path which you can only do with core modules. 
+  Maybe react is not a core module, and I was requiring it without a path which you can only do with core modules.
+  
+  ## Using the Files
  
   I found the two files that correspond to the links the teacher used, added them to my directory, and added links for them:
-
+  
+  ```html
   <script src="react.development.js"></script>
   <script src="react-dom.development.js"></script>
+  ```
 
   I don’t know the difference between the two files.
 
   I got an error in the `react.development.js` and `react-do.development.js` files:
   `process is not defined`
 
-  I got internet for a bit and got more recently versions of the react files. It works now!
+  I got internet for a bit and got ***more recently versions of the react files. It works now!***
 
   ## JSX
   JSX, Javascript as XML, is a language extension that allows you to write tags directly in the javascript. For JSX to work you need to link to the babel library in the head and change the script `type` attribute value:
