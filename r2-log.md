@@ -112,7 +112,7 @@
   };
   ```
   This is called binding an event function to a UI element.
-  ![screenrecording](log_imgs/state_5-25.PNG)
+  ![screenrecording](log_imgs/stateevent_5-25.gif)
   
 ## Day 44, R2
 ### 5/24/19
