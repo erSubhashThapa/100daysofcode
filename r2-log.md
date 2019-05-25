@@ -55,7 +55,7 @@
   You always need the `render()` method inside the component class.
   
   ## State
-  When a components state changes the render function will be called again to rerender the state change.
+  When a component's state changes the render function will be called again to rerender the state change.
   
   ```javascript
   class App extends React.Component  {
@@ -112,7 +112,8 @@
   };
   ```
   This is called binding an event function to a UI element.
-  ![screenrecording](log_imgs/stateevent_5-25.gif)
+  
+  ![screenrecording](log_imgs/stateevent_5-25.PNG.gif)
   
 ## Day 44, R2
 ### 5/24/19
