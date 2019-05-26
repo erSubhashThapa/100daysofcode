@@ -41,7 +41,8 @@
   ];
 
   const App = ({list}) => {
-    return (<ul>
+    return (
+    <ul>
       {list.map((item, i)=><li key={i}>{item}</li>)}
     </ul>
     )
