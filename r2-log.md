@@ -81,6 +81,45 @@
   
   ![objects](log_imgs/list_5-26.PNG)
   
+  ## Create React App
+  I already had create-react-app installed. I used it to make a new project.
+  
+  In the directory you want to make you project run:
+  `create reacte app <projectname>`
+  
+  ## Run A create-react-app Project In The Browser
+  
+  First make sure you are in your new project directory. Then run `npm i` to install dependencies. 
+  
+  Then run `npm start` to start up the project in the browser. This will run your project on local host 3000.
+  
+  ### Question:
+  I see all these import statements at the top again. I'm not sure what they are and the instructor didn't talk about them.
+  
+  ```javascript
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import './index.css';
+  import App from './App';
+  import * as serviceWorker from './serviceWorker';
+  ```
+  
+  It looks like `require()`.
+  
+  ## Build For Production
+  
+  To put your create-react-app project on the web, you'll want to optimize it for production. You can do that really simply by running:
+  
+  `npm run <nameforbuild>`
+  
+  To run the build in the browser:
+  
+  `serve -s <nameforbuild>` 
+  
+  But this actually didn't work for me, it ran a different folder with the same name. So I have to include the entire path not just the name for build. Then I also ran `sudo npm install serve` (by accident) and `sudo npm install serve -g` and now I can just put the probect name without the path but I'm not sure why. I'm not sure where I have serve installed before. But now I have it installed in too many places.
+  
+  
+  
 ## Day 45, R2
 ### 5/25/19
 
