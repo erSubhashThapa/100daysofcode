@@ -26,7 +26,7 @@
     document.getElementById("root")
   );
   ```
-  ![condition](log_imgs/condition_5-36.gif)
+  ![condition](log_imgs/condition_5-26.gif)
   
   ## Render Components From A List
   
@@ -79,7 +79,7 @@
   );
   ```
   
-  ![objects](log_imgs/list_5-26.PNG)
+  ![objects](log_imgs/objects_5-26.PNG)
   
   ## Create React App
   I already had create-react-app installed. I used it to make a new project.
