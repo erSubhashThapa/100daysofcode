@@ -1,6 +1,85 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 
+## Day 46, R2
+### 5/26/19
+
+- ## React
+  Continuing [React tutorial on lynda.com](https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html) with Eve Porcello [@eveporcello](https://twitter.com/eveporcello).
+  
+  ### Question:
+  Where does props go when we make a class? I'm guessing in the argument to `render()`?
+
+  ## Conditionally Render Components     
+  
+  ```jsx
+  const Dashboard = ({name})=>(<h1>Welcome {name}!</h1>);
+
+  const App = ({loggedIn}) => (
+    loggedIn 
+    ? <Dashboard name = "Dash" /> 
+    : <h1>You are not logged in</h1>
+  );
+
+  ReactDOM.render(
+    <App  loggedIn = {false}/>, 
+    document.getElementById("root")
+  );
+  ```
+  ![condition](log_imgs/condition_5-36.gif)
+  
+  ## Render Components From A List
+  
+    > ...each child in an array or iterator should have a unique key property. So whenever we're rendering some sort of a list, with dynamic values,  we're going to need to give each a key, so that React can re-render things appropriately according to the rendering rules.  
+    
+  -[Eve Porcello](https://www.lynda.com/React-js-tutorials/Render-components-from-list/800214/2202388-4.html?autoplay=true)
+
+  
+  ```jsx
+  const shoppingList = [
+    "Avocado", "Tahini", "Organic Grass Fed Beef", "Spinach"
+  ];
+
+  const App = ({list}) => {
+    return (<ul>
+      {list.map((item, i)=><li key={i}>{item}</li>)}
+    </ul>
+    )
+  };
+
+  ReactDOM.render(
+    <App  list = {shoppingList}/>, 
+    document.getElementById("root")
+  );
+  ```
+  
+  ![list](log_imgs/list_5-26.PNG);
+  
+  ## Render Object List
+  
+  ```jsx
+  const ingredients = [
+    {id: 1, name: "Avocado", grams: 60},
+    {id: 2, name: "Tahini", grams: 20},
+    {id: 3, name: "Certified USDA Organic Grass Fed Beef", grams: 130},
+    {id: 4, name: "Spinach", grams: 120},      
+  ];
+
+  const App = ({list}) => {
+    return (<ul>
+      {list.map((item)=><li key={item.id}>{item.grams}g {item.name}</li>)}
+    </ul>
+    )
+  };
+
+  ReactDOM.render(
+    <App  list = {ingredients}/>, 
+    document.getElementById("root")
+  );
+  ```
+  
+  ![objects](log_imgs/list_5-26.PNG)
+  
 ## Day 45, R2
 ### 5/25/19
 
