@@ -54,7 +54,7 @@
   );
   ```
   
-  ![list](log_imgs/list_5-26.PNG);
+  <img src="log_imgs/list_5-26.PNG" width="400"/>
   
   ## Render Object List
   
@@ -79,7 +79,7 @@
   );
   ```
   
-  ![objects](log_imgs/objects_5-26.PNG)
+  <img src="log_imgs/objects_5-26.PNG" width="400"/>
   
   ## Create React App
   I already had create-react-app installed. I used it to make a new project.
