@@ -8,7 +8,7 @@
   Continuing [React tutorial on lynda.com](https://www.lynda.com/React-js-tutorials/Learning-React-js/800214-2.html) with Eve Porcello [@eveporcello](https://twitter.com/eveporcello).
   
   ### Question:
-  Where does props go when we make a class? I'm guessing in the argument to `render()`?
+  Where does `props` go when we make a class? I'm guessing in the argument to `render()`?
 
   ## Conditionally Render Components     
   
@@ -84,7 +84,8 @@
   ## Create React App
   I already had create-react-app installed. I used it to make a new project.
   
-  In the directory you want to make you project run:
+  In the directory that you want to make your project in, run the command:
+  
   `create reacte app <projectname>`
   
   ## Run A create-react-app Project In The Browser
