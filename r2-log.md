@@ -13,21 +13,24 @@
   
   >(Ps: windows global installation is unique to the OS, on Linux you can call mysql from anywhere by default)
   
-  -Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut)
+  -*Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut)*
+  
+  I don't know what mysql has to do with it, but I guess you can run node anywhere on a mac.
   
   <img src="log_imgs/terminal1_5-27.PNG" width="300"/>
   
   ## C:
-  I know `C:` has something to do ith paths and directories but what exactly does it mean?
+  I know `C:` has something to do with paths and directories but what exactly does it mean?
   
-  It's difficult to google questions that involve special symbols so I used [SymbolHound.com](http://symbolhound.com/) to search `C:`. Otherwise, google usually ignored punctuation and special symbols.
+  It's difficult to google questions that involve special symbols so I used [SymbolHound.com](http://symbolhound.com/) to search `C:`. Otherwise, google usually ignores punctuation and special symbols.
   
-  "Windows displays partition labels as uppercase letters (C:)." 
-  - [Stackoverflow](https://stackoverflow.com/questions/93228/is-a-hard-drive-partitions-label-upper-or-lowercase-c-or-c)
+  >"Windows displays partition labels as uppercase letters (C:)." 
+  
+  -*[Stackoverflow](https://stackoverflow.com/questions/93228/is-a-hard-drive-partitions-label-upper-or-lowercase-c-or-c)*
   
   It looks like `C:\` is a way that windows represents a harddrive partition. I think you can have other letters for other partictions. Then a path would look like this: `C:\somefolder/somefile`. Since I don't use windows this was new to me. Atleast, I think it's just a windows things.
   
-  ## Where are Core Node Modules Stored?
+  ## Where Are Core Node Modules Stored?
   
   >Modules are stored in your node installation folder (C:\Program Files\nodejs
 in our case) under node modules.
@@ -46,13 +49,13 @@ your app from the main NPM repository.
 
   -*Node.js – Server Setup, Greg Sidelnikov*
   
-  So it looks like it's basically the same as require but it's browser-side JavaScript code. So does that mean it's pat of javascript or part of the Web API?
+  So it looks like it's basically the same as require but it's browser-side JavaScript code. So does that mean it's part of javascript or part of the Web API?
   
-  It's also nice to know that ***`require()` is just pulling from the NPM repository***. I think that means the folders where the core modules are stored. So, this clarifies how `require()` works an why you don't need to include the path for the core modules.
+  It's also nice to know that ***`require()` is just pulling from the NPM repository***. I think that means the folders where the core modules are stored (as mensioned above). So, this clarifies how `require()` works and why you don't need to include the path for the core modules.
   
   ## Importance of a Node Server Continuously
   
-  Here Greg is comparing the process of running `node index.js` in the command line with using a running a node server continuously:
+  Here Greg is comparing the process of running a simple javscript file in node with running a node server continuously:
   
   >After executing index.js the node process quits, and
 control is given back to cmd. This won’t help us run our application server. We
@@ -63,7 +66,7 @@ someone will access our server from their browser.
   
   So, this makes me question what we are actually about to do?:
   
-  ***Can we actually deploy a site to the web if we make our own server? Or do we still need heroku and netify etc to do that? What actually is the server?*** I thought when we make a server it still only runs on our own computer and other people cannot access it. That's what I thought I had done in the past when running live servers on my computer to test certain code that couldn't be tested without a server. 
+  ***Can we actually deploy a site to the web if we make our own server? Or do we still need heroku and netify etc to do that? What actually is the server?*** I thought when we make a server it still only runs on our own computer and other people cannot access it. That's what I thought I had done in the past when running live servers on my computer to test certain code that couldn't be tested without a server. But here Greg Says, "every time someone will access our server." 
   
   So there's definetly a lot I'm realizing I don't understand. Let's see if I can figure it out in the upcoming sections.
   
