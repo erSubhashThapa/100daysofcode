@@ -18,7 +18,7 @@
   <img src="log_imgs/terminal1_5-27.PNG" width="300"/>
   
   ## C:
-  I know C: has something to do ith paths and directories but what exactly does it mean?
+  I know `C:` has something to do ith paths and directories but what exactly does it mean?
   
   It's difficult to google questions that involve special symbols so I used [SymbolHound.com](http://symbolhound.com/) to search `C:`. Otherwise, google usually ignored punctuation and special symbols.
   
