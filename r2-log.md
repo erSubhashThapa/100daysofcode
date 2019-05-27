@@ -1,6 +1,111 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
 
+## Day 47, R2
+### 5/27/19
+
+- ## Node / Unix
+  Today, I'm going to focus on Node and Unix again which I was last learning about on [May 23rd](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#day-43-r2). 
+  
+  ## Windows Vs. Linux
+  
+  Last time I ran node from the terminal it worked without having to set up the  environment variables. I was surprised by this. But Greg Sidelnikov reached out to me and explained:
+  
+  >(Ps: windows global installation is unique to the OS, on Linux you can call mysql from anywhere by default)
+  
+  - Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut)
+  
+  <img src="log_imgs/terminal1_5-27.PNG" width="300"/>
+  
+  ## C:
+  I know C: has something to do ith paths and directories but what exactly does it mean?
+  
+  It's difficult to google questions that involve special symbols so I used [SymbolHound.com](http://symbolhound.com/) to search `C:`. Otherwise, google usually ignored punctuation and special symbols.
+  
+  "Windows displays partition labels as uppercase letters (C:)." 
+  - [Stackoverflow](https://stackoverflow.com/questions/93228/is-a-hard-drive-partitions-label-upper-or-lowercase-c-or-c)
+  
+  It looks like `C:\` is a way that windows represents a harddrive partition. I think you can have other letters for other partictions. Then a path would look like this: `C:\somefolder/somefile`. Since I don't use windows this was new to me. Atleast, I think it's just a windows things.
+  
+  ## Where are Core Node Modules Stored?
+  
+  >Modules are stored in your node installation folder (C:\Program Files\nodejs
+in our case) under node modules.
+  >You might also find them in nodejs\npm folder:
+C:\Program Files\nodejs\node modules\npm\node modules\
+ 
+  -*Node.js – Server Setup, Greg Sidelnikov*
+
+  ## `import`
+  
+  In the react tutorial from yesterday I saw the `import` keyword and was wondering what it was:
+  
+  > In browser-side JavaScript code, you can use import / export keywords. But in
+addition to that, in node you can use require keyword to add useful modules to
+your app from the main NPM repository.
+
+  -*Node.js – Server Setup, Greg Sidelnikov*
+  
+  So it looks like it's basically the same as require but it's browser-side JavaScript code. So does that mean it's pat of javascript or part of the Web API?
+  
+  It's also nice to know that ***`require()` is just pulling from the NPM repository***. I think that means the folders where the core modules are stored. So, this clarifies how `require()` works an why you don't need to include the path for the core modules.
+  
+  ## Importance of a Node Server Continuously
+  
+  Here Greg is comparing the process of running `node index.js` in the command line with using a running a node server continuously:
+  
+  >After executing index.js the node process quits, and
+control is given back to cmd. This won’t help us run our application server. We
+need to build something that runs continuously so we can serve a file every time
+someone will access our server from their browser.
+
+  -*Node.js – Server Setup, Greg Sidelnikov*
+  
+  So, this makes me question what we are actually about to do?:
+  
+  ***Can we actually deploy a site to the web if we make our own server? Or do we still need heroku and netify etc to do that? What actually is the server?*** I thought when we make a server it still only runs on our own computer and other people cannot access it. That's what I thought I had done in the past when running live servers on my computer to test certain code that couldn't be tested without a server. 
+  
+  So there's definetly a lot I'm realizing I don't understand. Let's see if I can figure it out in the upcoming sections.
+  
+  ## Node Server!
+  So cool I got a simple node server running!
+  
+  ```javascript
+  let http = require('http');
+
+  const ip = `127.0.0.1`;
+  const port = 3000;
+
+  http.createServer(function(request, response){
+    console.log('request: ', request.url);
+  }).listen(port, ip);
+
+  console.log(`Running at http://` + ip + `:` + port + `/`);
+  ```
+  
+  ## Serving Requested Files
+  So far we only are able to send requests. You can see the requests coming in to the terminal 
+  
+  <img src="log_imgs/requests_5-27.PNG" width="400">
+  
+  But the code doesn't serve up any files.
+  
+  I followed the code for serving up files which can be found on page 23 of the May 14th update to Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624). It's not free but it's only a dollar a month to support his patreon and you get all his books. If you don't have an extra dollar, you probably should read a book on getting your finances in order (I'm currently reading I Will Teach You To Be Rich). But besides that if you ask 5 strangers for 25 cents they will probably oblidge and you can then support the patreon and buy yourself a candy.
+  
+  ## MIME?
+  What is MIME? In our code we set up a mime variable:
+  
+  ```javascript
+  // Define acceptable file extensions
+  let mime = {".html":"text/html"};
+  ````
+  
+  >A multipurpose internet mail extension, or MIME type, is an internet standard that describes the contents of internet files based on their natures and formats.
+  
+  -*[What Is a File Extension and MIME Type?](https://www.lifewire.com/file-extensions-and-mime-types-3469109)*
+  
+  
+
 ## Day 46, R2
 ### 5/26/19
 
