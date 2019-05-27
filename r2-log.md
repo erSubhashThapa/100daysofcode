@@ -13,7 +13,7 @@
   
   >(Ps: windows global installation is unique to the OS, on Linux you can call mysql from anywhere by default)
   
-  - Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut)
+  -Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut)
   
   <img src="log_imgs/terminal1_5-27.PNG" width="300"/>
   
