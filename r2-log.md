@@ -47,10 +47,10 @@
   I saw a cool way of formatting JSON in [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624):
   
   ### Colons/Values Aligned:
-  <img src="log_imgs/colon_5-28.PNG" width="400"/>
+  <img src="log_imgs/colon_5-28.PNG" width="600"/>
   
   ### Instead of Properties Aligned:
-  <img src="log_imgs/linestart_5-28.PNG" width="400"/>
+  <img src="log_imgs/linestart_5-28.PNG" width="600"/>
   
   I wonder how this is done. I like how it looks.
   
