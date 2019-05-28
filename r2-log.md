@@ -8,16 +8,16 @@
   
   ## Serving Files
   
-  I'm not able to serving up files afterfollowing the code on page 23 of [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+  I'm now able to serve up files after following the code on page 23 of [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
   
   ## Review: Adding ESlint & prettier Locally
-  Just ant to take a break to set up Eslint and Prettier in this project.
+  Taking a break from the Node tutorial inorder to set up Eslint and Prettier in this project.
   
   Since this is local, all commands should be run in your project directory.
   ### ESLint
   1. added .eslintrc.json
   2. `npm init`
-  2. `eslint --init (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)`
+  2. `eslint --init` (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)
   ### Prettier
   1. add `"prettier"` to `"extends"` and `"plugins"` in .eslintrc.json
   2. Configure prettier in .eslintrc.json in `"rules"`
@@ -66,11 +66,11 @@
   >```
   
   
-  ## Spell Check When Writing In Markdown?
-  Is there anyway to enable spell check while I'm writing in my git hub markdown log? I have so many typos.
+  ## Spellcheck When Writing In Markdown?
+  Is there any way to enable spellcheck while I'm writing in my github markdown log? I have so many typos.
   
 - ## Thoughts and Feelings:
-  I got good news today related to the bad news that I got a few days ago. I'm so relieved. My focus is so much better. I'm so grateful. The issue is still going on, but the severity is not as extremely as previously thought. 
+  I got good news today related to the bad news that I got a few days ago. I'm so relieved. My focus is so much better. I'm so grateful. The issue is still going on, but the severity is not as extreme as previously thought. 
   
 
 
