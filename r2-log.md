@@ -4,20 +4,23 @@
 ### 5/28/19
 
 - ## Node 
-  Continueing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+  Continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
   
   ## Serving Files
   
   I'm not able to serving up files afterfollowing the code on page 23 of [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
   
-  ## Review: Adding ESlint & prettier
+  ## Review: Adding ESlint & prettier Locally
+  Just ant to take a break to set up Eslint and Prettier in this project.
+  
+  Since this is local, all commands should be run in your project directory.
   ### ESLint
   1. added .eslintrc.json
-  2. npm init
-  2. eslint --init (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)
+  2. `npm init`
+  2. `eslint --init (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)`
   ### Prettier
-  1. add "prettier" to "extends" and "plugins" in .eslintrc.json
-  2. Configure prettier in .eslintrc.json in "rules"
+  1. add `"prettier"` to `"extends"` and `"plugins"` in .eslintrc.json
+  2. Configure prettier in .eslintrc.json in `"rules"`
   - ```javascript
     "rules": {
       "no-console": "off",
@@ -29,8 +32,8 @@
       ]
     }
     ```
-  3. npm install --save-dev eslint-plugin-prettier
-  4. npm install --save-dev eslint-config-prettier
+  3. `npm install --save-dev eslint-plugin-prettier`
+  4. `npm install --save-dev eslint-config-prettier`
   5. This is already set up for my workspace but incase I change work spaces or for anybody else's benefit:
   - in User settings:
     ```javascript
@@ -40,7 +43,34 @@
     },
     "eslint.autoFixOnSave": true,
     ```
+  ## JSON Formatting
+  I saw a cool way of formatting JSON in [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624):
+  
+  ### Colons/Values Aligned:
+  <img src="log_imgs/colon_5-28.PNG" width="400"/>
+  
+  ### Instead of Properties Aligned:
+  <img src="log_imgs/linestart_5-28.PNG" width="400"/>
+  
+  I wonder how this is done. I like how it looks.
+  
+  Couldn't find much online, I asked on twitter.
+  
+  ## ESLint: No Shadowing
+  > Shadowing is the process by which a local variable shares the same name as a variable in its containing scope. For example:
+  >```javascript
+  >var a = 3;
+  >function b() {
+  >  var a = 10;
+  >}
+  >```
+  
+  
+  ## Spell Check When Writing In Markdown?
+  Is there anyway to enable spell check while I'm writing in my git hub markdown log? I have so many typos.
+  
 - ## Thoughts and Feelings:
+  I got good news today related to the bad news that I got a few days ago. I'm so relieved. My focus is so much better. I'm so grateful. The issue is still going on, but the severity is not as extremely as previously thought. 
   
 
 
