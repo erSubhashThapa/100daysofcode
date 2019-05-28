@@ -1,5 +1,23 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 48, R2
+### 5/28/19
+
+- ## Node 
+  Continueing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+  
+  ## Serving Files
+  
+  I'm not able to serving up files afterfollowing the code on page 23 of [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+  
+  ## Review: Adding ESlint
+  1. added .eslintrc.json
+  2. npm init
+  2. eslint --init (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)
+  
+- ## Thoughts and Feelings:
+  
+
 
 ## Day 47, R2
 ### 5/27/19
@@ -1688,7 +1706,7 @@ But I think we're getting somewhere with your trick! Thank you!
   
   ## Summary
   
-  Looks like I got it working. My problem was that I never actually installed the dependancies. I don't know why that wasn't part of the Wes Bos tutorial. Now I understance a little more about how the dependancies work, where they are, and how to add them. I'm glad I took the time to figure this out because I understand these packages better. That will come in handy when I learn node which I'm going to do soon!
+  Looks like I got it working. My problem was that I never actually installed the dependancies. I don't know why that wasn't part of the Wes Bos tutorial. Now I understand a little more about how the dependancies work, where they are, and how to add them. I'm glad I took the time to figure this out because I understand these packages better. That will come in handy when I learn node which I'm going to do soon!
 
 ## Day 31, R2
 ### 5/11/19
