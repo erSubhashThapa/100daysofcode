@@ -10,11 +10,27 @@
   
   I'm not able to serving up files afterfollowing the code on page 23 of [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
   
-  ## Review: Adding ESlint
+  ## Review: Adding ESlint & prettier
+  ###ESLint
   1. added .eslintrc.json
   2. npm init
   2. eslint --init (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)
-  
+  ### Prettier
+  1. add "prettier" to "extends" and "plugins" in .eslintrc.json
+  2. Configure prettier in .eslintrc.json in "rules"
+  - ```json
+      "rules": {
+    "no-console": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ]
+  }
+  3. npm install --save-dev eslint-plugin-prettier
+  4. npm install --save-dev eslint-config-prettier
+
 - ## Thoughts and Feelings:
   
 
