@@ -50,7 +50,7 @@
   <img src="log_imgs/colon_5-28.PNG" width="600"/>
   
   ### Instead of Properties Aligned:
-  <img src="log_imgs/linestart_5-28.PNG" width="600"/>
+  <img src="log_imgs/linestart_5-28.PNG" width="500"/>
   
   I wonder how this is done. I like how it looks.
   
