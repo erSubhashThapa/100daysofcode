@@ -1,5 +1,49 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+## Day 49, R2
+### 5/29/19
+
+- ## Node 
+  Continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+  
+  It's cool to see how things work behind the scenes. I can see how the server loads  the favicon for example:
+  
+  ![favicon](log_imgs/favicon_5-29.PNG)
+  
+  ## Debugging In Node
+  
+  The last time I looked into debugging in node I found that you can [debug in VSC](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#debbuging-node-in-vsc). 
+  
+  However, I'm still having trouble. It seems ***VSC doesn't like to keep the debugger on when I'm also running the file.*** 
+  
+  ### So how can I debug my server?
+  
+  For example, on line 14 we have the variable `extension`. 
+  
+  <img src="log_imgs/debug_5-29.PNG>
+  
+  It's made up of other expressions and variables which make it long and confusing.
+  
+  Sometimes I like to get a clearer picture of a onfusing variable by using the DevTools debugger to pause the script and select and hover over all the expressions to see the value of each expression, like this:
+  
+  ![debugger](log_imgs/devtools_5-29.PNG)
+  
+  I don't see a way of doing that with node and the VSC debugger. 
+  
+  I cannot run the server ***and*** the debugger at the same time. So I can't pause the script after a request is made to the server and then see the values of the expression `extension`. I wonder what the solution to this is?
+  
+  ### Possible Solutions:
+  - Maybe there's a way of debugging that I don't know about
+  - Could unit testing have something to do with this?
+  - console log everything
+  
+  For now, I will console log everything, but there's got to be a better way.
+  
+  ## Building An API
+  
+
+
 ## Day 48, R2
 ### 5/28/19
 
