@@ -21,7 +21,7 @@
   
   For example, on line 14 we have the variable `extension`. 
   
-  <img src="log_imgs/debug_5-29.PNG>
+  <img src="log_imgs/debug_5-29.PNG">
   
   It's made up of other expressions and variables which make it long and confusing.
   
