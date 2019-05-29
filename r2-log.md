@@ -74,7 +74,7 @@ and upon its presence we will execute an API command, instead of serving a file
   ### What is branching out?:
   >branching is a way to make a program behave differently based on Boolean expressions (e.g., involving user input)
   
-  -*from[Chapter 4: Boolean expressions and Branching](https://hank.feild.org/feild-guide-cpp/conditionals.html)*
+  -*from [Chapter 4: Boolean expressions and Branching](https://hank.feild.org/feild-guide-cpp/conditionals.html)*
   
   ## Confused About Mac:
   In next chapter, Chapter 5: Setting Up MySQL Server, the first two sections are:
