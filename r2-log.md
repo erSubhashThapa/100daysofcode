@@ -9,7 +9,7 @@
   
   It's cool to see how things work behind the scenes. I can see how the server loads  the favicon for example:
   
-  ![load favicon](log_imgs/favicon_5-29.PNG)
+  <img src="log_imgs/favicon_5-29.PNG" width="500">
   
   ## Debugging In Node
   
@@ -21,7 +21,7 @@
   
   For example, on line 14 we have the variable `extension`. 
   
-  <img src="log_imgs/debug_5-29.PNG">
+  <img src="log_imgs/debug_5-29.PNG" width="500">
   
   It's made up of other expressions and variables which make it long and confusing.
   
@@ -41,9 +41,58 @@
   For now, I will console log everything, but there's got to be a better way.
   
   ## Building An API
+  >So far we learned how to serve requested files. But if you want to build real web
+applications, you might want to integrate support for API endpoints.
+  >
+  >An endpoint is a URL that follows a special pattern. We can intercept this pattern
+and upon its presence we will execute an API command, instead of serving a file
   
-
-
+  -*Greg Sildenikov, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).*
+  
+  When an API end point is requested, we cancel serving the file, and instead run some server-side commands and return a result.
+  
+  ## Static Keyword
+  In our API class from page 26 of [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624), we use the keyword, `static`:
+  
+  ```javascript
+  static catchAPIrequest(v) {
+    // function body etc...
+  ```
+  
+  ### What is the static keyword?:
+  >The static keyword defines a static method for a class. Static methods aren't called on instances of the class. Instead, they're called on the class itself.
+  
+  -*from [static, Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)*
+  
+  ## Branching Out
+  Greg uses the term *"branching out"*:
+  
+  >We used boolean result of API.catchAPIrequest to branch out.
+   
+  -*Greg Sildenikov, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).*
+  
+  ### What is branching out?:
+  >branching is a way to make a program behave differently based on Boolean expressions (e.g., involving user input)
+  
+  -*from[Chapter 4: Boolean expressions and Branching](https://hank.feild.org/feild-guide-cpp/conditionals.html)*
+  
+  ## Confused About Mac:
+  In next chapter, Chapter 5: Setting Up MySQL Server, the first two sections are:
+  - 5.0.1 Install MySQL Server Locally on Windows
+  - 5.0.2 Install MySQL Server on Ubuntu
+  
+  But nothing on installing it on a Mac.
+  
+  A few days ago, when I was confused about installing node on mac, Greg said:
+  
+  >(Ps: windows global installation is unique to the OS, on Linux you can call mysql from anywhere by default)
+  
+  Is this what he was talking about?
+  
+  It doesn't say anything about skipping these sections if you're on a Mac.
+  
+  Times up for today. I will figure it out tomorrow.
+  
 ## Day 48, R2
 ### 5/28/19
 
