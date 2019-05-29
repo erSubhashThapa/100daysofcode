@@ -9,7 +9,7 @@
   
   It's cool to see how things work behind the scenes. I can see how the server loads  the favicon for example:
   
-  ![favicon](log_imgs/favicon_5-29.PNG)
+  ![load favicon](log_imgs/favicon_5-29.PNG)
   
   ## Debugging In Node
   
@@ -27,7 +27,7 @@
   
   Sometimes I like to get a clearer picture of a onfusing variable by using the DevTools debugger to pause the script and select and hover over all the expressions to see the value of each expression, like this:
   
-  ![debugger](log_imgs/devtools_5-29.PNG)
+  ![debugger](log_imgs/devtools_5-29.gif)
   
   I don't see a way of doing that with node and the VSC debugger. 
   
