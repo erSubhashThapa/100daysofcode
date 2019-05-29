@@ -11,7 +11,7 @@
   
   <img src="log_imgs/favicon_5-29.PNG" width="500">
   
-  ## Debugging In Node
+  ## Debugging In Node, Server
   
   The last time I looked into debugging in node I found that you can [debug in VSC](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#debbuging-node-in-vsc). 
   
