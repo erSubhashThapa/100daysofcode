@@ -25,7 +25,7 @@
   
   It's made up of other expressions and variables which make it long and confusing.
   
-  Sometimes I like to get a clearer picture of a onfusing variable by using the DevTools debugger to pause the script and select and hover over all the expressions to see the value of each expression, like this:
+  Sometimes I like to get a clearer picture of a confusing variable by using the DevTools debugger to pause the script and select and hover over all the expressions to see the value of each expression, like this:
   
   ![debugger](log_imgs/devtools_5-29.gif)
   
