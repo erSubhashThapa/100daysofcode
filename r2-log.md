@@ -10,10 +10,10 @@
   
   
   ## Setting Up MySQL Server
-  This next secion confuses me. It talks about installing mysql on Windows and Ubuntu, but not Mac. Luckily Greg is pretty responsive on twitter so I wrote to him to tell him what confused me.
+  This next section confuses me. It talks about installing mysql on Windows and Ubuntu, but not Mac. Luckily Greg is pretty responsive on twitter so I wrote to him to tell him what confused me.
   
   ## Correspondence With Greg
-  Greg got back to me and clarified a few things. He said he will include more clarification based on my feedback and questions. 
+  Greg got back to me and clarified a few things. He said he will include more clarification based on my feedback and questions.
   
   ## MySQL vs MySQL Server
   I was confused about the difference between mysql and mysql server.
@@ -23,9 +23,9 @@
   >
   >But when you write code, you have to install mysql modules to add to the node server with require keyword... that's  separate from the actual mysql program
  
- -*Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut), Twitter DM*
+  -*Greg Sidelnikov aka [JavaScript Teacher @js_tut](https://twitter.com/js_tut), Twitter DM*
  
- I'm not sure, but I think he is refereing to the difference between MySQL and the mysql node module. I don't think mysql-server is a node module, but I'm not sure.
+  I'm not sure, but I think he is referring to the difference between MySQL and the mysql node module. I don't think mysql-server is a node module, but I'm not sure.
   
   ## What is MySQL
   
@@ -37,12 +37,13 @@
   
   >MySQL server is the MySQL database software acting as a server/service towards clients. It is a concrete installation of MySQL.
   
-  -*[Olaf Doschke, Quora: What is the difference between a MySQL server and a MySQL client?](https://www.quora.com/What-is-the-difference-between-a-MySQL-server-and-a-MySQL-client)
+  -*[Olaf Doschke, Quora: What is the difference between a MySQL server and a MySQL client?](https://www.quora.com/What-is-the-difference-between-a-MySQL-server-and-a-MySQL-client)*
   
   >Mysql is a SQL implementation.
   >
   >Mysql server is the application that runs mysql database system, where all the data is stored and processed.
-  -*[Nicolas Martin Gonzalez, Quora: What is the difference between MySql & MySql Server?]
+  
+  -*[Nicolas Martin Gonzalez, Quora: What is the difference between MySql & MySql Server?](https://www.quora.com/What-is-the-difference-between-MySql-MySql-Server)*
   
   ### Download MySQL:
   Greg said there was a UI to download the MySQL Server.
@@ -51,12 +52,13 @@
   
   Also when I go to the [MySQL github](https://github.com/mysql) there's a repo for MySQL server.
   
-  I'm confused: It seems like MySQL server is required if you want to use mysql. So why have them seperate? When would you ever need one without the other? Why download one and not the other? Why arent they just part of the same package?
+  I'm confused: It seems like MySQL server is required if you want to use mysql. So why have them separate? When would you ever need one without the other? Why download one and not the other? Why aren't they just part of the same package?
   
   ## More On MySQL
   I decided to do some more exploring of MySQL.
   
   >MySQL Community Server. When People talk about using MySQL, this us usually what they mean.
+  
   -*[MySQL: Installing and Running Ruby on Rails on Mac](https://www.lynda.com/Ruby-Rails-tutorials/MySQL/500549/533096-4.html)*
   
   So maybe MySQL and mysql server do usually go together.
