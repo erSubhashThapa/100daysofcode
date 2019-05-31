@@ -5,9 +5,94 @@
 ## Day 50, R2
 ### 5/30/19
 
-- ## Node 
-  Continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+- ## MySQL
+  I decided to look more into MySQL today. I followed [Learning MySQL Development](https://www.lynda.com/MySQL-tutorials/Up-Running-MySQL-Development/158373-2.html) on lynda.
   
+  The internet is not great today, so we'll see how much I can do.
+  
+  ## SQLFiddle
+  You can use SQL Fiddle to play with SQL:
+  http://sqlfiddle.com/
+  
+  ## myPHPadmin Demo
+  You can use myPHPadmin Demo to play with SQL:
+  https://demo.phpmyadmin.net/master-config/server_sql.php?lang=en
+  
+  ## Database Normalization
+  A way to organize your fields and your tables. The accepted standard of database normalization is Third Normal Form (3NF). It includes First and Second Normal Form.
+  
+  ### First Normal Form:
+  Each record has a single value.
+  
+  ### Second Normal Form
+  - Must be in 1NF
+  - Fields not defining a row depend on fields that do. All the information in the table is dependant on what definse the row.
+  
+  ### Third Normal Form
+  - Must be in 1NF
+  - Must be in 2NF
+  - All the non-defining fields are directly dependent on the defining fields.
+  
+  I'm confused how 3NF is different from 2NF. ***"All the non-defining fields are directly dependent on the defining fields."*** sounds exactly like, ***"Fields not defining a row depend on fields that do. All the information in the table is dependant on what definse the row."***
+  
+  ## 3NF vs 2NF
+  2NF: All fields in the primary key are required to determine the other non-key fields.
+  
+  https://www.lynda.com/Access-tutorials/Second-normal-form/604214/648094-4.html
+  
+    3NF: Follows a similar pattern to 2NF but instead of checking against the individual components of a composite primary key, we'll check each non-key column against every other key column. Here, we're looking for columns that a functionally dependent on another piece of information that isn't the promary key. For instance you might try storing the state, and the state abbreviation in an address table. Since state abbreviation is entirely dependent on the state or vice versa, one of those two fields should be removed from the table.
+  https://www.lynda.com/Access-tutorials/Third-normal-form/604214/648095-4.html
+  
+  ### Denormalization
+  When you intentionally ignore some of the normalization rules. This is done usually to increase performance, but it's only used when absolutely necessary.
+  
+  ## DDL
+  Data definition langauge: a set of SQL commands you can use to define tables and databases. It usually involves changing how the data is stored.
+  
+  ## DML
+  Data manipulation langauge: how you manipulate data or change it.
+  
+  ## OLAP
+  Online Analytical Processing: An application that does a lot of reports
+  
+  ## OLTP
+  Online Transactional Processing: An application that does a lot of transactions 
+  
+  Column: Field
+  Row: Record (entire entry)
+  
+  Queries: Commands used to send statements to a table. DDL, DML, or reading and searching information from a table is  how we query tables.
+  
+  Table: a collection of records. A table stores the records that are described by the fields in their row.
+  
+  Database: a container that holds tables
+  
+  Schema: database
+  
+  Changing a schema/creating a schema: changing the definition of what is in the database.
+  
+  ## Can't Run MySQL
+  
+  When I run: 
+  
+  `mysql -u root -p`
+  
+  I get this error: `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)`
+  
+  I get it no matter what password I put in, so maybe it's just because I don't remember my password. I don't know what password this is refering too.
+  
+  ## MySQL Password
+  I'm not sure if I just forgot my password. I was thinking, maybe if I just uninstall and reinstall mysql I can make a new password. But what if this messes up some databases I have on here? I didn't put any mysql data bases on here, but what if some other program did? Is it possible? 
+  I want to see the date that I installed MySQL. I couldn't find a way to list the date created in unix. But I couldn't find the MySQL folder in the GUI, even after pressing `cmd` + `shift` + `.`.
+  I'll have to investigate more tomorrow.
+  
+  
+  
+## Day 50, R2
+### 5/30/19
+
+- ## Node
+  Continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
   
   ## Setting Up MySQL Server
   This next section confuses me. It talks about installing mysql on Windows and Ubuntu, but not Mac. Luckily Greg is pretty responsive on twitter so I wrote to him to tell him what confused me.
