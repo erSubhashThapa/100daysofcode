@@ -2,8 +2,8 @@
 
 
 
-## Day 50, R2
-### 5/30/19
+## Day 51, R2
+### 5/31/19
 
 - ## MySQL
   I decided to look more into MySQL today. I followed [Learning MySQL Development](https://www.lynda.com/MySQL-tutorials/Up-Running-MySQL-Development/158373-2.html) on lynda.
@@ -24,25 +24,30 @@
   ### First Normal Form:
   Each record has a single value.
   
+  ***Isn't a record an entire row? That is not what the instructor means...***
+  
   ### Second Normal Form
   - Must be in 1NF
-  - Fields not defining a row depend on fields that do. All the information in the table is dependant on what definse the row.
+  - Fields not defining a row depend on fields that do. All the information in the table is dependant on what defines the row.
   
   ### Third Normal Form
   - Must be in 1NF
   - Must be in 2NF
   - All the non-defining fields are directly dependent on the defining fields.
   
-  I'm confused how 3NF is different from 2NF. ***"All the non-defining fields are directly dependent on the defining fields."*** sounds exactly like, ***"Fields not defining a row depend on fields that do. All the information in the table is dependant on what definse the row."***
+  I'm confused how 3NF is different from 2NF. ***"All the non-defining fields are directly dependent on the defining fields."*** sounds exactly like, ***"Fields not defining a row depend on fields that do. All the information in the table is dependant on what defines the row."***
   
   ## 3NF vs 2NF
-  I watched videos from another lynda tutorial
+  I watched videos from another lynda tutorial to understand the differences.
   
-  >2NF: All fields in the primary key are required to determine the other non-key fields.
+  ### 2NF: 
+  All fields in the primary key are required to determine the other non-key fields.
   
   -***Paraphrased** from [Learning Relational Databases](https://www.lynda.com/Access-tutorials/Second-normal-form/604214/648094-4.html)*
   
-  3NF: Follows a similar pattern to 2NF but instead of checking against the individual components of a composite primary key, we'll check each non-key column against every other key column. Here, we're looking for columns that a functionally dependent on another piece of information that isn't the promary key. For instance you might try storing the state, and the state abbreviation in an address table. Since state abbreviation is entirely dependent on the state or vice versa, one of those two fields should be removed from the table.
+  ### 3NF:
+  Follows a similar pattern to 2NF but instead of checking against the individual components of a composite primary key, we'll check each *non-key column* against every other *non-key column*. Here, we're looking for columns that are functionally dependent on another piece of information that isn't the promary key. For instance you might try storing the state, and the state abbreviation in an address table. Since state abbreviation is entirely dependent on the state or vice versa, one of those two fields should be removed from the table.
+  
   -***Paraphrased** from [Learning Relational Databases](https://www.lynda.com/Access-tutorials/Third-normal-form/604214/648095-4.html)*
   
   ### Denormalization
@@ -62,6 +67,7 @@
   
   ## Some Terms
   **Column:** Field
+  
   **Row:** Record (entire entry)
   
   **Queries:** Commands used to send statements to a table. DDL, DML, or reading and searching information from a table is  how we query tables.
@@ -86,7 +92,9 @@
   
   ## MySQL Password
   I'm not sure if I just forgot my password. I was thinking, maybe if I just uninstall and reinstall mysql I can make a new password. But what if this messes up some databases I have on here? I didn't put any mysql data bases on here, but what if some other program did? Is it possible? 
-  I want to see the date that I installed MySQL. I couldn't find a way to list the date created in unix. But I couldn't find the MySQL folder in the GUI, even after pressing `cmd` + `shift` + `.`.
+  
+  I want to see the date that I installed MySQL. I couldn't find a way in bash to list the date created. But I couldn't find the MySQL folder in the GUI, even after pressing `cmd` + `shift` + `.`. So I couldn't see the date created by looking in the GUI either.
+  
   I'll have to investigate more tomorrow.
 
 ## Day 50, R2
