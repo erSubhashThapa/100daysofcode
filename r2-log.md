@@ -51,7 +51,9 @@
   ### Notes:
   - ### Step 4:
   In Step 4, change the file to the mysql verson you just downloaded.
+  
   <img src="log_imgs/step4_6-1.PNG" width="500">
+  
   <img src="log_imgs/mysqlversion_6-1.PNG" width="500">
   
   - ### Prompts:
