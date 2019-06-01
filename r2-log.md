@@ -31,7 +31,7 @@
   
   <img src="log_imgs/go_6-1.PNG" width = "500">
   
-  It showed that I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important that I could lose since then. I probably was just following a tutorial at the time or something. I don't know, had I had any databases, if uninstalling uninstalling MySQL would cause any databases to be lost, but either way it won't matter: I probably don't have anything important. So I could uninstall it and reinstall it to reset the password if I have to. 
+  It showed that I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important that I could lose since then. I probably was just following a tutorial at the time or something. I don't know, had I had any databases, if uninstalling MySQL would cause any databases to be lost, but either way it won't matter: I probably don't have anything important. So I could uninstall it and reinstall it to reset the password if I have to. 
   
   ## Where Is The Password Stored?
   
