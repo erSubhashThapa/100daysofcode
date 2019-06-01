@@ -26,34 +26,35 @@
   
   <img src="log_imgs/finder_6-1.PNG" width = "500">
   
-  I ended up finding mysql in my Finder by getting the path for mysql using `which mysql` in the command line, then going to "Go" in finder and finding where mysql was. I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important. I could uninstall it and reinstall it to reset the password if I have to. But I'm so curious where the password is stored.
+  I ended up finding mysql in my Finder by getting the path for mysql using `which mysql` in the command line, then going to "Go" in finder and finding where mysql was. 
+  
+  <img src="log_imgs/go_6-1.PNG" width = "500">
+  
+  It showed that I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important that I could lose since then. I probably was just following a tutorial at the time or something. I don't know if uninstalling it would cause any databases to be lost, but either way it won't matter. So I could uninstall it and reinstall it to reset the password if I have to. 
+  
+  ## Where the password is stored?
   
   > MySQL passwords are stored in the user table of the mysql database and are encrypted using it's own algorithm.
   [Security: Where are MySQL passwords stored?](https://serverfault.com/questions/326649/security-where-are-mysql-passwords-stored)
  
   [MySQL Documentation: 6.2.1 Account User Names and Passwords](https://dev.mysql.com/doc/refman/8.0/en/user-names.html)
  
-  `brew remove mysql`
-  
-   https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7
-  
-  Well I just removed mysql, and suddely remembered where I saved my password, my Keychain Access! duh. 
-  
-  Uninstalling and Reinstalling didn't give me an option to input a new password, but luckily I have the passsowrd now. But I still got the same error.
-  
-  I tried uninstalling and reinstalling running brew doctor first. Still same error.
-  
+   ## Uninstalling and Reinstalling MySQL
+   I followed [this tutorial](https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7) on uninstalling and reinstalling MySQL. This fixed the poster's error. But Not mine.
+   
+   After uninstalling and reinstalling MySQL suddely remembered where I saved my password, my Keychain Access! duh. Uninstalling and Reinstalling didn't give me an option to input a new password, so my old password should probably still work. But I still got the same error.
+    
   ## Solution
   
   Someone posted the [same error on stackoverflow](https://stackoverflow.com/questions/15016376/cant-connect-to-local-mysql-server-through-socket-homebrew/15016441) and linked to this [other post about a different error](https://stackoverflow.com/questions/4359131/brew-install-mysql-on-macos/6378429#6378429). The solution to this other error worked for me. It's in this stackoverflow thread, the [instructions that Lorin Rivers gave.](https://stackoverflow.com/questions/4359131/brew-install-mysql-on-macos/6378429#6378429)
   
   ### Notes:
-  ### Step 4:
-  - In Step 4, change the file to the mysql verson you just downloaded.
+  - ### Step 4:
+  In Step 4, change the file to the mysql verson you just downloaded.
   <img src="log_imgs/step4_6-1.PNG" width="500">
   <img src="log_imgs/mysqlversion_6-1.PNG" width="500">
   
-  ### Prompts:
+  - ### Prompts:
   
   This is what I did for the prompts, thought I didn't understand all of these fully:
   
@@ -89,7 +90,7 @@
   ```
   I said yes, because why wouldn't I want it to take effect immedietly? What's the alternative
   
-  ### Step 5:
+  - ### Step 5:
   I didn't understand Step 5 from the stack over flow post. But MySQL started working again, so I am good! I guess I didnt' need anything after step 4. 
   
   And a tip from lil Dashie: go to your Keychain Access or whatever it is on Windows and manually add your mysql password. Although that was wasn't my problem here, it's just a good tip.
