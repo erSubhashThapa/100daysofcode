@@ -110,7 +110,7 @@
   
   >SQL is a language which is used to operate your database. SQL is the basic language used for all the databases. There are minor syntax changes amongst different databases, but the basic SQL syntax remains largely the same.
   
-  So my immediate thuogh is that it it's SQL. However, look into it [furthur online](https://www.quora.com/How-do-you-view-all-the-tables-in-SQL) it looks like some of these commands are just MySQL.
+  So my immediate thought is that it's SQL. However, looking into it [furthur online](https://www.quora.com/How-do-you-view-all-the-tables-in-SQL), it looks like some of these commands are specific to MySQL.
   
   ## Documentation
   You can find the documentation for MySQL here: [MySQL Online Manual](https://dev.mysql.com/doc/refman/8.0/en/)
