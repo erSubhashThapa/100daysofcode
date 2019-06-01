@@ -36,11 +36,12 @@
   ## Where Is The Password Stored?
   
   > MySQL passwords are stored in the user table of the mysql database and are encrypted using it's own algorithm.
-  [Security: Where are MySQL passwords stored?](https://serverfault.com/questions/326649/security-where-are-mysql-passwords-stored)
- 
-  [MySQL Documentation: 6.2.1 Account User Names and Passwords](https://dev.mysql.com/doc/refman/8.0/en/user-names.html)
   
+  -from *[Security: Where are MySQL passwords stored?](https://serverfault.com/questions/326649/security-where-are-mysql-passwords-stored)*
+ 
   Since it's encrypted, I guess you can't go trying to get in there somehow and get the password.
+  
+  More info on password here: [MySQL Documentation: 6.2.1 Account User Names and Passwords](https://dev.mysql.com/doc/refman/8.0/en/user-names.html)
  
   ## Uninstalling and Reinstalling MySQL
   I followed [this tutorial](https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7) on uninstalling and reinstalling MySQL. This fixed the poster's error. But Not mine.
