@@ -2,6 +2,98 @@
 
 
 
+## Day 52, R2
+### 6/1/19
+
+- ## MySQL
+  Yesterday, I ended with an error when I tried to log into MySQL.
+ 
+  ```bash
+  mysql -u root -p 
+  >ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)
+  ```
+  I think it's because I don't remember my password. 
+  
+  I could try to guess my password, but I'm really wondering how I can find out what my password is? Shouldn't I be able to access my own password? Who am I trying to keep out? This is only on my computer?
+  
+  I wanted to see when I installed MySQL but:
+  
+  >UNIX doesn't support creation date, windows does.
+  
+  -from *"[what's the command to find the creation date of a certain dirctory?](https://www.unix.com/shell-programming-and-scripting/157874-creation-date-directory.html)"*
+  
+  If Unix doesn't support creation date, then how does finder have a creation date?
+  
+  <img src="log_imgs/finder_6-1.PNG" width = "500">
+  
+  I ended up finding mysql in my Finder by getting the path for mysql using `which mysql` in the command line, then going to "Go" in finder and finding where mysql was. I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important. I could uninstall it and reinstall it to reset the password if I have to. But I'm so curious where the password is stored.
+  
+  > MySQL passwords are stored in the user table of the mysql database and are encrypted using it's own algorithm.
+  [Security: Where are MySQL passwords stored?](https://serverfault.com/questions/326649/security-where-are-mysql-passwords-stored)
+ 
+  [MySQL Documentation: 6.2.1 Account User Names and Passwords](https://dev.mysql.com/doc/refman/8.0/en/user-names.html)
+ 
+  `brew remove mysql`
+  
+   https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7
+  
+  Well I just removed mysql, and suddely remembered where I saved my password, my Keychain Access! duh. 
+  
+  Uninstalling and Reinstalling didn't give me an option to input a new password, but luckily I have the passsowrd now. But I still got the same error.
+  
+  I tried uninstalling and reinstalling running brew doctor first. Still same error.
+  
+  ## Solution
+  
+  Someone posted the [same error on stackoverflow](https://stackoverflow.com/questions/15016376/cant-connect-to-local-mysql-server-through-socket-homebrew/15016441) and linked to this [other post about a different error](https://stackoverflow.com/questions/4359131/brew-install-mysql-on-macos/6378429#6378429). The solution to this other error worked for me. It's in this stackoverflow thread, the [instructions that Lorin Rivers gave.](https://stackoverflow.com/questions/4359131/brew-install-mysql-on-macos/6378429#6378429)
+  
+  ### Notes:
+  ### Step 4:
+  - In Step 4, change the file to the mysql verson you just downloaded.
+  <img src="log_imgs/step4_6-1.PNG" width="500">
+  <img src="log_imgs/mysqlversion_6-1.PNG" width="500">
+  
+  ### Prompts:
+  
+  This is what I did for the prompts, thought I didn't understand all of these fully:
+  
+  ```bash
+  By default, a MySQL installation has an anonymous user,
+  allowing anyone to log into MySQL without having to have
+  a user account created for them. This is intended only for
+  testing, and to make the installation go a bit smoother.
+  You should remove them before moving into a production
+  environment.
+  Remove anonymous users? (Press y|Y for Yes, any other key for No) :
+  ```
+  I said yes
+  
+  ```bash
+  Normally, root should only be allowed to connect from 'localhost'. This ensures that someone cannot guess at the root password from the network.
+
+  Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
+  ```
+  I said yes
+  
+  ```bash
+  By default, MySQL comes with a database named 'test' that anyone can access. This is also intended only for testing, and should be removed before moving into a production environment.
+
+  Remove test database and access to it? (Press y|Y for Yes, any other key for No) :
+  ```
+  I said no, because I thought it might be good to see an axample of a database.
+  
+  ```bash
+  Reloading the privilege tables will ensure that all changes made so far will take effect immediately.
+
+  Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
+  ```
+  I said yes, because why wouldn't I want it to take effect immedietly? What's the alternative
+  
+  ### Step 5:
+  I didn't understand Step 5 from the stack over flow post. But MySQL started working again, so I am good! I guess I didnt' need anything after step 4. 
+  
+  And a tip from lil Dashie: go to your Keychain Access or whatever it is on Windows and manually add your mysql password. Although that was wasn't my problem here, it's just a good tip.
+
 ## Day 51, R2
 ### 5/31/19
 
