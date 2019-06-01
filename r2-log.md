@@ -14,9 +14,10 @@
   ```
   I think it's because I don't remember my password. 
   
+  ## MySQL Password
   I could try to guess my password, but I'm really wondering how I can find out what my password is? Shouldn't I be able to access my own password? Who am I trying to keep out? This is only on my computer?
   
-  I wanted to see when I installed MySQL but:
+  I wanted to see when I installed MySQL incase I need to delete it and reinstall it. I wanted to make sure I added it recently and I hadn't used it a while ago for something important taht I don't remember. But:
   
   >UNIX doesn't support creation date, windows does.
   
@@ -26,23 +27,25 @@
   
   <img src="log_imgs/finder_6-1.PNG" width = "500">
   
-  I ended up finding mysql in my Finder by getting the path for mysql using `which mysql` in the command line, then going to "Go" in finder and finding where mysql was. 
+  I ended up finding MySQL in my Finder by getting the path for MySQL using `which mysql` in the command line, then going to "Go" in finder and finding where mysql was. 
   
   <img src="log_imgs/go_6-1.PNG" width = "500">
   
-  It showed that I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important that I could lose since then. I probably was just following a tutorial at the time or something. I don't know if uninstalling it would cause any databases to be lost, but either way it won't matter. So I could uninstall it and reinstall it to reset the password if I have to. 
+  It showed that I installed MySQL on August 1, 2018, this past summer. So I don't think I have anything important that I could lose since then. I probably was just following a tutorial at the time or something. I don't know, had I had any databases, if uninstalling uninstalling MySQL would cause any databases to be lost, but either way it won't matter: I probably don't have anything important. So I could uninstall it and reinstall it to reset the password if I have to. 
   
-  ## Where the password is stored?
+  ## Where Is The Password Stored?
   
   > MySQL passwords are stored in the user table of the mysql database and are encrypted using it's own algorithm.
   [Security: Where are MySQL passwords stored?](https://serverfault.com/questions/326649/security-where-are-mysql-passwords-stored)
  
   [MySQL Documentation: 6.2.1 Account User Names and Passwords](https://dev.mysql.com/doc/refman/8.0/en/user-names.html)
+  
+  Since it's encrypted, I guess you can't go trying to get in their some how and get the password.
  
-   ## Uninstalling and Reinstalling MySQL
-   I followed [this tutorial](https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7) on uninstalling and reinstalling MySQL. This fixed the poster's error. But Not mine.
+  ## Uninstalling and Reinstalling MySQL
+  I followed [this tutorial](https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7) on uninstalling and reinstalling MySQL. This fixed the poster's error. But Not mine.
    
-   After uninstalling and reinstalling MySQL suddely remembered where I saved my password, my Keychain Access! duh. Uninstalling and Reinstalling didn't give me an option to input a new password, so my old password should probably still work. But I still got the same error.
+  After uninstalling and reinstalling MySQL, I suddely remembered where I saved my password, my Keychain Access! duh. Uninstalling and Reinstalling didn't give me an option to input a new password, so my old password should probably still work. But I still got the same error.
     
   ## Solution
   
@@ -50,7 +53,7 @@
   
   ### Notes:
   - ### Step 4:
-  In Step 4, change the file to the mysql verson you just downloaded.
+  In Step 4, change the file to the MySQL version you just downloaded.
   
   <img src="log_imgs/step4_6-1.PNG" width="500">
   
@@ -58,7 +61,7 @@
   
   - ### Prompts:
   
-  This is what I did for the prompts, thought I didn't understand all of these fully:
+  This is what I did for the prompts, though I didn't understand all of these fully:
   
   ```bash
   By default, a MySQL installation has an anonymous user,
@@ -83,19 +86,35 @@
 
   Remove test database and access to it? (Press y|Y for Yes, any other key for No) :
   ```
-  I said no, because I thought it might be good to see an axample of a database.
+  I said no, because I thought it might be good to see an example of a database.
   
   ```bash
   Reloading the privilege tables will ensure that all changes made so far will take effect immediately.
 
   Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
   ```
-  I said yes, because why wouldn't I want it to take effect immedietly? What's the alternative
+  I said yes, because why wouldn't I want it to take effect immedietly? What's the alternative?
   
   - ### Step 5:
-  I didn't understand Step 5 from the stack over flow post. But MySQL started working again, so I am good! I guess I didnt' need anything after step 4. 
+  I didn't understand Step 5 from the stackoverflow post. But MySQL started working again, so I am good! I guess I didn't need anything after step 4. 
   
-  And a tip from lil Dashie: go to your Keychain Access or whatever it is on Windows and manually add your mysql password. Although that was wasn't my problem here, it's just a good tip.
+  And a tip from lil Dashie: go to your Keychain Access (or whatever it is on Windows) and manually add your mysql password. Although, that was wasn't my problem here. It's just a good tip.
+  
+  ## Where Does MySQL Start And SQL End?
+  Whenever I learn something new this is always a confusion point. Where do things start and end? Where does Javascript end and the Web API start? What part of this project is Node and what part is javascript? What's the difference between the MySQL program and the MySQL server? Github vs Git? Technologies blend together and I usually can only separate them after some time with using them.
+  
+  I went back to the tutorial: [Learning MySQL Development](https://www.lynda.com/MySQL-tutorials/Up-Running-MySQL-Development/158373-2.html) on lynda. We're learning commands to show tables/databases/columns etc. But I don't know if they are MySQL commands or SQL commands.
+  
+  This page compares the two: [SQL vs MySQL: What's the Difference?](https://www.guru99.com/sql-vs-mysql.html):
+  
+  >SQL is a language which is used to operate your database. SQL is the basic language used for all the databases. There are minor syntax changes amongst different databases, but the basic SQL syntax remains largely the same.
+  
+  So my immediate thuogh is that it it's SQL. However, look into it [furthur online](https://www.quora.com/How-do-you-view-all-the-tables-in-SQL) it looks like some of these commands are just MySQL.
+  
+  ## Documentation
+  You can find the documentation for MySQL here: [MySQL Online Manual](https://dev.mysql.com/doc/refman/8.0/en/)
+  
+  
 
 ## Day 51, R2
 ### 5/31/19
