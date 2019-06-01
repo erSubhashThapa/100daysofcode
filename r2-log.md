@@ -40,7 +40,7 @@
  
   [MySQL Documentation: 6.2.1 Account User Names and Passwords](https://dev.mysql.com/doc/refman/8.0/en/user-names.html)
   
-  Since it's encrypted, I guess you can't go trying to get in their some how and get the password.
+  Since it's encrypted, I guess you can't go trying to get in there somehow and get the password.
  
   ## Uninstalling and Reinstalling MySQL
   I followed [this tutorial](https://medium.com/@devontem/solved-cant-connect-to-local-mysql-server-through-socket-tmp-mysql-sock-2-f52c9c546f7) on uninstalling and reinstalling MySQL. This fixed the poster's error. But Not mine.
