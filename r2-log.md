@@ -1,6 +1,73 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 52, R2
+### 6/1/19
 
+- ## MySQL & Node
+  ## MySQL Server
+  I followed this tutorial for getting mysql server, the section called [3. Using Homebrew service to download](https://tableplus.io/blog/2018/11/how-to-download-mysql-mac.html#3-using-homebrew-service-to-download).
+  
+  Then I went back to  Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) on page 32 and ran `mysql -u root -p`. It worked but that command worked before following the instructions for mysql server. So I'm not sure if that was necessary to get mysql server: did I already have it? Is it doing something different that I don't understand? I'm not sure what it did.
+  
+  ## 5.0.6 Make MySQL Open For Remote Access
+  In this section in the book Greg says:
+  
+  >...you need to find the actual mysql configuration file which should reside in one of the folders specified with !includedir.
+   
+  What does **specified with !includedir** mean?
+  
+  I'm not seeing any mysql folder in etc. So maybe I still don't have mysql server? When I run `which mysql-server` it shows nothing.
+  
+  ## UI Download
+  I tried installing mysql server another way, using the [ui installer](https://dev.mysql.com/downloads/file/?id=486026). But when I run `which mysql-server` I'm still getting nothing. And I still don't see any mysql folder in the ect directory.
+  
+  ## Another Download Method
+  Here the author uses homebrew but it's different than what I've already done: https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/
+  
+  I tried to follow this tutorial but I ran into this error.
+  
+  ```bash
+  Sun Jun 02 ~ Dashie$ mysql_secure_installation
+
+  Securing the MySQL server deployment.
+
+  Enter password for user root: 
+  Error: Access denied for user 'root'@'localhost' (using password: YES)
+  ```
+  
+  And now I can't log in with `mysql -u root -p` even with the password I wrote down. I'm sooo confused.
+  
+  ```bash
+  Sun Jun 02 ~ Dashie$ mysql -uroot -p
+  Enter password: 
+  ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+  ```
+  
+  ## Uninstall MySQL
+  I figure, I should uninstall and reinstall to change the password.
+  
+  I uninstalled mysql the way I did yesterday, but instead of installing it the way the post I linked to yesterday said, I followed this: https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/.
+  
+  But then I got this error:
+  ```bash
+  Sun Jun 02 ~ Dashie$ mysql.server restart
+  ERROR! MySQL server PID file could not be found!
+  Starting MySQL
+  ... ERROR! The server quit without updating PID file (/usr/local/var/mysql/dashielusssMBP2.jetpack.pid).
+  ```
+  
+  So I uninstalled brew again. But it doesn't seem to be working because `which mysql` still shows that I have mysql:
+  
+  ```bash
+  Sun Jun 02 ~ Dashie$ brew remove mysql
+  Error: No such keg: /usr/local/Cellar/mysql
+  Sun Jun 02 ~ Dashie$ which mysql
+  /usr/local/mysql/bin/mysql
+  ```
+  
+  I can't remove mysql.
+  
+  I am so confused and lost and frustrated today.
 
 ## Day 52, R2
 ### 6/1/19
@@ -53,6 +120,7 @@
   Someone posted the [same error on stackoverflow](https://stackoverflow.com/questions/15016376/cant-connect-to-local-mysql-server-through-socket-homebrew/15016441) and linked to this [other post about a different error](https://stackoverflow.com/questions/4359131/brew-install-mysql-on-macos/6378429#6378429). The solution to this other error worked for me. It's in this stackoverflow thread, the [instructions that Lorin Rivers gave.](https://stackoverflow.com/questions/4359131/brew-install-mysql-on-macos/6378429#6378429)
   
   ### Notes:
+  - ### Step 2: I skipped step 2.
   - ### Step 4:
   In Step 4, change the file to the MySQL version you just downloaded.
   
