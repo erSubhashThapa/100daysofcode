@@ -24,7 +24,7 @@
   
   On page 38 of the book, it says to press `control` + `O` and then enter to save the file. This didn't work for me. I have to do `control` + `X`.
   
-  ## Confused:
+  ## Confused 6/3/19:
   ***Chapter 5: Setting Up MySQL Server*** is confusing me so much. 
   
   I got early access to the book so it's still a work in progress, so there will probably more clarifications in the next updates.
