@@ -1,5 +1,55 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+- ## MySQL & Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) and trying to get MySQL Working.
+  
+  ## Uninstall MySQL: Success
+  I was finally able to remove MySQL. I followed these instructions Greg ([@js_tut](https://twitter.com/js_tut)) suggested: [Uninstall MySql on a Mac OS X](https://community.jaspersoft.com/wiki/uninstall-mysql-mac-os-x)
+
+  Now `which mysql` returns nothing! Yay!
+
+  ## apt-get?
+  I thought it would be best to get apt-get and download MySQL and MySQL server that way so I could follow Greg's tutorial but in [this thread](https://unix.stackexchange.com/questions/80711/how-to-install-apt-get-or-yum-on-mac-os-x) the answers say not to use apt-get on the Mac OS.
+  
+  ## MySQL Server UI Installer
+  I decided to skip downloading MySQL and just download the MySQL server. I think the server *also* downloads mysql. I think that's what caused my problems with the password before. I think I accidently reset the MySQL password when I downloaded MySQL server. I followed this video tutorial: [How to Install and Configure MySQL Server on macOS Mac OS X](https://www.youtube.com/watch?v=Bgzf0AH1x-Y)
+  
+  I used vim instead of nano because the tutorial used vim and it was confusing to use. So I had to follow this page: [Vi / Vim: Save And Quit The Editor Command](https://www.cyberciti.biz/faq/linux-unix-vim-save-and-quit-command/)
+  
+  ## Back To Node.JS - Server Setup Book
+  On page 36, section ***5.0.6 Make MySQL Open For Remote Access***, we edit the confige file. Only I had no config file.  I had to add the configuration file myself. Used the 2nd to last step in this tutorial for adding the [config file](https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/).
+  
+  On page 38, it says to press `control` + `O` and then enter to save the file. This didn't work for me. I have to do `control` + `X`.
+  
+  ## Confused:
+  ***Chapter 5: Setting Up MySQL Server*** is confusing me so much. I got Early access to the book so it's still a work in progress:
+  
+  - Do I skip this step if I'm just doing putting mysql server on localhost?:
+  >To log in to your web host open Terminal on your Mac and execute the command
+ssh root@XXX.XX.XX.XX and replace the X’es with your actual remote server
+address. Enter password, and you’re in!
+
+  - If I wanted to use a remote server, how do I find my *remote server address?* 
+  
+  - What is a remote server? Is that like when I pay for Go Daddy hosting? Do I get a remote server address?
+
+  - Why didn't I have a configuration file? How can MySQL server work without a configuration file? If mine worked without it, why would MySQL sometimes need one and sometimes not?
+  
+  - Why would you need to make a new password/username? Why not just use root? What's the difference?
+  >Now we have user felix ready to log in to the database via localhost address with
+provided password. This is the account you can use in your JavaScript code when
+we get to the Chapter 6: Adding MySQL to api.js
+  >...now you can log into your MySQL server using a MySQL client
+such as Sequel Pro on Mac or MySQL Workbench on Windows, using the login
+token pair felix/PassWord557123! we created earlier.
+  ![users screenshot](log_imgs/users_6-3.PNG)
+  
+  - Do I skip this step if I'm using localhost for my server?:
+  >Comment the line bind-address = 127.0.0.1 by adding # to the front:
+  
+  
+  
+
 ## Day 53, R2
 ### 6/2/19
 
