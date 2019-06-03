@@ -71,7 +71,7 @@
   
   I am so confused and lost and frustrated today.
   
-  <img src="log_imgs/uchh_6-2-19" width="400"/>
+  <img src="log_imgs/uchh_6-2-19.png" width="400"/>
 
 ## Day 52, R2
 ### 6/1/19
