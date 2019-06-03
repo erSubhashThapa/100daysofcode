@@ -4,7 +4,7 @@
 ### 6/1/19
 
 - ## MySQL & Node
-  I'm continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624), trying to get mysql server to work. It as really hard to figure out since there aren't instructions for doing it on a mac yet. I didn't get it to work.
+  I'm continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624), trying to get mysql-server to work. It was really hard to figure out since there aren't instructions for doing it on a mac yet. I didn't get it to work.
   
   ## MySQL Server
   I followed this tutorial for getting mysql server, the section called [3. Using Homebrew service to download](https://tableplus.io/blog/2018/11/how-to-download-mysql-mac.html#3-using-homebrew-service-to-download).
