@@ -18,7 +18,7 @@
    
   What does **specified with !includedir** mean?
   
-  I'm not seeing any mysql folder in etc. So maybe I still don't have mysql server? When I run `which mysql-server` it shows nothing.
+  I'm not seeing any configuration file or related folder in etc. So maybe I still don't have mysql-server? When I run `which mysql-server` it shows nothing.
   
   ## UI Download
   I tried installing mysql server another way, using the [ui installer](https://dev.mysql.com/downloads/file/?id=486026). But when I run `which mysql-server` I'm still getting nothing. And I still don't see any mysql folder in the ect directory.
