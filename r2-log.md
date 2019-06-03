@@ -21,10 +21,10 @@
   I'm not seeing any configuration file or related folder in etc. So maybe I still don't have mysql-server? When I run `which mysql-server` it shows nothing.
   
   ## UI Download
-  I tried installing mysql server another way, using the [ui installer](https://dev.mysql.com/downloads/file/?id=486026). But when I run `which mysql-server` I'm still getting nothing. And I still don't see any mysql folder in the ect directory.
+  I tried installing mysql server another way, using the [ui installer](https://dev.mysql.com/downloads/file/?id=486026). But when I run `which mysql-server` I'm still getting nothing. And I still don't see any configuration file or mysql folder in the ect directory.
   
   ## Another Download Method
-  Here the author uses homebrew but it's different than what I've already done: https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/
+  Here the author uses homebrew to install mysql-server but it's a different way than what I've already done: https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/
   
   I tried to follow this tutorial but I ran into this error.
   
@@ -46,7 +46,7 @@
   ```
   
   ## Uninstall MySQL
-  I figure, I should uninstall and reinstall to change the password.
+  SO now in addition to not being able to use mysql-server, I can't get into mysql itself. I wonder if it's because I downloaded mysql-server a bunch of times and in a bunch of different ways. Maybe I accidently changed the password for mysql. I figure, I should uninstall and reinstall mysql to change the password back.
   
   I uninstalled mysql the way I did yesterday, but instead of installing it the way the post I linked to yesterday said, I followed this: https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/.
   
