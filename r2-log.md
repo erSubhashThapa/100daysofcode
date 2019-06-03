@@ -9,7 +9,7 @@
   ## MySQL Server
   I followed this tutorial for getting mysql server, the section called [3. Using Homebrew service to download](https://tableplus.io/blog/2018/11/how-to-download-mysql-mac.html#3-using-homebrew-service-to-download).
   
-  Then I went back to  Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) on page 32 and ran `mysql -u root -p`. It worked but that command worked before following the instructions for mysql server. So I'm not sure if that was necessary to get mysql server: did I already have it? Is it doing something different that I don't understand? I'm not sure what it did.
+  Then I went back to  Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) on page 32 and ran `mysql -u root -p`. It worked but `mysql -u root -p` worked before following the instructions for mysql-server. So I'm not sure if that was necessary to get mysql-server: did I already have it? Is it doing something different that I don't understand/can't see? I'm not sure what it did.
   
   ## 5.0.6 Make MySQL Open For Remote Access
   In this section in the book Greg says:
