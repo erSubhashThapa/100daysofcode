@@ -1,7 +1,7 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 52, R2
-### 6/1/19
+## Day 53, R2
+### 6/2/19
 
 - ## MySQL & Node
   I'm continuing Greg Sildenikov's [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624), trying to get mysql-server to work. It was really hard to figure out since there aren't instructions for doing it on a mac yet in his book. I didn't get it to work.
