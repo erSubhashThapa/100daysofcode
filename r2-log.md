@@ -46,7 +46,7 @@
   ```
   
   ## Uninstall MySQL
-  SO now in addition to not being able to use mysql-server, I can't get into mysql itself. I wonder if it's because I downloaded mysql-server a bunch of times and in a bunch of different ways. Maybe I accidently changed the password for mysql. I figure, I should uninstall and reinstall mysql to change the password back.
+  So now in addition to not being able to use mysql-server, I can't get into mysql itself. I wonder if it's because I downloaded mysql-server a bunch of times and in a bunch of different ways. Maybe I accidently changed the password for mysql. I figure, I should uninstall and reinstall mysql to change the password back.
   
   I uninstalled mysql the way I did yesterday, but instead of installing it the way the post I linked to yesterday said, I followed this: https://blog.joefallon.net/2013/10/install-mysql-on-mac-osx-using-homebrew/.
   
@@ -58,7 +58,7 @@
   ... ERROR! The server quit without updating PID file (/usr/local/var/mysql/dashielusssMBP2.jetpack.pid).
   ```
   
-  So I uninstalled brew again. But it doesn't seem to be working because `which mysql` still shows that I have mysql:
+  So I uninstalled mysql with brew again. But it doesn't seem to be working because `which mysql` still shows that I have mysql:
   
   ```bash
   Sun Jun 02 ~ Dashie$ brew remove mysql
