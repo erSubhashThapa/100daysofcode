@@ -130,7 +130,7 @@
   
   <img src="log_imgs/step4_6-1.PNG" width="500">
   
-  <img src="log_imgs/mysqlversion_6-1.PNG" width="500">
+  <img src="log_imgs/mysqlversion_6-1.PNG" width="600">
   
   - ### Prompts:
   
