@@ -4,7 +4,7 @@
 ## Day 54, R2
 ### 6/3/19
 - ## MySQL & Node
-  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624), and trying to get MySQL Working.
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624), and trying to get MySQL working.
   
   ## Uninstall MySQL: Success
   I was finally able to remove MySQL. I followed these instructions Greg ([@js_tut](https://twitter.com/js_tut)) suggested: [Uninstall MySql on a Mac OS X](https://community.jaspersoft.com/wiki/uninstall-mysql-mac-os-x)
