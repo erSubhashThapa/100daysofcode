@@ -31,7 +31,7 @@
   
   ### My questions 6/3/19:
   
-  - Do I skip this step if I'm just doing putting MySQL server on localhost?:
+  - Do I skip this step if I'm just putting MySQL server on localhost?:
     - >To log in to your web host open Terminal on your Mac and execute the command
 ssh root@XXX.XX.XX.XX and replace the X’es with your actual remote server
 address. Enter password, and you’re in!
