@@ -13,7 +13,7 @@
   I got it to work, but instead of root I had to use my cpanel login:
 
   ```bash
-  ssh cpanelUsername@xxx.xxx.xx.xx //replace with your username and ip address
+  ssh cpanelUsername@xxx.xxx.xx.xx //replace with your cpanel username and ip address
   ```
   ## Remote Server Questions
   Now that I'm on my remove server, am I on an entirely different OS? What is it? Do I have to install MySQL-server all over again?
