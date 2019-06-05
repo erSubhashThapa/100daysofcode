@@ -1,5 +1,92 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 56, R2
+### 6/5/19
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) and setting up my remote server.
+
+  ## Set Up SHH GoDaddy
+
+  [set up SHH here](https://www.godaddy.com/help/enable-ssh-16102)
+
+  I got it to work, but instead of root I had to use my cpanel login:
+
+  ```bash
+  ssh advancedplaylabs@107.180.21.23
+  ```
+  ## Remote Server Questions
+  Now that I'm on my remove server, am I on an entirely different OS? What is it? Do I have to install MySQL-server all over again?
+- ## Coding Coach
+  Since backend is really new to me, I decided to get a mentor on [Coding Coach](https://codingcoach.io/). 
+
+  I'm reading through the [Coding Coach Mentorship Guidelines](https://docs.google.com/document/d/1zKCxmIh0Sd4aWLiQncICOGm6uf38S0kJ0xb0qErNFVA/edit). It says to ***set mentorship expectations*** from the start:
+
+  - What do you hope to achieve from the mentorship? 
+  - How much time are you willing and able to commit?
+  - Should the mentorship meetings be once a week, twice a week, once a month, or ad-hoc?
+  - Is this mentorship open-ended or do you need just a few sessions?
+  - What will your primary method of communication be?
+  - How do you want to track your progress?
+
+  It also talks about ***re-evaluating the mentorship***. I want to make it easy for mentor to end the mentorship if they no longer have time or for whatever reason. I imagine it would be hard for a mentor to confront a mentee about ending a mentorship, so I want to make it as easy as possible for them. We can make it easier on mentors by having scheduled low pressure re-evalutation sessions where they can end the the mentorship.
+  
+
+  ## Assessing Mentorship Goals
+
+  The [Coding Coach Mentorship Guidelines](https://docs.google.com/document/d/1zKCxmIh0Sd4aWLiQncICOGm6uf38S0kJ0xb0qErNFVA/edit) suggests that you have goals for what you want from the mentorship.
+
+  >Goals shouldn’t be too big or too small. They should be achievable within one or two sessions.
+
+  ## Types Of Mentorship
+  You can have a *technical* or *career mentorship*. I'd like both in the future, but now I'm focusing on technical. I like the idea of asking my mentor questions. Right now I have so many questions about backend.
+
+  >You may also choose a technical mentorship structured more as a question and answer. It’s important to come to the meeting with questions already written out so you can maximize your mentorship meetings.
+
+  ## Be A Good Mentee
+
+  There's a whole section on being a good mentee. I live this advice:
+
+  >Give them specific feedback about how they’ve helped you; it not only encourages them, but it also helps them become better mentors. 
+
+  I like this because I think feedback is precious, and I read about how showing appreciation for someone can help them avoid burnout. I don't want a burnt out mentor!
+  
+  >...if in doubt, you can be direct about the best times/days to communicate.
+
+  I think this applies to anything: if in doubt ask and make it easy for the mentor to be honest.
+
+  ## What Do I Want From My Mentor?
+
+  - Help directing me where to go with learning backend
+  - Answer my questions related to backend
+
+  Not necessary, but beneficial:
+  - Someone who can work with me at times that I code (mid day-afternoon Pacific Time). I have limited access to electricity so this would be helpful, however I can probably figure it out.
+
+  ## How would I want meetings to go?
+  Ideally:
+  - Occasional planned 15-30 minute phone/video conversations 
+    - Estimated time: **1 per week - 1 per month**
+  - Regular **"virtual co-working"**: meaning they keep themselves open to questions (text chat/voice/or video depending on the complexity of the question) during certain agreed upon times. This would virtually replicate being in same room, working by ourselves, but I could turn to them and ask them a question when I come across something. 
+    - Estimated Time: **1-3 virtual co-working sessions per week, 2 hours at a time** (but the actual questions/answers for each session would probably take up **no more than 15 minutes during that time**)
+
+  This I haven't done anything like this, I don't know how it would go. I'd be open to change this setup, of course.
+
+  ## "Dating Period"
+
+  I'm wondering if we should have a period where we see if we are a good fit?
+
+  ## Find A Mentor
+  Now that I know what I want from my mentor, it's time to [find a mentor](https://mentors.codingcoach.io/) and contact them.
+
+  This was really hard! There were so many good options. I didn't know if I should contact everyone or just one person. I decided to start with one.
+  
+  I decided to first contact this guy who posted videos of himself teaching on twitch. Weird criteria, but I really like when people are comfortable on camera. I think those people are genuine and trustworthy. He had a really nice website. He's from near my hometown. He's self-taught, knows javascript and node.js. I think he will be able to help with backend if he knows node.js. I also like that he posts videos of himself coding, so you know he likes helping others.
+
+- ## Thoughts and Feelings:
+
+  I spent a lot of time looking into coding coach instead of coding today, but I think it was an important investment in my time that will highly contribute to my future coding. It was hard to pick who to contact. What if I pick the wrong person? Did I spend too much time thinking about this or not enough?
+
 ## Day 55, R2
 ### 6/4/19
 
