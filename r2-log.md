@@ -1,7 +1,5 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-# #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
-
 ## Day 55, R2
 ### 6/4/19
 
