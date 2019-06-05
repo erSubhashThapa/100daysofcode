@@ -70,7 +70,7 @@
   - Regular **"virtual co-working"**: meaning they keep themselves open to questions (text chat/voice/or video depending on the complexity of the question) during certain agreed upon times. This would virtually replicate being in same room, working by ourselves, but I could turn to them and ask them a question when I come across something. 
     - Estimated Time: **1-3 virtual co-working sessions per week, 2 hours at a time** (but the actual questions/answers for each session would probably take up **no more than 15 minutes during that time**)
 
-  This I haven't done anything like this, I don't know how it would go. I'd be open to change this setup, of course.
+  I haven't done anything like this, so I don't know how it would go. I'd be open to change this setup, of course.
 
   ## "Dating Period"
 
