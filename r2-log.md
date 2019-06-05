@@ -1,5 +1,104 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+# #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
+
+## Day 55, R2
+### 6/4/19
+
+- ## Markdown Editor
+  
+  I write in the Github markdown editor every day, but it's not so great. Switching between the *Preview Changes* tab and the *Edit File* tab is a time waster. I also can't spellcheck directly on Github. I want to try a different way to write markdown.
+  
+  ## VSC Markdown
+  I found this extension for VSC: [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one).
+  
+  I got that extension but I'm not sure how necessary it is because it looks like [visual studios supports markdown out of the box](https://code.visualstudio.com/docs/languages/markdown). To see a side by side, plain text vs rendered pane, hit `cmd + K` and then `k`.
+
+  <img src="log_imgs/sidebyside_6-4.PNG" width="700px"/>
+
+  ## Markdown Preview Github Style: Fail
+  I wanted the vsc markdown preview to render like Github. so I installed this [Markdown Preview Github Styling](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles0) extension but it didn't do anything and there was very little documentation.
+
+
+  ## Markdown Spellcheck
+  I added a spellcheck extension called [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). It's ok, but it doesn't show suggested spellings.
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624).
+
+  ## Questions From Yesterday
+
+  Yesterday, I was [confused by a few things.](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#confused-6319)
+
+  I'm going to go through what confused me and try to understand better.
+
+  ## **Question:** Why would you need to make a new password/username? Why not just use root? What's the difference?
+    
+    <img src = "log_imgs/users_6-3.PNG" width="500"/>
+
+    Greg ([@js_tut](https://twitter.com/js_tut)) reached out to me and answered this one.
+
+    >the other users are just users with system privileges
+    >
+    >root is the main user added during installation
+    >
+    >others can be added, but with reduced access (cant delete database for example, only access it)
+    >
+    >whenever there are multiple users, it usually means difference in privileges: admin vs normal users for example
+    
+    I thought it was something like this, but now I understand that these users can be regular app users. I didn't understand that before. I thought adding *any* user would just add an *admin*. **I hadn't really thought through what it meant to add a user.**
+
+  ## **Questions:*** Localhost vs Remote Server
+    I had questions about localhost and the remote server:
+
+    - **Question:** If I wanted to use a remote server, how do I find my *remote server address?* 
+  
+    - **Question:** What is a remote server? Is that like when I pay for Go Daddy hosting? Do I get a remote server address?
+
+    Greg ([@js_tut](https://twitter.com/js_tut)) DM'd me:
+
+    >on localhost, you can use "localhost" or "127.0.0.1" where you would use a remote address otherwise (yes its basically a hosted address, like godaddy etc)
+    >
+    >bind is usually set to 127.0.0.1 on localhost, if its skipped i think it will assume localhost
+    >
+    >because its like connecting to the mysql server from the program thats running on the same computer......
+
+  ## Localhost:
+  I read more about what [localhost actually is here](https://whatismyipaddress.com/localhost), but I didn't finish reading.
+  ## **Question:** Do I skip this step if I'm just putting MySQL server on localhost?:
+  
+  >To log in to your web host open Terminal on your Mac and execute the command ssh root@XXX.XX.XX.XX and replace the X’es with your actual remote server address. Enter password, and you’re in!
+
+  What is this command?: `ssh root@XXX.XX.XX.XX`
+
+  ## SSH Command
+  What is SSH?
+  >SSH or secure shell, is a very widely used protocol for connecting to systems remotely to manage or use them.
+
+  -*from [Learning SSH, lynda.com](https://www.lynda.com/Developer-Network-Administration-tutorials/Welcome/189066/365610-4.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3assh%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)*
+
+  >SSH will get you to the command prompt of a remote system.
+
+  -*from [Learning SSH, lynda.com](https://www.lynda.com/Developer-Network-Administration-tutorials/What-you-should-know-before-starting-course/189066/365611-4.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3assh%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)*
+
+
+  So since I'm not trying to login to a remote server, I think I don't need this step. But it would be cool to try this tutorial with a remote server. I'm wondering how to do that.
+
+  ## GoDaddy Remote Server
+
+  I have some websites on GoDaady so I want to try use it as my remote server. I contacted GoDaddy in their chat box:
+
+  >**Me:** I'm following a tutorial on setting up a server with Node. It says to log in to my remote server on the command line: ssh root@XXX.XX.XX.XX- and replace the X'es with your actual remote server
+
+  The agent was really helpful. They showed me where I could find the IP address.
+
+  I still can't login because the agent told me I have to [set up SHH here](https://www.godaddy.com/help/enable-ssh-16102). So I will do that tomorrow.
+
+  
+  ## **Question:** Why didn't I have a configuration file? How can MySQL server work without a configuration file? If mine worked without it, why would MySQL sometimes need one and sometimes not?
+  This was my last question from yesterday, but I didn't get to look into it today.
+
+
 
 ## Day 54, R2
 ### 6/3/19
