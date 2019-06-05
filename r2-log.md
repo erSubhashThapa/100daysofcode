@@ -8,7 +8,7 @@
 
   ## Set Up SHH GoDaddy
 
-  [set up SHH here](https://www.godaddy.com/help/enable-ssh-16102)
+  I followed how to [set up SHH here](https://www.godaddy.com/help/enable-ssh-16102).
 
   I got it to work, but instead of root I had to use my cpanel login:
 
