@@ -1,5 +1,90 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 57, R2
+### 6/6/19
+
+- ## Coding Coach Mentor
+  I reached out to a guy on coding coach but he didn't have enough time to commit to what I wanted. But he agreed to answer questions I send him at his leisure. 
+
+   Many mentors probably sign up looking for a low commitment mentorship, like the person I reached out to. **I think there is room to create an application, or a section of Coding Coach, that is more conducive to a low commitment mentorship.**
+   
+   When you are trying to choose a mentor it feels like dating. You are trying to pick “the one.” That’s time consuming and higher stakes for both the mentor and mentee. But if I had multiple mentors, I could be more casual about who I pick. Likewise, a mentor may be more open to who they are available to if they had many low commitment mentees. 
+   
+   ### So here’s my idea for a low-commitment mentor app:
+
+    - Instead of scheduling meetings, the mentors turn on when they are available and on what mediums (phone, DM). These settings can be different for each of their mentees. 
+      - **Example:** I’m a mentor and I’m going to work on my own project for 2 hours at my computer, but I’m ok with being interrupted. 
+     
+        So turn on my “Available” indicator. I set that I’m available by video chat & text. Only my approved 20 mentees can see this. 
+        
+        However, 3 of my mentees are really annoying! I have mentee “groupings”, so I set my *video availability* to just the 17 mentees. I set only *text availability* for the annoying group, today. Or I could only be available for 5 or my favorite mentees. 
+        
+        If I was a mentor I’d like this set up! It’s sort of like virtual co-working, but better because you can more easily control who has access to you.
+   
+    ## How To Build This?
+    I wonder if I can contribute to coding coach and see if I can build this? Or should I just try to make it on my own? I still need to learn backend to do this. And I probably need a mentor!
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) and setting up my remote server.
+
+  ## Forcing Myself To Ask Questions
+
+  I'm usually reticent about asking questions. I don't want to bother people. I try to figure out the answer before I ask, which is often the right choice. But I take this mentality to an extreme. 
+  
+  I'm going to push myself to ask more than I'm comfortable with. So as soon as I had a question, I forced myself to DM that question to not just one person but two people. Which feels like overkill, and even rude to me. But it is an experiment with getting comfortable with asking.
+
+  ## Getting Help
+
+  I reached out to Brian Morrison II ([@bmorrisondev](https://twitter.com/bmorrisondev)), who had said I could ask him some questions. 
+  ### Question:
+  <img src="log_imgs/que1_6-6.PNG" width="500"/>
+
+  ### Answer:
+  <img src="log_imgs/ans1_6-6.PNG" width="500"/>
+
+  ## What Distro Does My Go Daddy Account Use?
+
+  I tried to find out what my distro was through the command line but none of these worked except the first one which only gives the OS, but not the distro: [How to check OS and version using a Linux command [duplicate]](https://unix.stackexchange.com/questions/88644/how-to-check-os-and-version-using-a-linux-command)
+
+  ## Apache, Ubuntu, What???
+
+  I contacted GoDaddy on chat and asked what distro of Linux my server uses. The agent on chat said "Apache." I figured out that they were wrong: Apache is not a distro, it's something for servers, I'm not quite sure.
+
+  ## VPS vs Dedicated vs Shared Hosting
+  I called GoDaddy later and got an agent who was more knowledgeable. He told me that the distro was Cent 0S. Since I have a shared hosting plan I can't changed that. But If I got a Virtual Private Server or a Dedicated Server I could change the OS. 
+
+  He explained that a Dedicated Server is expensive, it's literally an entire server, sort of like owning your own computer. A Virtual Private Server is in between. I didn't ask more about it, but I imagine it's something like owning a partition of a server.
+
+  Here's a post on the differences between [Shared vs VPS vs Dedicated vs Cloud Hosting](https://wp-rocket.me/blog/shared-vs-vps-vs-dedicated-vs-cloud-hosting/).
+
+  ## What Exactly Is Apache?
+
+  After the agent brought up Apache, I found out "The Apache HTTP Server Project is an effort to develop and maintain an **open-source HTTP server** for modern operating systems including UNIX and Windows," [-apache.org](https://httpd.apache.org). So it's a server.
+  
+  ## Apache vs. MySQL
+  So Apache is a server, but then what is mysql? *"MySQL is an open-source relational database management system,"* [-Wikipedia](https://en.wikipedia.org/wiki/MySQL). Oh right, those are very different. But, in the tutorial we're using MySQL server. So is that in place of an Apache server? I think these things are all part of the "stack."
+
+  >Many people are still working with PHP servers. I love Apache and PHP but hate to say that this setup is becoming obsolete. There are good reasons for this. Node servers are used by companies to run libraries like React, which speeds development of the UI components by a large %, but Node is better even for solo developers.
+
+  -*from [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624)*
+
+  So, it looks like Apache uses PHP. And we're not using PHP, we're using Node.js. So we aren't using Apache.
+
+  ## Stack
+
+  "A ***server stack** is the collection of software that forms the operational infrastructure on a given machine," 
+  -*from [server stack](https://whatis.techtarget.com/definition/server-stack)*
+
+  ### For example, the LAMP stack consists of:
+  >- **Linux:** The operating system (OS) makes up our first layer. Linux sets the foundation for the stack model. All other layers run on top of this layer.
+  >- **Apache:** The second layer consists of web server software, typically Apache Web Server. This layer resides on top of the Linux layer. Web servers are responsible for translating from web browsers to their correct website.
+  >- **MySQL:** Our third layer is where databases live. MySQL stores details that can be queried by scripting to construct a website. MySQL usually sits on top of the Linux layer alongside Apache/layer 2. In high end configurations, MySQL can be off loaded to a separate host server.
+  >- **PHP:** Sitting on top of them all is our fourth and final layer. The scripting layer consists of PHP and/or other similar web programming languages. Websites and Web Applications run within this layer.
+  
+  -*from [What is a LAMP stack?](https://www.liquidweb.com/kb/what-is-a-lamp-stack/)*
+
+  I'm wondering what our stack in the Node Server Setup book is. I messaged Greg to ask him.
+
 ## Day 56, R2
 ### 6/5/19
 
