@@ -72,7 +72,7 @@
 
   ## Stack
 
-  "A ***server stack** is the collection of software that forms the operational infrastructure on a given machine," 
+  "A **server stack** is the collection of software that forms the operational infrastructure on a given machine," 
   -*from [server stack](https://whatis.techtarget.com/definition/server-stack)*
 
   ### For example, the LAMP stack consists of:
