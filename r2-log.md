@@ -1,5 +1,120 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 58, R2
+### 6/7/19
+
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624) and setting up my remote server.
+
+  ## Vanilla Stack
+  Yesterday, I ended the day wondering what stack we're using in the Node server book. I asked Greg([@js_tut](https://twitter.com/js_tut)):
+
+  ![messenger screenshot](log_imgs/vanilla_6-7.PNG)
+  
+  ## Vanilla FTW
+  I thought this was really cool. It's a *vanilla* server! I really dislike working with a billion unnecessary frameworks. Frameworks/modules/libraries have a place in coding, but when you are learning they can be a huge mess.
+
+  Let's say you run into a problem and you're using a bunch of modules. It's going to be really hard to find problem. *Is the bug related to one of the modules? Is it your code? Is it some other technology you're using?* The more minimal your code, the easier it will be to pin point the issue.
+
+  But so many tutorials teach tutti frutti programming (a term I made up, opposite of vanilla). This makes it so much harder to learn. It's rare to find vanilla tutorials, especially the more advanced the subject. I gravitate towards the vanilla tutorials, especially when learning a new subject.
+
+  ![messenger screenshot](log_imgs/vanilla2_6-7.PNG)
+
+  ## Our Stack:
+
+  Greg didn't directly answer what our stack was, but I think it's:
+
+  - MySQL
+  - MySQL Server
+  - Node
+  - Linux/Ubuntu
+
+  ## Getting A Remote Ubuntu Server
+
+  I still want to get an Ubuntu server, so I can follow the tutorial exactly. But my GoDaddy account is Cent OS unless I upgrade it. I probably eventually will upgrade it, but is there a way to get a free Ubuntu server?
+
+  ## Virtual Machine
+
+  I watched this video on virtual machines:
+  [What is a Virtual Machine (VM)? In 3 minutes](https://www.youtube.com/watch?v=yIVXjl4SwVo)
+
+  **Virtual Machine:** Virtual machines allow one or more 'guest' operating systems to run inside another
+
+  So can I make an Ubuntu virtual machine that is just a server?
+
+  ## Servers
+  I watched this video on servers: [What Is A Computer Server?](https://www.youtube.com/watch?v=TQQA8RpKxqg)
+
+  The tutorial pointed out:
+  >You can *turn your computer into a server* by installing software on it that allows it to  be a server.
+
+  So are we setting up a server on an Ubuntu OS? Or is Ubunto an OS just for servers? So it is a server itself?
+
+  >Ubuntu is an open source software operating system that runs from the desktop, to the cloud, to all your internet connected things
+
+  -*from [ubuntu.com](https://www.ubuntu.com/)*
+
+  I read this 3-page tutorial on the difference between Linux and Ubunto. It helped me understand operating systems in general: [What's Ubuntu, and how is it different from Linux?](https://computer.howstuffworks.com/ubuntu.htm)
+
+  ### What is Ubuntu?:
+  >Ubuntu isn't just for personal computers. There's also a version of Ubuntu you can use if you want to turn a computer into a network server.
+
+  -*from [What's Ubuntu, and how is it different from Linux?](https://computer.howstuffworks.com/ubuntu1.htm)*
+
+  So are we using the *server version* of Ubuntu? Or the regular Ubuntu? Is this *a regular Ubunto OS* that we are *putting a server on*? Or are we directly ssh-ing into the server OS version of Ubuntu?
+
+  > This section will walk you through the standard MySQL server configuration on a Ubuntu server, for no particular reason.
+  
+  -*from [Node.js – Server Setup](https://www.patreon.com/posts/node-js-book-26866624)*
+
+  So we're putting MySQL server configuration on an Ubuntu server. I think this means we're using the server version of the Ubuntu OS. But maybe you can have the regular version of Ubuntu on a server. So maybe I'm wrong. 
+
+  ## Server Hardware vs. Software
+
+  I'm confused what makes something a server... is it the hardware? The software? Or both?
+
+  If I can turn my computer into a server, as the youtube video said, then it can't be the hardware that makes a server a server. 
+
+  But if you look at pictures of servers, they have different hardware than computers, most notable no screen or keyboard.
+
+  <img src="log_imgs/servers_6-7.PNG" width="500">
+
+  I found this thread on Quora: [Does server mean hardware or software or both?](https://www.quora.com/Does-server-mean-hardware-or-software-or-both)
+
+  It looks like it can mean both but usually means software.
+  > While "server" can, in some circles as many have pointed out here, refer to a high-powered computer hardware system, I would venture to guess that most of the time when the term "server" is used by an IT or software engineering professional, it is usually referring to software.
+  >
+  >A "server" is merely a piece of software, usually with little or no user interface, that "serves" some kind of data or functionality up to "clients".
+
+  -*from [Does server mean hardware or software or both?](https://www.quora.com/Does-server-mean-hardware-or-software-or-both)*
+  
+
+  But then I found this conflicting information on another site:
+  >While almost any computer that meets the minimum hardware requirements can run a server operating system that alone does not make a desktop computer a true server. Even if the desktop computer had similar processor speeds, memory and storage capacity compared to a server, it still isn't a replacement for a real server. The technologies behind them are engineered for different purposes.
+
+  -*from [Is Server different from a Desktop PC?](https://www.webopedia.com/DidYouKnow/Hardware_Software/difference_between_server_and_desktop.html)*
+  
+  It also mentioned:
+  >a server manages all network resources
+
+  ## What Are Network Resources?
+
+  >Shared resources, also known as network resources, refer to computer data, information, or hardware devices that can be easily accessed from a remote computer through a local area network (LAN) or enterprise intranet. 
+
+  -*from [Shared Resources](https://www.techopedia.com/definition/24796/shared-resources)*
+
+  ## Summary
+  So I'm finishing today with a bit of confusion that I slightly clarified:
+
+  - In the node book, does Greg use:
+    -  the server ***version of Ubuntu*** 
+   
+       or 
+    -  the ***regular version of Ubuntu*** on a server, and then setup up the MySQL Server as the server inside of the Ubuntu OS (like a strange server sandwich)
+  - Seems like nobody truly knows when something is a server and when it isn't.
+  
+
 ## Day 57, R2
 ### 6/6/19
 
