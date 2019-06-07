@@ -108,9 +108,10 @@
   So I'm finishing today with a bit of confusion that I slightly clarified:
 
   - In the node book, does Greg use:
-    -  the server ***version of Ubuntu*** 
+    -  the ***server version of Ubuntu*** 
    
        or 
+       
     -  the ***regular version of Ubuntu*** on a server, and then setup up the MySQL Server as the server inside of the Ubuntu OS (like a strange server sandwich)
   - Seems like nobody truly knows when something is a server and when it isn't.
   
