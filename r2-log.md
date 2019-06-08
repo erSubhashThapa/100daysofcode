@@ -1,5 +1,111 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 59, R2
+### 6/8/19
+
+
+- ## Servers
+  Today, I looked more into servers.
+
+  ## Server Is Software?
+  Yesterday, I found conflicting information about whether a server is the software or the hardware. In response, Marco ([@Wridgeu](https://twitter.com/Wridgeu)) said that it's software:
+
+  <img src="log_imgs/marco1_6-8.PNG" width="500">
+  <img src="log_imgs/marco2_6-8.PNG" width="500">
+
+  ## Ubuntu Server or Regular?
+  Yesterday, I wasn't sure if I should use the **server version** of Ubuntu, or the **regular version** of Ubuntu.
+
+  I talked to Greg. He said it's all set up for you by your hosting service, so he wasn't sure. But probably the server version. So that's what I'll put on my virtual machine. 
+
+
+  ## SSH Into A Virtual Machine?
+  I was wondering if it's possible to SSH into a virtual machine and found this:
+  [Trying to SSH to local VM Ubuntu with Putty](https://unix.stackexchange.com/questions/145997/trying-to-ssh-to-local-vm-ubuntu-with-putty)
+
+  There were a lot of terms that I was not familiar with:
+  - private network
+  - host network
+  - NAT(Natural Address Translation)
+  - port forwarding
+  - network preferences
+  - port
+  - daemon
+
+  But when I look for pages about how to learn backend development, none of them mention learning this stuff. So I'm not sure what all this stuff is considered. 
+
+  So I searched all these terms at once in google and lynda. It looks like this all has to do with "networking" which I know very little about.
+
+  I found this tutorial on some exam called [CompTIA Server +](https://www.lynda.com/IT-Infrastructure-tutorials/Cert-Prep-CompTIA-Server-Exam-SK0-004-Basics/772338-2.html).
+
+  I watched it a little, which clued me that I might be trying to understand [server administration](https://www.lynda.com/IT-Infrastructure-tutorials/Cert-Prep-CompTIA-Server-Exam-SK0-004-Basics/772338-2.html).
+
+  I'm not trying to understand these in detail, I just want to understand the basics.
+
+  ## Notes On "Networking Foundations: Servers" Course
+  I found a course on lynda that covers these concepts: [Networking Foundations: Servers](https://www.lynda.com/Windows-Server-tutorials/Foundations-Servers/503999-2.html)
+  
+  The rest of my log is notes on what I learned.
+
+
+  ## Form factor 
+  
+  "In computing, the form factor is the specification of a motherboard – the dimensions, power supply type, location of mounting holes, number of ports on the back panel, etc" -[Computer Form Factor, wikipedia](https://en.wikipedia.org/wiki/Computer_form_factor).
+
+  Basically the hardware. Towers are form factors that can be used as servers or client side computer. We've probably all seen them with desktop computer setups. So this shows, that the hardware doesn't necessarily make something a server, since towers can be used as PC's or servers.
+  
+  Other form factors: server blades, rack mount server.
+
+  ## Server Components
+
+  Aka computer components, since a server is just a computer. However, computer components in a server are made to be more robust than a PC.
+
+  - Motherboard
+    - Main circuit board
+    - Provides communication for all the components
+  - CPU (Processor)
+    - Located on the motherboard
+    - Have different socket types, needs to match motherboard
+    - Have different speeds
+    - Cache (high speed memory)
+    - Architecture: x86, x64, ARM(not in servers)
+  - RAM(random access memory)
+    - temporary memory
+    - ECC vs non-ECC
+    - DDR2 & DDR3
+    - Different pin configs, needs to match mother board
+  - Expansion Slot
+    - Gives ability to add components to the system (expansion cards)
+  - Interface Ports
+    - ports built into the motherboard or expansion cards
+    - Where you connect your network, monitor, usb
+    - input/output communication
+  - Hard Drives
+    - Magnetic drives vs Solid state drives
+
+  Many components can be changed without having to shut down the server (hot swappable)
+
+  ## Power & Cooling
+
+  Power Factors:
+  - Voltage: Measurement of force of electricity
+  - Amperage: Amount of movement of electricity (current)
+  - Wattage: Actual measurement of electrical usage (volts x amps)
+
+  #### Factors For Determining How Much Power We Need
+  - Consumption: How much power the servers are going to consume.
+  - Redundancy: More power than what's needed so our servers can be dependable.
+  
+  Cooling Factors:
+  - Airflow: In the server room & inside the server itself.
+  - Thermal dissipation: ex: sucking heat away from a component
+  - Baffles and shrouds: deflectors to help with air flow
+  - Fans: exhaust fans- blow the hot air away from components
+  - Liquid Cooling
+
+- ## Thoughts & Feelings
+  I think it will be helpful to dive deeper into servers. But I also wonder if I'm getting distracted by stuff that doesn't matter. If you have any thoughts, I'm always open to critique on my learning path(on my respective twitter posts or linkedin posts for each log.)
+
 ## Day 58, R2
 ### 6/7/19
 
