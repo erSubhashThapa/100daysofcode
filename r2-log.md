@@ -43,7 +43,7 @@
   I'm not trying to understand these in detail, I just want to understand the basics.
 
   ## Notes On "Networking Foundations: Servers" Course
-  I found a course on lynda that covers these concepts: [Networking Foundations: Servers](https://www.lynda.com/Windows-Server-tutorials/Foundations-Servers/503999-2.html)
+  I found a course on lynda that covers the above concepts: [Networking Foundations: Servers](https://www.lynda.com/Windows-Server-tutorials/Foundations-Servers/503999-2.html)
   
   The rest of my log is notes on what I learned.
 
