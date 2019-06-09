@@ -1,5 +1,152 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 60, R2
+### 6/9/19
+
+- ## Servers
+  I continued learning about servers.
+
+  ## Notes On "Networking Foundations: Servers" Course
+  Continuing my notes on: [Networking Foundations: Servers](https://www.lynda.com/Windows-Server-tutorials/Foundations-Servers/503999-2.html)
+
+  ## Installation
+  The instructor installed a **server operating system** on a virtual machine. So this shows us another example that, whether a computer is a server or a pc depends on the software.
+
+  ## Basic Configuration
+
+  After you install a server operating system, you then have to do some basic configurations. [Video Here](https://www.lynda.com/Windows-Server-tutorials/Basic-configuration/503999/539126-4.html?autoplay=true)
+
+  The instructor set the IP address of the VM but I didn't understand where he got the number from. But he said it was important to set this IP address up correctly to connect to the domain.
+
+  You need to do these configurations before you give a specific "role" to your server. I don't know what "role" means yet.
+
+  ## Server Roles
+  There are different services a server can provide.
+
+  There are a bunch of different roles:
+  ![](log_imgs/roles_6-9.PNG)
+
+  I didn't realize that a server can do so many different things. Am I trying to make a web server?
+
+  After the instructor sets up his server as a DNS, he says "it will go ahead and install the role and pretty much make me become a DNS name server in my environment." What exactly does "in my environment" mean? How is that set up? How far does the environment reach? Is it just his computer? A network of computers? All the computers connected to the web?
+
+  Your server can have more than one role.
+  
+  "And so that's something that you need to evaluate in your environment, and understand what servers are providing what roles out on your network." Two words that I don't fully grasp: **environment** and **network**.
+
+  Clarification: 
+  > Numerous applications run in a client/server environment, this means that client computers (computers forming part of the network) contact a server, generally a very powerful computer in terms of input/output
+
+  -*from [Client/Server Environment](https://ccm.net/contents/152-client-server-environment)*
+
+  ## Access Methods For Server Administration
+
+  To save space, most servers don't have the peripherals we have on personal computers. So we need to know how to access the servers. 
+
+  - Local Hardware Administration
+    - KVM switch box (key board, video, mouse)
+    - Serial cable (old method)
+    - Virtual administration console (if you're trying to manage virtual servers)
+
+  What exactly is a "virtual server"? Is that a server on a virtual machine?
+
+  >On the Internet, a virtual server is a server (computer and various server programs) at someone else's location that is shared by multiple Web site owners so that each owner can use and administer it as though they had complete control of the server.
+
+  -*from [DEFINITION
+virtual server](https://searchnetworking.techtarget.com/definition/virtual-server)*
+
+  So a virtual server is what GoDaddy said I could upgrade to a [few days ago](https://github.com/DashBarkHuss/100-days-of-code/blob/master/r2-log.md#vps-vs-dedicated-vs-shared-hosting).
+
+  - Network-Based Hardware Administration
+    - KVM over IP (via TCP/IP, connect to a KVM switch box)
+    - iLO
+    - iDRAC
+
+
+  I don't know why the instructor called this last section "inventory." It's just ways to access servers remotely:
+  - Inventory
+    - Remote Desktop Protocol(RCP)
+    - Secure Shell (SSH), doesn't show you actual desktop
+    - Virtual Network Computing(VNC)
+    - Command Line
+
+   
+
+   ## Maintenance
+
+   You can see if your server is running properly in a few ways.
+
+   Within the operating system, you can use certain tools to help see if the system is running properly.
+
+   In a Windows Server 2012 R2 OS, you have the Server Manager, which opens by default when you log in. On the button of the screen,you can see different server roles. If everything is green it's all good.
+
+   ![](log_imgs/maitenance_6-9.PNG)
+
+   Another tool that Microsoft gives you is the Task Manager. It shows the different application that are running. (like activity monitor?) You can end processes. You can look at memory, CPU, and network.
+  
+  You also have the Event Viewer on Microsoft. Here you can see logs of activity. You can filter the logs to see warnings and errors. It's good to check this regularly to catch problems before they affect users. What is the Event Log on Mac? 
+  
+  You can also find logs in another place. Logs associated with just specific server roles can be found in the managers for those servers.
+
+  Other tools on Microsoft:
+  - Resource Monitor
+    - processor performance
+    - disk performance
+    - network performance
+    - memory performance
+  - Performance Monitor
+    
+    Can show us if we have a performance issure, then we need to determine if it's the  sorftware or hardware
+
+  There are also third party tools.
+ 
+  ## Asset Management And Documentation
+  - Licensing
+    
+    When you purchase software, you purchase the right to use it. A vendor can audit you and make you show them the license.
+  - Labeling
+    
+    Label your servers and workstations, I'm not totally sure what this means. Physically labeling them with a labeler? What?
+  - Warranty
+    
+    Keep track of warranties on hardware, and where to claim warranties.
+
+  - Lifecycle Management
+    
+    Aquiring hardware, using it, and getting rid of it.
+
+    - Procurement
+
+      What are the procedures we go through when we procure hardware?
+
+    - Usage
+
+      How will that asset be used and by who? If it's software, what kind of licenses are needed?
+
+    - End Of Life
+
+      When are we done with this asset?
+    
+    - Disposal
+  
+      How will we dispose the hardware? Security issues.
+    
+  - Inventory 
+    - Make
+    - Model
+    - Serial number
+    - Asset tag
+  
+  - Documentation
+    - Maintain service manuals
+    - Diagrams of network, architecture, data flow
+    - Recovery Processes
+    - Change management plans
+    - Service level agreements
+
+  What are change management plans and service level agreements?
+     
+
 ## Day 59, R2
 ### 6/8/19
 
