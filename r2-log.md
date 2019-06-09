@@ -24,7 +24,7 @@
   There are different services a server can provide.
 
   There are a bunch of different roles:
-  ![](log_imgs/roles_6-9.PNG)
+  <imd src="log_imgs/roles_6-9.PNG" width="500"/>
 
   I didn't realize that a server can do so many different things. Am I trying to make a web server?
 
