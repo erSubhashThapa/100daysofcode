@@ -82,11 +82,11 @@
 
   - RAID 5
     <img src="log_imgs/raid5_6-10.PNG" width="400"/>
-  - Disk striping with parity
-  - Min 3 disks
-  - Increased read performance but decreased write performance by a little
-  - Efficient disk space utilization
-  - Provides fault tolerance
+    - Disk striping with parity
+    - Min 3 disks
+    - Increased read performance but decreased write performance by a little
+    - Efficient disk space utilization
+    - Provides fault tolerance
 
   There are also hybrids of these.
 
