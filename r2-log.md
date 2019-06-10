@@ -1,5 +1,187 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 61, R2
+### 6/10/19
+
+
+- ## Notes On "Networking Foundations: Servers" Course
+  Continuing my notes on: [Networking Foundations: Servers](https://www.lynda.com/Windows-Server-tutorials/Foundations-Servers/503999-2.html)
+  
+
+
+  ## Virtualization
+  Before virtualization, you could only use a server for one thing. This would waste a lot of the servers capabilities.
+
+  A virtual machine is a set of files on a hard drive that emulate an actual computer.
+
+  The actually machine that the virtual machine is on is known as the host.
+
+  A host must have certain specifications and the hardware to support virtualization.
+  
+  A virtual machine can be set up to network with the internet or just with the other virtual machines. Can it have even more network setups?
+
+  ## Storage Devices and Technologies
+
+  - Disk Specifications
+    - RPM (faster it spins the faster you can access data)
+    - Dimensions
+    - Capacity
+    - IOPS (input/output per second)
+    - Seek time and latency (speed of actuator arm)
+    - Hot Swappable
+  
+  - Disk Interfaces
+    
+    How you connect the harddrives to the server
+
+    - Serial Attached SCSI (SAS)
+    - Serial ATA (SATA)
+    - SCSI
+    - USB
+    - Fibre Channel (common for shared storage)
+
+  - Other Storage Technologies
+    - Direct-attached Storage (DAS)
+    - Network-attacked storage (NAS, storage device accessable of TCP/IP network)
+    - Stoarage area network (SAN, like NAS but outside of LAN, connected by highspeed private network)
+    - Just a bunch of disks (JBOD, not organized & no fault tolerance)
+
+  - Other things not so popular
+    - Tape
+    - Optical
+    - CompactFlash
+
+  ## Fault Tolerance and Capacity Planning
+
+  Things to consider when planning a storage solution:
+
+  - Space
+  - Performance
+  - Fault tolerance
+
+  Fault Tolerance: A way to ensure that in the event of a hardware failure with one of your hard drives, you not only don't lose the data, but you, in some cases, may not even lose access to the data while the failure's taking place.
+
+  ## RAID
+  RAID: redundant array of independent disks.
+
+  - RAID 0
+    <img src="log_imgs/raid0_6-10.PNG" width="400"/>
+    - Disk striping
+    - No fault tolerance
+    - Min 2 disks
+    - Increased read performance because no fault tolerance
+    - 100% drive space utilization
+
+  - RAID 1
+    <img src="log_imgs/raid1_6-10.PNG" width="400"/>
+    - Disk Mirroring
+    - Exactly 2 disks
+    - Increased space utilization
+    - 50% drive space utilization
+    - Provides fault tolerance
+
+  - RAID 5
+    <img src="log_imgs/raid5_6-10.PNG" width="400"/>
+  - Disk striping with parity
+  - Min 3 disks
+  - Increased read performance but decreased write performance by a little
+  - Efficient disk space utilization
+  - Provides fault tolerance
+
+  There are also hybrids of these.
+
+  ## Capacity Planning Considerations
+
+  - OS Growth
+    - Patches
+    - Service packs
+    - Log files
+    - Temp files
+  - Data Growth
+    - Customer Data
+    - Archived Data 
+    - Recovery growth
+  
+  - Mitigation Strategies
+    - Disk quotas (limiting how much space a user is allowed)
+    - Compression (take data and compress it, but performance decreases so should be with older not regularly accessed data)
+    - Regular cleanup 
+    - Routine archival (when you can't delete but you can move it and store it somewhere else)
+  
+  ## Physical Security
+
+  **Multifactor Authentication:** When you have to use more than of the following
+    - What you know (password)
+    - What you have (smartcard)
+    - Who you are (finger print)
+
+  **Mantrap:**
+
+  <img src="log_imgs/mantrap_6-10.PNG" width="400"/>
+
+  ## Server Hardening
+
+  - OS Hardening
+    - Stop and/or uninstall unneeded services
+    - Close unneeded ports
+    - Minimize software installations
+    - Keep security patches up to date
+  - Application Hardening
+    - Disable/uninstall unneeded...
+      - services
+      - roles
+      - features
+    - Install latest version, updates, and patches
+
+  - Hardware Hardening
+    - Disable unneeded hardware and physical ports/devices
+    - BIOS password
+    - Disable Wake-on-LAN if it's not a feature you're using
+    - Set appropriate boot order
+    - Chassis locks
+
+  - Endpoint Security
+    - Intrusion detection system (IDS)
+      - Host-based
+      - Network based
+    - Anti-malware software
+    - Vulnerability scans
+
+
+  If it's not needed get it out. You want the fewest number of vulnerability points possible.
+
+  ## Access Control
+
+  You can set what permissions different users are allowed.
+
+  ## Environment Control & Storage Disposal.
+
+  - UPS (uninterrupted power supply)
+    - Automated graceful shutdown
+  - Power Distribution Unit
+
+  - Safety Issues
+    - Electrostatic Discharge procedures
+    - Fire Suppression
+    - Rack Stability
+    - Floor load limitations
+    - Sharp edges and pinch points
+  - HVAC Issues
+    - Temperature
+    - Humidity
+    - Air flow
+    - Hot aisle/cold aisle
+  - Secure Disposal
+    - Soft wipe
+    - Hard wipe
+    - Remote wipe
+    - Physical destruction (dispose pieces in different places)
+
+  ## Basic IP Configuration
+  The instructor showed where he configured the IP address on his server but he didn't explain how he got that IP address. I did a bit of googling but the results were not so great. My question is probably so off base that my results aren't going to help. So I messaged my question to someone on twitter instead.
+  
+
+
 ## Day 60, R2
 ### 6/9/19
 
