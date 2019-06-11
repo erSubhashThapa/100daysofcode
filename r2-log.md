@@ -79,7 +79,7 @@
   ## The World Wide Web
   Watched the next youtube video: [The World Wide Web: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8)
 
-  The World Wide Web is not the same as the internet. It runs on top of the internet. The www is a huge distributed application running on millions of servers world wide. You access it using a web browser. Pages are the fundamental building blocks of the www. Hyperlinks connect different pages.
+  The World Wide Web is not the same as the internet. It runs on top of the internet. The www is a huge distributed application running on millions of servers world wide. You access it using a web browser. Pages are the fundamental building blocks of the www . Hyperlinks connect different pages.
 
 
 
