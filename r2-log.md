@@ -1,5 +1,89 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+
+## Day 62, R2
+### 6/11/19
+
+- ## Server Etc.
+  Continuing my journey into understanding backend.
+
+  ## IP Address
+  Yesterday I was confused how the instructor got the IP address that he used for his server. I asked a peer on twitter, Jacob M-G Evans([@JacobMGEvans](https://twitter.com/JacobMGEvans)),  for help. Jacob said you can get the IP address by running `ifconfig` in the terminal if  you're on a mac.
+
+  > If the virtual machine is local, then yes. But if your trying to get the IP of the VM it would be the same, might even be able to configure the VMs IP yourself
+  >
+  > No matter what the ifconfig command will give the IP, depending on what IP you need and what it is for.
+  
+  -*Jacob M-G Evans [@JacobMGEvans](https://twitter.com/JacobMGEvans)*
+  
+  But if the server already knows the IP address in the terminal, why do you have to put it in the configurations? What's the point? Doesn't the virtual machine have access to this, if you can access this through the command line? Why did the instructor put it in his configurations?
+
+  > Whether you are using host-only, network address translation (NAT), or bridged networking, each virtual machine must be assigned an IP address. For host-only networking, the host must also be assigned an IP address.
+
+  -*from [Assigning an IP Address to a Virtual Machine](https://stuff.mit.edu/afs/sipb/project/vmdialup/archive/i386_linux24.old/lib/vmware-console/help/gsx/networking_assignip.htm)*
+
+  ## Networking
+
+  I decided I need to understand networks and IP addresses more, so I started watching [Networking Foundations: Networking Basics](https://www.lynda.com/Windows-Server-tutorials/Foundations-Networking-Networking-Basics/408231-2.html)
+
+  **Notes:**
+
+  ## Logical and Physical Topologies
+
+  **Physical topology:** Referes to the physical layout of the wires in a network.
+
+  **Logical topology:** Refers to how the data moves through the networks
+
+  Networks can have a different physical topology than logical topology.
+
+  **This tutorial isn't so good, so I'm going to move on.**
+
+  ## IP Addresses
+  > An IP address is split up into a network code and a host id.
+  
+  -*from [IP Addressing and How it Works](https://www.youtube.com/watch?v=KFooN7Mu0IM)*
+
+  <img src="log_imgs/ip_6-11.PNG" width="500"/>
+  
+  ## Computer Networks
+  Watched this youtube video: [Computer Networks: Crash Course Computer Science #28](https://www.youtube.com/watch?v=3QhU9jd03a0)
+  
+  Clarified that networks are actually connected by ethernet cables or wifi. Not all networks are internet. A computer connected to a printer can be a network.
+  
+  ### Local Area Networks 
+  Relatively small networks of close by computers. LANs can be as small as two machines or as big as a university campus with thousands of computers.
+
+  ### The Internet
+  The internet is the biggest computer network. It interconnects a bunch of smaller networks allowing communication.
+
+  ## The Internet
+  Watched the next youtube video: [The Internet: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8))
+  
+  Clarified that you LAN is the first part your computer goes through to get to the internet. It's every device in your house connected to your wifi router.
+
+  The router connects to a Wide Area Network (WAN), which is a router run by your ISP.
+
+  There will be a regional router like one for your neighborhood. That one connects to an even bigger WAN, like one for your whole city.
+
+  You can see the route that data takes to different places on the internet by running `traceroute somesite.com` in the command line.
+
+  ### Internet Protocal
+  Internet packets have to conform to a protocol called the Internet Protocol.
+
+  ### UDP
+  IP gets the packet to the right computer but UDP gets the packet to the right program running on that computer.
+
+  ## TCP
+  Like UDP, but for when you need all the information,for example in an email instead of streaming video. In TCP packets are given sequential numbers. The receiver has to send back an acknowledgement(ack) to the sending computer, and then the sender can send the next packet. It can send many packets at once and have many outstanding acks.
+
+  ## The World Wide Web
+  Watched the next youtube video: [The World Wide Web: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8)
+
+  The World Wide Web is not the same as the internet. It runs on top of the internet. The www is a huge distributed application running on millions of servers world wide. You access it using a web browser. Pages are the fundamental building blocks of the www. Hyperlinks connect different pages.
+
+
+
+
 ## Day 61, R2
 ### 6/10/19
 
