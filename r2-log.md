@@ -1,5 +1,52 @@
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 63, R2
+### 6/12/19
+
+- ## Backend
+  Continuing my journey into understanding backend.
+
+  <img src="log_imgs/ip_6-12.PNG" width="400"/>
+
+  ## Continued [The World Wide Web: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8):
+  Some Terms: 
+  - URL (uniform resource locator)
+  - DNS Server (Domain name search)
+  - Web Server
+
+  ### Paraphrased from [The World Wide Web: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8):
+
+  When you request a site, the first thing your computer does is a DNS lookup. The DNS server takes the domain name and returns the IP address of the respective computer(the web server). Then your computer opens a TCP connection to a computer that's running a special piece of software called a web server. The standard port number for web servers is port 80. The computer is now connected to the web server at the correct address, but the next step is to ask that web server for a hypertext page. To do this it uses Hypertext Transfer Protocol (HTTP).
+
+  The first browser was released to the public in 1991. So the World Wide Web is as old as me!
+
+  <img src="log_imgs/crashcourse_6-12.PNG" width="400"/>
+
+  
+  ## CrashCourse Computer Science Playlist
+  I didn't watch all of these but here is the whole [CrashCourse computer science playlist](https://www.youtube.com/playlist?list=PL8dPuuaLjXtNlUrzyH5r6jN9ulIgZBpdo).
+
+  ## Network Adapter
+  I'm trying to understand more about network configurations and I came accross this term.
+
+  >A network adapter is the component of a computer’s internal hardware that is used for communicating over a network with another computer. It enable a computer to connect with another computer, server or any networking device over an LAN connection. A network adapter can be used over a wired or wireless network.
+  
+  -*from [What is a Network Adapter](https://www.techopedia.com/definition/8546/network-adapter)*
+
+  ## Networking For Web Developers
+  I found this udacity course I might want to go back to so I'm saving it here:
+  [Networking For Web Developers](https://classroom.udacity.com/courses/ud256/0)
+
+  ## [Learning VirtualBox](https://www.lynda.com/Linux-tutorials/Learning-VirtualBox/597026-2.html)
+  I've been surfing the web trying to find more information about host-only networks, NATs, bridged networks, and other networking concepts.
+  
+  I decided it's enough theory for now, and I need to just start doing. So I'm going to set up virtual box with the course, [Learning VirtualBox](https://www.lynda.com/Linux-tutorials/Learning-VirtualBox/597026-2.html). Then I can set up a server and continue the Node Server Setup book.
+
+  ## Virtualization
+  A hypervisor provides a protected space for a guest OS. Hypervisor provides some of the host's resources to the guests: cpu resources, memory, storage, and communications.
+
+  ## CPU
+  The tutorial said I should understand what CPU is. I started watching [The Central Processing Unit (CPU): Crash Course Computer Science #7](https://www.youtube.com/watch?v=FZGugFqdr60) but it seemed like to needed to have watched the pervious videos in the CrashCourse playlist to understand it. So I read [Explain CPU Threads Like I'm Five](https://dev.to/venkateshbella7/explain-x-like-im-five-2d20). So it seems like CPU directs processes? I read [What Is A CPU](https://www.digitaltrends.com/computing/what-is-a-cpu/).
 
 ## Day 62, R2
 ### 6/11/19
