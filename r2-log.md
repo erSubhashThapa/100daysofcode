@@ -9,7 +9,7 @@
   ## IP Addresses
 
   Brian Morrison II
-[@bmorrisondev](https://twitter.com/bmorrisondev) answered my questions about IP addresses. Why would yuo need to configure them on your server if the server already know's it's IP address?
+[@bmorrisondev](https://twitter.com/bmorrisondev) answered my questions about IP addresses.
 
   <img src="log_imgs/ipq_6-12.PNG" width="400"/>
   
