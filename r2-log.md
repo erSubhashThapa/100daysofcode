@@ -5,7 +5,14 @@
 
 - ## Backend
   Continuing my journey into understanding backend.
+  
+  ## IP Addresses
 
+  Brian Morrison II
+[@bmorrisondev](https://twitter.com/bmorrisondev) answered my questions about IP addresses. Why would yuo need to configure them on your server if the server already know's it's IP address?
+
+  <img src="log_imgs/ipq_6-12.PNG" width="400"/>
+  
   <img src="log_imgs/ip_6-12.PNG" width="400"/>
 
   ## Continued [The World Wide Web: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8):
