@@ -13,8 +13,7 @@
 [@bmorrisondev](https://twitter.com/bmorrisondev) answered my questions about IP addresses.
 
   <img src="log_imgs/ipq_6-12.PNG" width="400"/>
-  
-  
+  <br>
   <img src="log_imgs/ip_6-12.PNG" width="400"/>
 
   ## Continued [The World Wide Web: Crash Course Computer Science #29](https://www.youtube.com/watch?v=AEaKrq3SpW8):
