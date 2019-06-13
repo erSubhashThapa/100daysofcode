@@ -1,6 +1,31 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 64, R2
+### 6/13/19
+
+- ## Spark AR
+  I started looking at Spark AR, which is the tool you use to make instagram filters. Coding is involved somewhere, but not in the begginer tutorials, so I'm going to go back to this for outside of my coding time.
+
+  [Tutorial: Quick Start Guide to Spark AR Studio](https://sparkar.facebook.com/ar-studio/learn/documentation/tutorials/quick-start-guide)
+
+- ## Backend
+  Back to backend. Last time I left off watching a tutorial on VirtualBox so I can run a virtual server. Greg([@js_tut](https://twitter.com/js_tut)) updated his Node Book yesterday, so I'm going to check out the changes to it today. [Here](https://www.patreon.com/posts/node-api-source-27588087) is the updated version.
+
+  ## Ubuntu Server
+
+  Ubuntu server is a Linux distribution that's intended to be run **headless**. Headless means without a display attached.
+
+  I was watching [Learning Ubuntu Server](https://www.lynda.com/Linux-tutorials/Learning-Ubuntu-Server/718668-2.html). I really want to just get this server up! But it suggested watching all these other prerequisites without suggesting any specific course. I'm having trouble figuring out where to learn all this stuff about networks, ports, blah blah blah. 
+
+  I started to watch this but it was hard to understand:[Network Address Translation(Nat)](https://www.lynda.com/Cisco-Switches-tutorials/Network-Address-Translation-NAT/445426/475831-4.html)
+
+  This video really helped me understand the different networks: NAT, NATNetwork, Bridged, Host-only, and internal: [Networking with VitrualBox](https://www.lynda.com/Linux-tutorials/Networking-VirtualBox/597026/678866-4.html?srchtrk=index%3a1%0alinktypeid%3a2%0aq%3alearning+virtual+box%0apage%3a1%0as%3arelevance%0asa%3atrue%0aproducttypeid%3a2)
+
+  <img src="log_imgs/network_6-13.PNG" width="500"/>
+
+  I set up my ubuntu server on virtual box following [this video](https://www.lynda.com/Linux-tutorials/Installing-Ubuntu-Server/718668/779168-4.html). I powered off my machine for the day. I'm not sure what that does, but I hope I can get back to it tomorrow without issue.
+
 ## Day 63, R2
 ### 6/12/19
 
