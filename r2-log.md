@@ -1,6 +1,103 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 66, R2
+### 6/15/19
+
+  I am really not feeling so hot. I'm so tired. I don't think I'm sleep deprived, it's just that my sleep schedule shifted. And I've had too much coffee these past few days. So excuse the quality of my last two posts. I'm in LA, where I have lots of friends and family. I'm having trouble keeping a good schedule with the influx of hanging out time. Pray for me.
+
+  Being in LA is a unique situation. I'm going to have to be more disciplined when I get home and have rules about how often I can go out for my own health and sanity. For some people it's fine to go out a lot and stay up late. But either I'm sensitive, or maybe other people just don't want to put in the effort to function at 100%. Maybe most people are ok functioning at 75% or with the aid of coffee, alcohol, meds, etc. I need to put some rules in place to prevent this.
+
+- ## Server
+  Yesterday, I was wondering if the root login was different than "dash" but I think "dash" IS my root login.
+
+   ## MySQL User
+   Yesterday, when I installed mysql, it didn't ask me to add a root user.
+
+  In the video, [Installing and Configuring MySQL](https://www.lynda.com/Linux-tutorials/Installing-configuring-MySQL/718668/779185-4.html?autoplay=true), after installing mysql_server, the instructor runs:
+  ```bash
+  sudo mysql_secure_installation
+  ```
+   to set  root user password. The instructor disallows root login remotely, but does that apply to using ssh? 
+
+   I wonder if I can run `sudo mysql_secure_installation` again to change the settings later?
+
+   ## More On Uncomplicated Firewall
+
+  >Right now we can access this database server locally. So a web application or something like that running on this machine would be able to use the database. But we can access it remotely. If we did need to access it remotely we'd need to add a rule to the firewall to allow access through tcp port 3309.
+  
+  -*[Installing and Configuring MySQL](https://www.lynda.com/Linux-tutorials/Installing-configuring-MySQL/718668/779185-4.html?autoplay=true)*
+
+  ```bash
+  sudo ufw allow 3309/tcp
+  ```
+
+  This further explains what ufw is doing. So does ufw override "Disallow root login remotely"? 
+
+  Even though I selected "Disallow root login remotely" I was still able to get into mysql from test_machine with an ssh connection to ubuntu_server.
+  
+   ![](log_imgs/disallow_6-15.PNG)
+
+   Maybe this is because I already ran that ufw command yesterday. I also didn't have to run `systemctl mysql start` to login to mysql. I exited and ran `systemctl mysql start` again anyways just to make sure I don't run into any bumps down the road. I'm not totally sure what this command does. Does it start mysql? Can I stop mysql? Is there a way to see what state (start or stopped) mysql is in?
+
+   ## Grep
+   I played around with `grep` to try to find the mysql configuration file but it wasn't working how I expected. I was able to use `find` but in a limited way.
+
+- ## Thoughts and Feelings
+    Sleep deprived right now. I'm in LA and we know so many people here so we've been hanging out late. I don't have enough sleep. Maybe I do but my sleep schedule is messed up and I've been drinking coffee which makes you feel more tired. So I am feeling messed up. Angry. Irritable. Pissed. Hard time focusing. I really don't like this.
+   
+
+## Day 65, R2
+### 6/14/19
+
+- ## Server
+  When I tried to connect to my ubuntu server from the host, it didn't do anything. I think it's because the Ubuntu server is on a NATnetwork. Which means I can't connect to it from the host. But I can connect to it from another vm: [Unable to ssh into Ubuntu VM running w/ a NAT ip address even w/ openssh-server installed](https://askubuntu.com/questions/224391/unable-to-ssh-into-ubuntu-vm-running-w-a-nat-ip-address-even-w-openssh-server)
+
+  I could just change the network to bridged, but then I'd have to find more tutorials on that. And I might run into more problems with the tutorial down the road. I just want to get through this tutorial so I can get to the Node book. 
+
+  ## Matching Environments
+  
+  There's a lot I'm doing that's unnecessary. I'm doing it for the sake of following the tutorials. It's easier to get through the tutorial when my environment matches the instructors.
+  
+  I don't even need this Ubuntu Server to set up a node server. But the Node book only shows how to do it through an ubuntu server. So, in order to get through the tutorial I'm setting everything up so I can follow the steps exactly. Once I do that, I'll have more experience and understanding. Then I can try it on localhost or whatever I want. 
+  
+  When my environment didn't match the instructor's, I ran into all these side issues: Does this step apply to me? This step doesn't work in my environment. etc. Which is doubly difficult when the subject is new and you don't understand what you're doing yet.
+
+  So I just need to match the environment so I can get through the tutorial and learn.
+
+  ## Installing Second VM
+  I created another virtual machine, called **"test_machine"** to ssh into the first vm, **"ubuntu_server"**, like the instructor does. But I didn't know exactly what to do for the network configurations. 
+
+  This is what the instructor did for **his ubuntu server.**
+
+  <img src="log_imgs/instructor_6-14.PNG" width="500"/>
+
+  I did the same thing, but what do I do for **my second ubuntu** server? I guessed that only the address had to be different. I'm not sure if I did it right.
+
+  <img src="log_imgs/dash_6-14.PNG" width="500"/>
+
+  I was able to ssh into the **"ubuntu server"**, but the server 
+
+  ## Uncomplicated Firewall
+  What is uncomplicated firewall?
+  > Assuming mysql installation was successful, you can now use the ufw utility program (Which stands for Uncomplicated Firewall.)
+
+  -*from [Node Server Setup](https://www.patreon.com/posts/node-api-source-27588087)*
+
+  >You can use ufw allow and ufw disallow commands to allow incoming and outgoing trac from a program.
+
+  -*from [Node Server Setup](https://www.patreon.com/posts/node-api-source-27588087)*
+
+
+  ## No Root User, No Mysql Password
+  When I set up the ubuntu server, I set up a login with my name, "dash". But in the Node book, Greg uses the root login. I'm wondering if that's fundamentally different.
+
+  When I installed mysql server on ubuntu_server it didn't ask to set a up a username and password, so `mysql -u root -p` doesn't work. Setting up user on the ubuntu server was not in the Node tutorial. So I'm confused. 
+
+  I guess I need to add it?
+
+  Do I want mysql on the server(ubuntu_server) or on the computer ssh'ing into the server(test_machine)?
+
 ## Day 64, R2
 ### 6/13/19
 
