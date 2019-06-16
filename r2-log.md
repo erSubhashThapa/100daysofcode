@@ -1,6 +1,83 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 67, R2
+### 6/16/19
+
+- ## Server
+  ## Can't Login Without Sudo
+  I can't login to mysql without sudo now. 
+
+  ```bash
+  mysql -u root -p
+  Enter password:
+  ERROR 1698 (280000): Access denied for user 'root'@'localhost'
+  ```
+
+  However `sudo mysql -u root -p' works.
+
+  I'm trying to figure out why, and if that's bad.
+
+  ### Questions
+  What's the difference between logging in with sudo and without? I also found I can login without a password if I use sudo. How does that work? Why have a password then? Is it that only I can login without a password when I'm on my machine, but you can't login without a password with other machines?
+
+  ## Sudo Issue Solved
+  I asked Greg([@js_tut](https://twitter.com/js_tut)) and he said it's normal to have to login with sudo. 
+  
+  The only reason he is able to login without sudo in the tutorial, is because he granted all privileges to users. That makes your server vulnerable but it's ok for development.
+
+  Greg also said:
+
+  >...sudo is your root user. Many commands wont work w/o it
+  >
+  >because mysql was installed using root user it normally has admin access to all mysql activity (deleting database etc)
+  >
+  >only root can give privileges to other users so they can become root-like
+
+  ### I'm confused about this:
+
+  Sudo is your root user, but that's your systems root user. But you also have a root user in mysql. So is he saying the systems root user has access to delete databases? Or mysql's root user? Which root user are we talking about here?
+
+  I realized too, that I'm logged in as dash on my ubuntu_server, not the root user. I checked to see all the users with `less /etc/passwd` and I saw root and dash. So they're not the same. Maybe if I was already logged in to root I wouldn't have to run sudo?
+
+  I also realized, I never set a root password. So how do I login to root?
+
+  I think I might have ssh'd into the root of ubuntu_server and added mysql on root. And now I have to sudo in because dash@localhost doesn't have permission. I don't know how that works because I can't even login to root on the ubuntu_server itself.
+
+  ## Table Content
+  I tried to view the table content for th e users table.
+  ```mysql
+  SELECT * FROM users;
+  ```
+  But this command showed the table data all mish-moshed.
+
+  <img src="log_imgs/table_6-16.PNG" width="400"/>
+
+  But I was able to see the individual columns:
+
+   ```mysql
+  SELECT users FROM users;
+  ```
+  
+  ## How do you scroll up/down on the Linux console?
+  **VM Ubuntu on a Mac:** fn + shift + up/down arrows
+
+
+- ## Thoughts and Feelings
+  Warning, I am sleep deprived which affects my mindset, so the following may be more negative than usually.
+
+  I still wasn't able to get a lot of sleep last night. I'm having a difficult time putting my foot down about my sleep schedule and my priorities.
+
+  I always assume most people want to support your goals but I'm finding that a lot of people don't care. There are a few people who are really supportive of my goal to code everyday, but in practice most people, even if they think they support you, try to derail you by encouraging you to take day off. Usually for their benefit.
+  
+  On the flip side, I have never been encouraged to try harder or NOT skip a day of coding(or my diet, sleep schedule, or workouts). 
+
+  If I am doing something on my own accord, that is usually not enough for people. So I have two options. I either have to be more forceful about my priorities. Or I can hack the situation. I can put *something else* on the line. 
+  
+  I can **"have to"** get up at 6am to code because I am meeting with someone. Or I can **"have to"** code two hours a day, because if I don't I will have to pay $100 to my minder. If someone else is involved, then other people may respect my routine more. People have a hard time respecting pure discipline driven by goals and no outside forces.
+  
+  
+
 ## Day 66, R2
 ### 6/15/19
 
