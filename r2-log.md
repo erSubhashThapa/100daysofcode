@@ -43,6 +43,10 @@
   I also realized, I never set a root password. So how do I login to root?
 
   I think I might have ssh'd into the root of ubuntu_server and added mysql on root. And now I have to sudo in because dash@localhost doesn't have permission. I don't know how that works because I can't even login to root on the ubuntu_server itself.
+  
+  ## Root User
+
+  I read more about root user in [Edward Falk's answer here](https://unix.stackexchange.com/questions/291454/difference-between-sudo-user-and-root-user).
 
   ## Table Content
   I tried to view the table content for th e users table.
