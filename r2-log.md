@@ -1,6 +1,68 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 68, R2
+### 6/17/19
+
+- ## Backend, Networking etc.
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) working with my network.
+  
+  ##  Structure of the project?
+  >At one point, you will want to limit your MySQL database access to localhost only. This means only your Node server can connect to the database directly.
+
+  I'm still confused about how the end of this is going to look. 
+  
+  I got node on my host machine now. But I have a "remote" server on another machine (which is actually on just a virtual machine for learning purposes). 
+  
+  So are we going to move the node application we made earlier to the machine with the ubuntu server? I think so.
+
+  ## Sequal Pro
+  Now we can't connect to the database on the ubuntu_server from Sequal Pro. The ubuntu_server is on a NATnetwork and the host can't access that. 
+  
+  I knew this wasn't going to work when I set it up, but I just wanted to get through the last section.
+  
+  Now do we start form scratch with a different network setup? Or can I change the network on my ubuntu_server without starting form scratch?
+
+  > NAT is useful because it protects our guest systems from the Internet at large; but in order to access the them, we need to set up port forwarding to access the guests from the host
+
+  -*[How-to: VirtualBox Networking Part Two - NAT and Bridged](https://catlingmindswipe.blogspot.com/2012/06/how-to-virtualbox-networking-part-two.html)*
+
+  ## Connecting The VM to the Host
+
+  I read through and skimmed through these articiles:
+
+  [How-to: VirtualBox Networking Part One - NAT and Bridged](https://catlingmindswipe.blogspot.com/2012/06/how-to-virtualbox-networking-part-one.html)
+
+  [How-to: VirtualBox Networking Part Two - NAT and Bridged](https://catlingmindswipe.blogspot.com/2012/06/how-to-virtualbox-networking-part-two.html)
+
+  [How to Forward Ports to a Virtual Machine and Use It as a Server](https://www.howtogeek.com/122641/how-to-forward-ports-to-a-virtual-machine-and-use-it-as-a-server/)
+
+  I followed this article: [How to SSH into your VirtualBox Guest](https://linuxhint.com/ssh_virtualbox_guest/). But Once I got here:
+
+  > Check your router settings to see if the same works for you.
+
+  How do I check? I'm not usually on my own router. I'm sometimes on my verizon hotspot, but usually I'm on other routers at cafe's or friends houses. So can I still check this info? 
+  
+  I tried following [Access the Web-Based Setup Page of the VoIP Router](https://www.cisco.com/c/en/us/support/docs/voice-unified-communications/spa8000-8-port-ip-telephony-gateway/108646-setup-voip-108646.html). I found the routers IP address and entered in into browser like the webpage says, but I got, "This site can’t be reached" because the IP address refused to connect.
+
+  ## More Info On the IP Address
+
+  I looked up the router's IP address whihch I had found in my network preferences.
+
+  >IP address 192.168.1.120 is registered by the Internet Assigned Numbers Authority (IANA) as a part of private network 192.168.1.0/24.
+
+  -*[LookIP.netIP address lookup and information tool](https://www.lookip.net/ip/192.168.1.120)*
+
+  So I put 192.168.1.0 in the address bar and that said, "Your Internet access is blocked Firewall or antivirus software may have blocked the connection."  
+
+  ## Router IP address
+  All the IP addresses I found were the wrong thing. I finally found the IP address of the router here: [Find a Router IP Address in Mac OS X](http://osxdaily.com/2011/10/05/find-router-ip-address-mac/)
+
+  When I put this in the address bar it worked.
+
+  ## Synogogues' Site
+  I connected with my synogogue. They want me to make a new site for them.
+
 ## Day 67, R2
 ### 6/16/19
 
