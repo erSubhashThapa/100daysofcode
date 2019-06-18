@@ -1,6 +1,61 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 69, R2
+### 6/18/19
+
+- ## Backend, Networking etc.
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) and working with my network.
+  
+  ## Bridged Network Not Working
+
+  In this tutorial, [How to SSH into your VirtualBox Guest](https://linuxhint.com/ssh_virtualbox_guest/), it says to change your VM's network to a **bridged network** in order to ssh into it from the host machine.
+
+  I changed ubuntu_server to the the wifi bridged network. But I'm not seeing it in the network when I go to look at the settings for the router. 
+  
+  When I ran ifconfig, ubuntu_server's IP address is still 10.0.2.20 even though I switched to the bridged network. It's supposed to have an IP address that doesn't start with 10.0 when you're on a bridged network.
+
+  I switched back to NATnetwork and ran ifconfig but the result were the same. The network names didn't change.
+
+  ### Bridged:
+
+  ![screenshot](log_imgs/ifconfig1_6-18.PNG)
+
+  ### NATnetwork
+
+  ![screenshot](log_imgs/ifconfig2_6-18.PNG)
+
+  **enp0s3** is the ethernet interface and **lo** is the loopback interface([Linux ifconfig command](https://www.computerhope.com/unix/uifconfi.htm))
+
+  > wlan0 is the name of the first wireless network interface on the system. Additional wireless interfaces would be named wlan1, wlan2, etc.
+
+  -*[Linux ifconfig command](https://www.computerhope.com/unix/uifconfi.htm)*
+
+  But there is no **wlan0**. I think there should be if the bridged network is working.
+
+  I tried renewing the lease of the DHCP, like this said to do:
+  
+  [Modify an Existing Virtual Network Adapter for a Virtual Machine](https://pubs.vmware.com/workstation-11/index.jsp?topic=%2Fcom.vmware.ws.using.doc%2FGUID-C20DCA65-B9E2-44B5-9705-47DB752D9F42.html)
+  
+  But nothing changed.
+
+  I tried changing the MAC address like this tutorial said:
+    > The solution was to change the MAC address in guest OS and have same MAC for guest as well as host OS.
+  
+  -*[VirtualBox Ubuntu 14.04 - Bridge adapter not working](https://askubuntu.com/questions/722512/virtualbox-ubuntu-14-04-bridge-adapter-not-working)*
+
+    I found the MAC address here
+  [MAC OS - DISPLAYING, RELEASING AND RENEWING A DHCP LEASE](https://kb.wisc.edu/page.php?id=2258)
+
+  But VirtualBox wouldn't let me change the address.
+  
+  I asked a handful of people for help but haven't heard back.
+  
+
+
+
+
+
 ## Day 68, R2
 ### 6/17/19
 
