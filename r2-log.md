@@ -41,6 +41,8 @@
   I also wanted to get more comfortable with asking questions. Sometimes that means finding new people to ask questions to.
 
   I asked a few people on Simbi and someone I know of who is in my friend's entrepreneur accelerator. I offered to pay him.
+  
+  I'm also going to look on [When Hub](https://www.whenhub.com/experts/search) if that doesn't pan out.
 
 
 
