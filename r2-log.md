@@ -1,6 +1,49 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 70, R2
+### 6/19/19
+
+- ## Backend, Networking etc.
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) and working with my network.
+
+  ## New Error
+  A mentor told me to check out this tutorial. 
+  I followed some of this but it didn't work: [Linux Force DHCP Client (dhclient) to Renew IP Address](https://www.cyberciti.biz/faq/howto-linux-renew-dhcp-client-ip-address/)
+
+  I tried running `sudo dhclient -v -r eth0` but I got this error: 
+  ```bash
+  Error getting hardware address for "eth0": No such device.
+  ``` 
+  ## Deleting A Virual Machine
+  I thought I should trying setting up the ubuntu server differently, so I deleted one of my ubuntu servers: [How to Delete a Virtual Machine from VirtualBox](http://osxdaily.com/2019/03/19/how-delete-virtual-machine-virtualbox/). I didn't get around to setting up a second one because it took way too long to download the ubuntu installer, and then my computer canceled the download. So I just kept playing around with the other virtual ubunter server I have, **test_machine**.
+
+  ## Trying More Things
+  The OP in this thread had a similar issue to my: [Missing eth0 Ethernet interface in Ubuntu — can't connect to router](https://superuser.com/questions/328800/missing-eth0-ethernet-interface-in-ubuntu-cant-connect-to-router).
+
+  One answer said:
+
+  >However, if you don't even see any ethX interfaces when you do ifconfig -a, it's a driver issue (Ubuntu isn't even seeing the interface)
+
+  I didn't understand their suggestion. It was really complicated. 
+  
+  I have tried a few other things to no avail. I feel like I'm trying to do a simple task and I don't understand why it's so complicated.
+
+  ## Returning to the Tutorial
+  I'm thinking I just stopped too early in the [Learning Ubuntu Server](https://www.lynda.com/Linux-tutorials/Learning-Ubuntu-Server/718668-2.html) tutorial.
+
+  I watched more of the tutorial but it didn't look like it was going to help.
+
+  ## Really Asking For Help
+
+  I decided to really go and find people who are experts in this stuff and ask for help. If I am going to be an entrepreneur one day, I can't do everything myself. I have to outsource.
+
+  I also wanted to get more comfortable with asking questions. Sometimes that means finding new people to ask questions to.
+
+  I asked a few people on Simbi and someone I know of who is in my friend's entrepreneur accelerator. I offered to pay him.
+
+
+
 ## Day 69, R2
 ### 6/18/19
 
@@ -56,8 +99,8 @@
 
 
 
-## Day 68, R2
-### 6/17/19
+## Day 69, R2
+### 6/18/19
 
 - ## Backend, Networking etc.
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) working with my network.
