@@ -1,6 +1,19 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 71, R2
+### 6/20/19
+
+- ## Backend, Networking etc.
+  I was supposed to have a meeting about my network setup with an IT guy, but it was pushed over to tomorrow. Instead I did a codewars kata.
+
+- ## Codewars: Moving Zeros To The End
+  Getting some more javascript practice with the [Moving Zeros To The End](https://www.codewars.com/kata/52597aa56021e91c93000cb0) kata.
+
+  I used `.sort()` for this kata. I thought I figured it out. But I'm failing the tests on codewars. I'm not failing it with any inputs I'm testing. So I'm not where to go from here. Can I find out the codewars test inputs?
+
+  ![](log_imgs/zeros_6-20.PNG)
+  
 ## Day 70, R2
 ### 6/19/19
 
