@@ -15,7 +15,7 @@
   ```bash
   Error getting hardware address for "eth0": No such device.
   ``` 
-  ## Deleting A Virual Machine
+  ## Deleting A Virtual Machine
   I thought I should trying setting up the ubuntu server differently, so I deleted one of my ubuntu servers: [How to Delete a Virtual Machine from VirtualBox](http://osxdaily.com/2019/03/19/how-delete-virtual-machine-virtualbox/). I didn't get around to setting up a second one because it took way too long to download the ubuntu installer, and then my computer canceled the download. So I just kept playing around with the other virtual ubunter server I have, **test_machine**.
 
   ## Trying More Things
