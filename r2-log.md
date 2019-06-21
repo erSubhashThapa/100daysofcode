@@ -1,6 +1,71 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 72, R2
+### 6/21/19
+
+- ## Backend
+
+  ## Bridged Network Setup!!!
+  ### Aka the magic of outsourcing
+  ### Aka, I am not trying to learn IT
+  I paid someone to figure out my networking problem and it was $30 *welllll* spent. Sometimes you got to outsource. They didn't want to take my money because they didn't feel knowledgable in the subject and googled the answer. But I also googled the answer too many times, and wasn't knowledgeable enough to figure it out. So I offered $30. It was worth it to me. I'd like to outsource more things.
+
+  This was the tutorial he followed:
+  [No “eth0” listed in ifconfig -a, only enp0s3 and lo](https://askubuntu.com/questions/704035/no-eth0-listed-in-ifconfig-a-only-enp0s3-and-lo)
+
+  The answer he followed was:
+  
+  >If you need to set the static IP of the VM:
+  >
+  >1. Change the "Network Adapter" to bridged mode in Oracle's Ubuntu VM system settings.
+  >
+  >2. Start Ubuntu VM
+  >
+  >3. Type ifconfig
+  >
+  >4. ifconfig returns enp0s3 and lo,  therefore,
+  >
+  >5.Type sudo ifconfig enp0s3 192.168.0.111 netmask 255.255.255.0 and you will set the static IP of the VM to 192.168.0.111.
+
+  My IT guy, Moshe, explained some things to me about networks and IP addresses.
+
+  I realized I do not want to spend my time on networking. So outsourcing IT is worth my time.
+
+  If you need IT support I'd recommend this guy: [Moshe Wolfe](https://www.facebook.com/mosesnbros).
+
+- ## Twitch
+  I wanted to play with live streaming. I set up my OBS and twitch with the help of these tutorials but I didn't follow them exactly. I set up my OBS differently:
+  
+  
+  [Beginner's guide to setting up and streaming with OBS](https://www.windowscentral.com/beginners-guide-obs)
+
+  [How to Stream to Twitch](https://www.tomsguide.com/us/how-to-stream-to-twitch,news-21077.html)
+
+  My scene set up:
+
+  <img src="log_imgs/obs_6-21.PNG" width="400"/>
+
+  How it looks:
+
+  <img src="log_imgs/obs2_6-21.PNG" width="400"/>
+
+  Here's my [twitch](https://www.twitch.tv/dashbarkhuss);
+
+  The video didn't look like it saved.
+
+- ## Code Wars
+  Returning to the [Moving Zeros To The End](https://www.codewars.com/kata/52597aa56021e91c93000cb0) kata.
+  
+  As suggested by [A-sin Cole](https://twitter.com/Asincole), I logged the array before my code began. This way I could see the **inputs** the codewars tests were using. 
+  
+  I took those inputs and tried them in my browser. **They worked fine.** 
+  
+  I played with console logging throughout the codewars code. It was difficult. It's easier to use DevTools, but I wasn't sure how to find the code in DevTools on codewars. But I'm pretty sure you can do it.
+
+
+  ![](log_imgs/codewars_6-21.gif)
+
 ## Day 71, R2
 ### 6/20/19
 
