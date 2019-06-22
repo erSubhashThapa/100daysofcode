@@ -13,7 +13,7 @@
   [A-sin Cole](https://twitter.com/Asincole) figured out that the issue was the javascript engine.
 
   <img src="log_imgs/asin1_6-22.PNG" width = "500"/>
-  
+  <br>
   <img src="log_imgs/asin_6-22.PNG" width = "500"/>
 
   **Different browsers use different engines to interpret and execute javascript.** Chrome uses the V8 engine. I couldn't find what Firefox uses. [But it's not V8](https://www.diffen.com/difference/Firefox_vs_Google_Chrome). 
