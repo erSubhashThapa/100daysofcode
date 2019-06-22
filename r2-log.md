@@ -1,6 +1,90 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 73, R2
+### 6/22/19
+
+- ## Code Wars
+  Returning to the [Moving Zeros To The End](https://www.codewars.com/kata/52597aa56021e91c93000cb0) kata.
+
+  Yesterday, we left off with a discrepency: my code worked on chrome, but not on codewars. 
+  
+  ## Engines
+  [A-sin Cole](https://twitter.com/Asincole) figured out that the issue was the javascript engine.
+
+  <img src="log_imgs/asin1_6-22.PNG" width = "500"/>
+  <img src="log_imgs/asin_6-22.PNG" width = "500"/>
+
+  **Different browsers use different engines to interpret and execute javascript.** Chrome uses the V8 engine. I couldn't find what Firefox uses. [But it's not V8](https://www.diffen.com/difference/Firefox_vs_Google_Chrome). 
+
+  ## Chrome VS Firefox
+  ### Code:
+
+  ```javascript
+      var moveZeros = function (arr) {
+      arr.sort((snd, frst) => {
+        if (frst === 0) {
+          return -1;
+        };
+      });
+      return arr;
+    };
+    ```
+
+  ### Engine Difference: 
+  ![engines](log_imgs/engine_6-22.PNG)
+
+  Chrome takes the *second* element first. Firefox takes the *first* element first.
+
+  How can we code it to work in both? I think If I can fix it in Firefox, it might work on a node engine. Node is the engine that Codewars uses.
+  
+
+  ## More Differences
+  There must be more differences because just switching the parameters doesn't fix the problem in Firefox.
+
+  Second difference: if we return **positive numbers** in Firefox in the compare function, the engine will **switch the elements**. But in Chrome it switches the elements if the function returns **negative numbers**. 
+  
+  This makes sense, because if the engines are taking the items in opposite orders, a-b is going to give different results.
+
+  `array = [0,1];`
+
+  0-1 = -1
+
+  **vs**
+
+  1-0 = 1 
+
+  This makes sense if you're using the compare function `(a,b)=>a-b` or `(a,b)=>b-a` to control whether the order is ascending or descending. But it makes it more difficult in our case.
+
+  ## Can't Use `.sort`?
+  I think we can't use sort for this. Since we can't be sure which parameter comes first, we can't know if we should switch the order. 
+  
+  And, without knowing the engine, we don't know how to tell the engine to switch the order. In Chrome a negative return value means switch but in Firefox a positive return value means switch.
+
+  It seems you should only use sort when trying to compare values and arrange them in ascending or descending order.
+
+  I think there are too many unknowns to solve this kata with sort.
+
+  ## Record On Twitch
+
+  I went on twitch to record myself explaining this but it was a big mess! So I deleted it. But here is how you record on Twitch:
+
+   **Settings** > **Broadcast Settings** and check the box next to **Automatically save stream to file.**
+
+  Twitch saves the videos temporarily. To save the file permanently you should [set up obs](https://www.cnet.com/how-to/twitch-streaming-from-your-pc-guide-recording-your-stream/) to save the video files.
+  
+  ## Codewars Solution
+
+  To solve the [Moving Zeros To The End](https://www.codewars.com/kata/52597aa56021e91c93000cb0) kata, I used the [JavaScript Array Reference](https://www.w3schools.com/jsref/jsref_obj_array.asp) to pick a different array method. I went with filter.
+
+  ```javascript
+  var moveZeros = function (arr) {
+    const nonZeros = arr.filter(x => x !== 0)
+    const zeros = arr.filter(x => x === 0)
+    return [...nonZeros, ...zeros];
+  };
+  ```
+
 ## Day 72, R2
 ### 6/21/19
 
