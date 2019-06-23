@@ -23,7 +23,7 @@
 
   But I didn't realize this until later so I moved on to do a kata until I could get in contact with Moshe.
 
-  ## CodeWars: Split Strings
+- ## CodeWars: Split Strings
 
   I did the kata [Split Strings](https://www.codewars.com/kata/515de9ae9dcfc28eb6000001).
 
@@ -54,7 +54,7 @@
 
   I'm waiting for Moshe to help with with this.
   
-  ## CodeWars: Perimeter of squares in a rectangle
+- ## CodeWars: Perimeter of squares in a rectangle
 
   I started the kata [Perimeter of squares in a rectangle](https://www.codewars.com/kata/perimeter-of-squares-in-a-rectangle) while I wait for my networking issue to be fixed.
 
