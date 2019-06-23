@@ -1,6 +1,72 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 74, R2
+### 6/23/19
+
+- ## Node Tutorial
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
+  
+  ## Network Problem
+  My network went back to how it was before Moshe fixed it, where it was missing the bridged network. I tried to do what Moshe did but it didn't work.
+
+  <img src="log_imgs/terminal_6-23.PNG" width="500" />
+
+  I got this error:
+  ```bash
+  SIOCSIFNETMASK: No such device
+  ```
+  ## Working again
+  Turns out I was just missing "enp0s3":
+
+  <img src="log_imgs/terminal2_6-23.PNG" width="500" />
+
+  But I didn't realize this until later so I moved on to do a kata until I could get in contact with Moshe.
+
+  ## CodeWars: Split Strings
+
+  I did the kata [Split Strings](https://www.codewars.com/kata/515de9ae9dcfc28eb6000001).
+
+  I used the [JavaScript String Reference](https://www.w3schools.com/jsref/jsref_obj_string.asp) to get ideas for dealing with the string.
+
+  My solution was longer than the other solutions. I wanted it to be more readable. That makes it longer. I saw some creative ways to solve it that I want to look at tomorrow.
+  
+  ```javascript
+  function solution(str) {
+  const arr = [];
+  for (let i = 0; i < str.length; i += 2) {
+    const strLengthIsOdd = str.length % 2 !== 0;
+    const iterationIsLast = i === (str.length - 1);
+    
+    let item = str.slice(i, i + 2);    
+    if (strLengthIsOdd && iterationIsLast) item += "_";
+    arr.push(item);
+  }
+  return arr;
+  }
+  ```
+- ## Node Tutorial /Network
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) and setting up my network.
+
+  I started to follow the book but ran into more network issues. I can SSH into test_machine, my virtual machine ubuntu server. But I can't [ping](https://www.dummies.com/computers/pcs/how-to-use-ping-to-check-internet-availability/) from it. Meaning, I can't reach the internet:
+
+  <img src="log_imgs/terminal3_6-23.PNG" width="500" />
+
+  I'm waiting for Moshe to help with with this.
+  
+  ## CodeWars: Perimeter of squares in a rectangle
+
+  I started the kata [Perimeter of squares in a rectangle](https://www.codewars.com/kata/perimeter-of-squares-in-a-rectangle) while I wait for my networking issue to be fixed.
+
+  The kata said to make an auxilary function. So I looked up what that was:
+
+  >a function you create to help you with some recurring tasks/problems.
+  
+  -*[What is auxiliary function in programming?](https://www.quora.com/What-is-auxiliary-function-in-programming)*
+
+
+  
+
 ## Day 73, R2
 ### 6/22/19
 
