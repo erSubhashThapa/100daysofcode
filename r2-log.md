@@ -1,6 +1,24 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 75, R2
+### 6/24/19
+
+- ## Network
+  I had my IT guy try to set p port forwarding for me but it didn't work. He said he had to look something up.
+
+  While he was working on my computer I watched him a little bit to learn. But then I started google other thing and watching tutorials on my phone.
+
+  ## Gateway
+  Yesterday, Moshe said I would have to reset the gateway many times if I did a bridged network. So I looked up what a gatway was today:
+
+  [What is Gateway](https://www.youtube.com/watch?v=ai5bFPVToMU&feature=youtu.be)
+
+  ## Authentication
+  I watched half of this video about authentication. Will finish tomorrow.
+
+  [Coding Class - Intro to API Authentication Types Oauth, token HTTP Basic repeated session](https://www.youtube.com/watch?v=GjLmjI1r1cg&feature=youtu.be)
+
 ## Day 74, R2
 ### 6/23/19
 
