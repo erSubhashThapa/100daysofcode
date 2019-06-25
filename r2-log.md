@@ -1,6 +1,66 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 76, R2
+### 6/25/19
+
+- ## Backend 
+  I'm waiting for Moshe The IT Guy to fix my network so I can continue with my node server project. 
+  
+  In the meantime, I'm going to watch some videos.
+
+  ## Authentication
+  Finished watching this video on authentication:
+
+  [Coding Class - Intro to API Authentication Types Oauth, token HTTP Basic repeated session](https://www.youtube.com/watch?v=GjLmjI1r1cg&feature=youtu.be)
+
+
+  ## OAuth 2.0 Roles
+
+  - **Resource Owner:** Actual user
+  - **Client:** The application
+  - **Authorization Server:** Verifies identity and issues tokens to the application *(ex: "Log in through Facebook." Facebook would be the application server)*
+  - **Resource Server:** Hosts the protected accounts/content
+
+  ## OAuth 2.0 Terms
+  - **Application/Client Registration**
+  - **Client ID/Secret:** Issued by Authorization server when application (client) is registered
+  - **Authorization Grant:** 4 types
+    - Authorization Code
+    - Implicit
+    - Resource Owner Password Credentials
+    - Client Credentials
+
+  ## OAuth 2.0 Access Token
+  To understand access tokens I watched: [OAuth 2.0 access tokens explained](https://www.youtube.com/watch?v=BNEoKexlmA4)
+
+  Some of the things the instructor said made me think about how API's are separate from the application.
+
+  ## Web Server vs Application Server vs API
+  Learned the difference between application servers, web servers, and API by watching this: [Web Server vs Application Server vs API](https://www.youtube.com/watch?v=bgqtxlp7ftc)
+
+  
+
+  I posted a question in response to the video:
+  >Question: I'm still confused where the web server comes in. In your last slide we see how the App Server connects to the API. But what about the Web server? Is it just that in cases where you have an API, you don't have a web server, you only have an app server?
+
+- ## Computer Science
+  I went back to 
+  [Crash Course Computer Science](https://www.youtube.com/watch?v=O5nskjZ_GoI) and started watching from the beginning.  I watched the first 3 videos and started the 4th.
+
+  ### Quote about early computing devices that I liked:
+  >Each one of these devices made something that was previously laborious to calculate much faster, easier, and often more accurate. It lowered the barrier to entry and at the same time amplified our mental abilities.
+
+  I learned the term "computer bug" came from an incidence in 1947, when operators of the Harvard Mark II, a large electromechanical computer, pulled a dead moth from a malfunctioning relay.
+  
+  ## Thanks
+  Thank you too my teachers today:
+
+  - [@theDeNap](https://twitter.com/theDeNap)
+  - [@rajat1saxena](https://twitter.com/@rajat1saxena)
+  - [@MissPhilbin](https://twitter.com/@MissPhilbin)
+  
+
 ## Day 75, R2
 ### 6/24/19
 
