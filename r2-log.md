@@ -54,7 +54,7 @@
   I learned the term "computer bug" came from an incidence in 1947, when operators of the Harvard Mark II, a large electromechanical computer, pulled a dead moth from a malfunctioning relay.
   
   ## Thanks
-  Thank you too my teachers today:
+  Thank you to my teachers today:
 
   - [@theDeNap](https://twitter.com/theDeNap)
   - [@rajat1saxena](https://twitter.com/@rajat1saxena)
