@@ -1,8 +1,8 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
-## Day 76, R2
-### 6/25/19
+## Day 77, R2
+### 6/26/19
 
   
   Still waiting for Moshe The IT Guy to fix my network so I can continue with my node server project. We are supposed to meet tonight.
