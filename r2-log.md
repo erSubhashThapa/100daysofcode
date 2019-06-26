@@ -4,6 +4,21 @@
 ## Day 76, R2
 ### 6/25/19
 
+  
+  Still waiting for Moshe The IT Guy to fix my network so I can continue with my node server project. We are supposed to meet tonight.
+
+  In the meantime, I'm going to continue watching some videos.
+
+- ## Crash Course
+  I continued watching [Crash Course Computer Science](https://www.youtube.com/watch?v=O5nskjZ_GoI). I got up to #8.
+
+- ## Javascript30: Unreal Webcam Fun
+  I started day 19 of [Javascript30](https://javascript30.com/), [Unreal Webcam Fun](https://courses.wesbos.com/account/access/5c51dab432bb6d664e015352/view/194128614).
+
+
+## Day 76, R2
+### 6/25/19
+
 - ## Backend 
   I'm waiting for Moshe The IT Guy to fix my network so I can continue with my node server project. 
   
