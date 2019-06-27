@@ -1,6 +1,59 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 78, R2
+### 6/27/19
+
+  
+My IT guy still hasn't figured out my issue. Why is this so difficult? I don't know. So back to [Javascript30](https://javascript30.com/).
+
+- ## Javascript30: Unreal Webcam Fun
+  Continuing day 19 of [Javascript30](https://javascript30.com/), [Unreal Webcam Fun](https://courses.wesbos.com/account/access/5c51dab432bb6d664e015352/view/194128614).
+
+  ### Favorite quotes:
+
+  >This is something called base 64. And this is a uh like a text representation of the picture of of me. So this like "8bPb4fb" that means like "stunning smile" and this uh "Rvs0" that means like "sweet baby blues."
+
+
+  *Wes Bos setting an alt attribute on an image of himself to **"Handsome Man"`**:*
+  >Adjust accordingly if you're not handsome"
+
+  ## Javascript AR
+  This webcam Javascript30 project got me thinking about AR. I skimmed [Building AR/VR with Javascript and HTML](https://blog.halolabs.io/building-ar-vr-with-javascript-and-html-97af4434bcf6) and [Augmented Reality in 10 Lines of HTML](https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf) and watched a bit of a video in the latter article with instructor Alexandra Etienne([@AndraConnect](https://twitter.com/AndraConnect)).
+
+
+  Here's the code pen of [AR.js - Augmented Reality in 10 lines of html](https://codepen.io/jeromeetienne/pen/mRqqzb)
+
+  Here's me playing with the code pen:
+
+  <img src= "log_imgs/ar_6-27.gif" width="400"/>
+
+  ### Hiro Marker:
+  You need this to play with the codepen:
+
+  <img src = "https://stemkoski.github.io/AR-Examples/markers/hiro.png" width="400"/>
+
+  Link: [Hiro Marker](https://stemkoski.github.io/AR-Examples/markers/hiro.png)
+
+  ## Custom Canvas Video Filter
+  After watching Wes Bos's [Unreal Webcam Fun](https://courses.wesbos.com/account/access/5c51dab432bb6d664e015352/view/194128614), I tried making my own filter. This one turns my hoodie periwinkle.
+
+  ```javascript
+  function filter(pixels){
+    for(let i=0; i < pixels.data.length; i+=4){
+
+      if (pixels.data[i+1] - pixels.data[i+0] > 10 && pixels.data[i+1] - pixels.data[i+2]> 10) {
+        pixels.data[i] = 120;
+        pixels.data[i+1] = 120;
+        pixels.data[i+2] = 200;
+      }
+    }
+    return pixels;
+  }
+  ```
+
+  <img src="log_imgs/filter_6-27.gif" width="400"/>
+
 ## Day 77, R2
 ### 6/26/19
 
