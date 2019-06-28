@@ -1,6 +1,27 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 79, R2
+### 6/28/19
+
+- ## Helping
+  I helped two people using [Scrimba](https://scrimba.com/). What the videos here:
+  - [Anthony](https://scrimba.com/c/c7zL6Kta)
+  - [Ayu](https://scrimba.com/c/c8gLJEHD)
+
+- ## Backend
+  I signed up for [Linode](https://www.linode.com/). This ubuntu server setup  with my IT guy is just taking so long, plus I think I want to make actual hosted projects now. Linode is what Greg Sidelnikov ([js_tut](https://twitter.com/js_tut)) uses.
+
+  I got the "nanode" plan. It's only $5 per month.
+
+  I put mysql_server on my linode server to get back to where I left off in [Node API Endpoint Roundtrip + Complete Source Code](https://www.patreon.com/posts/node-api-source-27588087)
+
+- ## Javascript30: Native Speech Recognition
+  I started [Native Speech Recognition](https://courses.wesbos.com/account/access/5c51dab432bb6d664e015352/view/194128445).
+
+- ## Thoughts & Feelings:
+  I switched around too many times today. I was helping people while doing js30 while getting linode while asking Greg questions. It was hard to get anything done with approach. But I wanted to leave my Twitter open for people I was helping, so they could reach me. I think this is ok once in a while, but on most days I should turn off twitter and focus on one thing at a time.
+
 ## Day 78, R2
 ### 6/27/19
 
