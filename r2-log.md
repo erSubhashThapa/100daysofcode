@@ -5,7 +5,7 @@
 ### 6/28/19
 
 - ## Helping
-  I helped two people using [Scrimba](https://scrimba.com/). What the videos here:
+  I helped two people using [Scrimba](https://scrimba.com/). Watch the videos here:
   - [Anthony](https://scrimba.com/c/c7zL6Kta)
   - [Ayu](https://scrimba.com/c/c8gLJEHD)
 
