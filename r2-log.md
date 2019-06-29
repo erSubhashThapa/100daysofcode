@@ -1,6 +1,73 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 80, R2
+### 6/29/19
+
+- ## AR
+  I played with [AR.js](https://jeromeetienne.github.io/AR.js/) today.
+
+  ## Custom Marker
+  To make a custom marker use this page in **Firefox**: [AR.js Marker Training](https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html).
+  
+  I used this tutorial to make my own marker:
+  [How To Create your Own Marker ?](https://medium.com/arjs/how-to-create-your-own-marker-44becbec1105)
+  - The code in step 4 is wrong. instead of `patternUrl`, just do `url`.
+
+  Here, I made my own **custom marker.** *It's "**Dash**" with a heart around it*:
+  
+  ![screenrecording](log_imgs/armarker_6-29.gif)
+  
+  ## Adding Text
+  I used this tutorial to add text to the scene: [Creating Augmented Reality with AR.js and A-Frame](https://aframe.io/blog/arjs/):
+  
+  I changed to the 3D box to text by replacing the `<a-box>`tag with:
+  ```html
+  <a-text value="Hello, World! It's Dash!"></a-text>
+  ```
+  ![screenrecording](log_imgs/artext_6-29.gif)
+
+  
+  ## Multiple Markers
+
+  Here, I linked different markers with different images. I used this tutotial: [Creating Augmented Reality with AR.js and A-Frame](https://aframe.io/blog/arjs/):
+
+  ![screenrecording](log_imgs/armany_6-29.gif)
+
+  ```html
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam;'>
+
+      <a-marker type='pattern' url='pattern-dannymarker_6-29.patt'>
+        <a-image src="danny.png"></a-image>
+      </a-marker>
+
+
+      <a-marker type='pattern' url='pattern-dash.patt'>
+        <a-image src="dashie.png"></a-image>
+      </a-marker>
+
+
+      <a-marker type='pattern' url='pattern-shlomarker_6-29.patt'>
+        <a-image src="shlomo.png"></a-image>
+      </a-marker>
+      <a-entity camera></a-entity>
+
+    </a-scene>
+  </body>
+  ```
+
+  ## Javascript Generated HTML for Multiple Markers
+
+  I made an AR project using photos of coders off twitter. It uses javascript to create the HTML code.
+
+  ![screenrecording](log_imgs/coders_6-29.gif)
+
+  [See the project here.](https://github.com/DashBarkHuss/ar_fun_with_coders)
+  
+
+
+
 ## Day 79, R2
 ### 6/28/19
 
