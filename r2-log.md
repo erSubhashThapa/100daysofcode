@@ -35,7 +35,7 @@ It makes senes, because technically MySQL is installed on "localhost" there too.
 
   I just tried the same IP address I used to ssh into.
 
-  ### Error
+  ### Error 6-30-19
 
   I can't login through Sequel Pro.
 
