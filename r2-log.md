@@ -1,6 +1,12 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 81, R2
+### 6/30/19
+
+- ## [Cloning a repository](https://help.github.com/en/articles/cloning-a-repository)
+  I followed this to close my 100_days_of_code repo. Now I can commit my logs instead of copying and pasting them in.
+
 ## Day 80, R2
 ### 6/29/19
 
