@@ -5,7 +5,61 @@
 ### 6/30/19
 
 - ## [Cloning a repository](https://help.github.com/en/articles/cloning-a-repository)
-  I followed this to close my 100_days_of_code repo. Now I can commit my logs instead of copying and pasting them in.
+  I followed this article to clone my **100_days_of_code** repo. Now I can commit my logs from my computer instead of copying and pasting them in to my repo every day and uploading images manually.
+
+  I went through the local repo and delete some extra files and cleaned it up. It's harder to do that directly on github.
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
+
+  ## Chapter 5 Notes
+  ```bash
+  root@localhost:~# mysql -u root -p
+  ```
+
+  I ran this but I don't remember ever setting up a password or username. But I used my password for `root@localhost` and that worked. So maybe the root for mysql is the same? Is it somehow connected to my **root@localhost** account?
+
+  I think they are the same. Because when we make another user, we use the command:
+
+  ```sql
+  create user 'felix'@'localhost' identified by "password";
+  ```
+  The key thing to note is `@'localhost'`. I didn't notice or perhaps fully understand that before. Our root user in mysql would also be `root@localhost`. That's the same as the root user on my machine. I thought the root user on mysql was totally separate.
+
+  [Download Sequel Pro](https://sequelpro.com/download)
+
+  >If you set up MySQL
+server on localhost use that as the Host. Otherwise use your web host's database
+IP address (which very often is the same IP address for your web hosting server.
+It makes senes, because technically MySQL is installed on "localhost" there too.)
+
+  I just tried the same IP address I used to ssh into.
+
+  ### Error
+
+  I can't login through Sequel Pro.
+
+  <img src="log_imgs/error_6-30.PNG" width="400"/>
+  
+  Wasn't sure if I shouldn't show my IP addresses so they are colored out. Pink is my remote server IP address. Green is different, but I'm not sure what it is. Maybe my computers IP address.
+  
+  ### I double checked to make sure:
+
+  My bind-address is commented out:
+
+  <img src="log_imgs/bind_6-30.PNG" width="400"/>
+  
+  My privileges are set:
+  
+  <img src="log_imgs/privileges_6-30.PNG" width="400"/>
+
+  I tried:
+  - Changing the bind-address to my servers address instead of commenting it out.
+  - `FLUSH Privileges;`
+  - Logging in with root
+  - Restarting mysql a bunch
+  
+  Nothing worked so far.
 
 ## Day 80, R2
 ### 6/29/19
@@ -2317,7 +2371,7 @@ and upon its presence we will execute an API command, instead of serving a file
   ### ESLint
   1. added .eslintrc.json
   2. `npm init`
-  2. `eslint --init` (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)
+  3. `eslint --init` (make sure you get to the point where it asks if you'd like to install airbnb style dependancies)
   ### Prettier
   1. add `"prettier"` to `"extends"` and `"plugins"` in .eslintrc.json
   2. Configure prettier in .eslintrc.json in `"rules"`
