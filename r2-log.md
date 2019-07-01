@@ -1,6 +1,86 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 82, R2
+### 7/1/19
+
+- ## Halfway
+  Today is the halfway point of the year. 
+  
+  That means I have accomplished half my goals this year!
+  
+   That's amazing. I have never had such a successful half year.
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
+
+  ## Where To Find Help
+  I was wondering where to get help. 
+  
+  Here's some [#100DaysOfCode](https://www.100daysofcode.com/connect/) related channels to get help.
+  
+  ## Yesterday's Error: Solution
+  Yesterday, I couldn't log into my database from Sequel Pro.
+
+  <img src="log_imgs/error_6-30.PNG" width="400"/>
+
+  More about the error [here.](#error-6-30-19)
+
+  [@TheDLFord](https://twitter.com/TheDLFord) on twitter solved my problem:
+
+  <img src="log_imgs/help1_7-1-19.PNG" width="500"/>
+
+  So I created a new user using `'%'` for the host: 
+
+  ```sql
+  create user 'felix2'@'%' identified by "password";
+  Query OK, 0 rows affected (0.00 sec)
+
+  grant all privileges on *.* to 'felix2'@'%';
+  Query OK, 0 rows affected (0.01 sec)
+  ```
+
+  Exited mysql. Then restarted in terminal with:
+  ```bash
+  /etc/init.d/mysql restart
+  ```
+  It worked! I was able to log in through Sequel Pro!
+
+  ## Question: How do you Secure This?
+  [@TheDLFord](https://twitter.com/TheDLFord) said using `%` for the host name isn't secure. So how do I deep my prject secure?
+
+  <img src="log_imgs/help2_7-1-19.PNG" width="500"/>
+
+  ## Production vs. Development
+  So we use the user with the wildcard, `'%'`, only in development. But what does that involve?
+
+  <img src="log_imgs/help3_7-1-19.PNG" width="500"/>
+
+  ## Finally Moving On
+  I started chapter 5 on May 29th. I spent over a month on it. I'm finally on chapter 6 of the book. Without the #100DaysOfCode challenge, I don't think I would have pushed through this chapter.
+
+
+  ## Outsourcing Update
+  My IT guy, Moshe spent a few hours over the last week trying to fix my network issue. He wasn't able to do it so I just bought Linode. My issue wasn't his area of expertise.
+  
+  Moshe was cool about it and said not to pay him.
+  
+  But I paid him a tip anyways for his time. 
+  
+  I'm appreciative that he put time in to try. He is a good person that I'd like to keep in my professional life. So ending on, *not good, but **great*** terms is very important to me.
+
+  Even though this outsourcing experience didn't solve my issue, I got some good take aways.
+
+  ### Take Aways:
+  - **When outsourcing, look around for someone who thinks they can solve your problem.** Moshe told me upfront he didn't think my issue was in his knowledge set.
+  - Outsourcing is skill I want to get comfortable with.
+
+  I see this experience as a learning experience worth the money I paid. In time I will get better at outsourcing.
+  
+  I also made a good professional connection with Moshe.
+
+
+
 ## Day 81, R2
 ### 6/30/19
 
