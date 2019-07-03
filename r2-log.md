@@ -1,6 +1,47 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 83, R2
+### 7/2/19
+## Halfway Point
+I said yesterday was the halfways point of the year but think it's actually today (day 182.5). Happy half year!
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
+
+  ## Chapter 6
+
+  I got through chapter 6 but I ran into an issue when `node index.js` in section 6.9, page 59.
+
+  ```bash
+  Tue Jul 02 node-master Dashie$ node index.js
+  Creating MySQL connection...Ok.
+  Server running at http://xx.xx.xx.xxx:3000/
+  Error: getaddrinfo ENOTFOUND xx.xx.xx.xxx
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)
+  process.exit
+  ```
+  I found out what was going on.
+
+  The book says:
+  >make sure you already have a running MySQL server with user table in it and you included MySQL credentials (IP, username, password and database name) in api.js
+
+  ***But you also need to replace line 13 in index.js.***
+
+  ```javascript
+  // replace xx.xx.xx.xxx with your own remote IP address or localhost (127.0.0.1)
+  const ip = 'xx.xx.xx.xxx';
+  ```
+
+  I changed it to 127.0.0.1
+
+  I then ran into this error when trying to add a user on the UI:
+  ```bash
+  Error: ER_BAD_FIELD_ERROR: Unknown column 'username' in 'field list'
+  ```
+
+  Username was left out of the image of the table on p.41. So I added username to my table. I got the same error for password_md5, which was also left off the table. I'm not sure yet what to put in the `type`, `length`, etc.. for `password_md5` on the table. That's where I left off.
+
 ## Day 82, R2
 ### 7/1/19
 
