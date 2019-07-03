@@ -1,10 +1,116 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
 
+## Day 84, R2
+### 7/3/19
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
+
+  ## MD5 Password Hash
+
+  What's the data type forthe MD5 hash?
+
+  >MD5 generates a 128-bit hash value. You can use CHAR(32) or BINARY(16)
+
+  -*[What data type to use for hashed password field and what length?](https://stackoverflow.com/questions/247304/what-data-type-to-use-for-hashed-password-field-and-what-length)*
+
+  So I'm using type: CHAR and length: 32 in the table.
+
+  ## Debugging Backend 
+  How???
+
+  ## Search All Files VSC
+  
+  >VS Code allows you to quickly search over all files in the currently opened folder. Press Ctrl+Shift+F and enter your search term.
+  
+  -*[Basic Editing in Visual Studio Code](https://code.visualstudio.com/docs/editor/codebasics)*
+
+  `Ctrl`+`Shift`+`F`
+
+  ## Error
+
+  ```bash
+  Error: ER_BAD_FIELD_ERROR: Unknown column 'first_name' in 'field list'
+  ```
+  There's no `first_name` in my table. The book didn't tell us to include it. 
+  
+  I searched 'first_name' in the directory for the finished files that I downloaded from github for the book.
+
+  I found this:
+  ```javascript
+  let fields = "( `username`, `email_address`, `password_md5`, `first_name`, `last_name`, `avatar` )";
+  ```
+  So I assume we'll need all these fields, many of which are left out from the instructions in the book.
+
+  ## Database Terms
+  Knowing these terms helps me search for answers.
+
+  [Database Terms - and their Meanings](http://www.bin-co.com/database/sql_tutorial/db_terms_meanings.php)
+  
+  ## Image Datatype
+
+  ### blob:
+  >MySQL has a blob data type which can used to store binary data. A blob is a collection of binary data stored as a single entity in a database management system. Blobs are typically images, audio or other multimedia blob objects.
+
+  [How to Store an image in MySQL database](https://www.daniweb.com/programming/databases/threads/439533/how-to-store-an-image-in-mysql-database)
+
+  ## Corrected User Table
+
+  I had to add the fields `username`, `password_md5`, `first_name`, `last_name`, `avatar` for the **"register user" button** in the UI to work.
+  
+  ![table](log_imgs/table_7-3.PNG).
+
+  ## No Session Table in Book
+  The **"authenticate (check if token exists in session table)" button** doesn't work.
+
+  ```bash
+  Error: ER_NO_SUCH_TABLE: Table 'myserver.session' doesn't exist
+  ```
+
+  The book left out adding a session table. 
+  
+  I found this:
+
+  [Storing Sessions in a Database](http://shiflett.org/articles/storing-sessions-in-a-database):
+
+  ``` sql
+  CREATE TABLE sessions (
+    id varchar(32) NOT NULL,
+    access int(10) unsigned,
+    data text,
+    PRIMARY KEY (id)
+  );
+  ```
+
+  However, the above tutorial, [Storing Sessions in a Database](http://shiflett.org/articles/storing-sessions-in-a-database), used a `sessions` table and in the node book we are supposed to have a `session` *no-s-singular* named table. 
+  
+  That makes me wonder if there are any differences between what this tutorial intends to accomplish and what the node book intends to accomplish. 
+  
+  I believe in databases *plural names* and *singular names* allude to different uses.
+  
+  ## Adding Session Table
+  There were issues with adding a primary key using Sequel Pro, so I just used the mysql command instead.
+  
+  ```sql
+  mysql> use myserver;
+  Reading table information for completion of table and column names
+  You can turn off this feature to get a quicker startup with -A
+
+  Database changed
+  mysql> CREATE TABLE session (id varchar(32) NOT NULL, access int(10) unsigned, data text, PRIMARY KEY (id));
+  Query OK, 0 rows affected (0.01 sec)
+  ```
+  
+  I still get an error when pressing the **"authenticate (check if token exists in session table)" button**.
+  ```bash
+  Error: ER_BAD_FIELD_ERROR: Unknown column 'token' in 'where clause'
+  ```
+
+  This is where I left off.
 ## Day 83, R2
 ### 7/2/19
 ## Halfway Point
-I said yesterday was the halfways point of the year but think it's actually today (day 182.5). Happy half year!
+I said yesterday was the halfway point of the year but think it's actually today (day 182.5). Happy half year!
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
