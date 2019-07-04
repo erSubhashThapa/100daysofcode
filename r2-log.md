@@ -1,5 +1,49 @@
 
 # #100DaysOfCode Log - Round 2 - Dashiell Bark-Huss
+## Day 85, R2
+### 7/4/19
+
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
+
+  ## Session Table
+  Yesterday, I got an error when pressing the **"authenticate (check if token exists in session table)" button**.
+  ```bash
+  Error: ER_BAD_FIELD_ERROR: Unknown column 'token' in 'where clause'
+  ```
+  And of course, I just realized there is no column `token` anywhere in my database. But what is `where clause`?
+
+  It must be something like, "find token where some condition is met."
+
+  I found this in api.js. It looks like this is where we are taking the token and puting it in the session table. But I'm not so familiar with SQL. Are `user_id`, `timestamp`, and `token` the fields in our code?
+  ```javascript
+  database.connection.query("INSERT INTO session ( `user_id`, `timestamp`, `token`) VALUES( '" + payload.id + "', '" + timestamp() + "', '" + token + "')",
+  ```
+
+  I just realized, sometimes people have some file in their code that creates the database tables. At least I remember that when I was working with Ruby on Rails, Maybe if I find that file in here it will show how the database should be set up? In Ruby on Rails I think it was called the `schema` file.
+
+  I couldn't find anything about a file like this.
+
+  There's way too much missing in this book about how to deal with sessions for a newbie like myself. Maybe I need to watch a different tutorial.
+
+  ## Reaching Out For Help
+  This feels like a point where I need to reach out for help. I posted on the patreon page for [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087)
+
+  ![patreon post](log_imgs/patreonq_7-4.PNG)
+
+  I also reached out to someone who posted on twitter that they were working on the book.
+
+  ![twitter message](log_imgs/twitterq_7-4.PNG)
+    
+  I contacted a few more people who I saw downloaded the book off patreon.
+  
+  ## Searching For Info
+  I searched blogs and videos about authentication, sessions, and tokens. None are worth sharing. 
+  
+  A lot of the tutorials used libraries and were very specific. I couldn't find much on the general concept of authentication using sessions and tokens. In fact, a lot of resources said that these concepts are mutually exclusive: You need to use either sessions or tokens, but not both together.
+
+  Hopefully, I'll have better luck tomorrow. My internet and computer was slow today so it was getting in my way.
+
 
 ## Day 84, R2
 ### 7/3/19
