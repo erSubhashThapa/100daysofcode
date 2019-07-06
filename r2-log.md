@@ -248,7 +248,7 @@
   Reading table information for completion of table and column names
   You can turn off this feature to get a quicker startup with -A
 
-  Database changed
+  Database apanged
   mysql> CREATE TABLE session (id varchar(32) NOT NULL, access int(10) unsigned, data text, PRIMARY KEY (id));
   Query OK, 0 rows affected (0.01 sec)
   ```
@@ -267,7 +267,7 @@ I said yesterday was the halfway point of the year but think it's actually today
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
 
-  ## Chapter 6
+  ## Chapter 6, 7/2/19 Error
 
   I got through chapter 6 but I ran into an issue when `node index.js` in section 6.9, page 59.
 
