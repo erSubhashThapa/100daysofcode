@@ -61,7 +61,7 @@
   value="update user properties" /><br />
   ```
 
-  It just send the `id` and `password_sha3`. Where's `token`?
+  It just sends the `id` and `password_sha3`. Where's `token`?
   ```javascript
   User.update({id: 1, password_sha3: 'newpass123A'})
   ```
