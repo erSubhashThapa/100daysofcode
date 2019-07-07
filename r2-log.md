@@ -19,11 +19,11 @@
   ```
 
   In the console:
-
-  ![](log_imgs/token_7-7.PNG)
+  ![](log_imgs/consoletoken_7-7.PNG)
 
   Looking in the database there is no token:
-  ![](log_imgs/consoletoken_7-7.PNG)
+  ![](log_imgs/token_7-7.PNG)
+  
 
 
   ## Test Token?
