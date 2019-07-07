@@ -1,99 +1,13 @@
-## Day 87, R2
-### 7/6/19
+## Day 88, R2
+### 7/7/19
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
 
-  ## How Tokens & Sessions Work:
-  Marco([@Wridgeu](https://twitter.com/Wridgeu)) helped me understand tokens and sessions by sending me these graphics.
-
-  ## Tokens:
-  ![](log_imgs/tokens_7-6.jpg)
-
-  ## Sessions:
-  ![](log_imgs/tokens2_7-6.png)
-  
-  ## Delete A Table
-  To delete a table:
-  ```sql
-  DROP TABLE tablename;
-  ```
-  -*[How to Manage MySQL Database, Table & User From Command Line:DELETE MYSQL TABLES AND DATABASES](https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line#DeleteMySQL-Tables-and-Databases#DeleteMySQL-Tables-and-Databases#DeleteMySQL-Tables-and-Databases)*
-
-  Remember to replace `tablename` with your table to go to the right database first, with the command: `use databasename`.
-
-  ## Making the Session Table
-  I'm going to try to make the `session` table with the little information I have. So I deleted the table using the above code.
-
-  A few days ago, I found this in api.js.
-   ```javascript
-  database.connection.query("INSERT INTO session ( `user_id`, `timestamp`, `token`) VALUES( '" + payload.id + "', '" + timestamp() + "', '" + token + "')",
-  ```
-  From this bit of code, I gather that these are the fields that need to be in the `session` table: `user_id`, `timestamp`, and `token`.
-
-  Copying this sql command I found in [Storing Sessions in a Database](http://shiflett.org/articles/storing-sessions-in-a-database):
-
-  ```sql
-  CREATE TABLE sessions (
-  id varchar(32) NOT NULL,
-  access int(10) unsigned,
-  data text,
-  PRIMARY KEY (id)
-  );
-  ```
-
-  I came up with this command to make the session table and set the primary key to `user_id`.
-  ```sql
-  CREATE TABLE session (
-  user_id varchar(32) NOT NULL,
-  PRIMARY KEY (user_id)
-  );
-  ```
-
-  And I'm going to add the other fields, `timestamp` and `token`, in Sequel Pro.
-
-  ## Token Data Type?
-  How is the token made and what is the data type?
-
-  I found this in api.js:
-  ```javascript
-  function create_auth_token() {
-    let token = md5( timestamp( true ) + "");
-    return token;
-  }
-  ```
-  So I think I need to look at what data type an **md5** token is.
-
-  ## md5
-  A few days ago I found that the `password_md5` should be:
-
-  >MD5 generates a 128-bit hash value. You can use CHAR(32) or BINARY(16)
-
-  -*[What data type to use for hashed password field and what length?](https://stackoverflow.com/questions/247304/what-data-type-to-use-for-hashed-password-field-and-what-length)*
-
-  So I'll use CHAR and length: 32 in the table for `token`.
-
-  ## Timestamp
-  For `timestamp` I use the data type TIMESTAMP and set the default:
-  >To assign the current timestamp, set the column to CURRENT_TIMESTAMP or a synonym such as NOW().
-
-  -*[5.1.8 Server System Variables](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)*
-
-  ## New Session Table
-  Here's the new session table:
-
-  ![screenshot](log_imgs/timestamp_7-6.PNG)
-
-  ## Working, Sort Of!
-
-  With the new session table, we still have an error but it's a new error and the server doesn't shut down like it did before:
+  ## Token Error
+  After pressing **"login as felix"** I tested the **"authenticate (check if token exists in session table)"** and I got this error:
 
   ```bash
-  request  /
-  API request detecting...
-  request  /style/lavacode.css
-  request  /favicon.ico
-  request  /style/lavacode.css
   request  /api/user/authenticate
   API.exec(), parts =  [ 'api', 'user', 'authenticate' ]
   API.authenticate, results.length == 0 (session with token not found)
@@ -101,62 +15,155 @@
   responding =  [ undefined ]
   ```
 
-  This is to be expected because we haven't logged in yet, so there is no session. Let's tackle logging in.
+  In the console:
 
-  ## Logging In
-  We need to login to create a session.
+  ![](log_imgs/token_7-7.PNG)
 
-  ![screenshot](log_imgs/login_7-6.PNG)
+  Looking in the database there is no token:
+  ![](log_imgs/consoletoken_7-7.PNG)
 
-  In the code, I actually changed `felis` it to `felix2` because that's the login I'm using.
 
-  Pressing **log in as user felix** gave me this in the terminal:
+  ## Test Token?
+  I noticed that in index.html, the **"authenticate (check if token exists in session table)"** button sends an object with a test token to User.authenticate.
 
-  ```bash
-  request  /api/user/login
-  API.exec(), parts =  [ 'api', 'user', 'login' ]
-  SELECT * FROM `user` WHERE `username` = 'felix2'
-  responding =  [
-    '{"success": false, "user": null, "message": ' +
-      `"user with this username(felix2) doesn't ` +
-      'exist"}'
-  ]
+  ```html
+  <input type="button" onclick="User.authenticate({token:'token_test_12345'})"
+  value="authenticate (check if token exists in session table)" /><br />
   ```
-  Console:
-  **"user with this username(felix2) doesn't exist"** Hmmm...
 
-  This made me think: `felix2` is a user in `user` table in the `mysql` database not the `user` table that we made in a later chapter for the `myserver` database. I'm confused!
+  But how is this test token supposed to be in our session table? It was never put there.
 
-  ## Retrieving Information from a Table
+  ## When is The Token Added?
+
+  Reading these comments, it looks like the function `User.update()` in index.html is supposed to add the token:
+  ```javascript
+  /* Update user table in database
+      payload = {
+      id: 1,
+      token: "ABC123xyz" } */
+  User.update = function(payload) {
+      fetch("/api/user/update", make(payload)).then(promise => promise.json()).then(json => {
+          console.log(json);
+      });
+  }
+  ```
+
+  User update gets called in the button **"update user properties"**:
+
+  ![](log_imgs/update_7-7.PNG)
+
+  But in the code the payload ***doesn**'t contain `token`*:
+  ```html
+  <input type="button" onclick="User.update({id: 1, password_sha3: 'newpass123A'})"
+  value="update user properties" /><br />
+  ```
+
+  It just send the `id` and `password_sha3`. Where's `token`?
+  ```javascript
+  User.update({id: 1, password_sha3: 'newpass123A'})
+  ```
+
+  `password_sha3` isn't even a field anywhere in our database. The code used an md5 hash. So I had added `password_md5` to the table. Are we supposed to have both `password_md5` and `password_sha3`?
+
+  Looking through the code, `password_sha3` is never used. So I think sending `password_sha3` in the payload is a mistake. The payload shouldn't have `password_sha3`. But which should it have: `password_md5` or `token`?
+
+  ## Update User
+  
+  I changed `password_sha3: 'newpass123A'` to `token:'token_test_12345'`:
+  ```html
+  <input type="button" onclick="User.update({id: 1, token:'token_test_12345'}" value="update user properties" /><br />
+  ```
+  But I still get an error:
+  ```
+  request  /api/user/authenticate
+  API.exec(), parts =  [ 'api', 'user', 'authenticate' ]
+  API.authenticate, results.length == 0 (session with token not found)
+  {"success": false, "message": "token not found in session"}
+  responding =  [ undefined ]
+  ```
+
+  I console logged the query to see what's actually going on when we update the user:
   ```sql
-  SELECT what_to_select
-  FROM which_table
-  WHERE conditions_to_satisfy;
+  UPDATE user SET `id` = '1' WHERE `id` = '1'
   ```
-  -*[3.3.4 Retrieving Information from a Table](https://dev.mysql.com/doc/refman/8.0/en/retrieving-data.html)*
 
-  ## No Felix User
-  I found out there is no user `felix` or `felix2` in the `myserver` database. 
+  Where does it add the token? It's only updating `id` but it's just setting it to the same id?
+
+  I changed `token:'token_test_12345'` back to `password_sha3: 'newpass123A'`.
+
+  ## More About Update
+  ```sql
+  UPDATE table_name
+  SET column1 = value1, column2 = value2, ...
+  WHERE condition;
+  ```
+  -*[SQL UPDATE Statement](https://www.w3schools.com/sql/sql_update.asp)*
+
+  ## Clarify Questions
+  I'm confused, so I'm going to clarify my questions to get a better idea of where to go next.
+
+  ### Questions:
+
+  - ### What part of the code is supposed to be adding the token?
+    - `action_update_user ( request, payload )` or `action_create_session( request, payload )`?
+    - It looks like it's `action_create_session( request, payload )` but I don't see anything in the UI that calls this function. That leads me to the question:
+      - ### What part of our code calls `action_create_session( request, payload )`?
+  - ### Why does `User.update()` set the `id = '1'` to `id = '1'`? 
+    - Possible answer: if there were more users it would change the id?
+
+  ## Tracing Where Create Session Gets Called
+  The function itself in api.js on line 233:
+  ```javascript
+  function action_create_session( request, payload ) {
+    // Create unique authentication token
+    function create_auth_token() {
+        let token = md5( timestamp( true ) + "");
+        return token;
+    } //...
+  ```
+  A reference to the function in api.js on line 336:
+  ```javascript
+  Action.create_session = action_create_session;
+  ```
+
+  The reference getting called conditionally in api.js on line 392:
+  ```javascript
+  if (identify("session", "create")) // Create session
+    Action.create_session( request, json( request.chunks ) )
+    .then( content => respond(response, content) );
+  ```
+  This is where I left off.
   
-  I'm not totally sure why, but I have `felix2` and the original `felix` in the `user` database on the `mysql` database, and this `felix` should be in the `user` table on `myserver`. I'm not sure if it's because something was left out in the book or if I did something wrong.
+
+- ## Thoughts And Feelings:
+  I am super sleep deprived from the drive over to Chicago, but I still did ok with my studying. Now that I'm at home, I'm going to set up a second monitor. I think that will help me.
+
+  After listing out my questions, I realized how confusions happens. It happens when I have many questions that depend on the answers of other questions. Nested questions.
+
+  I coded in the dining room and despite constantly requesting that my family not interupt my study, they kept interrupting me. Example:
   
-   Are there supposed to be two separate `felix` logins, or did I do something wrong by making two `user` tables in different databases? Not sure. I'll look back at the book tomorrow.
-   
-   Maybe this was why `felix@localhost` didn't work and I had to use `felix@%`. Not really sure.
+    >Dad: Did you hear about the dish washing machine?
+    >
+    >Me: Dad, I really need to concentrate. But no I didn't, you can tell me but then please let me focus.
+    >
+    >Dad: Oh ok. It broke and we had to get a new one.
+    >
+    >Me: OK, now can you let me focus. I really want to get this done.
+    >
+    >Dad: Ok. 
+    >
+    >Two seconds later(not an exaggeration)
+    >
+    >Dad: \*\****whispers***** *Do you need an extra phone charger? I'm not using this one.* \*\****whispers*****
+    >
+    >Me: Dad, please I'm trying to focus!
 
-  <img src="log_imgs/username_7-6.PNG" width="400"/>
+    And this went on and on. Basically:
+    ```javascript
+    while (Dashie.IsInDiningRoom){
+      family.interrupt(Dashie);
+    }
+    ```
+    So I decided to just go upstairs away from everybody. That's what I'll have to do in the future.
 
-  No `felix`.
-
-  ## Add Felix User
-
-  I added `felix` through the UI:
-
-  <img src="log_imgs/felix_7-6.PNG" width="400"/>
-
-  I changed the code from `felix2` to `felix` pressed **log in as user felix**. Success:
-
-  <img src="log_imgs/success_7-6.PNG" width="500"/>
-
-    
-    
+    I got stuck again today, but I tried to remember that getting stuck is par for the course. I shouldn't let it stress me. When I get stuck I just need pivot to a new area to look at: either closer in to the details, or further out to a broader idea. I will learn more concepts even when I'm stuck. All day I was stuck, but I still learned so much.
