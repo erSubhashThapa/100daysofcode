@@ -1,106 +1,162 @@
-## Day 86, R2
-### 7/5/19
+## Day 87, R2
+### 7/6/19
 
-- ## Play Around
-  Driving through desolate areas. Internet sucks. Putting pause on backend to just play with frontend since I don't have the internet. I feel rusty with frontend, anyways.
+- ## Node
+  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
 
-  Found some pictures of my sister I took several years ago. Going to play with those.
+  ## How Tokens & Sessions Work:
+  Marco([@Wridgeu](https://twitter.com/Wridgeu)) helped me understand tokens and sessions by sending me these graphics.
 
-  So hot in the van. Sweating. No internet. Could only using my Dash Docs and my log notes. Taking a break to cool off and charge computer.
+  ## Tokens:
+  ![](log_imgs/tokens_7-6.jpg)
+
+  ## Sessions:
+  ![](log_imgs/tokens2_7-6.png)
   
-  ## Back To Coding
-  Back to coding. I got some internet. The temperature cooled a little but still hot. 32 minutes left.
+  ## Delete A Table
+  To delete a table:
+  ```sql
+  DROP TABLE tablename;
+  ```
+  -*[How to Manage MySQL Database, Table & User From Command Line:DELETE MYSQL TABLES AND DATABASES](https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line#DeleteMySQL-Tables-and-Databases#DeleteMySQL-Tables-and-Databases#DeleteMySQL-Tables-and-Databases)*
 
-  ## Passing Params To Callback
-  [Javascript event handler with parameters](https://stackoverflow.com/questions/10000083/javascript-event-handler-with-parameters)
+  Remember to replace `tablename` with your table to go to the right database first, with the command: `use databasename`.
 
-  >An arrow function expression is a syntactically compact alternative to a regular function expression, although without its own bindings to the this, arguments, super, or new.target keywords.
-  >
-  >```javascript
-  >const event_handler = (event, arg) => console.log(event, arg);
-  >el.addEventListener('click', (event) => event_handler(event, 'An argument'));
-  >```
+  ## Making the Session Table
+  I'm going to try to make the `session` table with the little information I have. So I deleted the table using the above code.
 
-  ## Made A little Something
-  Here's a little something I made with the pictures of my sister. Her name is Tallulah and she is super fun.
+  A few days ago, I found this in api.js.
+   ```javascript
+  database.connection.query("INSERT INTO session ( `user_id`, `timestamp`, `token`) VALUES( '" + payload.id + "', '" + timestamp() + "', '" + token + "')",
+  ```
+  From this bit of code, I gather that these are the fields that need to be in the `session` table: `user_id`, `timestamp`, and `token`.
 
-  ![screenshot](log_imgs/tallulah_7-5.gif)
+  Copying this sql command I found in [Storing Sessions in a Database](http://shiflett.org/articles/storing-sessions-in-a-database):
 
-  ```html
-  <!DOCTYPE html>
-  <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-      html,
-      body {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
-
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
-
-      #img {
-        height: 100%;
-      }
-
-      #image {
-        height: 100%;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div id="img">
-
-    </div>
-    <script>
-      const imageArray = ['lula1.png', 'lula2.png'];
-      const colorArray = ['pink', 'lightblue', 'lightyellow'];
-      const image = document.createElement("img");
-      const imageWrapper = document.querySelector("#img");
-
-      var i = 0;
-      var colorI = 0;
-
-      function putImage() {
-        const img = imageArray[i];
-        i === imageArray.length - 1 ? i = 0 : i++;
-        image.setAttribute('src', `images/${img}`);
-        image.setAttribute('id', `image`);
-        imageWrapper.innerHTML = "";
-        imageWrapper.appendChild(image);
-        color();
-      }
-
-      function color() {
-        const color = colorArray[colorI];
-        colorI === colorArray.length - 1 ? colorI = 0 : colorI++;
-        document.getElementsByTagName('body')[0].style.backgroundColor = color;
-      }
-
-
-      putImage();
-      setInterval(putImage, 1600);
-      document.addEventListener('click', color);
-    </script>
-  </body>
-  </html>
+  ```sql
+  CREATE TABLE sessions (
+  id varchar(32) NOT NULL,
+  access int(10) unsigned,
+  data text,
+  PRIMARY KEY (id)
+  );
   ```
 
-- ## Thoughts And Feelings
-  Still so hot and hard to concentrate. Today, we drove all day in our van. We're trying to get home to Chicago before my grandma passes. 
+  I came up with this command to make the session table and set the primary key to `user_id`.
+  ```sql
+  CREATE TABLE session (
+  user_id varchar(32) NOT NULL,
+  PRIMARY KEY (user_id)
+  );
+  ```
+
+  And I'm going to add the other fields, `timestamp` and `token`, in Sequel Pro.
+
+  ## Token Data Type?
+  How is the token made and what is the data type?
+
+  I found this in api.js:
+  ```javascript
+  function create_auth_token() {
+    let token = md5( timestamp( true ) + "");
+    return token;
+  }
+  ```
+  So I think I need to look at what data type an **md5** token is.
+
+  ## md5
+  A few days ago I found that the `password_md5` should be:
+
+  >MD5 generates a 128-bit hash value. You can use CHAR(32) or BINARY(16)
+
+  -*[What data type to use for hashed password field and what length?](https://stackoverflow.com/questions/247304/what-data-type-to-use-for-hashed-password-field-and-what-length)*
+
+  So I'll use CHAR and length: 32 in the table for `token`.
+
+  ## Timestamp
+  For `timestamp` I use the data type TIMESTAMP and set the default:
+  >To assign the current timestamp, set the column to CURRENT_TIMESTAMP or a synonym such as NOW().
+
+  -*[5.1.8 Server System Variables](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html)*
+
+  ## New Session Table
+  Here's the new session table:
+
+  ![screenshot](log_imgs/timestamp_7-6.PNG)
+
+  ## Working, Sort Of!
+
+  With the new session table, we still have an error but it's a new error and the server doesn't shut down like it did before:
+
+  ```bash
+  request  /
+  API request detecting...
+  request  /style/lavacode.css
+  request  /favicon.ico
+  request  /style/lavacode.css
+  request  /api/user/authenticate
+  API.exec(), parts =  [ 'api', 'user', 'authenticate' ]
+  API.authenticate, results.length == 0 (session with token not found)
+  {"success": false, "message": "token not found in session"}
+  responding =  [ undefined ]
+  ```
+
+  This is to be expected because we haven't logged in yet, so there is no session. Let's tackle logging in.
+
+  ## Logging In
+  We need to login to create a session.
+
+  ![screenshot](log_imgs/login_7-6.PNG)
+
+  In the code, I actually changed `felis` it to `felix2` because that's the login I'm using.
+
+  Pressing **log in as user felix** gave me this in the terminal:
+
+  ```bash
+  request  /api/user/login
+  API.exec(), parts =  [ 'api', 'user', 'login' ]
+  SELECT * FROM `user` WHERE `username` = 'felix2'
+  responding =  [
+    '{"success": false, "user": null, "message": ' +
+      `"user with this username(felix2) doesn't ` +
+      'exist"}'
+  ]
+  ```
+  Console:
+  **"user with this username(felix2) doesn't exist"** Hmmm...
+
+  This made me think: `felix2` is a user in `user` table in the `mysql` database not the `user` table that we made in a later chapter for the `myserver` database. I'm confused!
+
+  ## Retrieving Information from a Table
+  ```sql
+  SELECT what_to_select
+  FROM which_table
+  WHERE conditions_to_satisfy;
+  ```
+  -*[3.3.4 Retrieving Information from a Table](https://dev.mysql.com/doc/refman/8.0/en/retrieving-data.html)*
+
+  ## No Felix User
+  I found out there is no user `felix` or `felix2` in the `myserver` database. 
   
-  This is probably the end of our 3 years living in the van.
+  I'm not totally sure why, but I have `felix2` and the original `felix` in the `user` database on the `mysql` database, and this `felix` should be in the `user` table on `myserver`. I'm not sure if it's because something was left out in the book or if I did something wrong.
   
-  After today, I'm excited to code in some air conditioning!
+   Are there supposed to be two separate `felix` logins, or did I do something wrong by making two `user` tables in different databases? Not sure. I'll look back at the book tomorrow.
+   
+   Maybe this was why `felix@localhost` didn't work and I had to use `felix@%`. Not really sure.
+
+  <img src="log_imgs/username_7-6.PNG" width="400"/>
+
+  No `felix`.
+
+  ## Add Felix User
+
+  I added `felix` through the UI:
+
+  <img src="log_imgs/felix_7-6.PNG" width="400"/>
+
+  I changed the code from `felix2` to `felix` pressed **log in as user felix**. Success:
+
+  <img src="log_imgs/success_7-6.PNG" width="500"/>
+
+    
+    
