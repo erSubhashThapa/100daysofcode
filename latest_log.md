@@ -1,106 +1,117 @@
 
-## Day 90, R2
-### 7/9/19
+## Day 91, R2
+### 7/10/19
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
 
-  ## API Instance Of Class?
-  Yesterday when I logged `API`, I wonder if the result was the API call or an instance of a class?
-  
-  I think it's the class. Because it's called 'API' and it logs `class API{...`. What confuses me is that `API.parts`changes. So it seems like it should be different instances of the API class.
+  ## Is `http.IncomingMessage` An Instance Of `EventEmitter`?
 
-  I looked over some things. It is logging the class. Inside the class, API.parts changes on line 369 with every new request.
-
-  ```javascript
-  // api.js line:369
-  API.parts = request.parts;
-  ```
-
-  ## Clarify Questions
-  I need to clarify what I'm trying to figure out so I know what to do next:
-
-  ### Where does or where *should* `action_create_session` get called?
-  - `request.on('end')`*(line 367, api.js)* conditionally calls `action_create_session`*(233)* if `identify("session", "create")`*(395, 310)* returns `true`
-  
-  ### So when is `request.on('end')` called and `identify("session", "create")` `true`?
-  - ### `identify("session", "create")` is `true`
-    - `identify("session", "create")` is `true` when the `API.parts` array is `["api", "session", "create"]`
-  
-      ```javascript
-      // line 314 api.js
-      return API.parts[0] == "api" && API.parts[1] == a && API.parts[2] == b;
-      ```
-
-    - `API.parts` is the same as `request.parts`
-      ```javascript
-      // line 369 api.js
-      API.parts = request.parts;
-      ```
-  - ## `request.on('end')` gets called
-    - I'm pretty sure it gets called when the http request gets sent back. I'm not totally sure how that works.
-    - `request` is actually a parameter of  `exec()`
-      ```javascript
-      // line 348, api.js
-      static exec( request, response ) {
-      ```
-  ### Where is `exec()` called and what is the argument for `request`?
-
-  - `exec()` is called inside the `http.createServer` callback:
-
-  - ```javascript
-    // line 32, index.js
-    API.exec(request, response);
-    ```
-    `createServer` and the `callback` are here:
-    ```javascript
-    //line 1 index.js
-    let http = require('http');
-    // line 16,index.js
-    http.createServer(function(request, response) {
-    ...
-    ```
-    The argument for request is the http request.
-
-  ### Still not sure: when does `request.on('end')` get called?
-
-  ## `request.on()`
+  Yesterday, I wanted to know if `request` was an instance of `EventEmitter` because It had the `.on()` method.
 
   >The on method binds an event to a object.
-  >
-  >It is a way to express your intent if there is something happening (data sent or error in your case) , then execute the function added as a parameter.
 
   -*[In node.js “request.on” what is it this “.on”](https://stackoverflow.com/questions/12892717/in-node-js-request-on-what-is-it-this-on)*
 
-  More about `.on` here: [emitter.on(eventName, listener)](https://nodejs.org/api/events.html#events_emitter_on_eventname_listener)
-
-  ## EventEmitter
-
-  >Much of the Node.js core API is built around an idiomatic asynchronous event-driven architecture in which certain kinds of objects (called "emitters") emit named events that cause Function objects ("listeners") to be called.
-
-  >All objects that emit events are instances of the EventEmitter class. These objects expose an eventEmitter.on() function that allows one or more functions to be attached to named events emitted by the object. 
+  >All objects that emit events are instances of the `EventEmitter` class.
 
   -*[Events](https://nodejs.org/api/events.html#events_events)*
 
+  `request` is the identifier for an `http.IncomingMessage` object. So we need to know if `http.IncomingMessage` is an instance of `EventEmitter`.
 
+  ## Tracing The Prototype Chain
+  I used `Object.getPrototypeOf()` and `.__proto__` to trace the prototype chain of `http.IncomingMessage`. More on that here: [Tracing Javascript’s Prototype Chain](https://alanstorm.com/tracing-javascripts-prototype-chain/)
 
-  Is `request` a kind of EventEmitter? Can I log it to find out?
+  The first object that `http.IncomingMessage` inherits from is `Readable`:
+  ```javascript
+  console.log('proto', Object.getPrototypeOf(http.IncomingMessage));
+  /*  proto [Function: Readable] {
+      ReadableState: [Function: ReadableState],
+      _fromList: [Function: fromList],
+      from: [Function]
+    }  */
+  ```
 
-  ## IncomingMessage Object
-  `request` is an IncomingMessage object.
+  If you trace back the inheritance chain, you find that yes, **`http.IncomingMessage` does inherit from `EventEmitter`.**
 
-  >The IncomingMessage object is passed as the first argument in the requestListener function:
+  ```javascript
+  console.log('proto', Object.getPrototypeOf(http.IncomingMessage).__proto__.__proto__);
+  /*  proto [Function: EventEmitter] {
+      once: [Function: once],
+      EventEmitter: [Circular],
+      usingDomains: false,
+      defaultMaxListeners: [Getter/Setter],
+      init: [Function],
+      listenerCount: [Function]
+    }  */
+  ```
 
-  -*[Node.js IncomingMessage Object](https://www.w3schools.com/nodejs/obj_http_incomingmessage.asp)*
+  ## `http.IncomingMessage` inherits from `EventEmitter`
+  This also means `request`, which is an `http.IncomingMessage` object, is an instance of `EventEmitter`.
 
-  Is the IncomingMessage object  a kind of EventEmitter?
+  So now I know that `request.on()` is the `emitter.on()` method and not some other "on" method.
 
-  According to [this page](http://www.acuriousanimal.com/2015/08/31/how-to-read-from-a-writable-stream-httpserverresponse-in-node.html), http.IncomingMessage is a readable stream. I'm not sure if it still can't inherit from EventEmitter though.
+  ## Clarify Questions
+  I looked back at my questions from yesterday to get back to what I was trying to figure out. I now wonder:
 
-  ## Prototype Of An Object In Node?
-  In DevTools I can `console.dir()` to find out an object's prototype. But in node when I `console.dir(http.IncomingMessage);` I just get `[Function: IncomingMessage]`.
+  ## How is the UI making requests?
+  Let's look at the login button:
 
-    
+  ```html
+  <!--line 161, index.html-->
+  <input type="button" onclick="User.login({username:'felix',password:'password'})"
+  value="log in as user felix / password (check session)" /><br />
+  ```
+
+  **The function call in the above button:** `User.login({username:'felix',password:'password'})`
+
+  ### User.login:
+  ```javascript
+  // line 70, index.html
+  /* Login and create user session (if credentials match)
+    payload = {
+    username: "username",
+    password: "password" } */
+  User.login = function(payload) {
+      fetch("/api/user/login", make(payload)).then(promise => promise.json()).then(json => {
+          console.log(json);
+      });
+  }
+  ```
+
+  I'm totally sure how the URL `"/api/user/login"` works.
+
+  I think it has something to do with this method in the API class:
+  ```javascript
+  // line 405, api.js
+  static catchAPIrequest(request) {
+    request[0] == "/" ? request = request.substring(1, request.length) : null;
+    if (request.constructor === String)
+        if (request.split("/")[0] == "api") {
+            API.parts = request.split("/");
+            return true;
+        }
+    return false;
+  }
+  ```
+  When is `catchAPIrequest(request)` called?
+
+  I logged the trace to see.
+
+  ```javascript
+  // line 405, api.js
+  static catchAPIrequest(request) {
+    console.log("catchAPIrequest");
+    console.trace();
+    ...
+  /*  catchAPIrequest
+      Trace
+          at Function.catchAPIrequest (/Users/dashiellbark-huss/Documents/100daysofcode/node-master/module/api/api.js:407:15)
+          at ReadFileContext.callback (/Users/dashiellbark-huss/Documents/100daysofcode/node-master/index.js:34:25)
+          at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:230:13)
+  */
+  ```
+
     
 
   
