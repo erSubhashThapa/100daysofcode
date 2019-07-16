@@ -1,112 +1,58 @@
 
-## Day 96, R2
-### 7/15/19
+## Day 97, R2
+### 7/16/19
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
-  
+
+  ### Update:
+  I got in touch with Greg Sidelnikov ([js_tut](https://twitter.com/js_tut)). He said he's working on the update to the [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) book. The issues I ran into may be addressed in the next update.
+
   ### Where we left off:
-  The [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) finished files ***didn't work***. They didn't create a session. Now I got the app to create a session but the **authenticate (check if token exists in session table)** button didn't work.
-
-
-  So I changed the token sent through the UI: from a test token to the actual token. But it still didn't work because the files didn't refresh. The payload was still logging as {` token: 'token_test_12345' }`.
-
-  ## Working
-  I tried the **authenticate (check if token exists in session table)** button again. Now it works. So it finally refreshed.
-
-  ## Where Should The Token Actually Be?
-
-  Right now the token is stored statically on the front end. 
-
-  ```html
-  <!-- line 159, index.html -->
-  <input type="button" onclick="User.authenticate({token:'bb6cd80736ece803dd33c004f7a94278'})"
-  ```
-
-  This is just for testing. We cannot store every user's token for every session on the front end.
-
-  So where do we store it?
-
-  As a cookie? 
-
-  In local storage?
-
-  ## Don't Store Tokens In Local Storage?
-  >Don't store tokens in local storage
-  Browser local storage (or session storage) is not a secure place to store sensitive information. Any data stored there:
-  >
-  > - Can be accessed through JavaScript.
-  > - May be vulnerable to cross-site scripting.
+  The [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087) finished files ***didn't work***. Over the past few days, I got the session to save to the session table. Today, I'm going to try to save the token to the front end.
   
-  -*[Where to Store Tokens](https://auth0.com/docs/security/store-tokens#don-t-store-tokens-in-local-storage)*
+  ## Storing The Token
 
-  ## AuthToken In Browser
-  In the diagram from the book, it shows that the authtoken is stored in the browser.
-  ![](log_imgs/authtoken_7-15.PNG)
+  Yesterday, I was trying to figure out where to save the token. Where would I put this? Does it go in `index.html`, `api.js`, or `index.js`?
 
-  But if we shouldn't use local storage, how do we store it?
-
-  >### If a backend is present
-  >
-  >If your single-page app has a backend server at all, then tokens should be handled server-side using the [Authorization Code Flow](https://auth0.com/docs/flows/concepts/auth-code), [Authorization Code Flow with Proof Key for Code Exchange (PKCE)](https://auth0.com/docs/flows/concepts/auth-code-pkce), or [Hybrid Flow](https://auth0.com/docs/api-auth/grant/hybrid).
-
-  -*[Where to Store Tokens](https://auth0.com/docs/security/store-tokens#don-t-store-tokens-in-local-storage)*
-
-  I'm not sure which I should be using.
-
-  ## Reviewing Sessions and Tokens
-  I looked back at these diagrams that Marco([@Wridgeu](https://twitter.com/Wridgeu)) sent me to help me understand sessions and tokens.
-
-  ## Tokens:
-  ![](log_imgs/tokens_7-6.jpg)
-
-  ## Sessions:
-  ![](log_imgs/tokens2_7-6.png)
-
-  ## *Do* Store Tokens In Local Storage?
-  Now I'm reading that you ***can*** store tokens in local storage:
-
-  >There are three ways how to store a token in a browser:
-  >
-  >1\. **LocalStorage** - stores data with no expiration date, no access from a backend.
-  >
-  >2\. **SessionStorage** - stores data until browser/tab is open, no access from a backend.
-  >
-  >3\. **Cookie** - stores data, expiration time can be set individually, automatically sent with subsequent requests to the server.
-
-
-  -*[Where to store auth token (frontend) and how to put it in http headers of multiple endpoints?](https://stackoverflow.com/questions/51332747/where-to-store-auth-token-frontend-and-how-to-put-it-in-http-headers-of-multip)*
+  ## Clarify Questions
+  I was trying different ideas with my code but I'm confused so I want to clarify my questions:
+  Right now I'm calling `action_create_session` within `action_login`. This is a promise within a promise. 
   
-  I like idea of storing the token in a cookie where you can control the expiration time.
+  - ### How do I get the data from `action_create_session` to go to the UI if I'm not fetching it from the UI?
+    - Should I instead fetch `action_create_session` from the UI?
+      - Is that secure?
 
-  But then there's another idea here: [Store Auth-Token in Cookie or Header?](https://security.stackexchange.com/questions/180357/store-auth-token-in-cookie-or-header) Here, we can also store cookies in the `header`.
+  ## Fetching `action_create_session`
 
-  ## Options For Storing The Token
-  - **Cookie**
-  - **Header**
-  - **SessionStorage**
-  - **LocalStorage**
-
-  ## Storing The Token In `localStorage`
-  > To save the token in your browser you can simply use:
-  >
-  >`localStorage.setItem('token', token);`
-  >
-  >and later access it with:
-  >
-  >`localStorage.getItem('token');`
-
-  -*[Example: JSON Web Tokens with Vanilla JavaScript](https://jonathanmh.com/example-json-web-tokens-vanilla-javascript/)*
-
-  Where would I put this? Does it go in `index.html`, `api.js`, or `index.js`?
-
-  I think it goes in `index.html`. I don't think the other files have excess to the frontend and the WEB API.
-
-  ## Log Token To Terminal
-  I logged the token to the terminal by adding `.then` to line 218, api.js.
-
+  I moved the `action_create_session()` call from api.js, inside `action_login`
   ```javascript
-  action_create_session(request, payload).then(x=>console.log((JSON.parse(x)).token)); 
+  // line 218, api.js
+  action_create_session(request, payload)
   ```
 
-  Tomorrow, I'll try to get the token to the frontend.
+  To the frontend in a fetch api call:
+  ```javascript
+  // line 74, index.html
+  User.login = function(payload) {
+      fetch("/api/user/login", make(payload)).then(promise => promise.json()).then(json => {
+          console.log(json);
+          if (json.success===true){
+            return fetch("/api/session/create", make(payload))
+          }
+      }).then(promise => promise.json()).then(json => {
+          console.log(json);
+      });
+  }
+  ``` 
+
+  Fetching `"/api/session/create"` will call `action_create_session`.
+  
+  I'm just confused if this is secure. Could someone change `json.success` from `false` to `true` on the frontend and  create a session without a password? Idk.
+
+  [Using a fetch inside another fetch in javascript
+](https://stackoverflow.com/questions/40981040/using-a-fetch-inside-another-fetch-in-javascript)
+
+  ## Git Diff
+  I made a mistake in my files and I wasn't sure what it was so I tried to use [`git diff`](https://veerasundar.com/blog/2011/06/git-tutorial-comparing-files-with-diff/) to see the difference between my current commit and my commit before. It was really hard to read so I just looked at the difference on github.
+  
