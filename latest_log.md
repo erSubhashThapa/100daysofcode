@@ -1,6 +1,6 @@
 
-## Day 97, R2
-### 7/16/19
+## Day 98, R2
+### 7/17/19
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
