@@ -1,4 +1,6 @@
 
+# #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+
 
 ## Day 1, R3
 ### 7/20/19
