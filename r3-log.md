@@ -10,7 +10,7 @@ Today is the start of round 3. This round I want to make some full stack apps, l
 
 The last two rounds I studied for 2 hours a day. I will continue that for now. 
 
-So far, I've dedicated atleast 400 hours this year to coding.
+So far, I've dedicated at least 400 hours this year to coding.
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
