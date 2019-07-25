@@ -1,56 +1,34 @@
 
-## Day 5, R3
-### 7/24/19
+## Day 6, R3
+### 7/25/19
 
 - ## Node
   Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
 
 
   ### Where I left off:
-  I'm on my 3rd round of doing the tutorial. I'm not using the book, except as a reference when needed. I'm using my finished files as references.
+  Yesterday, I got the API to connect to the database and grab information statically: the API always queried the same query.
 
-  Yesterday, I made an API class. I left off with a bug when I call fetch from the UI:
+  Today, I'm going to try to make the call dynamic, using the payload. I'm also going to try to send the info back to the frontend through the promise returned in the fetch call.
 
-  ```bash
-  SyntaxError: Unexpected token b in JSON at position 1
-  ```
+  ## Dynamic Query and Return Query Info
+  I got the api to query the database dynamically, based on the payload. 
 
-  But I'm not getting that error when I call the same code from the backend.
+  The query sends the data back to the front end console. 
 
-  ## Refreshing
-  I'm not getting that error now, so I think it was just a refreshing problem.
+  ### Link To Work: [node_server_multiple_endpoints](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/6a62d127a1f76cbd9eb47abe129cdf30ea0b7753)
 
-  ## Returning Promise To UI
-  I got my UI to request an endpoint. The end point returns data to the UI. I'm not really sure where in the code the data is getting returned to the UI. Maybe it's when I call `response.end(content, 'utf-8')`?Maybe that sends the content to the fetch call??
+  ## Next:
+  Let's put the data in the UI.
 
-  ### Link To Work: [promise returned to UI no helper functions](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/589d27985e62690916835a02eb13da7537cb6984)
+  ## Query Info Returned To UI
+  Now the query info goes to the UI.
+  ### Link To Work: [node_server_multiple_endpoints](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/77ac5effd8e80a183efe2aa2a23432d10e804541)
 
-  ## What Next
-  I think I should try to get the api to change the database now.
+  ## Next
+  Let's add another API Query and move some of our code into helper functions so it's DRY. 
 
-  ## MySQL
-  I added a query to the database. Our endpoint grabs all the butt's of the owners who have flat butts.
-
-  Well really it grabs all the *owners*, but I wanted to say it *grabs all the butts* for the pun.
+  ## Added Helper Functions, New Endpoint
+  I refactored the code into helper functions so it's DRY. I added a new endpoint but I need to add the body to the endpoint tomorrow.
+  ### Link To Work: [node_server_multiple_endpoints](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/8e106e3b073e276320ca5de5d090e7db6e0d784a)
   
-  ```javascript
-  // line 24, api.js
-  let q = "select owner from butts where shape = 'flat'"
-  database.connection.query(q, (error, results)=>{
-    if (error)
-      throw error;
-    console.log(results);
-  })
-  ```
-
-
-  <img src ="log_imgs/owners_7-24.PNG" width="500"/>
-
-  <img src ="log_imgs/query_7-24.PNG" width="500"/>
-
-  We've successfully grabbed 2d-Man's and Flatty Mcflat's *flat* butts. We didn't grab my *round* butt or my moms *square* butt. Those aren't *flat*.
-
-  ### Link To Work: [flat butt query](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/f2bb95b67b86713d7c05c17c990b5f3d37d21dd8)
-
-  ## Tomorrow
-  Tomorrow, I'll work on using the payload to change the query and returning information from the query back to the UI.
