@@ -1,92 +1,57 @@
-## Day 8, R3
-### 7/27/19
+## Day 9, R3
+### 7/28/19
 
 - ## Node
-  Continuing with Greg's book, [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087).
-
+  
   ### Where I left off:
-  Yesterday, I added an endpoint that updates the *butts* but I'm getting an error related to the MySQL query.
+  Yesterday, I finished implementing CRUD for my 'butts' api.
 
-  I also had a lot of problems with my mac so I had to wipe it clean and move the files over from my last back up. All of my applications are gone along with their settings and extensions. So I'll need to deal with that.
+  Today, I'll start a new app that has CRUD *and* sessions/logins.
 
-  ## Installing Homebrew And Node
+  ## Live Server VSC Extension
+  I mentioned yesterday that all my computer apps,settings , and extensions had to be deleted. So today I'm adding back this [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VSC.
 
-  I have to install Homebrew and Node:
+  ## Password Input
+  Here's how you can get that hidden password input:
 
-  [How to install NodeJS and NPM on Mac using Homebrew](https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew):
-
-  Install brew:
-  ```bash
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ```html
+  <input type="password"></input>
   ```
 
-  Install Node:
-  ```bash
-  $ brew install node
-  ```
-  
-  ## Markdown Extension
-  I had this extension before:
-  [Markdown All in One.](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+  <img src="log_imgs/login_7-28.PNG" width = "400"/>
 
-  I added it back.
+  More info: [MDN, \<input type="password">](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password)
 
-  It gives you some short cuts for working with markdown. For example, `cmd` + `b` makes text bold.
+  ## `response.writeHead` And `response.end`
+  Info on `response.writeHead` and `response.end`:
 
-  ## MySQL Query Error
+  >writeHead writes the HTTP header (status code 200), end writes the body and closes the response. 
 
-  I solved my query error. I was missing quotes.
-  ### Wrong:
-  ```sql
-  update butts set shape = big where owner = dash
-  ```
-  ### Correct:
-  ```sql
-  update butts set shape = 'big' where owner = 'dash'
-  ```
-  
+  -*[response.writeHead and response.end in NodeJs](https://stackoverflow.com/questions/14243100/response-writehead-and-response-end-in-nodejs)*
+
+  More info here: [HTTP, Node Docs](https://nodejs.org/api/http.html)
+
+  ## `fs.readFile`
+  >Asynchronously reads the entire contents of a file.
+
+  More here: *[Node Docs: fs.readFile(path[, options], callback)](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)*
+
+  ## Status Code 404
+  In the Node server tutorial I followed, when you request a page that doesn't exist you get redirected to 404.html page. And you write back a 200 status code:
   ```javascript
-  // line 51,api.js
-  let q = `update butts set shape = '${payload.shape}' where owner = '${payload.owner}'`;
+  fs.readFile('/404.html', function(error,content){
+      response.writeHead('200', {'Content-Type':'text/html'});
+      response.end(content, 'utf-8')
+  }
   ```
 
-  ## CRUD
-  Now I've fully implemented CRUD:
-  - **Create**: `action_butt_add`
+  But I think you need to send a 404 code.
 
-  - **Read**: `action_butt_find`
+  >When a user requests a nonexistent URL on your website, you should return an individual error page that lets them know that the requested URL does not exist. You should also make sure that the server returns the correct HTTP status code “404“.
 
-  - **Update**: `action_butt_update`
+  -*[Why should a 404-error page return the correct HTTP status code and not be redirected, for example?](https://www.sistrix.com/ask-sistrix/onpage-optimisation/http-status-code/4xx-client-error-404-error-page/why-should-a-404-error-page-return-the-correct-http-status-code-and-not-be-redirected-for-example/)*
 
-  - **Delete**: `action_butt_delete`
+  I'm changing the code to 404.
 
-
-   ### [Link To Work](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/ca3bcd1c8c5a3039e0c6a33deb8552669eafb2f0)
-
-   ## Next
-   Next, lets add more UI. Right now I can only **add** and **find** in the UI.
-
-   ## UI Added
-   I added a simple and not so pretty UI.
-
-   <img src="log_imgs/ui_7-27.PNG" width="500">
-
-   [Link To Work](https://github.com/DashBarkHuss/node_server_multiple_endpoints/commit/3d908f93106ad43777e5be15d4e889bb01d24321)
-
-   ## Readme
-   I added to the readme.
-
-   [Link To Work](https://github.com/DashBarkHuss/node_server_multiple_endpoints/tree/15c3761058dfcf2547efbedcaa471826ed0e8823)
-
-   ## What Do I Still Need To Know?
-   I still probably need more experience with making bigger databases with lots of tables. How do they need to relate to each other? I know there are best practices.
-
-   I also should get more practice with authentication and sessions.
-
-   I'm going to start another project again from scratch. This one will have authentication/logins. Maybe I'll even make something useful, instead of a butt api.
-
-- ## Thoughts And Feelings:
-  I know so much more about creating a backend now. It's fun. I feel like I am getting closer to being able to pop out apps. I wonder what else there is to learn regarding backend? It seems like this is all it is? Maybe AI and data science is considered backend.
-
-  I wonder if I should next learn express? Is it necessary?
-  
+  ## Not Serving 404.html
+  I added more conditionals `fs.readFile`. Now the 404.html file isn't serving. I wonder if it's because it won't serve unless you pass 200 into `response.writeHead`. I'll need to work on this tomorrow. 
