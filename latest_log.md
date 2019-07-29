@@ -1,57 +1,55 @@
-## Day 9, R3
-### 7/28/19
+## Day 10, R3
+### 7/29/19
 
 - ## Node
   
   ### Where I left off:
-  Yesterday, I finished implementing CRUD for my 'butts' api.
+  Yesterday, I started a new app that will have CRUD *and* sessions/logins. The 404.html file isn't serving.
 
-  Today, I'll start a new app that has CRUD *and* sessions/logins.
+  ## No Slash in Path Parameter
+  The 404.html file wasn't serving because of the syntax. There shouldn't be a leading forward slash in the path parameter for `fs.readFile`.
 
-  ## Live Server VSC Extension
-  I mentioned yesterday that all my computer apps,settings , and extensions had to be deleted. So today I'm adding back this [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for VSC.
-
-  ## Password Input
-  Here's how you can get that hidden password input:
-
-  ```html
-  <input type="password"></input>
-  ```
-
-  <img src="log_imgs/login_7-28.PNG" width = "400"/>
-
-  More info: [MDN, \<input type="password">](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/password)
-
-  ## `response.writeHead` And `response.end`
-  Info on `response.writeHead` and `response.end`:
-
-  >writeHead writes the HTTP header (status code 200), end writes the body and closes the response. 
-
-  -*[response.writeHead and response.end in NodeJs](https://stackoverflow.com/questions/14243100/response-writehead-and-response-end-in-nodejs)*
-
-  More info here: [HTTP, Node Docs](https://nodejs.org/api/http.html)
-
-  ## `fs.readFile`
-  >Asynchronously reads the entire contents of a file.
-
-  More here: *[Node Docs: fs.readFile(path[, options], callback)](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)*
-
-  ## Status Code 404
-  In the Node server tutorial I followed, when you request a page that doesn't exist you get redirected to 404.html page. And you write back a 200 status code:
+  ### No:
   ```javascript
   fs.readFile('/404.html', function(error,content){
-      response.writeHead('200', {'Content-Type':'text/html'});
-      response.end(content, 'utf-8')
-  }
+      ...
   ```
 
-  But I think you need to send a 404 code.
+  ### Yes:
+  ```javascript
+  fs.readFile('404.html', function(error,content){
+  ```
+  
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/tree/f957b813a456371f869ebf677fc20b9fae2b72a6)
 
-  >When a user requests a nonexistent URL on your website, you should return an individual error page that lets them know that the requested URL does not exist. You should also make sure that the server returns the correct HTTP status code “404“.
+  ## `response` Parameter In `requestListener()`
+  I was confused about the response parameter in the request listener in `http.createServer(). We don't yet know the response when we pass the parameter in. So what is it?
 
-  -*[Why should a 404-error page return the correct HTTP status code and not be redirected, for example?](https://www.sistrix.com/ask-sistrix/onpage-optimisation/http-status-code/4xx-client-error-404-error-page/why-should-a-404-error-page-return-the-correct-http-status-code-and-not-be-redirected-for-example/)*
+  >The second parameter represents a ServerResponse object, which has methods for handling the response stream back to the user parameter 
 
-  I'm changing the code to 404.
+  -*[Node.js requestListener() Function](https://www.w3schools.com/nodejs/func_http_requestlistener.asp)*
 
-  ## Not Serving 404.html
-  I added more conditionals `fs.readFile`. Now the 404.html file isn't serving. I wonder if it's because it won't serve unless you pass 200 into `response.writeHead`. I'll need to work on this tomorrow. 
+  ## Markdown Spellcheck
+  I added back the spellcheck extension I had called [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker). I thought it didn't have suggested spellings but I looked again in the docs and it does.
+
+  ## `promise.text()`
+  You can use `.text()` on a promise to see what the response is. This helped me debug an issue when `.json()` gave me an error for an unexpected token and the response couldn't be parsed.
+
+  [Unexpected token < in JSON at position 0](https://daveceddia.com/unexpected-token-in-json-at-position-0/)
+
+  ## API.exec Sends Response To Fetch
+  I got API.exec to send a response to fetch.
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/tree/08f8703f26d4c2882a313632f5f5c94bdee18444)
+
+  ## Tomorrow
+  I changed the status code for serving the 404.html file back to 200 and didn't test it with 404. I'll do that tomorrow.
+
+  I need to better understand how fetch is working.
+
+- ## Thoughts And Feelings:
+  Doing multiple passes of this project has me looking at details and trying to understand more each time through. 
+
+  For example, today I really looked closely at how the fetch promise gets resolved.
+
+  Going through the tutorial multiple times has me understanding the big picture so I can ask the right questions about the details.
