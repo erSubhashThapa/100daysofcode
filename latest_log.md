@@ -1,65 +1,50 @@
-## Day 11, R3
-### 7/30/19
+## Day 12, R3
+### 7/31/19
 
 - ## Node
   
   ### Where I left off:
   Yesterday, I continued my Node app that will have CRUD *and* sessions/logins so I can get more practice with sessions.
 
-  I changed the status code for serving the 404.html file back to 200 and didn't test it with 404. I'll do that today.
+  I started the login API endpoint and I'm continuing that.
 
-  I need to better understand how fetch is working.
+  ## Promise Syntax
+  I had a really weird error where my a promise constructor executor was catching an error but the error was the resolve value. It was because I had switched the order of the parameters for the executor. I did `(reject, resolve)` but it should be `(resolve, reject)`.
 
-  ## Can Only Call `.json` Once
-  You can only call `.json()` once on the response object for `fetch` otherwise you get this error:
-
-  ``` bash
-  Uncaught (in promise) TypeError: Failed to execute 'json' on 'Response': body stream is locked
-  ```
-
-  ### NO:
+  [Promise Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+  ### No:
   ```javascript
-  fetch('http://127.0.0.1:3000/api/lol')
-  .then(promise=>{
-    console.log("response: ", promise);
-    console.log(".json(): ", promise.json()); // 1st time
-    return promise.json(); // 2nd time
-  });
+  return new Promise((reject, resolve)=>{ //wrong order
+      if (!payload){
+          reject("Oops no payload")
+      };
+      resolve(`{"success": true}`); 
+  }).catch((error) => { console.log("err:", error) });
   ```
-  ### YES:
+  ### Yes: 
   ```javascript
-  fetch('http://127.0.0.1:3000/api/lol').then(promise=>{
-    console.log("response: ", promise);
-    const json = promise.json(); // set promise.json() to variable
-    console.log(".json(): ", json)
-    return json;
-  });
+  return new Promise((resolve, reject)=>{
+      if (!payload){
+          reject("Oops no payload")
+      };
+      resolve(`{"success": true}`); 
+  }).catch((error) => { console.log("err:", error) });
   ```
 
-  ## Reviewing Fetch
-  I reviewed the docs for using the fetch API: [Using Fetch
-](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) and [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  ## `action_user_login` Returns Promise
+  Now `action_user_login` returns a promise.
 
-  ## Fetch UI
-  I have a working fetch call on the UI that is simplified, so it demonstrates better what's going on with fetch:
-  
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/tree/c8ec88b8bc7ca0dee96c9f3dffd33f001784f033)
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/10414a907e0f55ee02e5c9c6a3198a222455e180)
 
-  ## 404 Status Code
-  I changed the status code back to 404 and it still serves the 404.html file.
+  ## `request.on('data')`
+  I added the callback function for `request.on('data')` and added a payload to my test fetch call.
 
-  ## `catchAPIrequest` and `respond` helper
-  I added the static API method `catchAPIrequest()` to see if the request is an API request. I moved the body of `respond.on('end')` to a `respond` helper function.  
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/0cb8e2aa5b26a5327f26f227f0ab5c711f7f34b6)
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/95d4a9b5293cc3d0c8d44fdc316b341e0b54005d)
+  ## Database Class
+  I added the database class and created a connection to the database.
 
-  ## Removed Body Of `request.on('data')`
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/a79461e580773cffec62d1d13a8ddc9efc309dd9)
 
-  I realized since we have no payload yet, the body of `request.on('data')` didn't do anything. So I removed the body for now. I still needed `request.on('data', ()=>{})  ` or `request.on('end')` wouldn't get called. 
-  
-  I also added an `identify()` helper and `action_user_login` with no body.
-
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/e32b27f1c5d9c572819ce952484cb0c8c978c3e1)
-
-  ## Tomorrow
-  Tomorrow, I'll continue adding to the login API endpoint.
+  ## Database Connection Query
+  I started to add the database query. I'll continue that tomorrow.
