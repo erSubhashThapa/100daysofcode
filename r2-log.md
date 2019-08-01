@@ -1898,7 +1898,7 @@ I said yesterday was the halfway point of the year but think it's actually today
 
   ## Chapter 6, 7/2/19 Error
 
-  I got through chapter 6 but I ran into an issue when `node index.js` in section 6.9, page 59.
+  I got through chapter 6 but I ran into an issue when I ran `node index.js` in section 6.9, page 59.
 
   ```bash
   Tue Jul 02 node-master Dashie$ node index.js
@@ -1975,7 +1975,7 @@ I said yesterday was the halfway point of the year but think it's actually today
   It worked! I was able to log in through Sequel Pro!
 
   ## Question: How do you Secure This?
-  [@TheDLFord](https://twitter.com/TheDLFord) said using `%` for the host name isn't secure. So how do I deep my prject secure?
+  [@TheDLFord](https://twitter.com/TheDLFord) said using `%` for the host name isn't secure. So how do I keep my project secure?
 
   <img src="log_imgs/help2_7-1-19.PNG" width="500"/>
 
@@ -2001,7 +2001,7 @@ I said yesterday was the halfway point of the year but think it's actually today
 
   ### Take Aways:
   - **When outsourcing, look around for someone who thinks they can solve your problem.** Moshe told me upfront he didn't think my issue was in his knowledge set.
-  - Outsourcing is skill I want to get comfortable with.
+  - Outsourcing is a skill I want to get comfortable with.
 
   I see this experience as a learning experience worth the money I paid. In time I will get better at outsourcing.
   

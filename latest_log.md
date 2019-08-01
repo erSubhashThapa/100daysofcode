@@ -1,50 +1,38 @@
-## Day 12, R3
-### 7/31/19
+## Day 13, R3
+### 8/1/19
 
 - ## Node
+  New month! I looked back at my  posts from a month ago. It feels like progress is so slow, but looking back, I can see I accomplished a lot. I hadn't even connected my database to any Node app yet. Since then, I've connected databases to apps multiple times. I've also figured out so much about creating a node app on my own, soldiering through many issues that the book tutorial hadn't addressed.
   
   ### Where I left off:
   Yesterday, I continued my Node app that will have CRUD *and* sessions/logins so I can get more practice with sessions.
 
-  I started the login API endpoint and I'm continuing that.
+  I started to add the database query. I'll continue that today.
 
-  ## Promise Syntax
-  I had a really weird error where my a promise constructor executor was catching an error but the error was the resolve value. It was because I had switched the order of the parameters for the executor. I did `(reject, resolve)` but it should be `(resolve, reject)`.
+  ## Database Query
+  I got `action_user_login` to query the database to see if the username passed into the payload exists.
 
-  [Promise Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  ### No:
-  ```javascript
-  return new Promise((reject, resolve)=>{ //wrong order
-      if (!payload){
-          reject("Oops no payload")
-      };
-      resolve(`{"success": true}`); 
-  }).catch((error) => { console.log("err:", error) });
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/92889e68b0ba588a44ffe299227199bd6ac8d12c)
+
+  ## MD5
+  I added the md5 package with --save-dev:
+  ```bash
+  npm install md5 --save-dev
   ```
-  ### Yes: 
+  And required it in api.js:
   ```javascript
-  return new Promise((resolve, reject)=>{
-      if (!payload){
-          reject("Oops no payload")
-      };
-      resolve(`{"success": true}`); 
-  }).catch((error) => { console.log("err:", error) });
+  const md5 = require('md5');
   ```
 
-  ## `action_user_login` Returns Promise
-  Now `action_user_login` returns a promise.
+  ## `action_user_register`
+  I added action_user_register. Now users can register with just a username and password. MD5 encrypts the password.
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/10414a907e0f55ee02e5c9c6a3198a222455e180)
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/212e3f9fd91cc07ae36ce2f72c4e0e93fb762869)
 
-  ## `request.on('data')`
-  I added the callback function for `request.on('data')` and added a payload to my test fetch call.
+  ## Login Checks Password
+  `action_user_login` only outputs a message that the user logged in if the passwords match. No session is created yet.
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/0cb8e2aa5b26a5327f26f227f0ab5c711f7f34b6)
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/801b6518d5dc246780beb1c8f9336ac516bf805d)
 
-  ## Database Class
-  I added the database class and created a connection to the database.
-
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/a79461e580773cffec62d1d13a8ddc9efc309dd9)
-
-  ## Database Connection Query
-  I started to add the database query. I'll continue that tomorrow.
+  ## `action_session_create`
+  I added the session table and started adding the code for `action_session_create`. I'll continue that tomorrow.
