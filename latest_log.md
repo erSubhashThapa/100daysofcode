@@ -1,81 +1,63 @@
-## Day 15, R3
-### 8/3/19
+
+## Day 16, R3
+### 8/4/19
 
 - ## Node
  
   ### Where I left off:
-  I'm making a Node app that has a login.
 
-  I started to add the login UI but it's not working yet.
+  Yesterday, I started changing `action_session_create`. Before, the query looked only for existing sessions associated with the `user_id`. Now I'm also searching for `user-agent` and `ip`. I'll continue working on `action_session_create`.
 
-  ## Login UI
-  I got the login UI working.
+  ## Logout
+  I got more answers for my [log out question](https://twitter.com/DashBarkHuss/status/1157687032279379970) that were all pretty different.
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/057aeb7e17f681c72e409413258bf9460083bc5a)
+  So I guess there isn't one agreed upon way to manage a logout endpoint.
 
-  ## Storing Client Login Info
-  I thought it might be good for security reasons to keep track of which devices each auth token is being stored on. So I wanted to know how to access information about the client.
-
-  [How to determine a user's IP address in node](https://stackoverflow.com/questions/8107856/how-to-determine-a-users-ip-address-in-node)
-
-  [How to get information about the client in node.js](https://stackoverflow.com/questions/3895434/how-to-get-information-about-the-client-in-node-js)
-
-  ```javascript
-  console.log(request.connection.remoteAddress); //127.0.0.1
-  console.log(request.headers['user-agent']); //Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36
-  ```
-  I could save this information in the sessions table. But what if the user deletes the local storage on their own without pressing the logout button? Then I'd have devices in the sessions table that say they are logged in but aren't. So maybe it's not a good idea. 
-
-  I also need to think about how I need to change my code to prevent multiple logins of different users on the same client.
-
-  ## `localStorage` Syntax
-  [Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
-  ```javascript
-  localStorage.setItem('myCat', 'Tom');
-  var cat = localStorage.getItem('myCat');
-  localStorage.removeItem('myCat');
-  localStorage.clear();
+  ## User Agent
+  I got a weird result console logging `user-agent`. I was on Chrome but the log showed that the browser was Firefox(Mozilla), Chrome, and Safari:
+  ```bash
+  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36
   ```
 
-  ## Secure Logout
-  Right now I have the logout function on the frontend.
-
-  ```javascript
-  const logout = (payload) => {
-    localStorage.removeItem('token');
-  }
-  ```
-
-  This doesn't seem secure. What if someone changes the javascript so that it just looks like it logs out but the token doesn't delete? I'm not sure if that's possible but It seems like it is.
-
-  I did some research but was having trouble finding an answer so I posted on twitter:
-
-  ![](log_imgs/twitter_8-3.PNG)
-
-  I got an [answer](https://twitter.com/the_moisrex/status/1157687913448165376) from [@moisrex](https://twitter.com/the_moisrex). Basically, what I had a few days ago was correct. You ***do*** delete the session from the database when the user logs out. So you *can* have ***multiple*** sessions for each user. Different devices will have different sessions for the same user in order to log out separately. Otherwise, logging out on your phone would also log you out of your computer.
-
-  I thought this was wrong  because in [Node.js – Server Setup](https://www.patreon.com/posts/node-api-source-27588087), **Greg only has *one* session per user:**
- 
-  In `action_create_session` of the github file, the session is found by the `user_id`.
+  I found this explanation:
+  > most Web browsers use a User-Agent string value as follows:
+  >
+  >`Mozilla/[version] ([system and browser information]) [platform] ([platform details]) [extensions].`
+  >
+  >- Mozilla is a byproduct of browser wars.
+  >
+  >- AppleWebKit/537.36 is the platform used by your browser.
+  >
+  >- Chrome/51.0.2704.63 is your browser
+  >
+  >- Safari/537.36 was added for historic reasons, where Safari was treated differently.
   
-  [Node.js – Server Setup Github](https://github.com/javascriptteacher/node/blob/master/module/api/api.js) Code:
-  ```javascript
-  database.connection.query("SELECT * FROM session WHERE user_id = '" + payload.id + "' LIMIT 1",
-        (error, results) => { // Check if session already exists
+  -*[Why does Chrome send four browsers in the user-agent header?](https://security.stackexchange.com/questions/126407/why-does-chrome-send-four-browsers-in-the-user-agent-header)*
+
+  ## Data Types For IP and User Agent
+  I found this answer for what data types you should use for IP and User Agent in my session table: [What types should I use for these data in MySQL?](https://stackoverflow.com/questions/8263806/what-types-should-i-use-for-these-data-in-mysql)
+
+  - **IP:** CHAR(15)
+  - **user-agent:** VARCHAR(255)
+
+  There are probably other ways to go about it too, as the answer says, "*This **depends a bit on your personal taste**/your company's conventions, but I'd use:..."*.
+
+  More on [SQL Data Types here.](https://www.journaldev.com/16774/sql-data-types)
+
+
+  ## Session Table
+  If there's more than one session per username you can't have username be the primary key. You'll get an error:
+  ```bash
+  Error: ER_DUP_ENTRY: Duplicate entry 'someusername' for key 'PRIMARY'
   ```
+  So I made an id a primary key
+  ![](log_imgs/session_8-4.PNG)
 
-  If we're just searching by `user_id`, that would mean there's only ***one*** auth token per each user. But we will actually need to look up the token by `username` and `user.agent` and `IP`, because there may actually be multiple sessions per user.
+  ## Updated `action_session_create` and `action_user_login`
+  `action_user_login` now queries for the session by username, ip, and, user agent. `action_session_create` now adds the user agent and the ip address to the session.
 
-  I think [@moisrex](https://twitter.com/the_moisrex)'s way is correct. It makes more sense to me. Also Greg told me the Node book is still a work-in-progress so it's possible his query is just a mistake. Or maybe it's just a simplified way to create a session for learning purposes.
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/d504488faf38bfd6172b5c405f5134beb744520b)
 
-  ## Changing Session
-  Now I have to go back and change how the app creates the session.
-
-  I changed the query. Before, I was just searching for `username`. Now it also looks for `user-agent` and `ip`:
-
-  ```javascript
-  // line 74, api.js `action_session_create`
-  let q = `select * from session where username = '${payload.username}' AND ip = ${request.connection.remoteAddress} AND user-agent = ${request.headers['user-agent']}` ;
-  ```
-
-  This is where I left off. I'll continue working on `action_session_create` tomorrow.
+  ## Logout
+  I started to make the logout endpoint. It's not working. The session is still in the table.
+  - 
