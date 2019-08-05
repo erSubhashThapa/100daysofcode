@@ -1,63 +1,106 @@
+## Day 17, R3
+### 8/5/19
 
-## Day 16, R3
-### 8/4/19
 
 - ## Node
  
   ### Where I left off:
+  I started to make the logout endpoint. It's not working. The session is still in the table. 
 
-  Yesterday, I started changing `action_session_create`. Before, the query looked only for existing sessions associated with the `user_id`. Now I'm also searching for `user-agent` and `ip`. I'll continue working on `action_session_create`.
+  ## Logout Deleting Session
+  I got the logout to delete the session. I had the syntax wrong for the ip and the user-agent. Here's how it should be:
 
-  ## Logout
-  I got more answers for my [log out question](https://twitter.com/DashBarkHuss/status/1157687032279379970) that were all pretty different.
+  ```javascript
+  // api.js
+  const q = `Delete from session where ip = '${request.connection.remoteAddress}' AND useragent='${request.headers['user-agent']}'`;
+  ```
+  ## Logout UI Working
+  The logout is working on the UI.
 
-  So I guess there isn't one agreed upon way to manage a logout endpoint.
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/7a349c37fec8a014063470d919e8354585c8e434)
 
-  ## User Agent
-  I got a weird result console logging `user-agent`. I was on Chrome but the log showed that the browser was Firefox(Mozilla), Chrome, and Safari:
-  ```bash
-  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36
+  ## Register UI
+  I added a UI for register. But register doesn't log you in on the new account yet.
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/f6e343c75db923d2493e7d2c00f59bb2b9c17988)
+
+  ## Create Session On Frontend?
+  Right now I have `action_create_session` being called from the frontend if the password and username match and the success property returns true.
+
+  ```javascript
+  // index.html
+  const login = (payload) => {
+      payload = makePayload(payload);
+      fetch('api/user/login', payload
+          ).then(promise=>promise.json()
+          ).then(content=> {
+              console.log("content:",content)
+              if(content.success==true){
+                  return fetch("api/session/create", payload)
+              }
+              throw content.message;
+          }).then(promise=>promise.json()
+          ).then(json=> {
+              console.log(json)
+              localStorage.setItem('token', json.token);
+
+          }).catch((error) => { console.log("err:", error) });
+  }
+  ```
+  I'm not sure if this is secure enough. I think I should add that the passwords need to match in the `action_create_session` function on the backend. Or I need to call `action_create_session` from the `action_user_login` function instead of from the frontend.
+
+  ## Create Session On Backend
+  I moved `fetch("api/session/create", payload)` out of the frontend:
+  ```javascript
+  // index.html
+  const login = (payload) => {
+    payload = makePayload(payload);
+    fetch('api/user/login', payload
+        ).then(promise=>promise.json()
+        ).then(json=> {
+            localStorage.setItem('token', json.token);
+        }).catch((error) => { console.log("err29:", error) });
+  }
+  ```
+  And into the backend:
+  ```javascript
+  if (identify('user', 'login')){
+      action_user_login(request, payload )
+      .then(content => {
+          if(content.success == true){
+              return action_session_create(request, payload); //create session
+          }
+          return content
+      })
+      .then(content=>{
+          respond(response, content)});
+  }
   ```
 
-  I found this explanation:
-  > most Web browsers use a User-Agent string value as follows:
-  >
-  >`Mozilla/[version] ([system and browser information]) [platform] ([platform details]) [extensions].`
-  >
-  >- Mozilla is a byproduct of browser wars.
-  >
-  >- AppleWebKit/537.36 is the platform used by your browser.
-  >
-  >- Chrome/51.0.2704.63 is your browser
-  >
-  >- Safari/537.36 was added for historic reasons, where Safari was treated differently.
+  And I removed the api url for `action_create_session`.
+
+  This seems way more secure.
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/51df969e52adda3e8362391ad4de4bb1f382da14)
+
+  ## Register Creates Session
+  Now register also creates a session, loggin the new user in.
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/1c7d21af647c7df011879c4b2b0a20396181e215)
+
+  ## Managing Sessions
+  If I log in while someone is already logged in on that browser, the app writes over the last token without alerting them. I should probably make it so you cannot register or login while someone is already logged in.
   
-  -*[Why does Chrome send four browsers in the user-agent header?](https://security.stackexchange.com/questions/126407/why-does-chrome-send-four-browsers-in-the-user-agent-header)*
+  ## `action_session_get`
+  This returns an object that tells us if anyone is currently logged in and who:
 
-  ## Data Types For IP and User Agent
-  I found this answer for what data types you should use for IP and User Agent in my session table: [What types should I use for these data in MySQL?](https://stackoverflow.com/questions/8263806/what-types-should-i-use-for-these-data-in-mysql)
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/d975e04ec90c1945419f7fd7bba0fcd17b68c2de)
 
-  - **IP:** CHAR(15)
-  - **user-agent:** VARCHAR(255)
+  Right now it won't work correctly if a token is sent in and that token isn't connected with any session. 
+  
+  Now it's fixed:
 
-  There are probably other ways to go about it too, as the answer says, "*This **depends a bit on your personal taste**/your company's conventions, but I'd use:..."*.
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/1b235f172b00f81f19379bdbdfade7e0876474ed)
 
-  More on [SQL Data Types here.](https://www.journaldev.com/16774/sql-data-types)
-
-
-  ## Session Table
-  If there's more than one session per username you can't have username be the primary key. You'll get an error:
-  ```bash
-  Error: ER_DUP_ENTRY: Duplicate entry 'someusername' for key 'PRIMARY'
-  ```
-  So I made an id a primary key
-  ![](log_imgs/session_8-4.PNG)
-
-  ## Updated `action_session_create` and `action_user_login`
-  `action_user_login` now queries for the session by username, ip, and, user agent. `action_session_create` now adds the user agent and the ip address to the session.
-
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/d504488faf38bfd6172b5c405f5134beb744520b)
-
-  ## Logout
-  I started to make the logout endpoint. It's not working. The session is still in the table.
-  - 
+  ## No Logging In If User Logged In
+  I'm trying to make it so if the client tries to login but they're already logged in it won't let them. That's where I left off.
