@@ -1,41 +1,19 @@
-## Day 18, R3
-### 8/6/19
+## Day 19, R3
+### 8/7/19
 
 - ## Node
- 
-  ### Where I left off:
-  Yesterday, I was trying to make it so if the client tries to login but they're already logged in it won't let them. That's where I left off.
 
-  ## Login
-  Now you can't log in if someone is already logged in:
+  ### Where I left off
+  I left off trying to make an email verification api to register a new user.
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/76e489712b01c3b639ecd7c683b849c9a6428eea)
+  ## Authentication
+  I read a little bit about authentication:
 
-  I don't know if this is necessary. We could just log out anyone who is logged in.
+  [SECURING WEB APIS - PART 1
+The Basics with Node.js Examples](https://resources.infosecinstitute.com/securing-web-apis-the-basics-with-node-js-examples/)
 
-  ## Local Storage
-  I was having trouble with my local storage returning undefined. I wanted to see where it was stored in Chrome:
-
-  >It's simple. Just go to the developer tools by pressing F12, then go to the Application tab. In the Storage section expand Local Storage. After that, you'll see all your browser's local storage there.
-
-  -*from [How to view or edit localStorage](https://stackoverflow.com/questions/9404813/how-to-view-or-edit-localstorage)*
-  
-  ## CSS Selectors
-  I used this reference:
-  [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.asp)
-
-  ## Logged In VS Logged Out Views
-  I made it so the view is different depending on whether the client is logged in or logged out.
-
-  <img src="log_imgs/loggedviews_8-6.gif" width="450"/>
-
-  The code is on the frontend. I think I should eventually move some of this to the backend or organize the views into different files on the frontend to be cleaner. Maybe the code should route to different pages if the user is logged in/logged out.
-
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/d3652ac8e7fc5d630ba645890c7c5c6706d7ab98)
-
-  ## Email Verification
-  I'd like to implement an email verification for when a user registers. I looked up how email verification works:
-
+  ##  Email Verification
+  Steps:
   >- User signs up into application.
   >- A user cannot sign in yet into application until their email is verified.
   >- A user receives an email with a verification link that contains a token.
@@ -43,4 +21,45 @@
 
   -*from [How to implement Email Verification feature in your NodeJS app using Express, SendGrid, Sequelize ORM(MySQL).](https://medium.com/the-andela-way/how-to-implement-email-verification-feature-in-your-nodejs-app-using-express-sendgrid-sequelize-e5b255bf92a2)*
 
-  That's where I'll leave off for today. I'll work on the email verification tomorrow.
+  ## Send An Email In Node.js
+  I read this tutorial on sending an email using Node.js:
+
+  [Node.js Send an Email](https://www.w3schools.com/nodejs/nodejs_email.asp)
+
+  I added Nodemailer.
+  ```bash
+  npm install nodemailer --save-dev
+  ```
+
+  ## Set Up Gmail App Password
+  I ran into an error:
+  ```bash
+  Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
+  535 5.7.8  https://support.google.com/mail/?p=BadCredentials t133sm129744943iof.21 - gsmtp
+  ```
+  I followed the link above, [I can't sign in to my email client](https://support.google.com/mail/?p=BadCredentials).
+
+  I created an app password:
+  [Sign in using App Passwords](https://support.google.com/accounts/answer/185833)
+
+  ## Delete Last Commit
+  I accidentally pushed sensitive information to github so I deleted the last commit locally (this wasn't the right way):
+  ```bash
+  git reset --hard HEAD~1
+  ```
+  Then I force pushed to github:
+  ```bash
+  git push origin +master --force
+  ```
+  This didn't actually work. It deleted my last updated files locally too which I didn't want to do. Luckily, I was able to get what I need and put it back together.
+  
+  ## App Sends Email
+  Now my app sends a simple email.
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/b3d099c96dbce58978c0582e8963be5b6ad693a5)
+
+  ## Email Module
+  I turned my sendEmail.js script into a function that can be imported. I read about exporting modules:
+  [Export Module in Node.js](https://www.tutorialsteacher.com/nodejs/nodejs-module-exports)
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/842584d0c8fb3d1065f3845a4ceedd6f38a439b0)
