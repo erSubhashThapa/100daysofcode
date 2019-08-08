@@ -1,65 +1,41 @@
 ## Day 19, R3
-### 8/7/19
+### 8/8/20
 
 - ## Node
 
   ### Where I left off
-  I left off trying to make an email verification api to register a new user.
+  I left off having created an email module. Today, I'm going to use that email module to make a verification email.
 
-  ## Authentication
-  I read a little bit about authentication:
+  ## Rejecting A Promise
+  When do you reject a promise? It seems like anytime you could reject a promise you could also just resolve it with a message that says 'something went wrong'. Maybe it's when you don't want the rest of the `then()` functions to get called?
 
-  [SECURING WEB APIS - PART 1
-The Basics with Node.js Examples](https://resources.infosecinstitute.com/securing-web-apis-the-basics-with-node-js-examples/)
+  ## Payload
+  When you're not using fetch and you're just using a URL, where is the payload? Is it in the URL?
 
-  ##  Email Verification
-  Steps:
-  >- User signs up into application.
-  >- A user cannot sign in yet into application until their email is verified.
-  >- A user receives an email with a verification link that contains a token.
-  >- User clicks on verification link to get redirected to the application where the token is used to verify them.
+  I think maybe a payload is different than the parameters you send in a URL. It looks like you only send [a payload for a POST request and parameters for a GET request](https://stackoverflow.com/questions/14551194/how-are-parameters-sent-in-an-http-post-request). But what's really the difference? They seem the same? It seems like you could use POST or GET for the same thing. Is POST more secure?
 
-  -*from [How to implement Email Verification feature in your NodeJS app using Express, SendGrid, Sequelize ORM(MySQL).](https://medium.com/the-andela-way/how-to-implement-email-verification-feature-in-your-nodejs-app-using-express-sendgrid-sequelize-e5b255bf92a2)*
+  Here's some differences: [GET vs. POST](https://www.diffen.com/difference/GET-vs-POST-HTTP-Requests)
 
-  ## Send An Email In Node.js
-  I read this tutorial on sending an email using Node.js:
+  ## MySQL
+  I reviewed some command line mysql commands to do somethings to the database.
 
-  [Node.js Send an Email](https://www.w3schools.com/nodejs/nodejs_email.asp)
+  [Create MySQL Database, Table & User From Command Line Guide](https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line)
 
-  I added Nodemailer.
-  ```bash
-  npm install nodemailer --save-dev
-  ```
-
-  ## Set Up Gmail App Password
-  I ran into an error:
-  ```bash
-  Error: Invalid login: 535-5.7.8 Username and Password not accepted. Learn more at
-  535 5.7.8  https://support.google.com/mail/?p=BadCredentials t133sm129744943iof.21 - gsmtp
-  ```
-  I followed the link above, [I can't sign in to my email client](https://support.google.com/mail/?p=BadCredentials).
-
-  I created an app password:
-  [Sign in using App Passwords](https://support.google.com/accounts/answer/185833)
-
-  ## Delete Last Commit
-  I accidentally pushed sensitive information to github so I deleted the last commit locally (this wasn't the right way):
-  ```bash
-  git reset --hard HEAD~1
-  ```
-  Then I force pushed to github:
-  ```bash
-  git push origin +master --force
-  ```
-  This didn't actually work. It deleted my last updated files locally too which I didn't want to do. Luckily, I was able to get what I need and put it back together.
+  [Create boolean column in MySQL with false as default value?](https://stackoverflow.com/questions/2221069/create-boolean-column-in-mysql-with-false-as-default-value)
   
-  ## App Sends Email
-  Now my app sends a simple email.
+  [SQL ALTER TABLE Statement](https://www.w3schools.com/sql/sql_alter.asp)
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/b3d099c96dbce58978c0582e8963be5b6ad693a5)
+  ## Register
+  I thought I made my register endpoint log the user in. But that's not happening.
 
-  ## Email Module
-  I turned my sendEmail.js script into a function that can be imported. I read about exporting modules:
-  [Export Module in Node.js](https://www.tutorialsteacher.com/nodejs/nodejs-module-exports)
+  I changed the frontend code so now it logs the user in. It wasn't storing the token.
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/842584d0c8fb3d1065f3845a4ceedd6f38a439b0)
+  ## `action_user_verify()`
+  I made an `action_user_verify()` function that uses parameters sent in a url to verify the user. I added two columns to the database: `isVerified` which is a boolean and `verificationToken`:
+
+  ![](log_imgs/table_8-8-19.PNG)
+
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/702d68a22dad09abdb999165c032cc0b4e3abf2e)
+
+  Next I need to create the function(s) that create the verification token and send an email with the verification URL. I started to add the verification token to `action_user_register`. I'll continue here tomorrow.
+
