@@ -1,41 +1,51 @@
-## Day 19, R3
-### 8/8/20
+
+## Day 21, R3
+### 8/9/19
 
 - ## Node
 
   ### Where I left off
-  I left off having created an email module. Today, I'm going to use that email module to make a verification email.
+  I started to add the verification token to `action_user_register`. I'll continue here.
 
-  ## Rejecting A Promise
-  When do you reject a promise? It seems like anytime you could reject a promise you could also just resolve it with a message that says 'something went wrong'. Maybe it's when you don't want the rest of the `then()` functions to get called?
+  ## Verification Token
+  Now the `action_user_register` creates a verification token. Next we need to email the user the token url.
 
-  ## Payload
-  When you're not using fetch and you're just using a URL, where is the payload? Is it in the URL?
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/100437c63cd464c5d02828c2d431096df982ed1f)
 
-  I think maybe a payload is different than the parameters you send in a URL. It looks like you only send [a payload for a POST request and parameters for a GET request](https://stackoverflow.com/questions/14551194/how-are-parameters-sent-in-an-http-post-request). But what's really the difference? They seem the same? It seems like you could use POST or GET for the same thing. Is POST more secure?
+  ## How Is MD5 Secure?
+  If all you have to do to translate md5 tokens is run md5(token), how is that secure? Couldn't anyone take that token and get md5 and run md5(token)? I'm thinking that maybe there's another step here.
 
-  Here's some differences: [GET vs. POST](https://www.diffen.com/difference/GET-vs-POST-HTTP-Requests)
+  I read [WHAT IS THE DIFFERENCE BETWEEN HASHING AND ENCRYPTING](https://www.securityinnovationeurope.com/blog/page/whats-the-difference-between-hashing-and-encrypting). 
 
-  ## MySQL
-  I reviewed some command line mysql commands to do somethings to the database.
+  I don't really understand how it works still.
 
-  [Create MySQL Database, Table & User From Command Line Guide](https://www.a2hosting.com/kb/developer-corner/mysql/managing-mysql-databases-and-users-from-the-command-line)
+  I read that [md5 isn't secure](https://searchsecurity.techtarget.com/definition/MD5). But I think the reason it's insecure is unrelated to what I don't understand about it. I think other hashing methods like SHA work the same way and they are secure but I still don't understand why.
 
-  [Create boolean column in MySQL with false as default value?](https://stackoverflow.com/questions/2221069/create-boolean-column-in-mysql-with-false-as-default-value)
-  
-  [SQL ALTER TABLE Statement](https://www.w3schools.com/sql/sql_alter.asp)
+  I watched this video [How hash function work?](https://www.youtube.com/watch?v=xsp--srKWKw) which helped me understand better. Also the teacher was funny.
 
-  ## Register
-  I thought I made my register endpoint log the user in. But that's not happening.
+  ## Email Verification
+  The email verification is complete.
 
-  I changed the frontend code so now it logs the user in. It wasn't storing the token.
+  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/e7a1b0c9825b31cf430783b3aba4fe53be40c7de)
 
-  ## `action_user_verify()`
-  I made an `action_user_verify()` function that uses parameters sent in a url to verify the user. I added two columns to the database: `isVerified` which is a boolean and `verificationToken`:
+  ## What's left?
+  For learning purposes this app is complete. It demonstrates how to login/logout and register. 
 
-  ![](log_imgs/table_8-8-19.PNG)
+  ### What is the app missing?
+  - There's nothing stopping you from registering different usernames under the same email. 
+  - A UI for resending the verification code
+  - An endpoint that deletes or updates accounts
+  - Some errors don't catch properly
+  - Some promises should throw an error but they don't
 
-  [Link To Work](https://github.com/DashBarkHuss/node_server_sessions/commit/702d68a22dad09abdb999165c032cc0b4e3abf2e)
+  These would be the only things related to accounts that's missing. All of them are easy fixes. Obviously this isn't a very useful app because it does nothing but create users. But this is for demonstration purposes for myself and anyone else who wants to see how you can make an app with logins.
 
-  Next I need to create the function(s) that create the verification token and send an email with the verification URL. I started to add the verification token to `action_user_register`. I'll continue here tomorrow.
+  ## Completed Project
+  I added a readme.md. Here's the complete project:
 
+  [Node Server Session](https://github.com/DashBarkHuss/node_server_sessions)
+
+  ## Next
+  I've put together a [CRUD app](https://github.com/DashBarkHuss/node_server_multiple_endpoints) and a [Sessions app](https://github.com/DashBarkHuss/node_server_sessions). Next I could put together an app that has both. I also wonder if I should learn express and when I should go back to learning react.
+
+  I started this login app on 7/28, day 209. So this project took me 13 days. I wonder if I can do a combined crud and sessions app in a shorter amount of time. 
