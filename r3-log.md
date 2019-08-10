@@ -2,6 +2,29 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
 
+## Day 22, R3
+### 8/10/19
+
+- ## Reviewing Front End  
+  Today I took a break from node to review frontend and make a project. I started a new streak tracker.
+
+  ## Classes
+  I read about classes:
+  [Javascript Classes — Under The Hood](https://medium.com/tech-tajawal/javascript-classes-under-the-hood-6b26d2667677)
+
+  ## Tracker
+  I ended with this for today. 
+  
+  ![](log_imgs/streak_8-10-19.png)
+  [Link To Work](https://github.com/DashBarkHuss/streak-tracker/commit/38d9b33c83d909558ddd8022f2a34a694f5bebc5)
+
+  I'll find some time to make it pretty.
+  
+  I also reviewed grid, and javascript dates.
+
+- ## Thoughts and Feelings:
+  Time went by really fast today. Probably because I was building something and reviewing old concepts instead of learning something new.
+
 ## Day 21, R3
 ### 8/9/19
 
@@ -52,7 +75,7 @@
   I've put together a [CRUD app](https://github.com/DashBarkHuss/node_server_multiple_endpoints) and a [Sessions app](https://github.com/DashBarkHuss/node_server_sessions). Next I could put together an app that has both. I also wonder if I should learn express and when I should go back to learning react.
 
   I started this login app on 7/28, day 209. So this project took me 13 days. I wonder if I can do a combined crud and sessions app in a shorter amount of time. 
-  
+
 ## Day 20, R3
 ### 8/8/19
 
