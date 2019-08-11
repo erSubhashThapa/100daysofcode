@@ -34,7 +34,7 @@
   ![](log_imgs/sessions_8-11-19.PNG)
 
   ## What I Did Today
-  I started the app. I completed most of the index.js files adding mime types this time.
+  I started the app. I completed most of `index.js` adding mime types this time.
 
   For more mime types: [Incomplete list of MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types)
 
