@@ -1,33 +1,62 @@
-## Day 33, R3
-### 8/21/19
+## Day 34, R3
+### 8/22/19
 
 - ## Node
   I'm making a vanilla Node.js app with CRUD and sessions.
 
-  ## Where I Left Off:
-  I got bcrypt to recognize when a password matches a hashed password but I didn't put that function in the verify endpoint yet. That's what I'll do today.
+  ## Where I Left Off
+  Yesterday, I continued action user verify. I added a database method that returns a value from the database. Today, I'll continue to work on the verify endpoint.
 
-  ## Debugging 
-  Yesterday, I posted on twitter for help with debugging node. A lot of different tools were recommended: [Quokka](https://quokkajs.com/docs/index.html), [ndb](https://github.com/GoogleChromeLabs/ndb), and even the VSC debbuger. I tried them all. 
-  
-  It turns out VSC's debugger works for what I wanted, but I didn't know you had to pause the script to be able to call a function. In DevTools on the client side you don't have to pause a script unless the function is not in scope. I think scope works different in Node, so that's why I have to pause it.
+  ## Bcrypt Compare Return Promise?
+  I was really confused about bcrypt.compare(). In the information when you hover over it, it says it returns a promise. At least that's what I thought it was saying:
 
-  Quokka is interesting too. It works a bit differently. But the free version isn't helpful to me and I'm not sure if I want the paid version.
+  ![](log_imgs/compare_8-22-19.png)
 
-  ## Refactored handleContent
+  But when I called .then() on compare it didn't work:
 
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/d650708888f1c1ac7cc520f0ab8f2383e3686b0c)
-
-  ## Debugger Error
-  I was getting this error when I tried to use the debugger in VSC:
-
-  ```bash
-  Error: connect ECONNREFUSED 127.0.0.1:3306
+  ```javascript
+  bcrypt.compare(token, hashedToken, (err, isMatch)=>{
+      if (err){
+          return(cb(err));
+      }
+      return (isMatch);
+  }).then(x=>console.log(x)); //TypeError: Cannot read property 'then' of undefined
   ```
 
-  It went away when I changed http.createServer to listen to port to 3306. I tried to figure out how to control what port the debugger uses but I couldn't find how.
+  I think what compare is actually doing is returning a promise that, once resolved, gets passed in the callback as the second parameter, `isMatch`. So compare doesn't actually return a promise, it returns a resolved promise value to the callback.
+
+  This threw me off for a while.
+
+  If I want to use it as a promise I have to do it like this :
+  ```javascript
+  const someToken = process.env.TOKEN;
+  const someHash = process.env.HASH;
+
+  new Promise((resolve, reject)=>{
+      bcrypt.compare(someToken, someHash, (err, isMatch)=>{
+          if (err) reject(err);
+          console.log(isMatch);
+          if (isMatch) resolve({isMatch});
+      })
+  }).then(x=>console.log(x))
+  ```
+
+  ## Testing
+  I created a `bin/test.js` file where I require different functions and test them.
+
+  ## `.env` Bug
+  I ended a line with a variable in `.env` with "`;`" and that's wrong. 
+
+  `SOMEVAR = 'something';`
+  
+  You don't end lines with a semi colon in a `.env` file. It will make your variable include the semicolon.
 
   ## Where I Left Off
-  I continued action user verify. I added a database method that returns a value from the database. Tomorrow, I'll continue to work on the verify endpoint.
+  I did a lot of debugging and testing today. It took me a while to understand what value `bcrypt.compare()` was returning and how to use it in a promise. Tomorrow, I'll use it in the verify endpoint.
+  
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/3cb8c5914f79831f26cb34d4295bc51d1b3446fd)
 
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/e70218f7463b7f34b964dd3d1a10f12691df3ec0)
+-  ## Thoughts And Feelings:
+   Today I coded for a longer time. But I was also distracted for part of the time because I got some serious news and I'm shaken up. Hoping for the best and going to try to stay focused on coding and be there for my family.
+
+
