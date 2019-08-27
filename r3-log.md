@@ -9,7 +9,7 @@
 
 
   ### Where I Left Off
-  I found a few ways to get a child module to access a variable from the main module. I didn't do much with my app but I did a lot of sandbox learning by playing with node in the debugger. Tomorrow, I'll try to get back to the app.
+  I found a few ways to get a child module to access a variable from the main module. I didn't do much with my app but I did a lot of sandbox learning by playing with node in the debugger. Today, I'll try to get back to the app.
 
   ## Changing identify()
   api.js `require`s helpers.js. But I also need helpers.js to `require` api.js so it has access to `API.parts` which `helpers.identify` uses. 
