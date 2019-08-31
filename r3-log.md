@@ -1,6 +1,164 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 44, R3
+### 9/1/19
+
+- ## Node
+  I'm making a vanilla Node.js app with CRUD and sessions.
+
+  ### Where I Left Off
+  I finished `userloggedIn`. I need to test  to make sure `action_user_login` works in instances where the user isn't logged in.
+
+  ## What Happens In Production When Node Errors?
+  Sometimes node stops running when I'm playing with it in the terminal because it runs into an error. What happens in production? Does the whole site go down? Maybe whatever happens when you play with it in the browser and it errors happens.
+
+  I played with it in the browser but I'm realizing now that I can't find a situation where node would error and shut down outside of it not being able to compile, which would make it so I can't play with it in the browser anyways. If I find an instance where it shuts down after already compiling, I'll try that in the browser.
+
+  ## Login Finished
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/e8c60f8dbafd7b2b9b6e7327a5b1e531d86821e0)
+
+  ## Drying My Code
+
+  Look at this gorgeous transformation:
+
+  ```javascript
+  //Before:
+  if(identify('user', 'verify', API.parts)){
+      handleContent(action_user_verify);
+  }
+
+  if(identify('user', 'register', API.parts)){
+      handleContent(action_user_register, [payload]);
+  }
+
+  if(identify('user', 'verify', API.parts)){
+      handleContent(action_user_verify)
+  }
+
+  if(identify('user', 'login', API.parts)){
+      handleContent(action_user_login, [request, payload])
+  }
+
+  if(identify('user', 'logout', API.parts)){
+      handleContent(action_user_logout, [request, payload])
+  }
+  ```
+  ```javascript
+  // After:
+  actionFor('user', 'verify', action_user_verify);
+
+  actionFor('user', 'register', action_user_register, [payload])
+
+  actionFor('user', 'verify', action_user_verify)
+
+  actionFor('user', 'login', action_user_login, [request, payload])
+  
+  actionFor('user', 'logout', action_user_logout, [request, payload])
+  
+
+  function actionFor(api1, api2, action, paramArray=[]){
+      if(identify(api1, api2, API.parts)){
+          handleContent(action, paramArray);
+      }
+  }
+  ```
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/67855119e8441bdc496c344e83fc7eacaef9c364)
+
+  ## Nodemon
+  I set up nodemon. Nodemon makes it so you don't have to keep restarting the server when you make changes.
+  ```bash
+  npm install --save-dev nodemon
+  ```
+  Info on [nodemon](https://www.npmjs.com/package/nodemon)
+
+  To run nodemon use `nodemon` as you would `node`. Example: `nodemon index`
+
+  ## Scripts
+  I set up some scripts in my `package.json` file.
+  ```javascript
+  //package.json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/test",
+    "dev": "nodemon bin/test"
+  }
+  ```
+  To run you'd enter `npm run nameofscript`.
+
+  ## Where I left off
+  I need to test to make sure nodemon is working properly. I need to finish the logout endpoint.
+
+## Day 43, R3
+### 8/31/19
+
+- ## Node
+  I'm making a vanilla Node.js app with CRUD and sessions.
+
+  ### Where I Left Off:
+  I'm working on looping with promises in `userLoggedIn`.
+
+  ## Approved For Twitter's API
+  Twitter rejected my first API application. The process took several months of back and forth emails. I reapplied and got approved two days later! Seems like they improved the speed of the process.
+
+  ![](log_imgs/api_8-31.PNG)
+
+  Maybe I will do a write up on what I did differently.
+
+  Now that a have a developer account, I looked around on the Twitter Dev website.
+
+  ## Looping With A Promise Value
+  When you have a loop and that you want to stop running when a certain condition is met but that condition is based on a promise return value you can use async await.
+
+  [Async/await](https://javascript.info/async-await)
+
+  ```javascript
+  function userLoggedIn(request, payload){
+      async function compareHashes(hashes){
+          for (i=0; i<hashes.length; i++){
+              const matchFound = await compareHash(payload.token, hashes[i].token)
+              if (matchFound){
+                  i = hashes.length;
+                  return true;
+              } else if (i==hashes.length-1){
+                  return false;
+              }
+          }
+      }
+      return new Promise((resolve, reject)=>{
+          database.findValues('sessions', 'token', `username='${payload.username}' AND useragent = '${request.headers['user-agent']}'`)
+          .then(results=>{
+              if(results.success){
+              return compareHashes(results.results)
+              }
+          })
+          .then(matchFound=>resolve(matchFound))
+      })
+  }
+  ```
+  I didn't use a while loop. I used a for loop. I need my loop to stop when the iterations reach a certain number or when a token match is found, whichever comes first. So my needs are in between a while and a for loop. You could probably use either.
+
+  ## Changing A Commit Message in Git
+  I accidentally committed and then pushed the wrong git commit message. I used the amend flag to change the commit:
+  ```bash
+  git commit --amend -m "new commit message"
+  ```
+  Then I pushed to Github with the `--force` flag.
+  ```bash
+  git push origin master --force
+  ```
+
+  More on amend: [Git Basics: Adding more changes to your last commit](https://medium.com/@igor_marques/git-basics-adding-more-changes-to-your-last-commit-1629344cb9a8)
+
+  ## `userLoggedIn`
+  I finished user logged in:
+
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/7b0a0fcac1aa822750bd69f19746238ab31ac127)
+
+  ## Where I Left Off
+  I finished `userloggedIn`. I need to test  make sure `action_user_login` works in instances where the user isn't logged in.
+
+
 ## Day 42, R3
 ### 8/30/19
 
