@@ -24,7 +24,7 @@
   throw new ERR_INVALID_CALLBACK(cb);
   }
   ```
-  ## VS Code Tooltip
+  ## Type Hinting with VS Code Tooltip
   When I hover over the `fs` method `readFile`, the VSC tooltip shows all sorts of info. Like that path is either a string or a number or a buffer. How does it get that info?
 
   ![](log_imgs/info_9-4.PNG)
