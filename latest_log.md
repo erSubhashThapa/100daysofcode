@@ -1,41 +1,72 @@
-## Day 46, R3
+## Day 47, R3
 ### 9/4/19
 
 - ## Node
   I'm making a vanilla Node.js app with CRUD and sessions.
 
-  ## Where I left off
-  I refactored and worked on `action_sessions_get`.
+  ### Where I Left Off
+  I started working on crud.
 
-  ## Passing Environment Variables Command Line
+  ## Varying Number of Passed Arguments
+  I think this code is reassigning `callback` incase the function call didn't pass in an `options` argument. Which is a cool way to handle varying accepted amounts of arguments. But I'm not totally sure if that's what it's trying to do.
+  ```javascript
+  function readFile(path, options, callback) {
+  callback = maybeCallback(callback || options); 
+  // more code bla bla bla
+  }
 
-  ```bash
-  commandline$ USER_ID=239482 USER_KEY=foobar node app.js
+  function maybeCallback(cb) {
+  if (typeof cb === 'function')
+    return cb;
+
+  throw new ERR_INVALID_CALLBACK(cb);
+  }
   ```
+  ## VS Code Tooltip
+  When I hover over the `fs` method `readFile`, the VSC tooltip shows all sorts of info. Like that path is either a string or a number or a buffer. How does it get that info?
+
+  ![](log_imgs/info_9-4.PNG)
+
+  Nothing in the function specifies the datatype of the path or the other information for the callback.
 
   ```javascript
-  // app.js
-  console.log(process.env.USER_ID) //239482
-  ````
+  function readFile(path, options, callback) {
+    callback = maybeCallback(callback || options);
+    options = getOptions(options, { flag: 'r' });
+    if (!ReadFileContext)
+      ReadFileContext = require('internal/fs/read_file_context');
+    const context = new ReadFileContext(callback, options.encoding);
+    context.isUserFd = isFd(path); // File descriptor ownership
 
-  [Setting Environment Variables for Node to retrieve Ask Question](https://stackoverflow.com/questions/22312671/setting-environment-variables-for-node-to-retrieve)
+    const req = new FSReqCallback();
+    req.context = context;
+    req.oncomplete = readFileAfterOpen;
 
-  ## Log Out
-  I finished all the code dealing with logging in and out.
+    if (context.isUserFd) {
+      process.nextTick(function tick() {
+        req.oncomplete(null, path);
+      });
+      return;
+    }
 
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/8d5ac1738ad6085f1b63f68e33df491a5629b914)
+    path = getValidatedPath(path);
+    binding.open(pathModule.toNamespacedPath(path),
+                 stringToFlags(options.flag || 'r'),
+                 0o666,
+                 req);
+  }
+  ```
 
-  ## Statically Typed Languages
-  While working with my own helper functions I thought, *"Wouldn't it be nice if I could tell Javascript what data types a function expects for its parameters?"*
+  When I hover over my functions I don't get all that information.
 
   <img src="log_imgs/type_9-3.PNG" width=500>
 
-  This way, I wouldn't have to go back to the function to check the parameter data types. I'd see them in the info popup pictured above. 
+  I thought you could only do type hinting with typescript, but I don't see anything to indicate this is typescript. So where is this hinting coming from? How did the authors of the `fs` module do this?
 
-  But you can't do this in Javascript. [Javascript is not statically typed.](https://stackoverflow.com/questions/8407622/set-type-for-function-parameters) But **Typescript** is ES6 plus type hinting.
+  ## Create Posts
+  `action_posts_create` is done.
+  
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/8536d39c1f2e527328e774410fa5a48adcc93b3f)
 
   ## Where I Left Off
-  I started working on crud.
-
-- ## Thoughts and Feelings:
-  Some of my functions are counterintuitive. It's hard to remember what they take and what they return.  Good naming and design can help me remember what the function takes and returns. Good function design will speed up the coding process.
+  I finished the Create part of CRUD. Next, Read?
