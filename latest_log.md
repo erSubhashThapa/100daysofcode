@@ -1,72 +1,40 @@
-## Day 47, R3
-### 9/4/19
+## Day 48, R3
+### 9/5/19
 
 - ## Node
   I'm making a vanilla Node.js app with CRUD and sessions.
 
   ### Where I Left Off
-  I started working on crud.
+  I finished the Create part of CRUD. Next, Read?
 
-  ## Varying Number of Passed Arguments
-  I think this code is reassigning `callback` incase the function call didn't pass in an `options` argument. Which is a cool way to handle varying accepted amounts of arguments. But I'm not totally sure if that's what it's trying to do.
-  ```javascript
-  function readFile(path, options, callback) {
-  callback = maybeCallback(callback || options); 
-  // more code bla bla bla
-  }
+  ## `ELIFECYCLE` Error
+  When I'm testing my app in the browser, if I run into an `ELIFECYCLE` error the whole program will shut down.
 
-  function maybeCallback(cb) {
-  if (typeof cb === 'function')
-    return cb;
+  In this example there's a problem with my code.
 
-  throw new ERR_INVALID_CALLBACK(cb);
-  }
-  ```
-  ## VS Code Tooltip
-  When I hover over the `fs` method `readFile`, the VSC tooltip shows all sorts of info. Like that path is either a string or a number or a buffer. How does it get that info?
+  <img src="log_imgs/error_9-5-19.gif" width=500>
 
-  ![](log_imgs/info_9-4.PNG)
+  I'm not wondering what caused this error. I'm wondering, since the error shut the whole program down, if this was in production, would my whole website go down just because one person interacted with a broken endpoint?
 
-  Nothing in the function specifies the datatype of the path or the other information for the callback.
+  ## Read
+  I finished the read part of CRUD but I didn't handle the content for the front end. It just gets logged in the console for now.
 
-  ```javascript
-  function readFile(path, options, callback) {
-    callback = maybeCallback(callback || options);
-    options = getOptions(options, { flag: 'r' });
-    if (!ReadFileContext)
-      ReadFileContext = require('internal/fs/read_file_context');
-    const context = new ReadFileContext(callback, options.encoding);
-    context.isUserFd = isFd(path); // File descriptor ownership
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/2eb0fa03721ed71ee659aed1bda0fd15dd5776bc)
 
-    const req = new FSReqCallback();
-    req.context = context;
-    req.oncomplete = readFileAfterOpen;
+  ## Sequel Pro Query
+  You can you Sequel Pro to practice queries
 
-    if (context.isUserFd) {
-      process.nextTick(function tick() {
-        req.oncomplete(null, path);
-      });
-      return;
-    }
+  <img src="log_imgs/query_9-5.PNG" width=300>
 
-    path = getValidatedPath(path);
-    binding.open(pathModule.toNamespacedPath(path),
-                 stringToFlags(options.flag || 'r'),
-                 0o666,
-                 req);
-  }
-  ```
+  ## Update
+  I finished update of crud.
 
-  When I hover over my functions I don't get all that information.
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/8fcb170375144acd43d2e99b54379ae8afb6fbca)
 
-  <img src="log_imgs/type_9-3.PNG" width=500>
+  ## Refactored
+  I refactored a bit because I'm going to reuse code that was in the update function for the delete function. So I took that code out of `action_posts_update` and moved in into it's own function `isAuthorizedToEditPost`.
 
-  I thought you could only do type hinting with typescript, but I don't see anything to indicate this is typescript. So where is this hinting coming from? How did the authors of the `fs` module do this?
-
-  ## Create Posts
-  `action_posts_create` is done.
-  
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/8536d39c1f2e527328e774410fa5a48adcc93b3f)
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/7040860e0db2c70a6b9077d67a5d3cc44cfd0689)
 
   ## Where I Left Off
-  I finished the Create part of CRUD. Next, Read?
+  I only have Delete of CRUD left to do. I haven't been setting any relationships between the tables in my database. I might want to look into that.
