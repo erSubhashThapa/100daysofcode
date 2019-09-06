@@ -1,40 +1,53 @@
-## Day 48, R3
-### 9/5/19
+## Day 49, R3
+### 9/6/19
 
 - ## Node
   I'm making a vanilla Node.js app with CRUD and sessions.
 
   ### Where I Left Off
-  I finished the Create part of CRUD. Next, Read?
+  I only have Delete of CRUD left to do. I haven't been setting any relationships between the tables in my database. I might want to look into that.
 
-  ## `ELIFECYCLE` Error
-  When I'm testing my app in the browser, if I run into an `ELIFECYCLE` error the whole program will shut down.
+  ## My Process
+  I thought I would share some of my process. I generally don't do much Googling for answers when I code. I mostly experiment in the browser console when I have a question about Javascript.
 
-  In this example there's a problem with my code.
+  For example, I wanted to know if in an `async function` can I return the last `.then()` value of a promise in a return statement. Or will the first promise value be returned. 
 
-  <img src="log_imgs/error_9-5-19.gif" width=500>
+  So I took it to the console to find out. Here's some of what I did:
 
-  I'm not wondering what caused this error. I'm wondering, since the error shut the whole program down, if this was in production, would my whole website go down just because one person interacted with a broken endpoint?
+  <img src="log_imgs/console_9-6.PNG" width=500>
 
-  ## Read
-  I finished the read part of CRUD but I didn't handle the content for the front end. It just gets logged in the console for now.
+  ## Some Resources I Used Today
 
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/2eb0fa03721ed71ee659aed1bda0fd15dd5776bc)
+  [Async/await](https://javascript.info/async-await)
 
-  ## Sequel Pro Query
-  You can you Sequel Pro to practice queries
+  [Basic MySQL Tutorial](http://www.mysqltutorial.org/basic-mysql-tutorial.aspx)
 
-  <img src="log_imgs/query_9-5.PNG" width=300>
+  ## Finished CRUD
+  I finished my app.
 
-  ## Update
-  I finished update of crud.
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/fb92d32cf67c044cd548b9b380b1ed49057a0ce4)
 
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/8fcb170375144acd43d2e99b54379ae8afb6fbca)
+  It works but here are somethings I could still change:
+    
+  - My database helpers should be more uniform. They should probably all return the results of the query and I should handle the results from the function call. Instead, the results are handled in some of the helpers, which makes it hard to remember what the helper is going to return.
+  - Some catch statements are missing.
+  - I used some `async function`s for my API endpoints and some functions that `return` a `new Promise`. In production, I'd stick to one or the other to make the code more uniform and easier to read. But in this project I played with both for practice.
 
-  ## Refactored
-  I refactored a bit because I'm going to reuse code that was in the update function for the delete function. So I took that code out of `action_posts_update` and moved in into it's own function `isAuthorizedToEditPost`.
+  ## Readme
+  I added a readme file.
 
-  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/7040860e0db2c70a6b9077d67a5d3cc44cfd0689)
+  [Link To Work](https://github.com/DashBarkHuss/crud_login_node_app/commit/a329b16e1a0f33615c157159e7593ce3ce945153)
+
+  ## Lynda Account Not Working
+  I use Lynda.com to learn lots of new subjects. Today, I couldn't log in. I wonder if my school finally closed my account? I emailed Lynda to see what's going on. 
+  
+  When I signed in with Safari, I got a different message. It said my account had been moved to LinkedIn Learning but I couldn't figure out how to log in.
+  
+  I guess I'll use Youtube for now. 
+
+  ## Express ReST API Tutorial
+  I started watching this tutorial:
+  [Express.js Tutorial: Build RESTful APIs with Node and Express | Mosh](https://www.youtube.com/watch?v=pKd0Rpw7O48)
 
   ## Where I Left Off
-  I only have Delete of CRUD left to do. I haven't been setting any relationships between the tables in my database. I might want to look into that.
+  I'm watching this express tutorial: [Express.js Tutorial: Build RESTful APIs with Node and Express | Mosh](https://www.youtube.com/watch?v=pKd0Rpw7O48). I'll continue watching, tomorrow.
