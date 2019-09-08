@@ -1,55 +1,32 @@
-## Day 50, R3
-### 9/7/19
+## Day 51, R3
+### 9/8/19
 
 - ## Node
   I'm making a vanilla Node.js app with CRUD and sessions.
 
   ### Where I Left Off
-  I'm watching this express tutorial: [Express.js Tutorial: Build RESTful APIs with Node and Express | Mosh](https://www.youtube.com/watch?v=pKd0Rpw7O48). I'll continue watching, today.
+  I watched more of the tutorial [Express.js Tutorial: Build RESTful APIs with Node and Express | Mosh](https://www.youtube.com/watch?v=pKd0Rpw7O48) and followed along. I left off at [41:22](https://youtu.be/pKd0Rpw7O48?t=2482)
 
-  ## Setting An Environment Variable in the Command Line
+  ## What is Middleware
+  >Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.
+  >
+  >Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next.
+  >
+  >Middleware functions can perform the following tasks:
+  >
+  >- Execute any code.
+  >- Make changes to the request and the response objects.
+  >- End the request-response cycle.
+  >- Call the next middleware function in the stack.
 
-  Mac:
-  ```bash
-  $export SOMEVAR = 'somevalue'
-  ```
-  Use `set` instead of `export` for windows
+  -*[Using middleware](https://expressjs.com/en/guide/using-middleware.html)*
 
-  ## Proper Way To Set Port
-  ```javascript
-  const port = process.env.PORT || 3306;
-  ```
-  In production, your port will be in the environment variable `process.env.PORT`. 3306 is an arbitrary number to be used in development.
+  ## Relationships in MySQL
+  I watched these two videos:
 
-  ## Parameters
-  ### **Route Parameters:** 
-  Essential or required values.
-
-  Here `api` and `courses` are route parameters.
-  ```
-  http://127.0.0.1:3306/api/courses/
-  ```
-  ### **Query String Parameters:**
-  Optional values.
+  [Controlling your Databases with Sequel Pro, Part 4: Exploring Table Relationships and SQL Queries](https://www.youtube.com/watch?v=Is_DuOGcSxk)
   
-  Here the query string parameter is `sortBy=name`
-  ```
-  http://127.0.0.1:3306/api/courses/?sortBy=name
-  ```
-  ## Postman
-  You can use [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop//%40) to test http services.
+  [MySQL tutorial 18 - Foreign Keys](https://www.youtube.com/watch?v=Dov-_hgJGLM)
 
-  [How to use Postman, video segment](https://youtu.be/pKd0Rpw7O48?t=2034)
-
-  ## Schemas
-  A schema defines the shape of our objects. What properties do we have in an object? What is the type of each property?
-
-  Input validation with Joi creating a schema:
-  ```javascript
-  const schema = {
-      name: Joi.string().min(3).required()
-  }
-  const result = Joi.validate(req.body, schema);
-  ```
   ## Where I Left Off
-  I'm watched more of the tutorial [Express.js Tutorial: Build RESTful APIs with Node and Express | Mosh](https://www.youtube.com/watch?v=pKd0Rpw7O48) and followed along. I left off at [41:22](https://youtu.be/pKd0Rpw7O48?t=2482)
+  I finished the Express.js video anf followed along. I started to look into relationships in MySQL. I'm trying to figure out how to set up a relationship.
