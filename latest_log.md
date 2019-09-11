@@ -1,24 +1,31 @@
-## Day 53, R3
-### 9/10/19
+## Day 54, R3
+### 9/11/19
 
 - ## Node
-  ### Where I Left Off
-  I'm starting an app, I left off trying to start the app with express.
-
-  ## express()
-  > Creates an Express application. The express() function is a top-level function exported by the express module.
-  >
-  >var express = require('express')
-  >
-  >var app = express()
-
-  -*from [Express API Doc](https://expressjs.com/en/4x/api.html)*
-
-  ## Git Repo For Express Project
-  [First Commit](https://github.com/DashBarkHuss/express_proj/commit/d7eab60ed7a5c1d9925768c0b1b7facb9f04eca9)
-
-  ## Require Dotenv
-  I just spent a ton of time trying to debug my app. The problem was I didn't require `dotenv` so my variables were undefined.
-
   ## Where I Left Off
   I left off playing with [geolocation](https://www.w3schools.com/html/html5_geolocation.asp) in the console because I want to use it in my app. I started working on the post method.
+
+  ## Serve Static Files in Express
+  To serve up static files from the same directory I added:
+  ```javascript
+  app.use(express.static("./"))
+  ```
+  [Serving static files in Express](https://expressjs.com/en/starter/static-files.html)
+
+  ## Fetch With Express
+  I spent a while trying to figure out how to send a fetch request with express. My mistake was I didn't add JSON.stringify() to the body. Here is how it should be:
+  ```javascript
+  app.use(express.json());
+
+  fetch('http://127.0.0.1:3306/test',         
+  {
+    method: "POST",
+    body: JSON.stringify({user_id: 1}),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(x=>{console.log('done')})
+  ```
+  ## Where I left Off
+  I'm trying to figure out how the timestamp should be saved to the database, what datatype it should be.
+  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/b96219fa2b2783aa6961310f5e9fd9715aa7d557)
