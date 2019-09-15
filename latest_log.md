@@ -1,37 +1,31 @@
-## Day 57, R3
-### 9/14/19
+## Day 58, R3
+### 9/15/19
 
 - ## Node
   ## Where I Left Off
-  Now if the user is not connected to the internet the app collects a timestamp and saves it to local storage. Next I'll handle how it will send the timestamp from local storage to the backend.
+  I learned about service workers so I could use them in my app. I still have to handle sending the local storage to my database.
 
-  ## Service Workers
-  Services workers make your app work offline.
+  ## IndexedDB vs localStorage
+  I'm not sure what this is talking about, because I got localStorage to work. But maybe that's because it's in a file that the service worker stored and not in the service worker file:
+  >We’re using IndexedDB to do this because the localStorage API, while simpler, doesn’t work in a Service Worker.
 
-  >A service worker’s primary function is to intercept http calls made by pages and returning cached files.
+  [Send messages when you’re back online with Service Workers and Background Sync](twilio.com/blog/2017/02/send-messages-when-youre-back-online-with-service-workers-and-background-sync.html)
 
-  -*from [Offline Web Apps: Using Local Storage and Service Workers.](https://medium.com/@onejohi/offline-web-apps-using-local-storage-and-service-workers-5d40467117b9)*
+  ## Issues Updating Service Workers 
+  If you update your service worker it's hard to delete it from registration. I finally got it to delete. It required an extra refresh.
 
-  More resources:
+  [How to Uninstall, Unregister or Remove a Service Worker [With Example Code]](https://love2dev.com/blog/how-to-uninstall-a-service-worker/)
 
-  [Making a Simple Site Work Offline with ServiceWorker](https://css-tricks.com/serviceworker-for-offline/)
+  ## Service Worker Send Local Storage
+  I added more to my service worker app. It now saves to local storage and then has placeholder code for when the app is back online so the app can send the local storage to the database.
 
-  [Offline Quickstart](https://www.youtube.com/watch?v=zw35jKRSIlo)
+  [Link To Work](https://github.com/DashBarkHuss/service_worker)
 
-  [View Cache Data With Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/storage/cache)
-
-  ## Sample Service Worker App
-
-  I made a sampler service workers app [here](https://github.com/DashBarkHuss/service_worker).
-
-  **Without** the service workers file, `sw.js`, the app can't load pages while offline:
-
-  ![](log_imgs/offline_9-14.gif)
-  
-
-  **With** the service workers file, `sw.js`,  the app loads specified pages while offline:
-
-  ![](log_imgs/offline2_9-14.gif)
+  ## More Resources
+  [Offline POSTs with Progressive Web Apps](https://medium.com/web-on-the-edge/offline-posts-with-progressive-web-apps-fc2dc4ad895)
 
   ## Where I Left Off
-  I learned about service workers so I could use them in my app. I still have to handle sending the local storage to my database.
+  I started making a new branch on my express app to test adding a service worker in so that I can save data while offline.
+
+ - ## Thoughts and Feelings
+    I'm so tired. My tooth ache has been keeping me up at night. Well, last night it was a combination of my tooth ache and my racing thoughts. It was difficult to work today and so excuse my log.
