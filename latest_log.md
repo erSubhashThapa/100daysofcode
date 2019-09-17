@@ -1,28 +1,27 @@
-## Day 59, R3
-### 9/16/19
+## Day 60, R3
+### 9/17/19
 
 - ## Node
   ### Where I Left Off
-  I started making a new branch on my express app to test adding a service worker in so that I can save data while offline.
+   I'm trying to figure out the best way to deal with intercepting a post request to store the geolocation and timestamp. What if GPS isn't working but the user is online? What if the user if offline but GPS works? What if they're both not working? I will probably have to look into indexedDB tomorrow.
 
-  ## Service Workers Video
-  [Introduction to Service Workers](https://pusher.com/sessions/meetup/js-monthly-london/introduction-to-service-workers)
+   ## Need To Start Node Server
+   I was confused for why I couldn't connect to the data base through my UI. I finally realized I was just pressing the "Go Live" button in VSC. I need to run the node server!
 
-  ## LinkedIn Learning
-  I found out my school finally canceled my Lynda account (now LinkedIn Learning). I got a free 6 month LinkedIn Pro membership from Ray Villalobos for completing 100 days of code. But now I'm still having trouble logging in to that. I'm realizing now how much I miss this resource! I need it back.
+   ## IndexedDB
+   Read a little about indexedDB.
 
-  ## Questions
-  Is there a way to intercept `navigator.geolocation.getCurrentPosition(success, error)` with service workers? I see you can intercept `fetch` requests but what about getting a geolocation?
+   [Getting Started with Persistent Offline Storage with IndexedDB](https://itnext.io/getting-started-with-persistent-offline-storage-with-indexeddb-1af66727246c)
 
-  If there is an `addListenerEvent` event for `fetch`, in there one for  `navigator.geolocation.getCurrentPosition()`?
+  ## Background Sync
+  > a low-level feature for running code inside registered events in the background when the user is connected to the Internet, even when the page itself is closed. In the context of offline support, you can use it to hold request until the user has their Internet connection back, to make sure that they are going to be sent. This way, you will make sure that your app is synced with a remote database and all changes a user made are there or will be sent there. 
+  
+  -*from [Make Your PWA Work Offline Part 2 - Dynamic Data](https://www.monterail.com/blog/pwa-offline-dynamic-data)*
 
-  ## Override Geolocation DevTools
-  This was helpful for testing: [Override Geolocation With Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/device-mode/geolocation)
+  [Introducing Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
 
-  ## Rethinking My Code
-  I realized that you could be offline but have access to GPS. In that case you still want to store location. So I need to add that to my code.
+  ## 400 (Bad Request) and Fetch
+  I kept getting a 400 error when trying to fetch using the POST method. It was hard to debug, I wasn't getting much info. I finally saw the problem was in the syntax of the request body. I had an extra quote symbol.
 
   ## Where I Left Off
-  I'm trying to figure out the best way to deal with intercepting a post request to store the geolocation and timestamp. What if GPS isn't working but the user is online? What if the user if offline but GPS works? What if they're both not working? I will probably have to look into indexedDB tomorrow.
-
-  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/249ce1faa112586e3a1c6ede9415d73074ccb589)
+  I'm playing around trying to get background sync to work.
