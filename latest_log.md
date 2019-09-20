@@ -1,29 +1,24 @@
-## Day 62, R3
-### 9/19/19
+
+## Day 63, R3
+### 9/20/19
 
 - ## Node
-  ## Where I Left Off
-  I played with background sync and I got it to work with a param and get request. I made a sample project. Tomorrow I'll try to get it to work with POST.
-
-  ## localStorage Service Workers
-  >You cannot access localStorage (and also sessionStorage) from a webworker process, they result will be undefined, this is for security reasons.
-  >
-  >You need to use postMessage() back to the Worker's originating code, and have that code store the data in localStorage.
-  >
-  >You should use localStorage.setItem() and localStorage.getItem() to save and get data from local storage.
-
-  -*from [Access localStorage from service worker](https://stackoverflow.com/questions/40887635/access-localstorage-from-service-worker)*
-
-  >You can't cache POST requests using the Cache API. See https://w3c.github.io/ServiceWorker/#cache-put (point 4).
-  >
-  >There's a related discussion in the spec repository: https://github.com/slightlyoff/ServiceWorker/issues/693
-  >
-  >An interesting solution is the one presented in the ServiceWorker Cookbook: https://serviceworke.rs/request-deferrer.html Basically, the solution serializes requests to IndexedDB.
-
-  -*from [Can service workers cache POST requests?](https://stackoverflow.com/questions/35270702/can-service-workers-cache-post-requests/35272243#35272243)*
-
-  ## Where I left off
+  ### Where I left off
   I got the service worker to post but then it seemed like it wasn't posting. 
 
-- ## Thoughts And Feelings
-  I'm feeling really fatigued. I think it's from my wisdom tooth.
+  ## Background Sync Post
+  I got background sync to post and insert into the database.
+
+  [Link To Work](https://github.com/DashBarkHuss/service_worker_background_sync/commit/62aebdd16328de00cfd21be40f669d463345ce9d)
+
+  ## Background Sync Issue
+  Background sync is skipping fetch calls when the request bodies are exactly the same. This isn't an issue for my application, but I wonder why it works like this.
+
+  Maybe it's because if the request bodies of two different requests are the same, in my app they also both register with the same name. 
+  ```javascript
+  registration.sync.register(`post-${value}`);
+  ```
+  ## Where I Left Off
+  I'm trying to get the right timestamps to post but something looks off.
+
+  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/b7de365777a661c299a3896a1c7c65541403c63f)
