@@ -1,24 +1,21 @@
 
-## Day 63, R3
-### 9/20/19
+## Day 64, R3
+### 9/21/19
 
 - ## Node
   ### Where I left off
-  I got the service worker to post but then it seemed like it wasn't posting. 
-
-  ## Background Sync Post
-  I got background sync to post and insert into the database.
-
-  [Link To Work](https://github.com/DashBarkHuss/service_worker_background_sync/commit/62aebdd16328de00cfd21be40f669d463345ce9d)
-
-  ## Background Sync Issue
-  Background sync is skipping fetch calls when the request bodies are exactly the same. This isn't an issue for my application, but I wonder why it works like this.
-
-  Maybe it's because if the request bodies of two different requests are the same, in my app they also both register with the same name. 
-  ```javascript
-  registration.sync.register(`post-${value}`);
-  ```
-  ## Where I Left Off
   I'm trying to get the right timestamps to post but something looks off.
 
-  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/b7de365777a661c299a3896a1c7c65541403c63f)
+  ## Reality Checks & Background Sync Working
+  I got background sync to log the timestamp and geolocation of each reality check, even if offline.
+
+  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/956551fd36229378ea9e8977f8f38cb69dfb612c)
+
+  ## Store More Accurate Coordinates
+  Right now the coordinates are storing to the 6ths decimal place. I need to edit the datatype so they store a more precise number since the actual geolocation is more precise.
+
+  ## Where I Left Off
+  I started working on getting reality check info for the user from the database to the UI.
+
+  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/3f1ff4f11305a3fb75d1bdf18ec15a750ef8a194)
+
