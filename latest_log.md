@@ -1,42 +1,46 @@
 
-## Day 69, R3
-### 9/26/19
+## Day 30, R3
+### 9/27/19
 - ## Node
   ## Where I Left Off
-   I was  watching the LI Learning video [Connect to Socket.io from the browser app](https://www.linkedin.com/learning/learning-node-js-2/connect-to-socket-io-from-the-browser-app). I ran into a weird error when following along:
+    I'm trying to understand the bodyparse module and why I didn't need it before. I'm working on making a sample app that uses socket IO in the browser.
 
-  `Access to XMLHttpRequest at 'http://localhost:3000/messages' from origin 'http://127.0.0.1:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.`
+  ## Why
+  In the video [Create a post message service](https://www.linkedin.com/learning/learning-node-js-2/create-a-post-messages-service), the instructor says that express has no built in support to parse a body. He says you need to use the bodyparser module. But I was able to use express without bodyparser before.
 
-  Aren't these the same origin?:
-    - 'http://localhost:3000/messages
-    - 'http://127.0.0.1:3000'
-  
-  Localhost is the same as 127.0.0.1 and /messages isn't part of the origin, is it? So how are they not the same? What's going on?
+  I realized what I did different. I was using the fetch API to post. The instructor is using jquery.post(). But why does one work without the body parser and one doesn't?
 
-  ## Localhost vs 127.0.0.1
-  My browser is at the address: `http://127.0.0.1:3000/`
+  ### Content-Type
+  When you make a jquesry.post() request the content type defaults to  `'content-type': 'application/x-www-form-urlencoded; charset=UTF-8'`. In a fetch call you can specify the type. 
 
-  When I fetch `127.0.0.1:3000/messages` I get the data I want. But when I fetch  `localhost:3000/messages` I'm blocked by CORS.
+  ```javascript
+  fetch('http://localhost:3000/messages',{
+        method: 'POST', 
+        body: JSON.stringify(message),
+        headers: {
+            "Content-Type": "application/json"
+        }
+  })
+  ```
 
-  ![](log_imgs/same_origin_9-26.PNG)
+  So I wonder why the instructor said it has no build in support to parse the body. I guess he meant to parse the body when it's not set to `"Content-Type": "application/json"`. Maybe if it's already set to json, it's not considered parsing. Either way, that info is out of date. Express now includes body parser:
 
-  >Origin is defined as a scheme/host/port (port is the default value for a scheme if it doesn't exist, e.g. port 80 for http, 443 for https). Same-origin is defined as a matching scheme/host/port. "localhost" and "127.0.0.1" are different hosts in this case.
-  
-  -*from [Are 127.0.0.1 and localhost considered as two different domains by browsers?](https://stackoverflow.com/questions/5256251/are-127-0-0-1-and-localhost-considered-as-two-different-domains-by-browsers)*
+  ```javascript
+  // Latest(4.16.0), Built in way:
+  const express = require('express');
+  const app = express();
+  app.use(express.urlencoded({extended: true}));
 
-  More here: [Origin determination rules](https://en.wikipedia.org/wiki/Same-origin_policy#Origin_determination_rules)
+  //Older, Seperate module way:
+  const express = require('express');
+  const bodyParser = require('body-parser'); 
+  const app = express();
+  app.use(bodyParser.urlencoded({extended: true}));
+  ```
+  -*from [Express now includes body-parser middleware by default](https://www.reddit.com/r/javascript/comments/78jjna/express_now_includes_bodyparser_middleware_by/)*
 
-  ## Socket IO Tutorial
-  I watched to video from the course Learning Node.js:
-
-  - [Create your Socket.io event](https://www.linkedin.com/learning/learning-node-js-2/create-your-socket-io-event)
-  - [Connect to Socket.io from the browser app](https://www.linkedin.com/learning/learning-node-js-2/connect-to-socket-io-from-the-browser-app)
-
-  Now I can see how to use socket IO in the browser.
-
-  I also watched this video: [Express](https://www.linkedin.com/learning/learning-node-js-2/express-2)
-
-  In the video [Create a post message service](https://www.linkedin.com/learning/learning-node-js-2/create-a-post-messages-service), the instructor says that express has no built in support to parse a body. He says you need to use body parser. Why was I able to use express without body parser before?
+  ## Bootstrap
+  I read a little bit about [bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/), a framework for building responsive, mobile-first sites.
 
   ## Where I Left Off
-  I'm trying to understand body parse and why i dodn't need it before. I'm working on making a sample app that uses socket IO in the browser.
+  I started experimenting with bootstrap in my socket IO sample browser chat.
