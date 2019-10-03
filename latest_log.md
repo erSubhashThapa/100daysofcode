@@ -1,19 +1,43 @@
 
-## Day 75, R3
-### 10/2/19
+## Day 76, R3
+### 10/3/19
 - ## Node
   ### Where I Left Off
-  I ended trying to get the rc's to store to local storage before the database updates, so that if we're offline we still get an updated timeline. I thought I did this already but I guess I didn't.
-
-  ## Mysterious Port 3306
-  Mysteriously, local host on port 3306 was serving files even though I didn't have node or nodemon running. I finally realized it's because the service workers cached the files.
-
-  ## Timeline Updates Offline
-  Now the timeline updates when we're offline and we add an RC.
-
-  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/10ca8396e19e6891cf1b31fb4901a99fb664f442)
-
-  ## Where I Left Off:
   I'm testing to see what happens if I clear the local storage and reload the page while offline. It seems like it's connecting to the server somehow when it's offline.
 
-  [Here's my last commit](https://github.com/DashBarkHuss/express_proj/commit/e3ec838daa2545c1a64e88d38e24241523398f78)
+  ## Multiple Web Sockets
+  How do you make multiple web sockets on the same app. For example, on facebook websockets update the news feed. But my news feed is different from Joe Shmoe's news feed. How do they do that?
+
+  ## Custom Name Spaces
+
+  >To set up a custom namespace, you can call the of function on the server-side:
+  >```javascript
+  >const nsp = io.of('/my-namespace');
+  >nsp.on('connection', function(socket){
+  >console.log('someone connected');
+  >});
+  >nsp.emit('hi', 'everyone!');
+  > ```
+  >On the client side, you tell Socket.IO client to connect to that namespace:
+  >```javascript
+  >const socket = io('/my-namespace');
+  >```
+
+
+  -*from [Custom Namespace Socket IO Docs](https://socket.io/docs/rooms-and-namespaces/#Custom-namespaces)*
+
+  ## Front End
+
+  I reviewed some bootstrap docs:
+  - [Boot Strap Grid](https://getbootstrap.com/docs/4.3/layout/grid/)
+  - [Forms](https://getbootstrap.com/docs/4.3/components/forms/)
+  
+  And JQuery:
+  - [Attribute Equals Selector [name=”value”]](https://api.jquery.com/attribute-equals-selector/)
+
+
+  ## Where I left off
+  ### Socket IO Sample
+  I made a sample socket IO app that sends messages to different chat rooms conditionally. But I didn't yet use multiple name spaces.
+
+  [Socket IO Conditional Multiple Chat Rooms](https://github.com/DashBarkHuss/socket_iO_conditional_chat/commit/75a772be7a6f506c36e56ebbf88b3540946cac5f)
