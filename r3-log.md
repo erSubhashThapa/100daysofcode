@@ -23,6 +23,9 @@
 
   [wridgeu](https://twitter.com/Wridgeu) suggested reading[The Service Worker Lifecycle](https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle)
 
+  ## Twitch Video
+  Watch my twitch stream [here](https://www.twitch.tv/videos/491471403).
+
   ## Where I Left Off
   I left off still not knowing why the post isn't going through. I'm going to look at [wridgeu](https://twitter.com/Wridgeu) and [nd9600](https://twitter.com/CaYD4D)'s suggested reading tommorrow.
 
