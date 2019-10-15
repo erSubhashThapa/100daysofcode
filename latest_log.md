@@ -1,77 +1,55 @@
 
-## Day 86, R3
-### 10/14/19
+## Day 88, R3
+### 10/15/19
 
 - ## Node
   ### Where I Left Off
-  I'm exploring service workers in depth in the browser but the behavior is so funny to me.
-
-  ## Service Workers Funny Behavior
-  I'm finding so much strange behavior when working with service workers.
-
-  ### skip waiting
-  Sometimes skip waiting doesn't work. Why woud this be?
-
-  ![](log_imgs/skipWaiting_10-14-19.PNG)
-
-  It seems to be doing this when local host is pending but I don't know why localhost is pending for so long.
-
-  It happened another time when local host wasn't pending.
-
-  It seems to happen whenever there is a grey highlight behind "skipWaiting". No it also happened when it wasn't grey but local host was pending.
-
-  ### fetch handler not called
-  The fetch handle wasn't getting called even though I had this in the service worker:
-  
-  ```javascript
-  self.addEventListener('fetch', (e)=>{
-    console.log("fetch event: ", e.request.url);
-  })
-  ```
-  I figure this problem out. This happened when the service worker was installed by not the controller for the page. I have to refresh the page for it to be the controller.
-
-  Check if the service worker is controlling the page:
-  ```javascript
-  navigator.serviceWorker.controller
-  ```
-
-  ### Not caching index.html
-  When you save your precache list it has to be the url, not the file name. For example, if you navigate to "http://localhost:5000/" but you cached index.html, that wont work. You have to cache "/". But then what happens when we go to the url index.html?
-
-  hmmm I get an error:
+  I'm trying to figure out why I'm getting this error when I go to e go to the url index.html.
 
   >`The FetchEvent for "http://localhost:5000/index.html" resulted in a network error response: a redirected response was used for a request whose redirect mode is not "follow".`
 
-  Info on this error: [Only in Chrome (Service Worker): '… a redirected response was used for a request whose redirect mode is not “follow” '](https://stackoverflow.com/questions/45434470/only-in-chrome-service-worker-a-redirected-response-was-used-for-a-reque)
 
-  I don't understand the answer. And I'm confused because this is my code is straight off the docs: [Caching Files with Service Worker](https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker)
+  ## Service Worker Game
 
-  ```javascript
-  const precacheList = ["styles.css",'/index.html', '/', "/dashie.html"]
+  I played this [Service Workies Game](https://serviceworkies.com/) recommended to me by [@RichDonnellan](https://twitter.com/RichDonnellan).
 
-  self.addEventListener('install', function(event) {
-    event.waitUntil(
-      caches.open("cach1").then(function(cache) {
-        return cache.addAll(
-          [
-            '/',
-            '/styles.css',
-            '/index.html',
-            "/dashie.html"
-          ]
-        );
+  ## Game Notes
+
+  - The game made me wonder what is the difference between a web worker and a service worker, so I looked it up.
+  
+    [What can service workers do that web workers cannot?](https://stackoverflow.com/questions/38632723/what-can-service-workers-do-that-web-workers-cannot)
+
+  - The game also made me realize that when you refresh a page that registers a service worker, if the code has changed, the new code replaces the waiting service worker now the active service worker.
+
+  - If you refresh a page that registers a service worker, the install event only gets called once. A service worker will only enter each stage of it's life cycle once.
+
+  - In the game, Kolohe, the young service worker warrior, terminates whenthe "Portal" is closed. I think thats a symbol for closing a tab. So I suppose a service worker terminates when a tab is closed?
+
+  - Unlike the install event, the registration success Promise resolves every time the page loads and register is called for a valid Service Worker.
+
+  - The `.ready` promise will resolve every time the page is refreshed so long as there is an active Service Worker.
+    ```javascript
+    navigator.serviceWorker.ready.then(registration => {
+      console.log("SW activated: ",
+      registration.active)
+    })
+    ```
+
+  - The `updatefound` event fires when theres an updated service worker.
+
+  - The `statechange` event fires when theres a state change.
+    ```javascript
+      navigator.serviceWorker.register("/game/kolohe.js").then((registration) => 
+    {
+      const kolohe = registration.installing;
+      kolohe.addEventListener("statechange", (event) => {
+        console.log("state changed to:", event.target.state)
       })
-    );
-  });
-  self.addEventListener('fetch', function(event) {
-    console.log('fetch: ', event.request.url);
-    event.respondWith(
-      caches.match(event.request).then(function(response) {
-        return response || fetch(event.request);
-      })
-    );
-  });
-  ```
+    })
+    ```
 
-  ## Where I Left Off
-  I'm trying to figure out why I'm getting this error.
+  ## Where I left Off
+  I ended on Chapter 2 Level 7 of Service Workies.
+
+- ## Thoughts and Feelings
+  Playing Service Workies helped me slow down. It takes longer to go through a "voyage" and learn about service workers than to read a doc. But slowing down help me soak in what the service worker is truly doing. This is a lesson in learning. I don't need to rely on games to teach me, but I need to be ok with slowing down when learning a new concept. Take in each small part slowly, iterating the new micro concepts until you understand them.
