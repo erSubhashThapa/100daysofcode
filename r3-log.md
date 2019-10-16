@@ -2,6 +2,25 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
 
+## Day 89, R3
+### 10/16/19
+
+- ## Node
+  ### Where I Left Off
+  I ended on Chapter 2 Level 7 of Service Workies.
+
+  ## Service Workies Progress
+  I finished chapter 2.
+
+  ## Playing in the browser
+  I played with what I learned in service workies but I was getting funny behavior. I finally realized why:
+
+  ## Scope
+  Scope is important for service workers. Your service worker can't be in a sub folder of the page you're trying to control. There's a work around for this if you must.
+
+  ## Where I Left Off
+  I played with service workers in the browser. Tomorrow, I'll play some more then I'll a continue with service workies.
+
 ## Day 88, R3
 ### 10/15/19
 
@@ -56,7 +75,7 @@
 
 - ## Thoughts and Feelings
   Playing Service Workies helped me slow down. It takes longer to go through a "voyage" and learn about service workers than to read a doc. But slowing down help me soak in what the service worker is truly doing. This is a lesson in learning. I don't need to rely on games to teach me, but I need to be ok with slowing down when learning a new concept. Take in each small part slowly, iterating the new micro concepts until you understand them.
-  
+
 ## Day 87, R3
 ### 10/14/19
 
