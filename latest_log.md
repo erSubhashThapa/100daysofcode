@@ -1,96 +1,58 @@
 
-## Day 100, R3
-### 10/27/19
+## Day 101, R3
+### 10/28/19
 
-  ### Where I Left Off
-  I started practicing delivering alternative content when offline with service workers.
+Even though I finished round 3, I'm going to continue to post on here. I'm not committing to an entire 4th round of #100DaysOfCode, but I am committed to finishing the year. 
 
-  ## Stack: "anonymous"
-  I was trying to understand the code from the [Vanilla Javascript: Service Workers](https://www.linkedin.com/learning/vanilla-javascript-service-workers/) tutorial. So I paused the code at `serviceworkers.js:88`. 
-  
+- ### Where I Left Off:
+  I left off trying to figure out what "eval and friends" means. I feel that I got side tracked yesterday, so while I brought up questions that I should look into later, I'm going to continue practicing delivering alternative content when offline with service workers
+
+  ## new Response 
+  How to use the Response constructor:
+  ```javascript
+  new Response(JSON.stringify({"property":"value"})).json() // returns a promise with the object as the promise value
+  ```
+
+  ## Only One `Event.respondWith`
+  I was getting a lot of unexpected behavior in the service worker that was confusing me.
+
+  I realized it was because `event.respondWith` was being called twice. I need to `return` in my conditional so the later conditional with `event.respondWith()` isn't called.
+
+  ## Unexpected Behavior
+  In my fetch handler I have this:
+
   ```javascript
   self.addEventListener("fetch", event => {
-    console.trace();
-    const parsedUrl = new URL(event.request.url);
-    if (parsedUrl.host=="explorecalifornia.org" && !navigator.onLine) {
-        event.respondWith(fetch("offline.json")); //line 88
+    const parsedURL = new URL(event.request.url);
+
+    if (parsedURL.pathname == "/info.json" && !navigator.onLine){
+
+        event.respondWith(fetch("/offline.json")); //if we're offline, respond with this cached file
+        return;
     }
-  ```
-
-  I looked at the call stack to see how the code got there and I saw this:
-
-  <img src = "log_imgs/stack_10-27-19.PNG" width = "200">
-
-  I've seen this before, but I never really looked up what it meant. 
-  
-  ### Anonymous Functions
-  According to [this article](https://www.linkedin.com/pulse/javascript-named-vs-anonymous-functions-chris-ng/), it looks like this means an **anonymous function** called our current function.
-
-  **Anonymous functions** are functions without a name.
-
-  I would think we'd get a line number or something in the stack trace, but no.
-
-  But then, when looking into my code I ended up finding the function that called the current function (or did it?). It was named.
-
-  So we got to the fetch listener by 
-  - `fetchWeather("san diego")` 
-  - and `fetchWeather` calls fetch 
-  - which then triggers a fetch event
-
-  So why does `console.trace()` show anonymous in the fetch event?
-
-  Maybe because we're getting here by triggering an event, the function is anonymous? 
-
-  ## Event Handler
-  I  put a `console.trace()` in every event listener. They all showed "anonymous".
-
-  If I moved the listener out into a named function, it then showed the name of the listener in the trace.
-
-  ```javascript
-  // callback in event handler
-
-  self.addEventListener("someevent", event=>{
-    console.trace() //returns anonymous
-    //some code
+      event.respondWith(caches.match(parsedURL.pathname).then(response=>{
+          if (response){
+              console.log(response);
+              return response;
+          } else {
+              return fetch(parsedURL);
+          }
+      }))
   })
-
-  //callback outside of handler
-
-  function callbackName(event){
-    console.trace() //returnns callbackName
-    //some code
-  }
-  self.addEventListener("someevent", callback)
-
   ```
 
-  But `console.trace()` didn't show what called the named callback.
+  When I call `fetch("info.json")` I get:
+  > The FetchEvent for "http://127.0.0.1:5500/info.json" resulted in a network error response: the promise was rejected.
 
-  I couldn't find any info on this but I guess it makes sense. 
-
-  When an event listener is triggered, it's not directly triggered by a function. It's triggered by an event. A function may have triggered the event, but the event looks like it starts a new stack.
-
-  ## Javascript Event Loop
-  I'm reading about the [Javascript Event Loop](https://flaviocopes.com/javascript-event-loop/) to try get more clarity.
-
-  ## VM
-  I added a mouseover event listener to see what the stack would be.
-
+  Even though the code is getting to conditional 
   ```javascript
-  elem.addEventListener('mouseover', e=>console.trace(e))
+  if (parsedURL.pathname == "/info.json" && !navigator.onLine)
   ```
-  This time we have anonymous but with a weird code.
-  ![](log_imgs/debug_10-27-19.PNG)
+  . Which means it should be getting to this line:
+  ```javascript 
+  event.respondWith(fetch("/offline.json"));
+  ```
+  And `offline.json` is in the cache. So why isn't it fetching?
 
-  I've seen this before and I vaguely understand what they are.
-
-  I think it's like a virtually generated code or something or possibly something that just dev tools does. I'm not sure.
-
-  ### What is the vm file?
-  I looked it up:
-  >[VM] (scriptId) has no special meaning. It's a dummy name to help us to distinguish code which are not directly tied to a file name, such as code created using eval and friends.
-
-  -from [Chrome Development Tool: [VM] file from javascript](https://stackoverflow.com/questions/17367560/chrome-development-tool-vm-file-from-javascript)
-
-  ## Where I Left Off:
-  I left off trying to figure out what eval and friends means.
+  ## Where I Left Off
+  The above is what I left off trying to figure out.
