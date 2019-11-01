@@ -1,38 +1,27 @@
 
-## Day 104, R3
-### 10/31/19
-- ## Where I left off
-  I did some refactoring on my project. I need to work on why the timeline doesn't populate when wifi is off.
+## Day 105, R3
+### 11/1/19
+- ### Where I Left Off
+  `addRc()` doesn't add an RC when the local storage is cleared. I have to fix this. Was this online or offline?
 
-  ## Background Sync Working Again
-  I got background sync working but I'm not actually sure what I changed. That's why I should commit before I change something. I'll commit now! Oh wait I have a problem still so I'm trying to fix that first.
+  ## Pending Local Host
+  Something causes retrieving localhost to pend for a very long time.
 
-  ## Fixed Timeline Bug
+  I thought the cause was *pausing the debugger on sync event*. But I tried that a few times. Sometimes it caused localhost to pend on reload, sometimes not.
 
-  I was trying to get the first and last reality check of the day. I had this code:
+  **I figured it out.** The service workers context can be pause in the debugger. But then when you switch to the '**top**' context it might not be paused. 
+  
+  Then when you try to refresh, the service worker is still paused even though it doesn't look like it. So the document can't retrieve localhost.
 
+  ![](log_imgs/context_11-1-19.gif)
+  
+  ## Force Reload
+  If you `shift` + reload, refresh will work even if the service worker is paused. This is called force reloading an it bypasses the service worker.
 
-  ```Javascript
-  const firstRC = (()=>{
-    return times.reduce((minimum, time) => time < minimum ? time : minimum, times[0]);
-  })();
-
-  const timespan = times[times.length-1]-firstRC;
-  ```
-  This code assumes the last reality check in the database chronologically last order. But that's not always true. I can have a reality check from 5pm first in the database and then one from 4:59pm after it. So I changed the code:
-
-  ```Javascript
-  const firstRC = (()=>{
-    return times.reduce((minimum, time) => time < minimum ? time : minimum, times[0]);
-  })();
-  const lastRC = (()=>{
-      return times.reduce((maximum, time) => time > maximum ? time : maximum, times[0])
-  })();
-  const timespan = lastRC-firstRC;
-  ```
-  This is easier to read too.
-
-  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/d67a3b8f227ae569638c9e27e0d498de25616b52)
+  ## Express Project
+  Now the express project does add an RC when the local storage is cleared. 
 
   ## Where I Left Off
-  `addRc()` doesn't add an RC when the local storage is cleared. I have to fix this. Was this online of offline?
+  It seems like everything is syncing nicely. I did some refactoring and debugging. Next could I test it on mobile and implement (Flic)[https://flic.io/flic2]? Does Flic have to be native? Can do this in a PWA? I know I can do it if I'm connected to the internet, but can I directly affect the PWA offline?
+
+  [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/70999fbccea5e70270d0c1dcea293b4ce314a92b)
