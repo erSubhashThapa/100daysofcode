@@ -35,4 +35,4 @@
   [Link To Work](https://github.com/DashBarkHuss/express_proj/commit/d67a3b8f227ae569638c9e27e0d498de25616b52)
 
   ## Where I Left Off
-  `addRc()` doesn't add an RC when the local storage is cleared. I have to fix this.
+  `addRc()` doesn't add an RC when the local storage is cleared. I have to fix this. Was this online of offline?
