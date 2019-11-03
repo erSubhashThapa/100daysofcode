@@ -1,74 +1,57 @@
 
 
-## Day 106, R3
-### 11/2/19
+## Day 107, R3
+### 11/3/19
 - ### Where I Left Off
-  Today I'm looking into [Flic](https://flic.io/flic2). Does Flic have to be native? Can I do this in a PWA? I know I can use Flic if I'm connected to the internet, but can I directly affect the PWA offline?
+  I left off on this video: [What is code quality?](https://www.linkedin.com/learning/node-js-testing-and-code-quality/what-is-code-quality)
 
-  ## Flic
-  I think I need native mobile code if I want to use flic offline.
+  ## VSC Tooltips
+  I posted this question:
+  [Where does VSC get its information that's displayed in the tooltips?](https://stackoverflow.com/questions/58682763/where-does-vsc-get-its-information-thats-displayed-in-the-tooltips)
 
-  Here's some resources I looked at:
-  - [Flic for iOS: Part 1](https://partners.flic.io/partners/developers/ios-tutorial)
-  - [fliclib Reference](https://partners.flic.io/partners/developers/documentation/ios/index.html)
-  - [The Beginner’s Guide to Objective-C: Methods](https://blog.teamtreehouse.com/the-beginners-guide-to-objective-c-methods)
+  When I hover over a method, VSC displays information on that method in a tooltip.
 
-  ## Objective C
+  **Example**: Here, I hover over `.on`, a method I'm using from the Socket IO library. Then I can see documentation on `.on`:
 
-  In the fliclib documentation I saw some words I didn't understand:
 
-  >The **delegate** of a SCLFlicButton object must adopt the SCLFlicButtonDelegate protocol. There are not any required delegate methods, but all are recommended for proper use of the Flic.
+  ![](log_imgs/tooltips_11-3-19.PNG)
 
-  -*from [SCLFlicButtonDelegate Protocol Reference](https://partners.flic.io/partners/developers/documentation/ios/Protocols/SCLFlicButtonDelegate.html)*
+  **Question**: Where does VSC grab documentation from to display in the tooltips?
 
-  What's a **delegate**? Apparently it's something specific to objective c:
-
-  >What is an Objective-C Delegate? Well.. An Objective-C delegate is just an object that has been assigned as a delegate of another. 
-
-  -*from [How to create an Objective-C Delegate](https://www.ios-blog.com/tutorials/objective-c/how-to-create-an-objective-c-delegate/)*
-
-  That sounds like a namespace to me. 
-  
-  I figured I might have to get familiar with objective c to use flic. Here's an Objective C tutorial I can look at:
-
-  [Objective-C Essential Training](https://www.linkedin.com/learning/objective-c-essential-training/)
-
-  ## At An Impasse
-  Do I want to start learning objective C to continue with my app? Or do I want to keep learning Javascript related skills? 
-  
-  ## Javascript Concepts
-  I decided to look more into javascript concepts or language agnostic concepts. I think having a better base in javascript will help me pick up objective C in the future. And getting more specific with javascript might make me more employable. 
-
-  ## Courses
-  I'm looking to get more organized in my code. So these were three courses I was interested in:
-
-  - [Programming Foundations: Test-Driven Development](https://www.linkedin.com/learning/programming-foundations-test-driven-development-2/small-steps-to-great-things): I want to learn test driven development. However, this course is in Java. So I think it would be a bit confusing for me.
-
-  - [Node.js: Testing and Code Quality](https://www.linkedin.com/learning/node-js-testing-and-code-quality/welcome): I want to learn about unit testing, but I want to learn about *fullstack* testing, not just node. Still, this might be useful.
-
-  - [Learning Functional Programming with JavaScript ES6+](https://www.linkedin.com/learning/learning-functional-programming-with-javascript-es6-plus/a-functional-approach-to-transform-code): I thought this might help me better structure my code, but I'm not really sure functional programming is preferable to object oriented programming. Maybe I'll look into it later.
-
-  I'm going to go with [Node.js: Testing and Code Quality](https://www.linkedin.com/learning/node-js-testing-and-code-quality/welcome).
+  I couldn't find any of this info in the socket.io package, or any other respective package for different libraries.
 
   ## [Node.js: Testing and Code Quality](https://www.linkedin.com/learning/node-js-testing-and-code-quality/welcome):
 
-  ## Example Application Setup
-  In the video [Demo application setup and tour](https://www.linkedin.com/learning/node-js-testing-and-code-quality/demo-application-setup-and-tour), the instructor goes over the setup of the application. I found this helpful to see how code can be organized into different directories; directories like `public` for frontend code, `routes`, `migrations`, and more. 
+  - Coding Conventions and Standards
+  - Linting
 
-  ## What Is Code Quality?
-  - Functional: Does what it's supposed to do
-  - Deficiency Free
-    - Usefulness
-      - flexible and reusable
-    - Maintainability
-      - Can you maintain the code?
-      - Can someone else maintain it without help?
-      - Can someone else read and understand design and intent?
+  ## Unit Testing
+  - **Unit**: Smallest testable part of an application. 
+    - can be as big as an interface, or as small as an individual method.
+  - **Unit Tests**: Tests an isolated unit via API.
+    - Performed in memory: No permanent changes take place.
+  - **Unit Test Assertions**: Validates correctness of a unit.
 
-  -*from [What is code quality?](https://www.linkedin.com/learning/node-js-testing-and-code-quality/what-is-code-quality)*
+  ```javascript
+  // Test setup using Node.js Assert module
+  const assert = require(`assert`);
+  // Tested Method:
+  function cat(){ return 'woof'; }
+  // Assertion - actual and expected
+  assert.equal(cat(), 'meow')
+  ```
+  ## Integration Testing
+  - Builds on unit tests
+  - Combines units and test resulting combinations
+
+  ## Functional Testing
+  -  Focus on result, not code
+  -  Tests features, not code
+
+  ## System Testing
+  - Test application and hosting environment
 
   ## Where I Left Off
-  I left off on this video: [What is code quality?](https://www.linkedin.com/learning/node-js-testing-and-code-quality/what-is-code-quality)
+  I left off taking the chapter quiz: [Chapter Quiz](https://www.linkedin.com/learning/node-js-testing-and-code-quality/quiz/59bac6973dd5594664ed3035)
 
 
-  
