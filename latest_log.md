@@ -1,55 +1,72 @@
 
-## Day 110, R3
-### 11/6/19
-  ## Where I Left Off:
-  I watched more of the tutorial on testing. I'm playing with testing a function with a callback.
+## Day 111, R3
+### 11/7/19
+  
+- ## Where I Left Off
+  I started to review debugging in Node so I can debug my test script.
 
-  ## Callbacks
-  In the linkedin video [Testing callbacks with Mocha](https://www.linkedin.com/learning/node-js-testing-and-code-quality/testing-callbacks-with-mocha), we test an asynchronous callback using `done()`.
+  ## How to debug tests?
+  I want to pause my test script on a line in the test while debugging. Let's see if I can figure it out.
 
-  ```javascript
-  it('should fail a reservation with a bad email', function(){
-      const reservation = new Reservation({
-        date: '2017/06/10',
-        time: '06:02 AM',
-        party: 4,
-        name: 'Family',
-        email: 'username'
-      });
-      reservation.validator(function(error){
-          error.should
-            .be.an('error')
-            .and.not.be.null
-          done();
-    });
-  });
+
+  ## How We Run Tests
+  To run tests you run the command
+  ```bash
+  npm test
+  ```
+  Scripts in package.json:
+  ```json
+  "scripts": {
+  "test": "mocha"
+  ...}
+  ```
+  What is `"mocha"` from this script?
+
+  It looks like npm scripts are just terminal commands:
+
+  >```json
+  >"scripts": {    "start": "node index.js",    ...}
+  >```
+  >You’ve probably seen this tons of times in your package.json files. And you probably know that you can type `npm start` to execute the script. But this example illustrates ***the first important aspect of NPM scripts — they are simply terminal commands.*** They run in the shell of the OS on which they’re executed. So it might be bash for Linux and cmd.exe for Windows.
+
+  -*from [Introduction To NPM Scripts](https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/)*
+
+  But if npm scripts are just terminal commands, why does running `mocha` in the terminal do nothing? 
+  ```bash
+  $ mocha
+  bash: mocha: command not found
   ```
 
-  But I'm not sure what done does because when I take `done` out of the parameters and remove `done()`, the test still works. So what's it doing?
+  I would think `npm test` and `mocha` would give the same results in the the terminal if scripts are just terminal commands.
+  ## npm test
+  It turns out `npm test` is a special npm script.
 
-  I'm going to go on to the next video about using done with promises to see if I get any clarification.
+  There are more special npm scripts here [npm-scripts](https://docs.npmjs.com/misc/scripts).
 
-  ## Debugging Node.js
-  I want to debug my tests, but I'm used to only debugging the main script. I'm trying to see how to debug different scripts. This way I could understand how testing works, like what exactly is `done`? 
-
-  I'm reviewing debugging in Node. I think debugging is so important!
+  >pretest, **test**, posttest: Run by the npm test command.
   
-  [Getting started with Node.js debugging in VS Code](https://www.youtube.com/watch?v=2oFKNL7vYV8)
+  -*from [npm-scripts](https://docs.npmjs.com/misc/scripts)*
 
-  ## Where I Left Off
-  I started to review debbuging in NOde so I can debug my test script.
+  ### More info on npm test:
+  >SYNOPSIS
+  >
+  >`npm test [-- <args>]`
+  >
+  >`aliases: t, tst`
+  >
+  >DESCRIPTION
+  >
+  >This runs a package’s “test” script, if one was provided.
 
-  ## Job Hunt
-  I thought I'd document some of my job hunt. 
-  
-  On Monday I went to [Built In Chicago](https://www.builtinchicago.org/)'s *Top Companies Hiring.*
-  
-  I thought this would be a great way to find a job in the *informal* job market. But I was wrong! It was a very formal situation. 
-  
-  Most companies were looking for senior devs. It was a little discouraging. One lady talked to two other devs and myself. All of us were newbies. But, for some reason she looked at the other devs and avoided eye contact with me. This stook with me. I wondered why she didn't look at me? Anyways, kind of a stupid thing to dwell on, on my end!
+  -*from [npm-test](https://docs.npmjs.com/cli/test.html)*
 
-  Today, [Jose Munoz](https://twitter.com/jjmvrk), a cool dude I met on Twiiter, showed me around Vintro headquarters. Vintro is a really cool app where you can pitch investors and mentors on your business ventures over video messages. It's sort of like cameo for business. It's started by a young entrepreneur named Noor Sugrue, I got to meet her too. I think the business is so cool and I can't wait to use it myself! 
+  I find it weird that the docs give no examples of what the arguments would be.
 
-  Jose was very kind and generous. He offered to connect me with a founder of another company after I told him I was looking for a dev job or apprenticeship where I could shadow an entrepreneur. 
+  ## Debugging Tests
+  If we can only run the tests through the terminal command `npm test`, how do we debug them? 
   
-  I think the key to getting what you want is asking. Most people don't know what they want and wont ask if they do. Anyways, I'm going to end this here, got ot make it over to [Next Door Cafe](https://nextdoorchicago.com/) for a workshop on job hunting.
+  I found this tutorial: [Debugging Mocha Unit Tests In Visual Studio Code](https://scottaddie.com/2015/10/22/debugging-mocha-unit-tests-in-visual-studio-code/). This is where I left off.
+
+  
+
+
