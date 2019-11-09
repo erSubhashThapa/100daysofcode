@@ -1,72 +1,58 @@
 
-## Day 111, R3
-### 11/7/19
-  
-- ## Where I Left Off
-  I started to review debugging in Node so I can debug my test script.
+## Day 112, R3
+### 11/8/19
 
-  ## How to debug tests?
-  I want to pause my test script on a line in the test while debugging. Let's see if I can figure it out.
-
-
-  ## How We Run Tests
-  To run tests you run the command
-  ```bash
-  npm test
-  ```
-  Scripts in package.json:
-  ```json
-  "scripts": {
-  "test": "mocha"
-  ...}
-  ```
-  What is `"mocha"` from this script?
-
-  It looks like npm scripts are just terminal commands:
-
-  >```json
-  >"scripts": {    "start": "node index.js",    ...}
-  >```
-  >You’ve probably seen this tons of times in your package.json files. And you probably know that you can type `npm start` to execute the script. But this example illustrates ***the first important aspect of NPM scripts — they are simply terminal commands.*** They run in the shell of the OS on which they’re executed. So it might be bash for Linux and cmd.exe for Windows.
-
-  -*from [Introduction To NPM Scripts](https://www.freecodecamp.org/news/introduction-to-npm-scripts-1dbb2ae01633/)*
-
-  But if npm scripts are just terminal commands, why does running `mocha` in the terminal do nothing? 
-  ```bash
-  $ mocha
-  bash: mocha: command not found
-  ```
-
-  I would think `npm test` and `mocha` would give the same results in the the terminal if scripts are just terminal commands.
-  ## npm test
-  It turns out `npm test` is a special npm script.
-
-  There are more special npm scripts here [npm-scripts](https://docs.npmjs.com/misc/scripts).
-
-  >pretest, **test**, posttest: Run by the npm test command.
-  
-  -*from [npm-scripts](https://docs.npmjs.com/misc/scripts)*
-
-  ### More info on npm test:
-  >SYNOPSIS
-  >
-  >`npm test [-- <args>]`
-  >
-  >`aliases: t, tst`
-  >
-  >DESCRIPTION
-  >
-  >This runs a package’s “test” script, if one was provided.
-
-  -*from [npm-test](https://docs.npmjs.com/cli/test.html)*
-
-  I find it weird that the docs give no examples of what the arguments would be.
-
-  ## Debugging Tests
-  If we can only run the tests through the terminal command `npm test`, how do we debug them? 
-  
+  ## Where I left Off
   I found this tutorial: [Debugging Mocha Unit Tests In Visual Studio Code](https://scottaddie.com/2015/10/22/debugging-mocha-unit-tests-in-visual-studio-code/). This is where I left off.
-
   
+  ## Debug Mocha Tests
+  ### Edit Script
+  In `package.json` change the test script in the `scripts` property to:
+  
+  `"test": "mocha --inspect-brk"`
+  
+  ### Find The Port Number
+  Run `npm test` and find the line:
+  ```bash
+  Debugger listening on ws://127.0.0.1:9229/44f87f86-ed16-4933-a3c5-13630173b798
+  ```
+  Get the number in your terminal, where mine in **9229**.
 
+  ### Add Debug Configurations
+  To add debug configurations click here:
+
+  ![](log_imgs/debug_11-8-19.PNG)
+
+  You might need to be in a workspace, not just a folder for this to work. So make sure you open a folder by clicking **File**->**Add Workspace To Folder**.
+
+  Then replace the content in launch.json with 
+
+  ```json
+  {
+    "version": "0.1.0",
+    "configurations": [
+      {
+        "name": "Debug Mocha Test",
+        "request": "launch",
+        "type": "node",
+        "address": "localhost",
+        "port": 9229,
+        "sourceMaps": false
+      }
+    ]
+  }
+  ```
+
+  ### Debug Steps
+  Now you're all set up. 
+  
+  Every time you want to test the debugger, go through all these steps :
+
+  1. run `npm test`
+  2. Make sure you have the right **launch configuration** selected 
+  ![](log_imgs/configs_11-8-19.PNG)
+  3. Press the green play button.
+
+  ## Where I Left Off
+  I figured out how to debug mocha tests. 
 
