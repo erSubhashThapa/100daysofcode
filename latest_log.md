@@ -1,47 +1,53 @@
-## Day 116, R3
-### 11/12/19
-- ## Today 
-  I've been doing [Khan Academy's Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms) course. But I think I want to MAKE something today to review skills.
 
-  ## Project
-  Let's make a small project that uses backend and frontend to brush up on a collection of skills.
 
-  I looked through Florin Pop's [100 Days Of Project](https://www.florin-pop.com/blog/2019/09/100-days-100-projects/) list for inspiration.
+## Day 117, R3
+### 11/13/19
+- ## Yesterday
+  Yesterday, after my regular coding, I coded more. I started to make a bot around this idea:
 
-  I thought, since I love self quantification, why not make a project that tracks my feelings.
+  <img src="log_imgs/tweet_11-12-19.PNG" width=490 alt="tweet reads: Idea to improve Dev Twitter: A #HelpMeCode hashtag that people can use to get the attention of other coders when they need help. Other coders can search the hashtag when they want to help. Thoughts?End of tweet">
 
-  ## Stack
-  I'm going to use express and Node.js.
+  People liked the idea so I decided to make a bot that retweets tweets with the hashtag **#helpmecode**.
 
-  ## Error
+  I already had a dev twitter account, so I didn't have to apply.
 
-  When serving my application, I tried to go to the server at `https://127.0.0.1:3000/` but I got this error.
+  I watched the first 3 videos in this series and got my bot up: [Twitter Bot Tutorial](https://t.co/pBm47t3ka4?amp=1)
 
-  ```bash
-  This site can’t provide a secure connection127.0.0.1 sent an invalid response.
-  ERR_SSL_PROTOCOL_ERROR
-  ```
+  [@jackgannon](https://twitter.com/jackgannon_) has been helping.
 
-  I also tried fetching in node with `node-fetch`:
+  I'm going to continue my bot today.
 
-  ```javascript
-  fetch('https://127.0.0.1:3000/').then(x=>console.log(x, "pp"))
-  ```
-  But got this error:
-  ```bash
-  FetchError: request to https://127.0.0.1:3000/track_energy failed, reason: write EPROTO 4408569152:error:1408F10B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:332:
-  ```
+  ## OAuth
+  Right now my bot works. However, it can only post to my twitter handle associated with my developer account. Inorder to get it to post to a helpmecode bot account, I need to implement 3-legged authorization. 
 
-  I found this [stackoverflow thread](https://stackoverflow.com/questions/20841242/node-js-https-get-via-proxy-generates-ssl3-get-record-wrong-version-number-error) which led me to a solution:
+  I went down a rabbit hole reading Twitter docs to try to understand this:
 
-  **Solution:** I needed to change `https` to `http` when fetching or **going to*** a url. 
+  - [3-legged authorization](https://developer.twitter.com/en/docs/basics/authentication/overview/3-legged-oauth)
+  - [Log in with Twitter: Overview](https://developer.twitter.com/en/docs/twitter-for-websites/log-in-with-twitter/login-in-with-twitter)
+  - [Log in with Twitter: Browser sign in flow](https://developer.twitter.com/en/docs/twitter-for-websites/log-in-with-twitter/guides/browser-sign-in-flow)
+  - [Implementing Sign in with Twitter](https://developer.twitter.com/en/docs/twitter-for-websites/log-in-with-twitter/guides/implementing-sign-in-with-twitter)
+  - [Authorizing a request](https://developer.twitter.com/en/docs/basics/authentication/guides/authorizing-a-request)
+  - [Access Tokens](https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens)
+  - [Creating A Signature](https://developer.twitter.com/en/docs/basics/authentication/guides/creating-a-signature): This page tried to link to a page explaining the hashing algorithm for the hash_hmac function. But the link doesn't work.
+    - >Finally, the signature is calculated by passing the signature base string and signing key to the HMAC-SHA1 hashing algorithm
+
+      I think I can search "HMAC-SHA1" and figure it out.
+  - [Single-user OAuth with Examples](https://developer.twitter.com/en/docs/basics/authentication/guides/single-user)
+  - [Oauth with the Twitter APIs](https://developer.twitter.com/en/docs/basics/authentication/overview/oauth)
+
+
+  I found a video tutorial: [NodeJS and ExpressJS: Using Twitter authentication via Passport - Tutorial for beginners](https://www.youtube.com/watch?v=_6QrV5pneSY) and started watching it.
+
+  ## express-generator
+  In the tutorial the instructor used express-generator to create a new project
   
-  *What's the correct term for **"going to"**? I'm drawing a blank.
+  To install:
+  >```bash
+  >$ npm install -g express-generator
+  >```
+  -*from [Express application generator](https://expressjs.com/en/starter/generator.html)*
 
-  ## Where I Left Off
-
-  This is how far I got today.
-
-  [Link To Work](https://github.com/DashBarkHuss/mood_tracker/commit/2d9939851f7aa19db213f4751a1b9367e04ce92f)
-
-  I might just start a whole new project tomorrow even though I didn't finish. I'm trying to just get the hang of popping a project out fast. I could even just do the same project from the beginning.
+  Then you can generate an app really fast:
+  ```bash
+  $ express myapp
+  ```
