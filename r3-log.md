@@ -45,6 +45,8 @@
   I finished the code. Check it out:
 
   [Link To Commit](https://github.com/DashBarkHuss/helpmecodebot/commit/bb8eab6b62ced0bdc376bc134a8bd5165c507f74)
+  
+  ***Update:** I had to delete the repo, there were some vulnerabilities I had. Will post again soon.*
 
   I still have to deploy. Right now it's running live on my localhost. But it's up and running, atleast while I have my computer on. So feel free to use the **#helpmecode** hashtag.
 
