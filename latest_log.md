@@ -1,46 +1,70 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
-## Day 120, R3
-### 11/16/19
+## Day 121, R3
+### 11/17/19
 - ## Twitter Bot
-  What I need to do today
-  - How do I get the access token and secret from passport twitter?
+  I tested my Twitter bot because it missed one retweet last night. I thought it was because the hashtags search is case sensitive. But it's not. It also wasn't because the tweet was a reply.
 
-  ## SOLVED
-  I solved my issue. It was in the documentation for [passport-twitter](https://github.com/jaredhanson/passport-twitter) all along. Man, I spent days on this issue.
+  Turns out it was because even if the server is on, if my computer is closed, I guess it's not actually connected.
 
-  >The strategy also requires a verify callback, which receives the **access token** and **corresponding secret** as arguments, as well as profile which contains the authenticated user's Twitter profile. 
+  Probably because when I close my computer I think the wifi disconnects. The server doesn't turn off though. My computer stays on and warm all night even when closed when I have the server running.
+
+
+- ## Flutter
+  Today I'm going to set up [flutter](https://flutter.dev/) following this: [macOS install](https://flutter.dev/docs/get-started/install/macos).
+
+  ## Path Variable
+  These two instructions confused me:
+
+  >2. Extract the file in the desired location, for example:
   >
-  -*from [passport-twitter readMe](https://github.com/jaredhanson/passport-twitter)*
+  >```bash
+  >cd ~/development
+  >```
+  >...
+  >
+  >3. Add the flutter tool to your path:
+  >```bash
+  >export PATH="$PATH:`pwd`/flutter/bin"
+  >```
   
+  -*from [macOS install](https://flutter.dev/docs/get-started/install/macos)*
 
-  In the example in the [docs](https://github.com/jaredhanson/passport-twitter), you can see `token` and `tokenSecret` in the params.
-  ```javascript
-  passport.use(new TwitterStrategy({
-    consumerKey: TWITTER_CONSUMER_KEY,
-    consumerSecret: TWITTER_CONSUMER_SECRET,
-    callbackURL: "http://127.0.0.1:3000/auth/twitter/callback"
-    },
-    function(token, tokenSecret, profile, cb) {
-      User.findOrCreate({ twitterId: profile.id }, function (err, user) {
-        return cb(err, user);
-      });
-    }
-  ));
-  ```
+  I wasn't sure where to put flutter. What's the desired location? And I didn't remember what the path variable did.
 
-  I read this and saw this before. But assumed this was the the **consumer key** and **consumer secret**. I didn't realize it was what I was looking for: the **access token** and **access secret**.
+  ### Path Variable
+  >The PATH variable is basically a list of directories your computer looks through to find a requested executable.
+  >
+  >...if you have an awesome program installed in `/usr/local/bin`, you could run `$ /usr/local/bin/my-program` to access it. But do you really want to have to type out the full path to your executable each time? Would you not rather be able to run `$ ls` or `$ my-program`?
 
-  ## Youtube Tutorial
-  I promised myself if I figured this out I would make a youtube tutorial on it. There's no youtube tutorial on this. So someone keep me accountable to making this!
+  -*from [What Exactly is Your Shell PATH?](https://medium.com/@jalendport/what-exactly-is-your-shell-path-2f076f02deb4)*
 
-  ## What's Left
-  I still have to finish the code and then figure out how to deploy it.
+  ### Desired Location?
+  To help decide where to put flutter I watched this video and did what the instructor did:
+  [Flutter SDK Setup](https://www.linkedin.com/learning/learning-google-flutter-for-mobile-developers/flutter-sdk-setup?autoplay=true). He just puts it in ~ (the home directory).
 
-  ## Finished Code
-  I finished the code. Check it out:
 
-  [Link To Commit](https://github.com/DashBarkHuss/helpmecodebot/commit/bb8eab6b62ced0bdc376bc134a8bd5165c507f74)
+  ## Catalina Issue
+  Got this issue when running `flutter doctor` in the terminal after setting the path:
 
-  I still have to deploy. Right now it's running live on my localhost. But it's up and running, atleast while I have my computer on. So feel free to use the **#helpmecode** hashtag.
+  ![](log_imgs/err_11-17-19.PNG)
+
+  This fixed my issue:
+
+  >When you're developing on Catalina, you can fix it by
+  >```bash
+  >sudo xattr -d com.apple.quarantine /PATH_TO_YOUR_FLUTTER_HOME/bin/cache/artifacts/libimobiledevice/idevice_id
+  >
+  >sudo xattr -d com.apple.quarantine /PATH_TO_YOUR_FLUTTER_HOME/bin/cache/artifacts/libimobiledevice/ideviceinfo
+  >
+  >sudo xattr -d com.apple.quarantine /PATH_TO_YOUR_FLUTTER_HOME/bin/cache/artifacts/usbmuxd/iproxy
+  >```
+  -*from [idevice_id cannot run on catalina](https://github.com/flutter/flutter/issues/42302)*
+
+  ## Where I Left Off
+  I left off downloading xcode, a requirement for flutter.
+
+  I'm on this video in the LinkedInlearning tutorial to setup flutter: [iOS setup](https://www.linkedin.com/learning/learning-google-flutter-for-mobile-developers/ios-setup?autoplay=true)
+
+  I'm also following along with the setup guide: [macOS install](https://flutter.dev/docs/get-started/install/macos)
