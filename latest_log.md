@@ -1,26 +1,44 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
-## Day 123, R3
-### 11/19/19
-
-## Where I Left Off
-I'm need to read how to enable [VM acceleration](https://developer.android.com/studio/run/emulator-acceleration). This is the first step in setting up the [Android emulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-android-emulator)
-
-## Flutter
-  
-I cloned my apprenticeship flutter app from bitbucket.
-
-When I tried to run in on my iOS device I got this:
-
->Error connecting to the service protocol: HttpException: , uri =
-http://127.0.0.1:1026/ajNyr0hqArE=/ws
-
-I tried a lot of different suggestions I saw online. In the end it seemed **unplugging and plugging in** my phone worked.
-
+## Day 124, R3
+### 11/20/19
 
 ## Where I Left Off
 ### Flutter
 I set up my Android Studio and simulator. I let off in the codelab [Step 1: Create the starter Flutter app](https://flutter.dev/docs/get-started/codelab#step-1-create-the-starter-flutter-app)
+
 ### Twitter Bot
 I started watching [15.8: Heroku Deployment - Twitter Bot Tutorial](https://www.youtube.com/watch?v=DwWPunpypNA) and following along. I need to download the heroku CLI.
+
+## Flutter 
+## What's A Widget?
+
+>The app extends StatelessWidget which makes the app itself a widget. In Flutter, almost everything is a widget, including alignment, padding, and layout.
+
+-*from [Step 1: Create the starter Flutter app](https://flutter.dev/docs/get-started/codelab#step-1-create-the-starter-flutter-app))*
+
+>A widget’s main job is to provide a build() method that describes how to display the widget in terms of other, lower level widgets.
+
+-*from [Step 1: Create the starter Flutter app](https://flutter.dev/docs/get-started/codelab#step-1-create-the-starter-flutter-app))*
+
+## Stateless Widget
+
+>Stateless widgets are immutable, meaning that their properties can’t change—all values are final.
+
+-*from [Step 3: Add a Stateful widget](https://flutter.dev/docs/get-started/codelab#step-3-add-a-stateful-widget)*
+
+## Stateful Widgets
+>Stateful widgets maintain state that might change during the lifetime of the widget. 
+
+-*from [Step 3: Add a Stateful widget](https://flutter.dev/docs/get-started/codelab#step-3-add-a-stateful-widget)*
+
+## Flutter Isn't in Javascript
+This whole time I thought flutter was Javascript and I was wondering why there was all this syntax I wasn't use to. Flutter isn't in javascript. It's in some random language called dart. That the hell. Why another langauge? There are too many langauges. And duh it's in dart. THe file nextensions are all .dart.
+
+## Where I Left Off
+
+I made the flutter app in the tutorial [Write your first Flutter app, part 1](https://flutter.dev/docs/get-started/codelab)
+
+![](log_imgs/flutter_11-20-19.png)
+ 
