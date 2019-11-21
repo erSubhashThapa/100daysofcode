@@ -12,13 +12,15 @@
 
   ## Bot Complete!
   I finished setting up my heroku. Now my bot retweets and I don't need to run a server from my local host.
+  
+  ![](log_imgs/bot_11-21-19.PNG)
 
   I made it so only my [@helpmecodebot](https://twitter.com/HelpmecodeBot) can log in to the app. 
+  
 
   ## Deploy vs Dev
   I realized you have to do a lot of things in the code differently depending on whether your deploying or in development.
 
-  ![](log_imgs/bot_11-21-19.PNG)
 
   I have to change my callback URL host for example, from *localhost:3000* to *helpmecodebot.herokuapp.com*.
 
