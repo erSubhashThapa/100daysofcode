@@ -1,45 +1,94 @@
 
-## Day 125, R3
-### 11/21/19
+## Day 126, R3
+### 11/22/19
 
 - ## Where I Left Off
-  I made the flutter app in the tutorial [Write your first Flutter app, part 1](https://flutter.dev/docs/get-started/codelab)
+  I finished my bot and deployed it but now heroku keeps putting the bot to sleep. I don't know why.
 
-  But today I want to get to my twitter bot going first. I'm going to finish watching this video [15.8: Heroku Deployment - Twitter Bot Tutorial](https://www.youtube.com/watch?v=DwWPunpypNA). I need to download the heroku CLI.
+  Is twitter ending the session?
 
-  ## Bot Complete!
-  I finished setting up my heroku. Now my bot retweets and I don't need to run a server from my local host.
+  When does the session end?
 
-  I made it so only my @helpmecodebot() can log in to the app. 
+  >When an app on Heroku has only one web dyno and that dyno doesn't receive any traffic in 1 hour, the dyno goes to sleep.
 
-  ## Deploy vs Dev
-  I realized you have to do a lot of things in the code differently depending on whether your deploying or in development.
+  -*from [App Sleeping on Heroku](https://blog.heroku.com/app_sleeping_on_heroku)*
 
-  ![](log_imgs/bot_11-21-19.PNG)
+  I have to test this. Will my app go to sleep in an hour?
 
-  I have to change my callback URL host for example, from *localhost:3000* to *helpmecodebot.herokuapp.com*.
+  ## Icon Confusion
+  I'm confused because heroku says that if your app has this filled in icon, it will never co to sleep. But mine has that icon and it goes to sleep.
 
-  So not my code will not work if I try to do it in development unless I manually change it. I think there's a way to make the code act conditionally, based on whether your in development or deployment.
+  And it's fille in when it's asleep but with 'zzz's. So it doesn't look like the sleep icons below.
 
-  I also realized I can't .gitignore the same files on heroku as I can on github. So how to I make my code conditionally ignore files based on whether I'm pushing to heroku or github?
+  ![](log_imgs/heroku_11-22-19.PNG)
 
-  ## Bot Retweets Quote Retweets
-  Oops my my bot is retweeting quote retweets where the original tweet has the hashtag but not the "child" tweet.
+  ### Old Icons
+  Oops those are just old icons and that page was just an old heroku blog post. Heroku has changed a bit since the post.
 
-  ![](log_imgs/bot2_11-21-19.PNG)
-
-  ## Fixed Quote Retweets
-  I fixed that by adding some conditional statements:
-
-  ```javascript
-  if(tweet.quoted_status!=undefined && !tweet.text.toLowerCase().includes(hashtag)){
-      console.log("will not retweet qoute tweets where the child tweet doesn't contain the hashtag.");
-      return;
-  }
+  ## Check Your Dyno Hours
+  I checked my hours with this command
+  ```bash
+  heroku ps -a <app name>
   ```
 
-  ## Github
-  I need to figure out how to .gitignore different things depending on where I'm pushing to. But For now I might just make a new project with a different repo and push to github
+  In addition to seeing the hours used it showed be how long my dyno was awake:
 
+  ```bash
+  === web (Free): npm start (1)
+  web.1: up 2019/11/22 12:51:54 -0600 (~ 30m ago)
+  ```
 
+  30 minutes
 
+  A few minutes later I checked and got:
+
+    ```bash
+  === web (Free): npm start (1)
+  web.1: idle 2019/11/22 13:26:56 -0600 (~ 4m ago)
+  ```
+
+  So it went idle after 30 minutes which is what the docs says it will do:
+
+  >### Dyno sleeping
+  >If an app has a free web dyno, and that dyno receives no web traffic in a 30-minute period, it will sleep.
+
+  -*from [Dyno sleeping](https://devcenter.heroku.com/articles/free-dyno-hours#dyno-sleeping)*
+
+  When I went back to the heroku app page- `yourappname.herokuapp.com`- it then woke the app up. I could see it was back up when I ran `heroku ps -a <app name>` in the console.
+  ```bash
+  === web (Free): npm start (1)
+  web.1: up 2019/11/22 13:38:25 -0600 (~ 24s ago)
+  ```
+
+  ## Heroku Logs
+  See realtime heroku logs.
+  ```bash
+  heroku logs --tail
+  ```
+
+  ## Worker Dynos Stay Awake?
+  If I switch my heroku dyno from a web dyno to a worker dyno, will it stay awake?
+
+  >Worker dynos do not sleep, because they do not respond to web requests.
+
+  -*from [Dyno sleeping](https://devcenter.heroku.com/articles/free-dyno-hours#dyno-sleeping)*
+
+  However, my app responds to web requests in order for me to log in my bot account. Hmmm...
+
+  ## Ping Awake
+  I found a wonky solution. Ping your app every 5 minutes:
+  [6 Easy Ways to Prevent Your Heroku Node App From Sleeping](https://quickleft.com/blog/6-easy-ways-to-prevent-your-heroku-node-app-from-sleeping/)
+
+  ```javascript
+  var http = require("http");
+  setInterval(function() {
+    http.get("http://<your app name>.herokuapp.com");
+  }, 300000); /
+  ```
+
+  But I wonder if I could start it as a web syno, then log in, then switch to the worker dyno?
+
+  I'm going to check in 35 minutes to see if it stays on.
+
+  ## Future Problem: Hours
+  Either why I'll eventually run into a problem because I'm going to run out of hours. Then what? Pay for it? pshh! 
