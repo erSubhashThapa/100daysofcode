@@ -1,24 +1,30 @@
 
-## Day 128, R3
-### 11/24/19
+## Day 129, R3
+### 11/25/19
 
-## Interview Prep
-In preparation for interviews I want to do more coding challenges. I signed up on [HackerRank](https://www.hackerrank.com/). Before I was doing code wars.
+- ##  HackerRank 
+  I did the [Counting Valleys](https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) on [HackerRank](https://www.hackerrank.com/).
 
-I did the [Sock Merchant](https://www.hackerrank.com/challenges/sock-merchant/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) challenge.
-
-```javascript
-function sockMerchant(n, ar) {
-    let socks = ar;
-    let socksByColor = [];
-    while (socks.length!=0){
-        socksByColor.push(socks.filter(x=>x==socks[0]).length);
-        socks = socks.filter(x=>x!=socks[0]);
-    }    
-    return socksByColor.reduce((t, c, i, arr)=> { 
-           return Math.floor(c/2)+t;
-    }, 0)
-
-}
-```
-It took me about an hour. I wonder if that's too long? I used reduce and [reduce](https://www.w3schools.com/jsref/jsref_reduce.asp) always confuses me when I haven't used it in a while.
+  ```javascript
+    function countingValleys(n, s) {
+        s = s.split("");
+        let valleys = 0;
+        let level = 0;
+        for (var i =0; i<s.length; i++){
+            if (s[i] == "D" && level == 0){
+                valleys++;
+            } 
+            if(s[i]=='D'){
+                level--;
+            } else if(s[i]=='U'){
+                level++;
+            }
+        }
+        
+        return valleys;
+    }
+  ```
+  It took me a while because I started doing it wrong. I misunderstood the challenge. Next time read slower! 
+  
+  I was really distracted because I was coding on the plane but the lady next to me was really talkative. Finally, after the plane I got the answer pretty fast once I reread the challenge.
+    
