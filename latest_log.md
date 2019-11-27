@@ -1,4 +1,27 @@
 
+## Day 130, R3
+### 11/26/19
+
+- ##  HackerRank 
+  I did the [Counting Valleys](https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) on [HackerRank](https://www.hackerrank.com/)
+
+  ```javascript
+    function jumpingOnClouds(c) {
+    let jumps=0;
+        for(var i=0; i<c.length-1; i++){
+
+            if(c[i]==0 && c[i+2]==0){ 
+                i++;
+            } 
+            jumps++;   
+
+        }
+        return jumps;
+    }
+  ```
+
+  I'm in Florida for Thanksgiving so keeping this short!
+
 ## Day 129, R3
 ### 11/25/19
 
