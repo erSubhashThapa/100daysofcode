@@ -1,70 +1,71 @@
 
-## Day 131, R3
+## Day 132, R3
 ### 11/27/19
 
 - ##  HackerRank 
-  I did the [Repeated String Challenge](https://www.hackerrank.com/challenges/repeated-string/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) on [HackerRank](https://www.hackerrank.com/)
+  I did the [2D Array Challenge](https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/)
 
-  At first I thought I had it figured out and I had this:
+  This is where I left off. It works when I test it myself but now on HackerRank. Maybe I'm using the wrong data type for the input. I'll look at it tomorrow.
   ```javascript
-  function repeatedString(s,n){
-    let numOfAs=0;
-    const sLength = s.length;
-    s = s.repeat(n/sLength)+s.substr(0,n%sLength);
-    numOfAs = s.match(/a/g).length;
-    return numOfAs;
-  }
-  ```
-
-  But `s.repeat(n/sLength)` created an invalid string when n was over a certain amount. I guess you can't have a string that long.
-
-  I ended with this.
-
-  ```javascript
-  function repeatedString(s,n){
-    let AsInSArray = s.match(/a/g);
-    if(!AsInSArray)return 0;
-
-    const remainderLength = n%s.length
-
-    const repeatedWholeAs = Math.floor(AsInSArray.length/s.length * (n-remainderLength));
-    let AsInRemainder = s.substring(0, n%s.length).match(/a/g);
-    let remainderOfAs = 0;
-    if (!AsInRemainder){remainderOfAs = 0}
-    if (AsInRemainder) {remainderOfAs = AsInRemainder.length;}
+  function hourglassSum(arr) {
     
-    const numOfAsInRepeatedS = repeatedWholeAs+remainderOfAs;
-    return numOfAsInRepeatedS;
-  }
-  ```
-  I think it's a bit difficult to understand though.I'm not sure if I gave the variables understandable names.
-
-## Day 129, R3
-### 11/25/19
-
-- ##  HackerRank 
-  I did the [Counting Valleys](https://www.hackerrank.com/challenges/counting-valleys/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=warmup) on [HackerRank](https://www.hackerrank.com/).
-
-  ```javascript
-    function countingValleys(n, s) {
-        s = s.split("");
-        let valleys = 0;
-        let level = 0;
-        for (var i =0; i<s.length; i++){
-            if (s[i] == "D" && level == 0){
-                valleys++;
-            } 
-            if(s[i]=='D'){
-                level--;
-            } else if(s[i]=='U'){
-                level++;
-            }
+  // array of sums for one row
+    function sumRow(ypos){
+        const arrayOfSumsRow=[]
+        for(xpos=0;xpos<4;xpos++){
+            arrayOfSumsRow.push(sumIndividualHourglass(xpos,ypos));
         }
-        
-        return valleys;
+        return arrayOfSumsRow;
     }
-  ```
-  It took me a while because I started doing it wrong. I misunderstood the challenge. Next time read slower! 
-  
-  I was really distracted because I was coding on the plane but the lady next to me was really talkative. Finally, after the plane I got the answer pretty fast once I reread the challenge.
+
+  //sum of individual        
+    //xpos= 0-3, ypos 0,3
+    function sumIndividualHourglass(xpos, ypos){
+
+        const top = arr[ypos].slice(xpos,xpos+3).reduce((t,c,ind)=>{
+            return t+c;
+        },0);
+        
+        const middle = arr[ypos+1][xpos+1];
+
+        const bottom = arr[ypos+2].slice(xpos,xpos+3).reduce((t,c,ind)=>{
+            return t+c;
+        },0);
+
+        hourglassSumIndividual = top + middle + bottom;
+        return hourglassSumIndividual;
+    }
+
+    function allHourglassSums(){
+        const arrayOfSums=[];
+        for (ypos=0; ypos<4;ypos++){
+            arrayOfSums.push(...sumRow(ypos));
+        }
+        return arrayOfSums;
+    }
+
     
+  const max =  allHourglassSums().sort((a, b)=> {
+    return a > b ? -1 : b > a ? 0 : -1;
+    })[0];
+
+  return max;
+  }
+  ```
+  Outside of seeing why it doesn't work on HackerRank, I think this can be improved further for speed. 
+  
+  You exit the calculations if the current hourglass couldn't possible be larger than the largest.
+
+  For example if we calculate the sum of this:
+  ```
+  434
+   4
+  444
+  ```
+  We get 27.
+
+  If we start calculating a new hour glass and it starts with 1:
+  ```
+  1
+  ```
+  We can stop looping through this hourglass because we know it can't be larger than 27 even if all the other numbers were 4.
