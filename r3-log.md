@@ -1,12 +1,37 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 135, R3
+### 12/1/19
+
+- ## HackerRank
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  I started going a different route with this problem. I was going to find the indices at which the items in the array were out of order and then move those around. I was inspired by this [code](https://stackoverflow.com/questions/16286358/check-if-javascript-array-values-are-in-ascending-order):
+
+  ```javascript
+  var outs= [], L= A.length, i= 0, prev;
+  while(i<L){
+    prev= A[i]; 
+    while(A[++i]<prev) outs.push(i);
+  }
+  alert(outs)
+  ```
+
+  I was doing a lot of playing around with my code trying to understand the problem. But I realized, if I'm going to be playing around trying to figure things out, I think I should try doing that on paper. Now I see the importance of white boarding. This helped me think things through.
+
+
+  <img src ="log_imgs/scribble_12-1-19.jpg" width="300">
+
+  I wrote some code but it's not worth posting. I'm stopping here today, as I'm on vacation and trying to limit my coding time so I can be present with family.
+
 ## Day 134, R3
 ### 11/30/19
 
 - ## HackerRank
+  I started the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
 
-I made a function that reverses the order of two numbers in an array because I knew I'd use this.
+  I made a function that reverses the order of two numbers in an array because I knew I'd use this.
   ```javascript
   function reverse(arr, first){
       const second = first + 1;
