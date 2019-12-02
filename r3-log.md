@@ -1,10 +1,38 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 136, R3
+### 12/2/19
+- ## HackerRank
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  I didn't finish but I got a lot closer and basically started from the beginning.
+
+  What really helped me was thinking about the problem on paper. I'm going to try this again from now on. I still got a sample test case wrong, so I have to fix this. But this is where I left off.
+
+  ```javascript
+  function minimumBribes(q) {
+      let moves={}; 
+      let err;
+      for (let currenti = 0; currenti<q.length; currenti++){
+          const originali = q[currenti]-1;
+          const placesMoved = originali-currenti; 
+          if (originali-currenti > 2) { err = "Too chaotic"};
+          moves[q[currenti]] = placesMoved;
+      }
+      if(err){console.log(err); return}
+      let totalMoves=0;
+      for (let i=0; i<q.length; i++){
+          if (moves[i+1] > 0){totalMoves += moves[i+1]};
+      };
+      console.log(totalMoves);
+  }
+  ```
 ## Day 135, R3
 ### 12/1/19
 
 - ## HackerRank
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
   I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
 
   I started going a different route with this problem. I was going to find the indices at which the items in the array were out of order and then move those around. I was inspired by this [code](https://stackoverflow.com/questions/16286358/check-if-javascript-array-values-are-in-ascending-order):
