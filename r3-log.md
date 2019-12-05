@@ -1,10 +1,166 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
-## Day 137, R3
-### 12/3/19
+## Day 138, R3
+### 12/5/19
+
+- ## Intentions
+  As I come closer to the end of my 365 day streak of coding, I'm realizing the importance that *intention* will play in my future. 
+  
+  Right now, I'm motivated by extraneous sources: my streak, my commitment to my twitter followers. But when I'm done with my streaks, I still want to work hard. However, instead of committing to a set of activities every day, I want to be spend time more intuitively. One day I may spend the entire day coding, the next networking at meetups, and then next learning about business. Or I may spend an entire week working on a project.
+
+  I'm ever grateful for the discipline daily streaks have given me. But once you've built discipline, streaks can hold you back. Because where productivity truly shines, is when you do  the most important thing at the best time with the most intention. Not when your streak tells you to do it.
+  
+  By intention, I mean knowing why you're doing something as opposed to going through the motions. You can be disciplined but lack intention. 
+  
+  Intention is the lubricant for action. Without it, your mind is somewhere else. When your mind is disconnected from your current action, this creates friction.
+
+  Since I won't have streaks next year, I'll need to be  cognizant of intention. How do I foster intention? How do I sow it? Proper intention will keep me focused, energized, and creative.
+
+  So I'll practice today by setting my intention:
+  - Why am I coding today?
+    - Today I'm going to get better at problem solving so I can pass the coding interviews so I can get a job. I want to get a job coding so I can learn even more, make connections, help others, and build reputation. This will help me grow my skills and network, so I'll be prepared when I start my own business. I want my own business because I can then get admiration for creating something that I find interesting which also brings immense value to other people. I will change society for the better and create a world that's more fun for me.
+
+
 - ## HackerRank
-  I'm at the air port headed home from Thanksgiving vacation in Florida. So I'll be spending more time coding again.
+
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  This is what I left off with and I think it's pretty hard to read. Plus it doesn't past the HackerRank test.
+
+  ```javascript
+  function minimumBribes(q) {
+        const orderedArray= (array)=>{
+            let newArr=[];
+            let i=1;
+            while(i<=[3,2,1].length){
+                newArr.push(i);
+                i++;
+            }
+            return newArr;
+        }
+        let startq = orderedArray(q);
+        let moves={}; 
+        let err;
+
+        // get places moved
+        for (let currenti = 0; currenti<q.length; currenti++){
+            const originali = q[currenti]-1;
+            const placesMoved = originali-currenti; 
+            if (originali-currenti > 2) { err = "Too chaotic"};
+            moves[q[currenti]] = placesMoved;
+        }
+
+        //return if too chaotic
+        if(err){console.log(err); return}
+
+        //find total moves
+        let bribes = []; 
+        startq.forEach( person=>{
+            if (moves[person]>0){
+                for(var placesAway=1; placesAway<=moves[person]; placesAway++){ // [1,2]
+                    const person2 = startq[person-1-placesAway]; //
+                    const bribe = `${person}, ${person2}`;
+                    if(bribes.includes(bribe)) return;
+                    bribes.push(bribe);
+                }
+            } else if (moves[person]<0){
+                for(var placesAway=-1; placesAway>=moves[person]; placesAway--){ //[-1,-2]
+                    const person2 = startq[person-1-placesAway];
+                    const bribe = `${person2}, ${person}`;
+                    if(bribes.includes(bribe)) return;
+                    bribes.push(bribe);
+                }
+            }
+        }
+        )
+        console.log(bribes.length);
+    }
+    ```
+
+  I walked through the problem again in my head. I realized if I can describe how to solve the problem clearly, I can put that in code. 
+
+  Here's me trying to solve the problem:
+
+  How to solve the problem.
+  1. create an object containing all the people's starting number and how many spots they move back or forth.
+    - ex: 
+      - 
+       ```javascript
+       [3,2,1] // que after bribes
+
+       moves = { 
+         1: -2, //person 1 moved back 2 spaces
+         2: 0, 
+         3: 2 
+      }
+      ```
+  2. If anyone moved more than 3 spaces, it's too chaotic.
+  3. Look at the people who moved more than 0 starting with the people who  moved the most. 
+       ```javascript
+       moves = { 
+         1: -2, 
+         2: 0, 
+         3: 2 //3 moved 2 with is more than 0
+      }
+      ```
+
+     1. For each of them(briber), look at the people who they would have bribed (bribees). 
+         - ex. 
+           
+           3 moved 2. So 3 bribed 1 and 2 in a normal situation. 
+           
+           If 3 moved 1, 3 would have only bribed 2 in a normal situation.
+     2. For each of those people ahead of the briber in question *(person 3)*, look if the moved back by -1. If yes to all, then only 3 bribed them and they bribed no one else. If they moved any amount other then -1, then there were other bribes that happened.
+        - ex 
+        ```javascript
+        moves = { 
+            1: -2, // not -1
+            2: 0, // not negative 1
+            3: 2 
+        }
+        ```
+    Ok, I'm trying to figure the rest out now. 
+    
+    ## Walking Through Problems
+
+    I walked through problems to try to get an idea of what I need to do.
+
+    ```javascript
+    placesMoved([3,4,5,2,1])
+    >> {1: -4, 2: -2, 3: 2, 4: 2, 5: 2}
+
+    // if 1 moves back by 4, that means all four people bribed 1. 
+
+    // If only 4 people bribed 1 then all the numbers would move up by 1. But they moved up by 2, and 2 moved back by 1. That means 3 people bribed 2, (1 - (-2) = 3 bribes)
+    ```
+    ```javascript
+    placesMoved([1,4,5,6,3,2])
+    >> {1: 0, 2: -4, 3: -2, 4: 2, 5: 2, 6: 2}
+
+     // 1 didn't move
+     //2 moved back 4. So 3,4,5,6 should be +1.
+     //instead of +1, 3 is -2. So (+1 -(-2)) = 3 people bribed 2. Those people all moved 2, which is expected. So no one else bribed anyone.
+    ```
+    ```javascript
+    placesMoved([3,4,5,6,1,2,7])
+    >> {1: -4, 2: -4, 3: 2, 4: 2, 5: 2, 6: 2, 7: 0}
+    
+    // 1 moved back by -4 so 2,3,4,5 should be +1 as they all bribed 1 (4 bribes)
+    // 2 is -4 so 3,4,5,6 should have moved forward once more (+2,+2,+2,+1) (8 bribes)
+    // 3 moved 2 as expected, as did 3,4,5
+    //6 moved 2 so it moved 1 more (9 bribes)
+    //7 is 0 as expected
+    ```
+  ## Where I Left Off
+  I worked on this for a while. I kept changing routes. Trying it a new way. How do I stick to one way?
+
+  ## Happy Birthday Shlomo!!!
+
+## Day 137, R3
+### 12/4/19
+- ## HackerRank
+  I'm at the airport headed home from Thanksgiving vacation in Florida. So I'll be spending more time coding again.
   
   I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
 
