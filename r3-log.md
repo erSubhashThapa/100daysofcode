@@ -1,6 +1,104 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 137, R3
+### 12/3/19
+- ## HackerRank
+  I'm at the air port headed home from Thanksgiving vacation in Florida. So I'll be spending more time coding again.
+  
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  Yesterday, I found that by not doing anything with the people who moved backwards in the que, I got an incomplete picture or the bribes.
+
+  Now, let's try to fix the code.
+
+  ```javascript
+  function minimumBribes(q) {
+    let startq = orderedArray(q);
+    let moves={}; 
+    let err;
+
+    // get places moved
+    for (let currenti = 0; currenti<q.length; currenti++){
+        const originali = q[currenti]-1;
+        const placesMoved = originali-currenti; 
+        if (originali-currenti > 2) { err = "Too chaotic"};
+        moves[q[currenti]] = placesMoved;
+    }
+
+    //return if too chaotic
+    if(err){console.log(err); return}
+
+    //find total moves
+    bribes = []; 
+    startq.forEach( person=>{
+        if (moves[person]>0){
+            for(placesAway=1; placesAway<=moves[person]; placesAway++){ // [1,2]
+                person2 = startq[person-1-placesAway]; //
+                bribe = `${person}, ${person2}`;
+                if(bribes.includes(bribe)) return;
+                bribes.push(bribe);
+            }
+        } else if (moves[person]<0){
+            for(placesAway=-1; placesAway>=moves[person]; placesAway--){ //[-1,-2]
+                person2 = startq[person-1-placesAway];
+                bribe = `${person2}, ${person}`;
+                if(bribes.includes(bribe)) return;
+                bribes.push(bribe);
+            }
+        }
+    }
+    )
+    console.log(bribes.length);
+  }
+  ```
+
+  I thought there would be a move math-y way to do this by ust looking at the numbers. Instead I did it in a more human way, by actually figuring out who bribed who and then counting the total bribes.
+
+## Day 137, R3
+### 12/3/19
+- ## HackerRank
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  My code failed on this test case
+
+  ```
+  1 2 5 3 7 8 6 4
+
+  Your Output
+  6
+
+  Expected Output
+  7
+  ```
+
+  I walked through my code on paper and realized that my code is lacking. It only considers how far each number moved forward. Which will fail in certain cases.
+
+  I wasn't taking into account places moved back, I only used places moved forward in my calculation. Thinking that if I only calculated places moved forward I would get the same result. But by doing this, I was leaving out situations where people bribed one person, but were out bribed and moved backwards.
+
+  For example, here 3 moves 2 places forward from it's original index.
+  ```
+  Que:    3   2   1
+  Moves: +2   0  -2
+  ```
+  If you only assume person 3 had to moved 2 places to get to index 1, and you disregarded that 1 moved backwards, then you really are getting the places moved for this line Que:
+  
+  ```
+  Que:    3   1   2
+  Moves: +2   0  -2
+  ```
+
+  312 instead of 321. In 321, 2 had to also bribe one. But ended up in the same spot because 3 out-bribed 2.
+
+  ```
+  123 //start
+  213 // 2 bribes 1
+  321 // 3 bribes 2 and 1
+  ```
+
+  My code would calculate 2 moves and miss that 2 bribed one, 3 total moves.
+
+
 ## Day 136, R3
 ### 12/2/19
 - ## HackerRank
