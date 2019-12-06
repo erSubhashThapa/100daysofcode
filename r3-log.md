@@ -1,6 +1,129 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 139, R3
+### 12/6/19
+
+- ## HackerRank
+
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  I just realized an obvious way to do this problem. Loop through each person and see who is in front of them with a higher number. While this seems the simplest, I'm going to continue with what I'm doing now. Because stopping to start a new method is exactly what slowed me down before.
+
+  ## Time Limits
+
+  My code works fro most of the test cases except for 4 that results in exceeding the time limits. 
+  The inputs are hidden so I have to figure out what situations might be exceeding time limits.
+
+  ```javascript
+  const array1ToN= (n)=>{
+      const array = new Array(n);
+      return [...array.keys()].map(x=>x+1)
+  };
+
+  // get places moved
+
+  const getPlacesMoved=(q)=>{
+      let err;
+      let moves={}; 
+      for (let currenti = 0; currenti<q.length; currenti++){
+          const originali = q[currenti]-1;
+          const placesMoved = originali-currenti; 
+          if (originali-currenti > 2) { err = {err:"Too chaotic"}};
+          moves[q[currenti]] = placesMoved;
+      };
+      return err || moves;
+  };
+
+
+  const moves = getPlacesMoved(q);
+
+  const startingQue = array1ToN(q.length);
+
+
+  // bribers.forEach(b=>{moves[b]==expected})
+
+
+  //return if too chaotic
+  if(moves.err){console.log(moves.err); return}
+
+  //find total moves
+  let bribes = []; 
+  startingQue.forEach( person=>{
+      if (moves[person]>0){
+          // const amountOfPeoplePersonBribed = moves[person];
+          // const bribees = [...new Array(amountOfPeoplePersonBribed).keys()].map(x=>x-1+person);
+          const bribees = q.slice(q.indexOf(person)).filter(x=>x<person)
+
+          bribees.forEach((bribee)=>{
+              const bribe = `${person}, ${bribee}`;
+              if(bribes.includes(bribe)) return;
+              bribes.push(bribe);
+          })
+      } else if (moves[person]<0){
+          // const amountOfPeopleWhoBribedPerson = -moves[person];
+
+          const bribers = q.slice(0,q.indexOf(person)).filter(x=>x>person)
+          // const bribers = [...new Array(amountOfPeopleWhoBribedPerson).keys()].map(x=>x+1+person);
+
+          bribers.forEach((briber)=>{
+              const bribe = `${briber}, ${person}`;
+              if(bribes.includes(bribe)) return;
+              bribes.push(bribe);
+          })
+      }
+  }
+  )
+  console.log(bribes.length);
+  ```
+
+  I unlocked the test case, and found that it was taking to long when the input was a que of 100000 people.
+
+  I tried the test case in my browser, and it took a really long time to calculate all 119k bribes.
+
+  So while it seems to work, I need to come up with a faster way.
+
+  ## New Code
+  I wrote a new script that is so much shorter and works just as well.
+
+  ```javascript
+  function minimumBribes(q) {
+      let bribes = 0;
+      q.forEach(x=>{
+          if ((x-1)-q.indexOf(x)>2){
+              bribes = "Too chaotic"; 
+              return;
+          };
+          if (bribes=="Too chaotic") return;
+          const peopleBefore = q.slice(0, q.indexOf(x));
+          bribes+=peopleBefore.filter(pb=>pb>x).length;
+      })
+
+      console.log(bribes)
+  }
+  ```
+
+  It's still taking too long for the long test cases. Are there too many loops?
+
+  ## The Math-y Way
+  A few days ago, I thought that I could do this problem a more math-y way, by purely looking at the numbers. Instead I went with a more human way. But I think the mathy way could shorten the time it takes to do these very long test cases. So I started to look back at the math-y way.
+
+  ## Principles Vs. Intuition
+  Humans are interesting because we can figure things out with intuition. Meaning we can solve problems without knowing exactly how we solved them. 
+  
+  I can look at the inputs and tell you what the output will be. 
+
+  `[3,2,1,4,5]`
+
+  This will be 6 bribes. 
+  
+  While I'm not going entirely off intuition, I didn't need to articulate every step I took to figure it out. But a computer needs every step articulated.
+
+  Intuition is a human benefit. But it's also a weak point. If we can't articulate how we know something, we can run into problems. Computers need principles. Not intuition. But Humans could benefit from having better principles as well. In fact, billionaire Ray Dalio claims principles lead to his financial and emotional success in life.
+
+  I wonder, could coding help us learn to better articulate our principles?
+
+
 ## Day 138, R3
 ### 12/5/19
 
