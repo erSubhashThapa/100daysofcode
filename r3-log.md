@@ -1,6 +1,50 @@
 
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+
+
+## Day 140, R3
+### 12/7/19
+
+- ## HackerRank
+  I continued the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  Before, I solved the problem but my solution took too long for 4 of the tests. So I'm trying to redo the solution with only 1 loop.
+
+  I still haveb't finished, but this is what I ended with:
+
+  ```javascript
+  function minimumBribes(q){ 
+    let bribes=0;
+    let numOfDisplacedPeople = 0; //number of displaced people at given position
+    let expectedDisplacement = 0;
+    for (let i=0; i<q.length; i++){
+        const personMovedBy = q[i]-(i+1);
+
+        if (personMovedBy > 2) {console.log("Too chaotic");return;}
+
+
+        const personBribedNumPeople = personMovedBy>0? personMovedBy: 0;
+
+
+        if (personMovedBy>0){
+            bribes += personBribedNumPeople;
+            numOfDisplacedPeople = personBribedNumPeople; 
+            expectedDisplacement -=1;
+        } 
+        else if (personMovedBy<=0){
+            const personBribedSomeone = (personMovedBy>expectedDisplacement); //make expected displacement
+            if (personBribedSomeone) bribes += 1;
+            numOfDisplacedPeople -=1;
+            if (numOfDisplacedPeople ==0)expectedDisplacement =0;
+        }
+    }
+
+  console.log(bribes); 
+  }
+  ```
+  It doesn't work for all the test cases.
+
 ## Day 139, R3
 ### 12/6/19
 
@@ -12,7 +56,7 @@
 
   ## Time Limits
 
-  My code works fro most of the test cases except for 4 that results in exceeding the time limits. 
+  My code works for most of the test cases except for 4 that results in exceeding the time limits. 
   The inputs are hidden so I have to figure out what situations might be exceeding time limits.
 
   ```javascript
