@@ -3,6 +3,73 @@
 
 
 
+## Day 141, R3
+### 12/8/19
+
+- ## HackerRank
+  I finally finished the  [New Year Chaos Challenge](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/).
+
+  ```javascript
+  function minimumBribes(q){
+      let displacedPeople = [];
+      let bribes=0;
+      for (let i=0; i<q.length; i++){
+          const person = q[i];
+          const personMovedBy = (person-1)-i;
+          if (personMovedBy >2) {console.log("Too chaotic"); return;}
+          let personBribedNumPeople = personMovedBy>0? personMovedBy: 0; //not accurate if 0, which is why it's reassigned later
+          const thisPersonWasDisplaced = displacedPeople.includes(person);
+          let personBribed;
+
+          if(thisPersonWasDisplaced){
+              const indexOfPerson = displacedPeople.indexOf(person);
+              displacedPeople = [...displacedPeople.slice(0,indexOfPerson),...displacedPeople.slice(indexOfPerson+1,displacedPeople.length)]
+              if (displacedPeople[0]<person) personBribedNumPeople = 1;
+          }
+
+          if (personBribedNumPeople){
+              const personDisplacedAdditionalNumPeople = personBribedNumPeople-displacedPeople.length;
+              if (personDisplacedAdditionalNumPeople >= 1) displacedPeople.push((person-1));
+              if (personDisplacedAdditionalNumPeople == 2) displacedPeople.push((person-2));
+          }
+          // this is just for debugging
+              // personBribed = [...displacedPeople]
+              // console.log(person, " bribed ", personBribed);
+      
+          bribes+= personBribedNumPeople;
+
+      }
+      console.log(bribes);
+      return bribes;
+  }
+  ```
+
+  ## Paper And Pencil
+  I spent a lot of time doing this on paper. I found that once I was able to articulate how I was solving the problem in my brain step by step, I could put it into code. 
+
+  I did this by trying a bunch of problems on paper until I started seeing the steps I was taking. Then I would try to do the problems on paper following the steps I articulated. Once, that worked, I put it into code.
+
+  ## Loops
+  I learned that you want to avoid too many loops, especially loops nested in other loops. Loops within loops drastically increase the time it takes to run the code.
+
+
+  If have a nested loop:
+  ```javascript
+  array.forEach(item=> 
+    array.forEach(item2 => 
+      console.log(item2 + item));
+  );
+  ```
+  Let's say you have an array of 1000 items.
+  Here you will loop through the array 1000 x 1000 times.
+
+  With 10000 items in an array, you'll loop through 10000 x 10000 items. 
+
+  The script gets exponentially slower. I think this is what Big O notation is about.
+
+  ## Readable
+  I chose to make my variables very descriptive. This makes my code longer. Some other shorter answers were sleeker, but hard to understand. I wonder what most people prefer to look at?
+
 ## Day 140, R3
 ### 12/7/19
 
@@ -11,7 +78,7 @@
 
   Before, I solved the problem but my solution took too long for 4 of the tests. So I'm trying to redo the solution with only 1 loop.
 
-  I still haveb't finished, but this is what I ended with:
+  I still haven't finished, but this is what I ended with:
 
   ```javascript
   function minimumBribes(q){ 
