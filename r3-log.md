@@ -3,6 +3,43 @@
 
 
 
+## Day 142, R3
+### 12/9/19
+
+- ## Twitter Bot
+  Today I went back to working with the [HelpmecodeBot](https://twitter.com/HelpmecodeBot) twitter bot.
+
+  It keeps disconnecting from the stream that watches the #*helpmecode* hashtag. I wonder if it's because the session ends at a certain point.
+
+  To solve the problem I added a bunch more logs to the code.
+
+  ```javascript
+  //this function pings the server to keep it on. It also logs information.
+
+  const log = setInterval(function() {
+    const date = Date();
+    const timeArr = Date().substr(16,8).split(':');
+    const hour12 = timeArr[0] > 12? timeArr[0] - 12 : timeArr[0];
+
+    //ping
+    http.get("http://helpmecodebot.herokuapp.com");
+
+    
+    //logs
+    console.log(`pinged / at ${hour12}:${timeArr[1]}:${timeArr[2]}`)
+
+    console.log("stream on: ", streamOn)
+    
+    if (streamOn == false && streamOffTime){
+      console.log("stream off at:", streamOffTime, " because ", disconnectMessageGlobal);
+      clearInterval(log)
+    };
+    
+  }, 300000); // every 5 minutes (300000)
+  ```
+
+  Next time it shuts off I'll see the disconnectMessageGlobal, which I saved from `stream.on('disconnect'...)`.
+
 ## Day 141, R3
 ### 12/8/19
 
