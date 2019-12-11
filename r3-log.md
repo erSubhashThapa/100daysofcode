@@ -1,7 +1,68 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
-## Day 143, R3
+## Day 144, R3
+### 12/11/19
+- ## Twitter Bot
+  I forgot to authenticate my Twitter Bot with my app last night, so I started it today. That means I'll have to wait longer for the stream to disconnect and to get the logs.
 
-### 12/9/19
+- ## HackerRank
+  I continued the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge. 
+  
+  I started on paper. I didn't write code until I could describe my process on paper.
+
+  Then I made the code.
+
+  ```javascript
+  function minimumSwaps(arr) {
+
+      const switchTheseIndices = [];
+      for (var i=0; i<arr.length; i++){
+          const thisNumber = arr[i];
+          const numberThatShouldBeHere = i+1;
+
+          if (thisNumber != numberThatShouldBeHere){
+              const indexOfNumberThatShouldBeHere = arr.indexOf(i+1);
+              const indicesToSwitch = [indexOfNumberThatShouldBeHere, i];
+              switchTheseIndices.push(indicesToSwitch);
+              arr = switchNumbers();
+
+              function switchNumbers(){
+                  return [
+                      ...arr.slice(0,i), 
+                      numberThatShouldBeHere, 
+                      ...arr.slice(i+1, indexOfNumberThatShouldBeHere), 
+                      thisNumber, 
+                      ...arr.slice(indexOfNumberThatShouldBeHere+1)];
+              }
+          }
+      }
+      return [switchTheseIndices.length];
+  }
+  ```
+
+  I didn't use nested loops. I recently learned hpw they cause long run times. But I still failed several tests for exceeding the time limits.
+
+  I test the long ordered array `[1,2,3...100,000]`. It timed out on my browser. 
+
+  I rand one of the tests HackerRanks gives that timed out and used [console.time](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) to track the time. It took 43628 ms.
+
+  After some investigation, I found this code drastically slows the script down:
+
+  ```javascript
+  arr = switchNumbers();
+  function switchNumbers(){
+      return [
+          ...arr.slice(0,i), 
+          numberThatShouldBeHere, 
+          ...arr.slice(i+1, indexOfNumberThatShouldBeHere), 
+          thisNumber, 
+          ...arr.slice(indexOfNumberThatShouldBeHere+1)];
+  }
+  ```
+
+  I might not need this code. at least not all of it.
+
+## Day 143, R3
+### 12/10/19
 - ## HackerRank
   Last night I did another hacker rank problem. This one I finished really fast.
   
