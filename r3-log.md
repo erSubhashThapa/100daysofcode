@@ -1,7 +1,87 @@
-
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 143, R3
 
+### 12/9/19
+- ## HackerRank
+  Last night I did another hacker rank problem. This one I finished really fast.
+  
+  [Arrays: Left Rotation](https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) on [HackerRank](https://www.hackerrank.com/). 
 
+  ```javascript
+  function rotLeft(a, d) {
+    const netRotation= d%a.length;
+
+    const start = a.slice(netRotation);
+    const end = a.slice(0,netRotation);
+
+    return [...start, ...end];
+
+  }
+  ```
+
+  I started [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays).
+
+  ## Twitter Bot
+  I added a bunch of logs to my twitter bot to see why the stream shuts off. It hasn't shut off so I don't know anything yet. 
+  
+  Yesterday, [Jacob](https://twitter.com/JacobMGEvans) suggested:
+
+  >Could be the stream has an option for staying "awake" in the API otherwise it's gets shut off automatically.
+
+  In congruence with his suggestion, I saw this property in the connection message:
+
+  ```javascript
+  keepAlive: false
+  ```
+
+  He may be on to something!
+
+  How to I set this to alive when making the stream?
+
+  ## Why Streams Might Disconnect
+  From [Twitter Docs](https://developer.twitter.com/en/docs/tweets/filter-realtime/guides/connecting#disconnections)
+  >### Disconnections
+  >Twitter will close a streaming connection for the following reasons:
+  >
+  >A client establishes too many connections with the same credentials. When this occurs, the oldest connection will be terminated. This means you have to be careful not to run two reconnecting clients in parallel with the same credentials, or else they will take turns disconnecting each other.
+  >
+  >A client stops reading data suddenly. If the rate of Tweets being read off of the stream drops suddenly, the connection will be closed.
+  >
+  >A client reads data too slowly. Every streaming connection is backed by a queue of messages to be sent to the client. If this queue grows too large over time, the connection will be closed.
+  >
+  >A streaming server is restarted. This is usually related to a code deploy and is not very frequent.
+  >
+  >Twitter’s network configuration changes. These events are rare, and would represent load balancer restarts or network reconfigurations, for example.
+
+  None of these look applicable to me.
+
+  I can't find any way to set `keepAlive` to true.
+
+  I'm going to wait until the bot shuts down and see what my log says.
+
+  ## Twitter Bot Logs Result
+  The bot finally shut off tonight, but it didn't log the shut off time or stop logging. I had the app set to conditionally do that if the stream was off and the streamOffTime existed.
+
+  ```javascript
+  if (streamOn == false && streamOffTime){
+    console.log("stream off at:", streamOffTime, " because ", disconnectMessageGlobal);
+    clearInterval(log)
+  };
+  ```
+
+  So what's going on?
+
+  `streamOn` and streamOffTime are set when the stream disconnects.
+
+  ```javascript
+  stream.on('disconnect', function (disconnectMessage) {
+    streamOn = false;
+    streamOffTime == Date();
+    ...
+  ```
+  I figured it out. `streamOffTime == Date();` should be `streamOffTime = Date();`.
+
+  I'll have to try it again.
 
 ## Day 142, R3
 ### 12/9/19
@@ -29,7 +109,7 @@
     console.log(`pinged / at ${hour12}:${timeArr[1]}:${timeArr[2]}`)
 
     console.log("stream on: ", streamOn)
-    
+
     if (streamOn == false && streamOffTime){
       console.log("stream off at:", streamOffTime, " because ", disconnectMessageGlobal);
       clearInterval(log)
