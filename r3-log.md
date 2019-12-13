@@ -1,4 +1,57 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 145, R3
+### 12/12/19
+
+- ## HackerRank
+  I continued the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge.
+
+  Yesterday, I was trying to shorten the run time.
+
+  I used console.time and saw that I reduced the time to 2504 ms from 43628 ms by changing my old code to this:
+
+  ```javascript
+  function minimumSwaps2(arr) {
+      let switchedPairs =0;
+
+      const accountedFor = [];
+      for (var i=0; i<arr.length; i++){
+          const thisNumber = arr[i];
+          let numberThatShouldBeHere = i + 1;
+          const shouldBeThisNumbersIndex = thisNumber -1;
+
+          if(thisNumber != numberThatShouldBeHere && !accountedFor.includes(thisNumber)){
+              switchedPairs +=1;
+              accountedFor.push(numberThatShouldBeHere);
+
+              const indexOfNumberThatShouldBeHere = arr.indexOf(numberThatShouldBeHere);
+              const isPerfectSwitch = indexOfNumberThatShouldBeHere == shouldBeThisNumbersIndex;
+              if(!isPerfectSwitch){
+
+                  let moveThisNumberToThisIndex = indexOfNumberThatShouldBeHere;
+                  while(moveThisNumberToThisIndex != shouldBeThisNumbersIndex){
+                      let numberThatShouldBeHere = moveThisNumberToThisIndex+1;
+                      moveThisNumberToThisIndex = arr.indexOf(numberThatShouldBeHere);
+                      switchedPairs += 1;
+                      accountedFor.push(numberThatShouldBeHere);
+
+                  }
+
+              }
+
+          }
+      }
+      return switchedPairs;
+  }
+  ```
+
+  Now it passes more of the tests within the time limit, but there are 3 tests that run too long still.
+
+  The time it took my code to run one of the tests: 10033 ms.
+
+  Thats still better than before!
+
+  I wonder what about the old code made it take too long.
+
 ## Day 144, R3
 ### 12/11/19
 - ## Twitter Bot
@@ -43,7 +96,7 @@
 
   I test the long ordered array `[1,2,3...100,000]`. It timed out on my browser. 
 
-  I rand one of the tests HackerRanks gives that timed out and used [console.time](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) to track the time. It took 43628 ms.
+  I ran one of the tests HackerRanks gives that timed out and used [console.time](https://developer.mozilla.org/en-US/docs/Web/API/Console/time) to track the time. It took 43628 ms.
 
   After some investigation, I found this code drastically slows the script down:
 
