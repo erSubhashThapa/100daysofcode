@@ -1,4 +1,54 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 147, R3
+### 12/14/19
+- ## Twitter Bot
+  My twitter bot shut down and I got new information in my logs. 
+
+  When it was working:
+  ```bash
+  stream on:  true
+  stript on at:  Fri Dec 13 2019 15:39:56 GMT+0000 (Coordinated Universal Time)
+  stream on at:  Fri Dec 13 2019 15:40:02 GMT+0000 (Coordinated Universal Time)
+  stream off at:  undefined
+  stream off message:  undefined
+  ```
+
+  Now:
+  ```bash
+  pinged / at 8:00:51
+  stream on:  undefined
+  stript on at:  Sat Dec 14 2019 16:05:49 GMT+0000 (Coordinated Universal Time)
+  stream on at:  undefined
+  stream off at:  undefined
+  stream off message:  undefined
+  ```
+
+  We can see the script restarted the next day.
+
+  Of course, if the script restarts, the twitter bot account will lose connection with he app and the stream will disconnect. Unless I manually log in again.
+
+  Since the app is restarting it seems like it's a heroku issue.
+  
+  ## Dyno Cycling
+  "[Does heroku restart NodeJS server if application crashes](https://stackoverflow.com/questions/19265728/does-heroku-restart-nodejs-server-if-application-crashes)" linked me to this page on heroku [Automatic Dyno Restarts](https://devcenter.heroku.com/articles/dynos#automatic-dyno-restarts):
+
+  >Dynos are also restarted (cycled) at least once per day to help maintain the health of applications running on Heroku. Any changes to the local filesystem will be deleted.
+
+  Great. That's not going to work for me!
+
+  ## Can't Stop Dyno Cycling
+
+
+  >There is no way to prevent dyno cycling. Heroku does this automatically at least once per day.
+  >
+  >Heroku's entire design is based on The 12-Factor App, which states that your app's processes are disposable. Heroku accomplishes this (in part) with its ephemeral file system, which is why you must persist files using an external service.
+
+  -*from [Stop Heroku Dyno from cycling](https://stackoverflow.com/questions/51570833/stop-heroku-dyno-from-cycling)*
+
+  Can I somehow persist my bot's authentication with the app? I think I'd have to pay to persist the data somewhere. Could I somehow code in the authentication instead of manually logging in with twitter? I'll need to look into this.
+
+
+
 ## Day 146, R3
 ### 12/13/19
 
