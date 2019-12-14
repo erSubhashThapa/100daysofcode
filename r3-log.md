@@ -1,4 +1,34 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 146, R3
+### 12/13/19
+
+- ## Twitter Bot
+  My log was supposed to tell me when the stream disconnected. But the variable `streamOn` logged as `undefined` instead of false. The `disconnected` stream event callback sets it to false and the `connect` event sets it to true. Since it was last set to true and now it's undefined, it looks to me like the whole script restarted.
+
+  I added more to the logs to see when the script starts and when the stream connects to see if I can get more info.
+
+  ```bash
+  2019-12-13T15:59:57.022373+00:00 app[web.1]: pinged / at 3:59:57
+  2019-12-13T15:59:57.022513+00:00 app[web.1]: stream on:  true
+  2019-12-13T15:59:57.022610+00:00 app[web.1]: stript on at:  Fri Dec 13 2019 15:39:56 GMT+0000 (Coordinated Universal Time)
+  2019-12-13T15:59:57.022676+00:00 app[web.1]: stream on at:  Fri Dec 13 2019 15:40:02 GMT+0000 (Coordinated Universal Time)
+  2019-12-13T15:59:57.022767+00:00 app[web.1]: stream off at:  undefined
+  2019-12-13T15:59:57.022883+00:00 app[web.1]: stream off message:  undefined
+  ```
+
+
+- ## HackerRank
+  I continued the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge.
+
+  Yesterday my new code shortrened the run time but still took too long for 3 tests.
+
+  I wonder if `indexOf()` is looping through the array and causing long run times. How Can I shorten it?
+
+  ## Time Complexity
+  I came across the term time complexity. For example, "What is the complexity (or time complexity) of `indexOf()`" which I think is asking what is the Big O notation for `indexOf()`.
+
+  I started a new version of my hacker rank code based on someone's suggested solution.
+
 ## Day 145, R3
 ### 12/12/19
 
