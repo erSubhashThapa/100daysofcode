@@ -1,4 +1,57 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 148, R3
+### 12/15/19
+- ## Twitter Bot
+  Yesterday: I'm writing this from yesterday because I already posted my log but I decided to code some more. Hello people in the future!
+
+  When passport twitter in my app authenticates with the twitter account, you can get the token from and tokenSecret from here. I thought that the token and secret would be a different every time, but I logged them twice and they look the same. Soooo I'll just hard code code them in!
+
+  If I hard code them in, I don't even need to have the login page, but I'm going to leave it there for now because it helped me get the token and tokenSecret in the first place and I make want to check to see if it changes in the future, though I'm thinking it probably doesn't.
+
+  I made a new function to log in without using the login page. I just hard coded my twitter bot accounts info into it:
+  ```javascript
+  function login(){
+    token = `mytokenblablabla`;
+    tokenSecret = `mysecretblablabla`;
+    const configs = createConfigs(token, tokenSecret);
+    streamHashtag('#helpmecode', configs);
+
+  }
+  ```
+
+  ## Hacker Rank
+
+  I finished the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge. But I looked at someones suggestion in the comments.
+
+  I forgot you could just change an item in array by setting and array item to a new value. I could see how this cut down the run time by a lot.
+
+  ```javascript
+  function minimumSwaps3(arr) {
+      // inspired by oleksii_filonov
+      let switches=0;
+      const pairs = [];
+      let first = 0;
+      let last = arr.length-1;
+
+      while (first < last){
+          while(first+1==arr[first] && first < last){
+              first++;
+          }
+          if(first<last){
+              const temp = arr[arr[first]-1];
+              arr[arr[first]-1] = arr[first];
+              const switchwith = arr[first];
+              arr[first] = temp;
+              switches++;
+              pairs.push([temp, switchwith] );
+          }
+      }
+      return switches;
+  }
+  ```
+
+
+
 ## Day 147, R3
 ### 12/14/19
 - ## Twitter Bot
