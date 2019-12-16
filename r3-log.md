@@ -1,4 +1,41 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 149, R3
+### 12/16/19
+
+- ## Hacker Rank
+
+  Yesterday, I finished the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge. But I looked at someones suggestion in the comments to get the answer. 
+
+  I saw that they didn't use `indexOf` like I did. It seems like `indexOf` loops through the array. Looping takes a while. But since I already know the index, `indexOf` is unnecessary.
+
+  I wanted to see the times it took to get the index of an item in a long array of numbers. 
+
+  ```javascript
+  //using the index
+  console.time('index')
+  ArrayLong2[99999];
+  console.timeEnd('index')
+
+  //using indexOf
+  console.time('indexof')
+  ArrayLong2[ArrayLong.indexOf(3498)];
+  console.timeEnd('indexof')
+
+  >>
+  index: 0.00390625ms
+  indexof: 0.010009765625ms
+  ```
+
+  In this case, `indexOf` takes 2.56 times as long as just using the index.
+
+  ## HackerRank
+  I started working on [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
+
+
+
+
+
+
 ## Day 148, R3
 ### 12/15/19
 - ## Twitter Bot
@@ -21,7 +58,7 @@
 
   ## Hacker Rank
 
-  I finished the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge. But I looked at someones suggestion in the comments.
+  Back to today, I finished the [Minimum Swaps 2](https://www.hackerrank.com/challenges/minimum-swaps-2/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) challenge. But I looked at someones suggestion in the comments.
 
   I forgot you could just change an item in array by setting and array item to a new value. I could see how this cut down the run time by a lot.
 
