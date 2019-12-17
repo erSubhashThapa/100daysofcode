@@ -1,4 +1,28 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+
+## Day 150, R3
+### 12/17/19
+  ## HackerRank
+  I continued working on [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
+
+  I submitted this code, which I thought would work but runt too long for some of the test cases. I was right. It ran too long for 7 test cases.
+
+  ```javascript
+  function arrayManipulation(n, queries) {
+      let arr = [...new Array(n).keys()].map(x=>0)
+      queries.forEach(operation => {
+          
+          let changedSegment = arr.slice(operation[0]-1, operation[1]-1+1).map(x=>x+operation[2]);
+          arr = [...arr.slice(0, operation[0]-1), ...changedSegment, ...arr.slice(operation[1]-1+1, arr.length)]
+      });
+      return arr.reduce((t,c)=>t<c?c:t);
+
+  }
+  ```
+
+  I got the test case that's really long to test with. 
+
+
 ## Day 149, R3
 ### 12/16/19
 
