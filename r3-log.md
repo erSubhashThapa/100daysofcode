@@ -1,11 +1,92 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 150, R3
+### 12/17/19
+
+- ## HackerRank
+  I continued working on [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
+
+  Running my code with the test that had a 10 million 0's long array and  10 thousand operations took forever. I had to stop it eventually.
+
+  I looked at different parts of my code and how long they took
+
+  ```bash
+  create arr: 909.466064453125ms
+  ...
+  resetarr: 213.35595703125ms
+  changedseg: 71.781005859375ms
+  resetarr: 184.843994140625ms
+  changedseg: 76.755126953125ms
+  resetarr: 260.593017578125ms
+  changedseg: 109.310791015625ms
+  resetarr: 193.419921875ms
+  changedseg: 5.223876953125ms
+  resetarr: 182.225830078125ms
+  changedseg: 93.2490234375ms
+  resetarr: 216.682861328125ms
+  changedseg: 46.7109375ms
+  resetarr: 233.1279296875ms
+  changedseg: 69.623046875ms
+  resetarr: 230.30908203125ms
+  changedseg: 47.43896484375ms
+  ```
+
+  And this loops on and on. Resetting the array takes so long.
+
+  I tried this new code but it still ran too long for 7 test cases:
+
+  ```javascript
+  function arrayManipulation(n, queries) {
+
+    let obj = {};
+    queries.forEach(operation => {
+
+        for (let i = operation[0]-1; i<operation[1]-1+1; i++){
+            if (obj[i]) obj[i]+=operation[2];
+            if (!obj[i]) obj[i]=operation[2];
+        }
+
+    });
+    let max = 0;
+    for (let i=0; i<Object.keys(obj).length; i++){
+        if(obj[i]>max) max = obj[i];
+    }
+    return max;
+
+  }
+  ```
+
+  I shortened (It think) it more, but it still ran out of time for the 7 test cases:
+
+  ```javascript
+  function arrayManipulation(n, queries) {
+
+      let obj = {};
+      let max = 0;
+      queries.forEach(operation => {
+
+          for (let i = operation[0]-1; i<operation[1]-1+1; i++){
+              if (obj[i]) obj[i]+=operation[2];
+              if (!obj[i]) obj[i]=operation[2];
+              if(obj[i]>max) max = obj[i];
+          }
+
+      });
+
+      return max;
+
+  }
+  ```
+
+  While thinking in terms of shortest run time, I ask the question, "What don't I have to keep track of?"
+
+  I started working on a new script.
 
 ## Day 150, R3
 ### 12/17/19
   ## HackerRank
   I continued working on [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
 
-  I submitted this code, which I thought would work but runt too long for some of the test cases. I was right. It ran too long for 7 test cases.
+  I submitted this code, which I thought would work but run too long for some of the test cases. I was right. It ran too long for 7 test cases.
 
   ```javascript
   function arrayManipulation(n, queries) {
