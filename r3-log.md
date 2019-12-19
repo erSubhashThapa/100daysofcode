@@ -1,4 +1,15 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 152, R3
+### 12/19/19
+
+- ## HackerRank
+  I continued working on [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays) because it was still running too long.
+
+  I approached it a different way today, but my code is a huge mess so I don't have much to post.
+
+  I want to get back to doing projects soon.
+
+
 ## Day 151, R3
 ### 12/18/19
 
