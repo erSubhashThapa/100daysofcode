@@ -1,4 +1,37 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 153, R3
+### 12/20/19
+
+- ## React Native
+  HackerRank is taking too much of my time. I started doing it to prepare for job interviews. 
+  
+  But since I'm not even sure I want to get a real dev job anymore, I'm re-prioritizing. 
+  
+  I want to just work on my projects. So I started playing with react native. I left off on the page about "State"
+
+  Tutorial: [React Native 0.61](https://facebook.github.io/react-native/docs/getting-started)
+
+  ## Why I Might Not Get A Dev Job
+
+  I've been moving away from getting a dev job. Why? Many people are telling me there's better moves for me. 
+  
+  Since my end goal is to have my own business, I don't need to become an extremely proficient developer. I just need to be able to make a minimum viable product.
+
+  In a dev job, would I learn valuable skills about product creation? Yes. But could I learn those skills a different way while also learning other skills like marketing and business? Probably. 
+
+  To put things into context, my expenses are low. And I have savings. 
+  
+  I'm living, rent free, in my parents basement. My parents even cover a lot of my groceries since we share a refrigerator. 
+  
+  If I get a dev job, I could move out and support my spouse.
+
+  But is that really the best move? It's certainly the most socially acceptable move. But successful people don't make decisions based on what's socially acceptable. They take advantage of what they have.
+
+  While many developers are telling me to get a dev job, many entrepreneurs are saying not to. 
+
+  So if not a dev job, what should I do? Go after my projects? Get a different job that can build more important skills? Get an apprenticeship? Not sure. We'll see.
+
+
 ## Day 152, R3
 ### 12/19/19
 
