@@ -1,4 +1,57 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+## Day 154, R3
+### 12/21/19
+
+- ## React Native
+  Is spent some time trying to figure this out:
+  
+  ***Can I make a button that changes the state of a component?***
+
+  The answer? No I cannot. Well, at least not yet. Because I still don't know what I'm doing.
+
+  Normally, I'd take a 4 hour tutorial on a new framework before trying to do anything. But I decided to just try to do stuff and learn as I go.
+
+  I spent a lot of time finding out that I don't know what I'm doing. Everything I tried didn't work. 
+  
+  But finally I did something! I vertically centered a component. ([Layout docs](https://facebook.github.io/react-native/docs/flexbox))
+
+  <img width=200 src="log_imgs/rn_12-21-19.PNG"/>
+
+  But I could not get the component to run the `log` function on press.
+
+  ```javascript
+  import React, { Component } from 'react';
+  import { Text, View } from 'react-native';
+
+
+  class TextComponent extends Component {
+
+    log = () => {
+      console.log("component was pressed");
+    }
+
+    render() {
+      console.log("TextComponent");
+      return (
+        <Text>{this.props.text}</Text>
+      );
+    }
+  }
+
+  export default class MyApp extends Component {
+    render() {
+      return (
+        <View style={{flex: 1, flexDirection: 'column',
+        justifyContent: 'center'}}>
+        <TextComponent text='text' onPress={this.log} />
+
+      </View>
+      );
+    }
+  }
+  ```
+
+
 ## Day 153, R3
 ### 12/20/19
 
