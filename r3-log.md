@@ -1,4 +1,89 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
+
+## Day 155, R3
+### 12/22/19
+
+- ## React Native
+
+  Yesterday I couldn't get my log function to work. [@AlexBuaiscia](https://twitter.com/AlexBuaiscia) suggested:
+  > Maybe you have to build a constructor on TextComponent calling the super props and binding the log func 
+  Not sure also if this.log refer correctly to the log func as it's in another component
+
+  I didn't take there exact suggestion, but I went off of what they said and realized that `this.log` wasn't going to work where I put it.
+
+  I looked at this example:
+
+
+  [How to change state when Button pressed?](https://stackoverflow.com/questions/40521388/how-to-change-state-when-button-pressed)
+
+  ```javascript
+  export default class Hella extends Component {
+    constructor(props) {
+      ...
+    }
+
+    onButtonPress = () => {
+      this.setState({
+        text: this.state.mimin
+      });
+    }
+
+    render() {
+      return (
+        ...
+        <Button
+          onPress={this.onButtonPress}
+          ...
+        />
+        ...
+      );
+    }
+  }
+  ```
+
+  I moved my code around to match the above example:
+  ```javascript
+  import React, { Component } from 'react';
+  import { Text, View } from 'react-native';
+
+
+  class TextComponent extends Component {
+
+    log = () => {
+      console.log("component was pressed");
+    }
+
+    render() {
+      console.log("TextComponent");
+      return (
+        <Text onPress={this.log}>{this.props.text}  </Text>
+      );
+    }
+  }
+
+  Now `this` is correctly referencing the `TextComponent`.
+
+
+  export default class MyApp extends Component {
+    render() {
+      return (
+        <View style={{flex: 1, flexDirection: 'column',
+        justifyContent: 'center'}}>
+        <TextComponent  text='text' />
+
+      </View>
+      );
+    }
+  }
+  ```
+  This worked!
+
+  So now, just from getting this to work, I better understand what I'm looking at.
+
+  ## Button To Change State
+  I'm trying to figure out how to get a component, when pressed, to change the state of another component. This is where I left off.
+
+
 ## Day 154, R3
 ### 12/21/19
 
