@@ -1,5 +1,26 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 156, R3
+### 12/23/19
+
+- ## React Native
+  I'm having trouble with the React Native debugger; the is the one you use on chrome. To get to it you press `cmd`+`D` while on the ios simulator. Then click `Debug`. Then in the chrome window that pops up, you open dev tools (`opt`+`cmd`+`I`).
+
+  My problem: I have it running now, but it's using some old code, not the current code. And the simulator shows the old code too. When I turn the debugger off the simulator goes back to the current code.
+
+  The problem seems random though. Like now it's not happening. So idk.
+
+  ## Question:
+  ### **Can I Change The State of One Component By Pressing Another Component?**
+
+  <img width=200 src="log_imgs/rn_12-23-19.PNG">
+
+  This seems like a simple idea. But for some reason it's really hard to figure this out. In my googling, it seems that this isn't a normal thing to do in React Native or React. I wonder why not? 
+  
+  If you can't change state with a button, then when can you change state?
+
+  Maybe I'm not understanding the purpose of state.
+
 ## Day 155, R3
 ### 12/22/19
 
