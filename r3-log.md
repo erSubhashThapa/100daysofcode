@@ -21,6 +21,55 @@
 
   Maybe I'm not understanding the purpose of state.
 
+  ```javascript
+  import React, { Component } from 'react';
+  import { Text, View } from 'react-native';
+
+
+  class TextComponent extends Component {
+
+
+    changeState = () =>{
+      this.setState(previousState => (
+        { isShowingText: !previousState.isShowingText }
+      ))  }
+
+    state = { isShowingText: true };
+
+    render() {
+      if (!this.state.isShowingText) {
+        return null;
+      }
+      return (
+        <Text>{this.props.text}  </Text>
+      );
+    }
+  }
+
+  class StateChange extends Component {
+
+    render() {
+      return (
+        <Text>{this.props.text}  </Text> // how can I get 'onPress' to point to the changeState function in TextComponent?
+      );
+    }
+  }
+
+  export default class MyApp extends Component {
+    render() {
+      return (
+        <View style={{flex: 1, flexDirection: 'column',
+        justifyContent: 'center'}}>
+          
+        <TextComponent text='text' />
+        <StateChange text='StateChange Component' />
+
+      </View>
+      );
+    }
+  }
+  ```
+
 ## Day 155, R3
 ### 12/22/19
 
