@@ -1,10 +1,25 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 157, R3
+### 12/24/19
+
+- ## React Native
+- In response to my questions: "*Can I Change The State of One Component By Pressing Another Component?*" [@biwills](https://twitter.com/biwills) wrote:
+
+  >You should be able to by having the state live in the parent of the two components and pass it in via props!
+
+  Ok so does this mean I have to make a parent class for both of these components? I'm a little rusty with classes.
+
+  I decided to follow this tutorial to get my hands dirty with a working React Native Project.
+
+  [React Native Tutorial 11: Creating a Calculator - Part 1](https://www.youtube.com/watch?v=TkYTPSVvMaM)
+
+
 ## Day 156, R3
 ### 12/23/19
 
 - ## React Native
-  I'm having trouble with the React Native debugger; the is the one you use on chrome. To get to it you press `cmd`+`D` while on the ios simulator. Then click `Debug`. Then in the chrome window that pops up, you open dev tools (`opt`+`cmd`+`I`).
+  I'm having trouble with the React Native debugger; the one you use on chrome. To get to it you press `cmd`+`D` while on the ios simulator. Then click `Debug`. Then in the chrome window that pops up, you open dev tools (`opt`+`cmd`+`I`).
 
   My problem: I have it running now, but it's using some old code, not the current code. And the simulator shows the old code too. When I turn the debugger off the simulator goes back to the current code.
 
