@@ -1,11 +1,79 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 159, R3
+### 12/26/19
+
+- ## React Native
+  I'm confused: Why aren't the red components filling the entire height like the blue and orange ones?
+
+  The styles are the same. So is it something about the Touchable Opacity itself? How to I get the red components to stretch?
+
+  <img src="log_imgs/rn_12-26-19.PNG" width=200>
+
+  Code:
+  ```javascript
+  import React, { Component } from 'react';
+  import { StyleSheet,View, Button, Text } from 'react-native';
+  import { TouchableOpacity } from 'react-native-gesture-handler';
+
+  const instructions = Platform.select({
+    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+    android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
+  });
+
+  export default class App extends Component {
+    constructor(){
+      super()
+      this.state={}
+    }
+    render() {
+      return (
+        <View style={styles.container}>
+              <View style={styles.row}>
+
+                <TouchableOpacity style={styles.btn}>
+                  <Text>0</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.btn}>
+                  <Text>0</Text>
+                </TouchableOpacity>
+                
+              </View>
+          </View>
+      );
+    }
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      borderColor: 'blue',
+      borderWidth: 3,
+      marginTop:120,
+
+      flex: 1
+    },
+    
+    btn: {
+      borderColor: 'red',
+      borderWidth: 3,
+
+      flex:1,
+    },
+    row:{
+      borderColor: 'orange',
+      borderWidth: 3,
+
+      flex:1,
+    }
+  });
+  ```
 ## Day 158, R3
 ### 12/25/19
 
 - ## React Native
   I left off on [React Native Tutorial 11: Creating a Calculator - Part 3](https://www.youtube.com/watch?v=487ec0OCppw). 
-  
+
 ## Day 157, R3
 ### 12/24/19
 
