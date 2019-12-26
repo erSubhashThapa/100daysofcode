@@ -1,5 +1,11 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 158, R3
+### 12/25/19
+
+- ## React Native
+  I left off on [React Native Tutorial 11: Creating a Calculator - Part 3](https://www.youtube.com/watch?v=487ec0OCppw). 
+  
 ## Day 157, R3
 ### 12/24/19
 
@@ -10,7 +16,7 @@
 
   Ok so does this mean I have to make a parent class for both of these components? I'm a little rusty with classes.
 
-  I decided to follow this tutorial to get my hands dirty with a working React Native Project.
+  I decided to follow this tutorial to get my hands dirty with a working React Native project:
 
   [React Native Tutorial 11: Creating a Calculator - Part 1](https://www.youtube.com/watch?v=TkYTPSVvMaM)
 
