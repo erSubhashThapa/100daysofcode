@@ -1,5 +1,105 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 160, R3
+### 12/27/19
+
+- ## React Native
+  Why does this `View` node have full height?
+
+  <img width=200 src="log_imgs/view_12-27-19.PNG">
+
+  But this `TouchableOpacity` node has no height?
+
+  <img width=200 src="log_imgs/touchO_12-27-19.PNG">
+
+  They have the ***same style***, but one is a `View` node and one is a `TouchableOpacity` node. 
+
+  How can I get the `TouchableOpacity` node to have full height?
+
+  ## Solution: No Flex
+  Changing `flex:1` to `height:100%` fixed it. From the docs, it looks like `TouchOpacity` doesn't work with flex. 
+  
+  But using `height:100%` is gave weird results when `TouchOpacity` had a sibling.
+
+  Here, `TouchOpacity`(red) is `height:100%`. There are two TouchOpacity nodes that are siblings. This behaves as expected. 
+  
+  <img width=200 src="log_imgs/sib_12-27-19.PNG">
+
+  So I changed the percentage to `50%` to get the desired layout. But it didn't work as expected:
+
+  <img width=200 src="log_imgs/50_12-27-19.PNG">
+
+  ## Solution: View Wrapper
+
+  Wrapping the `TouchOpacity` in a `View` node worked.
+
+  Now I can make buttons that take up the space I want:
+
+  <img width=200 src="log_imgs/btn_12-27-19.PNG">
+
+  ```javascript
+  import React, { Component } from 'react';
+  import { StyleSheet,View, Button, Text } from 'react-native';
+  import { TouchableOpacity } from 'react-native-gesture-handler';
+
+  export default class App extends Component {
+    constructor(){
+      super()
+      this.state={}
+    }
+    render() {
+      return (
+
+          <View style={styles.container}>
+
+              <View style={styles.btnWrapper}>
+                  <TouchableOpacity style={styles.btn}>
+                      <Text>0</Text>
+                  </TouchableOpacity>
+              </View>
+
+              <View style={styles.btnWrapper}>
+                  <TouchableOpacity style={styles.btn}>
+                      <Text>0</Text>
+                  </TouchableOpacity>
+              </View>
+
+              <View style={styles.btnWrapper}>
+                  <TouchableOpacity style={styles.btn}>
+                      <Text>0</Text>
+                  </TouchableOpacity>
+              </View>
+         
+            </View>
+
+        );
+    }
+  }
+
+  const styles = StyleSheet.create({
+    container: {
+      borderColor: 'blue',
+      borderWidth: 3,
+      margin:30,
+      marginTop:120,
+      flexDirection: 'row',
+      
+      flex: 1,
+    },
+    btnWrapper: {
+      borderColor: 'lightgreen',
+      borderWidth: 3,
+      flex: 1
+    },
+    btn: {
+      borderColor: 'hotpink',
+      borderWidth: 3,
+      height:'100%'
+    }
+
+  });
+  ```
+
 ## Day 159, R3
 ### 12/26/19
 
@@ -38,7 +138,7 @@
                 <TouchableOpacity style={styles.btn}>
                   <Text>0</Text>
                 </TouchableOpacity>
-                
+
               </View>
           </View>
       );
