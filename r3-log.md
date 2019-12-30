@@ -1,6 +1,15 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
-## Day 161, R3
+## Day 163, R3
+### 12/29/19
+
+Fun news, I'd been counting one day behind for months so I'm on day 163 instead of 162! Wow, two more days!
+
+- ## React Native
+  I continued following along with this calculator app tutorial [React Native Tutorial 14: Creating a Calculator - Part 4 | onPress for TouchableOpacity](https://www.youtube.com/watch?v=8PVWlBwiegY). I'm starting to get into state finally. I see better how to use it now.
+  
+  
+## Day 162, R3
 ### 12/28/19
 
 - ## React Native
@@ -8,7 +17,7 @@
 
   I'm understanding react native better. There were a few parts where I ran into bugs or I had to change what the tutorial instructions were. I'm not sure if the tutorial is out of date or why it wouldn't work. But when it didn't work, I learned a lot because I had to turn the tutorial off and learn on my own.
 
-## Day 160, R3
+## Day 161, R3
 ### 12/27/19
 
 - ## React Native
@@ -108,7 +117,7 @@
   });
   ```
 
-## Day 159, R3
+## Day 160, R3
 ### 12/26/19
 
 - ## React Native
@@ -176,13 +185,13 @@
     }
   });
   ```
-## Day 158, R3
+## Day 159, R3
 ### 12/25/19
 
 - ## React Native
   I left off on [React Native Tutorial 11: Creating a Calculator - Part 3](https://www.youtube.com/watch?v=487ec0OCppw). 
 
-## Day 157, R3
+## Day 158, R3
 ### 12/24/19
 
 - ## React Native
@@ -197,7 +206,7 @@
   [React Native Tutorial 11: Creating a Calculator - Part 1](https://www.youtube.com/watch?v=TkYTPSVvMaM)
 
 
-## Day 156, R3
+## Day 157, R3
 ### 12/23/19
 
 - ## React Native
@@ -267,7 +276,7 @@
   }
   ```
 
-## Day 155, R3
+## Day 156, R3
 ### 12/22/19
 
 - ## React Native
@@ -351,7 +360,7 @@
   I'm trying to figure out how to get a component, when pressed, to change the state of another component. This is where I left off.
 
 
-## Day 154, R3
+## Day 155, R3
 ### 12/21/19
 
 - ## React Native
@@ -404,7 +413,7 @@
   ```
 
 
-## Day 153, R3
+## Day 154, R3
 ### 12/20/19
 
 - ## React Native
@@ -437,7 +446,7 @@
   So if not a dev job, what should I do? Go after my projects? Get a different job that can build more important skills? Get an apprenticeship? Not sure. We'll see.
 
 
-## Day 152, R3
+## Day 153, R3
 ### 12/19/19
 
 - ## HackerRank
@@ -448,7 +457,7 @@
   I want to get back to doing projects soon.
 
 
-## Day 151, R3
+## Day 152, R3
 ### 12/18/19
 
 - ## HackerRank
@@ -530,7 +539,7 @@
 
   I started working on a new script.
 
-## Day 150, R3
+## Day 151, R3
 ### 12/17/19
   ## HackerRank
   I continued working on [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
@@ -553,7 +562,7 @@
   I got the test case that's really long to test with. 
 
 
-## Day 149, R3
+## Day 150, R3
 ### 12/16/19
 
 - ## Hacker Rank
@@ -590,7 +599,7 @@
 
 
 
-## Day 148, R3
+## Day 149, R3
 ### 12/15/19
 - ## Twitter Bot
   Yesterday: I'm writing this from yesterday because I already posted my log but I decided to code some more. Hello people in the future!
@@ -643,7 +652,7 @@
 
 
 
-## Day 147, R3
+## Day 148, R3
 ### 12/14/19
 - ## Twitter Bot
   My twitter bot shut down and I got new information in my logs. 
@@ -693,7 +702,7 @@
 
 
 
-## Day 146, R3
+## Day 147, R3
 ### 12/13/19
 
 - ## Twitter Bot
@@ -723,7 +732,7 @@
 
   I started a new version of my hacker rank code based on someone's suggested solution.
 
-## Day 145, R3
+## Day 146, R3
 ### 12/12/19
 
 - ## HackerRank
@@ -776,7 +785,7 @@
 
   I wonder what about the old code made it take too long.
 
-## Day 144, R3
+## Day 145, R3
 ### 12/11/19
 - ## Twitter Bot
   I forgot to authenticate my Twitter Bot with my app last night, so I started it today. That means I'll have to wait longer for the stream to disconnect and to get the logs.
@@ -838,7 +847,7 @@
 
   I might not need this code. at least not all of it.
 
-## Day 143, R3
+## Day 144, R3
 ### 12/10/19
 - ## HackerRank
   Last night I did another hacker rank problem. This one I finished really fast.
@@ -921,7 +930,7 @@
 
   I'll have to try it again.
 
-## Day 142, R3
+## Day 143, R3
 ### 12/9/19
 
 - ## Twitter Bot
@@ -958,7 +967,7 @@
 
   Next time it shuts off I'll see the disconnectMessageGlobal, which I saved from `stream.on('disconnect'...)`.
 
-## Day 141, R3
+## Day 142, R3
 ### 12/8/19
 
 - ## HackerRank
@@ -1025,7 +1034,7 @@
   ## Readable
   I chose to make my variables very descriptive. This makes my code longer. Some other shorter answers were sleeker, but hard to understand. I wonder what most people prefer to look at?
 
-## Day 140, R3
+## Day 141, R3
 ### 12/7/19
 
 - ## HackerRank
@@ -1067,7 +1076,7 @@
   ```
   It doesn't work for all the test cases.
 
-## Day 139, R3
+## Day 140, R3
 ### 12/6/19
 
 - ## HackerRank
@@ -1190,7 +1199,7 @@
   I wonder, could coding help us learn to better articulate our principles?
 
 
-## Day 138, R3
+## Day 139, R3
 ### 12/5/19
 
 - ## Intentions
@@ -1346,7 +1355,7 @@
 
   ## Happy Birthday Shlomo!!!
 
-## Day 137, R3
+## Day 138, R3
 ### 12/4/19
 - ## HackerRank
   I'm at the airport headed home from Thanksgiving vacation in Florida. So I'll be spending more time coding again.
