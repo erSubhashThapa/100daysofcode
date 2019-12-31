@@ -1,9 +1,18 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 164, R3
+### 12/30/19
+
+- ## React Native
+  I continued following along with this calculator app tutorial [React Native Tutorial 14: Creating a Calculator - Part 4 | onPress for TouchableOpacity](https://www.youtube.com/watch?v=8PVWlBwiegY).
+
+  I'm on the 6th video. I'm finding it helpful to pause the video and code my solution to the next step before the instructor.
+  
+
 ## Day 163, R3
 ### 12/29/19
 
-Fun news, I'd been counting one day behind for months so I'm on day 163 instead of 162! Wow, two more days!
+Fun news, I'd been counting one day behind for a month, so I'm on day 163 instead of 162! Wow, two more days!
 
 - ## React Native
   I continued following along with this calculator app tutorial [React Native Tutorial 14: Creating a Calculator - Part 4 | onPress for TouchableOpacity](https://www.youtube.com/watch?v=8PVWlBwiegY). I'm starting to get into state finally. I see better how to use it now.
