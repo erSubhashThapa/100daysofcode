@@ -1,5 +1,33 @@
 # #100DaysOfCode Log - Round 3 - Dashiell Bark-Huss
 
+## Day 165, R3
+### 12/31/19
+
+- ## React Native
+  I finished the calculator app.
+  
+  I followed video 1-6 of this tutorial: [React Native Tutorial 11: Creating a Calculator - Part 1](https://www.youtube.com/watch?v=TkYTPSVvMaM)
+
+  <img src="log_imgs/calculator_12-31-19.PNG" width= 200 >
+
+  I just realized that it only took me 11 days since starting react native to get to this point.
+
+  ## Selecting All Components For Styling
+  I wanted to select all components like you can in CSS. But that's not how React Native works.
+
+  >It's a paradigm shift vs. old HTML/css approach - part of the react concept to not have some global "overrides" defined elsewhere (as you have in CSS). If you want (for example) to define a global font defined for all components, you should define it as a global style that you explicitly use in the component itself. 
+
+  -*from [Selector in React Native for selecting all components](https://stackoverflow.com/questions/32333482/selector-in-react-native-for-selecting-all-components)*
+
+  ## Styled Calculator
+  I styled the calculator.
+
+  <img width=200 src="log_imgs/styledcalculator_12-31-19.PNG">
+
+  ## Starting My Own Project
+  I started a project from scratch: a portion calculator for food tracking.
+
+
 ## Day 164, R3
 ### 12/30/19
 
