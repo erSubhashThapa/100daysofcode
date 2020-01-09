@@ -4,6 +4,49 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
 
 
   
+### 1/9/20
+- ## Shell Scripting
+
+  To set an env variable in the terminal:
+  ```bash
+  export var=value
+  echo $var 
+  >> value
+  ```
+  -*from [UNIX: Set Environment Variable](https://www.cyberciti.biz/faq/set-environment-variable-unix/)*
+
+  Get A Substring:
+  ```bash
+  STRING="this is a string"
+  POS=1
+  LEN=3
+  echo ${STRING:$POS:$LEN}   # his
+  ```
+  -*from [Basic String Operations](https://www.learnshell.org/en/Basic_String_Operations)*
+
+  
+### 1/8/20
+I'm on Siesta Key on Vacation, so I've been taking a break from my regular coding, and learning some shell scripting! Let's learn some more!
+
+- ## Shell Scripting
+  
+  [Heroku CLI Commands](https://devcenter.heroku.com/articles/heroku-cli-commands)
+
+  I'm got these commands from [CLI commands for dyno management](https://devcenter.heroku.com/articles/dynos#cli-commands-for-dyno-management):
+
+  ```bash
+  //turn on a dyno
+  heroku ps:scale worker=1 -a helpmecodebot
+
+  //stop a dyno
+  heroku ps:stop worker.1 -a helpmecodebot
+
+  //see if your dyno is on
+  heroku ps -a helpmecodebot
+  ```
+
+  I want to make a script that turns the dyno on and off depending on if computer is on or not.
+
 ### 1/7/20
 
 - ## Shell Scripting
@@ -32,7 +75,7 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
   ## You Are Dreaming Script
   In my [lucid dream club meetups](https://www.meetup.com/Active-Dreaming-Group/), I like to make my computer tallk to people after I leave the room and make it tell them they are dreaming. I was doing this manually in the command line. Now, I wrote a script that I can use.
 
-  ```shell
+  ```bash
   #!/bin/bash
 
   FIRSTNAME=${1?Error:no first name given}
