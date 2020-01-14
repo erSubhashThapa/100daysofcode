@@ -3,7 +3,157 @@
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
 
+### 1/13/20
+- ## React Native
+  My mom and sister went on weight watchers. I made a weight watchers calculator so they can figure out the points without paying fo rthe app.
   
+  I still need to style it nicely, and learn how to um *deploy*? *compile*? I don't know the correct term. But I need to put the app on their phones.
+
+  <img width='200' src = "log_imgs/wwcalc_1-13-20.gif">
+
+  Here's the app.js code:
+  ```javascript
+  /**
+   * Sample React Native App
+   * https://github.com/facebook/react-native
+   *
+   * @format
+   * @flow
+   */
+
+  import React, { Component } from 'react';
+
+  import {
+    SafeAreaView,
+    StyleSheet,
+    TextInput,
+    ScrollView,
+    View,
+    Text,
+    StatusBar,
+    Button,
+  } from 'react-native';
+
+  class App extends Component {
+
+    constructor(){
+      super()
+      this.state = {
+        cal: '',
+        satFat:'',
+        sugar:'',
+        protein:'',
+        points:''
+      }
+    }
+
+    save(text, stateKey){
+      this.state[stateKey] = text;
+    }
+
+    calculate(){
+      let error=false;
+
+      Object.keys(this.state).forEach(key=>{
+          if (this.state[key]=='' && key!='points') error=true;
+          console.log(error, this.state[key]);
+      })
+        
+      if(error) return;
+        const points = (this.state.cal * .0305) 
+        + (this.state.satFat * .275) 
+        + (this.state.sugar * .12) 
+        - (this.state.protein * .098);
+        
+      this.setState({
+            points
+      })
+    }
+    clear(){
+      this.setState({
+        cal: '',
+        satFat:'',
+        sugar:'',
+        protein:'',
+        points:''
+      })
+    }
+        
+        render(){
+          console.log('render', this)
+          return (
+            <View>
+          <Text style={[styles.title]}>Weight Watchers Smart Points Calculator</Text>
+          <Text style={[styles.label, styles.push]}>Calories:</Text>
+          <TextInput style = {styles.input} onChangeText={(text)=>this.save(text, 'cal')}>{this.state.cal}</TextInput>
+          <Text style={styles.label}>Saturated Fat:</Text>
+          <TextInput style = {styles.input} onChangeText={(text)=>this.save(text, 'satFat')}>{this.state.satFat}</TextInput>
+          <Text style={styles.label}>Sugar:</Text>
+          <TextInput style = {styles.input} onChangeText={(text)=>this.save(text, 'sugar')}>{this.state.sugar}</TextInput>
+          <Text style={styles.label}>Protein:</Text>
+          <TextInput style = {styles.input} onChangeText={(text)=>this.save(text, 'protein')}>{this.state.protein}</TextInput>
+          <Button style = {styles.button} onPress= {this.calculate.bind(this)} title="calc"></Button>
+          <Button style = {styles.button} onPress= {this.clear.bind(this)} title="clear"></Button>
+          <Text style={[styles.label, styles.push]}>Points:</Text>
+          <Text style = {styles.points}>{this.state.points}</Text>
+        </View>
+    );
+      }
+  };
+
+  const styles = StyleSheet.create({
+    title:{
+      marginTop:110,
+      marginHorizontal: 20,
+      fontSize:21,
+      color: 'blue'
+    },
+    push:{
+      marginTop:30
+    },
+    label:{
+      color: 'red',
+      borderColor: 'blue',
+      marginHorizontal: 90,
+
+    },
+    input:{
+      color: 'red',
+      borderColor: 'blue',
+      borderWidth:1,
+      marginHorizontal: 90,
+    },
+    points:{
+      color: 'red',
+
+      marginHorizontal: 90
+    },
+    button:{
+      marginTop:90,
+      color: 'red',
+      borderColor: 'blue',
+      borderWidth:1
+    }
+  });
+
+  export default App;
+  ```
+### 1/12/20
+- ## Bot
+  My bots been up and it's used no dyno hours. I'm not sure how this is possible. It might be becaus eI have it up as a worker now. But I thought I had it up that way before and the hours were still going down.
+  
+### 1/11/20
+- ## Shell Scripting
+  Yesterday, I wanted to get a boolean.
+
+  I tried 
+  ```bash
+  echo [ u == u ]
+  >> [ u == u ]
+  ```
+
+  It just returned the statement back to me. What's going on?
+
 ### 1/9/20
 - ## Shell Scripting
 
