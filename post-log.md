@@ -5,7 +5,7 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
 
 ### 1/13/20
 - ## React Native
-  My mom and sister went on weight watchers. I made a weight watchers calculator so they can figure out the points without paying fo rthe app.
+  My mom and sister went on weight watchers. I made a weight watchers calculator so they can figure out the points without paying for the app.
   
   I still need to style it nicely, and learn how to um *deploy*? *compile*? I don't know the correct term. But I need to put the app on their phones.
 
