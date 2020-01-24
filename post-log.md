@@ -3,7 +3,106 @@
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
 
-### 1/13/20
+### 01/23/20
+- ## Nutrition Project
+  I want to make something that has to do with nutrition density optimization. Nutrition density refers to the amount of micro nutrients per calorie.
+
+  **Micronutrients**/**Calories**
+
+  It's a not a specific measure, but it's used to describe foods. Organ meats are nutrient dense. Vegetables are generally more nutrient dense than fruits. Coconut oil is very low in nutrient density.
+
+  Nutrient density isn't the "end all be all" to determining the best foods to eat, but it's a factor often over looked.
+
+  **Macronutrients** include nutrients that provide calories: *fats*, *carbs*, and *protein*. **Micronutrients** are the vitamins and minerals.
+
+  ## Daily Values
+  I'll want to take note of the Daily Values for the USDA.
+
+  Here are the **Daily Values** for a 2000 calorie diet according to the USDA, taken from Cronometer:
+
+  **General:**
+  - Energy: 2000 kcal
+  - Water: 1500 g
+
+  **Vitamins**
+  - B1 (Thiamine): 1.5 mg
+  - B12 (Cobalamin): 6 μg* 
+  - B2 (Riboflavin): 1.7 mg
+  - B3 (Niacin): 20 mg
+  - B5 (Pantothenic Acid): 10 mg
+  - B6 (Pyridoxine): 2 mg
+  - Biotin: 300 μg
+  - Choline: 550 mg
+  - Folate: 400 μg
+  - Vitamin A: 5000 IU*
+  - Vitamin C: 60 mg
+  - Vitamin D: 400 UI
+  - Vitamin E: 20.13 mg
+  - Vitamin K: 80 μg
+  
+  **Minerals**
+  - Calcium: 1000 mg
+  - Chromium: 120 μg
+  - Copper: 2 mg
+  - Iodine: 150 μg
+  - Iron: 18 mg
+  - Manganese: 2 mg
+  - Molybdenum: 75 μg
+  - Phosphorus: 1000 mg
+  - Potassium: 3500 mg
+  - Selenium: 70 μg
+  - Sodium: 2400 mg
+  - Zinc: 15 mg
+
+  **Carbohydrates**
+  - Carbs: 300 g
+  - Added Sugars: 50 g
+  - Fiber: 25 g
+
+  **Lipids**
+  - Fat: 65
+  - Saturated Fat: 20 g
+  - Cholesterol: 300 mg
+
+  **Protein**
+  - Protein: 50 g
+
+
+  \* μ means micro, μg = micrograms
+
+  \* IU means [International Unit](https://en.wikipedia.org/wiki/International_unit)
+
+  To cross reference for accuracy, here's screenshots of Cronometer
+
+  <img src="log_imgs/dv1_1-23-20.PNG" width= 45%>
+  <img src="log_imgs/dv2_1-23-20.PNG" width= 45%>
+  <img src="log_imgs/dv3_1-23-20.PNG" width= 45%>
+  <img src="log_imgs/dv4_1-23-20.PNG" width= 45%>
+
+  ## Daily Values vs Recommended Dietary Allotment
+
+  **Daily Values** are on USDA labels. For example, we see above that the DV for **Vitamin C is 60 mg**. So if a food has 30 mg of vitamin C, you'll see *"Vitamin C 50%"* on the label.
+
+  But Daily Values on labels are not the recommendations for everyone. The USDA has different Recommended Dietary Allowances (RDA) *"for your age, gender and life stage. These recommendations don't change based on your size."*[-Cronometer forum](https://forums.cronometer.com/discussion/1829/what-are-chronometers-daily-mirco-nutrient-targets-based-on)
+  
+  [More info on RDA's](https://www.ncbi.nlm.nih.gov/books/NBK114332/)
+
+  
+
+### 01/22/20
+- ## React Native
+  Two days ago I got my app onto a phone. But I noticed that it wasn't user friendly.
+
+  The key pad that popped up was for letters. Mine should be for numbers. Adding `keyboardType="numeric"` or `keyboardType="phone-pad"` to the input tag fixed this.
+
+  But then there was no return button. The return button is nice because it moved the cursor to the next input.
+
+  <img width='45%' src = "log_imgs/return1_1-22-20.PNG">
+  <img width='45%' src = "log_imgs/return_1-22-20.PNG">
+
+  Another issue was that on some phones, the keyboard cuts the bottom buttons off.
+
+### 01/13/20
 - ## React Native
   My mom and sister went on weight watchers. I made a weight watchers calculator so they can figure out the points without paying for the app.
   
@@ -138,11 +237,11 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
 
   export default App;
   ```
-### 1/12/20
+### 01/12/20
 - ## Bot
   My bots been up and it's used no dyno hours. I'm not sure how this is possible. It might be becaus eI have it up as a worker now. But I thought I had it up that way before and the hours were still going down.
   
-### 1/11/20
+### 01/11/20
 - ## Shell Scripting
   Yesterday, I wanted to get a boolean.
 
@@ -154,7 +253,7 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
 
   It just returned the statement back to me. What's going on?
 
-### 1/9/20
+### 01/09/20
 - ## Shell Scripting
 
   To set an env variable in the terminal:
@@ -175,7 +274,7 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
   -*from [Basic String Operations](https://www.learnshell.org/en/Basic_String_Operations)*
 
   
-### 1/8/20
+### 01/08/20
 I'm on Siesta Key on Vacation, so I've been taking a break from my regular coding, and learning some shell scripting! Let's learn some more!
 
 - ## Shell Scripting
@@ -197,7 +296,7 @@ I'm on Siesta Key on Vacation, so I've been taking a break from my regular codin
 
   I want to make a script that turns the dyno on and off depending on if computer is on or not.
 
-### 1/7/20
+### 01/07/20
 
 - ## Shell Scripting
   ## 1st Tutorial
@@ -247,7 +346,7 @@ I'm on Siesta Key on Vacation, so I've been taking a break from my regular codin
 
 
 
-### 1/4/20
+### 01/04/20
 
 - ## React Native
   I'm trying to figure out how to change the black underlay to another color. 
@@ -265,7 +364,7 @@ I'm on Siesta Key on Vacation, so I've been taking a break from my regular codin
   Add `underlayColor='<somecolor>'` to the `TouchableHighlight` tag.
 
 
-### 1/3/20
+### 01/03/20
 
 - ## React Native
   I followed the instructions under the "***React Native CLI Quickstart***" tab on the page [Getting Started](https://facebook.github.io/react-native/docs/getting-started). This way, I can use modules that have native code. You can't with Expo.
