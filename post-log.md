@@ -2,7 +2,178 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
+### 04/05/20
+I haven't been logging much. I'm trying to take a different approach. That being- *Don't talk about a project until it's complete.* It helps motivate me to finish the project. Also, logging slows me down. 
 
+But I wanted to post some updates here.
+
+## Lucid Dream Home Lab
+I'm currently building a lucid dream lab the will induce lucid dreams and enable a user to communicate from a lucid dream to the outside world. I started this project in 2012. But it's been an on and off adventure.
+
+After participating a lucid dream study at Northwestern, I was inspired to revisit the project and add some features that Northwestern had.
+
+## Alpha Detection
+Yesterday, I finished creating an alpha brain wave detector. This will be involved in detecting when a person is in REM from EEG data.
+
+  <img src="log_imgs/alpha_4-5-20.gif" width= 100%>
+
+I did a lot of research on brain waves and signal filtering. I won't post all of that here. The info I got was mostly on Youtube. But here is the paramount video that helped me signal process the alpha waves:
+
+[My Weekend Project: Audio Frequency Detector Using An Arduino](https://www.youtube.com/watch?v=wbeV0J30LGQ)
+
+The only relevent part is the section on the code. For hardware, I'm going a different route- using the [Backyard Brains Heart and Brain SpikerShield](https://backyardbrains.com/products/heartandbrainspikershieldbundle). I followed their tutorial [Experiment: EEG-Record from the Human Brain](https://backyardbrains.com/experiments/EEG). I combined this Backyard Brains tutorial with the Youtube [Audio Frequency Detector](https://www.youtube.com/watch?v=wbeV0J30LGQ) tutorial in order to programmatically detect alpha waves.
+
+## The Code
+
+Though the project in the Youtube video detects audio frequency, it's pretty much the same for brain waves but the sampling frequency is different. 
+
+```arduino
+#include "arduinoFFT.h"
+#define SAMPLES 128
+#define SAMPLING_FREQUENCY 300
+
+arduinoFFT FFT = arduinoFFT();
+unsigned int samplingPeriod;
+unsigned long microSeconds;
+
+double vReal[SAMPLES];
+double vImag[SAMPLES];
+
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(115200);
+  samplingPeriod = round(1000000*(1.0/SAMPLING_FREQUENCY)); //PERIOD in microseconds
+
+
+}
+
+void loop() {
+  for(int i=0; i<SAMPLES; i++){
+    microSeconds= micros();
+    
+    vReal[i] = analogRead(0);
+    vImag[i] = 0;
+
+    while(micros()< (microSeconds + samplingPeriod)){
+      
+    }
+  }
+
+  FFT.Windowing(vReal, SAMPLES, FFT_WIN_TYP_HAMMING, FFT_FORWARD);
+  FFT.Compute(vReal, vImag, SAMPLES, FFT_FORWARD);
+  FFT.ComplexToMagnitude(vReal, vImag, SAMPLES);
+
+  double peak = FFT.MajorPeak(vReal, SAMPLES, SAMPLING_FREQUENCY);
+  
+  if(peak<12 && peak >8){
+    Serial.println("You have alpha waves of "+String(peak)+"hz. Your eyes must be closed."); 
+  } else {
+    Serial.println(String(peak)+"hz");
+  }
+}
+```
+Watch the tutorial to get an explanation of the code.
+
+This project uses the library ardiunoFFT, which is a ***fast fourier transform*** library. Fourier transform is an algorithm that identifies frequencies from raw data. [Here's a great video explaining fourier transorm](https://www.youtube.com/watch?v=spUNpyF58BY).
+
+Raw data will look like a bunch of numbers that, when mapped over time, will represent the waves. 
+
+In my case, the electrodes glued to my head will *detect voltages from my brain*(don't quote me on this). Those numbers will look like this: 
+
+**Example data:**
+535
+549
+555
+563
+565
+568
+576
+583
+572
+569
+575
+569
+554
+546
+548
+552
+551
+551
+553
+542 etc....
+
+Each of these points of data occurred every 1 milliseconds. So you can map these numbers over time to get a visual idea of the waves:
+
+![](log_imgs/graph_eeg_4-5-20)
+
+  <img src="log_imgs/graph_eeg_4-5-20.png" width= 100%>
+
+**Fourier transform** takes these numbers, and figures out the frequencies.
+
+Let me know if you have any questions on Twitter [@DashBarkHuss](https://twitter.com/DashBarkHuss).
+
+### 01/24/20
+- ## Nutrition Project
+  Yesterday we looked at daily values. Today I want to go through [my RDA's](https://health.gov/dietaryguidelines/2015/guidelines/appendix-7/) for my gender and age.
+
+  Female 19-30 RDA's:
+
+  **General:**
+  - Energy: 1800 kcal
+  - Water: 1500 g ---no RDA information
+
+  **Vitamins**
+  - B1 (Thiamine): 1.1 mg
+  - B12 (Cobalamin): 2.4 μg
+  - B2 (Riboflavin): 1.1 mg
+  - B3 (Niacin): 14 mg
+  - B5 (Pantothenic Acid): 10 mg ---no RDA information, cronometer put 5mg
+  - B6 (Pyridoxine): 1.3 mg
+  - Biotin: 300 μg ---no RDA information
+  - Choline: 425 mg
+  - Folate: 400 μg
+  - Vitamin A: 700 mcg RAE ---cronometer put 2333 IU
+  - Vitamin C: 75 mg
+  - Vitamin D: 600 UI
+  - Vitamin E: 15 mg
+  - Vitamin K: 90 μg
+  
+  **Minerals**
+  - Calcium: 1000 mg
+  - Chromium: 120 μg ---no RDA information
+  - Copper: 900 mcg
+  - Iodine: 150 μg ---no RDA information
+  - Iron: 18 mg
+  - Magnesium: 310 mg
+  - Manganese: 1.8 mg
+  - Molybdenum: 75 μg ---no RDA information, cronometer put 45
+  - Phosphorus: 700 mg 
+  - Potassium: 4700 mg --cronometer put 2600
+  - Selenium: 55 μg
+  - Sodium: 2300 mg cronometer put 1500
+  - Zinc: 8 mg
+
+  **Carbohydrates**
+  - Carbs: 130 g
+  - Added Sugars: 10% of kcal
+  - Fiber: 25.2 g
+
+  **Lipids**
+  - Fat: 20-35
+  - Saturated Fat: 10% of kcal
+  - Cholesterol: 300 mg  ---no RDA information
+
+  **Protein**
+  - Protein: 46 g
+
+  ---no RDA information = number listed is cronometers DV's from yesterdays screenshots
+
+  The macronutrients are of no importance to me. So let's disregard those.
+
+  For my app, I'll just use what cronometer gave me for my micros.
+  
+  
 ### 01/23/20
 - ## Nutrition Project
   I want to make something that has to do with nutrition density optimization. Nutrition density refers to the amount of micro nutrients per calorie.
@@ -46,6 +217,7 @@ I completed my 365 days of code. But I'm going to continue to add to this log wh
   - Copper: 2 mg
   - Iodine: 150 μg
   - Iron: 18 mg
+  - Magnesium: 400 mg
   - Manganese: 2 mg
   - Molybdenum: 75 μg
   - Phosphorus: 1000 mg
