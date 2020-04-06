@@ -10,7 +10,7 @@ But I wanted to post some updates here.
 ## Lucid Dream Home Lab
 I'm currently building a lucid dream lab the will induce lucid dreams and enable a user to communicate from a lucid dream to the outside world. I started this project in 2012. But it's been an on and off adventure.
 
-After participating a lucid dream study at Northwestern, I was inspired to revisit the project and add some features that Northwestern had.
+After participating in a lucid dream study at Northwestern, I was inspired to revisit the project and add some features that Northwestern had.
 
 ## Alpha Detection
 Yesterday, I finished creating an alpha brain wave detector. This will be involved in detecting when a person is in REM from EEG data.
