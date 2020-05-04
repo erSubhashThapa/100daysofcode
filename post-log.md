@@ -2,12 +2,405 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
+### 05/04/20
+
+## Lucid Dream Home Lab Update
+I've been working on the [lab](#lab-explanation) and I have made a lot of progress. Today, I'm going to share just one part of the lab: **sending a text message with your eyes in morse code**.
+
+## Texting With Eye Movements
+  <img src="log_imgs/eyes_messaging_5-4-20.gif" width= 100%>
+
+  <img src="log_imgs/mesage _sent_5-4-20.gif" width= 100%>
+
+### Hardware:
+
+ * [Heart and Brain SpikerShield Bundle](https://backyardbrains.com/products/heartandbrainspikershieldbundle) 
+
+    - *discontinued.* An alternative option might be a [Ganglion from OpenBCI](https://shop.openbci.com/collections/frontpage/products/ganglion-board?variant=13461804483) 
+
+Since the [Heart and Brain SpikerShield Bundle](https://backyardbrains.com/products/heartandbrainspikershieldbundle) is discontinued I would like to redo this with [OpenBCI](https://www.openbci.com/) in the near future. But, if you are up for it, you can try to adapt this project using an OpenBCI product on your own.
+
+### How It Works
+1. The subject wears electrodes connected to the hardware and signals in morse code. 
+   - Looking left is akin to pressing down the telegraph button. Looking right is akin to releasing the button.
+   - Holding your eyes left for 4 or more seconds and then looking right, means "send the message"
+   - Holding your eyes right for 4 or more seconds and then looking left, means "I f**ked up! Delete the message so far."
+2. The electrodes send data to the arduino program
+3. The arduino program interprets the data. 
+   1. It figures out which data means the eye moved left or right. 
+   2. It converts the eye movements to morse code.
+   3. It converts morse code to English. 
+   4. It serial prints the message with the delimiter 'SND'.
+4. The node program watches the serial port for data from the arduino. Once it sees the delimeter 'SND' it recieves the message. It then executes a bash file with the message.
+5. The bash file takes the message and sends it to whomever is named "Mom" in your contacts. This only works if you have Messages app and a Mac I believe. 
+
+### EOG
+The hardware uses [EOG](https://en.wikipedia.org/wiki/Electrooculography). EOG records eye movement. Electrodes are placed on the outer edges of the eyes. The back of your eye has more electrical activity than the front (Don't quote me). So when you look left, the backs of your eyes are closer to the right electrode. And further from the left electrode. So the electrodes can sense a change occurred.
+
+You get a bunch of data from the electrodes in the form of numbers from 1-1024 when you **analogRead()** the input stream in Arduino.
+
+This is what the data looks like when mapped out visually over time.
+
+<img src="log_imgs/eye_vs_clench_-5-4-20.png" width="100%">
+
+Clenching also affects the data. So in the code we detect jaw clenching but ignore it.  
+
+*One thing isn't clear from the graph:*
+
+You might think that if you hold your eye to the left, the peak will stay up and span a wider distance in the graph. But no. It will drop back down to the middle range immediately, regardless of how long you look left. If we want to know how long the eye stayed looking left, we look for a dip downward. That means the eye has move right, away from the left position it just occupied.
+
+## Heart and Brain SpikerShield Setup
+
+The alligator clip with the pink wire goes on the left side of your eyes. The red wire goes on the right side of your eyes. The black wire goes on your mastoid process. More info [here](https://backyardbrains.com/experiments/EOG)
+
+### Arduino Code
+
+```arduino
+
+#define EOG A0
+
+//Eye movement Variables
+
+const int bufferSize = 20;
+const int highThreshold = 600;
+const int lowThreshold = 422;
+int readingsBuffer[bufferSize]; //last readings
+
+bool lastSignalWasLeft; //We must store that the last signal was left. 
+                        //multiple "lefts" will get processed unless we tell 
+                        //the sketch to ignore the signal once we know what it is
+bool lastSignalWasRight; //^same for right
+
+
+//Morse code Variables
+
+unsigned long morseBitBase = 800 ; //morse bit length, you can change this to be longer or shorter depending on your morse code speed
+unsigned long wiggleRoom = 0; //aka tolerance- you can add some extra milliseconds to account for accodentally going slower.
+
+unsigned long morseBit = morseBitBase + wiggleRoom;
+unsigned long morse3Bit = (morseBit *3) +wiggleRoom;
+
+
+bool subjectStartedSignaling = false;
+
+String subjectsMorseCode = "";
+
+enum morseState {
+  NEW_INTRA_CHARACTER,
+  NEW_CHARACTER,
+  NEW_WORD,
+  NEW_MESSAGE //message variable
+};
+
+enum morseState currentMorseState = NEW_INTRA_CHARACTER;
+
+
+unsigned long lastSignalChangeAt;
+bool lastSignal;
+unsigned long clearGapLength = morseBit*5 +wiggleRoom; //message variable 
+unsigned long sendBeepLength = morseBit*5 +wiggleRoom; //message variable
+
+
+//message variables
+String delimeter = "SND";
+
+String message = "";
+
+
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+   int reading = analogRead(EOG);
+   unsigned long now = millis();
+   updateReadingsBuffer(reading);
+
+    //---------------determine if the last analogRead signals was an eye movement---------------------
+ 
+   String eog = determineEOGSignal(); //returns string "Left", "Right", "Jaw", "Normal"
+   bool eyeMovementDetected = eog == "Right" || eog == "Left";
+
+  //------------------------------Morse Code------------------------------
+    if (eyeMovementDetected){ 
+
+                if (!subjectStartedSignaling) {
+ 
+                    subjectStartedSignaling = true; 
+
+                } else {
+
+                  unsigned long signalLength = now-lastSignalChangeAt;
+                  char morseIntraChar = signalToMorse(signalLength, lastSignal);
+           
+/////////////////////////////////////////////////////////////
+//         All of the Serial.print's need to be commented out 
+//         when you are actually sending this to node 
+//         except for 'Serial.println(message +"SND");'
+//         However, they can be helpful for depugging.
+//         So I am leaving them in, commented out.
+//////////////////////////////////////////////////////////////
+
+//                Serial.print("subjectsMorseCode: '");Serial.print(subjectsMorseCode);Serial.println("'");
+            
+                  if (morseIntraChar != 'g' && morseIntraChar != '*' && morseIntraChar != 'S'){
+                    subjectsMorseCode.concat(morseIntraChar);
+                  } else if (morseIntraChar == 'S'){
+                    Serial.println(message +"SND");
+                    message = "";
+                    subjectsMorseCode ="";
+                  } else if (morseIntraChar != '*' && morseIntraChar != 'S'){
+                      if (currentMorseState == NEW_CHARACTER || currentMorseState == NEW_WORD){
+  
+                          char engChar = morseToEnglishChar(subjectsMorseCode);
+//                          if (engChar=='*')Serial.print("error, wrong input: "+subjectsMorseCode);
+//                          Serial.print(" char: ");
+//                          Serial.println(engChar);
+                          
+                          if (engChar!='*'){
+                            if(currentMorseState == NEW_WORD) message.concat(" ");
+                            message.concat(engChar); 
+//  
+//                            Serial.print("message pending: ");
+//                            Serial.println(message);
+                          }
+                          subjectsMorseCode ="";
+                      } else if (currentMorseState == NEW_MESSAGE){
+                        message = "";
+                        subjectsMorseCode ="";
+//                         Serial.print("cleared message pending: ");
+//                          Serial.println(message);
+                      }
+                  }
+                }
+                          
+          lastSignalChangeAt = now;
+          lastSignal = eog == "Right" ? 0 : 1;
+        }
+
+
+} //==========end void loop========
+
+//===============================Eye Movement Interpretation functions=========================
+void updateReadingsBuffer(int reading){    
+  for(int i = 0; i < bufferSize-1; i++)
+    {
+      readingsBuffer[i] = readingsBuffer[i+1];
+    }
+  readingsBuffer[bufferSize-1] = reading;
+
+}
+
+String determineEOGSignal(){
+    int reading = readingsBuffer[bufferSize-1];
+
+    String determinedSignal;
+
+        if(!isNormal(reading)){
+
+        // what is the signal?
+           if(signalIsJawClench(readingsBuffer)){
+              determinedSignal = "Jaw"; //your jaw clenched
+
+            } else if(signalIsEyeLeft(readingsBuffer) && !lastSignalWasLeft){
+              lastSignalWasLeft = true;
+              lastSignalWasRight = false;
+              determinedSignal = "Left";
+
+            } else if(signalIsEyeRight(readingsBuffer) && !lastSignalWasRight){
+              lastSignalWasRight = true;
+              lastSignalWasLeft = false;
+              determinedSignal = "Right";
+              
+            } else {
+              determinedSignal = "Normal";
+            }
+
+        } else {
+              determinedSignal = "Normal";
+        }
+    return determinedSignal;
+}
+
+bool isNormal(int reading){ if (reading > lowThreshold && reading < highThreshold) {return true;}else{return false;}; }; 
+
+bool isHigh(int reading){ if (reading > highThreshold) {return true;}else{return false;}; };
+bool isLow(int reading){ if (reading < lowThreshold) {return true;}else{return false;}; };
+
+bool signalIsJawClench(int readings[bufferSize]){
+    for(int i = 0; i < bufferSize; i++)
+    {
+      if(isHigh(readings[i])){ //if any reading is high
+          for(int i2 = i; i2 < bufferSize-i; i2++){
+            if(isLow(readings[i2])){ // and any proceeding reading is low
+                return true;
+              }
+          }
+        }
+      if(isLow(readings[i])){ //if any reading is Low
+        for(int i2 = i; i2 < bufferSize-i; i2++){
+          if(isHigh(readings[i2])){ // and any proceeding reading is HIgh
+              return true;
+            }
+        }
+      }
+    }
+      return false; 
+}
+
+bool signalIsEyeRight(int readings[bufferSize]){
+    for(int i = 0; i < bufferSize; i++){
+        if(!isHigh(readings[i])){
+          return false;
+        }
+    }
+    return true;
+}
+
+bool signalIsEyeLeft(int readings[bufferSize]){
+    for(int i = 0; i < bufferSize; i++){
+        if(!isLow(readings[i])){
+          return false;
+        }
+    }
+    return true;
+      
+}
+
+//=============================Morse Code Interpretation functions===================================
+
+char signalToMorse(unsigned long signalLength, bool signalType ){
+  char morse;
+    if(signalType){
+      morse = interpretBeep(signalLength);
+    } else {
+      manageMorseState (signalLength);
+      morse = 'g'; //gap
+    }
+
+    return morse;
+}
+
+char interpretBeep (unsigned long millisBeep){
+  char meaningOfBeep;
+  if ( millisBeep >= 100 && millisBeep <= morseBit){ 
+    meaningOfBeep = '.';
+  }  else if ( millisBeep > morseBit && millisBeep < sendBeepLength){  
+    meaningOfBeep = '-';
+  }else if ( millisBeep >= sendBeepLength){  
+    meaningOfBeep = 'S'; //means "SEND"
+  } else {
+    meaningOfBeep = '*'; //means noise- ignore
+  }
+
+  return meaningOfBeep;
+}
+
+void manageMorseState (unsigned long millisGap){  
+  if ( millisGap < 100 ){
+      return; //noise
+  } else if ( millisGap >= 100 && millisGap <= morseBit){ 
+    currentMorseState = NEW_INTRA_CHARACTER;
+  }  else if ( millisGap >= morseBit && millisGap < morse3Bit){ 
+    currentMorseState = NEW_CHARACTER;
+  } else if ( millisGap > morse3Bit && millisGap < clearGapLength ){ 
+      currentMorseState = NEW_WORD;
+  }  else if ( millisGap > clearGapLength ){ 
+      currentMorseState = NEW_MESSAGE; //aka clear last message
+  }
+}
+
+char morseToEnglishChar(String morse)
+{
+//Serial.print("morse code: ");
+//Serial.println(morse);
+
+  static String letters[] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-",
+                             ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", "E"
+                            };
+  int i = 0;
+  char englishChar;
+
+    if (morse == ".-.-.-")
+    {
+      englishChar = '.';        //for break
+    }
+    else if (morse == ".-.-.--")
+    {
+      englishChar = '!';        //for !
+    } else if (morse == "..--..")
+    {
+      englishChar = '?';        //for ?
+    }
+    else
+    {
+      while (letters[i] != "E")  //loop for comparing input code with letters array
+      {
+        if (letters[i] == morse)
+        {
+          englishChar = (char('A' + i));
+          break;
+        }
+        i++;
+      }
+      if (letters[i] == "E")
+      {
+        englishChar = '*';  //if input code doesn't match any letter, error
+      }
+    }
+
+  return englishChar;                            
+}
+```
+
+### Node.js Code
+
+More info [here](https://medium.com/@machadogj/arduino-and-node-js-via-serial-port-bcf9691fab6a)
+
+```node
+const SerialPort = require('serialport');
+const Readline = require('@serialport/parser-readline');
+const shell = require('shelljs');
+
+const port = new SerialPort('/dev/cu.usbmodem14101', { baudRate: 115200 });
+const parser = port.pipe(new Readline({ delimiter: 'SND' }));
+// Read the port data
+port.on("open", () => {
+  console.log('serial port open');
+});
+parser.on('data', data =>{
+  console.log('got word from arduino:', data);
+
+  shell.exec('./message "'+data+'-this message was sent to you by eye movements" "Mom"');
+});
+```
+You need to `npm install shelljs` and `npm install serialport`.
+
+## Bash File 
+
+```bash
+!#/bin/bash
+
+MSG=${1?Error:no message}
+CONTACT=${2?Error:no contact provided}
+
+osascript -e 'tell application "Messages" to send "'"${MSG/\"/\\\"}"'" to buddy "'"${CONTACT//\"/\\\"}"'"'
+```
+
+You need change the permissions to allow the script to be executable for the user with `chmod +x filename` and you need use the correct bash interpreter location after the shebang (`!#`). More info [here](https://www.taniarascia.com/how-to-create-and-use-bash-scripts/).
+
+## Wrap Up
+
+So that's a quick overview. I hope to do a more thorough tutorial in the future. But I wanted to push this out soon for those who are curious.
 ### 04/05/20
 I haven't been logging much. I'm trying to take a different approach. That being- *Don't talk about a project until it's complete.* It helps motivate me to finish the project. Also, logging slows me down. 
 
 But I wanted to post some updates here.
 
-## Lucid Dream Home Lab
+<h3 id="lab-explanation"></h3>
+
+## Lucid Dream Home Lab 
 I'm currently building a lucid dream lab the will induce lucid dreams and enable a user to communicate from a lucid dream to the outside world. I started this project in 2012. But it's been an on and off adventure.
 
 After participating in a lucid dream study at Northwestern, I was inspired to revisit the project and add some features that Northwestern had.
