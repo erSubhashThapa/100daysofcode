@@ -176,7 +176,7 @@ WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores 
 
 ***UPDATE/WARNING**: While the solution below worked to defer the file, it broke my site. After the first load, my site looked fine. But upon refreshing with browser-caching enable, my hero image and video looked strange. I deleted this tweak in my code. Still, the code might help you, so here it is.*
 
-**Defer the WP Fastest Cache combined js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you upgrade the plugin.
+**Defer the WP Fastest Cache combined js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you update the plugin.
 
 *Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php*:
 ```php
@@ -222,7 +222,7 @@ If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https:/
 
 #### GTmetrix Recommendations:
 At the end, I had 3 recommendations on GTmetrix lower than 99%:
-1. Defer parsing of JavaScript
+1. Defer parsing of JavaScript **93%**
 2. Use a Content Delivery Network (CDN) **0%**
 3. Make fewer HTTP requests **84%**
 
