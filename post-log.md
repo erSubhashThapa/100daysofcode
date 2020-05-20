@@ -11,7 +11,7 @@ Jump to my [**Conclusion**](#wp-optimization-conclusion) to see what I did.
 <hr>
 
 #### Wordpress Optimization resources
-- [GTmetrix](https://gtmetrix.com/)- Gives you speed metrix on your site
+- [GTmetrix](https://gtmetrix.com/)- Gives you speed metrics on your site
 - [Speed Up WordPress in 2019: How To Optimize Your Website & Make It Load Fast](https://www.youtube.com/watch?v=ATXACFtcyKs)
 - [Optimizing MP4 Video for Fast Streaming](https://rigor.com/blog/optimizing-mp4-video-for-fast-streaming)
   - [HandBrake](https://handbrake.fr/) *Free software for optimizing mp4 videos*
@@ -39,7 +39,7 @@ If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https:/
   - At the top click **GoDaddy Analytics** *or* add `/godaddyAnalytics` to your current URL address
   - Click "`No, I don't want to participate in the program.`" and **Confirm**.
   
-Keep in mind, GoDaddy is always changing there site. So you may have to navigate the site differently to find the opt-out.
+Keep in mind, GoDaddy is always changing their site. So you may have to navigate the site differently to find the opt-out.
 
 <h3 id="wpfc-settings"></h3>
 
@@ -172,7 +172,7 @@ Using WP Fastest Cache with [these settings](#wpfc-settings), WP Fastest Cache c
 
 WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores the above php code[(*source*)](https://wordpress.org/support/topic/how-to-defer-javascript-when-the-tag-of-enqueued-script-has-two-src-urls/#post-12857234).
 
-<h3 id ="wpfc-defer-update">
+<h3 id ="wpfc-defer-update"></h3>
 
 ***UPDATE/WARNING**: While the solution below worked to defer the file, it broke my site. After the first load, my site looked fine. But upon refreshing with browser-caching enable, my hero image and video looked strange. I deleted this tweak in my code. Still, the code might help you, so here it is.*
 
