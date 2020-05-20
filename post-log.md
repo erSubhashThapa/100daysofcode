@@ -74,6 +74,7 @@ I tried several methods:
 2. I tried adding this to header.php:
 
    ```php
+   <?php
    if (!(is_admin() )) {
    function defer_parsing_of_js ( $url ) {
    if ( FALSE === strpos( $url, '.js' ) ) return $url;
@@ -83,6 +84,7 @@ I tried several methods:
    }
    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
    }
+   ?>
    ```
 
 3. I tried adding this to functions.php and replacing with the correct URL.
@@ -137,6 +139,7 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 
 Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you have a child theme.
 ```php
+<?php
 function defer_parsing_of_js( $url ) {
 
      if ( is_user_logged_in() ) return $url; //don't break WP Admin
@@ -145,6 +148,7 @@ function defer_parsing_of_js( $url ) {
      return str_replace( ' src', ' defer src', $url );
 }
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
+?>
 ```
 #### WP Fastest Cache
 <h3 id= "wpfc-defer"></h3>
