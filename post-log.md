@@ -3,10 +3,13 @@
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
 ### Optimizing WordPress With GoDaddy cPanel Shared Hosting 
-05/10/20 - 05/19/20
+05/10/20 - 05/20/20
 <hr>
 
 Jump to my [**Conclusion**](#wp-optimization-conclusion) to see what I did.
+
+<hr>
+
 #### Wordpress Optimization resources
 - [GTmetrix](https://gtmetrix.com/)- Gives you speed metrix on your site
 - [Speed Up WordPress in 2019: How To Optimize Your Website & Make It Load Fast](https://www.youtube.com/watch?v=ATXACFtcyKs)
@@ -104,7 +107,7 @@ I tried several methods:
      ```
 I’m using Stout, a Primer child theme. But even with just Primer I get this issue. Though I did not try the plugin method with just Primer. The issue goes away when I change to the Twenty Twenty theme.
 
-**Solution:** The theme wasn't the issue. WP Fastest Cache was the issue. See my conclusion for solution.
+**Solution:** The theme wasn't the issue. WP Fastest Cache was the issue. See my [conclusion](#wp-optimization-conclusion) for solution.
 
 <h3 id= "wp-optimization-conclusion"></h3>
 
@@ -118,10 +121,12 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 
 
   
-[*GTmetrix Scores*](https://gtmetrix.com/reports/dashiellbarkhuss.com/YGOLUtXd) **After**:
-<img src="log_imgs/end-scores_5-19-20.png"/>
+[*GTmetrix Scores*](https://gtmetrix.com/reports/dashiellbarkhuss.com/Cnasj9u9) **After**:
+<img src="log_imgs/end-scores_5-20-20.png"/>
 
-### 1. Add These Plugins
+*No money spent.*
+
+### 1. Add These Free Plugins
 1. [Self-Hosted Google Fonts](https://wordpress.org/plugins/selfhost-google-fonts/)
    - Video: [WordPress Speed Optimization: Optimize External Resources: Google Fonts section](https://youtu.be/JZVaeJwp7Zs?t=1727)
 2. [WP-Optimize](https://wordpress.org/plugins/wp-optimize/)
@@ -153,6 +158,9 @@ function defer_parsing_of_js( $url ) {
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 ?>
 ```
+
+If you have users on your site outside of admins, you might want to change the `is_user_logged_in()` code to one of the wordpress functions that tells if an admin is logged in.
+
 #### **A note on WP Fastest Cache\*\*
 <h3 id= "wpfc-defer"></h3>
 
@@ -160,8 +168,11 @@ Using WP Fastest Cache with [these settings](#wpfc-settings), WP Fastest Cache c
 
 WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores the above php code[(*source*)](https://wordpress.org/support/topic/how-to-defer-javascript-when-the-tag-of-enqueued-script-has-two-src-urls/#post-12857234).
 
+<h3 id ="wpfc-defer-update">
 
-**To defer the combine js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you upgrade the plugin.
+***UPDATE/WARNING**: While the solution below worked to defer the file, it broke my site. After the first load, my site looked fine. But upon refreshing with browser-caching enable, my hero image and video looked strange. I deleted this tweak in my code. Still, the code might help you, so here it is.*
+
+**Defer the WP Fastest Cache combined js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you upgrade the plugin.
 
 *Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php*:
 ```php
@@ -169,9 +180,16 @@ WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores 
 $newLink = "<script defer src='".$jsLink."/".$jsFiles[0]."' type=\"text/javascript\"></script>";
 ?>
 ```
+#### Premium Cache Plugin $$$
+If this workaround doesn't suite you, WP Fastest Cache *Premium* can do this at the click of a button. However, [Online Media Masters recommends](https://onlinemediamasters.com/wp-fastest-cache-settings/) WP Rocket if you are going to pay for premium.
+> Is WP Fastest Cache Premium worth it?
+>
+>If you're going to spend money on a premium cache plugin, most people use WP Rocket since it comes with more features than WP Fastest Cache Premium and will typically yield better results.
 
-If this work around doesn't suite you, WP Fastest Cache *Pro* can do this at the click of a button.
+Of course, if you love quality, saving money, and have questionable morals you can try to get the torrent for the plugin. I don't judge! Especially because I tried to do that myself but had trouble getting the torrent to work.
 
+
+WP Fastest Cache Premium costs a one time payment of $49.99. The pricing for WP Rocket is more confusing- it seems like it would come out more expensive.
 <hr>
 
 ### 3. Optimize Images & Videos
@@ -198,21 +216,25 @@ If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https:/
 ### 5. What's left
 
 #### GTmetrix Recommendations:
-At the end, I had two recommendations on GTmetrix lower than 99%:
-1. Use a Content Delivery Network (CDN) **0%**
-2. Make fewer HTTP requests **84%**
+At the end, I had 3 recommendations on GTmetrix lower than 99%:
+1. Defer parsing of JavaScript
+2. Use a Content Delivery Network (CDN) **0%**
+3. Make fewer HTTP requests **84%**
 
-#### 1. Use a Content Delivery Network (CDN)
+#### 1. Defer parsing of JavaScript
+This was addressed [here](#wpfc-defer-update).
+
+#### 2. Use a Content Delivery Network (CDN)
 This costs money so I'm skipping it.
 
-#### 2. Make fewer HTTP requests
+#### 3. Make fewer HTTP requests
 
 The free WP Fastest Cache [doesn't combine footer js files.](https://wordpress.org/support/topic/wp-fastest-cache-dont-combine-javascript-after-install-clearfry-and-deleting-it#post-11295205) That's left me with 7 external Javascript scripts. 
 
 
 ##### Possible solutions
 1. Try other plugins
-2. WP Fastest Cache Pro
+2. WP Fastest Cache Premium
 3. Edit WP Fastest Cache free
 
 If I were to edit WP Fastest Cache free, I would look at the code below. This code deals with javascript scripts in the header *(head? whats the difference?)*. But it could be modified to include the scripts in the footer.
@@ -243,12 +265,21 @@ unset($head_new);
 }
 ?>
 ```
-I'm no WordPress/php expert. So it doesn't seem worth my time atm.
+I'm no WordPress/php expert. So it doesn't seem worth my time atm. Paying for premium is starting to sound good.
 
 #### Hosting:
 I'm using GoDaddy's cPanel shared hosting. Apparently, it's not known for speed. So I might switching to a different host. I've heard SiteGround is a good option.
 
+<hr>
 
+### More Steps For You
+There may be more steps you need to take depending on your GTmetrix recommendations that are different than mine. Here are some good resources on optimizing your WordPress.
+
+-  **Video**: [Speed Up WordPress in 2019: How To Optimize Your Website & Make It Load Fast](https://www.youtube.com/watch?v=ATXACFtcyKs) 
+- **Text**: [How To Fix GoDaddy’s Slow WordPress Hosting Using An Array Of Tools + Plugins (And How To Check If Your GoDaddy Server Is Slow)](https://onlinemediamasters.com/slow-wordpress-hosting-godaddy/)
+-  **Video**: [How To Fix Slow WordPress Site On Godaddy](https://www.youtube.com/watch?v=vXgIVbcvGiw)
+- **Video**: [WordPress Speed Optimization - How I Got 100% GTmetrix Scores](https://www.youtube.com/watch?v=JZVaeJwp7Zs) 
+  
 ### 05/10/20
 #### LED Resource
 - [Ultimate Guide to Connecting LED Light Strips to Arduino](https://www.makeuseof.com/tag/connect-led-light-strips-arduino/)
