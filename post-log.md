@@ -146,7 +146,7 @@ add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 #### WP Fastest Cache
 <h3 id= "wpfc-defer"></h3>
 
-Using WP Fastest Cache with these [settings](wpfc-settings), WP Fastest Cache creates a combined js file. To defer this file, you'll need to do extra coding.
+Using WP Fastest Cache with these [settings](#wpfc-settings), WP Fastest Cache creates a combined js file. To defer this file, you'll need to do extra coding.
 
 According to a forum post, WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores the above php code [(*source*)](https://wordpress.org/support/topic/how-to-defer-javascript-when-the-tag-of-enqueued-script-has-two-src-urls/#post-12857234).
 
