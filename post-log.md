@@ -125,6 +125,7 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 <img src="log_imgs/end-scores_5-20-20.png"/>
 
 *No money spent.*
+<hr>
 
 ### 1. Add These Free Plugins
 1. [Self-Hosted Google Fonts](https://wordpress.org/plugins/selfhost-google-fonts/)
