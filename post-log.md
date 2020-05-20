@@ -2,7 +2,7 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
-### Optimizing WordPress With GoDaddy cPanel Shared Hosting 
+### Optimizing WordPress Speed With GoDaddy cPanel Shared Hosting 
 05/10/20 - 05/20/20
 <hr>
 
@@ -10,7 +10,7 @@ Jump to my [**Conclusion**](#wp-optimization-conclusion) to see what I did.
 
 <hr>
 
-#### Wordpress Optimization resources
+#### Wordpress Speed Optimization resources
 - [GTmetrix](https://gtmetrix.com/)- Gives you speed metrics on your site
 - [Speed Up WordPress in 2019: How To Optimize Your Website & Make It Load Fast](https://www.youtube.com/watch?v=ATXACFtcyKs)
 - [Optimizing MP4 Video for Fast Streaming](https://rigor.com/blog/optimizing-mp4-video-for-fast-streaming)
@@ -111,7 +111,7 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 
 <h3 id= "wp-optimization-conclusion"></h3>
 
-## Conclusion: Steps To Optimize My WordPress on GoDaddy
+## Conclusion: Steps To Speed Optimize My WordPress on GoDaddy
 
 <hr>
 
