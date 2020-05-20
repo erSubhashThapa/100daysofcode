@@ -178,7 +178,7 @@ I **optimized my video** by using [HandBrake](https://handbrake.fr/)- *free soft
 
 If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https://img.secureserver.net......`" in your waterfall. 
 
-[Here's](minimize-redirects) how to fix it.
+[Here's](#minimize-redirects) how to fix it.
 
 <hr>
 
