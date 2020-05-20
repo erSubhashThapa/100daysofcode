@@ -134,8 +134,11 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 <hr>
 
 ### 2. Defer Parsing of Javascript
+*Article on **why** & **how**:* [How to Defer Parsing of JavaScript Properly](https://technumero.com/defer-parsing-of-javascript/)
 
-**Video:** [Step 7: Defer Parsing Of JavaScript](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1142s)
+*Video on **how**:* [Step 7: Defer Parsing Of JavaScript](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1142s)
+
+**How:**
 
 Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you have a child theme.
 ```php
@@ -150,15 +153,15 @@ function defer_parsing_of_js( $url ) {
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 ?>
 ```
-#### WP Fastest Cache
+#### **A note on WP Fastest Cache\*\*
 <h3 id= "wpfc-defer"></h3>
 
-Using WP Fastest Cache with these [settings](#wpfc-settings), WP Fastest Cache creates a combined js file. To defer this file, you'll need to do extra coding.
+Using WP Fastest Cache with [these settings](#wpfc-settings), WP Fastest Cache creates a *combined js* file. To defer this file, you'll need to do extra coding.
 
-According to a forum post, WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores the above php code [(*source*)](https://wordpress.org/support/topic/how-to-defer-javascript-when-the-tag-of-enqueued-script-has-two-src-urls/#post-12857234).
+WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores the above php code[(*source*)](https://wordpress.org/support/topic/how-to-defer-javascript-when-the-tag-of-enqueued-script-has-two-src-urls/#post-12857234).
 
 
-**To defer the js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you upgrade the plugin.
+**To defer the combine js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you upgrade the plugin.
 
 *Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php*:
 ```php
@@ -181,6 +184,8 @@ To **optimize images**:
 I **optimized my video** by using [HandBrake](https://handbrake.fr/)- *free software for optimizing mp4 videos.* More info:
 
    - Article: [Optimizing MP4 Video for Fast Streaming](https://rigor.com/blog/optimizing-mp4-video-for-fast-streaming)
+
+<hr>
 
 ### 4. Remove GoDaddy Redirect
 
