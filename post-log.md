@@ -158,8 +158,9 @@ According to a forum post, WP Fastest Cache bypasses the core WordPress hooks. S
 
 *Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php*:
 ```php
+<?php
 $newLink = "<script defer src='".$jsLink."/".$jsFiles[0]."' type=\"text/javascript\"></script>";
-Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php
+?>
 ```
 
 If this work around doesn't suite you, WP Fastest Cache *Pro* can do this at the click of a button.
@@ -209,6 +210,7 @@ If I were to edit WP Fastest Cache free, I would look at the code below. This co
 
 *Line 736, wp-content/plugins/wp-fastest-cache/inc/cache.php*:
 ```php
+<?php
 if(isset($this->options->wpFastestCacheCombineJs)){
 
 $head_new = $this->get_header($content);
@@ -230,6 +232,7 @@ unset($tmp_head);
 unset($head_new);
  }
 }
+?>
 ```
 I'm no WordPress/php expert. So it doesn't seem worth my time atm.
 
