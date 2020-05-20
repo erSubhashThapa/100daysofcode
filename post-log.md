@@ -149,7 +149,7 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 
 **How:**
 
-Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you have a child theme.
+Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you add it to a child theme.
 ```php
 <?php //php tag added only for github markdown.
 function defer_parsing_of_js( $url ) {
