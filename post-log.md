@@ -286,6 +286,8 @@ There may be more steps you need to take depending on your GTmetrix recommendati
 -  **Video**: [How To Fix Slow WordPress Site On Godaddy](https://www.youtube.com/watch?v=vXgIVbcvGiw)
 - **Video**: [WordPress Speed Optimization - How I Got 100% GTmetrix Scores](https://www.youtube.com/watch?v=JZVaeJwp7Zs) 
   
+- [More resources I used.](#wordpress-optimization-resources)
+
 ### 05/10/20
 #### LED Resource
 - [Ultimate Guide to Connecting LED Light Strips to Arduino](https://www.makeuseof.com/tag/connect-led-light-strips-arduino/)
