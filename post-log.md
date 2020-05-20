@@ -2,6 +2,240 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
+### Optimizing WordPress With GoDaddy cPanel Shared Hosting 
+05/10/20 - 05/19/20
+<hr>
+
+Jump to my [**Conclusion**](#wp-optimization-conclusion) to see what I did.
+#### Wordpress Optimization resources
+- [GTmetrix](https://gtmetrix.com/)- Gives you speed metrix on your site
+- [Speed Up WordPress in 2019: How To Optimize Your Website & Make It Load Fast](https://www.youtube.com/watch?v=ATXACFtcyKs)
+- [Optimizing MP4 Video for Fast Streaming](https://rigor.com/blog/optimizing-mp4-video-for-fast-streaming)
+  - [HandBrake](https://handbrake.fr/) *Free software for optimizing mp4 videos*
+- [How to Read a Waterfall Chart for Beginners](https://gtmetrix.com/blog/how-to-read-a-waterfall-chart-for-beginners/)
+- [How To Fix GoDaddy’s Slow WordPress Hosting Using An Array Of Tools + Plugins (And How To Check If Your GoDaddy Server Is Slow)](https://onlinemediamasters.com/slow-wordpress-hosting-godaddy/)- Text companion of below
+- [How To Fix Slow WordPress Site On Godaddy](https://www.youtube.com/watch?v=vXgIVbcvGiw)- Video companion of above
+  - [Steps 3-5: Configure WP Fastest Cache or W3 Total Cache Plugin](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=560s)
+  - [Step 6: Clean Up Database With WP-Optimize](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1099s)
+  - [Step 7: Defer Parsing Of JavaScript](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1142s)
+    - This step didn't change anything. I still have a .js file parsing during initial page load: *wp-content/cache/wpfc-minified/a0uy3y/47yt4.js*
+- [Why is my page slow?](https://gtmetrix.com/why-is-my-page-slow.html)
+  - [Page Caching](https://gtmetrix.com/why-is-my-page-slow.html#page-caching)
+- [Static site generators vs. caching](https://stitcher.io/blog/static_sites_vs_caching)
+- [PageSpeed and YSlow are Half the Battle](https://gtmetrix.com/blog/pagespeed-and-yslow-are-half-the-battle/)- Frontend vs. Backend
+- [WordPress Speed Optimization - How I Got 100% GTmetrix Scores](https://www.youtube.com/watch?v=JZVaeJwp7Zs)
+  - [Optimize External Resources](https://www.youtube.com/watch?v=JZVaeJwp7Zs&t=1687s)
+
+### Minimize Redirects
+<h3 id="minimize-redirects"></h3>
+
+If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https://img.secureserver.net......`" This is from the monitoring script that GoDaddy puts into your webpage. It helps GoDaddy collect data on how your site is working. But that data is just for them. You don't need it. The redirect slows down your site. So this is how to delete it.
+  - while logged in to GoDaddy, go to [your hosting](https://myh.godaddy.com/#/hosting/all)
+  - click on your **site name**
+  - At the top click **GoDaddy Analytics** *or* add `/godaddyAnalytics` to your current URL address
+  - Click "`No, I don't want to participate in the program.`" and **Confirm**.
+  
+Keep in mind, GoDaddy is always changing there site. So you may have to navigate the site differently to find the opt-out.
+
+### Wp-Fastest Cache Settings:
+
+<h3 id="wpfc-settings"></h3>
+
+>If you plan on using neither *[Cloudflare nor StackPath]*, use the settings below. The only thing you would change is in the Preload tab (pages per minute). If you’re on shared hosting use 4-6, VPS should use 10-12.
+
+*from [Online Media Masters](https://onlinemediamasters.com/wp-fastest-cache-settings/)*
+
+![](https://v9n9s3j3.stackpathcdn.com/wp-content/uploads/2016/11/WP-Fastest-Cache-Settings-1.png)
+
+### Clear Cookies
+
+Remember to clear your site data if you're getting a different waterfall in DevTools than GTmetrix. I was still getting an old css file on Chrome, not the cached minified version.
+
+#### Clear Cookies in Chrome:
+
+1. **Menu Bar** -> **Chrome** -> **Preferences**
+2. scroll to **Privacy and security** -> **Site Settings** -> **View permissions and data stored across sites** 
+3. In **Sort by** search your site name.
+4. Click on the three **vertical dots** across from your site name
+5. **Clear data**
+
+
+## Stuck on Defer Parsing Javascript
+
+[How to Defer Parsing of JavaScript Properly](https://technumero.com/defer-parsing-of-javascript/)
+
+[My forum post about Defer Parsing Javascript](https://wordpress.org/support/topic/defer-javascript-parsing/)
+
+I can't figure out how to defer parsing of javascript with the Primer theme. I'm able to defer parsing of javascript with other themes.
+
+I tried several methods:
+1. I’ve tried a few plugins
+2. I tried adding this to header.php:
+
+   ```php
+   if (!(is_admin() )) {
+   function defer_parsing_of_js ( $url ) {
+   if ( FALSE === strpos( $url, '.js' ) ) return $url;
+   if ( strpos( $url, 'jquery.js' ) ) return $url;
+   // return "$url' defer ";
+   return "$url' defer onload='";
+   }
+   add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+   }
+   ```
+
+3. I tried adding this to functions.php and replacing with the correct URL.
+   ```html
+   <script type="text/javascript">
+   function parseJSAtOnload() {
+   var element = document.createElement("script");
+   element.src = "somejavascriptfiles.js";
+   document.body.appendChild(element);
+   }
+   if (window.addEventListener)
+   window.addEventListener("load", parseJSAtOnload, false);
+   else if (window.attachEvent)
+   window.attachEvent("onload", parseJSAtOnload);
+   else window.onload = parseJSAtOnload;
+   </script>
+     ```
+I’m using Stout, a Primer child theme. But even with just Primer I get this issue. Though I did not try the plugin method with just Primer. The issue goes away when I change to the Twenty Twenty theme.
+
+**Solution:** The theme wasn't the issue. WP Fastest Cache was the issue. See my conclusion for solution.
+
+
+## Conclusion: Steps To Optimize My WordPress on GoDaddy
+<h3 id= "wp-optimization-conclusion"></h3>
+<hr>
+
+[*GTmetrix Scores*](https://gtmetrix.com/reports/dashiellbarkhuss.com/LQNxP4WT) **Before**:
+
+<img src="log_imgs/start-scores_5-19-20.png"/>
+
+
+  
+[*GTmetrix Scores*](https://gtmetrix.com/reports/dashiellbarkhuss.com/YGOLUtXd) **After**:
+<img src="log_imgs/end-scores_5-19-20.png"/>
+
+### 1. Add These Plugins
+1. [Self-Hosted Google Fonts](https://wordpress.org/plugins/selfhost-google-fonts/)
+   - Video: [WordPress Speed Optimization: Optimize External Resources: Google Fonts section](https://youtu.be/JZVaeJwp7Zs?t=1727)
+2. [WP-Optimize](https://wordpress.org/plugins/wp-optimize/)
+   - Video: [Step 6: Clean Up Database With WP-Optimize](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1099s)
+3. [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)
+   - Article: [Online Media Masters: WP Fastest Cache Settings](https://onlinemediamasters.com/wp-fastest-cache-settings/)
+   - Video: [Steps 3-5: Configure WP Fastest Cache or W3 Total Cache Plugin](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=560s)-Online Media Masters
+4. [Asset CleanUp](https://wordpress.org/plugins/wp-asset-clean-up/)
+   - Video: [Speed Up WordPress in 2019: Asset CleanUp section](https://youtu.be/ATXACFtcyKs?t=778)
+<hr>
+
+### 2. Defer Parsing of Javascript
+Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you have a child theme.
+```php
+function defer_parsing_of_js( $url ) {
+
+     if ( is_user_logged_in() ) return $url; //don't break WP Admin
+     if ( FALSE === strpos( $url, '.js' ) ) return $url;
+     if ( strpos( $url, 'jquery.js' ) ) return $url;
+     return str_replace( ' src', ' defer src', $url );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
+```
+#### WP Fastest Cache
+<h3 id= "wpfc-defer"></h3>
+
+Using WP Fastest Cache with these [settings](wpfc-settings), WP Fastest Cache creates a combined js file. To defer this file, you'll need to do extra coding.
+
+According to a forum post, WP Fastest Cache bypasses the core WordPress hooks. So WP Fastest Cache ignores the above php code [(*source*)](https://wordpress.org/support/topic/how-to-defer-javascript-when-the-tag-of-enqueued-script-has-two-src-urls/#post-12857234).
+
+
+**To defer the js script:** Add "`defer`" to the code that generates the script tag. Remember to change this whenever you upgrade the plugin.
+
+*Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php*:
+```php
+$newLink = "<script defer src='".$jsLink."/".$jsFiles[0]."' type=\"text/javascript\"></script>";
+Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php
+```
+
+If this work around doesn't suite you, WP Fastest Cache *Pro* can do this at the click of a button.
+
+<hr>
+
+### 3. Optimize Images & Videos
+To **optimize images**:
+  - Video: [Speed Up WordPress in 2019: Optimizing & Compressing Images](https://www.youtube.com/watch?v=ATXACFtcyKs&t=1207s)
+
+**Another resource** I haven't watched. It covers- Serve Scaled images, Specify Image Dimensions, and Lossless Compression:
+  - Video: [WordPress Speed Optimization: Optimize Images](https://youtu.be/JZVaeJwp7Zs?t=1336)
+
+I **optimized my video** by using [HandBrake](https://handbrake.fr/)- *free software for optimizing mp4 videos.* More info:
+
+   - Article: [Optimizing MP4 Video for Fast Streaming](https://rigor.com/blog/optimizing-mp4-video-for-fast-streaming)
+
+### 4. Remove GoDaddy Redirect
+
+If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https://img.secureserver.net......`" in your waterfall. 
+
+[Here's](minimize-redirects) how to fix it.
+
+<hr>
+
+### 5. What's left
+
+#### GTmetrix Recommendations:
+At the end, I had two recommendations on GTmetrix lower than 99%:
+1. Use a Content Delivery Network (CDN) **0%**
+2. Make fewer HTTP requests **84%**
+
+#### 1. Use a Content Delivery Network (CDN)
+This costs money so I'm skipping it.
+
+#### 2. Make fewer HTTP requests
+
+The free WP Fastest Cache [doesn't combine footer js files.](https://wordpress.org/support/topic/wp-fastest-cache-dont-combine-javascript-after-install-clearfry-and-deleting-it#post-11295205) That's left me with 7 external Javascript scripts. 
+
+
+##### Possible solutions
+1. Try other plugins
+2. WP Fastest Cache Pro
+3. Edit WP Fastest Cache free
+
+If I were to edit WP Fastest Cache free, I would look at the code below. This code deals with javascript scripts in the header *(head? whats the difference?)*. But it could be modified to include the scripts in the footer.
+
+*Line 736, wp-content/plugins/wp-fastest-cache/inc/cache.php*:
+```php
+if(isset($this->options->wpFastestCacheCombineJs)){
+
+$head_new = $this->get_header($content);
+
+if($head_new){
+if(isset($this->options->wpFastestCacheMinifyJs) && $this->options->wpFastestCacheMinifyJs){
+$js = new JsUtilities($this, $head_new, true);
+}else{
+$js = new JsUtilities($this, $head_new);
+}
+
+$tmp_head = $js->combine_js();
+
+$content = str_replace($head_new, $tmp_head, $content);
+
+unset($r);
+unset($js);
+unset($tmp_head);
+unset($head_new);
+ }
+}
+```
+I'm no WordPress/php expert. So it doesn't seem worth my time atm.
+
+#### Hosting:
+I'm using GoDaddy's cPanel shared hosting. Apparently, it's not known for speed. So I might switching to a different host. I've heard SiteGround is a good option.
+
+
+### 05/10/20
+#### LED Resource
+- [Ultimate Guide to Connecting LED Light Strips to Arduino](https://www.makeuseof.com/tag/connect-led-light-strips-arduino/)
+  
 ### 05/04/20
 
 ## Lucid Dream Home Lab Update
