@@ -26,8 +26,9 @@ Jump to my [**Conclusion**](#wp-optimization-conclusion) to see what I did.
 - [WordPress Speed Optimization - How I Got 100% GTmetrix Scores](https://www.youtube.com/watch?v=JZVaeJwp7Zs)
   - [Optimize External Resources](https://www.youtube.com/watch?v=JZVaeJwp7Zs&t=1687s)
 
-### Minimize Redirects
 <h3 id="minimize-redirects"></h3>
+
+### Minimize Redirects
 
 If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https://img.secureserver.net......`" This is from the monitoring script that GoDaddy puts into your webpage. It helps GoDaddy collect data on how your site is working. But that data is just for them. You don't need it. The redirect slows down your site. So this is how to delete it.
   - while logged in to GoDaddy, go to [your hosting](https://myh.godaddy.com/#/hosting/all)
@@ -37,9 +38,9 @@ If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https:/
   
 Keep in mind, GoDaddy is always changing there site. So you may have to navigate the site differently to find the opt-out.
 
-### Wp-Fastest Cache Settings:
-
 <h3 id="wpfc-settings"></h3>
+
+### Wp-Fastest Cache Settings:
 
 >If you plan on using neither *[Cloudflare nor StackPath]*, use the settings below. The only thing you would change is in the Preload tab (pages per minute). If you’re on shared hosting use 4-6, VPS should use 10-12.
 
@@ -104,6 +105,7 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 **Solution:** The theme wasn't the issue. WP Fastest Cache was the issue. See my conclusion for solution.
 
 <h3 id= "wp-optimization-conclusion"></h3>
+
 ## Conclusion: Steps To Optimize My WordPress on GoDaddy
 
 <hr>
