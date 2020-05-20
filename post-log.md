@@ -74,7 +74,7 @@ I tried several methods:
 2. I tried adding this to header.php:
 
    ```php
-   <?php
+   <?php //php tag added only for github markdown.
    if (!(is_admin() )) {
    function defer_parsing_of_js ( $url ) {
    if ( FALSE === strpos( $url, '.js' ) ) return $url;
@@ -139,7 +139,7 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 
 Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you have a child theme.
 ```php
-<?php
+<?php //php tag added only for github markdown.
 function defer_parsing_of_js( $url ) {
 
      if ( is_user_logged_in() ) return $url; //don't break WP Admin
@@ -162,7 +162,7 @@ According to a forum post, WP Fastest Cache bypasses the core WordPress hooks. S
 
 *Line 240, wp-content/plugins/wp-fastest-cache/inc/js-ulilities.php*:
 ```php
-<?php
+<?php //php tag added only for github markdown.
 $newLink = "<script defer src='".$jsLink."/".$jsFiles[0]."' type=\"text/javascript\"></script>";
 ?>
 ```
@@ -214,7 +214,7 @@ If I were to edit WP Fastest Cache free, I would look at the code below. This co
 
 *Line 736, wp-content/plugins/wp-fastest-cache/inc/cache.php*:
 ```php
-<?php
+<?php //php tag added only for github markdown.
 if(isset($this->options->wpFastestCacheCombineJs)){
 
 $head_new = $this->get_header($content);
