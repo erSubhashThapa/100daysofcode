@@ -125,9 +125,11 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 <img src="log_imgs/end-scores_5-20-20.png"/>
 
 *No money spent.*
-<hr>
 
 ### 1. Add These Free Plugins
+
+<hr>
+
 1. [Self-Hosted Google Fonts](https://wordpress.org/plugins/selfhost-google-fonts/)
    - Video: [WordPress Speed Optimization: Optimize External Resources: Google Fonts section](https://youtu.be/JZVaeJwp7Zs?t=1727)
 2. [WP-Optimize](https://wordpress.org/plugins/wp-optimize/)
@@ -137,9 +139,10 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
    - Video: [Steps 3-5: Configure WP Fastest Cache or W3 Total Cache Plugin](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=560s)-Online Media Masters
 4. [Asset CleanUp](https://wordpress.org/plugins/wp-asset-clean-up/)
    - Video: [Speed Up WordPress in 2019: Asset CleanUp section](https://youtu.be/ATXACFtcyKs?t=778)
-<hr>
 
 ### 2. Defer Parsing of Javascript
+<hr>
+
 *Article on **why** & **how**:* [How to Defer Parsing of JavaScript Properly](https://technumero.com/defer-parsing-of-javascript/)
 
 *Video on **how**:* [Step 7: Defer Parsing Of JavaScript](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1142s)
@@ -191,9 +194,10 @@ Of course, if you love quality, saving money, and have questionable morals you c
 
 
 WP Fastest Cache Premium costs a one time payment of $49.99. The pricing for WP Rocket is more confusing- it seems like it would come out more expensive.
-<hr>
 
 ### 3. Optimize Images & Videos
+<hr>
+
 To **optimize images**:
   - Video: [Speed Up WordPress in 2019: Optimizing & Compressing Images](https://www.youtube.com/watch?v=ATXACFtcyKs&t=1207s)
 
@@ -204,17 +208,17 @@ I **optimized my video** by using [HandBrake](https://handbrake.fr/)- *free soft
 
    - Article: [Optimizing MP4 Video for Fast Streaming](https://rigor.com/blog/optimizing-mp4-video-for-fast-streaming)
 
-<hr>
 
 ### 4. Remove GoDaddy Redirect
+<hr>
 
 If you're using GoDaddy cPanel hosting, you may have a weird redirect- "`https://img.secureserver.net......`" in your waterfall. 
 
 [Here's](#minimize-redirects) how to fix it.
 
-<hr>
 
 ### 5. What's left
+<hr>
 
 #### GTmetrix Recommendations:
 At the end, I had 3 recommendations on GTmetrix lower than 99%:
@@ -271,9 +275,10 @@ I'm no WordPress/php expert. So it doesn't seem worth my time atm. Paying for pr
 #### Hosting:
 I'm using GoDaddy's cPanel shared hosting. Apparently, it's not known for speed. So I might switching to a different host. I've heard SiteGround is a good option.
 
-<hr>
 
 ### More Steps For You
+<hr>
+
 There may be more steps you need to take depending on your GTmetrix recommendations that are different than mine. Here are some good resources on optimizing your WordPress.
 
 -  **Video**: [Speed Up WordPress in 2019: How To Optimize Your Website & Make It Load Fast](https://www.youtube.com/watch?v=ATXACFtcyKs) 
