@@ -103,9 +103,9 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 
 **Solution:** The theme wasn't the issue. WP Fastest Cache was the issue. See my conclusion for solution.
 
-
-## Conclusion: Steps To Optimize My WordPress on GoDaddy
 <h3 id= "wp-optimization-conclusion"></h3>
+## Conclusion: Steps To Optimize My WordPress on GoDaddy
+
 <hr>
 
 [*GTmetrix Scores*](https://gtmetrix.com/reports/dashiellbarkhuss.com/LQNxP4WT) **Before**:
