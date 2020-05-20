@@ -132,6 +132,9 @@ I’m using Stout, a Primer child theme. But even with just Primer I get this is
 <hr>
 
 ### 2. Defer Parsing of Javascript
+
+**Video:** [Step 7: Defer Parsing Of JavaScript](https://www.youtube.com/watch?v=vXgIVbcvGiw&t=1142s)
+
 Add this to the end of `functions.php`. I added it to my parent theme. But maybe it would also work if you have a child theme.
 ```php
 function defer_parsing_of_js( $url ) {
