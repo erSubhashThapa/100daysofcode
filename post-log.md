@@ -2,7 +2,7 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
-### Making A Demo Page for A Business Idea
+### Making A Demo Page for A Digital Business Idea
 5/27/20-5/29/20
 <hr>
 Demos of your business idea can help get investors and collaborators on board. With a little bit of css, html, and Photoshop knowledge, you can make a professional looking visual demo MPV in a short time.
