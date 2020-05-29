@@ -2,6 +2,74 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
+### Making A Demo Page for A Business Idea
+5/27/20-5/29/20
+<hr>
+Demos of your business idea can help get investors and collaborators on board. With a little bit of css, html, and Photoshop knowledge, you can make a professional looking visual demo MPV in a short time.
+
+### 1. Pick A Template SIte
+I created a demo application of my business idea from an already existing site, which I used as a template. 
+
+Find a website that is similar in structure to your idea. For example, if you were creating a site for renting out your pets to play with, you might use AirBnb's website as your template. You can easily replace the rental spaces with pets, so it's a good match.
+
+### 2. Save The Page(s) as An HTML
+Use the chrome extension [Save Page WE](https://chrome.google.com/webstore/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof) to save a complete web page (as currently displayed) as a single HTML file that can be opened in any browser.
+
+### 3. Edit The Page
+
+Once you have the page(s) saved, open in VSC code and edit the css and html. Use DevTools to help figure out what to change. 
+
+Your site will be unusable. But it will create a visual prototype. 
+
+ Where applicable, replace the images on the site with images you saved from Google or Instagram. You don't have to pay for images because you're not publishing this website. 
+
+You can customize images further on Photoshop or another image editor.
+
+### My Demo
+
+For my site, I used Fiverr as the template. Fiverr was a great template for my idea which will be a market place for a type of product.
+
+<img src="log_imgs/template_site_5-29-20.png">
+
+As you can see, I copied some of Fiverr's design elements directly. But that's ok. The purpose of making this mock-up is to demonstrate my business idea to collaborators. The mock-up is not a template for the exact design and branding. 
+
+I blurred the text for this post, but collaborators will understand the business from the text and visuals.
+
+### Machine Learning 
+05/22/20
+<hr>
+
+### Getting Started
+[Your First Machine Learning Project in Python Step-By-Step](https://machinelearningmastery.com/machine-learning-in-python-step-by-step/)
+
+### Install Python
+>**Don’t Update** Python 2.x to Python 3.x, Just **Install** Python 3.x on the Mac
+
+-from [How to Install Updated Python 3 on Mac](https://osxdaily.com/2018/06/13/how-install-update-python-3x-mac/)
+
+Use the macOS 64-bit installer which you can [download here](https://www.python.org/downloads/release/python-383/)
+
+>If you're using macOS go to Macintosh HD > Applications > Python3.6 folder (or whatever version of python you're using) > double click on "Install Certificates.command" file.
+
+-from [Stackoverflow](https://stackoverflow.com/questions/50236117/scraping-ssl-certificate-verify-failed-error-for-http-en-wikipedia-org)
+
+### Install pip
+[Installating Pip](https://pip.pypa.io/en/stable/installing/):
+
+Run:
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+```
+Then `pip install`:
+- scipy
+- numpy
+- matplotlib
+- pandas
+- sklearn
+
+
+
 ### Optimizing WordPress Speed With GoDaddy cPanel Shared Hosting 
 05/10/20 - 05/20/20
 <hr>
@@ -788,7 +856,6 @@ In my case, the electrodes glued to my head will *detect voltages from my brain*
 
 Each of these points of data occurred every 1 milliseconds. So you can map these numbers over time to get a visual idea of the waves:
 
-![](log_imgs/graph_eeg_4-5-20)
 
   <img src="log_imgs/graph_eeg_4-5-20.png" width= 100%>
 
