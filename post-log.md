@@ -2,6 +2,144 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 
+### Avatarify
+6/1/20 - 6/2/20
+
+[avatarify](https://github.com/alievk/avatarify) is an open source "deepfake" program that you can use live on Zoom. For example, you can Zoom into your meeting as Einstein so people will take you seriously.
+
+I followed the instructions for installing avatarify on my mac and then I followed the instructions to run the Google Colab.
+
+#### Notes on following the [readme](https://github.com/alievk/avatarify) and Google Colab instructions:
+
+- Make sure you're doing the Colab in your own copy. I'm not sure how the Colab works, but I think it's sort of like Google docs- if you make changes to the document, you changed it for everyone. So before you even start playing with the Colab you should *copy to drive* and run your copy of the Colab.
+<img src="log_imgs/avatarify_colab_6-2-20-1.png">
+
+- Remember to restart the terminal after installing miniconda before running `bash scripts/install_mac.sh`. Otherwise you could get an error: `-bash: conda: command not found`.
+
+### Freezing Up
+When I run avatarify in Google Colab, sometimes nothing happens when I try to start the client.
+
+I'll run the script in my terminal:
+
+`./run_mac.sh --is-client --in-addr tcp://0.tcp.ngrok.io:<# collab it gives you> --out-addr tcp://0.tcp.ngrok.io:< # collab gives you >`
+
+And I get back  something like this:
+```bash
+[1590494901.630968] Loading Predictor
+[1590494901.735869] Receiving from tcp://0.tcp.ngrok.io:15702
+[1590494901.735815] Sending to tcp://0.tcp.ngrok.io:16110
+[1590494901.747087] SEND 3.435 (3.435)
+```
+
+And nothing happens. A lot of things seem to cause this problem: another process might still be running from last time or you might have accidentally changed some code. To stop this from happening, I start all over. Sort of like refreshing everything.
+
+#### Here's how I refresh everything.
+
+1. **BEFORE YOU START:** First, make sure you're doing everything in your own version of the avatarify Colab. I'm not sure how Colab works, but I think it's sort of like Google docs- if you make changes to the document, you changed it for everyone. So before you even start playing with the Colab you should *copy to drive* and run the Colab on your copy.
+<img src="log_imgs/avatarify_colab_6-2-20-1.png"> 
+
+1. When you run into a problem (like I did with the client not starting), revert to the original state: 
+   1. <img src="log_imgs/avatarify_colab_6-2-20-2.png">
+   2. <img src="log_imgs/avatarify_colab_6-2-20-3.png">
+   3. <img src="log_imgs/avatarify_colab_6-2-20-4.png" width="70%">
+   4. <img src="log_imgs/avatarify_colab_6-2-20-5.png" width="70%">
+   5. <img src="log_imgs/avatarify_colab_6-2-20-6.png" width="70%">
+   5. <img src="log_imgs/avatarify_colab_6-2-20-7.png">
+   
+2. And terminate any running sessions
+     1. <img src="log_imgs/avatarify_colab_6-2-20-8.png">
+     2. <img src="log_imgs/avatarify_colab_6-2-20-9.png">
+     3. <img src="log_imgs/avatarify_colab_6-2-20-10.png">
+
+3. On your computer, start a new terminal just in case.
+
+### Preview Freezing 
+When I do get the preview to appear after running
+`./run_mac.sh --is-client....` it will start working and then freeze. As seen here:
+
+  <img src="log_imgs/einstein_froze_6-2-20.gif">
+
+This is where I am stuck. 
+
+Looking at this, I realize Einstein and I both have ample flyaways. Does this mean I'm a genius too?
+
+#### Next Steps
+The next steps are 
+   1. Getting the preview to stop freezing. 
+   2. Connecting the preview to Zoom.
+
+### Some More Avatars
+
+Friend and fellow coder and bad ass [Nat Sharpe](https://www.linkedin.com/in/nat-sharpe/):
+
+  - <img src="log_imgs/nat_avatar_6-2-20.gif">
+
+[Adam Stillman](https://www.linkedin.com/in/adamjstillman/), Cousin. With my swagger and his punim, we have the potential to be the next American heart throb:
+
+  - <img src="log_imgs/adam_avatar_6-2-20.gif">
+
+
+
+
+
+
+### Deep Learning
+5/29/20 - 6/1/20
+
+#### Messy Notes on Deep Learning
+
+[CUDA Explained - Why Deep Learning uses GPUs](https://www.youtube.com/watch?v=6stDhEA0wFQ)
+
+What I learned from this^ video:
+- GPU's are different that CPU's because they have thousands of cores which means they can compute a lot in parallel.
+
+>The main difference between CPU and GPU architecture is that a CPU is designed to handle a wide-range of tasks quickly (as measured by CPU clock speed), but are limited in the concurrency of tasks that can be running. A GPU is designed to quickly render high-resolution images and video concurrently.
+
+*-from [CPU vs GPU | Definition and FAQs | OmniSci](https://www.omnisci.com/technical-glossary/cpu-vs-gpu)*
+
+This makes  GPU's ideal for deep learning because neural networks are embarrassingly parallel. I'm not being dramatic. [Embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) is the actual term, and it means what it sounds like:
+
+>Parallel computing, a paradigm in computing which has multiple tasks running simultaneously, might contain what is known as an embarrassingly parallel workload or problem (also called perfectly parallel, delightfully parallel or pleasingly parallel). An embarrassingly parallel task can be considered a trivial case - little or no manipulation is needed to separate the problem into a number of parallel tasks.
+
+Apple Vs. Nvidia
+[Why Apple Ditched Nvidia Graphics Cards](https://www.youtube.com/watch?v=hbk782qET5U)
+
+[Nvidia and Apple’s feud continues as macOS chopped from GPU toolkit](https://www.pcgamesn.com/nvidia/apple-cuda-toolkit-support)
+
+Since content creators use Macs(this is my assumption), and Nvidia doesn't work with Mac, what is the future of these hardwares? Who will win?
+
+>It's like Apple launching the original Macintosh without support for DOS software, or iPod without any way to playback Windows Media Player files, an iPhone without Java, or iPad without Adobe Flash. It's boldly insane to pundits, but it's also exactly the kind of high stakes gamble that has regularly worked out well for Apple and its customer base.
+
+*-from [Editorial: Mac Pro puts the pedal to Metal in Apple's race with Nvidia](https://appleinsider.com/articles/19/10/18/editorial-mac-pro-puts-the-pedal-to-metal-in-apples-race-with-nvidia)*
+
+**GPGPU:**
+
+>General-purpose computing on graphics processing units (GPGPU, rarely GPGP) is the use of a graphics processing unit (GPU), which typically handles computation only for computer graphics, to perform computation in applications traditionally handled by the central processing unit (CPU).
+
+*-from [General-purpose computing on graphics processing units](https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units)*
+
+> There isn't a clear answer if the issue is Nvidia refusing to support Apple's Metal, or Apple refusing to officially approve Nvidia's drivers. It appears to be both. Apple pretty clearly has a vested interest in expanding industry support for its Metal API, the same as Nvidia with its CUDA platform.
+
+*-from [Editorial: Mac Pro puts the pedal to Metal in Apple's race with Nvidia](https://appleinsider.com/articles/19/10/18/editorial-mac-pro-puts-the-pedal-to-metal-in-apples-race-with-nvidia)*
+
+CUDA vs OpenCl vs Metal?
+
+>Nvidia GPU’s have built in hardware accelerated ray tracing and AND[sic AMD] does not.
+
+*-My dad*
+
+>AMD has detailed the next generation of Radeon graphics processing units codenamed "Navi 2X," with the RDNA 2 family anticipated to **include hardware ray tracing**
+
+*-from [AMD Radeon 'Navi 2X' cards will offer ray tracing to future Macs](https://appleinsider.com/articles/20/03/09/amd-radeon-navi-2x-cards-will-offer-ray-tracing-to-future-macs)*
+
+Although for deep learning and other general-purpose GPU  stuff I don’t know if ray tracing matters. It just a [graphics rendering technique](https://www.youtube.com/watch?v=0FMlPUEAZfs). 
+
+[First Order Motion Model for Image Animation](https://www.youtube.com/watch?v=lE-4w8q_5GU)
+
+[avatarify](https://github.com/alievk/avatarify)
+-remember to restart the terminal after installing miniconda before running `bash scripts/install_mac.sh`
+
+
 ### Making A Demo Page for A Digital Business Idea
 5/27/20-5/29/20
 <hr>
