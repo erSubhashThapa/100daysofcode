@@ -2,6 +2,7 @@
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
 <h3 id="avatarify-1"></h3>
+
 ### Avatarify 
 6/1/20 - 6/2/20
 
