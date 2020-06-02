@@ -1,8 +1,8 @@
 # Post #100DaysOfCode Log - Dashiell Bark-Huss
 
 I completed my 365 days of code. But I'm going to continue to add to this log when I want to save notes.
-
-### Avatarify
+<h3 id="avatarify-1"></h3>
+### Avatarify 
 6/1/20 - 6/2/20
 
 [avatarify](https://github.com/alievk/avatarify) is an open source "deepfake" program that you can use live on Zoom. For example, you can Zoom into your meeting as Einstein so people will take you seriously.
@@ -69,15 +69,18 @@ The next steps are
    2. Connecting the preview to Zoom.
 
 ### Some More Avatars
-
+#### Nat Sharpe
 Friend and fellow coder and bad ass [Nat Sharpe](https://www.linkedin.com/in/nat-sharpe/):
 
   - <img src="log_imgs/nat_avatar_6-2-20.gif">
-
+#### Adam Stillman
 [Adam Stillman](https://www.linkedin.com/in/adamjstillman/), Cousin. With my swagger and his punim, we have the potential to be the next American heart throb:
 
   - <img src="log_imgs/adam_avatar_6-2-20.gif">
+#### Einstein
+My hairstyle twin!
 
+  - <img src="log_imgs/einstein_avatar_6-2-20.gif">
 
 
 
